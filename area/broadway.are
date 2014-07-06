@@ -1,0 +1,3212 @@
+#AREADATA
+Name Broadway District~
+Builders Celia Opal~
+VNUMs 7030 7164
+Credits Celia~
+Security 1
+Flags G
+Price 0
+End
+
+
+
+#MOBILES
+#7030
+Danny Faggio crazy~
+Danny Faggio~
+Some crazy guy wanders around.~
+A large heavy-set man, apparently in his forties, clad in a (formerly)white t-shirt and gym shorts.  What's left of his black curly hair is greasyand streaked with gray.  He wears a dirty white hankershief over his mouthand nose.  No doubt that the spew of senseless mutterings and profanitiesthat issue from his cake hole on a regular basis are to compensate for hisbathing on a cleary irregular basis.  Yes, definately going places. Preferably Bellevue.  ~
+human~
+AG 0 0 0 0 0 beating
+0 0 0 0
+10 10 1 0
+AHMV ABCDEFGHIJK large flesh
+A Q
+I 0
+Tr 0 turning green.~ room "Fag records!" Danny Faggio cries cheerfully as he bounces back out onto Broadway.east~
+Tr 0 as she turns her head away.~ room "Fag records?" Danny Faggio inquires.~
+Tr 0 the beat.~ room "Where are the fag records?" Danny exclaims. "I'm a big fag and I want my fag records!"~
+Tr 0 He continues nodding to the beat.~ Rroom "Where are the fag records?" Danny exclaims. "I'm a big fag and I want my fag records!"~
+Tr 0 "Um, can I help you?"~ room Danny Faggio blinks. After a pause he declares: "Asshole cunt peepee fuck!" then runs out the door, crying, "Weeeeeeeeeee!"westroom Danny Faggio runs down Broadway with his arms streched out, crying: "Vroooom! Takatakatakataka! Neeeerooooowwww!"south~
+#7031
+$f $l~
+$f $l~
+$f $l searches the clothing racks.~
+A nondescript woman looking through the offerings to the Ghost ofObnoxious Fasion Past.  ~
+human~
+AB 0 0 0 0 0 slap
+0 0 0 0
+10 10 2 0
+AHMV ABCDEFGHIJK small flesh
+A 0
+I 0
+Tr 0 butt dookie!"~ room "Quiet, dear, and don't be rude," the kid's mother admonishes. "Jesus, you can smell him from here!" she folllows in a lower voice.~
+#7032
+$f~
+$f~
+Little $f sits here while mommy sort through the clothing racks.~
+A nondescript kid to go with the nondescript mother.  Seems bored.  ~
+human~
+ABH 0 0 0 0 0 slap
+0 0 0 0
+10 10 3 0
+AHMV ABCDEFGHIJK tiny flesh
+A 0
+I 0
+Tr 0 Danny Faggio has arrived.~ room A little kid in the '70s section cries, "Mommy, that man smells like butt dookie!"~
+#7065
+$f $l biker~
+$f $l~
+$f $l strolls the boulevard.~
+Clad in a black leather jacket, jeans and engineer boots, this guy lookslike an extra from "The Wild One".  Not one of the friendlier types.  ~
+human~
+AG 0 75 0 0 0 none
+CFIJK 0 0 0
+10 10 1 0
+AHMV ABCDEFGHIJK medium flesh
+A 0
+I 0
+Tr 0 get outta my face!~ say fuck you! You reek like a sack fulla assholes! ~
+Tr 0 got any change?~ say get a job you shitball!~
+#7066
+leon~
+Leon Blonsky~
+Leon Blonsky wanders around.~
+A skinny man with pockmarked pale skin and dark frazzled hair, Leon lookslike he's seen better days.  He constantly looks around as he moves along,keeping his trenchcoat pulled tight, as if he were caught in coldtemperatures.  ~
+human~
+AHW Y 50 0 0 0 none
+FIJ 0 0 0
+10 10 1 1000
+AHMV ABCDEFGHIJK medium flesh
+A 0
+I 0
+Tr 0 the cops!~ say Damn! WHat crawled up your ass?emote turns around and (wisely) leaves...west~
+Tr 0 and die?~ say it didn't die.~
+Tr 0 beuatiful...~ say hey, hey, hey there! Your place or mine?~
+Tr 0 shitball!~ emote mutters "real original..."~
+Tr 0 looks at you~ emote looks around briefly and says, "Got some goodies. Interested?" HE opens his coat and displays his wares...~
+Tr 0 beuatiful~ emote looks at  Elise.'hey, hey, hey there! where ya been all my life?done~
+#7067
+Elise Styles~
+Elise Styles~
+A goth type prostitute is on the prowl for prospective clients.~
+Clad in a tube top and miniskirt, both of black vinyl, this woman swaysher hips in the classic "come and get it" walk as she strolls though life insatin strapped stiletto heels.  Perhaps plying the worlds oldest trade haskept her fed and reasonably comfortable, as she looks healthy enough.  Sheis of average build and height, around 5', and possesses unusually lightskin and short, jet black hair in a flapper style haircut.  Her slightlycurled lips, done in black lipstick, complement her predatory gaze, whichclearly indicates that she gets more from her profession than just room andboard.  ~
+vampire~
+AGK DFJZc 100 0 0 0 claw
+FGHINQ Q 0 HJNY
+10 10 2 25
+AHMVc ABCDEFGHIJKUV small flesh
+A 0
+I 0
+Tr 0 hey, hey, hey there! your place or mine?~ emote glares at Leon in disgust.say Tell me, my oderous friend, did somethine crawl down your throaght and die?~
+Tr 0 hello~ emote Elise Styles smiles coldly.~
+Tr 0 hi~ say say hello, beuatiful...~
+Tr 0 looks at you~ emote runs her tounge along her lips in eager anticipation...~
+Tr 0 mine?~ emote glares at leon in disgust.say tell me, my oderous friend, did something crawl down your throaght and die?~
+#7068
+Fuzzy Guebre~
+Fuzzy Guebre~
+Fuzzy Guebre hits the streets.~
+A woman of average build, Fuzzy wear her long black hair parted on theleft.  She's partial to green or blue contcats, depending on her mood, andhas gained ill repute from gossip that she's looking for love in all thewrong places.  One look says she's trying to hard at any rate.  ~
+human~
+A 0 50 0 0 0 scratch
+0 0 0 0
+10 10 2 25
+AHMV ABCDEFGHIJK medium flesh
+A Q
+I 0
+Tr 0 Sara Joy looks at Fuzzy. "Why, hello..."~ emote "Hiya!" Fuzzy says brightly.~
+#7069
+$f $l~
+$f~
+$f mans the cash register.~
+Standing at the register, $f is just trying to get by another shift.  ~
+human~
+AB 0 50 0 0 0 none
+0 0 0 0
+10 10 3 0
+AHMV ABCDEFGHIJK medium unknown
+A 0
+I 0
+#7070
+$f $l~
+Temporary Shopkeeper $f~
+Temporary Shopkeeper %f is here.~
+This is a temporary shopkeeper.  Please report this to the staff.~
+human~
+AB 0 50 0 0 0 none
+0 0 0 0
+10 10 0 0
+AHMV ABCDEFGHIJK medium unknown
+A 0
+I 0
+#7071
+$f $l~
+$f $l~
+Here at 7-11, $f is ready to serve you.~
+One of the many employees in the vast net of 7-11 convience stores, $fstands here behind the counter in a red smock with the 7-11 logo stenciledonto the breast like a standard.  ~
+human~
+AB 0 50 0 0 0 none
+0 0 0 0
+10 10 3 0
+AHMV ABCDEFGHIJK medium flesh
+A 0
+I 0
+#7072
+$f $l~
+$f $l~
+$f competes for space among the bookshelves.~
+Employed here to serve those interests and passions are saciated by thewritten word, $f moves among the bookshelves, stocking and arranging.  ~
+human~
+AB 0 50 0 0 0 none
+0 0 0 0
+10 10 3 500
+AHMV ABCDEFGHIJK medium flesh
+A 0
+I 0
+#7073
+bernard benz~
+Bernard Benz~
+Nodding his head along with the beat, Bernard Benz waits for your purchase.~
+Bernard Benz, a.  K.  A.  "BB" (of course), nods his head to the beat ashe lays-back his way through life with his shades, goatee and shaved head. He's clad in a black t-shirt with a picture of a cartoon woman with fadedpink hair and an orange rocket with wings for a torso.  A comic-book headerabove the rocket girl proclaims her as "Interplanet Janet".  Underneath,below the flaming nozzle that takes the place of her legs, is "She's aGalaxy Girl!"  ~
+human~
+AB 0 50 0 0 0 none
+0 0 0 0
+10 10 1 500
+AHMV ABCDEFGHIJK medium flesh
+A 0
+I 0
+Tr 0 I want my fag records!"~ room Bernard Benz doffs his earphones. "You mean Culture Club, or just Boy George? They're both up top." Bernard points to the ceiling, then dons his headset again.~
+Tr 0 has arrived.~ room Bernard Benz says, "Hey there! Feel free to look around." He continues nodding to the beat.~
+#7074
+Peter Wiles~
+Peter Wiles~
+Peter Wiles deals in priceless art. Well, prints of it, anyway.~
+An average looking man in his late thirties, it's a wonder Peter canactually appriciate any of his wares, since he's cleary a nominee for theguiness record in world's thickest glasses.  ~
+human~
+AB 0 50 0 0 0 none
+0 0 0 0
+10 10 1 0
+AHMV ABCDEFGHIJK medium flesh
+A 0
+I 0
+#7075
+$f $l~
+$f $l~
+Got furniture? No? $f $l has what you need.~
+Chairs, beds, tables, dresser, whatever, $f can help you with your modernfurniture needs.  ~
+human~
+AB 0 50 0 0 0 none
+0 0 0 0
+10 10 3 0
+AHMV ABCDEFGHIJK medium flesh
+A 0
+I 0
+#7076
+Spyder~
+Spyder~
+Spyder tends to the clothing racks, chewing gum and listening to her headphones.~
+Looking like she barely graduated from high school, Spyder sports brownhair with blonde ends done in a soft spike style.  A red, white, and bluetye-dyed t-shirt and form fitting blue shorts cover the essentials of her4'11" husky frame.  She moves about the store, bobbing her head in rythm tothe rock music emitting from her headphones, seemingly oblivious to allelse.  ~
+human~
+AB 0 50 0 0 0 none
+0 0 0 0
+10 10 2 0
+AHMV ABCDEFGHIJK medium flesh
+A 0
+I 0
+Tr 0 Danny Faggio leaves east.~ room Spyder rubs her eyes. "Gack! I think I'm sterile!"~
+Tr 0 Danny Faggio inquires.~ Room "Orpheus down the street. This is a clothes store, duh!" Spyder says. "And take a bath! You reek!" She waves a hand in front of her face, which is turning green.~
+Tr 0 Kyoko leaves east.~ room "Yeah, Hanoi Hoochgirl!" Spyder says around another gum crack.~
+Tr 0 girls like that?"~ room "Yeah, Hanoi Hoochgirl!" Spyder says around another gum crack.~
+Tr 0 while she glares at the entrance.~ emote Spyder says "Oooh... shit!" as she watches the departing panhandler, her eyes wide.~
+Tr 0 grumbles "Frigid bitch"~ emote Spyder says "Oooh... shit!" as she watches the departing panhandler, her eyes wide.~
+Tr 0 ...'entertains' the Wall Street types."~ emote Spyder giggles. "More like All Street types!"~
+Tr 0 Elise Styles leaves east.~ emote Spyder stops chewing her gum as she watches the goth leave. After she's gone, Spyder lets out a sigh of relief.~
+Tr 0 to hide her disgust.~ Emote Spyder watches Julie's exit. "Oh. My. God. Look at her butt! It's, like, out there! She's all bubbly and Jennifer Lopezed!"~
+Tr 0 sanity hearing..."~ emote "I hear she guy hunts all the time, but nobody'll go for it cuz she's into role reversal," Spyder says, chewing all the while.~
+Tr 0 looks at you~ emote Spyder stops chewing her gum and blows a bubble until it pops. She quickly sucks the gum back into her mouth and resumes chewing...~
+Tr 3 arrived~ emote Spyder cracks her gum...~
+#7077
+Sara Joy~
+Sara Joy~
+Sara Joy manages the boutique.~
+A lanky woman with a sculpted jaw and short black hair covering one eye. She apears to be in her mid fourties.  From her cold demeanor, Ms.  Joy isclearly all business.  What's in a name, anyway?  ~
+human~
+AB 0 75 0 0 0 scratch
+0 0 0 0
+10 10 2 500
+AHMV ABCDEFGHIJK medium flesh
+A 0
+I 0
+Tr 0 Danny Faggio inquires.~ room With her head still turned and her resperatory passages still covered, Sara Joy points towards Broadway.~
+Tr 0 I'm sterile!"~ room A brief, cold grin appears on Sara Joy's features as she puts the air freshener away.~
+Tr 0 Danny Faggio leaves east.~ room Sara Joy reaches behind the counter and retrieves a can of air freshener. She sprays in all directions, rendering the shop heavy with the scent of potpourri.~
+Tr 0 Danny Faggio has arrived.~ room Sara Joy begins to speak, then claps a hand over her mouth and nose. "Oh, dear god!" she exclaims as she turns her head away.~
+Tr 0 Spyder says around another gum crack.~ Room Sara Joy crosses her arms in disdain. "Hmph! Quite apt. I can imagine how she came by that slouch."~
+Tr 0 Hanoi Hoochgirl!"~ Room Sara Joy crosses her arms in disdain. "Hmph! Quite apt. I can imagine how she came by that slouch."~
+Tr 0 Kyoko leaves east.~ room Sara Joy turns towards Spyder and asks, "Doesn't your father have a saying for girls like that?"~
+Tr 0 Kyoko has arrived.~ room Sara Joy says, "Why, hello..."~
+Tr 0 A panhandler leaves east.~ emote Sara Joy is livid. Her face turns five shades of red as she clenches and unclenches her hands while she glares at the entrance.~
+Tr 0 A panhandler has arrived.~ Emote Sara Joy sends her darkest scowl in the direction of a panhandler and says "You'll have to leave...  Now."~
+Tr 0 "More like All Street types!"~ emote Sara Joy smiles coldly. "With enormous zeal, at any rate."~
+Tr 0 Carmen leaves east.~ emote Sara Joy sneers. "I'll bet that one ...'entertains' the Wall Street types."~
+Tr 0 Carmen has arrived.~ Sara Joy looks at Carmen. "Why, helo..."~
+Tr 0 Elise Styles leaves east.~ emote Sara Joy shudders.~
+Tr 0 Elise Styles has arrived.~ emote Sara Joy looks at the goth. "Why, hello..."~
+Tr 0 Julie has arrived.~ emote Sara Joy looks at raven-hair. "Why, hello..."~
+Tr 0 Jennifer Lopezed!"~ emote Sara Joy crosses her arms. "Yes. A few more pounds, and you'll be able to see it from the front."~
+Tr 0 Julie leaves east.~ emote "Wonder why that one isn't in jail..." Sara Joy says, making no attempt to hide her disgust.~
+Tr 0 she's into role reversal,"~ emote Sara Joy wrinkles her nose in disgust. "Wouldn't suprise me in the least."~
+Tr 0 Fuzzy Guebre leaves east.~ emote Sara Joy watches Fuzzy's departure. "In my day, that woman would have a sanity hearing..."~
+Tr 0 Fuzzy Guebre has arrived.~ emote Sara Joy looks at Fuzzy. "Why, hello..."~
+Tr 0 blows a bubble until it pops.~ emote Sara Joy glares at Spyder. When her evil eye elicits no response, she goes back to work.~
+Tr 0 cracks her gum...~ Emote Sara Joy shoots a brief, disaproving look towards Spyder, then resumes running the boutique.~
+#7078
+$f $l~
+$f $l~
+$f $l has a line of tools and materials for the starving artist.~
+Like many artists, $f seems rather eccentric, but that comes with theterritory.  ~
+human~
+AB 0 50 0 0 0 none
+0 0 0 0
+10 10 3 1000
+AHMV ABCDEFGHIJK medium flesh
+A 0
+I 0
+#7079
+Meing Chang Zhen~
+Meing Chang Zhen~
+Meing Chang Zhen shows his prowess at the grill.~
+The chief is here, working the grill.~
+human~
+AB 0 50 0 0 0 chop
+0 0 0 0
+10 10 1 250
+AHMV ABCDEFGHIJK medium flesh
+A 0
+I 0
+#7080
+$f $l~
+$f $l~
+$f arranges the clothing racks.~
+One of the Golden age employees, stuck in the seventies...  ~
+human~
+AB 0 50 0 0 0 none
+0 0 0 0
+10 10 3 0
+AHMV ABCDEFGHIJK medium unknown
+A 0
+I 0
+#7081
+$f Sarin~
+$f Sarin~
+$f Sarin is at the helm of the family business.~
+One of the Sarin clan, poviding America with jewelry, both real and pastesince 1913.  ~
+human~
+AB 0 50 0 0 0 none
+I 0 0 0
+10 10 3 380
+AHMV ABCDEFGHIJK medium flash
+A 0
+I 0
+Tr 0 Danny Faggio leaves west.~ room "I guess there's no point telling that one we only sell jewelry," the clerk says.~
+Tr 0 Danny Faggio has arrived.~ room The Sarin store clerk eyes Danny nervously. "Um, can I help you?"~
+Tr 0 a panhandler has arrived~ say I'm sorry, but we allow paying customers only in here. Please leave~
+#7082
+$f $l~
+$f $l~
+$f reminds you it's called a "water pipe".~
+Off the Wall.  Clerk and store alike.  'Nuff said.  ~
+human~
+AB 0 75 0 0 0 punch
+0 0 0 0
+10 10 3 1000
+AHMV ABCDEFGHIJK medium flesh
+A 0
+I 0
+#7083
+$f $l~
+$f~
+$f works the butcher's counter.~
+Plying his trade from day to day, $f makes sure that his counter is wellstocked with fresh meat.  ~
+human~
+AB 0 55 0 0 0 cleave
+0 0 0 0
+10 10 1 0
+AHMV ABCDEFGHIJK medium unknown
+A 0
+I 0
+#7084
+$f $l~
+$f $l~
+$f $l goes about her business.~
+An average looking woman; just a face in the crowd intent on strollingBroadway in the hopes of finding something interesting.  ~
+human~
+AG 0 25 0 0 0 none
+CI 0 0 0
+10 10 2 75
+AHMV ABCDEFGHIJK medium flesh
+A Q
+I 0
+#7085
+$f $l~
+$f $l~
+$f $l is just killing time.~
+Just another guy, out here strolling Broadway for one reason or another.  ~
+human~
+AG 0 25 0 0 0 none
+CN 0 0 0
+10 10 1 120
+AHMV ABCDEFGHIJK medium flesh
+A Q
+I 0
+#7086
+Nathan Hill~
+Nathan Hill~
+Nathan is here pigging out.~
+Nathan is standing here, oblivious to the world with half of a hoagiecrammed into his mouth, tryig to eat it like there's no tommorrow.  Gross.  ~
+human~
+AB 0 25 0 0 0 none
+CI 0 0 0
+10 10 1 0
+AHMV ABCDEFGHIJK medium flash
+A 0
+I 0
+Tr 0 Fuzzy Guebre has arrived.~ Nathan backs up against the wall of Twice-Sold Tales, munching his hoagie all the while.~
+Tr 0 assholes!~ emote says "probably tastes like one too..." as he devours his hoagie.~
+Tr 0 looks at you~ emote Nathan looks at you and say "What?" around a bite of his sandwhich, with bits of it falling off all the while...~
+#7087
+$f panhandler~
+a panhandler~
+Clad in his aura of Au de No Bath, Jason tries to get spare change.~
+There isn't much to say about this poor shell of a man.  Whatever he oncewas, he's now just a specimen of the world of the discarded, going about thebusiness of staying alive.  ~
+human~
+AC 0 25 0 0 0 none
+CIJ 0 0 0
+10 10 1 0
+AHMV ABCDEFGHIJK medium flesh
+A 0
+I 0
+Tr 0 "You'll have to leave...  Now."~ emote A panhandler grumbles "Frigid bitch" as he leaves the botique.east~
+Tr 0 please leave~ emote turns and leaves quietly...west~
+Tr 0 now.~ emote mutters, "I'm goin', I'm goin..." as he turns to leave the shop. A barely audible "bitch" escapes his lips as he departs...east~
+Tr 0 you shitball!~ say I HAD a job bangin' your mother till she dried up!say get outta my face!~
+Tr 0 sack fulla~ (null)~
+Tr 0 looks at you~ say Got any change?~
+#7088
+$f $l kid~
+$f $l~
+$f is hanging around here.~
+$f is just enjoying some time off from school, wether that time isauthorized or not.  ~
+human~
+AGH 0 25 0 0 0 none
+I 0 0 0
+10 10 3 20
+AHMV ABCDEFGHIJK small flesh
+A 0
+I 0
+#7089
+dog~
+a mix breed dog~
+Someone's dog got loose.~
+A carefree mongrel, it's almost impossibe to tell how many breeds aremixed up in him.  He has a collar with a nametag identifying him as $f. He's only interested in two things, a decent meal, and a decent leg.  ~
+dog~
+A 0 50 0 0 0 none
+H 0 0 0
+10 10 1 0
+AGV ACDEFHJKQUV small flesh
+A 0
+I 0
+#7090
+$f $l prostitute~
+$f $l~
+$f $l walks the streets.~
+Cheap make up, cheap clothing, maybe even cheap rates.  While she's nosuper model, she's seems healthier than many others whose beds double as aworkbench.  ~
+human~
+A 0 50 0 0 0 none
+0 0 0 0
+10 10 2 0
+AHMV ABCDEFGHIJK small flesh
+A 0
+I 0
+#7091
+$f $l guard~
+$f $l~
+A large security guard with "$l" on his nametag watches the store.~
+A large man around six feet and well over two-fifty, most of it muscle. His hair is close cropped, and he wears his Territorial Security Servicesuniform as if it were a military garment.  A photo namtag identifies him as"$f $l".  ~
+human~
+AB 0 200 0 0 0 none
+CEFIKPQ 0 0 0
+10 10 1 0
+AHMV ABCDEFGHIJK large flesh
+A A
+I 0
+Tr 0 leon blonsky has arrived~ room At the sight of Leon, the security guard adopts a threatening posture. "We don't want your crap in here!" he yells with barely contained fury. "Get out now, or I'll give what's left of you to the cops!"~
+Tr 0 a panhandler has arrived~ room A security guard's countenance grows dark upon the arrival of a panhandler...~
+#0
+
+
+
+#OBJECTS
+#7030
+M.C. MC Escher Print Circle Limit III~
+"Circle Limit III," by M.C. Escher~
+Picture of "Circle Limit III"~
+This work is composed of a large number of fish within a circle.  Thefish are represented by four colors: red, blue, yellow and green.  Eachcolor of fish falls into a single series that moves in one direction; allthe fish of the same series swim after one another, head to tail, along acircular course from edge to edge.  The more closely they approach thecenter, the larger they become.  The further from the center they are, thesmaller they become until finally all four colors blur together.  When onesquints at the print, it appears much like an image from a kaleidoscope.  ~
+paper~
+8 0 A
+0 0 0 0 0
+0
+0 4000 100
+E
+--USES~
+-2~
+Q 0
+#7031
+bread wonder loaf~
+a loaf of Wonder bread~
+A little over a foot long, this loaf of bread is contained within acolorful plastic bag sealed with a twist-tie.  The bag features the familiarprint of red, blue and yellow dots on a white background and the breadwithin is a soft and squishy as can be.  ~
+A little over a foot long, this loaf of bread is contained within acolorful plastic bag sealed with a twist-tie.  The bag features the familiarprint of red, blue and yellow dots on a white background and the breadwithin is a soft and squishy as can be.  ~
+bread~
+19 0 A
+0 0 0 0 0 0
+0 120 100
+E
+--USES~
+-2~
+Q 0
+#7032
+velveta cheese box~
+a box of Velveta cheese~
+Approximately a foot long, this yellowish-orange box is made ofcardboard.  Within the box is a block of processed cheese wrapped inaluminum foil which prevents the cheese from hardening.  ~
+Approximately a foot long, this yellowish-orange box is made ofcardboard.  Within the box is a block of processed cheese wrapped inaluminum foil which prevents the cheese from hardening.  ~
+cheese~
+19 0 A
+0 0 0 0 0 0
+1 210 100
+E
+--USES~
+-2~
+Q 0
+#7033
+2-liter two liter coke coca-cola bottle cola~
+a 2-liter bottle of Coca-Cola~
+This bottle is made of clear plastic circled with a red label, also ofplastic.  The label reads "Coca-Cola," and contains a list of ingredientsand nutritional information on the back.  Holding two liters of cola, thebottle is large enough to satisfy even the largest thirst.  ~
+This bottle is made of clear plastic circled with a red label, also ofplastic.  The label reads "Coca-Cola," and contains a list of ingredientsand nutritional information on the back.  Holding two liters of cola, thebottle is large enough to satisfy even the largest thirst.  ~
+unknown~
+17 0 A
+20 20 'coke' 0 0 0
+0 99 100
+E
+--USES~
+-2~
+Q 0
+#7034
+nectarine~
+a fresh nectarine~
+This golden fruit is perfectly ripe and ready to eat.  Orange, red andyellow hues decorate the nectarine, adding visual beauty to the sweet aromawafting forth from its surface.  ~
+This golden fruit is perfectly ripe and ready to eat.  Orange, red andyellow hues decorate the nectarine, adding visual beauty to the sweet aromawafting forth from its surface.  ~
+fruit~
+19 0 A
+0 0 0 0 0 0
+0 49 100
+E
+--USES~
+-2~
+Q 0
+#7035
+planter's mixed nuts can~
+a can of Planter's mixed nuts~
+A popular product, this small can of mixed nuts features a blue labelemblazoned with the "Mr.  Peanut" logo, the official mascot of Planter'sPeanuts.  The can holds a variety of nuts such as Brazilian nuts, almonds,and cashews.  A yellow plastic cover allows the can to be resealed.  ~
+A popular product, this small can of mixed nuts features a blue labelemblazoned with the "Mr.  Peanut" logo, the official mascot of Planter'sPeanuts.  The can holds a variety of nuts such as Brazilian nuts, almonds,and cashews.  A yellow plastic cover allows the can to be resealed.  ~
+nuts~
+19 0 A
+0 0 0 0 0 0
+1 350 100
+E
+--USES~
+-2~
+Q 0
+#7036
+gallon plastic milk 2%~
+a gallon of 2% milk~
+This jug is made of transparent plastic and is large enough to holdexactly one gallon.  A paper sticker on the front shows a picture of a blackand white cow.  A cartoon speech bubble issues from the cow's mouth, reading"Moooo!  2% Milk!"  ~
+This jug is made of transparent plastic and is large enough to holdexactly one gallon.  A paper sticker on the front shows a picture of a blackand white cow.  A cartoon speech bubble issues from the cow's mouth, reading"Moooo!  2% Milk!"  ~
+unknown~
+17 0 AO
+25 25 'milk' 0 0 0
+4 250 100
+E
+--USES~
+-2~
+Q 0
+#7037
+walla sweet onion~
+a Walla Walla sweet onion~
+This large onion is white in color and originates in the eastern sectionof Washington state.  Known for its sweet flavor, Walla Walla Sweets make aperfect addition to many savory dishes and can even be enjoyed when eatenalone.  ~
+This large onion is white in color and originates in the eastern sectionof Washington state.  Known for its sweet flavor, Walla Walla Sweets make aperfect addition to many savory dishes and can even be enjoyed when eatenalone.  ~
+onion~
+19 0 A
+0 0 0 0 0 0
+0 59 100
+E
+--USES~
+-2~
+Q 0
+#7038
+t-bone t bone steak~
+a t-bone steak~
+This large cut of meat, one pound in all, still contains the bone andholds little fat or gristle.  ~
+This large cut of meat, one pound in all, still contains the bone andholds little fat or gristle.  ~
+meat~
+19 0 A
+100 100 0 0 0 0
+1 849 100
+E
+--USES~
+-2~
+Q 0
+#7039
+Brom Masterson corpse cor dead body~
+a bloody corpse~
+The corpse of someone who in life looked like: A man in his latetwenties, perhaps a little older - but not by much.  Having thick blondehair, which hangs down into his eyes sometimes, and a thick muscular framewhich stands a little over six foot.  Wearing a pair of clean, white khakis,and a bright orange polo shirt, he tends to stand out just a little morethan most.  ~
+The corpse of someone who in life looked like:A man in his late twenties, perhaps a little older - but not by much.  Having thick blonde hair, which hangs down into his eyes sometimes, anda thick muscular frame which stands a little over six foot.  Wearing a pair of clean, white khakis, and a bright orange polo shirt, he tends to stand out just a little more than most.~
+flesh~
+23 a 0
+0 0 0 0 0
+0
+180 0 100
+E
+--USES~
+-2~
+Q 0
+#7040
+card id ID photo license~
+a photo ID card~
+(null)~
+(null)~
+plastic~
+8 SY AO
+0 0 0 0 0
+0
+0 100000 100
+E
+--USES~
+-2~
+Q 15
+#7041
+nagel print mandarin~
+"Mandarin" by Patrick Nagel~
+An Art Deco of a woman with pale green eyes and short black hair, strandsof which fall on her forehead, looking at you through a set of blinds.  Hereyes are narrow and determined.  ~
+An Art Deco of a woman with pale green eyes and short black hair, strandsof which fall on her forehead, looking at you through a set of blinds.  Hereyes are narrow and determined.  ~
+paper~
+8 0 A
+0 0 0 0 0
+0
+0 5699 100
+E
+--USES~
+-2~
+Q 8
+#7042
+print picasso~
+"Two Figures and a Cat" by Pablo Picasso~
+A watercolored drawing of a woman in bed being eaten by her boyfriendwhile a cat looks on.  Her eyes, heavy on the mascara, are closed as shemoans in delight.  She's holding his hand and rubbing his back with onefoot.  The cat, stationed on the edge of the bed at the top of the pictureand watching teh action, is light brown in color.  The bed is clearlybackground, most of the detail has been devoted to the couple and theirspectator.  This looks as much as something Picasso knocked off to pass thetime as much as it looks like a serious piece of work.  Overshadowed by hislater works, this is a very rare print from around 1900, towards thebeggining of Picasso's career.  ~
+A watercolored drawing of a woman in bed being eaten by her boyfriendwhile a cat looks on.  Her eyes, heavy on the mascara, are closed as shemoans in delight.  She's holding his hand and rubbing his back with onefoot.  The cat, stationed on the edge of the bed at the top of the pictureand watching teh action, is light brown in color.  The bed is clearlybackground, most of the detail has been devoted to the couple and theirspectator.  This looks as much as something Picasso knocked off to pass thetime as much as it looks like a serious piece of work.  Overshadowed by hislater works, this is a very rare print from around 1900, towards thebeggining of Picasso's career.  ~
+paper~
+8 0 A
+0 0 0 0 0
+0
+0 7619 100
+E
+--USES~
+-2~
+Q 5
+#7043
+A hand made wooden chair~
+a hand-made wooden chair with a comfortable cushion~
+This chair has been lovingly hand made by a talented amateur.  To thepracticed eye the tell-tale hints can be seen, however the chair makes upfor it in character and in style.  ~
+This chair has been lovingly hand made by a talented amateur.To the practiced eye the tell-tale hints can be seen, howeverthe chair makes up for it in character and in style.~
+wood~
+12 a 0
+1 300 E 0 0 0
+10 80 100
+E
+--USES~
+-2~
+Q 0
+#7044
+black tights~
+opaque black vinyl tights~
+Black form-fitting tights.  Opaque and slightly glossy, with tightdiamond pattern.  ~
+Black form-fitting tights.  Opaque and slightly glossy, with tightdiamond pattern.  ~
+vinyl~
+11 0 AF
+0 0 0 0 0
+0
+4 1689 100
+E
+--USES~
+-2~
+Q 10
+#7045
+black bodysuit~
+a black zip-up vinyl bodysuit~
+Glossy, black with a standing collar and a black zipper running up thefront from just below the hips.  Thick, black, knotted chain-stitch seamsclearly mark how this garment was made to fit the femal form.  Three 3" widestraps circle the waist and are secured by rectangular silver buckles. Similar straps, 1" wide, and buckles decorate this outfit on the forearms,six per arm.  Another buckle closes at the neck.  ~
+Glossy, black with a standing collar and a black zipper running up thefront from just below the hips.  Thick, black, knotted chain-stitch seamsclearly mark how this garment was made to fit the femal form.  Three 3" widestraps circle the waist and are secured by rectangular silver buckles. Similar straps, 1" wide, and buckles decorate this outfit on the forearms,six per arm.  Another buckle closes at the neck.  ~
+vinyl~
+11 0 AD
+0 0 0 0 0
+0
+5 5679 100
+E
+--USES~
+-2~
+Q 10
+#7046
+black gloves~
+a pair of black, leather gloves~
+Black leather gloves with black, conical studs along the knuckles.  ~
+Black leather gloves with black, conical studs along the knuckles.  ~
+leather~
+11 0 AH
+0 0 0 0 0
+0
+2 4199 100
+E
+--USES~
+-2~
+Q 10
+#7048
+A Lounge~
+a stylish lounge~
+A stylish red velvet lounge c.  1920 rests here ~
+A stylish red velvet lounge c. 1920 rests here~
+wood~
+12 0 0
+2 0 E 0 0 0
+0 0 100
+E
+--USES~
+-2~
+Q 0
+#7049
+Turkish coffee~
+turkish Coffee~
+(no full description)Turkish coffe is the thickest, strongest, mostpotant coffee known to man.  ~
+(no full description)Turkish coffe is the thickest, strongest, most potant coffee known to man.~
+cocaine~
+17 0 0
+0 0 'coffee' 0 0 0
+0 0 100
+E
+--USES~
+-2~
+Q 0
+#7050
+bathrobe~
+a grey linen bathrobe~
+A basic bathrobe with a cloth belt to tie it in front.  It's stone greywith black cord loops and black trim along the edges.  ~
+A basic bathrobe with a cloth belt to tie it in front. It's stone grey with black cord loops and black trim along the edges.~
+vinyl~
+11 0 AK
+0 0 0 0 0
+0
+3 2849 100
+E
+--USES~
+-2~
+Q 2
+#7051
+A glass of red wine~
+a glass of exceptional red wine~
+The wine glass looks to be hand blown my a master craftsman and the wineinside is a perfect match for such workmanship.  The wine is aCabernet-Merlot and has the perfect blend of oak in with it.  You hazard aguess it is one of the best wines on offer.  ~
+The wine glass looks to be hand blown my a master craftsman andthe wine inside is a perfect match for such workmanship.  The wine is a Cabernet-Merlot and has the perfect blend of oak inwith it. You hazard a guess it is one of the best wines on offer. ~
+glass~
+17 0 AO
+10 10 'red wine' 0 0 0
+1 0 100
+E
+--USES~
+-2~
+Q 10
+#7052
+black purse~
+a glossy, black leather purse~
+A small purse made of black leather that has been treated to shine.  Thesurface is plain and smooth, the simplicity of this design is broken only bya flap with a silver clasp; a rectangular eyehole that slides over a smallrectangular knob that turns to hold the flap in place.  The purse is notvery large, being made to hold such items as credentials, wallets or makeup.It's strapless, simply made to be carried in one hand.  The type of effect awoman would bring to a party or dinner date.  ~
+A small purse made of black leather that has been treated to shine.  Thesurface is plain and smooth, the simplicity of this design is broken only bya flap with a silver clasp; a rectangular eyehole that slides over a smallrectangular knob that turns to hold the flap in place.  The purse is notvery large, being made to hold such items as credentials, wallets or makeup.It's strapless, simply made to be carried in one hand.  The type of effect awoman would bring to a party or dinner date.  ~
+leather~
+15 0 AO
+10 A 0 5 0 0
+2 37999 100
+E
+--USES~
+-2~
+Q 7
+#7053
+white blouse~
+a loose, white blouse~
+This blouse is made of thin, white material and is loose fitting.  It'sdesigned to leave both neck and shoulders bare.  Elastic in the cuffs andneck ensure a tight fit around the wrists and where the upper arms meet theshoulders, but the rest flows freely about the body.  ~
+This blouse is made of thin, white material and is loose fitting.  It'sdesigned to leave both neck and shoulders bare.  Elastic in the cuffs andneck ensure a tight fit around the wrists and where the upper arms meet theshoulders, but the rest flows freely about the body.  ~
+coton~
+11 0 AD
+0 0 0 0 0
+0
+2 32919 100
+E
+--USES~
+-2~
+Q 2
+#7054
+green skirt~
+a dark, green kneelength skirt~
+This skirt goes down to the knees and is made of dark green fabric. Outlines of roses are patterned on the material in a lighter green.  ~
+This skirt goes down to the knees and is made of dark green fabric. Outlines of roses are patterned on the material in a lighter green.  ~
+cotton~
+11 0 AF
+0 0 0 0 0
+0
+3 52599 100
+E
+--USES~
+-2~
+Q 6
+#7055
+cream blouse~
+a cream tunic blouse~
+This blouse is made of cream colored silk, with a pattern of small leavessewn into it with glossy thread the same color.  It's a long sleeved garmentthat buttons down the front.  It has a mandarin color and is cut for thefemale figure.  ~
+This blouse is made of cream colored silk, with a pattern of small leavessewn into it with glossy thread the same color.  It's a long sleeved garmentthat buttons down the front.  It has a mandarin color and is cut for thefemale figure.  ~
+silk~
+11 0 AD
+0 0 0 0 0
+0
+3 69929 100
+E
+--USES~
+-2~
+Q 7
+#7056
+red dress~
+a short, red dress~
+A simple tight fitting red dress with spagetti straps holding it over theshoulders.  It zips up the back and is mid-thigh in length.  ~
+A simple tight fitting red dress with spagetti straps holding it over theshoulders.  It zips up the back and is mid-thigh in length.  ~
+cotton~
+11 0 AD
+0 0 0 0 0
+0
+4 49979 100
+E
+--USES~
+-2~
+Q 5
+#7057
+flower summer dress~
+a beige flower pattern summer dress~
+A simple beige dress with short sleeves.  It zips up the back and iscovered in red and green flowers.  ~
+A simple beige dress with short sleeves.  It zips up the back and iscovered in red and green flowers.  ~
+cotton~
+11 0 AD
+0 0 0 0 0
+0
+0 19949 100
+E
+--USES~
+-2~
+Q 5
+#7058
+azure sash~
+an azure colored sash~
+Three feet in length, this piece of cloth ties around the waist.  It hasfringe on the ends and is azure colored.  ~
+Three feet in length, this piece of cloth ties around the waist.  It hasfringe on the ends and is azure colored.  ~
+silk~
+11 0 AL
+0 0 0 0 0
+0
+2 24999 100
+E
+--USES~
+-2~
+Q 6
+#7059
+high heels~
+a pair of tan high-heels~
+A pair of 2" high heeld shoes made of tan suede.  The have straps thatsecure around the ankles.  ~
+A pair of 2" high heeld shoes made of tan suede.  The have straps thatsecure around the ankles.  ~
+leather~
+11 0 AG
+0 0 0 0 0
+0
+2 33999 100
+E
+--USES~
+-2~
+Q 7
+#7060
+stiletto boots~
+black stiletto boots~
+These boots are made of suede and go up to mid-calf.  Although they arelaced up the front, the black zippers on the sides that face in that arereally used to take the boots on and off.  They have 3" stiletto heels andlook expensive.  ~
+These boots are made of suede and go up to mid-calf.  Although they arelaced up the front, the black zippers on the sides that face in that arereally used to take the boots on and off.  They have 3" stiletto heels andlook expensive.  ~
+leather~
+11 0 AG
+0 0 0 0 0
+0
+2 48999 100
+E
+--USES~
+-2~
+Q 6
+#7061
+kneehigh boots~
+black leather kneehigh boots~
+A pair of black leather boots polished to a high gloss.  They come tojust below the knees with silver clasps running up the outsides, and lowpractical heels.  They've been cut to fit the dimensions of female calves.  ~
+A pair of black leather boots polished to a high gloss.  They come tojust below the knees with silver clasps running up the outsides, and lowpractical heels.  They've been cut to fit the dimensions of female calves.  ~
+leather~
+11 0 AG
+0 0 0 0 0
+0
+2 69979 100
+E
+--USES~
+-2~
+Q 7
+#7062
+pantyhose hose~
+flesh colored hose~
+Skin-tight, skin colored and made of ultra-thin stretchy nylon.  Not muchto say.  ~
+Skin-tight, skin colored and made of ultra-thin stretchy nylon.  Not muchto say.  ~
+vinyl~
+11 0 AF
+0 0 0 0 0
+0
+0 4999 100
+E
+--USES~
+-2~
+Q 5
+#7063
+pantyhose hose~
+black colored hose~
+Black, skin-tight and stretchy, the choice of women who like their hoseblack, skin-tight and stretchy.  ~
+Black, skin-tight and stretchy, the choice of women who like their hoseblack, skin-tight and stretchy.  ~
+vinyl~
+11 0 AF
+0 0 0 0 0
+0
+0 4999 100
+E
+--USES~
+-2~
+Q 5
+#7064
+fishnet stockings~
+a pair of black fishnet stockings~
+Black, skin-tight and comes in the classic mesh pattern.  ~
+Black, skin-tight and comes in the classic mesh pattern.  ~
+vinyl~
+11 0 AF
+0 0 0 0 0
+0
+0 5999 100
+E
+--USES~
+-2~
+Q 5
+#7065
+black vinyl top~
+a black vinyl zip-up top~
+A black vinyl top with wide shoulder straps.  A silver zipper secures itin front.  Not for the faint of heart.  ~
+A black vinyl top with wide shoulder straps.  A silver zipper secures itin front.  Not for the faint of heart.  ~
+vinyl~
+11 0 AD
+0 0 0 0 0
+0
+3 29999 100
+E
+--USES~
+-2~
+Q 7
+#7066
+back stretch pants~
+black vinyl PVC stretch pants~
+Black pants tight enough for the wearer to be poured into them, or maybepainted on.  They have a silver zipper in front, and matching zippers on theoutside of the calves, and leave no doubt regarding the wearer's dimensions.~
+Black pants tight enough for the wearer to be poured into them, or maybepainted on.  They have a silver zipper in front, and matching zippers on theoutside of the calves, and leave no doubt regarding the wearer's dimensions.~
+vinyl~
+11 0 AF
+0 0 0 0 0
+0
+3 39989 100
+E
+--USES~
+-2~
+Q 2
+#7067
+black jacket~
+a black leather biker's jacket~
+Made of black leather, this jacket was designed for a woman's naturalcurves.  Chrome zippers run up the length of the forearms.  A matchingzipper closes the jacket in front, stopping just short of it's wide collar. Vertical zippers secure pockets over the breasts, while horizontal ones holdthe contents (if any) to pockets on the hips.  Leather lacing on each sideabove the hips can ajust the jacket for different sizes.  ~
+Made of black leather, this jacket was designed for a woman's naturalcurves.  Chrome zippers run up the length of the forearms.  A matchingzipper closes the jacket in front, stopping just short of it's wide collar. Vertical zippers secure pockets over the breasts, while horizontal ones holdthe contents (if any) to pockets on the hips.  Leather lacing on each sideabove the hips can ajust the jacket for different sizes.  ~
+leather~
+11 0 AK
+0 0 0 0 0
+0
+3 56899 100
+E
+--USES~
+-2~
+Q 6
+#7068
+black dress minidress~
+a black vinyl minidress~
+Glossy and form fitting, this dress zips up the back and comes down tojust below the hips.  It has the barest suggestion of short sleeves andprovides minimal covering of the bust.  ~
+Glossy and form fitting, this dress zips up the back and comes down tojust below the hips.  It has the barest suggestion of short sleeves andprovides minimal covering of the bust.  ~
+vinyl~
+11 0 AD
+0 0 0 0 0
+0
+4 28999 100
+E
+--USES~
+-2~
+Q 6
+#7069
+magneta t-shirt~
+a magneta t-shirt~
+A bright magneta t-shirt with "Retro Viva" across the front in largewhite cusive letters.  ~
+A bright magneta t-shirt with "Retro Viva" across the front in largewhite cusive letters.  ~
+cotton~
+11 0 AD
+0 0 0 0 0
+0
+2 3299 100
+E
+--USES~
+-2~
+Q 4
+#7070
+dye~
+a jar of Directions hair dye~
+A small jar of hair dye.  "Lariche Directions" is printed on it in gold. The color of the jar depends on that of the dye within, which can be anyoneof over 30 outlandish shades.  ~
+A small jar of hair dye.  "Lariche Directions" is printed on it in gold. The color of the jar depends on that of the dye within, which can be anyoneof over 30 outlandish shades.  ~
+plastic~
+8 0 AO
+0 0 0 0 0
+0
+0 3995 100
+E
+--USES~
+-2~
+Q 3
+#7071
+zircon birthstone ring~
+a zircon birthstone ring~
+A silver ring of simple design.  A plain band and a mount for a stone,the color of which depends on the month the wearer was born.  ~
+A silver ring of simple design.  A plain band and a mount for a stone,the color of which depends on the month the wearer was born.  ~
+silver~
+8 0 AB
+0 0 0 0 0
+0
+0 2599 100
+E
+--USES~
+-2~
+Q 5
+#7072
+diamond brooch~
+a diamond brooch~
+The brooch has twelve diamonds set in four rows of four.  The ornament isedged in gold, with leaves and vines engraved upon it.  ~
+The brooch has twelve diamonds set in four rows of four.  The ornament isedged in gold, with leaves and vines engraved upon it.  ~
+diamond~
+8 0 AC
+0 0 0 0 0
+0
+0 19999 100
+E
+--USES~
+-2~
+Q 7
+#7073
+onyx ring~
+a gold ring with onyx and diamonds~
+A polished onyx rectangle set perpendicular to the width of the ring isthe main eye catcher.  Diamonds, in rows of three, have been set on bothlong sides of the onyx.  A silver diamond shape is embedded in the center ofthe onyx.  This ring is clearly the work of an expert craftsman.  ~
+A polished onyx rectangle set perpendicular to the width of the ring isthe main eye catcher.  Diamonds, in rows of three, have been set on bothlong sides of the onyx.  A silver diamond shape is embedded in the center ofthe onyx.  This ring is clearly the work of an expert craftsman.  ~
+obsidian~
+8 0 AB
+0 0 0 0 0
+0
+0 9999 100
+E
+--USES~
+-2~
+Q 7
+#7074
+crystal pendant~
+a crytal pendant on a chain.~
+A clear, hexagonal crystal attached to a simple gold-plated chain.  ~
+A clear, hexagonal crystal attached to a simple gold-plated chain.  ~
+glass~
+8 0 AC
+0 0 0 0 0
+0
+0 1289 100
+E
+--USES~
+-2~
+Q 8
+#7075
+diamon studded bracelet~
+a diamond studded bracelet~
+A creation of gold, recangular segemts, each boasting a pair of diamonds.The segment are connected at the thin ends and are slightly curved to fitthe wrist.  ~
+A creation of gold, recangular segemts, each boasting a pair of diamonds.The segment are connected at the thin ends and are slightly curved to fitthe wrist.  ~
+diamond~
+8 0 AC
+0 0 0 0 0
+0
+0 37599 100
+E
+--USES~
+-2~
+Q 7
+#7076
+platinum diamond ring~
+a platinum ring with diamonds~
+A ring with an engraved platinum band, and over a dozen diamonds arrangedin an infinity symbol.  ~
+A ring with an engraved platinum band, and over a dozen diamonds arrangedin an infinity symbol.  ~
+platinum~
+8 0 AB
+0 0 0 0 0
+0
+0 65589 100
+E
+--USES~
+-2~
+Q 7
+#7077
+pearl necklace~
+a 16" pearl necklace~
+A strand of pearls with a gold flower-shaped clasp.  It looks likesomething best worn for an opera or dinner at a four star restaraunt.  ~
+A strand of pearls with a gold flower-shaped clasp.  It looks likesomething best worn for an opera or dinner at a four star restaraunt.  ~
+string~
+8 0 AC
+0 0 0 0 0
+0
+1 65399 100
+E
+--USES~
+-2~
+Q 6
+#7078
+diamond necklace~
+a gold foxtail diamond necklace~
+This necklace has over a hundred small diamonds mounted in a widev-shape.  The rest of the necklace consists of three braided gold cords. Definately a girl's best friend.  ~
+This necklace has over a hundred small diamonds mounted in a widev-shape.  The rest of the necklace consists of three braided gold cords. Definately a girl's best friend.  ~
+diamond~
+8 0 AC
+0 0 0 0 0
+0
+0 120000 100
+E
+--USES~
+-2~
+Q 9
+#7079
+gold pin~
+a gold Fleur-de-Lis pin~
+A gold pin in the shape of the classic Fleur-de-Lis.  ~
+A gold pin in the shape of the classic Fleur-de-Lis.  ~
+gold~
+8 0 AC
+0 0 0 0 0
+0
+0 8979 100
+E
+--USES~
+-2~
+Q 2
+#7080
+ruby ring~
+a marquise ruby ring~
+A marquise shaped ruby with four diamonds, two flanking each tip.  Thearray is mounted onto a gold double band.  ~
+A marquise shaped ruby with four diamonds, two flanking each tip.  Thearray is mounted onto a gold double band.  ~
+ruby~
+8 0 AB
+0 0 0 0 0
+0
+0 39049 100
+E
+--USES~
+-2~
+Q 6
+#7081
+emerald pendant~
+a teardrop emerald amulet~
+A large teardrop emerald suspended from a silver necklace with birch leafshaped links.  ~
+A large teardrop emerald suspended from a silver necklace with birch leafshaped links.  ~
+emerald~
+8 0 AC
+0 0 0 0 0
+0
+0 220000 100
+E
+--USES~
+-2~
+Q 2
+#7082
+gold watch~
+a gold Rolex watch~
+It has a quare analog face with roman numerals done in silver.  The watchalso has, in gold, the link band that rolex is famous for.  ~
+It has a quare analog face with roman numerals done in silver.  The watchalso has, in gold, the link band that rolex is famous for.  ~
+gold~
+8 0 AM
+0 0 0 0 0
+0
+0 450000 100
+E
+--USES~
+-2~
+Q 9
+#7083
+bracelet~
+a turquoise and coral bracelet~
+A bracelet with round beads of coral and turquoise in an alterantingpattern.  The main attraction of the bracelet is a large, diamond-shaped,engraved silver bead.  ~
+A bracelet with round beads of coral and turquoise in an alterantingpattern.  The main attraction of the bracelet is a large, diamond-shaped,engraved silver bead.  ~
+silver~
+8 0 AM
+0 0 0 0 0
+0
+0 21919 100
+E
+--USES~
+-2~
+Q 2
+#7084
+lsd dose papers~
+some lsd~
+It looks like a psycadelic postage stamp.  ~
+It looks like a psycadelic postage stamp.~
+lsd~
+26 EP A
+0 'charm' 'detect hidden' '(null)' 'reserved' 0
+0 5000 100
+E
+--USES~
+-2~
+Q 2
+#7085
+herion smack~
+some herion A.K.A. "Smack"~
+Known also as "smack", "junk", "H", "skag", and sometimes "Mexcan blacktar" this brown powder originates from the seeds of the poppy plant in Asia.~
+Known also as "smack", "junk", "H", "skag", and sometimes "Mexcan blacktar" this brown powder originates from the seeds of the poppy plant in Asia.~
+herion~
+26 EP A
+0 'slow' '(null)' '(null)' 'reserved' 0
+1 4000 100
+E
+--USES~
+-2~
+Q 2
+#7086
+cocaine coke~
+some cocaine~
+Imported centuries ago from Central America, this substance was the primeingredient for Coca-Cola.  Here it is in it's powder form, ready forsnorting or dissolving in water.  ~
+Imported centuries ago from Central America, this substance was the primeingredient for Coca-Cola.  Here it is in it's powder form, ready forsnorting or dissolving in water.  ~
+cocaine~
+26 EP A
+0 'charm' 'reserved' 'reserved' 'reserved' 0
+1 6000 100
+E
+--USES~
+-2~
+Q 2
+#7087
+9mm beretta pistol~
+92F Beretta 9mm pistol~
+A 2F Beretta 9mm pistol is here.~
+Formerly the handgun of the US military, the 92F often finds a home withlaw enforcement and security agencies.  This model is bhas a blue-steelfinish, black grips, and ambidextrious switches.  ~
+steel~
+5 0 AN
+1 4 7088 suction CD 10
+1 47945 100
+E
+--USES~
+-2~
+Q 2
+#7088
+clip~
+a blue-steel pistol clip~
+A magazine for 9mm pistol rounds.  It's black and has small holes in thesides that one can see how many rounds are left.  ~
+A magazine for 9mm pistol rounds.  It's black and has small holes in thesides that one can see how many rounds are left.  ~
+steel~
+31 0 A
+CD C AB 0 0
+BD
+1 0 100
+E
+--USES~
+-2~
+Q 2
+#7089
+couch~
+a brown leather couch~
+Upholstered in brown leather, this couch comfortably seats three people. It has four black legs that taper as they reach their brass colored feet. The armrests curve around from back to sides.  The cusions are attched tothe main frame and cannot be removed.  ~
+Upholstered in brown leather, this couch comfortably seats three people. It has four black legs that taper as they reach their brass colored feet. The armrests curve around from back to sides.  The cusions are attched tothe main frame and cannot be removed.  ~
+leather~
+12 0 0
+3 300 BEHK 0 0 0
+300 67719 100
+E
+--USES~
+-2~
+Q 5
+#7090
+table~
+a glass top coffee table~
+A three foot long table with slightly tinted glass set in the top.  Ithas four wide wooden legs and a shelf mounted halfway between the glass topand the ends of the legs.  The wood is polished with a dark finish.  ~
+A three foot long table with slightly tinted glass set in the top.  Ithas four wide wooden legs and a shelf mounted halfway between the glass topand the ends of the legs.  The wood is polished with a dark finish.  ~
+steel~
+15 0 0
+50 E 0 0 0 0
+120 12999 100
+E
+--USES~
+-2~
+Q 5
+#7091
+recliner~
+an alcantara leather recliner~
+Unlike many recliners, this one has no swith to bring up the foot reset;instead one must lean back and to bring it up automatically.  It covered inpadded alcantara suede with black steel-frame armrests, also padded, andsits on a wide round base.  ~
+Unlike many recliners, this one has no swith to bring up the foot reset;instead one must lean back and to bring it up automatically.  It covered inpadded alcantara suede with black steel-frame armrests, also padded, andsits on a wide round base.  ~
+leather~
+12 0 0
+1 0 FI 0 0 0
+290 35900 100
+E
+--USES~
+-2~
+Q 5
+#7092
+bed~
+a dark brown platform bed~
+Matress ready, this bed sits on a dark brown platform with matchingheadboard.  The headboard is rectangular, with rectangular lights built intoeach end, set parallel to the length of the board.  The varnished finish issleek and gleaming.  ~
+Matress ready, this bed sits on a dark brown platform with matchingheadboard.  The headboard is rectangular, with rectangular lights built intoeach end, set parallel to the length of the board.  The varnished finish issleek and gleaming.  ~
+wood~
+12 0 0
+2 0 BEIL 0 0 0
+4000 347799 100
+E
+--USES~
+-2~
+Q 5
+#7093
+desk~
+a brown wooden desk~
+A varnished wooden desk, with a sliding tray for a computer keyboard. The right side has four drawers stacked one atop the other.  ~
+A varnished wooden desk, with a sliding tray for a computer keyboard. The right side has four drawers stacked one atop the other.  ~
+wood~
+15 0 0
+20 AC 0 0 0 0
+0 52769 100
+E
+--USES~
+-2~
+Q 2
+#7094
+dresser~
+a light brown wooden dresser~
+With six drawers, stacked three to a side, with a small center cabinetfor shoes, this dresser is bound to serve all of it's owner's clothingstorage needs.  ~
+With six drawers, stacked three to a side, with a small center cabinetfor shoes, this dresser is bound to serve all of it's owner's clothingstorage needs.  ~
+wood~
+15 0 0
+300 AC 0 100 0 0
+0 126799 100
+E
+--USES~
+-2~
+Q 2
+#7095
+mirror~
+a full-length mirror~
+Roughly five and a half feet high and tilted back slightly, this mirrorsits in a silver frame, showing the reflection of all who look within thesilver tinted glass.  ~
+Roughly five and a half feet high and tilted back slightly, this mirrorsits in a silver frame, showing the reflection of all who look within thesilver tinted glass.  ~
+aluminum~
+12 0 0
+1 0 A 0 0 0
+0 21069 100
+E
+--USES~
+-2~
+E
+glass~
+Why, it's you and your surroundings!  Surprised?  ~
+Q 2
+#7096
+entertainment center~
+an entertainement center~
+It has the large shelf for one's tv placed in the center, with smallershelves above and below it.  This array is flanked by stacks of even moreshelves, set in bases that swivel so that the whole setup and be placed in acorner if one so desires.  ~
+It has the large shelf for one's tv placed in the center, with smallershelves above and below it.  This array is flanked by stacks of even moreshelves, set in bases that swivel so that the whole setup and be placed in acorner if one so desires.  ~
+wood~
+15 0 0
+200 E 0 5 0 0
+0 181200 100
+E
+--USES~
+-2~
+Q 2
+#7097
+paint~
+a tube of oil paint~
+A silver tube containing oil paint.  The color of the label determinesthat of the paint within.  ~
+A silver tube containing oil paint.  The color of the label determinesthat of the paint within.  ~
+plastic~
+17 0 A
+2 2 'ooze' 1 0 0
+0 599 100
+E
+--USES~
+-2~
+Q 4
+#7098
+brush~
+a paintbrush~
+A basic paintbrush for those that paint on canvas.  Nothing much to sayabout it.  ~
+A basic paintbrush for those that paint on canvas.  Nothing much to sayabout it.  ~
+wood~
+8 0 AO
+0 0 0 0 0
+0
+0 299 100
+E
+--USES~
+-2~
+Q 4
+#7099
+easel~
+an easel~
+A wooden tripod with a panel attatched to it.  A tray at the bottom ofthe panel allows the user to place their tools here.  ~
+A wooden tripod with a panel attatched to it.  A tray at the bottom ofthe panel allows the user to place their tools here.  ~
+wood~
+15 0 A
+5 E 0 0 0 0
+0 3879 100
+E
+--USES~
+-2~
+Q 5
+#7100
+canvas~
+a blank canvas~
+A wooden frame upon which canvas has been stretched over and secured tothe sides, awaiting the expressions of an artist to be made into reality.  ~
+A wooden frame upon which canvas has been stretched over and secured tothe sides, awaiting the expressions of an artist to be made into reality.  ~
+hemp~
+8 0 A
+0 0 0 0 0
+0
+0 999 100
+E
+--USES~
+-2~
+Q 4
+#7101
+charcoal~
+a piece of charcoal~
+A long piece of charcoal, used for drawing.  ~
+A long piece of charcoal, used for drawing.  ~
+wood~
+13 0 AO
+0 0 0 0 0
+0
+0 99 100
+E
+--USES~
+-2~
+Q 3
+#7102
+paper~
+a piece of sketch paper~
+A sheet of 18" x 24" paper, used for sketching.  ~
+A sheet of 18" x 24" paper, used for sketching.  ~
+paper~
+13 0 A
+0 0 0 0 0
+0
+0 79 100
+E
+--USES~
+-2~
+Q 5
+#7103
+clay~
+some modeling clay~
+Some clay that can be molded into whatever shape one wishes.  ~
+Some clay that can be molded into whatever shape one wishes.  ~
+clay~
+13 0 AOR
+0 0 0 0 0
+0
+0 499 100
+E
+--USES~
+-2~
+Q 4
+#7104
+hoagie sandwich~
+a half eaten hoagie~
+It's a hoagie, loaded with salami, ham, bacon, tomatoes, onions, lettuce,mozzarella cheese, and italian dressing.  It would look real appatizing... If half of it hadn't already been eaten, and sloppily at that.  ~
+It's a hoagie, loaded with salami, ham, bacon, tomatoes, onions, lettuce,mozzarella cheese, and italian dressing.  It would look real appatizing... If half of it hadn't already been eaten, and sloppily at that.  ~
+meat~
+19 0 AO
+20 30 0 0 0 0
+1 0 100
+E
+--USES~
+-2~
+Q 2
+#7105
+science fiction book~
+a science fiction novel~
+A hardcover science fiction novel whose author was trying to break intothe genre.  ~
+A hardcover science fiction novel whose author was trying to break intothe genre.  ~
+paper~
+8 0 AO
+0 0 0 0 0
+0
+0 499 100
+E
+--USES~
+-2~
+Q 3
+#7106
+star trek book~
+a Star Trek novel~
+One of the many, many, many, many, many books that have taken place inthe Star Trek universe.  God, will it never end?  ~
+One of the many, many, many, many, many books that have taken place inthe Star Trek universe.  God, will it never end?  ~
+paper~
+8 0 AO
+0 0 0 0 0
+0
+0 299 100
+E
+--USES~
+-2~
+Q 2
+#7107
+stephen king book~
+a hardcover Stephen King novel~
+One of the many works by ever prolific Stephen King.  New England town,hideous monstrosity, and people having to cope without basic social systemthey took for granted.  ~
+One of the many works by ever prolific Stephen King.  New England town,hideous monstrosity, and people having to cope without basic social systemthey took for granted.  ~
+paper~
+8 0 AO
+0 0 0 0 0
+0
+0 699 100
+E
+--USES~
+-2~
+Q 3
+#7108
+Tom Clancy book~
+a Tom Clancy novel~
+A novel for those whose appitites drift towards politics and specialforces covert operations.  ~
+A novel for those whose appitites drift towards politics and specialforces covert operations.  ~
+paper~
+13 0 AO
+0 0 0 0 0
+0
+0 399 100
+E
+--USES~
+-2~
+Q 2
+#7109
+romance novel~
+a trashy romance novel~
+One of the ghastly romance novels that get produced each year by theunspeakable thousands, with it's trademark cover: trademark drop-deadgorgeous (and probably oversexed) heroine in the trademark "I melt in yourarms so take me away to paradise" pose in the arms of the trademark muscularand totally masculine (and equally oversexed) hero.  The condition of it'sworn cover and spine indicates that this piece of work has been read notonce, not twice, but several times; thus raising certain questions, such as:{RWHO WRITES THIS CRAP AND WHO THE HELL {YREADS{R IT???  AND WHY, JUST{YWHY{R IS THERE A {YMARKET{R FOR IT IN THE FIRST PLACE???  {x ~
+One of the ghastly romance novels that get produced each year by theunspeakable thousands, with it's trademark cover: trademark drop-deadgorgeous (and probably oversexed) heroine in the trademark "I melt in yourarms so take me away to paradise" pose in the arms of the trademark muscularand totally masculine (and equally oversexed) hero.  The condition of it'sworn cover and spine indicates that this piece of work has been read notonce, not twice, but several times; thus raising certain questions, such as:{RWHO WRITES THIS CRAP AND WHO THE HELL {YREADS{R IT???  AND WHY, JUST{YWHY{R IS THERE A {YMARKET{R FOR IT IN THE FIRST PLACE???  {x ~
+paper~
+13 0 AO
+0 0 0 0 0
+0
+0 75 100
+E
+--USES~
+-2~
+Q 2
+#7110
+big gulp~
+a Big Gulp~
+A large red paper cup with "{YBig Gulp{x" on the side below "7-11" andabove "44oz".  ~
+A large red paper cup with "{YBig Gulp{x" on the side below "7-11" andabove "44oz".  ~
+paper~
+17 0 AO
+4 0 'coke' 0 0 0
+3 119 100
+E
+--USES~
+-2~
+Q 4
+#7111
+fountain~
+a soda fountain~
+A basic dispenser for soft drinks, press your cup against the arm belowthe nozzle to fill it with fizzy goodness.  ~
+A basic dispenser for soft drinks, press your cup against the arm belowthe nozzle to fill it with fizzy goodness.  ~
+steel~
+25 0 0
+999 999 'coke' 0 0 0
+0 0 100
+E
+--USES~
+-2~
+Q 5
+#7112
+camera~
+a disposable camera~
+A small plastic camera that come in a variety of colors, simple enoughfor a chimpanzee to operate.  Unfortunately, it's range is limited to onesimmediate surroundings.  It's operation is clear; simply sight through thewindow above the lens, and press the red button to {Cuse{x the camera.  Ithas a maximum of twenty four shots.  ~
+A small plastic camera that come in a variety of colors, simple enoughfor a chimpanzee to operate.  Unfortunately, it's range is limited to onesimmediate surroundings.  It's operation is clear; simply sight through thewindow above the lens, and press the red button to {Cuse{x the camera.  Ithas a maximum of twenty four shots.  ~
+plastic~
+8 0 AO
+0 0 0 0 0
+0
+1 999 100
+E
+--TUNONE~
+You take a picture of the general surroundings.~
+E
+--TUSELF~
+You just took a picture of yourself. Hope it was your good side.~
+E
+--TUOTH~
+You take a snapshot of $N. Now it will last longer.~
+E
+--TRNONE~
+$n snaps a picture with a disposable camera.~
+E
+--TRSELF~
+$n just took $m own picture. Narcisist.~
+E
+--TROTH~
+$n just took $N's picture. Guess it'll last longer.~
+E
+--TVOTH~
+other In the spirit of longer lasting, $n takes your picture.~
+E
+--TRUSE~
+It's safe to come out now, $n is out of film.~
+E
+--TUUSE~
+You're out of film.~
+E
+--USES~
+24~
+Q 4
+#7113
+switchblade~
+a black-handle switchblade~
+This is the type of switchblade featured in "The Wild One" and "West-sideStory".  A side-opening model with black, grooved grips and nickel stubbycrossguard and pommel.  A six inch blade is brought into play when therelease button is pressed.  ~
+This is the type of switchblade featured in "The Wild One" and "West-sideStory".  A side-opening model with black, grooved grips and nickel stubbycrossguard and pommel.  A six inch blade is brought into play when therelease button is pressed.  ~
+steel~
+5 0 AN
+2 5 0 stab 0 0
+1 0 100
+E
+--TUNONE~
+You activate the switchblade. Care to dance?~
+E
+--TRNONE~
+$n holds up a switchblade and presses the relase button, bringing a six inch blade into play.~
+E
+--USES~
+-1~
+Q 4
+#7114
+chain~
+a chain and padlock~
+A metal chain about eighteen inches in length, the kind used to lock upchain-link fence gates.  A single-dial padlock is secured to one end of it. ~
+A metal chain about eighteen inches in length, the kind used to lock upchain-link fence gates.  A single-dial padlock is secured to one end of it. ~
+steel~
+5 0 A
+0 7 0 beating 0 0
+2 3645 100
+E
+--USES~
+-2~
+Q 2
+#7115
+name fried rice~
+mongolian fried rice~
+A plate of fried rice with bean sprouts, onion, red peppers and bambooshoots.  Mmm-mmm good!  ~
+A plate of fried rice with bean sprouts, onion, red peppers and bambooshoots.  Mmm-mmm good!  ~
+curry~
+19 0 A
+5 1 0 0 0 0
+1 349 100
+E
+--USES~
+-2~
+Q 4
+#7116
+plain rice~
+a plate of plain rice~
+A nondescript plate of steamed white rice.  Usually inteded to be mixedwith another dish.  ~
+A nondescript plate of steamed white rice.  Usually inteded to be mixedwith another dish.  ~
+curry~
+19 0 A
+5 0 0 0 0 0
+1 249 100
+E
+--USES~
+-2~
+Q 4
+#7117
+soy sauce~
+a packet of soy sauce~
+A small plastic packet, three inches by one.  One side is transparent,revealing the dark-nearly-black-brown liquid within.  The opposite sidesports a yellow face with asain ideograms.  Below thses, in english, one canread "Hakkosan Soy Sauce".  ~
+A small plastic packet, three inches by one.  One side is transparent,revealing the dark-nearly-black-brown liquid within.  The opposite sidesports a yellow face with asain ideograms.  Below thses, in english, one canread "Hakkosan Soy Sauce".  ~
+ooze~
+19 0 A
+-1 0 0 0 0 0
+1 25 100
+E
+--USES~
+-2~
+Q 2
+#7118
+duck breat~
+chang's Mongolian Duck~
+A plate of roasted strips of duck breat sauteed in a spicy sause.  Servedwith a helping of wild rice.  ~
+A plate of roasted strips of duck breat sauteed in a spicy sause.  Servedwith a helping of wild rice.  ~
+meat~
+19 0 A
+5 1 0 0 0 0
+0 2649 100
+E
+--USES~
+-2~
+Q 4
+#7119
+beef stir fry~
+a plate of Chang's Beef Stir Fry~
+Stir fried beef strips with red peppers, onions, and bok-choy.  ~
+Stir fried beef strips with red peppers, onions, and bok-choy.  ~
+meat~
+19 0 A
+5 2 0 0 0 0
+0 979 100
+E
+--USES~
+-2~
+Q 4
+#7120
+fortune cookie~
+a fortune cookie~
+A fortune cookie sits in it's clear wrapper.  On one side is a red labelwith Chinese ideograms.  Beneath the foriegn text is it's englishtranslation: Pu Pow's Generic Fortune Cookie Company.  For those stillunsure of the cookie's origin can fins the address on the back (Pu Pow'sGeneric Fortune Cookie Company, San Fransisco, California 94123) right belowthe "Made in USA" label.  ~
+A fortune cookie sits in it's clear wrapper.  On one side is a red labelwith Chinese ideograms.  Beneath the foriegn text is it's englishtranslation: Pu Pow's Generic Fortune Cookie Company.  For those stillunsure of the cookie's origin can fins the address on the back (Pu Pow'sGeneric Fortune Cookie Company, San Fransisco, California 94123) right belowthe "Made in USA" label.  ~
+pastry~
+19 0 A
+100 0 0 0 0 0
+0 5 100
+E
+--TUNONE~
+You break open the cookie and find your fortune: some lottery numbers and a vague common sense prediction. Whoopie... wow... gollygeewilikers...~
+E
+--TRNONE~
+$N breaks open a fortune cookie.~
+E
+--TRUSE~
+Apparently unsastified with the preditions of fate, $N breaks the cookie again.~
+E
+--TUUSE~
+It's broken already. What do you want, the Superbowl scores?~
+E
+--USES~
+1~
+Q 4
+#7121
+chop sticks~
+a pair of chopsticks~
+A pair of wooden chopsticks, just to make your asian quisine unnessarilycomplicated.  Comes in a cheap looking paper sleeve.  ~
+A pair of wooden chopsticks, just to make your asian quisine unnessarilycomplicated.  Comes in a cheap looking paper sleeve.  ~
+wood~
+5 0 AN
+0 0 0 stab 0 0
+0 5 100
+E
+--USES~
+-2~
+Q 4
+#7122
+boarded exit~
+some boards~
+A collection of plywood boards nailed to the door of the DVD King store. It's to dark inside to see anything.  ~
+A collection of plywood boards nailed to the door of the DVD King store. It's to dark inside to see anything.  ~
+wood~
+29 0 0
+9999 0 0 7059 0 0
+0 0 100
+E
+--USES~
+-2~
+Q 2
+#7123
+ivory shirt~
+an ivory dress shirt~
+An ordinary dress shirt with white buttons down the front and on thecuffs.  A flapless pocket sits on the left breast.  ~
+An ordinary dress shirt with white buttons down the front and on thecuffs.  A flapless pocket sits on the left breast.  ~
+cotton~
+11 0 AD
+0 0 0 0 0
+0
+2 1499 100
+E
+--USES~
+-2~
+Q 4
+#7124
+white pinstripe blouse~
+a white pinstripe blouse~
+A white, silk blouse with puffed sleeves, and a self-tie collar.  Alsoamong the garment's details are pearl collored buttons and powder bluepinstipes.  Good for business or casual.  ~
+A white, silk blouse with puffed sleeves, and a self-tie collar.  Alsoamong the garment's details are pearl collored buttons and powder bluepinstipes.  Good for business or casual.  ~
+silk~
+11 0 AD
+0 0 0 0 0
+0
+3 2649 100
+E
+--USES~
+-2~
+Q 5
+#7125
+tube top~
+a tube top~
+A basic tube top, with an elsatic band to ensure that it providesmosesty.  It covers the breasts and upper part of the abdomen.  Comes in avariety of colors and patterns.  ~
+A basic tube top, with an elsatic band to ensure that it providesmosesty.  It covers the breasts and upper part of the abdomen.  Comes in avariety of colors and patterns.  ~
+cotton~
+11 0 AI
+0 0 0 0 0
+0
+2 949 100
+E
+--USES~
+-2~
+Q 3
+#7126
+spuds mackenzie t-shirt~
+a Spuds MacKenzie t-shirt~
+A white Budweiser t-shirt featuring Spuds MacKenzie wearing a laurelwreath crown and a toga.  It's seen some wear, but it's condition is soundenough.  ~
+A white Budweiser t-shirt featuring Spuds MacKenzie wearing a laurelwreath crown and a toga.  It's seen some wear, but it's condition is soundenough.  ~
+cotton~
+11 0 AD
+0 0 0 0 0
+0
+1 1278 100
+E
+--USES~
+-2~
+Q 2
+#7127
+a leisure suit jacket~
+a {Rred{x and {Gmint green{x plaid leisure suit jacket~
+This is what happens when you do too much acid in the sixties and then gointo fasion design.  Yes, this hideous fucking thing was invented in 1970,but what's time when your on a really groovy trip?  Now you too can beLeisure Suit Larry.  Yeah, get it on, baby, get it on.  Get polyesterized,get plaid, get {Rred{x and {Gmint green{x plaid!  Then go find a disco ball,and get funky!  Maybe Farrah Fawcett is finally senile so she'll go out withyou, or you can try Liz Taylor.  Hell, you don't even need the pants, thejacket is more than enough...  Way more than enough!  Don this awe sookysooky tribute to '70's fasion, and keep in mind that if this were Japan,you'd have to kill yourself.  ~
+This is what happens when you do too much acid in the sixties and then gointo fasion design.  Yes, this hideous fucking thing was invented in 1970,but what's time when your on a really groovy trip?  Now you too can beLeisure Suit Larry.  Yeah, get it on, baby, get it on.  Get polyesterized,get plaid, get {Rred{x and {Gmint green{x plaid!  Then go find a disco ball,and get funky!  Maybe Farrah Fawcett is finally senile so she'll go out withyou, or you can try Liz Taylor.  Hell, you don't even need the pants, thejacket is more than enough...  Way more than enough!  Don this awe sookysooky tribute to '70's fasion, and keep in mind that if this were Japan,you'd have to kill yourself.  ~
+polyester~
+11 0 AK
+0 0 0 0 0
+0
+4 8959 100
+E
+--USES~
+-2~
+Q 2
+#7128
+silver parachute pants~
+a pair of {Wsilver{w parachute pants~
+A pair of silver parachute pants with zippers on every pocket, hips,back, and thighs.  Zippers run down the front legs from below the knees tothe cuffs, allowing the wearer to adjust from snug cuffs to loose.  ~
+A pair of silver parachute pants with zippers on every pocket, hips,back, and thighs.  Zippers run down the front legs from below the knees tothe cuffs, allowing the wearer to adjust from snug cuffs to loose.  ~
+vinyl~
+11 0 AF
+0 0 0 0 0
+0
+3 4999 100
+E
+--USES~
+-2~
+Q 3
+#7129
+leisure suit pants slacks~
+a pair or {Rred{x and {Gmint green{x leisure suit slacks~
+Well, if your bold enough to wear this bell-bottomed abomination outsideof a golf course, you'd better get the jacket.  The {Rred{x and {Gmintgreen{x jacket.  ~
+Well, if your bold enough to wear this bell-bottomed abomination outsideof a golf course, you'd better get the jacket.  The {Rred{x and {Gmintgreen{x jacket.  ~
+polyester~
+11 0 AF
+0 0 0 0 0
+0
+3 6947 100
+E
+--USES~
+-2~
+Q 4
+#7130
+white russet blouse~
+a white and russet layered blouse~
+A white pullover blouse with a low collar and permanent russet suede openvest.  Matching laced cuffs, made of the same material as the vest, sit atthe end of the garment's white, puffy sleeves.  Russet suede lacingcriss-crosses the abdomen portion of the garment, allowing the wearer toajust for a snug fit.  ~
+A white pullover blouse with a low collar and permanent russet suede openvest.  Matching laced cuffs, made of the same material as the vest, sit atthe end of the garment's white, puffy sleeves.  Russet suede lacingcriss-crosses the abdomen portion of the garment, allowing the wearer toajust for a snug fit.  ~
+leather~
+11 0 AD
+0 0 0 0 0
+0
+3 12946 100
+E
+--USES~
+-2~
+Q 5
+#7131
+white capri slacks~
+a pair of white breeches~
+White, form-fitting pants with sewn creases running down the front of thelegs.  ~
+White, form-fitting pants with sewn creases running down the front of thelegs.  ~
+cotton~
+11 0 AF
+0 0 0 0 0
+0
+4 7839 100
+E
+--USES~
+-2~
+Q 5
+#7132
+brown boots~
+a pair brown mid-calf boots~
+Brown soft-leather boots with 2" heels and pointed toes.  The boots go upto mid-calf and fold over at the tops.  ~
+Brown soft-leather boots with 2" heels and pointed toes.  The boots go upto mid-calf and fold over at the tops.  ~
+leather~
+11 0 AG
+0 0 0 0 0
+0
+3 9999 100
+E
+--USES~
+-2~
+Q 6
+#7133
+gold concha belt~
+a linked, gold concha belt~
+An all metal belt made of round, gold colored segements etched with whitespruce engravings.  In the center of each plate, sits an large fakegemstone, alternating from emerald to amber.  The buckle plate, slightlylarger than the rest, is devoid of gemstone ornamentation, instead possesinga more ellaborate spruce pattern.  ~
+An all metal belt made of round, gold colored segements etched with whitespruce engravings.  In the center of each plate, sits an large fakegemstone, alternating from emerald to amber.  The buckle plate, slightlylarger than the rest, is devoid of gemstone ornamentation, instead possesinga more ellaborate spruce pattern.  ~
+steel~
+11 0 AL
+0 0 0 0 0
+0
+1 6789 100
+E
+--USES~
+-2~
+Q 5
+#7134
+gold mesh necklace~
+a gold mesh necklace~
+Someimes known as Roundmaille, this necklace made up of fine gold chainlinks.  It's an inch wide at the front where it tapers of to half an inch atthe clasp, and is 25" inches in length.  ~
+Someimes known as Roundmaille, this necklace made up of fine gold chainlinks.  It's an inch wide at the front where it tapers of to half an inch atthe clasp, and is 25" inches in length.  ~
+gold~
+8 0 AC
+0 0 0 0 0
+0
+1 7919 100
+E
+--USES~
+-2~
+Q 6
+#7154
+Composition Piet Mondrian print~
+"Composition No. 2" by Piet Mondrian~
+Twelve rectangles with thick black borders.  Seven are white, two black,with one blue, one red, and one yellow.  With the exception of one of theblack ones, all the filled in blocks run off the edge of the image.  This isone of Piet Mondrian's more famous works; a geometric abstract, orNeo-Plasticism, created in 1922.  This one can also be seen on the easel inThe Sims, and The Sims: Bustin' Out, as said sims paint to raise theircreativity levels.  ~
+Twelve rectangles with thick black borders.  Seven are white, two black,with one blue, one red, and one yellow.  With the exception of one of theblack ones, all the filled in blocks run off the edge of the image.  This isone of Piet Mondrian's more famous works; a geometric abstract, orNeo-Plasticism, created in 1922.  This one can also be seen on the easel inThe Sims, and The Sims: Bustin' Out, as said sims paint to raise theircreativity levels.  ~
+paper~
+8 0 A
+0 0 0 0 0
+0
+0 4678 100
+E
+--USES~
+-2~
+Q 5
+#7155
+American Gothic print~
+"American Gothic" by Grant Wood~
+The bald, spectacled, pitchfork holding,"dear-god-I-am-so-bored-so-very-bored-what-are-you-looking-at-haven't-you-e-er-seen-someone-as-bored-as-me-before?"  , black-jacketed, bandit-collared,bib-overalled farmer, and his blue-eyed, hair tied back, white collaredblack rustric dress, bonet woman in profile brooch wearing,"I'm-just-as-bored-what-do-you-expect-I'm-married-to-him-and-I-guess-it-rub-ed-off-and-I'm-looking-at-you-because-I'm-bored-enough-too" wife, standingin front of their farmhouse.  This work, by Grant Wood in 1930, is possiblythe most parodied piece of art in existance.  ~
+The bald, spectacled, pitchfork holding,"dear-god-I-am-so-bored-so-very-bored-what-are-you-looking-at-haven't-you-e-er-seen-someone-as-bored-as-me-before?"  , black-jacketed, bandit-collared,bib-overalled farmer, and his blue-eyed, hair tied back, white collaredblack rustric dress, bonet woman in profile brooch wearing,"I'm-just-as-bored-what-do-you-expect-I'm-married-to-him-and-I-guess-it-rub-ed-off-and-I'm-looking-at-you-because-I'm-bored-enough-too" wife, standingin front of their farmhouse.  This work, by Grant Wood in 1930, is possiblythe most parodied piece of art in existance.  ~
+paper~
+8 0 0
+0 0 0 0 0
+0
+0 3678 100
+E
+--USES~
+-2~
+Q 5
+#7156
+brush~
+a paintbrush~
+For painting on paper or canvas, these brushes come in a viriety of sizesand shapes.  ~
+For painting on paper or canvas, these brushes come in a viriety of sizesand shapes.  ~
+plastic~
+8 0 AO
+0 0 0 0 0
+0
+1 299 100
+E
+--USES~
+-2~
+Q 4
+#7157
+oil paint~
+a tube of oil paint~
+A silver tube with a grey cap.  A label read "Rembrandt" along the lengthof it.  The color of the label indicates the color of the paint within.  Onthe underside is a warning against comsumption of this product.  ~
+A silver tube with a grey cap.  A label read "Rembrandt" along the lengthof it.  The color of the label indicates the color of the paint within.  Onthe underside is a warning against comsumption of this product.  ~
+plastic~
+17 0 A
+2 2 'ooze' 1 0 0
+2 599 100
+E
+--USES~
+-2~
+Q 4
+#7158
+water color~
+a tray of water color paints~
+A blue plastic tray witha transparent lid, 4" by 8", with twelve roundcompartments, each with a different shade of color in a solid base.  ~
+A blue plastic tray witha transparent lid, 4" by 8", with twelve roundcompartments, each with a different shade of color in a solid base.  ~
+plastic~
+8 0 A
+0 0 0 0 0
+0
+3 599 100
+E
+--USES~
+-2~
+Q 4
+#7159
+acrylic paint~
+a bottle of acrylic paint~
+A clear plastic bottle with a rainbow label that reads "InscribeAcrylics".  The bottle has a white cap, and the color of the paint can beclearly seen.  ~
+A clear plastic bottle with a rainbow label that reads "InscribeAcrylics".  The bottle has a white cap, and the color of the paint can beclearly seen.  ~
+plastic~
+17 0 0
+4 4 'ooze' 1 0 0
+2 399 100
+E
+--USES~
+-2~
+Q 2
+#7160
+canvas~
+a canvas~
+Stretched cotton based material on a wooden frame.  It awaits theattensions of the artisticly motivated.  ~
+Stretched cotton based material on a wooden frame.  It awaits theattensions of the artisticly motivated.  ~
+cotton~
+8 0 AOR
+0 0 0 0 0
+0
+5 1569 100
+E
+--USES~
+-2~
+Q 5
+#7161
+easel~
+an easel~
+An aluminum tripod easel.  Meant to hold canvas, but can also hold sketchpaper, either by the sheet or the pad.  A tray on the side can hold paints,brushes, or drawing implements.  ~
+An aluminum tripod easel.  Meant to hold canvas, but can also hold sketchpaper, either by the sheet or the pad.  A tray on the side can hold paints,brushes, or drawing implements.  ~
+aluminium~
+12 0 A
+0 20 N 0 0 0
+5 1999 100
+E
+--USES~
+-2~
+Q 7
+#7162
+ink~
+an ink bottle~
+A small glass bottle with a black cap and a gold label: "Scribe" incursive script.  ~
+A small glass bottle with a black cap and a gold label: "Scribe" incursive script.  ~
+glass~
+17 0 AO
+1 1 'rotgut' 1 0 0
+1 489 100
+E
+--USES~
+-2~
+Q 6
+#7163
+fountain pen~
+a fountain pen~
+A black handled pen with a silver tip.  It needs a bottle of ink to be ofany use.  ~
+A black handled pen with a silver tip.  It needs a bottle of ink to be ofany use.  ~
+plastic~
+5 0 AN
+0 4 0 stab 0 0
+1 299 100
+E
+--USES~
+-2~
+Q 5
+#7164
+big ass pants~
+{MHot pink{x {WBig Ass{x pants~
+A pair of stretch pants, {Mhot pink{x in color.  {W"Stare at my BIG FATASS"{X is written in white cursive across the seat.  Who wears this crap?  ~
+A pair of stretch pants, {Mhot pink{x in color.  {W"Stare at my BIG FATASS"{X is written in white cursive across the seat.  Who wears this crap?  ~
+cotton~
+13 0 AF
+0 0 0 0 0
+0
+0 1439 100
+E
+--USES~
+-2~
+Q 2
+#0
+
+
+
+#ROOMS
+#7030
+Off the Wall~
+The entrance to this shop passes through a small nook between two large,
+glass display cases lined with t-shirts emblazoned with logos and images of
+various "alternative" bands, ranging from 'the Butthole Surfers' and 'the
+Cure' to 'Marilyn Manson.  ' The interior of the store proper seems to offer
+something for everyone; such things as joke greeting cards, disassembled
+drug paraphenalia, lava lamps, posters and toys of an adult nature.  The
+checkout counter sits along the southern edge of the shop near the door and
+a sizable rack of imported cigarettes, clove cigarettes and cigars lines the
+entire wall behind it.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D3
+(none)~
+(null)~
+A 0 7063
+M 0 H 100
+S
+#7031
+Scandesign Furniture~
+The majority of floorspace within this large building is taken up by thestore's showroom.  Couches, tables, lamps, chairs, and a variety of otherfurniture have been arranged into "mock rooms," each of which aids thecustomer in picturing said furniture as it might arranged within a home. The design of the furniture is purely Scandinavian, featuring simple yetelegant lines and earthy coloration.  While the pieces near the front arevery expensive, the costs decrease dramatically as one nears the back of thestore.  ~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D3
+(none)~
+(null)~
+A 0 7060
+M 0 H 100
+S
+#7032
+Dakota Art Supplies~
+Like most of the shops along Broadway, the interior of this establishmentis small in size.  Large shelves mounted with rolling ladders compensate forthe lack of space by building up rather than out.  Divided by medium, eachrack holds a variety of art supplies; compressed charcoal, tubes of oilpaint, modeling clay, vine charcoal, watercolors, and dozens of othersupplies all are represented in a variety of colors and prices.  The rear ofthe store contains a small selection of artists' portfolios, bags and boxesfor the easy transportation of both work and tools.  The western end of theshop is dedicated to modeling-figures made of everything from wood to metaland offering a large range of sizes and flexibility.  ~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D3
+(none)~
+(null)~
+A 0 7061
+M 0 H 100
+S
+#7033
+Golden Age Thriftshop~
+The interior of this store is much longer than it is wide, looking muchlike a tunnel in shape.  Nearly every inch of the floor is covered by acircular rack of clothing, all of it fondly referred to as vintage.  All ofthe clothing appears to be clean and bereft of holes, and most of theinventory is composed of the more extreme fashion statements from theirrespective eras.  Bellbottoms, hotpants, wide-collared shirts and evenparachute pants are commonplace.  The few employees in the store look as ifthey recently escaped from an episode of "Welcome Back Kotter," completingthe illusion.  A small orange curtain covered in stylized daisies separatesthe store from an even smaller dressing room to the east.  ~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+A 0 7034
+D3
+(none)~
+(null)~
+A 0 7062
+M 0 H 100
+S
+#7034
+A Small Dressing Room~
+This tiny dressing room is completely utilitarian.  A slender mirror ismounted on the eastern wall, a metal stool sits in the southeastern corner,and a pair of staggered hooks hang on the northern wall.  Not surprisingly,the carpet is made of deep shag and dyed a shade of green that could neverexist in nature.  An orange curtain covered in stylized yellow daisiesseparates the dressing room from the store to the west.  ~
+0 2056 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D3
+(none)~
+(null)~
+A 0 7033
+M 0 H 100
+S
+#7035
+Chang's Mongolian Grill~
+One of the neighborhood's most popular restaurants, Chang's featuresauthentic Mongolian cooking down to the smallest detail.  Situated in thecenter of the building stands a large circular counter within which arelocated the chefs.  The surface of the counter is the grill itself,protected from the customers by a large sheet of transparent glassapproximately two feet high.  Several buffet tables stand along the northernand southern walls of the room adorned with uncooked meat and vegetables. Stacks of plates wait inside dispensers at each table, where customers canthen select and pay for the food they want before handing it to one of thechefs.  The restaurant extends to the west, where seating is available fordiners.  ~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+A 0 7062
+D3
+(none)~
+(null)~
+0 0 7036
+M 0 H 100
+S
+#7036
+The Dining Area~
+Decorated with traditional Mongolian art, the walls of the dining areaare a colorful glimpse into eastern culture.  Small paintings and drawingspepper the northern and southern walls, while the entirety of the westernwall is covered with a huge mural representing a piece of Mongolianlandscape.  While not a large room, the tables within the dining area havebeen placed as efficiently as possible in order to maximize the availablespace.  The tables are standard restaurant fare, made of formica-coveredplywood with matching padded chairs.  ~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+0 0 7035
+M 0 H 100
+S
+#7037
+7-11 on Broadway~
+Looking just like every other convenience store in the city, the Broadway7-11 offers a quick place to pick up the essentials at any hour of the dayor night, including the finest quisine available for under a dollar.  Racksof shelves line the center of the store, their surfaces overflowing withcandy, potato chips, aspirin and motor oil.  The walls of the store hold thecold storage areas for beer, cola and ice.  The checkout counter is locatedright near the door with bins attached to its front filled with individuallywrapped candies (4/$1.  00) and pressed meat products.  ~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+A 0 7064
+M 0 H 100
+S
+#7038
+Broadway South~
+The southern end of Broadway begins here, the busy thoroughfare offeringonly one lane in each direction.  One of the more active shopping districtsin town, the sidewalks on either side of the street have been widenedconsiderably to provide pedestrians more freedom of movement.  All along thesidewalks are visible brass footprints which have been imbedded in theconcrete.  Each pair of footprints features a number and a name; the name atthis set of prints appears to be "the Waltz," and the numbers seem toindicate the correct order of steps for performing the dance.  To the eaststands a small neighborhood grocery, while a poster shop to the westfeatures a glass display case with a variety of prints.  Broadway continuesthrough the district to the north.  ~
+0 0 1
+E
+XNUMB1~
+Broadway South~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 0 7064
+D1
+(none)~
+(null)~
+A 0 7039
+D2
+(none)~
+(null)~
+0 0 10055
+D3
+(none)~
+(null)~
+A 0 7041
+M 0 H 100
+S
+#7039
+The Broadway Market~
+A small neighborhood grocery, the setup is rather typical; aisles runfrom east to west with the checkout counters near the entrance to the store.Fresh baked goods have been placed on display tables at the southeasterncorner of the store, while the produce is contained within bins just to thenorth.  Little streams of mist are intermittently dispersed from nozzlesabove the vegetables, helping to ensure their freshness.  Rows of cartsstand sentinel just near the entrance, accompanied by stacks of shoppingbaskets.  To the east can be seen the butcher's counter, its neon signproclaiming "Fresh Meat" for all to see.  ~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+0 0 7040
+D3
+(none)~
+(null)~
+A 0 7038
+M 0 H 100
+S
+#7040
+The Butcher's Counter~
+Surprisingly popular during even the darkest hours of the night, thebutcher's counter is comprised of a long formica top positioned over severalrows of glass cases.  Within each case rests a variety of meats, rangingfrom fish to beef.  The area behind the counter contains a variety of toolsused to slice, dice, and otherwise prepare the goods before they're put ondisplay.  A small ticket dispenser sits atop the counter, a nearby signreading "Please Take a Number."  ~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D3
+(none)~
+(null)~
+0 0 7039
+M 0 H 100
+S
+#7041
+In-Prints~
+A bright little shop, the walls of this establishment are painted abrilliant white and flooded with light from the large windows at thestorefront.  Mounted at regular intervals along the walls are framed printsfrom popular artists such as M.  C.  Escher, H.  R.  Geiger, Bev Doolittleand Michael Parkes.  Bins positioned in the center of the store hold more ofsaid prints, all of which range in price from twenty to one hundred dollarsdepending on the artist's reknown and the quality of the paper.  The cashregister is located at the back of the store, where framing is alsoavailable.  ~
+0 392 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+A 0 7038
+M 0 H 100
+S
+#7042
+Broadway North~
+Broadway reaches its northern terminus here, dominated by a large churchon its western side.  The old structure features a domed cathedral with apeppering of stained-glass windows, each displaying what appears to be abiblical scene.  A large marquee near the walkway approaching its doorsreads, "Emergency Housing Available.  To the east can be seen aprosperous-looking jewelry store with the silhouette of an armed securityguard visible through the window.  Broadway itself stretches on for severalblocks to the south, passing through one of the city's premier shoppingdistricts.  To the west, south of the church, is the enpty shell of the DVDKing video store, condemned and boarded up.  ~
+0 0 1
+E
+XNUMB1~
+Broadway North~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+A 0 7046
+D2
+(none)~
+(null)~
+0 0 7062
+D3
+(none)~
+(null)~
+A 0 9057
+M 0 H 100
+S
+#7046
+Sarin Family Jewelers~
+The interior of this small store is covered in glass jewelry cases which,in turn, are separated by both type and cost.  The cases near the store'sexterior hold costume jewelry and plated pieces, while the cases near thestore's center hold the more expensive pieces.  A full-length mirror standsalong the eastern wall, while smaller mirrors have been positioned atop thecounters themselves, each allowing the customer a chance to see themselvesin the various decorations on display.  An armed security guard next to thedoor pays close attention to the clientele without being obvious about it,keeping careful watch of the store's merchandise.  ~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D3
+(none)~
+(null)~
+A 0 7042
+M 0 H 100
+S
+#7047
+Within a Short Alleyway~
+Branching off the main street, this alley forms a narrow "U" between thebordering buildings.  While not quite as bright as Broadway due to theshadows cast from the structures to the north and south, enough light existsto make out the relative cleanliness of the alleyway.  The pavement featuresa few covered potholes, but otherwise is in remarkable condition.  A seriesof concrete posts on the alley's eastern end restricts traffic topedestrians.  Broadway is clearly visible to the east, while the alley comesto a halt just to the west.  ~
+0 0 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+0 0 7060
+D3
+(none)~
+(null)~
+0 0 7001
+M 0 H 100
+S
+#7048
+Lightning Ridge Coffee Shop~
+Hidden from the main traffic of Broadway sits this enigmatic coffee shop.The walls contain {Gpaintings {gand {Gsketches {gusing a wide variety ofmaterials and from a wider variety of styles.  The furniture is just aseclectic with baroque chairs sitting next to early Bostonian tables.  Thereis a 1920's style lounge next to a table that looks like it was pulled froma Czar's manor.  A glass counter sits at the end of the room displayingplates of cheese and fruit as well as bottles of expensive wine.  Behindthis is an espresso machine, and next to that, a small window the cook usesto deliver food to the wait staff.  There appears to be no menu anywhere inthe place.  The coffee shop extends to the south and the kitchen appears tobe west.  {x ~
+0 8 11
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+E
+painting~
+The paintings in this room are as missmatched as the furniture.  Thereis a portrait of a stuffy-looking woman done in a Renaissance style nextto a vague watercolor of amorphous blues and greens.  There is also avery well executed still life.  The vase depicted in this paintingcontains the distorted reflection of two people doing something verynaughty indeed, but only an accute eye and close examination will revealthis.~
+E
+sketch~
+There is a small, framed, charcoal sketch of a woman looking into a cup.The vague strokes hint at a face that could belong to any woman.  Herexpression seems sad, made sadder by the way she tilts her head andrests it in her hand and her downward gaze into the cup that appears itcould contain either tea or absinthe. The artist was an obvious fan ofthe Dutch post impressionists.~
+D1
+(none)~
+(null)~
+0 0 7049
+D2
+(none)~
+(null)~
+0 0 7051
+D3
+(none)~
+(null)~
+0 0 10055
+S
+#7049
+Lightning Ridge Kitchen~
+The kitchen for this little coffee shop certainly shines with highquality stainless steel cookware and fixtures.  There is a large sink aswell as a professional oven and grill.  The refrigerator at the back lookslarge enough to hold a person or two.  The temperature in this room isconsiderably higher than either of the adjoining rooms, so a large ventblows cold air down over its occupants.  The main part of the shop is eastand a small office is south.  ~
+0 8 11
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D2
+(none)~
+(null)~
+0 0 7050
+D3
+(none)~
+(null)~
+0 0 7048
+S
+#7050
+An Office / Storeroom~
+This office is much simpler than the chaotic coffee shop.  It contains asturdy and plain desk, a compter, a few chairs, and some cardboard boxesfilled with paper cups and other supplies.  There is a wine rack behind thedesk burdened with the best of alcohol served here.  The busy kitchen liejust to the north.  ~
+0 8 11
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 0 7049
+S
+#7051
+The Zen Room~
+This room changes every day.  There is no framed art on the walls and itcontains just a few trashy wooden tables and chairs.  Resting at each tableare implements of art.  Brushes, watercolors, acrylics, crayons, and eventhose smelly permenant markers.  Anyone who wanted to was free to come anddoodle on the white wall.  No rules, and the only boundry was the edge ofthe room.  Every month the walls were repainted white, a blank canvas toallow the chaos to begin again.  A small {Gsign{g sits on one of the tables.{x ~
+0 8 11
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+E
+list~
+On the wall there is currently:Skyscraper~
+E
+sign~
+Type 'look list' to see all of the items currently painted here.  If youwould like to submit an item, please mudmail Opal and she will add it tothe room's extended desciption.~
+E
+skyscraper~
+A science-fiction/abstract drawing of what looks to be a large skyscraper. With spindly point and swirls of paint making up the floors that somehow melt into a cohesive image. Of course, if you stand back a little it could look like a stylised penis too.~
+D0
+(none)~
+(null)~
+0 0 7048
+S
+#7052
+Outside the Afterlife~
+During the day the building to the north appears to be a mundanewarehouse.  The only indication that it might be something else is theframework for a large neon sign.  At night that sign lights up in meter talllettering that shifts in color from deep blue to yellow to a bright red andthen back again.  These letters spell out in a crisp designer font"Afterlife".  When the sign is activated there is often a long line ofpeople spilling out onto the sidewalk.  At night men and women que in frontof the large double doors of the Afterlife.  It is a strange mix of rubbercorsets & piercings, glow sticks & baggy pants, and designer suits & LouisVuitton bags.  These three separate groups do the best they can to ignorethe others' presence.  Above the crowd a gangly man stands like some carniefrom hell.  He seems far too tall, made taller by his top hat and cane.  Hisskin is stretched over his frame tightly, giving him more than a passingresemblance to a skeleton.  He calls out to passers by, "Come one Come allto the Afterlife!"  Two huge bouncers stand behind him, checking Ids andkeeping the crowd under control with their menacing glances.  The carniehimself seems to be the one who picks who gets into the club and whodoesn't, blessing lucky people in the line with a nod and a gesture of hissilver-tipped cane.  ~
+0 0 11
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 0 7053
+S
+#7053
+Entryhall to the Afterlife~
+The lighting in this room fights itself.  From below, through a metalgrated floor, red lights and smoke filter eerily upwards.  Many narrow heelson expensive shoes have been trapped in the narrow holes of the floor. Above, though the same style grate, diffuse white light floats downwards. The night and fresh air creeps into the Afterlife from the south.  Thereappears to be a candle-lit lounge north while stairs up and down sit oneither side of the hallway.  ~
+0 8 11
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 0 7056
+D2
+(none)~
+(null)~
+0 0 7052
+D4
+(none)~
+(null)~
+0 0 7054
+D5
+(none)~
+(null)~
+0 0 7055
+S
+#7054
+Heaven~
+(null)~
+0 0 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 0 7057
+D5
+(none)~
+(null)~
+0 0 7053
+S
+#7055
+Hell~
+(null)~
+0 0 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 0 7058
+D4
+(none)~
+(null)~
+0 0 7053
+S
+#7056
+Purgatory~
+Unlike the grating to the south, this floor is hardwood.  Large rugs havebeen laid to support deep backed-velvet couches, better suited in aVictorian movie.  They are flanked by end and coffee tables made of richwoods and sporting decorative filigrees.  There are also inviting leatherlounges.  Candles hang in candelabras, they float in decorative bowls, andrest in etched votive holders.  The music played is soft and rests in thebackground.  A straight and sophisticated wooden bar stands here.  Theglasses and bottles behind it are lined up in precise rows.  Instead of amirror, patrons look across the bar at paintings of horses and rolling greencountryside.  ~
+0 8 11
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D2
+(none)~
+(null)~
+0 0 7053
+S
+#7057
+A Private Room in Heaven~
+(null)~
+0 0 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D2
+(none)~
+(null)~
+0 0 7054
+S
+#7058
+A Private Room in Hell~
+(null)~
+0 0 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D2
+(none)~
+(null)~
+0 0 7055
+S
+#7059
+DVD King~
+This was once the short lived DVD King store.  Now it's just a thirty bysixty foot empty space with crumbling walls and boarded windows.  The door,also boarded up, leads east onto Broadway, which one can peek out ontothrough the cracks.  ~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+BCFN 0 7042
+S
+#7060
+Broadway~
+The busy street reaches its midpoint here, the two lanes of asphaltconstantly besieged by both traffic and pedestrians.  Brass footprints havebeen embedded within the concrete at regular intervals, each set immitatingthe footwork of a popular dance.  The Polka appears to be the dance ofchoice at this interval, and a passerby can occasionally be seen testing outtheir moves by placing their feet atop the imprints.  Along the easternblock of buildings can be seen a large furniture store, its glass displayfeaturing leather couches.  A small alleyway is visible to the west, itsentrance blocked by concrete poles to prevent traffic from passing through. Broadway continues to both the north and south.  ~
+0 0 1
+E
+XNUMB1~
+Broadway~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 0 7061
+D1
+(none)~
+(null)~
+A 0 7031
+D2
+(none)~
+(null)~
+0 0 7063
+D3
+(none)~
+(null)~
+0 0 7047
+M 0 H 100
+S
+#7061
+Broadway~
+The northern section of Broadway begins here, passing by shops amidst thehustle and bustle of inner-city traffic.  The two lanes of the street seemperpetually clogged with vehicles during business hours, and very few of theparking meters are ever left unclaimed for long.  Brass footprints embeddedwithin the concrete sidewalks illustrate dance steps for passing shoppers,the dance at this particular juncture being the Hustle.  To the west standswhat appears to be a women's clothing boutique, while a small art supplystore to the east features a selection of easels in its window display. Broadway continues to both the north and south.  ~
+0 0 1
+E
+XNUMB1~
+Broadway~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 0 7062
+D1
+(none)~
+(null)~
+A 0 7032
+D2
+(none)~
+(null)~
+0 0 7060
+D3
+(none)~
+(null)~
+A 0 7065
+M 0 H 100
+S
+#7062
+Broadway~
+Broadway continues through the shopping district, passing byantique-looking iron streetlamps which give an old-word feel to the area. The wide sidewalks flank the narrow street on either side, imbedded withbrass footprints designed to give brief dance instructions to shoppers.  Thedance tutorial at this junction appears to be the Samba.  Occasionallysomeone will place their feet on top of the footprints, following thenumbers, usually accompanied by someone with a camera.  To the west can beseen a lively restaurant, while a thrift shop offers affordable clothing tothe east.  Broadway continues to both the north and south.  ~
+0 0 1
+E
+XNUMB1~
+Broadway~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 0 7042
+D1
+(none)~
+(null)~
+A 0 7033
+D2
+(none)~
+(null)~
+0 0 7061
+D3
+(none)~
+(null)~
+A 0 7035
+M 0 H 100
+S
+#7063
+Broadway~
+Broadway nears the center of its journey here, passing by shops amidstthe hustle and bustle of inner-city traffic.  The two lanes of the streetseem perpetually clogged with vehicles during business hours, and very fewof the parking meters are ever left unclaimed for long.  Brass footprintsembedded within the concrete sidewalks illustrate dance steps for passingshoppers, the dance at this particular juncture being the Tango.  To thewest can be seen a canopy overhanging a small record store, while a noveltyshop sits nestled between the buildings to the east.  Broadway continues toboth the north and south.  ~
+0 0 1
+E
+XNUMB1~
+Broadway~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 0 7060
+D1
+(none)~
+(null)~
+A 0 7030
+D2
+(none)~
+(null)~
+0 0 7064
+D3
+(none)~
+(null)~
+A 0 7067
+M 0 H 100
+S
+#7064
+Broadway~
+Broadway continues through the shopping district, passing byantique-looking iron streetlamps which give an old-word feel to the area. The wide sidewalks flank the narrow street on either side, imbedded withbrass footprints designed to give brief dance instructions to shoppers.  Thedance tutorial at this junction appears to be the "Foxtrot."  Occasionallysomeone will place their feet on top of the footprints, following thenumbers, usually accompanied by someone with a camera.  A 7-11 conveniencestore stands to the west, open for business 24-hours of the day, while aused bookstore is located to the east.  Broadway itself rambles onward toboth the north and south.  ~
+0 0 0
+E
+XNUMB1~
+Broadway~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 0 7063
+D1
+(none)~
+(null)~
+A 0 7069
+D2
+(none)~
+(null)~
+0 0 7038
+D3
+(none)~
+(null)~
+A 0 7037
+M 0 H 100
+S
+#7065
+Retro Viva~
+This small clothing boutique is both chic and exclusive, ground zero forwomen of the subculture elite.  Carrying everything from blouses and skirtsto brightly-colored hair dye and outrageous footwear, few things but theaforementioned dye feature a price tag with less than three digits.  This isnot a place to purchase an entire wardrobe for anyone other than theindependently wealthy goths and divas of the world, who could likely becounted on one hand; rather, it is a place to pick up a signature piece, adesigner original around which to build an outfit.  While the prices do varywidely, even simple t-shirts appear to be selling for thirty dollars apiece.Much like the merchandise, the staff of the store seems to exist in its ownlittle world.  Rather than approaching customers, they take a hands-offattitude, pretending not to notice the clientele until beckoned for oraddressed.  A black velvet curtain on the west wall leads to the shop'sdressing room.  ~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+A 0 7061
+D3
+(none)~
+(null)~
+A 0 7066
+M 0 H 100
+S
+#7066
+A Small Dressing Room~
+Each wall of this little dressing room is covered with a full lengthmirror, allowing customers to see themselves from every angle in theclothing they've selected.  A brass pole with hooks at varying heightsstretches from ground to ceiling, providing a place to hang merchandise.  Anoaken stool with black leather padding has been placed in the corner for thecustomer's convenience.  ~
+0 2056 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+A 0 7065
+M 0 H 100
+S
+#7067
+Orpheus Records~
+Relatively small in size, this little record shop is packed to therafters with shelves holding compact disks and cassette tapes.  The easternwall of the establishment is made up of large plate-glass windows, allowinga generous amount of light to fill the place during the majority of businesshours.  A small L-shaped counter on the southern side of the building nearthe entrance holds a cash register for customer checkout.  A metal stairwayin the southwestern corner leads up to a large balcony overlooking thestore, upon which rest more shelves holding old LP records.  On either sideof the main entrance stand theft-detectors, helping to cut down onshoplifting.  ~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+A 0 7063
+D4
+(none)~
+(null)~
+0 0 7068
+M 0 H 100
+S
+#7068
+Orpeus Records, Second Floor~
+This balcony is composed of interlocking metal sheets, similar inappearance to those found on catwalks.  The overall affect allows customersto see the main store below, while also giving employees at the register aclear view of customers overhead.  While the arrangement makes it awkwardfor customers to wear skirts or dresses on the balcony, it also helps toprevent customers of all genders from helping themselves to five-fingerdiscounts.  The racks on this level are little more than a series of boxeswith legs, each holding approximately thirty records.  ~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D5
+(none)~
+(null)~
+0 0 7067
+M 0 H 100
+S
+#7069
+Twice-Sold Tales~
+The one-stop shop for used books, this store offers everything anyonecould ever want in paper products with spines.  Every inch that isn'tabsolutely necessary has been covered with bookshelves, most of themreaching to the top of the ceiling.  Each shelf holds a different type oftext, as is common with most bookstores.  Interestingly, narrow boards runacross the tops of the shelves, connecting them all like small timberbridges.  Occasionally a plump cat can be seen using one of these improvisedcrossings, apparently the establishment's furry mascot.  A large bin at thefront of the store holds copies of overstock such as Harlequinn Romancenovels, each priced at 75-cents.  ~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D3
+(none)~
+(null)~
+A 0 7064
+M 0 H 100
+S
+#0
+
+
+
+#RESETS
+D 0 7059 1 8230
+M 1 7082 1 7030 1
+M 1 7075 1 7031 1
+G 0 7089 0
+G 0 7090 0
+G 0 7091 0
+G 0 7095 0
+G 0 7092 0
+G 0 7093 0
+G 0 7094 0
+G 0 7096 0
+O 0 7089 0 7031
+O 0 7090 0 7031
+O 0 7091 0 7031
+O 0 7092 0 7031
+O 0 7093 0 7031
+O 0 7094 0 7031
+O 0 7095 0 7031
+O 0 7096 0 7031
+M 1 7078 1 7032 1
+G 0 7163 0
+G 0 7161 0
+G 0 7160 0
+G 0 7158 0
+G 0 7156 0
+M 1 7032 1 7033 1
+M 1 7031 1 7033 1
+M 1 7080 1 7033 1
+G 0 7164 0
+G 0 7129 0
+G 0 7127 0
+G 0 7128 0
+G 0 7126 0
+G 0 7125 0
+G 0 7124 0
+G 0 7123 0
+M 1 7079 1 7035 1
+G 0 7115 0
+G 0 7116 0
+G 0 7117 0
+G 0 7118 0
+G 0 7119 0
+G 0 7120 0
+G 0 7121 0
+M 1 7071 1 7037 1
+O 0 7111 0 7037
+G 0 7110 0
+G 0 7112 0
+M 1 7068 1 7038 1
+E 0 7130 0 5
+E 0 7131 0 8
+E 0 7132 0 9
+E 0 7133 0 13
+E 0 7134 0 3
+M 1 7085 2 7038 1
+M 1 7084 2 7038 1
+M 1 7069 1 7039 1
+G 0 7031 0
+G 0 7032 0
+G 0 7033 0
+G 0 7034 0
+G 0 7035 0
+G 0 7036 0
+G 0 7037 0
+M 1 7083 1 7040 1
+G 0 7038 0
+M 1 7074 1 7041 1
+G 0 7030 0
+G 0 7154 0
+G 0 7041 0
+G 0 7042 0
+G 0 7155 0
+O 0 7122 0 7042
+M 1 7084 2 7042 1
+M 1 7085 2 7042 1
+M 1 7065 1 7042 1
+E 0 7114 0 16
+M 1 7081 1 7046 1
+G 0 7082 0
+G 0 7075 0
+G 0 7083 0
+G 0 7078 0
+G 0 7081 0
+G 0 7077 0
+G 0 7074 0
+G 0 7072 0
+G 0 7079 0
+G 0 7080 0
+G 0 7073 0
+G 0 7076 0
+G 0 7071 0
+M 1 7091 1 7046 1
+E 0 7087 0 16
+G 0 7088 0
+O 0 7048 0 7048
+O 0 7043 0 7048
+O 0 7043 0 7048
+O 0 7043 0 7048
+M 1 7090 1 7060 1
+E 0 7113 0 16
+M 1 7065 1 7060 1
+E 0 7113 0 16
+M 1 7089 1 7061 1
+M 1 7066 1 7061 1
+G 0 7086 0
+G 0 7085 0
+G 0 7084 0
+M 1 7090 1 7062 1
+M 1 7067 1 7062 1
+M 1 7090 1 7062 1
+M 1 7088 1 7063 1
+M 1 7087 1 7063 1
+M 1 7085 2 7063 1
+M 1 7084 3 7063 1
+M 1 7030 1 7064 1
+M 1 7086 1 7064 1
+G 0 7104 0
+M 1 7076 1 7065 1
+M 1 7077 1 7065 1
+G 0 7070 0
+G 0 7064 0
+G 0 7063 0
+G 0 7062 0
+G 0 7061 0
+G 0 7060 0
+G 0 7059 0
+G 0 7058 0
+G 0 7052 0
+G 0 7065 0
+G 0 7067 0
+G 0 7066 0
+G 0 7054 0
+G 0 7068 0
+G 0 7057 0
+G 0 7056 0
+G 0 7069 0
+G 0 7055 0
+G 0 7054 0
+M 1 7073 1 7067 1
+G 0 7030 0
+G 0 7155 0
+G 0 7154 0
+G 0 7042 0
+G 0 7041 0
+M 1 7072 1 7069 1
+G 0 7109 0
+G 0 7108 0
+G 0 7107 0
+G 0 7106 0
+G 0 7105 0
+S
+
+
+
+#SHOPS
+7066 26 0 0 0 0 100 100 0 23 F
+7069 19 0 0 0 0 100 0 6 22 AJLM
+7071 19 17 15 8 0 100 100 0 23 0
+7072 8 13 0 0 0 100 100 6 22 0
+7073 0 8 0 0 0 100 100 9 22 0
+7074 0 8 0 0 0 100 100 8 19 0
+7075 12 0 0 0 0 100 0 6 21 CH
+7077 11 15 8 0 0 100 100 8 21 H
+7078 8 15 5 0 0 100 0 8 18 CHI
+7079 19 5 0 0 0 100 100 0 24 A
+7080 0 11 0 0 0 100 100 9 18 0
+7081 8 0 0 0 0 100 100 9 21 CI
+7082 0 8 1 11 0 100 100 6 23 H
+7083 19 0 0 0 0 100 100 0 23 0
+0
+
+
+
+#MOBPROGS
+#0
+
+#$

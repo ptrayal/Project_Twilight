@@ -1,0 +1,60 @@
+#AREADATA
+Name A Suburb~
+Builders Bran~
+VNUMs 11000 11200
+Credits Bran~
+Security 1
+Flags D
+Price 0
+End
+
+
+
+#MOBILES
+#0
+
+
+
+#OBJECTS
+#0
+
+
+
+#ROOMS
+#11000
+~
+~
+0 4 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+(null) 
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+(null) 
+~
+S
+#0
+
+
+
+#RESETS
+S
+
+
+
+#SHOPS
+0
+
+
+
+#MOBPROGS
+#0
+
+#$

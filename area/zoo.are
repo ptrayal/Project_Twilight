@@ -1,0 +1,1816 @@
+#AREADATA
+Name City Zoo~
+Builders None~
+VNUMs 9000 9052
+Credits Illyria~
+Security 9
+Flags D
+Price 0
+End
+
+
+
+#MOBILES
+#0
+
+
+
+#OBJECTS
+#0
+
+
+
+#ROOMS
+#9000
+The Zoo Entrance~
+The concrete path widens, opening up into cobbled courtyard.  The
+courtyard concludes at an impressive log gate with a large sign hanging over
+them proclaiming the place to be the "City Zoo".  Turnstyles line the main
+entrance with ticket booths beside them ready to funnel customers through
+the main gates.  Large maps of the zoo sit to one side of the entrance,
+making it easy to plan a visit through the various interesting enclosures. 
+At night the gates of the zoo are chained shut and the place is illuminated
+with similar lamp posts that line the paths throughout the rest of the park.
+~
+0 0 1
+E
+XNUMB1~
+The Zoo Entrance~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 -1 9001
+D2
+(none)~
+(null)~
+0 -1 10013
+M 0 H 100
+S
+#9001
+The Zoo Ring Road~
+This is the entry point for visitors to the zoo.  Here is the beginning
+of a large road that does a complete circuit through the zoo, maximizing the
+enclosure space available.  At this point of the zoo, there are fast food
+outlets, tourist and souvenir shops as well as information booths.  The
+place is littered with picnic tables and chairs, bins to collect the rubbish
+as well as drinking fountains under large shady trees.  There is a large
+sign that has the location of all the animal enclosures and the shortest
+path to them.  
+~
+0 0 1
+E
+XNUMB1~
+The Zoo Ring Road~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 -1 9002
+D1
+(none)~
+(null)~
+0 -1 9014
+D2
+(none)~
+(null)~
+0 -1 9000
+D3
+(none)~
+(null)~
+0 -1 9013
+M 0 H 100
+S
+#9002
+The Zoo Ring Road~
+The large ring road crests on top of a small rise at the top end of the
+zoo, giving an excellent view of the rest of the enclosures that aren't
+obscured by large trees.  On the inside of the ring here, there is a large
+open space for the african hoofed animals, such as wildebeast and zebra. 
+There are no bars, just a big ditch before a high concrete wall close to the
+road.  On the outside of the ring road there is a path leading off to the
+east to the ever popular large cats and a path leading to the north to the
+recently refurbished aquariums.  
+~
+0 0 1
+E
+XNUMB1~
+The Zoo Ring Road~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 -1 9003
+D1
+(none)~
+(null)~
+0 -1 9017
+D2
+(none)~
+(null)~
+0 -1 9001
+D3
+(none)~
+(null)~
+0 -1 9016
+M 0 H 100
+S
+#9003
+Aquarium~
+A sign proclaims that this display has been recently renovated.  The
+aquarium is in a small building that definitely has a freshly painted look
+about it.  The walkways through the building take the visitor past all sorts
+of exotic fish from the whole world over.  There are pirhanas, eels, sea
+snakes, archer fish and other wonders of the piscine world.  However one of
+the most impressive displays is a huge wall to floor tank that has hundreds
+of different tropical fish species swimming around living coral.  It even
+has a couple reef sharks in it swimming leisurely around, seemingly without
+a care in the world.  
+~
+0 0 1
+E
+XNUMB1~
+Aquarium~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D2
+(none)~
+(null)~
+0 -1 9002
+M 0 H 100
+S
+#9004
+The Zoo - Monkey Business~
+The trees scream with screeching monkeys, throwing fruit and other
+assorted items at each other.  They stop sratching themselves long enough to
+attack you.  
+~
+0 0 2
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 -1 9005
+D1
+(none)~
+(null)~
+0 -1 9025
+D3
+(none)~
+(null)~
+0 -1 9024
+M 0 H 100
+S
+#9005
+The Zoo - Giraffe Enclosure~
+Loping around the dirt ground, you see these tall majestic creatures turn
+their necks and charge!  
+~
+0 0 2
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 -1 9006
+D1
+(none)~
+(null)~
+0 -1 9029
+D2
+(none)~
+(null)~
+0 -1 9004
+D3
+(none)~
+(null)~
+0 -1 9028
+M 0 H 100
+S
+#9006
+The Zoo - Aquarium~
+Among the seaweed and coral banks, many large sharks with white tips to
+their fins swim silently along.  Baring their fearsome teeth, they attack.  
+~
+0 0 2
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 -1 9007
+D1
+(none)~
+(null)~
+0 -1 9033
+D2
+(none)~
+(null)~
+0 -1 9005
+D3
+(none)~
+(null)~
+0 -1 9032
+M 0 H 100
+S
+#9007
+The Zoo - Desert~
+Many shaggy camels wander and roam the desert floor, their giant humps
+casting long shadows on the ground.  One turns, and spits at you.  
+~
+0 0 2
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 -1 9008
+D1
+(none)~
+(null)~
+0 -1 9037
+D2
+(none)~
+(null)~
+0 -1 9006
+D3
+(none)~
+(null)~
+0 -1 9036
+M 0 H 100
+S
+#9008
+The Zoo - The Grass Plains~
+All around the grassy plains, groups of lions sit and gnaw on the bones
+of previous adventurers.  
+~
+0 0 2
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 -1 9009
+D1
+(none)~
+(null)~
+0 -1 9041
+D2
+(none)~
+(null)~
+0 -1 9007
+D3
+(none)~
+(null)~
+0 -1 9040
+M 0 H 100
+S
+#9009
+The Zoo - The Jungle~
+In and around the lush trees and plants of the jungle, the striped giant
+cats lunge from concealment to claw you.  
+~
+0 0 2
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 -1 9010
+D1
+(none)~
+(null)~
+0 -1 9045
+D2
+(none)~
+(null)~
+0 -1 9008
+D3
+(none)~
+(null)~
+0 -1 9044
+M 0 H 100
+S
+#9010
+The Zoo - Waterhole~
+As you stand and watch the waterhole peacefully, eyes start to pop up
+everywhere.  Heads are revealed and you see the long, toothed face of a
+hippo rise out of the water toward you.  
+~
+0 0 2
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 -1 9011
+D1
+(none)~
+(null)~
+0 -1 9049
+D2
+(none)~
+(null)~
+0 -1 9009
+D3
+(none)~
+(null)~
+0 -1 9048
+M 0 H 100
+S
+#9011
+The Zoo - Elephant Enclosure~
+As you walk along, you feel a nudge at your side.  A large trunk is
+prodding you, and you turn to face two large tusks.  
+~
+0 0 2
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 -1 9012
+D1
+(none)~
+(null)~
+0 -1 9052
+D2
+(none)~
+(null)~
+0 -1 9010
+D3
+(none)~
+(null)~
+0 -1 9051
+M 0 H 100
+S
+#9012
+The Zoo~
+The exit to the zoo is swarming with zoo keepers, making sure you didn't
+pocket any creatures.  
+~
+0 0 2
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D2
+(none)~
+(null)~
+0 -1 9011
+M 0 H 100
+S
+#9013
+The Zoo Ring Road~
+This part of the circuit is on the flat, making for easy walking for all.
+From here, it is possible to see the hotel balconies that overlook the park
+from Second Avenue.  On the inside part of the circuit there is a large
+watery section that has a small herd of hippopotami within.  Part of the
+enclosure has a glass wall below water level, allowing a clear view of the
+underwater world and the fish that co-exist with the large water-borne
+mammals.  To the west is the monkey habitats, with Orangutans, chimpazee's
+and other primates on display.  To the south is the snake house where snakes
+and other reptile habitats are ready for viewing.  
+~
+0 0 1
+E
+XNUMB1~
+The Zoo Ring Road~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 -1 9016
+D1
+(none)~
+(null)~
+0 -1 9001
+D2
+(none)~
+(null)~
+0 0 9019
+D3
+(none)~
+(null)~
+0 0 9018
+M 0 H 100
+S
+#9014
+Koalas and Kangaroos~
+The oddities from Down Under are on display here.  The ever slow Koala's
+cling to Eucalypt trees behind the heavy duty plexiglass are never fazed by
+anything and the strange Wallabies and the Kangaroo's slowly bounce around
+on their hind legs nibbling grasses or scratching themselves.  There are
+more small enclosures for some of the other unusual creatures from
+Australia, such as the Quolls, Tasmanian Devils and the very cute Possums.  
+~
+0 0 1
+E
+XNUMB1~
+Koalas and Kangaroos~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D3
+(none)~
+(null)~
+0 -1 9001
+M 0 H 100
+S
+#9015
+Elephants and Giraffes~
+The megafauna are always the crowd pleasers and the elephants and
+giraffes are the biggest of them all.  Both enclosures are large in size,
+with the elephants having a huge precast stone cave to hide out in.  The
+giraffes have telephone poles with branches attached to them to recreate as
+best possible their natural conditions back in Africa.  Both of the habitats
+have large seating arrangements for visitors at to sit and watch at feeding
+time and to compensate for the daytime crowds.  
+~
+0 0 1
+E
+XNUMB1~
+Elephants and Giraffes~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+0 -1 9016
+M 0 H 100
+S
+#9016
+The Zoo Ring Road~
+Here the ring road lies on a shallow slope as it edges around near Second
+Avenue.  Hotel balconies can be seen over the large hedge trees that outline
+the park and that hide the outside fence of the zoo.  On the inside of the
+ring there is are enclosures for the smaller (and more hyper) inhabitants of
+the animal kingdom with meercats, ferrets and otters being the main
+attractions.  The habitats for elephants and giraffes are along a path
+heading west and to the north a grand aviary can be seen.  
+~
+0 0 1
+E
+XNUMB1~
+The Zoo Ring Road~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 -1 9020
+D1
+(none)~
+(null)~
+0 -1 9002
+D2
+(none)~
+(null)~
+0 -1 9013
+D3
+(none)~
+(null)~
+0 -1 9015
+M 0 H 100
+S
+#9017
+Great Cats~
+There are several separate habitats here, set against the sloping ground.
+Leopards and jaguars have high vantages and wide branches to lounge around
+on, while lions have open spaces and large rocks for sunning when possible. 
+All the habitats have wire fences, making sure that the large carnivores
+can't attack the people that have come to view them.  The most impressive
+enclosure of them all is the large tiger display.  The large predators are
+nearly invisible for much of the day as they hide in the tall, dry grasses
+that grow in their habitat.  
+~
+0 0 1
+E
+XNUMB1~
+Great Cats~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D3
+(none)~
+(null)~
+0 -1 9002
+M 0 H 100
+S
+#9018
+Primates~
+Ropes, branches, rods and tree trunks are all strategically placed around
+the areas here.  Pygamy Marmosets, Howler monkeys, Spider monkeys and
+Chimpanzees are all to be found here, with large walls and plexiglass
+viewing platforms for easy watching.  The pride of the enclosures however,
+is a huge climbing frame with large tropical trees that have huge leaves
+creating a shady atmosphere.  This is the Orangutan habitat, not a good
+place to get caught upside down in.  
+~
+0 0 1
+E
+XNUMB1~
+Primates~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+0 0 9013
+M 0 H 100
+S
+#9019
+Snakes and Other Reptiles~
+A large building has been designed to hold a large number reptiles and
+snakes from the world over.  The are held in constructions that are much
+like fish tanks, without the water and with thicker glass.  Coiled serpants
+wrap themselves around foilage and debris alike.  Some exhibits even have a
+sandy desert look with their predators hidden cunningly, ready to strike. 
+The star attraction of the snake house would have to be the huge boa
+constrictor that looks big enough to be about to swallow a man without so
+much as a flicker of its tongue.  
+~
+0 0 1
+E
+XNUMB1~
+Snakes and Other Reptiles~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 0 9013
+M 0 H 100
+S
+#9020
+Aviary~
+Huge netted and enclosed spaces mark and separate the different species
+and habitats of birds.  There is a huge tropical space that has a winding
+path through it with all the various rainforest and tropical species.  There
+are similar habitat enclosures for the European and American species as
+well.  In separate cages, there are the huge birds of prey from the world
+over comprising of eagles, hawks and vultures of all sizes.  
+~
+0 0 1
+E
+XNUMB1~
+Aviary~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D2
+(none)~
+(null)~
+0 -1 9016
+M 0 H 100
+S
+#9021
+The Zoo - Snake Pit~
+(null)~
+0 0 2
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 -1 9025
+D1
+(none)~
+(null)~
+0 -1 9022
+M 0 H 100
+S
+#9022
+The Zoo - Snake Pit~
+(null)~
+0 0 2
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 -1 9026
+D3
+(none)~
+(null)~
+0 -1 9021
+M 0 H 100
+S
+#9023
+The Zoo - Monkey Business~
+The trees scream with screeching monkeys, throwing fruit and other
+assorted items at each other.  They stop sratching themselves long enough to
+attack you.  
+~
+0 0 2
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 -1 9027
+D1
+(none)~
+(null)~
+0 -1 9024
+M 0 H 100
+S
+#9024
+The Zoo - Monkey Business~
+The trees scream with screeching monkeys, throwing fruit and other
+assorted items at each other.  They stop sratching themselves long enough to
+attack you.  
+~
+0 0 2
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 -1 9028
+D1
+(none)~
+(null)~
+0 -1 9004
+D3
+(none)~
+(null)~
+0 -1 9023
+M 0 H 100
+S
+#9025
+The Zoo - Monkey Business~
+The trees scream with screeching monkeys, throwing fruit and other
+assorted items at each other.  They stop sratching themselves long enough to
+attack you.  
+~
+0 0 2
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 -1 9029
+D1
+(none)~
+(null)~
+0 -1 9026
+D2
+(none)~
+(null)~
+0 -1 9021
+D3
+(none)~
+(null)~
+0 -1 9004
+M 0 H 100
+S
+#9026
+The Zoo - Monkey Business~
+The trees scream with screeching monkeys, throwing fruit and other
+assorted items at each other.  They stop sratching themselves long enough to
+attack you.  
+~
+0 0 2
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 -1 9030
+D2
+(none)~
+(null)~
+0 -1 9022
+D3
+(none)~
+(null)~
+0 -1 9025
+M 0 H 100
+S
+#9027
+The Zoo - Giraffe Enclosure~
+Loping around the dirt ground, you see these tall majestic creatures turn
+their necks and charge!  
+~
+0 0 2
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 -1 9031
+D1
+(none)~
+(null)~
+0 -1 9028
+D2
+(none)~
+(null)~
+0 -1 9023
+M 0 H 100
+S
+#9028
+The Zoo - Giraffe Enclosure~
+Loping around the dirt ground, you see these tall majestic creatures turn
+their necks and charge!  
+~
+0 0 2
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 -1 9032
+D1
+(none)~
+(null)~
+0 -1 9005
+D2
+(none)~
+(null)~
+0 -1 9024
+D3
+(none)~
+(null)~
+0 -1 9027
+M 0 H 100
+S
+#9029
+The Zoo - Giraffe Enclosure~
+Loping around the dirt ground, you see these tall majestic creatures turn
+their necks and charge!  
+~
+0 0 2
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 -1 9033
+D1
+(none)~
+(null)~
+0 -1 9030
+D2
+(none)~
+(null)~
+0 -1 9025
+D3
+(none)~
+(null)~
+0 -1 9005
+M 0 H 100
+S
+#9030
+The Zoo - Giraffe Enclosure~
+Loping around the dirt ground, you see these tall majestic creatures turn
+their necks and charge!  
+~
+0 0 2
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 -1 9034
+D2
+(none)~
+(null)~
+0 -1 9026
+D3
+(none)~
+(null)~
+0 -1 9029
+M 0 H 100
+S
+#9031
+The Zoo - Aquarium~
+Among the seaweed and coral banks, many large sharks with white tips to
+their fins swim silently along.  Baring their fearsome teeth, they attack.  
+~
+0 0 2
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 -1 9035
+D1
+(none)~
+(null)~
+0 -1 9032
+D2
+(none)~
+(null)~
+0 -1 9027
+M 0 H 100
+S
+#9032
+The Zoo - Aquarium~
+Among the seaweed and coral banks, many large sharks with white tips to
+their fins swim silently along.  Baring their fearsome teeth, they attack.  
+~
+0 0 2
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 -1 9036
+D1
+(none)~
+(null)~
+0 -1 9006
+D2
+(none)~
+(null)~
+0 -1 9028
+D3
+(none)~
+(null)~
+0 -1 9031
+M 0 H 100
+S
+#9033
+The Zoo - Aquarium~
+Among the seaweed and coral banks, many large sharks with white tips to
+their fins swim silently along.  Baring their fearsome teeth, they attack.  
+~
+0 0 2
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 -1 9037
+D1
+(none)~
+(null)~
+0 -1 9034
+D2
+(none)~
+(null)~
+0 -1 9029
+D3
+(none)~
+(null)~
+0 -1 9006
+M 0 H 100
+S
+#9034
+The Zoo - Aquarium~
+Among the seaweed and coral banks, many large sharks with white tips to
+their fins swim silently along.  Baring their fearsome teeth, they attack.  
+~
+0 0 2
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 -1 9038
+D2
+(none)~
+(null)~
+0 -1 9030
+D3
+(none)~
+(null)~
+0 -1 9033
+M 0 H 100
+S
+#9035
+The Zoo - Desert~
+Many shaggy camels wander and roam the desert floor, their giant humps
+casting long shadows on the ground.  One turns, and spits at you.  
+~
+0 0 2
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 -1 9039
+D1
+(none)~
+(null)~
+0 -1 9036
+D2
+(none)~
+(null)~
+0 -1 9031
+M 0 H 100
+S
+#9036
+The Zoo - Desert~
+Many shaggy camels wander and roam the desert floor, their giant humps
+casting long shadows on the ground.  One turns, and spits at you.  
+~
+0 0 2
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 -1 9040
+D1
+(none)~
+(null)~
+0 -1 9007
+D2
+(none)~
+(null)~
+0 -1 9032
+D3
+(none)~
+(null)~
+0 -1 9035
+M 0 H 100
+S
+#9037
+The Zoo - Desert~
+Many shaggy camels wander and roam the desert floor, their giant humps
+casting long shadows on the ground.  One turns, and spits at you.  
+~
+0 0 2
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 -1 9041
+D1
+(none)~
+(null)~
+0 -1 9038
+D2
+(none)~
+(null)~
+0 -1 9033
+D3
+(none)~
+(null)~
+0 -1 9007
+M 0 H 100
+S
+#9038
+The Zoo - Desert~
+Many shaggy camels wander and roam the desert floor, their giant humps
+casting long shadows on the ground.  One turns, and spits at you.  
+~
+0 0 2
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 -1 9042
+D2
+(none)~
+(null)~
+0 -1 9034
+D3
+(none)~
+(null)~
+0 -1 9037
+M 0 H 100
+S
+#9039
+The Zoo - The Grass Plains~
+All around the grassy plains, groups of lions sit and gnaw on the bones
+of previous adventurers.  
+~
+0 0 2
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 -1 9043
+D1
+(none)~
+(null)~
+0 -1 9040
+D2
+(none)~
+(null)~
+0 -1 9035
+M 0 H 100
+S
+#9040
+The Zoo - The Grass Plains~
+All around the grassy plains, groups of lions sit and gnaw on the bones
+of previous adventurers.  
+~
+0 0 2
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 -1 9044
+D1
+(none)~
+(null)~
+0 -1 9008
+D2
+(none)~
+(null)~
+0 -1 9036
+D3
+(none)~
+(null)~
+0 -1 9039
+M 0 H 100
+S
+#9041
+The Zoo - The Grass Plains~
+All around the grassy plains, groups of lions sit and gnaw on the bones
+of previous adventurers.  
+~
+0 0 2
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 -1 9045
+D1
+(none)~
+(null)~
+0 -1 9042
+D2
+(none)~
+(null)~
+0 -1 9037
+D3
+(none)~
+(null)~
+0 -1 9008
+M 0 H 100
+S
+#9042
+The Zoo - The Grass Plains~
+All around the grassy plains, groups of lions sit and gnaw on the bones
+of previous adventurers.  
+~
+0 0 2
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 -1 9046
+D2
+(none)~
+(null)~
+0 -1 9038
+D3
+(none)~
+(null)~
+0 -1 9041
+M 0 H 100
+S
+#9043
+The Zoo - The Jungle~
+In and around the lush trees and plants of the jungle, the striped giant
+cats lunge from concealment to claw you.  
+~
+0 0 2
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 -1 9047
+D1
+(none)~
+(null)~
+0 -1 9044
+D2
+(none)~
+(null)~
+0 -1 9039
+M 0 H 100
+S
+#9044
+The Zoo - The Jungle~
+In and around the lush trees and plants of the jungle, the striped giant
+cats lunge from concealment to claw you.  
+~
+0 0 2
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 -1 9048
+D1
+(none)~
+(null)~
+0 -1 9009
+D2
+(none)~
+(null)~
+0 -1 9040
+D3
+(none)~
+(null)~
+0 -1 9043
+M 0 H 100
+S
+#9045
+The Zoo - The Jungle~
+In and around the lush trees and plants of the jungle, the striped giant
+cats lunge from concealment to claw you.  
+~
+0 0 2
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 -1 9049
+D1
+(none)~
+(null)~
+0 -1 9046
+D2
+(none)~
+(null)~
+0 -1 9041
+D3
+(none)~
+(null)~
+0 -1 9009
+M 0 H 100
+S
+#9046
+The Zoo - The Jungle~
+In and around the lush trees and plants of the jungle, the striped giant
+cats lunge from concealment to claw you.  
+~
+0 0 2
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 -1 9050
+D2
+(none)~
+(null)~
+0 -1 9042
+D3
+(none)~
+(null)~
+0 -1 9045
+M 0 H 100
+S
+#9047
+The Zoo - Waterhole~
+As you stand and watch the waterhole peacefully, eyes start to pop up
+everywhere.  Heads are revealed and you see the long, toothed face of a
+hippo rise out of the water toward you.  
+~
+0 0 2
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+0 -1 9048
+D2
+(none)~
+(null)~
+0 -1 9043
+M 0 H 100
+S
+#9048
+The Zoo - Waterhole~
+As you stand and watch the waterhole peacefully, eyes start to pop up
+everywhere.  Heads are revealed and you see the long, toothed face of a
+hippo rise out of the water toward you.  
+~
+0 0 2
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 -1 9051
+D1
+(none)~
+(null)~
+0 -1 9010
+D2
+(none)~
+(null)~
+0 -1 9044
+D3
+(none)~
+(null)~
+0 -1 9047
+M 0 H 100
+S
+#9049
+The Zoo - Waterhole~
+As you stand and watch the waterhole peacefully, eyes start to pop up
+everywhere.  Heads are revealed and you see the long, toothed face of a
+hippo rise out of the water toward you.  
+~
+0 0 2
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 -1 9052
+D1
+(none)~
+(null)~
+0 -1 9050
+D2
+(none)~
+(null)~
+0 -1 9045
+D3
+(none)~
+(null)~
+0 -1 9010
+M 0 H 100
+S
+#9050
+The Zoo - Waterhole~
+As you stand and watch the waterhole peacefully, eyes start to pop up
+everywhere.  Heads are revealed and you see the long, toothed face of a
+hippo rise out of the water toward you.  
+~
+0 0 2
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D2
+(none)~
+(null)~
+0 -1 9046
+D3
+(none)~
+(null)~
+0 -1 9049
+M 0 H 100
+S
+#9051
+The Zoo - Elephant Enclosure~
+As you walk along, you feel a nudge at your side.  A large trunk is
+prodding you, and you turn to face two large tusks.  
+~
+0 0 2
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+0 -1 9011
+D2
+(none)~
+(null)~
+0 -1 9048
+M 0 H 100
+S
+#9052
+The Zoo - Elephant Enclosure~
+As you walk along, you feel a nudge at your side.  A large trunk is
+prodding you, and you turn to face two large tusks.  
+~
+0 0 2
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D2
+(none)~
+(null)~
+0 -1 9049
+D3
+(none)~
+(null)~
+0 -1 9011
+M 0 H 100
+S
+#0
+
+
+
+#RESETS
+M 1 5 12 9001 1
+M 1 5 12 9003 1
+M 1 5 12 9005 1
+M 1 5 12 9007 1
+M 1 5 12 9009 1
+M 1 5 12 9011 1
+S
+
+
+
+#SHOPS
+0
+
+
+
+#MOBPROGS
+#0
+
+#$

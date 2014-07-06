@@ -1,0 +1,2654 @@
+#AREADATA
+Name City Centre~
+Builders Bishop Bran~
+VNUMs 10000 10420
+Credits Twilight Staff~
+Security 1
+Flags G
+Price 0
+End
+
+
+
+#MOBILES
+#10000
+jogger cute girl $f~
+a cute girl jogger~
+A cute girl with $f stitched across her back jogs past.
+~
+A very attractive young lady jogs past, oblivious to anything much around
+her.  You can hear the music from her walkman from some distance away
+blaring away.  
+~
+human~
+A 0 50 0 0 0 none
+0 0 0 0
+10 10 2 0
+AHMV ABCDEFGHIJK medium flesh
+A 0
+I 0
+#10001
+$f news stand~
+$f~
+$f looks over the news stand.
+~
+Somewhat disheveled, $f squats here, fiddling with the stacks
+of newspapers and magazines.
+~
+human~
+AB 0 75 0 0 0 none
+0 0 0 0
+10 10 3 0
+AHMV ABCDEFGHIJK medium flesh
+A FN
+I 0
+M RANDOM 10005 5~
+#10002
+bum $f~
+a smelly bum~
+A smelly bum named $f sits here, nursing his own demon.
+~
+$f sits here, absorbed in his own hell.  Sometimes $f mumbles to himself
+and other times here just sits there, looking off into space.  Regardless,
+$f is absorbed in his own world and not much of a harm to anyone.  
+~
+human~
+ABCH 0 25 0 0 0 punch
+0 0 0 0
+8 8 1 0
+AHMV ABCDEFGHIJK medium flesh
+A 0
+I 0
+#10003
+philmor older gentleman~
+Philmor, the street-sweeper~
+A smiling, older gentleman is here, sweeping up the streets.
+~
+Philmor is one of the many street sweepers that clean up the city.  But
+unlike many of the sweepers, he loves to talk to people.  He's often a
+source of information for people new to the city because of it.
+~
+human~
+ACG 0 75 0 0 0 pound
+0 0 0 0
+10 10 1 0
+AHMV ABCDEFGHIJK medium flesh
+A 0
+I 0
+M SPEECH 10004 job~
+M SPEECH 10003 garou~
+M SPEECH 10003 werewolf~
+M GREET 10000 100~
+M SPEECH 10001 changeling~
+M SPEECH 10001 fae~
+M SPEECH 10001 faerie~
+M SPEECH 10002 vampire~
+M SPEECH 10002 kindred~
+#0
+
+
+
+#OBJECTS
+#10000
+mobile phone~
+a sleek little mobile phone~
+(null)~
+(null)~
+plastic~
+30 0 AO
+0 0 0 0 0
+0
+0 10 100
+E
+--USES~
+-2~
+Q 0
+#10001
+fountain skull blood~
+a fountain spewing blood from the gaping mouths of skulls~
+The skulls may be concrete, but the blood is real, thick and vibrant. It's amazing how the artist has captured each of the skulls in such a waythat their mouths seem to be open in silent screams.  The blank sockets seemto be watching, as if some sentience remains to turn baleful gazes uponpassers-by.  ~
+The skulls may be concrete, but the blood is real, thick and vibrant. It's amazing how the artist has captured each of the skulls in such a waythat their mouths seem to be open in silent screams.  The blank sockets seemto be watching, as if some sentience remains to turn baleful gazes uponpassers-by.  ~
+concrete~
+25 0 0
+100000 100000 'blood' 0 0 0
+10000 0 100
+E
+--USES~
+-2~
+Q 0
+#10002
+fountain tinkling~
+a tinkling fountain~
+A fountain which sprays brackish water into the air is here.~
+The glass balls and chrome rods which make up this fountain were probably
+quite pretty once, but have fallen into some serious disrepair.  The water
+is slimy and sluggish, the glass balls are cracked or in some cases missing
+altogether, and the chrome is chipped and dented from years of abuse.  
+~
+rock~
+25 0 0
+100000 100000 'water' 0 0 0
+0 0 100
+E
+--USES~
+-2~
+Q 0
+#10003
+breadstick stick~
+a breadstick~
+(null)~
+(null)~
+bread~
+5 0 AN
+2 5 0 sting 0 0
+0 0 100
+E
+--USES~
+-2~
+Q 0
+#10004
+pill anti venom~
+anti-venom pill~
+An anti-venom pill lies here.~
+A pill with letter that says "Anti-Venom" on it is here.  
+~
+bread~
+26 0 AO
+10 'cure poison' 'cure disease' 'reserved' 'reserved' 0
+0 0 100
+E
+--USES~
+-2~
+Q 0
+#10005
+cigarette~
+a cigarette~
+A cigarette, long, white with an orange filter.  [ooc: use cigarette] ~
+A cigarette, long, white with an orange filter.[ooc: use cigarette]~
+tobacco~
+13 0 AO
+0 0 0 0 0
+0
+1 100 100
+E
+--TUNONE~
+You puff on a cigarette.~
+E
+--TUSELF~
+You develop a thick cloud of smoke around yourself.~
+E
+--TUOTH~
+You blow smoke in $N's face.~
+E
+--TRNONE~
+$n puffs on a cigarette.~
+E
+--TRSELF~
+$n surrounds $mself in a cloud of smoke.~
+E
+--TROTH~
+$n blows cigarette smoke in $N's face.~
+E
+--TVOTH~
+$n blows cigarette smoke in your face.~
+E
+--TRUSE~
+$n tries to suck more out of a used cigarette butt.~
+E
+--TUUSE~
+You suck on the cigarette butt like the addict you are.~
+E
+--USES~
+5~
+Q 0
+#10030
+iron bench~
+an iron bench~
+This bench is made from sturdy galvinised iron that is black fromoxidisation.  It lies under the willow tree with a perfect aspect forviewing the garden.  {wThere is a small bronze {Yp{yla{wq{yue{x on the backof the chair.  ~
+This bench is made from sturdy galvinised iron thatis black from oxidisation. It lies under the willowtree with a perfect aspect for viewing the garden.{wThere is a small bronze {Yp{yla{wq{yue{x on the back of thechair.~
+iron~
+12 Y 0
+3 400 BEHK 0 0 0
+300 200 100
+E
+--USES~
+-2~
+E
+plaque~
+{CIn memory of a gentleman{x~
+Q 0
+#10100
+bottle liquor~
+a bottle wrapped in brown paper~
+A non-descript bottle of cheap liquor is here, hidden inside of a brownpaper bag.  ~
+A non-descript bottle of cheap liquor is here, hidden inside of a brownpaper bag.~
+glass~
+17 0 AO
+5 3 'rotgut' 0 0 0
+0 0 100
+E
+--USES~
+-2~
+Q 0
+#10101
+broom~
+a street sweepers broom~
+A broom was left here by a street sweeper.~
+(null)~
+wood~
+8 0 AO
+0 0 0 0 0
+0
+0 500 100
+E
+--USES~
+-2~
+Q 0
+#10200
+A slim, black card key~
+a slim, black card key~
+This slim rectangle of plastic is entirely black in colour except for asmall green triangle in the top left corner.  Inside the triangle there isan image of a rather jaunty looking raven, with one eye staring out at theworld.  ~
+This slim rectangle of plastic is entirely black in colour except for asmall green triangle in the top left corner.  Inside the triangle there isan image of a rather jaunty looking raven, with one eye staring out at theworld.   ~
+plastic~
+18 N AO
+0 0 0 0 0
+0
+1 20 100
+E
+--USES~
+-2~
+Q 0
+#0
+
+
+
+#ROOMS
+#10401
+Along the Park on Second~
+The large and overgrown city park tangles grandly on the east side of theroad while opposite it is the remains of the old city center.  Old hotelsthat have seen better days display what little remaining parts of their oncestately grandeur they had, however cracks in this facade are easily seen. Deep, dark alleyways that are filled with all manner of rubbish sitinbetween the tightly packed hotels only slightly lit by garish neon signsthat flash day and night attempting to entice the unwary.  At night, underthe neon glow, the streetwalkers roam, giving the hotels a reason to stayopen and for the traffic to flow.  ~
+0 0 1
+E
+XNUMB1~
+Along the Park on Second~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 0 10016
+D2
+(none)~
+(null)~
+0 0 10402
+M 0 H 100
+S
+#10402
+Along the Park on Second~
+On one side of the road large leafy trees in desperate need of careoverhang the road and on the opposite side old hotels have worn out neonsigns flashing, trying to snare the unwary.  The old hotels have seen betterdays and display what little remains of their once stately grandeur, howevercracks in this facade are easily seen.  There are deep, dark alleyways thatare filled with all manner of rubbish sitting inbetween the tightly packedhotels lit only by garish neon signs that flash day and night attempting toentice the unwary.  At night, under the neon light, the streetwalkers roam,giving the hotels a reason to stay open and for the traffic to flow.  ~
+0 0 1
+E
+XNUMB1~
+Along the Park on Second~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 0 10401
+D2
+(none)~
+(null)~
+0 0 10403
+M 0 H 100
+S
+#10403
+Along the Park on Second~
+An old cinema lies on the western edge of the road here.  Once upon atime it must have certainly been the toast of the town, displaying allmanner of red carpet events.  Now, the billboard is fading, the posters andthe main sign show clearly that the movies now playing are all rated to fitin with the theme of the area around it.  Across the road the dark anddangerous park looms, the roots of the huge and wild trees have lifted thefootpath in many places, almost as if they were trying to reclaim the cityone bit at a time.  ~
+0 0 1
+E
+XNUMB1~
+Along the Park on Second~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 0 10402
+D2
+(none)~
+(null)~
+0 0 10404
+M 0 H 100
+S
+#10404
+Along the Park on Second~
+The remains of a more successful time can be seen here in the old cityheart.  Old hotels that have seen better days display what little remainingparts of their once stately grandeur they had, however cracks in this facadeare easily seen.  Deep, dark alleyways filled with all manner of rubbish sitinbetween the tightly packed hotels only slightly lit by garish neon signsthat flash day and night attempting to entice the unwary.  At night, underthe neon glow, the streetwalkers roam, giving the hotels a reason to stayopen and for the traffic to flow.  ~
+0 0 1
+E
+XNUMB1~
+Along the Park on Second~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 0 10403
+D2
+(none)~
+(null)~
+0 0 10405
+M 0 H 100
+S
+#10405
+Along the Park on Second~
+Huge leafy trees that are in desperate need of care overhang the road,dropping branches and leaves on the road and lift the sidewalk with massiveroots.  On the opposite side old hotels have worn out neon signs flashing,trying to snare the unwary.  The old hotels have seen better days anddisplay what little remains of their once stately grandeur, however cracksin this facade are easily seen.  There are deep, dark alleyways that arefilled with all manner of rubbish sitting inbetween the tightly packedhotels lit only by garish neon signs that flash day and night attempting toentice the unwary.  At night, under the neon light, the streetwalkers roam,giving the hotels a reason to stay open and for the traffic to flow.  ~
+0 0 1
+E
+XNUMB1~
+Along the Park on Second~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 0 10404
+D2
+(none)~
+(null)~
+0 0 10406
+M 0 H 100
+S
+#10406
+The Corner of Montgomery and Second~
+The traffic lights slowing cycle through their colours, the highest ofthem mostly obscured by overhanging trees.  Here on the corner of Montgomeryand Second is an ever present 7-11 that is opened twenty-five hours a dayand on the opposite side is an old gas station that has been boarded up andcompletely covered in graffiti.  To the south, Second Avenue continues onwith park side townhouses that are even less savory than the hotels thatline the rest of the thoroughfare.  Heading west is the more industrial sideof town, what was once the powerhouse of the city, now barely a shell oflight industry.  ~
+0 0 1
+E
+XNUMB1~
+The Corner of Montgomery and Second~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 0 10405
+D2
+(none)~
+(null)~
+0 0 6011
+D3
+(none)~
+(null)~
+0 0 10407
+M 0 H 100
+S
+#10407
+Montgomery Drive~
+This part of Montgomery lies on the edge of the old hotel district, closeto the park.  A few old apartment blocks sit above the newer, more drabconcrete fabrications of street side shops and dull offices.  It is thoughany character has been washed out and carefully replaced with large cementblocks that have windows.  There is little here to keep anyone interested.  ~
+0 0 1
+E
+XNUMB1~
+Montgomery Drive~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+0 0 10406
+D3
+(none)~
+(null)~
+0 0 10408
+M 0 H 100
+S
+#10408
+Montgomery Drive~
+In accordance with the strange law of the universe, a Porn store sitsright alongside of a Christian book store here.  The flashy neon signs ofthe the Porn store seems to attract more visitors than the nicewholesomeness of the fanatical Christian sign however the parking lot infront of the shops seem to be always full and spilling out onto the streets.Otherwise the rest of the area is the same, offices and shop fronts, coldand impersonal.  ~
+0 0 1
+E
+XNUMB1~
+Montgomery Drive~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+0 0 10407
+D3
+(none)~
+(null)~
+0 0 10409
+M 0 H 100
+S
+#10409
+Montgomery Drive~
+Huge industrial bins sit at the side of a small furniture outlet, quiteclose to the road.  They are seemingly always filled to overflowing,spilling packing tape, boxes and other rubbish all over the ground.  Small,stunted and dying gardens separate the street from the carparks and toweringmetal light poles are planted into the ground, almost like trees.  Duringthe day these areas are filled with busy workers, after nightfall it is aghost town as they have all gone home.  ~
+0 0 1
+E
+XNUMB1~
+Montgomery Drive~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+0 0 10408
+D3
+(none)~
+(null)~
+0 0 10410
+M 0 H 100
+S
+#10410
+Montgomery Drive~
+The road curves towards south and then straightens again as headssteadily heads towards the west.  In the distance and towards the southlarge smoke stacks, both new and old, can be seen in the sky line.  Jammedinto the space around here, however, is light industrial complexes and largeshop fronts.  Furniture stores, bedding specialists, lighting experts, tooltraders and mostly empty used car lots all can be found in and around thispart of the city.  Side streets wind off both north and south, heading intoeven more industrial areas while to the east the city park can now befaintly seen.  ~
+0 0 1
+E
+XNUMB1~
+Montgomery Drive~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+0 0 10409
+D3
+(none)~
+(null)~
+0 0 10411
+M 0 H 100
+S
+#10411
+Montgomery Drive~
+Here is the very heart of the light industrial district in the city.  Carlots line the east-west thorough-fare on one side and budget housing mixesin with new large vehicle repair chain stores.  The roads are littered withrubbish and what little greenery there is, is all stunted and mostly dying. This is a bleak urban place, devoid of any character or soul, even thetraffic seems to zoom by with little desire to stop.  ~
+0 0 1
+E
+XNUMB1~
+Montgomery Drive~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+0 0 10410
+D3
+(none)~
+(null)~
+0 0 10412
+M 0 H 100
+S
+#10412
+Montgomery Drive~
+The road sweeps in a wide arc slowly towards the south, heading in thatdirection towards the processing plants and larger industrial manufacturingfactories.  To the east the city centre can just be seen while much smallerroads lead off in all the other two directions.  A small convenience storesits on the corner here, providing lunch and soft drinks to any of theworkers that they can.  A large self-storage yard dominates one side of theroad with a warren of locked sheds hidden away behind its large glassfacade.  On the opposite side of the road, matching the size of theself-storage place is a huge Ikea superstore.  ~
+0 0 1
+E
+XNUMB1~
+Montgomery Drive~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+0 0 10411
+D2
+(none)~
+(null)~
+0 0 10413
+M 0 H 100
+S
+#10413
+Montgomery Drive~
+In the north, light industrial complexes makes a gradual change to heavyindustrial that dominates the south.  Instead of factory outlets andbuilding supply stores, there are now manufacturing plants.  Huge warehousesized factories sit behind high barbed-wire security fences, designed tokeep the casual curious out.  Huge, ugly sheet metal factories, filled tothe brim with minimum wage, unskilled labour is the decor and this area doesit so well.  During the day the place is busy, at night is mostly onlysecuirty guards and their dogs.  ~
+0 0 1
+E
+XNUMB1~
+Montgomery Drive~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 0 10412
+M 0 H 100
+S
+#10414
+Along Delaney Street~
+The efforts of the city to make this street look clean go hand in handwith the city's new policy of restoring historical landmarks like the postoffice to the south.  The old brick building stands with it's face to thestreet and a large United States flag flowing with the wind that tells theworld we're proud of who we are.  Other government restored historicalbuildings line this street to the east and west.  ~
+0 0 11
+E
+XNUMB1~
+Along Delaney Street~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Along Delaney Street~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+0 0 10417
+D2
+(none)~
+(null)~
+0 0 12574
+D3
+(none)~
+(null)~
+0 0 10047
+S
+#10415
+Inside the Elevator~
+This cart is styled with stainless steel walls, and an imitation oakpaneled floor.  The humming sound of the lights seems to pour out of the topof the cart, which seems to smell slightly of urine and bleach.  Two smallwhite buttons line themselves up by the left side of the doorway which read:[{W0{g] [{W1{g].  {x {g<ooc> [{W0{g] leads to 1st floor, [{W1{g] leads to2nd floor.  'press #' to go to that floor, and 'leave elevator' to step out.{x ~
+0 396 0
+E
+XNUMB1~
+Inside the Elevator~
+E
+XDUMB1~
+<ooc> [0] leads to 1st floor, [1] leads to 2nd floor.  'press #' to go tothat floor, and 'leave elevator' to step out.  ~
+E
+XNDREAM~
+Inside the Elevator~
+E
+XDDREAM~
+None~
+S
+#10416
+Licoln Studio Apartments on the Second Floor~
+PO Boxes line the western wall here, most having had their numbersscratched off a long time ago but still in good condition.  The elevatordoors stare into the hall with an expressionless stare that seems to defythe world around it.  The double rows of halogen lights in this part of thehall reflect brightly off of the plain white walls around the room whichseem to make everything just a bit brighter.  <ooc> 'press button' to callthe elevator, and 'enter elevator' to go inside.  ~
+0 1036 0
+V
+10415 1
+E
+XNUMB1~
+Licoln Studio Apartments on the Second Floor~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Licoln Studio Apartments on the Second Floor~
+E
+XDDREAM~
+None~
+S
+#10417
+A Dead End Traffic Circle on Delaney~
+The street dead ends in a circle to prevent the heavy flow of trafficfrom becoming worse by having to actually use the three-point turn method inthe middle of traffic.  To the south stands what was once the tallestbuilding in Bal Harbour, and is still used as the town hall to this daywhile to the north the rear side of the police department can be seen in allit's glory.  The street continues west from here.  ~
+0 4 11
+E
+XNUMB1~
+A Dead End Circle on Delaney~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+A Dead End Circle on Delaney~
+E
+XDDREAM~
+None~
+D2
+(none)~
+(null)~
+AB 0 3005
+D3
+(none)~
+(null)~
+0 0 10414
+S
+#10000
+The Heart of the City~
+Here in the midst of the tall concrete and glass sentinels is the
+entrance to the neglected heart of the city.  Large, dirty flagstones have
+been laid in geometric patterns around an old ornate fountain that is in
+dire need of a touch-up.  The pool surrounding the fountain is missing a
+number of its tiles giving it a sickly, pockmarked aspect.  The pool also
+has underwater spot-lights that illuminate the statuesque fountain, some of
+them are broken, making the statue look somewhat more chaotic at night. 
+Added to the fountain's woes, one of the arms from the statue is lying
+broken at its own feet in the pool below.  It is obvious that misuse and
+neglect has taken its toll and the more timid folk of the city avoid this
+place, making it an ideal meeting place for others.  The main thoroughfare
+of Third Avenue runs north and south, bisecting the city.  To the west is
+the rest of the massive city park and to the east is the start of the
+shopping precinct of the city.  
+~
+0 16 11
+E
+XNUMB1~
+Wyrm Tainted Water~
+E
+XDUMB1~
+A pit yawns with a fetid sludge oozing back and forth here.  The sides
+slope upwards, making the entire slippery surface of this area that is
+much harder to move across.
+~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+A street to the north.  
+~
+(null)~
+0 -1 10001
+D1
+A street to the east.  
+~
+(null)~
+0 0 10048
+D2
+A street to the south.  
+~
+(null)~
+0 -1 10006
+D3
+A street to the west.  
+~
+(null)~
+0 -1 10012
+M 0 H 100
+S
+#10001
+Along Third Avenue~
+You creep along the edge of the old Central Park, following the broken
+lamplights down Third Avenue.  
+~
+0 0 1
+E
+XNUMB1~
+Along Third Avenue~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 -1 10002
+D2
+(none)~
+(null)~
+0 -1 10000
+M 0 H 100
+S
+#10002
+Along Third Avenue~
+You creep along the edge of the old Central Park, following the broken
+lamplights down Third Avenue.  
+~
+0 0 1
+E
+XNUMB1~
+Along Third Avenue~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 -1 10003
+D2
+(none)~
+(null)~
+0 -1 10001
+M 0 H 100
+S
+#10003
+Along Third Avenue~
+You creep along the edge of the old Central Park, following the broken
+lamplights down Third Avenue.  
+~
+0 0 1
+E
+XNUMB1~
+Along Third Avenue~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 -1 10004
+D2
+(none)~
+(null)~
+0 -1 10002
+M 0 H 100
+S
+#10004
+Along Third Avenue~
+You creep along the edge of old Central Park, following the broken
+lamplights down Third Avenue.  
+~
+0 0 1
+E
+XNUMB1~
+Along Third Avenue~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 -1 10005
+D2
+(none)~
+(null)~
+0 -1 10003
+M 0 H 100
+S
+#10005
+Corner of Third and Walnut~
+You find yourself at a junction of city streets.  To the south-west you
+see the shadows in old Central Park.  Third Avenue continues North and South
+while Walnut Avenue runs East and West.  
+~
+0 0 1
+E
+XNUMB1~
+Along Third Avenue~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 -1 10017
+D2
+(none)~
+(null)~
+0 -1 10004
+M 0 H 100
+S
+#10006
+Third Avenue~
+The street itself is riddled with potholes and the walls lining it have
+graffiti scrawled over almost every available space.  Squat, ugly apartment
+blocks line the road on the western side and the east has the backdrop of
+the long neglected and overgrown park.  Paper of all sorts litters the
+streets, simply adding to the rundown and neglected aspect of the area. 
+Adding to the woe of this place, there is a faint, damp odour wafting in
+from somewhere that smells reminiscent of an open sewer.  
+~
+0 0 1
+E
+XNUMB1~
+Third Avenue~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 -1 10000
+D2
+(none)~
+(null)~
+0 -1 10007
+M 0 H 100
+S
+#10007
+Third Avenue~
+The street itself is riddled with potholes and the walls lining it have
+graffiti scrawled over almost every available space.  Squat, ugly apartment
+blocks line the road on the western side and the east has the backdrop of
+the long neglected and overgrown park.  Paper of all sorts litters the
+streets, simply adding to the rundown and neglected aspect of the area. 
+Adding to the woe of this place, there is a stong, damp odor wafting in from
+somewhere that really does smell like there is an open sewer close by.  
+~
+0 0 1
+E
+XNUMB1~
+Third Avenue~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 -1 10006
+D2
+(none)~
+(null)~
+0 -1 10008
+D3
+(none)~
+(null)~
+0 -1 10011
+M 0 H 100
+S
+#10008
+Third Avenue~
+A bootleg liquor store and just further along a rundown, one-stop
+pornshop only adds to the general ambience of this part of town.  The street
+is pockmarked heavily with potholes and the closer to Delaney Street in the
+south, the heavier the graffiti seems to be.  Squat, ugly apartment blocks
+line the road on the western side and the east has the backdrop of the long
+neglected and overgrown park.  Paper of all sorts litters the streets,
+simply adding to the rundown and neglected aspect of the area.  There is the
+lingering scent of an open sewer somewhere close by.  
+~
+0 0 1
+E
+XNUMB1~
+Third Avenue~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 -1 10007
+D2
+(none)~
+(null)~
+0 -1 10009
+M 0 H 100
+S
+#10009
+Third Avenue~
+Here even the sidewalk has graffiti spray painted on it, as does every
+wall and post.  The street has potholes and divets out of it all over the
+place, looking in dire need of resurfacing.  Obscuring any view of the wild
+tangle of the park to the east is an large, unsightly apartment block that
+looks more like a demolition site than a residence.  No windows are unbroken
+and most are boarded up with wood or black sheet plastic.  Paper of all
+sorts litters the streets, simply adding to the rundown and neglected aspect
+of the area.  There is a very faint waft of decay coming from somewhere, as
+if there an open sewer somewhere in the area.  
+~
+0 0 1
+E
+XNUMB1~
+Third Avenue~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 -1 10008
+D2
+(none)~
+(null)~
+0 -1 10010
+M 0 H 100
+S
+#10010
+Corner of Third and Delaney~
+You linger undecided at the corner of Third and Delaney Avenue.  Delaney
+runs East towards the Bay, while Third runs North towards City Centre and
+South towards the hills.  
+~
+0 388 1
+E
+XNUMB1~
+Corner of Third and Delaney~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 -1 10009
+D1
+(none)~
+(null)~
+0 0 10047
+D2
+(none)~
+(null)~
+0 -1 10022
+M 0 H 100
+S
+#10011
+At the Duck Pond~
+No paddle boats or sunbathers to be found here.  Rather there is a trail
+of used hypodermic needles and other garbage littering the groud everywhere.
+The remains of a once proud duck pond have been choked with all manner of
+garbage from the modern world.  The pond was once a proud mantlepiece of the
+city, however, just like the park, it has long since fallen.  It has become
+a convenient dumping ground for the lazy city folk and a foul, overwhelming
+odor hangs like a cloud over the stagnant remains of the pond.  
+~
+0 0 1
+E
+XNUMB1~
+The Cesspool~
+E
+XDUMB1~
+The rancid scent of corruption assaults you as your gaze drifts over thisscene of virulent filth that was once one of Gaia's sacred places.  Blacksludge bubbles grotesquely in defiance to the sacred mother and all that shestands for.  The green glow of balefire highlights the nauseating spectaclebefore you, almost in celebration of this foul and despicable triumph of theWyrm.  ~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+E
+garbage~
+Searching the piles of rubbish and garbage that litter the surroudingarea to the pond you spot a conveniently placed step {Wladder{x that leans upagainst the one of the larger piles to the north of the pond.  ~
+E
+rubbish~
+Searching the piles of rubbish and garbage that litter the surroudingarea to the pond you spot a conveniently placed step {Wladder{x that leans upagainst the one of the larger piles to the north of the pond.  ~
+E
+trash~
+Searching the piles of rubbish and garbage that litter the surroudingarea to the pond you spot a conveniently placed step {Wladder{x that leans upagainst the one of the larger piles to the north of the pond.  ~
+E
+ladder~
+On closer inspection, the ladder looks new and it looks rather well usedfor climbing over the high mounds of garbage.  ~
+D1
+(none)~
+(null)~
+0 -1 10007
+D5
+Murky, smelly and foul.  The water of this pond oozesmore than flows, smells like bad egg and probably glowsin the dark.  You do notice that there is a strangelight under there, and some kind of movement?~
+pond~
+ABCIMR 0 6502
+M 0 H 100
+S
+#10012
+A Concrete Path~
+A narrow concrete path winds its way around tthe contours of the green
+mounds that make up the park.  Trees are growing unkempt with leaves and
+rubbish littering the grounds and in other places wild gardens have nearly
+overgrown the pathways.  Battered lamp posts that are marked with graffiti
+stick out of he greenery haphazardly with seemingly more broken ones than
+working, giving only sporadic illumination at night.  Every so often a bench
+can be seen half covered by weeds and street art, with garbage piling up
+under them and the nearby overflowing rubbish bin.  
+~
+0 0 1
+E
+XNUMB1~
+A Concrete Path~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+0 -1 10000
+D3
+(none)~
+(null)~
+0 -1 10013
+M 0 H 100
+S
+#10013
+A Concrete Path~
+A narrow concrete path winds its way around the contours of the green
+mounds that make up the park.  Trees are growing unkempt with leaves and
+rubbish littering the grounds and in other places wild gardens have nearly
+overgrown the pathways.  Battered lamp posts that are marked with graffiti
+stick out of the greenery haphazardly with seemingly more broken ones than
+working, giving only sporadic illumination at night.  To the north there is
+a wide concrete path leading up to some turnstyles and a large wooden gate
+that has a large sign pointing the way to the "City Zoo".  
+~
+0 0 1
+E
+XNUMB1~
+A Concrete Path~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 -1 9000
+D1
+(none)~
+(null)~
+0 -1 10012
+D3
+(none)~
+(null)~
+0 -1 10014
+M 0 H 100
+S
+#10014
+A Concrete Path~
+A narrow concrete path winds its way around the contours of the green
+mounds that make up the park.  Trees are growing unkempt with leaves and
+rubbish littering the ground, in other places wild gardens have nearly
+overgrown the pathways.  Battered lamp posts that are marked with graffiti
+stick out of the greenery haphazardly with seemingly more broken ones than
+working, giving only sporadic illumination at night.  There is a large,
+overgrown Weeping Willow here, its leaves creating a natural archway that
+falls entirely over the path.  During the day this creates delightful
+dappled shadows and at night it creates an eerie almost ghostly scene.  
+~
+0 0 1
+E
+XNUMB1~
+A Concrete Path~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+E
+willow~
+Between the dense overhanging of the overgrown willow tree you can seewhat seems to be a small ornate iron bench to the south.  ~
+D1
+(none)~
+(null)~
+0 -1 10013
+D2
+(none)~
+(null)~
+M 0 10071
+D3
+(none)~
+(null)~
+0 -1 10015
+M 0 H 100
+S
+#10015
+A Concrete Path~
+A narrow concrete path winds its way around the contours of the greenmounds that make up the park.  Trees are growing unkempt with leaves andrubbish littering the ground, in other places wild gardens have nearlyovergrown the pathways.  Battered lamp posts that are marked with graffitistick out of the greenery haphazardly with seemingly more broken ones thanworking, giving only sporadic illumination at night.  There is a large,overgrown Weeping Willow here, its leaves creating a natural archway thatfalls entirely over the path.  During the day this creates delightfuldappled shadows and at night it creates an eerie almost ghostly scene.  ~
+0 0 1
+E
+XNUMB1~
+A Concrete Path~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+0 -1 10014
+D3
+(none)~
+(null)~
+0 0 12575
+M 0 H 100
+S
+#10016
+Corner of Second and Patterson~
+A busy Second Avenue runs north and south here, stretching the length ofthe massive City park and beyond.  Old hotels with heritage stylearchitecture line the northern side of Second Avenue making the most of thepark views and the dirty city skyline.  On the southern side of Secondinbetween the older apartment buildings there is run down theatre that hasseen better days and has its doors chained shut.  The hotels are open allhours, some being the sort that bill by the hour making this part of townone of the busiest.  Heading west through the ugly urban tract of apartmentblocks and industrial infrastructure is Patterson Street, which judging bythe small blue sign with an aeroplane on it leads to the airport.  ~
+0 0 1
+E
+XNUMB1~
+Corner of Second and Patterson~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 0 8053
+D1
+(none)~
+(null)~
+0 0 12575
+D2
+(none)~
+(null)~
+0 0 10401
+D3
+(none)~
+(null)~
+0 0 8055
+M 0 H 100
+S
+#10017
+Along Third Avenue~
+Although the smells and sounds of City Centre to the South vaguely
+disturb you, you can push them out of your mind as you walk along
+appreciating the gardens of houses in this residential area.  
+~
+0 0 1
+E
+XNUMB1~
+Along Third Avenue~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 -1 10018
+D2
+(none)~
+(null)~
+0 -1 10005
+M 0 H 100
+S
+#10018
+Along Third Avenue~
+Although the smells and sounds of City Centre to the South vaguely
+disturb you, you can push them out of your mind as you walk along
+appreciating the gardens of houses in this residential area.  
+~
+0 0 1
+E
+XNUMB1~
+Along Third Avenue~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 -1 10019
+D2
+(none)~
+(null)~
+0 -1 10017
+M 0 H 100
+S
+#10019
+Along Third Avenue~
+You note this area of Third seems to hold several houses which were
+probably quite beautiful, in their day.
+~
+0 0 1
+E
+XNUMB1~
+Along Third Avenue~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 -1 10020
+D2
+(none)~
+(null)~
+0 -1 10018
+M 0 H 100
+S
+#10020
+Along Third Avenue~
+You turn South away from Ascot Drive and wander along Third Avenue,
+smiling at a flustered butler out walking the chihuahuas.  
+~
+0 0 1
+E
+XNUMB1~
+Along Third Avenue~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 -1 10021
+D2
+(none)~
+(null)~
+0 -1 10019
+M 0 H 100
+S
+#10021
+Corner of Third and Ascot~
+Third Avenue ends here in the wide, curving lanes of Ascot Drive.  You
+hear the pleasant sounds of sprinklers running on manicured lawns and fussy
+housewives scolding the hired help.  
+~
+0 0 1
+E
+XNUMB1~
+Corner of Third and Ascot~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+0 -1 10037
+D2
+(none)~
+(null)~
+0 -1 10020
+D3
+(none)~
+(null)~
+0 -1 10027
+M 0 H 100
+S
+#10022
+Along Third Avenue~
+Just South of Delaney Drive on Third, you sense the dim despondancy of
+City Centre to your North and the hustle and bustle of traffic to the South.
+~
+0 0 1
+E
+XNUMB1~
+Along Third Avenue~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 -1 10010
+D2
+(none)~
+(null)~
+0 -1 10023
+D3
+(none)~
+(null)~
+0 0 10100
+M 0 H 100
+S
+#10023
+Along Third Avenue~
+You ponder the dingy concrete that smells vaguely of urine as you walk
+along Third between Delaney and Lincoln.  
+~
+0 0 1
+E
+XNUMB1~
+Along Third Avenue~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 -1 10022
+D2
+(none)~
+(null)~
+0 -1 10024
+M 0 H 100
+S
+#10024
+Along Third Avenue~
+You ponder the dingy concrete that smells vaguely of urine as you walk
+along Third between Delaney and Lincoln.  
+~
+0 0 1
+E
+XNUMB1~
+Along Third Avenue~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 -1 10023
+D2
+(none)~
+(null)~
+0 -1 10025
+M 0 H 100
+S
+#10025
+Along Third Avenue~
+You are just north of Lincoln Avenue and the hustle and bustle - and
+smells - of a busy multi lane thoroughfare.  
+~
+0 0 1
+E
+XNUMB1~
+Along Third Avenue~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 -1 10024
+D2
+(none)~
+(null)~
+0 -1 10026
+M 0 H 100
+S
+#10026
+Corner of Third and Lincoln~
+Here along the busy noise of Lincoln Avenue, Third Avenue to your Northgreens and becomes Overhill Road to the south, winding up amongst the hills.~
+0 0 1
+E
+XNUMB1~
+Corner of Third and Licoln~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 -1 10025
+D1
+(none)~
+(null)~
+0 0 10051
+M 0 H 100
+S
+#10027
+2930 Ascot Drive~
+This house on the corner block is more driveway than home.  Cars are
+fitted in everywhere, nearly a half dozen of them, and all classics.  BMW,
+Porsche, Mercedes, Bentley - all are represented here.  
+~
+0 0 1
+E
+XNUMB1~
+2930 Ascot Drive~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+0 -1 10021
+D3
+(none)~
+(null)~
+0 -1 10028
+M 0 H 100
+S
+#10028
+2772 Ascot Drive~
+Only the very peak of the roof of this home is visible over the
+impressively large hedge that encircles it.  In fact, the gate is quite
+overgrown and you can't quite see another way into or out of it.  You wonder
+what the owner is hiding.  
+~
+0 0 1
+E
+XNUMB1~
+2772 Ascot Drive~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+0 -1 10027
+D3
+(none)~
+(null)~
+0 -1 10029
+M 0 H 100
+S
+#10029
+2611 Ascot Drive~
+A simpler, and somewhat nicer, home on Ascot drive, this older home has a
+comfortable front porch and well kept garden.  
+~
+0 0 1
+E
+XNUMB1~
+2611 Ascot Drive~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+0 -1 10028
+D3
+(none)~
+(null)~
+0 -1 10030
+M 0 H 100
+S
+#10030
+2470 Ascot Drive~
+This many storied Tudor home is made complete by the pair of surgicallyplastic people - in their 50's but appearing to be in their mid 20's -playing tennis in white shorts out in front.  ~
+0 0 1
+E
+XNUMB1~
+2470 Ascot Drive~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+0 -1 10029
+D3
+(none)~
+(null)~
+0 0 10031
+M 0 H 100
+S
+#10031
+1835 Ascot Drive~
+Sloping shingles fall gracefully away from the roof of this large cornerhome.  Wind chimes blow in the garden above a well frequented bird feeder.  ~
+0 0 1
+E
+XNUMB1~
+1835 Ascot Drive~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+0 0 10030
+D3
+(none)~
+(null)~
+0 -1 10032
+M 0 H 100
+S
+#10032
+Corner of Ascot and Second~
+The street is lined with a near forest of elms, oak and pine that greetyou at the sunny intersection of Second Avenue and Ascot Dr, up on NorthHill.  ~
+0 0 1
+E
+XNUMB1~
+Corner of Ascot and Second~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+0 -1 10031
+D2
+(none)~
+(null)~
+0 0 12578
+D3
+(none)~
+(null)~
+0 -1 10033
+M 0 H 100
+S
+#10033
+1590 Ascot Drive~
+Apparently the owner of this house is slightly paranoid that undesirableswill come for tea.  Bars block every window of the impressively large newhome.  ~
+0 0 1
+E
+XNUMB1~
+1590 Ascot Drive~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+0 -1 10032
+D3
+(none)~
+(null)~
+0 -1 10034
+M 0 H 100
+S
+#10034
+1301 Ascot Drive~
+The wide green lawn fronting this house sports an occasional softball ortricycle.  From behind the hosue you hear the happy shouts of childrenplaying in the pool.  ~
+0 0 1
+E
+XNUMB1~
+1301 Ascot Drive~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+0 -1 10033
+D3
+(none)~
+(null)~
+0 -1 10035
+M 0 H 100
+S
+#10035
+1136 Ascot Drive~
+You face a broad sunny garden full of blooms.  The scent is nearlyoverpowering.  Roses, honeysuckle, lilac, tulips, iris all fight for show. Somewhere back behind all the beauty must be a house.  ~
+0 0 1
+E
+XNUMB1~
+1136 Ascot Drive~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+0 -1 10034
+D3
+(none)~
+(null)~
+0 0 10036
+M 0 H 100
+S
+#10036
+Corner of First and Ascot~
+At the top of the hill, the wide lane curves smoothly around a sunnyblock of meadow.  Ascot Drive beckons away to the East, and First Streetruns South back towards town.  ~
+0 4 1
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+0 0 10035
+M 0 H 100
+S
+#10037
+3076 Ascot Drive~
+A cheerful sight greets you at the front of this well loved home.  Sunnyyellow with white and blue trim, it perfectly compliments the rose beds outin front.  ~
+0 0 1
+E
+XNUMB1~
+3076 Ascot Drive~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+0 -1 10038
+D3
+(none)~
+(null)~
+0 -1 10021
+M 0 H 100
+S
+#10038
+3322 Ascot Drive~
+Okay, now you're REALLY impressed.  A wrought iron fence stretches away,encircling the grounds of this home.  Through it you can see a creek andpond with geese on it, tennis courts, and riding stables.  And off in thedistance, yes, you even see a house.  ~
+0 0 1
+E
+XNUMB1~
+3322 Ascot Drive~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+0 -1 10039
+D3
+(none)~
+(null)~
+0 -1 10037
+M 0 H 100
+S
+#10039
+3322 Ascot Drive~
+The house is even bigger close up.  Through the fence you stare upwardsat the brick monolith that reigns over the property.  Stained and leadedglass windows twinkle elegantly and you catch sight of the gardener weedingthe perfect garden.  ~
+0 0 1
+E
+XNUMB1~
+3322 Ascot Drive~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+0 -1 10040
+D3
+(none)~
+(null)~
+0 -1 10038
+M 0 H 100
+S
+#10040
+3791 Ascot Drive~
+A cozier home than the giant to the West, this house is clean and wellkept.  The giant oak tree out on the front yard that shades the house has avery inviting rope swing hanging from a lower branch.  ~
+0 0 1
+E
+XNUMB1~
+3791 Ascot Drive~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+0 -1 10041
+D3
+(none)~
+(null)~
+0 -1 10039
+M 0 H 100
+S
+#10041
+Corner of Ascot and Fourth~
+A single stop sign marks this quiet intersection.  An empty lot growswith grass and flowers to the South, and you can vaguely hear the sea to theEast.  ~
+0 0 1
+E
+XNUMB1~
+Corner of Ascot and Fourth~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+0 -1 10042
+D3
+(none)~
+(null)~
+0 -1 10040
+M 0 H 100
+S
+#10042
+4027 Ascot Drive~
+You smile as you pass by the afternoon tea being taken in this garden. Tow older women sit and chat on the lawn while sipping from delicate cups offinest china.  ~
+0 0 1
+E
+XNUMB1~
+4072 Ascot Drive~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+0 -1 10043
+D3
+(none)~
+(null)~
+0 -1 10041
+M 0 H 100
+S
+#10043
+4275 Ascot Drive~
+An older and stately home, this elegant house has peaked roofs and dormerwindows looking out into the afternoon.  Lacy curtains and brass fittingscompliment the picture.  ~
+0 0 1
+E
+XNUMB1~
+4275 Ascot Drive~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+0 -1 10044
+D3
+(none)~
+(null)~
+0 -1 10042
+M 0 H 100
+S
+#10044
+4400 Ascot Drive~
+This hosue sits rather high up on a convenient bit of earth.  As such, itboasts quite stunning views out over the bay.  It is painted blue and whitein a nautical style.  ~
+0 0 1
+E
+XNUMB1~
+4400 Ascot Drive~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+0 -1 10045
+D3
+(none)~
+(null)~
+0 -1 10043
+M 0 H 100
+S
+#10045
+4836 Ascot Drive~
+Although this home is rather on the small and flat side, it is stillquite beautiful with most of the walls made of glass, providing floor toceiling views of the bay.  The land beyond the garden slopes away down tothe cliffside.  ~
+0 0 1
+E
+XNUMB1~
+4836 Ascot Drive~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+0 -1 10046
+D3
+(none)~
+(null)~
+0 -1 10044
+M 0 H 100
+S
+#10046
+Corner of Ascot and Fifth~
+Ascot drive ends here as the road sweeps away South, edging a cliff thatoverlooks the bay.  The views are magnificent and you pull over to stop andfeel the sea air.  ~
+0 0 1
+E
+XNUMB1~
+Corner of Ascot and Fifth~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D3
+(none)~
+(null)~
+0 -1 10045
+M 0 H 100
+S
+#10047
+Delaney St. at the Police Station~
+Delaney is a relatively busy street at this point, partially because ofthe fairly constant traffic in and out of the police station to the north. The holding cells are constantly being restocked and reshuffled as suspectsare moved around and out to gaol or to court.  ~
+0 0 11
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 0 3000
+D1
+(none)~
+(null)~
+0 0 10414
+D2
+(none)~
+(null)~
+0 0 10800
+D3
+(none)~
+(null)~
+0 0 10010
+M 0 H 100
+S
+#10048
+Coleman Street (East/West)~
+Only a short walk from the heart of the city, this part of Coleman
+Street has suffered the same fate, falling into disrepair and neglect.
+A once thriving streetside specialty shopping district has been bypassed
+by both urban renewal elsewhere in the city and giant shopping malls.
+Boards, chain-mesh or metal bars cover the windows of the small boutique
+shops and the once proud signs overhead are now peeling or sprayed over
+with tags and other graffiti. There is a great sense of emptiness and
+transience.
+~
+0 0 1
+E
+XNUMB1~
+Coleman Street~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+0 0 10070
+D3
+(none)~
+(null)~
+0 0 10000
+M 0 H 100
+S
+#10049
+Coleman Street (East/West)~
+Slowly retail is reclaiming this part of Coleman Street under the shadow
+of a huge shopping mall.  Restoration of the small shops and cafe's are
+in progress, however there is still much work to be done.  Cafe's spill
+out onto the sidewalk and there are clean, new windows displaying the
+boutiques wares yet boarded up shops are still more numerous than the
+new renovations. About midway along the street the bitumen gives way to
+brick red and slate colored cobblestones that lead up to the shiny new
+shopping mall and its large parking lot.
+~
+0 0 1
+E
+XNUMB1~
+Coleman Street~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+0 0 10050
+D3
+(none)~
+(null)~
+0 0 12577
+M 0 H 100
+S
+#10050
+The Entrance to the Coleman Street Mall~
+Here the brick red and slate colored cobblestones have been laid out
+inlarge, symmetrical swirls centered around a small water feature.  A
+bright,neon sign proclaims this place to be "Coleman Street Mall" in
+hugeletters over the sliding glass door entrance.  The building itself is a
+tancolor with bold green lines around the edges.  Potted palms, public
+phonebooths and benches line the side of the entrance, and though a good
+efforthas been made to keep this area clean from rubbish and street art
+these arestill tagged and only a few of the phones actually work.  There is
+alsoa large backlit sign listing all the stores that are in the building.  
+~
+0 0 1
+E
+XNUMB1~
+The Entrance to the Coleman Street Mall~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+E
+sign~
+----------------------------------------------------------|                {WThe Coleman Street Mall{x                  ||                                                         ||             {co {WSavage's Menswear{x                         ||             {co {WToyland{x                                   ||             {co {WThat's Not a Knife!{x                       ||             {co {WKaties{x                                    ||             {co {WThe Sellular Connection{x                   ||             {co {WThe Food Court{x                            ||             {co {WSa' Yat Footwear{x                          ||             {co {WRPG Cinemas{x                               ||             {co {WYe Olde Storage Shoppe'{x                   ||             {co {WWhere, Where, Underwear?{x                  |-----------------------------------------------------------~
+D0
+(none)~
+(null)~
+0 0 4001
+D1
+(none)~
+(null)~
+0 0 4023
+D3
+(none)~
+(null)~
+0 0 10049
+M 0 H 100
+S
+#10051
+Lincoln Avenue~
+Busy Lincoln Ave roars with the traffic flying past.  The street itself
+is relatively well-kept, but less can be said for the fairly industrial area
+bordering it.  Many of the buildings are monoliths of the previous economic
+high times when jobs were plentiful and life was good for most sectors of
+the community.  The area has long since fallen into some serious disrepair. 
+~
+0 0 1
+E
+XNUMB1~
+Licoln Avenue~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+A 0 10200
+D1
+(none)~
+(null)~
+0 0 10052
+D3
+(none)~
+(null)~
+0 0 10026
+M 0 H 100
+S
+#10052
+Lincoln Avenue~
+Busy Lincoln Ave roars with the traffic flying past.  The street itselfis relatively well-kept, but less can be said for the fairly industrial areabordering it.  Many of the buildings are monoliths of the previous economichigh times when jobs were plentiful and life was good for most sectors ofthe community.  The area has long since fallen into some serious disrepair. To the south it appears someone has converted one of the old industrialbuildings into some sort of nightclub.  ~
+0 0 0
+E
+XNUMB1~
+Licoln Avenue~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+0 0 12576
+D2
+(none)~
+(null)~
+A 0 4501
+D3
+(none)~
+(null)~
+0 0 10051
+M 0 H 100
+S
+#10053
+Lincoln Ave~
+The industrial section of Lincoln gives way to the startings of a moredowntown area here and on to the east.  The buildings at this point arestill industrial looking, but are beginning to look more like store housesfor small shops than small factories and real warehouses.  ~
+0 0 1
+E
+XNUMB1~
+Licoln Avenue~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+0 0 10054
+D3
+(none)~
+(null)~
+0 0 12576
+M 0 H 100
+S
+#10054
+Lincoln Ave~
+As Lincoln approaches Broadway to the east the atmosphere andarchitechture changes, becoming less industrial as it is to the west andmore of a downtown area.  To look east and west is somewhat like comparingnight and day, although neither is particularly run down or abused.  ~
+0 0 1
+E
+XNUMB1~
+Licoln Avenue~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+0 0 10055
+D3
+(none)~
+(null)~
+0 0 10053
+M 0 H 100
+S
+#10055
+The Corner of Lincoln Ave and Broadway~
+Lincoln's busy lanes, which continue east and west, are intersected hereby another busy thoroughfare.  Broadway appears somewhat less than aptlynamed from here with its two relatively narrow, but busy, lanes.  It seemsas if some of the businesses from elsewhere have moved to make a fairly niceshopping district however.  ~
+0 4 1
+E
+XNUMB1~
+The Corner of Lincoln Ave and Broadway~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 0 7038
+D1
+(none)~
+(null)~
+0 0 7048
+D3
+(none)~
+(null)~
+0 0 10054
+M 0 H 100
+S
+#10070
+Coleman Street (East/West)~
+Amidst the decrepit remains of the once prosperous district an oasis
+rises, drawing its design on classical greek architecture.  One of the
+old buildings from the turn of the century has been painstakingly
+restored, with a small plaza opening leading up to the main structure
+itself. Comparitively, the buildings on either side look as though they
+are pending demolition which only serve to enhance the elegance of the
+restored building.  The building is a reminder of what this area once
+must have been like in its more prosperous times.
+~
+0 0 11
+E
+XNUMB1~
+Coleman Street~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 0 12201
+D1
+(none)~
+(null)~
+0 0 12577
+D3
+(none)~
+(null)~
+0 0 10048
+M 0 H 100
+S
+#10071
+A Hidden Garden~
+Sheltered under the wide blanket of the weeping willow rests a smallgarden.  There is a wrought iron bench near the trunk of the massive treewhere one may sit and view the peaceful arrangement.  The plants arearranged in strict adhearance to the style dictated by formal Japanesegardens.  Most of the plants are a wide variety from the moss family thatdisplay their lacy {Gg{gre{Gen{g foliage as they crawl over one of the fiverocks resting here.  Around the five rocks there are night flowering plantswith small, pale, moonkissed petals and round or heart-shaped leaves.  Offto one side a bonzai maple proudly displays its colorful leaves and artfullybound branches.  A small patch of sun will spotlight this piece of thegarden intermitantly through the day as someone has carefully trimmed thewillow's canopy to direct the light onto it and at night it will filter thesoft, moonlight in a similar fashion.  Whoever takes care of this secluded,secret garden has put much love and effort into its creation.  {x ~
+0 12 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+M 0 10014
+M 0 H 100
+S
+#10100
+Delany Avenue~
+Delany Avenue is a filthy street, with graffiti and litter common.  Thesidewalk is dirty and the street damaged by potholes and poorly filledpotholes.  It is this sort of area that makes people walk a little fasterthan normal.  ~
+0 0 1
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+0 0 10022
+D3
+(none)~
+(null)~
+0 0 10101
+M 0 H 100
+S
+#10101
+Delany Avenue~
+Delany Avenue is a filthy street where it's hard to find a wall thathasn't been tagged by someone or another.  Discarded fastfood wrappers andother garbage blows about with the wind or sits there, laughing at thegarbage men who hurry through the neighborhood.  The streets here look likethey haven't been repaved in years and it shows.  ~
+0 0 1
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+0 0 10100
+D3
+(none)~
+(null)~
+0 0 10102
+M 0 H 100
+S
+#10102
+Delany Avenue~
+Delany Avenue is in one of the less affluent neighborhoods.  It's hard tofind people who live here but it's just as hard to find people who've movedout.  It's the kind of neighborhood where people never leave.  The streethas piles of garbage out on the curb and the streets themselves have seenfar better days, with numerous potholes dotting them.  ~
+0 0 1
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+0 0 10101
+D3
+(none)~
+(null)~
+0 0 10103
+M 0 H 100
+S
+#10103
+Delany Avenue~
+Delany Avenue is one of those places where good people just don't gooften.  It's here that people scare their children with and to the north, isone of those places.  It's an old tenement building and the looks like itshould be torn down.  Still, from the faint sounds, people appear to livethere.  ~
+0 0 1
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 0 5001
+D1
+(none)~
+(null)~
+0 0 10102
+M 0 H 100
+S
+#10200
+Lincoln Studio Apartments on the First Floor~
+Upon entering the apartment complex a sudden silence is so strong that itcan almost be felt.  A long line of PO Boxes fill the western wall, and apair of elevator doors stare back into the lobby with a blank expressionfrom the north.  The hallway continues east while the main exit is to thesouth.  <ooc> 'press button' to call the elevator, and 'enter elevator' togo inside.  ~
+0 1036 0
+V
+10415 0
+E
+XNUMB1~
+Licoln Studio Apartments on the First Floor~
+E
+XDUMB1~
+<ooc> 'press button' to call the elevator, and 'enter elevator' to goinside ~
+E
+XNDREAM~
+Licoln Studio Apartments on the First Floor~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+0 0 12701
+D2
+(none)~
+(null)~
+A 0 10051
+M 0 H 100
+S
+#0
+
+
+
+#RESETS
+D 0 10417 2 3
+D 0 10011 5 135431
+M 1 5 48 10000 1
+E 0 10000 0 17
+O 0 10004 0 10000
+O 0 10002 0 10000
+M 1 10001 1 10000 1
+M 1 10003 1 10000 1
+E 0 10101 0 17
+M 1 5 48 10002 1
+M 1 5 48 10004 1
+M 1 5 48 10007 1
+M 1 5 48 10009 1
+M 1 5 48 10014 1
+M 1 10000 10 10014 0
+M 1 5 48 10016 1
+M 1 5 48 10017 1
+M 1 5 48 10019 1
+M 1 5 48 10021 1
+M 1 5 48 10022 1
+M 1 5 48 10024 1
+M 1 5 48 10026 1
+M 1 5 48 10028 1
+M 1 5 48 10030 1
+M 1 5 48 10032 1
+M 1 5 48 10034 1
+M 1 10000 10 10036 0
+M 1 5 48 10038 1
+M 1 5 48 10040 1
+M 1 10000 10 10040 0
+M 1 5 48 10042 1
+M 1 5 48 10044 1
+M 1 5 48 10046 1
+M 1 5 48 10052 1
+M 1 5 48 10054 1
+M 1 10002 2 10103 2
+E 0 10100 0 17
+S
+
+
+
+#SHOPS
+10001 28 0 0 0 0 100 100 0 24 0
+0
+
+
+
+#MOBPROGS
+#10000
+say If you need some assistance, I might be able to help you.
+~
+#10001
+say They are all but gone.  I have not seen any of them in a very long time.
+~
+#10002
+say So, you want to know about the creatures of the night huh?
+say Check the downtown areas.  They used to have a place up north, but I'm not sure if it is there anymore.
+~
+#10003
+say Not many of her warriors are left anymore.  Good luck finding one.
+~
+#10004
+say Well, like any youngster, you might want to head to the Mall.
+say It's as good as any place to start.
+~
+#10005
+say Extra, extra, read all about!
+say Get your paper's here.
+~
+#0
+
+#$

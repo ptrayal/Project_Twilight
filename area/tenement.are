@@ -1,0 +1,426 @@
+#AREADATA
+Name Tenement Housing~
+Builders Rayal~
+VNUMs 5001 5020
+Credits Rayal~
+Security 1
+Flags E
+Price 0
+End
+
+
+
+#MOBILES
+#5001
+dirty squatter bum $f $l~
+$f the squatter~
+$f, the bum and squatter, is a shell of a human.
+~
+A bum crouches here, looking like a shell of a human being.
+~
+human~
+A 0 3 0 0 0 pound
+C 0 0 0
+10 10 1 2
+AHMV ABCDEFGHIJK medium flesh
+A 0
+I 0
+#5002
+rat~
+The rat~
+A rat scurrys about scavengeing for food
+~
+A small brown rat scurrys about the area.
+~
+human~
+AC 0 1 0 0 0 peck
+C 0 0 0
+10 10 0 1
+AGHMV ABCDEFGHIJK small flesh
+A 0
+I 0
+#5003
+drunk begger $f $l~
+$f the begger~
+Here stands $f, extremely drunk and spoiling for a fight.
+~
+An extremely drunk beggar stands here, looking for a fight.
+~
+human~
+A 0 3 0 0 0 crush
+0 0 0 0
+10 10 1 0
+AHMV ABCDEFGHIJK medium flesh
+A 0
+I 0
+#0
+
+
+
+#OBJECTS
+#5001
+old desk~
+an old desk~
+This old desk is an ancient reminder of what this building used to be. 
+Now, like the building it represents, it is damaged and abused beyond
+recoginition and simply needs to be destroyed.  
+~
+This old desk is an ancient reminder of what this building used
+to be.  Now, like the building it represents, it is damaged and
+abused beyond recoginition and simply needs to be destroyed.~
+wood~
+12 O 0
+0 0 0 0 0 0
+0 0 84
+E
+--USES~
+-2~
+Q 0
+#5003
+empty whiskey bottle~
+an empty whiskey bottle~
+A bottle of whiskey, now empty lies here on the floor.  
+~
+A bottle of whiskey, now empty lies here on the floor.~
+glass~
+5 0 AN
+0 5 2 shbite 0 0
+0 0 100
+E
+--USES~
+-2~
+Q 0
+#5004
+worn sneakers~
+worn sneakers~
+A pair of old sneakers, with very little sole left on them is here.  
+~
+A pair of old sneakers, with very little sole left on them is here.~
+silicon~
+11 0 AG
+0 0 0 0 0
+0
+1 10 100
+E
+--USES~
+-2~
+Q 0
+#0
+
+
+
+#ROOMS
+#5001
+Dark Alley~
+This darkened alley differs from the streets you were just on.  It is no
+longer free of debris or garbage and a foul smell seems to be coming from
+the north.  
+~
+0 4 1
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 0 5002
+D2
+(none)~
+(null)~
+0 0 10103
+M 0 H 100
+S
+#5002
+Before the Abandoned Complex~
+Directly to the north, there is an old, abandoned building.  By the looks
+of it, it has not seen serious use in a very long time.  Boards cover up
+several of the windows and there is a sign hanging above the doorway.  
+~
+0 0 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 0 5003
+D2
+(none)~
+(null)~
+0 0 5001
+M 0 H 100
+S
+#5003
+The Shattered Doorway~
+The front doorway looks to have been kicked in.  A rank smell flows from
+inside of the buildings out, making this place not as unpleasant as it very
+well could be.  The sounds of mice and other vermin scurrying about seems to
+surround you.  Gang-related graffiti cover the walls and entrance way.  
+~
+0 0 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 0 5004
+D1
+(none)~
+(null)~
+AB 0 5005
+D2
+(none)~
+(null)~
+0 0 5002
+D3
+(none)~
+(null)~
+A 0 5006
+M 0 H 100
+S
+#5004
+Inside the Abandoned Building~
+Standing inside of the building, it is apparent that has not been
+completely abandoned.  Discarded food wrappers and other less desirable
+things litter the floor.  The hallway continues to the north and south.  
+~
+0 0 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 0 5007
+D1
+(none)~
+(null)~
+0 0 5008
+D2
+(none)~
+(null)~
+0 0 5003
+M 0 H 100
+S
+#5005
+Landlords Apartment~
+This apartment at one time must have been the landlord's apartment, but
+now serves as the home for one or more squatters.  An old desk rests against
+the eastern wall.  
+~
+0 0 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D3
+(none)~
+(null)~
+AB 0 5003
+M 0 H 100
+S
+#5006
+An Old Wrecked Apartment~
+The walls in this apartment are cracked and peeling and trash is
+everywhere.  The smell is enough to turn stomaches.  A haze of smoke and who
+knows what else hovers around the ceiling.  
+~
+0 0 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+A 0 5003
+M 0 H 100
+S
+#5007
+Damp Hallway~
+This hallway is damp and cold, with many cobwebs hanging from the
+ceiling.  A draft coming from a crack in the wall makes this hallway cold,
+damp and windy.  The crack in the wall is surrounded by pink and green
+mildew.  
+~
+0 0 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D2
+(none)~
+(null)~
+0 0 5004
+D3
+(none)~
+(null)~
+0 0 5009
+M 0 H 100
+S
+#5008
+Hallway~
+This hallway ends as a dead end.  Looking forward, there appears to be
+the remains of some sort of vending machine.  Now, all that remains are the
+stains of cigarettes.  
+~
+0 0 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D3
+(none)~
+(null)~
+0 0 5004
+M 0 H 100
+S
+#5009
+Hallway~
+As you travel down the hallway you notice a completely rancid smell
+emitting from the south.  Scuttling and other small footsteps can be heard
+from all around.  
+~
+0 0 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+0 0 5007
+D2
+(none)~
+(null)~
+A 0 5010
+M 0 H 100
+S
+#5010
+Bathroom~
+As you open the door the cause of the smell is obvious.  The sink has
+been knocked off the wall and is laying on the floor below where it once had
+hug on the wall.  Rats and other vermin scurry about.  
+~
+0 0 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+A 0 5009
+M 0 H 100
+S
+#0
+
+
+
+#RESETS
+D 0 5003 1 3
+D 0 5005 3 3
+M 1 5003 1 5005 1
+E 0 5003 0 16
+O 0 5001 0 5005
+E 0 5004 0 9
+M 1 5001 5 5006 1
+M 1 5002 10 5010 2
+S
+
+
+
+#SHOPS
+0
+
+
+
+#MOBPROGS
+#0
+
+#$

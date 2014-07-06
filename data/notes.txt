@@ -1,0 +1,264 @@
+Sender  Rayal~
+Date    Fri Jan 20 13:22:30 2012~
+Stamp   1327090950
+To      all~
+Subject Code~
+Success 1~
+Text
+Hello everyone:
+  Took some serious steps today towards stablizing the code.  Found a
+serious bug which I'm in the process of tracking down and smashing.
+
+Some other things got fixed this week, though it was a slow week.  Most
+of what I've done has been backend stuff to prop up the code and make it
+more reliable and cleaner.
+
+The things which would be noticable is Character Creation is slowly
+getting reworked, hunting will be done soon (probably), and the polling
+system is gone.  Next week, assuming I can squash this bug and have
+time, I'll finish one of them and then start moving on. I'm in the
+process of squashing bugs and slowly doing new features.
+ 
+Rayal
+~
+Sender  Rayal~
+Date    Mon Jan 23 13:35:26 2012~
+Stamp   1327350926
+To      all~
+Subject Bug Hunt is on!~
+Success 1~
+Text
+Hello:
+  I will award five XP per bug or faulty command reported.  Please
+detail what the problem is and how you duplicated it.
+ 
+Rayal
+~
+Sender  Rayal~
+Date    Wed Jan 25 10:10:24 2012~
+Stamp   1327511424
+To      all~
+Subject Updates~
+Success 1~
+Text
+For those who want to keep track of what is being done, check out the
+web site at this location:
+http://www.brandonsplace.net/projecttwilight/index.php?title=Update_Page
+ 
+Rayal
+~
+Sender  Rayal~
+Date    Wed Jan 25 12:27:14 2012~
+Stamp   1327519634
+To      adam~
+Subject Advanced Powers~
+Success 1~
+Text
+Adam:
+  OK, I can definitely do advanced powers and combo disciplines.  I
+haven't created any yet, but I now have the capacity to.  Once I am sure
+the existing disciplines are working the way they should and bug free
+(see the updates page for the bugs I keep finding), I'll move on to
+creating new disciplines.  Of course, I'll then need to create the cost
+for them, but that will come.
+ 
+Rayal
+~
+Sender  Rayal~
+Date    Thu Feb  2 11:21:12 2012~
+Stamp   1328206872
+To      All~
+Subject State of the Mud~
+Success 1~
+Text
+Hello
+
+As I posted on the web site, there is a serious rewrite of code taking
+place.  This rewrite is necessary, as the code is otherwise very
+unstable.  This port is being left up to play on and use, but I have
+another port where the major changes are being tested and implemented.
+When I push the new code over here, it will bring stability to the mud
+like we have never had before, in addition to squashing an untold number
+of bugs.
+
+It will, however, take in all likely-hood, till the middle of February
+to get to that point.  We are talking about rewriting a large amount of
+code and getting things stable.
+ 
+If anyone has any questions, please let me know.
+ 
+Rayal
+~
+Sender  Rayal~
+Date    Thu Feb  9 14:01:09 2012~
+Stamp   1328821269
+To      all~
+Subject Status~
+Success 1~
+Text
+Hello again:
+  It's been a week or so since I made an update.  The development port
+to address memory issues is coming along much better than I would have
+hoped.  It has revealed a number of other issues along the way, which
+have been being dealt with.  It's been pretty intense, but has made the
+MUD much stabler (even though it is not up yet).  I actually hope to be
+able to port over the new stable version of the code next week to here
+and have a new stable mud to play on.  There are still plenty of other
+things to work on concerning stability after that, but then we will have
+the most up to date code running over here for people to try and break.
+
+{WThat's this update, if you have any questions, please ask.{x
+
+Rayal
+~
+Sender  Adam~
+Date    Mon Feb 20 18:23:26 2012~
+Stamp   1329787406
+To      rayal~
+Subject What's up?~
+Success 1~
+Text
+So what's going on with the Mud?
+~
+Sender  Rayal~
+Date    Tue Feb 21 06:54:34 2012~
+Stamp   1329832474
+To      adam~
+Subject Re: What's up?~
+Success 1~
+Text
+Hey Adam:
+  It's still being worked on.  There was some downtime last week because
+of a server issue.  Then, I've been sick the past few days, so just
+haven't been on.  I'm still working on stability issues but am very
+close to releasing the more stable code.
+
+That being said, then I'll be able to begin really working on things
+that need to be worked on.  In the course of this work on stability
+issues, I've discovered a number of bugs all over the code that I am
+busy working on as well, in addition to trying to rework the combat
+code.  Unfortunately, I'm not able to do a whole lot till I get the
+code's memory issues fixed because I don't want to introduce new
+features (and thus maybe new bugs) till the existing issues are
+resolved.
+ 
+So, that's where things are right now.
+ 
+Rayal
+~
+Sender  Rayal~
+Date    Tue Feb 21 15:33:25 2012~
+Stamp   1329863605
+To      Adam~
+Subject Mud Status~
+Success 1~
+Text
+Hey, just another update before I head home.
+
+Made some awesome progress today concerning stability.  I actually
+really hope to have the new stable code pushed to production by the end
+of the week.  I found a number of bugs concerning the memory today and
+squashed them with a big shoe.    It's revealed how buggy parts of the
+code are and how they are going to be rewritten.
+
+First though, there getting the code stable, then comes a whole bunch of
+bug fixes. Then, after that, I think you'll see some pretty cool
+features coming (yes, your advanced disciplines among them).
+ 
+Rayal
+~
+Sender  Rayal~
+Date    Thu Feb 23 13:08:04 2012~
+Stamp   1330027684
+To      all~
+Subject Mall~
+Success 1~
+Text
+Hello:
+  Most of the mall, from the Food court west, as gotten a remodelling
+job. Seems the new mall management did not like the the food court area
+and got rid of the people selling bad food and brought in some new
+people to sell food.
+ 
+  Mall ownership says the rest of the Mall will be remodelled soon.
+ 
+Rayal
+~
+Sender  Rayal~
+Date    Sat Feb 25 09:57:37 2012~
+Stamp   1330189057
+To      all~
+Subject C to C++ conversion~
+Success 1~
+Text
+Hello agin,
+  Well, we have begun moving from C to C++.  This is because of the huge
+memory errors we are experiencing and will allow us to handle things in
+much more efficient manner.  It does mean, pushing it to production is
+delayed, but that cannot be helped.
+ 
+More to come as it continues to be worked on.
+ 
+Rayal
+~
+Sender  Rayal~
+Date    Fri Mar  2 07:25:54 2012~
+Stamp   1330698354
+To      cyrus~
+Subject Keep Missing You~
+Success 1~
+Text
+Hi Cyrus,
+  I see you keep stopping by and I'm sorry I'm never on when you are.
+ 
+Rayal
+~
+Sender  Rayal~
+Date    Fri Mar  9 08:37:19 2012~
+Stamp   1331307439
+To      all~
+Subject Latest Update~
+Success 1~
+Text
+Hello everyone:
+  This update I bring you very good news.  The dev code is almost ready
+for release.  It will be a much stabler, friendly code, though still
+with it's bugs.
+
+To give you an idea of how much work has been done.  The version
+currently running is 1.1.1.32, the development version is 1.1.1.526.
+Which means, I really need to make it 1.1.5.26. It is astounding how
+much work has been done to make PT more stable.  Now, when we release
+it, I am sure there will be many more bugs you will be able to find for
+me, and that is what I am hoping for. As you find them, I'll be able to
+fix them quickly and without bringing the place crashing down.
+ 
+Rayal
+~
+Sender  Rayal~
+Date    Mon Mar 12 14:27:09 2012~
+Stamp   1331587629
+To      all~
+Subject Availability~
+Success 1~
+Text
+Hey All:
+  I'm on most of the week between 8am and 5pm CST (-6GMT).
+Rayal
+~
+Sender  Rayal~
+Date    Tue Mar 13 09:56:17 2012~
+Stamp   1331657777
+To      all~
+Subject More Area Cleanup~
+Success 1~
+Text
+Hello everyone:
+  There was more area cleanup done.  Basically, I removed areas which
+are not ever going to be finished in all likelyhood.  I also did some
+backend work on renaming areas to some sort of standard and then
+cleaning up the directory.  Prep work for greater things.
+ 
+Rayal
+ 
+~

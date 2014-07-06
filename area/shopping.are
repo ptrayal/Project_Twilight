@@ -1,0 +1,2338 @@
+#AREADATA
+Name Shopping Mall~
+Builders Dsarky Rayal~
+VNUMs 4001 4080
+Credits Dsarky~
+Security 1
+Flags D
+Price 0
+End
+
+
+
+#MOBILES
+#4001
+$f $l savage's salesman~
+$f~
+A young salesman whose badge declares him as $f $l smiles at you.
+~
+A young salesman stands here, with the name $f on his badge.  
+~
+human~
+AB 0 50 0 0 0 none
+0 0 0 0
+10 10 1 200
+AHMV ABCDEFGHIJK medium flesh
+A G
+I 0
+Tr 0 has arrived~ emote The salesman says "Let me know if I can do anything for you."~
+Tr 0 **base**~ **base**~
+#4002
+salesman senior $f $l~
+$f~
+A senior sales assistant whose badge declares him to be "$f $l" smiles at you.
+~
+A tall, grey haired man shuffles ties and other accessories on shelves
+and racks, making everything neat and tidy.  
+~
+human~
+AB 0 50 0 0 0 none
+0 0 0 0
+10 10 0 200
+AHMV ABCDEFGHIJK medium flesh
+A G
+I 0
+Tr 0 has arrived~ emote says, 'Care to try on anything today?' ~
+Tr 0 **base**~ **base**~
+#4003
+$f $l~
+$f~
+$f $l smiles and plays with some of the toys.
+~
+Smiling happily, $f goes about the store, happily swinging slinkies,
+shuffling cards and throwing gliders about the shop.  
+~
+human~
+AB 0 50 0 0 0 none
+0 0 0 0
+10 10 3 200
+AHMV ABCDEFGHIJK medium flesh
+A G
+I 0
+Tr 0 has arrived~ emote The salesperson says "Can I interest you in anything today?"~
+Tr 0 **base**~ **base**~
+#4004
+$f $l knife guy~
+$f $l~
+$f $l the knife guy enthusiastically sorts his blades.
+~
+A slightly overweight man sits on a stool behind the counter,
+periodically examining a blade closely.  
+~
+human~
+AB 0 50 0 0 0 none
+0 0 0 0
+10 10 1 500
+AHMV ABCDEFGHIJK medium flesh
+A G
+I 0
+Tr 0 has arrived~ emote The salesman says "Welcome.  Now you just let me know when you see something you like."~
+Tr 0 **base**~ **base**~
+#4005
+$f $l assistant shop~
+$f $l~
+$f $l assists shoppers with a wide, open smile.
+~
+Neatly dressed, this smiling assistant helps her customers to find
+appropriately matching outfits in just the right size and style.  
+~
+human~
+AB 0 50 0 0 0 none
+0 0 0 0
+10 10 2 300
+AHMV ABCDEFGHIJK medium flesh
+A G
+I 0
+M GREET 4001 100~
+#4006
+$f~
+$f~
+$f sits here behind a glass counter playing a game on his cell phone.
+~
+A thin and dorky looking man sits here behind a glass counter playing a
+game on his cell phone.  He wears the classical thick bottle glasses with
+tape holding them together in the middle, a white shirt with blue pin
+stripes running side to side, and a pair of brown corduroy pants.  
+~
+human~
+ABC 0 50 0 0 0 none
+0 0 0 0
+10 10 1 12
+AHMV ABCDEFGHIJK medium flesh
+A G
+I 0
+M GREET 4002 100~
+#4007
+$f~
+$f~
+$f stands behind a glass counter trying to sell stale pastries.
+~
+This young man looks to be all about 15, and doesn't seem to interested
+in working on making fresh food for the counter.  Wearing a white button-up
+dress shirt with a black bow-tie, and a pair of black slacks he stands here
+trying to look older than he really is.  His facial hair, or lack thereof,
+tells it all though.  
+~
+human~
+ABC 0 25 0 0 0 none
+0 0 0 0
+10 10 1 12
+AHMV ABCDEFGHIJK medium flesh
+A 0
+I 0
+#4008
+John Smith~
+John Smith~
+John Smith stands behind a small cart trying to sell burned food.
+~
+Witness Protection Program of the US Gov't.  That's what John's otherwise
+plain white tee-shirt says.  Sporting his long brown hair and long brown and
+grey mustache and beard it could be that he is in some form of hiding
+-that's when you notice the over cooked food.  
+~
+human~
+ABC 0 25 0 0 0 none
+0 0 0 0
+10 10 1 12
+AHMV ABCDEFGHIJK medium flesh
+A G
+I 0
+#4009
+$f~
+$f~
+A man stands here, looking at you somewhat bored.  His badge reads $f.
+~
+A man stands here, looking at you somewhat bored.  His badge reads $f.  
+~
+human~
+ABC 0 25 0 0 0 none
+0 0 0 0
+10 10 1 12
+AHMV ABCDEFGHIJK medium flesh
+A G
+I 0
+M GREET 4009 100~
+#4010
+$f~
+$f~
+$f stands behind a large stack of shoe boxes.
+~
+$f stands behind a large stack of old shoe boxes waiting for someone to
+buy something, or perhaps he's just waiting to close the store for the day
+and go home?  
+~
+human~
+ABC 0 25 0 0 0 none
+0 0 0 0
+10 10 1 12
+AHMV ABCDEFGHIJK medium flesh
+A G
+I 0
+Tr 0 has arrived~ emote The salesman bellows out 'Hey Champ!  You look like you could use some new shoes!'~
+Tr 0 **base**~ **base**~
+#4011
+$f~
+$f~
+$f stands behind a thick glass wall selling tickets to the next movie.
+~
+Standing about five foot, seven inches to five foot, nine inches with
+long blond hair that reaches down to her back she seems to be almost a
+Barbie Doll replica.  
+~
+human~
+ABC 0 25 0 0 0 none
+0 0 0 0
+10 10 2 12
+AHMV ABCDEFGHIJK medium flesh
+A G
+I 0
+Tr 0 has arrived.~ close southlock southemote says, 'Ya gotta buy a ticket to go in okay?'~
+Tr 0 leaves west.~ close southlock south~
+Tr 0 leaves south.~ close southlock south~
+Tr 0 buys a movie ticket.~ unlock southemote says, 'Okay, thanks.  Enjoy your show.'open south~
+Tr 0 **base**~ **base**~
+#4012
+$f~
+$f~
+$f stands impatiently behind a small counter.
+~
+Dressed up in a cowboy outfit, this almost cynical looking young man is
+actually trying to sell old popcorn and flat soda.  
+~
+human~
+ABC 0 25 0 0 0 none
+0 0 0 0
+10 10 1 12
+AHMV ABCDEFGHIJK medium flesh
+A G
+I 0
+Tr 0 has arrived~ emote asks, "Would you like to try our combo today?"~
+Tr 0 **base**~ **base**~
+#4013
+$f~
+$f~
+$f stands behind a large stack of storage containers.
+~
+This old womand slowly shuffles about the stored with a weathered face
+and hands.  
+~
+human~
+ABC 0 75 0 0 0 none
+0 0 0 0
+10 10 2 12
+AHMV ABCDEFGHIJK medium flesh
+A G
+I 0
+#4014
+$f~
+$f~
+$f stands here modeling for customers.
+~
+Standing a short five foot two inches, and wearing nothing more than the
+average runway model, $f shows off her almost skeletal figure and
+plastic-enhanced chest.  
+~
+human~
+ABCYc 0 50 0 0 0 none
+0 0 0 0
+10 10 2 250
+AHMV ABCDEFGHIJK large flesh
+A G
+I 0
+Tr 0 has arrived.~ emote smiles flirtaciously and says, 'Hey hun, if you see something you like be sure to let me know!'~
+#0
+
+
+
+#OBJECTS
+#4001
+business shirt~
+a clean cut business shirt~
+A clean cut business shirt is here.~
+A clean cut business shirt was left here.  It looks very comfortable.~
+cotton~
+11 N AD
+0 0 0 0 0
+0
+5 1500 100
+E
+--TUNONE~
+you glance at the tag on the back of a clean cut business shirt.~
+E
+--TUSELF~
+you hold a clean cut business shirt up against your torso to see how well it fits.~
+E
+--TUOTH~
+you hold a clean cut business shirt up against $N's torso to see how well it fits.~
+E
+--TRNONE~
+$n glances at the tag on the back of a clean cut business shirt.~
+E
+--TRSELF~
+$n holds a clean cut business shirt up against their torso to see how well it fits.~
+E
+--TROTH~
+$n holds a clean cut business shirt up against $N to see how well it fits.~
+E
+--TVOTH~
+$n holds a clean cut business shirt up against you to see how well it fits.~
+E
+--USES~
+-1~
+Q 0
+#4002
+blue denim jeans~
+a pair of blue denim jeans~
+A pair of long A pair of blue denim jeans was left here.~
+This is a test
+~
+cotton~
+11 N AF
+0 0 0 0 0
+0
+10 8000 100
+E
+--TUNONE~
+you glance at the tag on the inside of a pair of blue denim jeans.~
+E
+--TUSELF~
+you hold a pair of blue denim jeans up to your waist to see how well it fits.~
+E
+--TUOTH~
+you hold a pair of blue denim jeans up to $N's waist to see how well it fits.~
+E
+--TRNONE~
+$n glances at the tag on the back of a pair of blue denim jeans.~
+E
+--TRSELF~
+$n holds a pair of blue denim jeans up to their waist to see how well it fits.~
+E
+--TROTH~
+$n holds a pair of blue denim jeans up to $N's waist to see how well it fits.~
+E
+--TVOTH~
+$n holds a pair of blue denim jeans against your waist to see how well it fits.~
+E
+--USES~
+-1~
+Q 0
+#4003
+polo shirt~
+a polo shirt~
+A polo shirt was left here.~
+(null)~
+polyester~
+11 N AD
+0 0 0 0 0
+0
+5 1000 100
+E
+--TUNONE~
+you glance at the tag on the back of a polo shirt.~
+E
+--TUSELF~
+you hold a polo shirt up to your torso to see how well it fits.~
+E
+--TUOTH~
+you hold a polo shirt up against $N's torso to see how well it fits.~
+E
+--TRNONE~
+$n glances at the tag on the back of a polo shirt.~
+E
+--TRSELF~
+$n holds a polo shirt up against their torso to see how well it fits.~
+E
+--TROTH~
+$n holds a polo shirt up against $N's torso to see how well it fits.~
+E
+--TVOTH~
+$n holds a polo shirt up against your torso to see how well it fits.~
+E
+--USES~
+-1~
+Q 0
+#4004
+jacket leather~
+a black leather jacket~
+A black leather jacket was left here.~
+(null)~
+leather~
+11 N AK
+0 0 0 0 0
+0
+20 20000 100
+E
+--USES~
+-2~
+Q 0
+#4005
+trousers~
+a pair of trousers~
+A pair of wool trousers was left here.~
+(null)~
+wool~
+11 N AF
+0 0 0 0 0
+0
+7 12000 100
+E
+--USES~
+-2~
+Q 0
+#4006
+dress shoes~
+a pair of black dress shoes~
+A pair of black leather dress shoes was left here.~
+(null)~
+leather~
+11 N AG
+0 0 0 0 0
+0
+8 8000 100
+E
+--USES~
+-2~
+Q 0
+#4007
+tie~
+a tie~
+A silk tie was left here.~
+(null)~
+silk~
+11 N AC
+0 0 0 0 0
+0
+2 3000 100
+E
+--USES~
+-2~
+Q 0
+#4008
+belt leather~
+a leather belt~
+A leather belt was left here.~
+(null)~
+leather~
+11 N AL
+0 0 0 0 0
+0
+3 1500 100
+E
+--USES~
+-2~
+Q 0
+#4009
+fedora hat~
+a fedora~
+A felt fedora was left here.~
+(null)~
+felt~
+11 N AE
+0 0 0 0 0
+0
+3 5000 100
+E
+--USES~
+-2~
+Q 0
+#4010
+cap baseball~
+a baseball cap~
+A baseball cap was left here.~
+[ooc: use cap]~
+cotton~
+11 N AE
+0 0 0 0 0
+0
+3 2200 100
+E
+--TUNONE~
+you mess with a baseball cap as if deep in thought.~
+E
+--TUSELF~
+you adjust a baseball cap on your head to make it more comfortable.~
+E
+--TUOTH~
+you tip a baseball cap gallantly in $N's direction.~
+E
+--TRNONE~
+$n messes with a baseball cap as if deep in thought.~
+E
+--TRSELF~
+$n adjusts a baseball cap on their head.~
+E
+--TROTH~
+$n tips a baseball cap in $N's direction.~
+E
+--TVOTH~
+$n tips a baseball cap gallantly in your direction.~
+E
+--USES~
+-1~
+Q 0
+#4011
+torch flashlight keychain~
+a keychain with a torch attached~
+A keychain with a torch attached to it lies here.~
+[ooc: use keychain]~
+plastic~
+1 N AO
+0 0 100 0 0 0
+4 500 100
+E
+--TUNONE~
+you turn a keychain light on and off as if bored.~
+E
+--TUSELF~
+you shine a keychain light in your face ... stupid!~
+E
+--TUOTH~
+you shine a keychain light in $N's face.~
+E
+--TRNONE~
+$n turns a keychain light on and off as if bored.~
+E
+--TRSELF~
+$n shines a keychian light in their face.~
+E
+--TROTH~
+$n shines a keychain light in $N's face.~
+E
+--TVOTH~
+$n shines a keychain light in your face almost blinding you!~
+E
+--USES~
+-1~
+Q 0
+#4012
+slinky~
+a slinky~
+A plastic slinky was left here.~
+(null)~
+plastic~
+8 N AO
+0 0 0 0 0
+0
+5 600 100
+E
+--USES~
+-2~
+Q 0
+#4013
+barbie doll~
+a barbie doll~
+(null)~
+(null)~
+plastic~
+13 N AO
+0 0 0 0 0
+0
+4 1500 100
+E
+--USES~
+-2~
+Q 0
+#4014
+yo-yo yo yo~
+a yo-yo~
+A wooden yo-yo was left here.~
+(null)~
+wood~
+5 N AN
+5 8 0 flame 0 0
+5 300 100
+E
+--USES~
+-2~
+Q 0
+#4015
+butterfly knife~
+a butterfly knife~
+A steel butterfly knife was left here.~
+(null)~
+steel~
+5 N AN
+2 8 1 stab 0 0
+6 2000 100
+E
+--USES~
+-2~
+Q 0
+#4016
+bowie knife~
+a bowie knife~
+A poly-carbide steel bowie knife was left here.~
+(null)~
+poly-carbide steel~
+5 N AN
+2 7 2 slash 0 0
+8 3500 100
+E
+--USES~
+-2~
+Q 0
+#4017
+steel sabre~
+a sabre~
+A steel sabre was left here.~
+Here is a steel sabre.~
+steel~
+5 N AN
+2 6 3 slice 0 0
+15 13000 100
+E
+--USES~
+-2~
+Q 0
+#4018
+little black dress~
+a little black dress~
+A little black dress was left here.~
+(null)~
+polyester~
+11 N AD
+0 0 0 0 0
+0
+7 7500 100
+E
+--USES~
+-2~
+Q 0
+#4019
+long black jacket fur edge~
+a black, floor-length, fur-edged leather jacket.~
+A black, floor length, fur-edged leather jacket was left here.~
+(null)~
+leather~
+11 N AK
+0 0 0 0 0
+0
+4 40000 100
+E
+--USES~
+-2~
+Q 0
+#4020
+black prada sunglasses~
+a pair of black sunglasses~
+A pair of black plastic sunglasses was left here.~
+(null)~
+plastic~
+11 N AP
+0 0 0 0 0
+0
+1 5000 100
+E
+--USES~
+-2~
+Q 0
+#4021
+black high heels~
+a pair of black high heels~
+A pair of black leather high heels was left here.~
+(null)~
+leather~
+11 N AG
+0 0 0 0 0
+0
+3 12000 100
+E
+--USES~
+-2~
+Q 0
+#4022
+satchel embossed leather~
+an embossed, black leather satchel~
+A black leather satchel was left here.~
+This black leather satchel has a small black embossed design of a rose,and long trailing vines extend from the rose to the outer edge of the bagwhere the seam meets.  Two long straps, also made of leather, sit up oddly -almost as if it was waiting to be used.  ~
+leather~
+15 N AO
+4 AC 0 0 0 0
+1 2500 100
+E
+--USES~
+-2~
+Q 0
+#4023
+leather brief case briefcase~
+a black leather bound briefcase~
+A black leather briefcase was left here.~
+This small, solid black, leather bound briefcase is made up to look moreexpensive than it really is.  It's exterior is made of a rough feelingleather that smells of expensive oils, yet the leather looks cheapenough. The inside is coated with a dual liner of white immitation silk,and is woven to give the appearance of pinstripes.~
+leather~
+15 N AO
+3 AC 0 0 0 0
+1 5000 100
+E
+--USES~
+-2~
+Q 0
+#4024
+back pack backpack~
+a small grey backpack~
+A small, grey backpack was left here.~
+(null)~
+plastic~
+15 N AK
+6 AC 0 0 0 0
+1 1500 100
+E
+--USES~
+-2~
+Q 0
+#4025
+small phone white~
+a small white phone~
+A small white phone was left here.~
+This phone is two inches long and a half an inch wide.  It's whiteplastic face seems to be the only thing unique about this phone.~
+plastic~
+30 0 AO
+0 0 0 0 0
+0
+0 6500 100
+E
+--USES~
+-2~
+Q 0
+#4026
+small phone red~
+a small red phone~
+A small, red phone was left here.~
+(null)~
+plastic~
+30 0 AO
+0 0 0 0 0
+0
+0 6500 100
+E
+--USES~
+-2~
+Q 0
+#4027
+small phone green~
+a small green phone~
+A small, green phone was left here.~
+This phone is two inches long and a half an inch wide.  It's greenplastic face seems to be the only thing unique about this phone.~
+plastic~
+30 0 AO
+0 0 0 0 0
+0
+0 6500 100
+E
+--USES~
+-2~
+Q 0
+#4028
+key~
+a small key~
+A small, steel key was left here.~
+A small steel key.
+~
+steel~
+18 FHPU AO
+0 0 0 0 0
+0
+0 0 100
+E
+--USES~
+-2~
+Q 15
+#4029
+chocolate doughnut stale~
+a stale chocolate doughnut~
+A stale chocolate donut was left here.~
+This small chocolate doughnut looks to be about two weeks old, and aboutready to start growing mildew.  It would appear that even the bugs areafraid to touch these pastries!~
+bread~
+19 0 AO
+2 0 0 0 0 0
+0 79 100
+E
+--USES~
+-2~
+Q 0
+#4030
+strawberry cream doughnut stale~
+a stale strawberry-cream doughnut~
+A stale, strawberry-cream donut was left here.~
+This small strawberry-cream doughnut looks to be about two weeks old,and about ready to start growing mildew.  It would appear that even thebugs are afraid to touch these pastries!~
+bread~
+19 0 AO
+2 0 0 0 0 0
+0 79 100
+E
+--USES~
+-2~
+Q 0
+#4031
+plain white powder doughnut stale~
+a stale, plain, white powdered doughnut~
+A stale, white-powdered donut was left here.~
+This small plain, white powdered doughnut looks to be about two weeksold, and about ready to start growing mildew.  It would appear that eventhe bugs are afraid to touch these pastries!~
+bread~
+19 0 AO
+2 0 0 0 0 0
+0 79 100
+E
+--USES~
+-2~
+Q 0
+#4032
+chocolate eclair~
+a cream-filled chocolate eclair~
+A chocolate eclair was left here.~
+This long cream-filled chocolate eclair looks to be about two weeks old,and about ready to start growing mildew.  It would appear that even thebugs are afraid to touch these pastries!~
+bread~
+19 0 AO
+4 0 0 0 0 0
+0 100 100
+E
+--USES~
+-2~
+Q 0
+#4033
+hot dog~
+a kosher hotdog~
+A kosher hotdog was left here.~
+This hotdog is wrapped in some foil and was nice and hot when presented.~
+meat~
+19 0 AO
+4 0 0 0 0 0
+0 250 100
+E
+--USES~
+-2~
+Q 0
+#4034
+hamburger~
+a hamburger~
+A foil wrapped hamburger was left here.~
+This hamburger, with ketchup and mustard, is wrapped in foil and still alittle hot.~
+meat~
+19 0 AO
+5 0 0 0 0 0
+0 250 100
+E
+--USES~
+-2~
+Q 0
+#4035
+table chair row~
+a small wooden chair~
+A wooden table with some chairs is here.~
+These plain wooden tables and chairs make up for the hospitality of the
+mall's clientele.  It appears that the cheap glue holding them together
+could break apart at any moment.  
+~
+wood~
+12 0 0
+10 0 BEHK 0 0 0
+10 0 50
+E
+--USES~
+-2~
+Q 0
+#4036
+fountain soda pop open~
+a spewing soda fountain~
+A soda fountain is here, spewing soda on to the floor.~
+This nasty looking soda fountain seems to have seen better days.  Itseems to be stuck spewing out root beer all over itself and the floor.None of the other flavors seem to be working.~
+steel~
+25 0 0
+100000 100000 'root beer' 0 0 0
+0 0 80
+E
+--USES~
+-2~
+Q 0
+#4037
+ham sub~
+a ham sub~
+A ham sub was left here by someone.~
+This is a ham sub, with most of the fixings, wrapped in a piece ofparchment paper.~
+meat~
+19 0 AO
+8 0 0 0 0 0
+0 500 90
+E
+--USES~
+-2~
+Q 0
+#4038
+chicken sub~
+a chicken sub~
+A chicken sub sandwich was left here.~
+A grilled chicken sub sandwich is here, wrapped in parchment paper andlooking rather good.~
+meat~
+19 0 AO
+8 0 0 0 0 0
+0 500 100
+E
+--USES~
+-2~
+Q 0
+#4039
+popcorn bag small~
+a small bag of popcorn~
+A small bag of popcorn was left here.~
+This small red and white striped bag is already half empty but what elsedo you expect from the theater?  Thick goey 'butter' covers every inchof the handful of popcorn within.[ooc: use popcorn]~
+vegetables~
+19 U AO
+2 0 0 0 0 0
+0 600 100
+E
+--TUNONE~
+you check to see how muh popcorn is left in the bag.~
+E
+--TUSELF~
+you take some popcorn out of the bag and eat it.~
+E
+--TUOTH~
+you take some popcorn out of the bag and place it in $N's mouth.~
+E
+--TRNONE~
+$n checks to see how much popcorn is left in the bag.~
+E
+--TRSELF~
+$n takes some popcorn out of the bag and eats it.~
+E
+--TROTH~
+$n takes some popcorn out of the bag and places it in $N's mouth.~
+E
+--TVOTH~
+$n takes some popcorn out of the bag and places it in your mouth ... eeww!~
+E
+--TRUSE~
+$n tries to get more popcorn out of the bag but only ends up getting thick goey 'butter' all over their hand.~
+E
+--TUUSE~
+you try to get more popcorn out of the bag, but only end up getting thick goey 'butter' all over your hand.~
+E
+--USES~
+5~
+Q 0
+#4040
+large soda~
+a large soda~
+A large soda was left here.~
+This large red and white striped cup of coke looks as if the managementhad a change of heart and actually bought new cups - now if only theywould get some straws. {W[OOC: use soda]{x~
+paper~
+17 U AO
+10 10 'coke' 0 0 0
+0 500 100
+E
+--TUNONE~
+you peek down the straw to see how much soda you have left to drink.~
+E
+--TUSELF~
+you take a sip of your soda.~
+E
+--TUOTH~
+you offer $N a drink of your soda.~
+E
+--TRNONE~
+$n peeks down their straw as if in deep concentration.~
+E
+--TRSELF~
+$n takes a sip of their soda.~
+E
+--TROTH~
+$n offers $N a drink of their soda.~
+E
+--TVOTH~
+$n offers you a drink of their soda.~
+E
+--TRUSE~
+$n tries to suck more soda through the straw but end up only making slurp noises.~
+E
+--TUUSE~
+you try to suck more soda through the straw but only end up making slurp noises.~
+E
+--USES~
+5~
+Q 0
+#4041
+seat row theater seats stadium~
+a small theater seat~
+A small theater seat is here.~
+These plush blue velvet stadium style seats seem to be where all the
+money goes from this establishment.  The aisles just recently cleaned, and
+the carpet just recently vacuumed - they definitely want you to spend your
+money.  
+~
+cotton~
+12 0 0
+50 9999 BEHK 0 0 0
+0 0 100
+E
+--USES~
+-2~
+Q 0
+#4042
+umbrella small black~
+a small black umbrella~
+A small black umbrella was left here.~
+(null)~
+plastic~
+13 0 AO
+0 0 0 0 0
+0
+1 799 100
+E
+--TUNONE~
+You quickly snap open a small black umbrella and hold it over your head.~
+E
+--TUSELF~
+you whack yourself in the face with a small black umbrella.~
+E
+--TUOTH~
+you whack $N up side the head as hard as you can with a small black umbrella!~
+E
+--TRNONE~
+$n quickly snaps open a small black umbrella and places it above their head.~
+E
+--TRSELF~
+$n whacks himself in the face with a small black umbrella.~
+E
+--TROTH~
+$n whacks $N up side the head as hard as he can with a small black umbrella!~
+E
+--TVOTH~
+$n whacks you up the side of the head with a small black umbrella!~
+E
+--USES~
+-1~
+Q 0
+#4043
+gray sneakers~
+a pair of gray sneakers~
+A pair of gray sneakers was left here.~
+(null)~
+cotton~
+11 0 AG
+0 0 0 0 0
+0
+1 6500 100
+E
+--USES~
+-2~
+Q 15
+#4045
+movie ticket~
+a movie ticket~
+A movie ticket was left here.~
+This small paper stub has a few numbers on it and is obviously
+color-coded, however trying to discern the meaning of the colors seems a bit
+confusing.  
+~
+paper~
+28 0 AO
+0 0 0 0 0
+0
+0 1000 100
+E
+--USES~
+-2~
+Q 0
+#4046
+naked inflatable llama rubber~
+a rubber inflatable naked llama~
+A rubber inflatable llama was left here.~
+(null)~
+rubber~
+12 0 AOR
+2 500 EH 0 0 0
+0 1000 100
+E
+--TUNONE~
+you pet a rubber inflatable naked llama and tell it that it's a good boy.~
+E
+--TUSELF~
+you bounce around the room on a rubber inflatable naked llama.~
+E
+--TUOTH~
+you bounce into $N while riding a rubber inflatable naked llama.~
+E
+--TRNONE~
+$n pets a rubber inflatable naked llama and tells it that it's a good boy.~
+E
+--TRSELF~
+$n bounces around the room on a rubber inflatable naked llama.~
+E
+--TROTH~
+$n bounces into $N while riding a rubber inflatable naked llama.~
+E
+--TVOTH~
+$n bounces into you while riding a rubber inflatable naked llama.~
+E
+--TRUSE~
+The air in a rubber inflatable naked llama suddenly is expelled leaving $n sitting on the ground.~
+E
+--TUUSE~
+The air in a rubber inflatable naked llama suddenly is expelled leaving you sitting on the ground.~
+E
+--USES~
+99~
+Q 15
+#4047
+door doorway fitting room dressing booth~
+a dressing room doorway~
+A dressing room doorway is here.~
+This rather plain fitting room has a few spare hangers lying around inthe corner and a mirror on each wall, the most important feature thoughis privacy.  The door goes all the way to the floor and no sign ofcameras peaking over the edge of the wall or anywhere else in thefitting room for that manner.  <ooc> 'enter booth' to enter the fitting room.~
+wood~
+29 0 0
+9999 0 0 4026 0 0
+10 0 100
+E
+--USES~
+-2~
+Q 15
+#4048
+silk panties~
+a pair of black silk panties~
+A pair of black panties was left here.~
+(null)~
+silk~
+11 0 AJ
+0 0 0 0 0
+0
+0 4500 100
+E
+--USES~
+-2~
+Q 15
+#4049
+camellia lace push up push-up bra~
+a black camelia lace push-up bra~
+A black lace bra was left here.~
+The Very Sexy Camellia Lace push-up bra. Seductive, lacy and "VerySexy". Dramatic push-up shaping created with classic pads. Twinnedstraps, underwire cups, back close. Imported nylon/spandex/viscose.~
+spandex~
+11 0 AI
+0 0 0 0 0
+0
+1 3000 100
+E
+--USES~
+-2~
+Q 15
+#4050
+bra push up push-up seamless~
+a white seamless push-up bra~
+A white spandex bra was left here.~
+Very Sexy push-up bra. Seamless bra with Gel-Curve shaping, arevolutionary oil- and-foam fill, for "Very Sexy" push-up. Underwirecups, twinned adjustable straps and back close. Imported nylon/Lycraspandex.~
+spandex~
+11 0 AI
+0 0 0 0 0
+0
+1 3000 100
+E
+--USES~
+-2~
+Q 15
+#4051
+convertible bra~
+a white convertible bra~
+A white convertible bra was left here.~
+Very Sexy convertible bra. Now there are even more ways to wearsexy...sixteen options in all. Smooth and seamless with Gel-Curveshaping, a revolutionary oil-and-foam fill for Very Sexy push-up, plusremovable extreme cleavage pads. Three interchangeable styles of brastrap: regular, clear, and a low-back halter strap that makes the bracompatible with backless dresses. Wear it as a halter. A two-strap. Aracerback. Or even backless. Imported nylon/Lycra spandex.~
+spandex~
+11 0 AI
+0 0 0 0 0
+0
+1 4800 100
+E
+--USES~
+-2~
+Q 15
+#4052
+seamless balconet push-up push up bra~
+a cream colored seamless balconet push-up bra~
+A cream-colored bra was left here.~
+The Very Sexy Seamless Collection. Smooth balconet push-up bra designedwith Gel Curve shaping, a revolutionary oil-and-foam fill, for "VerySexy"push-up. Twinned, adjustable straps, underwire cups and backclose. Imported nylon/Lycra spandex.~
+spandex~
+11 0 AI
+0 0 0 0 0
+0
+1 3000 100
+E
+--USES~
+-2~
+Q 15
+#4053
+padded demi bra~
+a black padded demi bra~
+A black padded bra was left here.~
+Body By Victoria. Seamless lingerie in soft, high-tech microfiber.Padded demi bra adds a full cup size to your shape without losing itsseamless, modern look. Underwire cups, adjustable straps and back close.Imported nylon/Lycra spandex.~
+spandex~
+11 0 AI
+0 0 0 0 0
+0
+1 3000 100
+E
+--USES~
+-2~
+Q 15
+#4054
+bra embroidered satin classic~
+a light blue embroidered satin classic bra~
+A light-blue bra was left here.~
+The Miracle Bra Embroidered Satin Collection. Now in a smooth fabricwith beautifully embroidered trim. Dramatic push-up shaping designedwith cleverly angled u nderwire cups and removable pads. Classic brawith adjustable straps and back close. Imported nylon/rayon/spandex.~
+satin~
+11 0 AI
+0 0 0 0 0
+0
+1 2000 100
+E
+--USES~
+-2~
+Q 15
+#4055
+bra jacquard lace push up push-up~
+a teal jacquard lace push-up bra~
+A teal lace bra was left here.~
+The Very Sexy Jacquard Lace Collection. Romantic, lacy and "Very Sexy."Smooth jacquard joins delicate, leafy lace for the romp of the season.NEW! Jacquard lace push-up bra. Twinned, adjustable straps and backclose. Imported nylon/spandex~
+spandex~
+11 0 AI
+0 0 0 0 0
+0
+1 4200 100
+E
+--USES~
+-2~
+Q 15
+#4056
+add cup add-a-cup demi bra~
+a beige add-a-cup demi bra~
+A beige bra was left here.~
+desc The T-shirt Bra by Victoria's Secret. Aptly named for its smooth,seamless shape that's invisible beneath close-fitting tees. Add-a-cupdemi bra adds a full cup size to your shape. Underwire cups, back closeand adjustable straps. Point d'e sprit stretch sides. Importedpoly/nylon/spandex.~
+spandex~
+11 0 AI
+0 0 0 0 0
+0
+1 3000 100
+E
+--USES~
+-2~
+Q 15
+#4057
+embroidered satin racerback racer back bra~
+a pink embroidered satin racerback bra~
+A pink bra was left here.~
+The Miracle Bra Embroidered Satin Collection. Now in a smooth fabricwith beautifully embroidered trim. Dramatic push-up shaping designedwith cleverly angled u nderwire cups and removable pads. Racerback brawith adjustable straps and front close. Imported nylon/rayon/spandex.~
+spandex~
+11 0 AI
+0 0 0 0 0
+0
+1 2000 100
+E
+--USES~
+-2~
+Q 15
+#4058
+stretch lace classic bra~
+an ivory stretch lace classic bra~
+A ivory lace bra was left here.~
+(null)~
+spandex~
+11 0 AI
+0 0 0 0 0
+0
+1 2000 100
+E
+--USES~
+-2~
+Q 15
+#4059
+stretch thong~
+a pink stretch cotton thong~
+A pink cotton thong was left here.~
+Victoria's Secret PINK. Stretch cotton thong. Certain to inspire pantyenvy. Imported cotton/spandex.~
+spandex~
+11 0 AJ
+0 0 0 0 0
+0
+1 700 100
+E
+--USES~
+-2~
+Q 15
+#4060
+stripe stretch mesh thong candy cotton~
+a cotton candy stripe stretch mesh thong~
+A candy-striped thong was left here.~
+Victoria's Secret PINK. Stretch mesh thong. The cure for the common bluejean. Imported nylon.~
+spandex~
+11 0 AJ
+0 0 0 0 0
+0
+1 800 100
+E
+--USES~
+-2~
+Q 15
+#4061
+pair low rise low-rise panties~
+a pair of white low-rise panties~
+A pair of white panties was left here.~
+Signature Cotton low-rise panties. The comfort of cotton, cut to hidebeneath the sexiest jeans and low-rise pants. Designed with oursignature elastic waistband. Imported cotton.~
+spandex~
+11 0 AJ
+0 0 0 0 0
+0
+1 800 100
+E
+--USES~
+-2~
+Q 15
+#4062
+low rise low-rise thong panties ~
+a pink low-rise thong~
+A pink thong was left here.~
+(null)~
+spandex~
+11 0 AJ
+0 0 0 0 0
+0
+1 900 100
+E
+--USES~
+-2~
+Q 15
+#4063
+adjustable strap thong~
+a black adjustable strap thong~
+A black thong was left here.~
+(null)~
+spandex~
+11 0 AJ
+0 0 0 0 0
+0
+1 800 100
+E
+--USES~
+-2~
+Q 15
+#4064
+lace trim trimmed thong~
+a creme lace trimmed thong~
+A creme lace thong was left here.~
+Pretty cotton lace-trim thong. Just like our Signature Cottoncollection, with touches of pretty lace. Imported.~
+spandex~
+11 0 AJ
+0 0 0 0 0
+0
+1 900 100
+E
+--USES~
+-2~
+Q 15
+#4065
+mesh thong flutter flutter-edge edge~
+a pink mesh thong with a black flutter-edge~
+A pink mesh thong was left here.~
+Such a Flirt lingerie. Seductive with a playful edge. NEW! Meshflutter-edge thong. Imported nylon.~
+spandex~
+11 0 AJ
+0 0 0 0 0
+0
+1 1200 100
+E
+--USES~
+-2~
+Q 15
+#4066
+wide side wide-side thong~
+a light blue wide-side thong~
+A light-blue thong was left here.~
+Glamour by Victoria's Secret. Our romantic lingerie collection in anextended size range. Floral embroidered wide-side thong. Importednylon/spandex/rayon.~
+spandex~
+11 0 AJ
+0 0 0 0 0
+0
+1 2000 100
+E
+--USES~
+-2~
+Q 15
+#4067
+thong ultra nude ultra-nude mesh wide-side wide side~
+an ultra-nude mesh wide-side thong~
+A nude thong was left here.~
+(null)~
+spandex~
+11 0 AJ
+0 0 0 0 0
+0
+1 2200 100
+E
+--USES~
+-2~
+Q 15
+#4068
+holster cover undercover chest~
+an undercover chest-mounted holster~
+A chest-mounted holster was left here.~
+This black leather hand gun holster has straps that go around thewearers arms in a fashion so that the holster is below the left arm orthe right arm [disconnecting holster piece], and is completely concealedwhen worn properly.~
+leather~
+15 N AI
+1 0 0 1 0 0
+1 5000 100
+E
+--USES~
+-2~
+Q 15
+#4069
+steel footlocker locker~
+a steel footlocker~
+A steel footlocker was left here.~
+This rather large, and rather heavy steel footlocker seems to be made ofseveral thin panels of steel plating clamped together by use of severalwell placed brackets.~
+steel~
+15 a A
+200 AC 0 0 0 0
+40 20000 100
+E
+--USES~
+-2~
+Q 15
+#4070
+test~
+test~
+[Test Item] A piece of hip clothing.~
+this is a test hip clothing item.~
+leather~
+11 0 AS
+0 0 0 0 0
+0
+0 700 100
+E
+--USES~
+-2~
+Q 2
+#0
+
+
+
+#ROOMS
+#4001
+Western Mall Entrance~
+The bright paints and shiny metals dazzle the eye and attract the magpie
+parts of your personality to shop.  
+~
+0 24 0
+E
+XNUMB1~
+Inside a shoppers paradise~
+E
+XDUMB1~
+The Weaver is strong here, very strong.  The silvery thread of her webglows with a luminescence that speaks volumes of the love she has for thisplace.  You almost feel humbled, even awed at this place.  You can seethousands of Weaver spirits scuttling over the vast structure caring for andrevelling in it's beauty.  ~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 0 4004
+D1
+(none)~
+(null)~
+0 0 4003
+D2
+(none)~
+(null)~
+0 0 10050
+D3
+(none)~
+(null)~
+0 0 4002
+M 0 H 100
+S
+#4002
+Savage Menswear~
+Racks of suits and shirts compete with leather jackets, demin jeans and
+T-shirts for your hard earned dollars.  Some look to be well made, some a
+little less well made, but everything is certainly wearable.  
+~
+0 28 0
+E
+XNUMB1~
+savage by nature~
+E
+XDUMB1~
+The Umbral landscape that is Savage Mensware lives up to its real worldname.  The Weavers web is bright and silvery, showing signs of continualrepair and maintainence.  It doesn't, however, give you any warning aboutwhat's actually going on in here.  The Weaver spirits rocket backwards andforwards in a near frenzy, Wyldings run around, dancing in reckless abandonand brilliant balls of light pulse with nearly uncontained excitement.  Itall seems very strange.  ~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 0 4005
+D1
+(none)~
+(null)~
+0 0 4001
+M 0 H 100
+S
+#4003
+Toyland~
+Toys!  Toys!  Toys!  Bright coloured plush toys, action figures and
+assortments of amusements of all sorts surround you.  It's amazing what
+marketers try and succeed in selling children...  And the children at heart.
+~
+0 12 0
+E
+XNUMB1~
+A spiritual playground~
+E
+XDUMB1~
+As you enter you cannot help but notice a strange feeling in the air. It's almost playful and definately a little impish here, with Weaver spiritsalmost dancing across the web and bright, multi-coloured lights jig happilythrough the air.  You even spot a coyote spirit, obviously preparing to playa prank on some unfortunate soul.  ~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D3
+(none)~
+(null)~
+0 0 4001
+M 0 H 100
+S
+#4004
+Inside the Mall~
+The colors, lights, and people bump and gostle you.  Somewhere, you can
+smell something cooking.  To the east is the sign for "That's Not a Knife! 
+" Knife shop.  
+~
+0 8 0
+E
+XNUMB1~
+Inside the Umbral Mall~
+E
+XDUMB1~
+The vast stucture continues along here displaying no less grandure orbeauty than before.  Still the Weavers spirits swarm over the web, weavingthe desire to shop into the very spiritual essence of this place.  ~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 0 4007
+D1
+(none)~
+(null)~
+0 0 4006
+D2
+(none)~
+(null)~
+0 0 4001
+M 0 H 100
+S
+#4005
+Savage's Menswear - Accessories Department~
+Shoes, hats, ties, handkerchiefs and pins.  Anything that can be used to
+highlight an outfit seems to be available here.  
+~
+0 12 0
+E
+XNUMB1~
+Seriously Savage Accessories~
+E
+XDUMB1~
+Again you see the furious frenzy and reckless joy that seems to haveinfected the Umbral landscape of this shop.  You can't help but feel thatyou're missing out on some wonderful spiritual drug.  That is until younotice the source of all these rampant emotions.  A small stereo system sitsin the corner supplying the instore music to batter the customer.  This onehowever has been possessed by a Wyldling and its essence is being thrown allover the store.  No wonder everyone is going slightly crazy.  ~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D2
+(none)~
+(null)~
+0 0 4002
+M 0 H 100
+S
+#4006
+That's Not a Knife!~
+A wide variety of knives, daggers, swords and random bladed objects line
+the walls.  All seem to be nicely polished and most of the blades are
+attached firmly to the walls or under glass.  
+~
+0 12 0
+E
+XNUMB1~
+This is a knife~
+E
+XDUMB1~
+Your barely contained rage bubbles to the surface is anticipation as youenter the Umbral knife shop.  Spirits of war chew on each other as theyswirl through the maelstrom, each more frenzied than the last.  A sense ofheat washes over you as you feel yourself begin to loose control.  You shakeyour head, trying to dislodge the thoughts of battle and glory anddestruction.  Closing your ears to the strains of thrash metal you manage togain a modicum of self control.  ~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D3
+(none)~
+(null)~
+0 0 4004
+M 0 H 100
+S
+#4007
+A Busy Intersection Inside the Mall~
+The shopping center surrounds you with signs and advertisements for all
+manner of goods.  
+~
+0 8 0
+E
+XNUMB1~
+Still Inside the Umbral Mall~
+E
+XDUMB1~
+Still the structure continues, and still the beauty and reverence areapparent.  This section, however, seems to display a more garish quality. Pulsing lights and bright colours assault your senses as the need to shop isbeing forced into your skull.  ~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 0 4009
+D1
+(none)~
+(null)~
+0 0 4010
+D2
+(none)~
+(null)~
+0 0 4004
+D3
+(none)~
+(null)~
+0 0 4008
+M 0 H 100
+S
+#4008
+Katies Ladieswear~
+The colours and styles change with the seasons, but Katies is here to
+bring all of them to you!  Amazingly the fashions seem to always be
+changing, always calling for a newly updated wardrobe.  
+~
+0 12 0
+E
+XNUMB1~
+Katies Place~
+E
+XDUMB1~
+This is "Katies" clothing shop and by all accounts a brothel.  Thespiritual side of this "quaint" clothing boutique is quiet, sedated and mostdefinately seductive.  Warm lights pulse gently filling you with a strangeinner glow.  Strange scents fill the air, causing slight discomfort anddefinate arrousal.  Strange spirits dance seductively around you, callingout, compelling you into acts of wanton debauchery and lewd abandon.  ~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+0 0 4007
+M 0 H 100
+S
+#4009
+The Sellular Connection~
+Stepping into this small corner of the mall presents a mere booth
+forcellular phones.  The plain white tile flooring, and the unadorned white
+drywall with diagrams still showing from where they were recently installed
+make this store have an unreliable appearance, or that of one under budget. 
+~
+0 12 0
+E
+XNUMB1~
+The Sellular Connection~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D2
+(none)~
+(null)~
+0 0 4007
+M 0 H 100
+S
+#4010
+Food Court - a Doughnut stand~
+The white and gray checkered tile open up to the east and north of here,
+showing more of the food court.  There are small stores to the west.  
+~
+0 136 0
+E
+XNUMB1~
+A Doughnut Stand in the Food Court~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 0 4022
+D1
+(none)~
+(null)~
+0 0 4011
+D3
+(none)~
+(null)~
+0 0 4007
+M 0 H 100
+S
+#4011
+Food Court - SubStop~
+This area of the food court is filled with the scent of fresh bread.  The
+lighting is bright and crisp.  The food court continues to your north and
+west, while it exits out into the mall to your east.  
+~
+0 8 0
+E
+XNUMB1~
+Sub-Stop in the Food Court~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 0 4024
+D1
+(none)~
+(null)~
+0 0 4012
+D3
+(none)~
+(null)~
+0 0 4010
+M 0 H 100
+S
+#4012
+A Busy Intersection Inside the Mall~
+Bright lights, enticing music, and catchy signs make up the composition
+of this intersection.  Highly polished floors, fresh air with a light scent
+of a blooming garden, and shopkeepers with smiling faces makes everything
+seem so perfect.  The white and grey checkered tiles lead in all directions
+from here to a shoe store northward, a movie theater eastward, a Food Court
+westward and the mall continues south.  
+~
+0 8 0
+E
+XNUMB1~
+A Busy Intersection Inside the Mall~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 0 4015
+D1
+(none)~
+(null)~
+0 0 4018
+D2
+(none)~
+(null)~
+0 0 4013
+D3
+(none)~
+(null)~
+0 0 4011
+M 0 H 100
+S
+#4013
+Inside the Mall~
+Light 'elevator music' catches the ears and relaxes the mind, the highly
+polished white and grey checkered floors, and the shopkeepers smiling faces
+help to make for the perfect shopping experience, if it wasn't for an odd
+nagging feeling at the back of your mind.  Everything may look perfect, but
+something's just not right.  The light smell of a freshly blooming garden
+begins to strip away those nagging thoughts, and just check out the prices! 
+The mall continues north and south, while a small container shop is to the
+west.  
+~
+0 8 0
+E
+XNUMB1~
+Inside the Mall~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 0 4012
+D2
+(none)~
+(null)~
+0 0 4014
+D3
+(none)~
+(null)~
+0 0 4016
+M 0 H 100
+S
+#4014
+Inside the Eastern Mall Entrance~
+Stepping into the brightly lit mall, and the 'canned air' made from the
+forever hissing vents in the white tiled ceiling, and the catchy lights and
+music.  Welcome to the mall?  It seems everything in here is made to take
+money from the consumer.  The highly polished white and grey checkered floor
+leads to the north into the mall and west into a video arcade while the exit
+south leads to the parking lot.  
+~
+0 8 0
+E
+XNUMB1~
+Inside the Eastern Mall Entrance~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 0 4013
+D2
+(none)~
+(null)~
+0 0 4021
+D3
+(none)~
+(null)~
+0 0 4017
+M 0 H 100
+S
+#4015
+Sa' Yat Footwear~
+The store for all of your footwear needs, or so they claim.  Shoes are
+crammed all over the walls, into the aisles, and stacked on the floor in
+huge piles.  It seems everything is for sale, or is so old that perhaps they
+should be.  There is a busy intersection to the south.  
+~
+0 12 0
+E
+XNUMB1~
+Sa' Yat Footwear~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D2
+(none)~
+(null)~
+0 0 4012
+M 0 H 100
+S
+#4016
+Ye Olde Storage Shoppe'~
+From backpacks and gun holsters, to purses and whinnie the pup lunchboxes
+- this place has it all.  Everything seems to hang up on peg-boarded walls
+in huge jumbles and heaps on the floor, just waiting for an expensive
+law-suit from a fallen customer to put them out of business.  An old
+fashioned cash register sits on a cheap wooden desk, and one wonders if this
+is another item in the store or is it the front desk?  The mall continues to
+the east of here.  
+~
+0 12 0
+E
+XNUMB1~
+Ye Olde Storage Shoppe'~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+0 0 4013
+M 0 H 100
+S
+#4017
+Where, Where, Underwear?~
+A light romantic song drowns out the tunes from the main hallway just to
+the south of here.  A large mostly empty showroom with several display
+mannequins outfitted with the newest and sexiest lingerie any lady could get
+her hands on to help accent her figure.  A dark navy blue with a white
+highlighting make up for the color scheme for the room, even the lights have
+been situated to go along with the setup.  
+~
+0 12 0
+E
+XNUMB1~
+Where, Where, Underwear?~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+0 0 4014
+M 0 H 100
+S
+#4018
+Welcome to the RPG Cinema~
+Bright white tiles cover the floor here, and a long red carpet covers the
+tiles down the center of the room making it seem as if everyone is a VIP
+guest.  Bright lights flow from the west in this shaded area, where only
+small circular lights placed strategically throughout the room makes it
+possible to see.  A small glass booth with a hole in the front sits next to
+the locked front doors.  A myriad of pictures hang under a soft glow of
+halogen lamps advertising movies to come and movies currently showing, and
+the times they are playing.  The mall continues west while the theater
+continues south.  
+~
+0 12 0
+E
+XNUMB1~
+Welcome to the RPG Cinema~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D2
+(none)~
+(null)~
+ABCFR 4028 4019
+D3
+(none)~
+(null)~
+0 0 4012
+M 0 H 100
+S
+#4019
+The Concession Stand~
+Stepping through the dark mahogany doors leads into an oddly lit room. 
+Not a single conventional light is in this entire room save the actual booth
+that sells the popcorn and other odd assortment of candies and drinks.  The
+rest of the room is covered from walls to ceiling with a mirror-like surface
+and strangely designed neon lights flash here and there.  The same brightred
+carpet leads to the next set of doors to the south or through the one-way
+doors that lead back into the mall to the west.  
+~
+0 8 0
+E
+XNUMB1~
+The Concession Stand~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D2
+(none)~
+(null)~
+AB 0 4020
+D3
+(none)~
+(null)~
+0 4028 4013
+M 0 H 100
+S
+#4020
+A Sparsely-Lit Movie Theater~
+Darkness, only cut by the lights running down the main aisle in the
+center of the room leading to the plush red velvet seats waiting for
+something to be spilled on them.  The soft glow of the projector in the back
+of the room also helps illuminate the area slightly as the hunt for the open
+seat begins.  There is only a main exit north of here leading to the
+Concession Stand.  
+~
+0 8 0
+E
+XNUMB1~
+A Sparsely-Lit Movie Theater~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+AB 0 4019
+M 0 H 100
+S
+#4021
+Inside a Parking Lot~
+The back of the parking lot here has a few abandoned vehicles with rotted
+tires, flaking paint, busted windows and graffiti all over their sides.  One
+wonders why they never get towed away like all the signs mention up front? 
+The parking lot continues west while the mall begins to the north.  
+~
+0 0 1
+E
+XNUMB1~
+Inside a Parking Lot~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 0 4014
+D3
+(none)~
+(null)~
+0 0 4025
+M 0 H 100
+S
+#4022
+Food Court - a Hotdog stand~
+This area of the food court is well-lit and looks to be freshly painted. 
+The tiles, one can tell, have recently been repaired and scrubbed clean. 
+The food court continues to the east and south.  
+~
+0 8 0
+E
+XNUMB1~
+A Hotdog Stand in the Food Court~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+0 0 4024
+D2
+(none)~
+(null)~
+0 0 4010
+M 0 H 100
+S
+#4023
+Entrance to a Parking Lot~
+This is where the asphalt ends and the cement parking lot begins.  The
+parking lot leads down about a foot from the main road with a slight hump in
+the road here and there to keep speeders to a minimum.  Bright yellow lines
+mark the oversized parking spaces out for the shoppers, and bright blue
+lines for the handicapped fill the front spaces out.  The main road is to
+the west of here while the parking lot continues to the east.  
+~
+0 0 1
+E
+XNUMB1~
+Entrance to a Parking Lot~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+0 0 4025
+D3
+(none)~
+(null)~
+0 0 10050
+M 0 H 100
+S
+#4024
+Food Court - Under Rennovation~
+This area of the food court looks like it is under construction.  There
+is fresh paint on the walls and the tiles have been scrubbed clean.  It
+looks like this area is being rennovated for new shops.  The food court
+continues to the west and south.  
+~
+0 8 0
+E
+XNUMB1~
+A Demolished Dining Area in the Food Court~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D2
+(none)~
+(null)~
+0 0 4011
+D3
+(none)~
+(null)~
+0 0 4022
+M 0 H 100
+S
+#4025
+Inside a Parking Lot~
+Bright yellow lines continue in a well thought out pattern across the
+sides of the parking lot with systematically placed cross walks for
+pedestrians to cross safely into the mall just to the north of here. 
+Brightly painted walls and signs attract the eye away from the parking lot
+and encourage the mind to spend, spend, spend!  The parking lot continues
+east and west.  
+~
+0 0 1
+E
+XNUMB1~
+Inside a Parking Lot~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+0 0 4021
+D3
+(none)~
+(null)~
+0 0 4023
+M 0 H 100
+S
+#4026
+Inside a Fitting Room~
+This rather plain fitting room has a few spare hangers lying around inthe corner and a mirror on each wall, the most important feature though isprivacy.  The door goes all the way to the floor and no sign of cameraspeaking over the edge of the wall or anywhere else in the fitting room forthat manner.  To the north lies the main store.  ~
+0 12 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 0 4017
+S
+#0
+
+
+
+#RESETS
+D 0 4018 2 131111
+D 0 4019 2 3
+D 0 4020 0 3
+M 1 4001 1 4002 0
+G 0 4001 0
+G 0 4002 0
+G 0 4003 0
+G 0 4004 0
+G 0 4005 0
+G 0 4023 0
+M 1 4003 1 4003 0
+G 0 4010 0
+G 0 4011 0
+G 0 4012 0
+G 0 4013 0
+G 0 4014 0
+G 0 4042 0
+M 1 4002 1 4005 0
+G 0 4007 0
+G 0 4008 0
+G 0 4009 0
+G 0 4010 0
+M 1 4004 1 4006 0
+G 0 4015 0
+G 0 4016 0
+G 0 4017 0
+M 1 4005 1 4008 1
+G 0 4019 0
+G 0 4018 0
+G 0 4020 0
+M 1 4006 1 4009 1
+G 0 4025 0
+G 0 4026 0
+G 0 4027 0
+M 1 4007 1 4010 1
+G 0 4029 0
+G 0 4030 0
+G 0 4031 0
+G 0 4032 0
+M 1 4009 1 4011 1
+G 0 4037 0
+G 0 4038 0
+M 1 4010 1 4015 1
+G 0 4021 0
+G 0 4006 0
+G 0 4043 0
+M 1 4013 1 4016 1
+G 0 4022 0
+G 0 4023 0
+G 0 4024 0
+G 0 4069 0
+O 0 4047 0 4017
+M 1 4014 1 4017 1
+E 0 4048 0 7
+E 0 4049 0 4
+E 0 4021 0 9
+G 0 4049 0
+G 0 4050 0
+G 0 4051 0
+G 0 4052 0
+G 0 4053 0
+G 0 4054 0
+G 0 4055 0
+G 0 4056 0
+G 0 4057 0
+G 0 4058 0
+G 0 4059 0
+G 0 4060 0
+G 0 4061 0
+G 0 4062 0
+G 0 4063 0
+G 0 4064 0
+G 0 4065 0
+G 0 4066 0
+G 0 4067 0
+M 1 4011 1 4018 1
+G 0 4028 0
+G 0 4045 0
+M 1 4012 1 4019 1
+G 0 4039 0
+G 0 4040 0
+O 0 4041 0 4020
+M 1 4008 1 4022 1
+G 0 4033 0
+G 0 4034 0
+O 0 4035 0 4024
+S
+
+
+
+#SHOPS
+4001 11 9 0 0 0 100 100 0 24 H
+4002 11 1 15 17 0 100 100 0 24 0
+4003 13 8 5 12 0 100 100 0 23 C
+4004 5 0 0 0 0 100 100 0 23 CI
+4005 11 0 0 0 0 100 100 0 24 H
+4006 30 0 0 0 0 100 0 0 23 0
+4007 19 17 0 0 0 100 0 0 23 A
+4008 19 17 0 0 0 100 0 0 23 A
+4009 19 0 0 0 0 100 0 0 23 A
+4010 11 0 0 0 0 100 100 0 23 H
+4011 18 0 0 0 0 100 0 0 23 0
+4012 19 17 0 0 0 100 0 0 23 0
+4013 17 15 19 0 0 100 100 0 23 H
+4014 0 0 0 0 0 100 100 0 24 H
+0
+
+
+
+#MOBPROGS
+#4001
+say Would you like to try something while you are here?
+~
+#4002
+say I will be there in a minute, just let me save this.~
+#4009
+say If you joined the Sub-Stop diet today, you could loose up to five pounds in five months! Incredible!~
+#0
+
+#$

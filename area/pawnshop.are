@@ -1,0 +1,801 @@
+#AREADATA
+Name Pawn Shop~
+Builders Zander Rafkin~
+VNUMs 6001 6020
+Credits Rafkin~
+Security 1
+Flags H
+Price 0
+End
+
+
+
+#MOBILES
+#6001
+Stan Widorski~
+Stan Widorski~
+Stan Widorski stands here eyeing people as they come and go.
+~
+Widorski stands here around four feet even, and that's with his shoes
+that add three inches because of the cushioned soles.  Wearing an outfit
+that would give a heart attack to any fashion conscious minded person, he
+stands behind his counter reliving a memory from his hip days in the
+sixties.  Has he ever told you the one about ....  
+~
+human~
+ABCGYc 0 75 0 0 0 none
+0 0 0 0
+10 10 1 500
+AHMV ABCDEFGHIJK large flesh
+A G
+I 0
+Tr 0 buys a Truvelo .50 BMG caliber rifle.~ emote says, {Y'{CYessir uuhhuh, yep, looks like your papers are in order.  Enjoy your hunting rifle!{Y'{x~
+Tr 6 drops an~ get allmischievous~
+Tr 0 sits down~ emote exclaims, {Y'{CEy 'dere now! Aint no be loitarin 'roun dere. You'se gots ta buy somefin or get out!{Y'{x~
+Tr 0 leaves~ close downclose westinnocent~
+Tr 0 has arrived.~ emote smiles a toothless grin and waves, {Y'{CHey ther feller, you'se lookin like you got somfin ta sell meh or is ya jest in tah buy somfin from ole Widorski?{Y'{xclose west~
+Tr 0 **base**~ **base**~
+Tr 0 *Click* You're out of ammo!~ reload shot speed~
+Tr 1 buys a glock 30 handgun.~ emote whispers, {Y'{CNow you run along now, and you didn't get that from me okay?{Y'{x~
+Tr 0 buys a pistol-grip shotgun.~ emote whistles with appreciation, {Y'{CWow lookee here feller, that's a fancy pea shooter ya got there.  It's too bad we aint sellin them thar guns here no moh cuz uncle sam said we was killin all them folks too much I reckin.{Y'{x~
+#6002
+Morgan Killweed~
+Morgan~
+Morgan Killweed, a prostitute, stands here trying to look sexy.
+~
+Dressed in an old red tube top, black leather mini-skirt, black
+highheels, black knitted pantyhose and about two pounds of makeup and
+other"accessories", Morgan seems as if she's been doing this a while.  
+~
+human~
+ABCW 0 50 0 0 0 none
+0 0 0 0
+10 10 2 100
+AHMV ABCDEFGHIJK large flesh
+A 0
+I 0
+Tr 0 has arrived.~ emote says, {Y'{CHey baby you looking for a good time?  I know I am, in fact for 5 dollars I can think of something really fun.{Y'{x~
+Tr 0 **base**~ **base**~
+Tr 1 gives you 5 dollars.~ emote grins, almost seductively, lifting her old red tube top exposing her not-so-young breasts and says, {Y'{CCome feel on these for some fun!{Y'{x~
+#0
+
+
+
+#OBJECTS
+#6001
+gold wedding band~
+a gold wedding band~
+A scratched, gold wedding band.~
+This gold wedding band seems a bit old and has a scratch or two on the
+inside of it, but overall seems to be in good quality.  
+~
+gold~
+11 0 AB
+0 0 0 0 0
+0
+0 7500 100
+E
+--COMPANY~
+ptx~
+E
+--USES~
+-2~
+Q 15
+#6002
+gold chain necklace~
+a thin gold chain necklace~
+A thin, gold chain necklace is here.~
+This chain necklace looks to be made of 24 carrot gold and looks
+relatively new.  No scratches or discoloration in the metal can be seen at
+all.  Along the inside of the clasp the letters "SJ" were hand-carved and
+still remain.  
+~
+gold~
+11 0 AC
+0 0 0 0 0
+0
+0 5000 100
+E
+--COMPANY~
+ptx~
+E
+--USES~
+-2~
+Q 15
+#6003
+white mushroom~
+a small white mushroom~
+A small, white mushroom is growing here.~
+This small white porous mushroom seems to like growing just along the
+edges of the milky white substance of the sulfur water.  It looks slightly
+smaller than an average white mushroom but that may be because of what it
+was using for nutrients is slightly different.  
+~
+lsd~
+26 0 A
+1 'slow' 'poison' 'reserved' 'reserved' 0
+0 0 100
+E
+--USES~
+-2~
+Q 15
+#6004
+gun handgun 45mm .45 .45mm glock red 30~
+a glock 30 handgun~
+A glock 30 handgun is here.~
+This is a glock 30 handgun.
+~
+aluminium~
+5 0 AN
+1 6 6005 bite BD 0
+1 45000 100
+E
+--COMPANY~
+ptx~
+E
+--USES~
+-2~
+Q 15
+#6005
+ammo rounds clip bullet bullets hollow point~
+a small clip of ammo~
+A small clip of ammo is here.~
+A small clip about the size that would fit into a handgun sits here
+waiting to be used.  It has a flat black finish to the metal.  
+~
+aluminium~
+31 N AO
+BD C B 0 0
+0
+1 7500 100
+E
+--COMPANY~
+ptx~
+E
+--USES~
+-2~
+Q 15
+#6006
+shotgun pistol grip gun~
+a pistol-grip shotgun~
+A pistol-gripped, pump-action shotgun~
+Fairly new on the market, this pistol-gripped, pump-action shotgun canhold up to four rounds at a time and load via a speed loader that actsas a magazine for the shotgun.~
+steel~
+5 0 ANR
+1 8 6007 whip C 0
+2 30000 100
+E
+--COMPANY~
+ptx~
+E
+--USES~
+-2~
+Q 15
+#6007
+loader speed ammo shell~
+a shotgun speed loader~
+A shotgun speed-loaded clip is here.~
+This four round speed loader acts as a magazine for a shotgun enablingthe user to quickly load four rounds in the same time it would take themto load one.~
+steel~
+31 N AO
+C D A 0 0
+0
+0 5000 100
+E
+--COMPANY~
+ptx~
+E
+--USES~
+-2~
+Q 15
+#6008
+chair inflatable~
+an inflatable chair~
+An inflatable chair is here.~
+This is an inflatable chair, made of some red plastic.  
+~
+plastic~
+12 0 A
+1 275 EHK 0 0 0
+4 4500 20
+E
+--COMPANY~
+jgc~
+E
+--USES~
+-2~
+Q 0
+#6009
+watch gold rolnex~
+a gold Rolnex watch~
+A gold Rolnex watch is here.~
+This watch looks fairly new and for the price must be some kind of
+mistake.  Then again it is just a Rolnex - and not one of those other
+popular brand names.  
+~
+gold~
+11 0 AM
+0 0 0 0 0
+0
+0 14500 100
+E
+--COMPANY~
+ptx~
+E
+--USES~
+-2~
+Q 0
+#6010
+computer monitor~
+a computer monitor~
+An old computer monitor is here.~
+This old monitor seems to be in fairly good condition aside from the fact
+that it's missing a power cable.  Having survived several price reductions,
+it seems this "power" buy isn't really worth the savings.  
+~
+plastic~
+13 0 A
+0 0 0 0 0
+0
+6 7500 100
+E
+--COMPANY~
+que~
+E
+--USES~
+-2~
+Q 0
+#6011
+nintendo game station~
+a Nintendo game station~
+An old nintendo game system is here.~
+This old Nintendo seems to have seen better days, as it's scuffed
+exterior may show.  Looking inside the small cartridge space on the front
+shows a world of dust buildup just waiting to ruin your favorite classics.  
+~
+plastic~
+13 0 A
+0 0 0 0 0
+0
+3 2000 100
+E
+--COMPANY~
+que~
+E
+--USES~
+-2~
+Q 0
+#6012
+radio boom box 200 small~
+a small 200 watt radio~
+A small 200-watt radio is here.~
+Black and wood grain plastic cover this fairly small "boom box".  Ableto play a single cd, 2 tapes, and able to accept microphone input, thissmall "boom box" seems to be quite the deal. That's when the sticker onthe bottom "batteries only" becomes noticeable.~
+plastic~
+13 0 A
+0 0 0 0 0
+0
+2 12000 100
+E
+--COMPANY~
+bfe~
+E
+--USES~
+-2~
+Q 0
+#6013
+car door abandoned~
+the door to an abandoned car~
+The door to an abandoned car is here.~
+This old car door sits here on the side of the street gathering rust and
+bugs.  
+~
+aluminium~
+29 0 0
+9999 A A 6012 0 0
+300 0 2
+E
+--COMPANY~
+ptx~
+E
+--USES~
+-2~
+Q 1
+#6014
+hand grenade MK2 olive drab~
+an MK2 "pineapple" grenade~
+An MK2 hand grenade is here.~
+The MK2 hand grenade is a fragmentation device once used by all branches
+of the U.  S.  Military but was gradually phased out after World War 2 and
+the Vietnam War to be replaced by similiar versions of a handheld
+fragmentation device.  
+~
+dynamite~
+32 0 AO
+AC 0 0 0 0
+0
+0 30000 100
+E
+--COMPANY~
+ptx~
+E
+--USES~
+-2~
+Q 15
+#6015
+holster~
+a belt mounted holster~
+A brown leather belt-mounted holster is here.~
+This small leather holster is worn around the waist and is made of a
+plain brown leather.  
+~
+leather~
+15 0 AS
+1 0 0 0 0 0
+1 5000 100
+E
+--COMPANY~
+flesh~
+E
+--USES~
+-2~
+Q 2
+#6016
+truvelo .50 50 bmg caliber rifle sniper~
+a Truvelo .50 BMG caliber rifle~
+A .50 BMG caliber sniper rifle is here.~
+Truvelo .  50 uses a simple metallic "backbone" on which all other
+partsare mounted.  Massive receiver is made of steel, rotating bolt of
+theTruvelo design has two frontal locking lugs, and one rear locking lug,
+plus cocking handle that acts as a second rear locking lug for mostsolid
+lock.  Heavy, free-floated barrel features a large muzzle brake, which is a
+must-have item when firing powerful ammunition.  Truvelo .  50rifle is
+available in simple single shot configuration only.  A singlered band can be
+seen around the base of the plastic grip.  
+~
+steel~
+5 0 ANR
+1 8 6017 slice A 0
+1 110000 100
+E
+--COMPANY~
+ptx~
+E
+--USES~
+-2~
+Q 15
+#6017
+.50 50 caliber bullet~
+a .50 caliber bullet~
+A .50 caliber bullet is here.~
+This not so small .  50 caliber bullet has a single red band along the
+base near the charge and glints softly in the light.  
+~
+fibreglass~
+31 0 A
+A AD AD 0 0
+0
+1 200 100
+E
+--COMPANY~
+ptx~
+E
+--USES~
+-2~
+Q 15
+#6018
+metal ammunition can~
+an orange steel ammunitions cannister~
+An orange steel ammunication cannister is here.~
+This rather heavy cannister seems to have once held many rounds of
+ammunition for someone, and that someone decided to resell the cannister
+once he was through with it.  It's orange paint seems to be in good
+condition aside from the black stenciled letters someone left along the
+sides of it.  
+~
+steel~
+15 0 AO
+75 AC 0 0 0 0
+3 5500 100
+E
+--COMPANY~
+ptx~
+E
+--USES~
+-2~
+Q 2
+#0
+
+
+
+#ROOMS
+#6001
+Second Street~
+Here Second Street runs through a dirty, dilapidated part of town.  The
+windows of several buildings are broken and covered with cardboard and duct
+tape.  There is trash on the streets and an odd smell fills the nostrils. 
+In a window to the east, there is a half-lit neon sign, which reads
+"Widorski's Gun and Pawn, We Buy Your Crap".  
+~
+0 65536 1
+E
+XNUMB1~
+Second Street~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 0 6011
+D1
+(none)~
+(null)~
+ABR 0 6002
+D2
+(none)~
+(null)~
+0 0 6003
+M 0 H 100
+S
+#6002
+Widorski's Gun and Pawn~
+Entering the shop is like entering a time warp.  Old clothing and jewelry
+from years now gone line the shelves.  Old eight track tapes sit piled over
+in one corner and vinyl records sit in a large crate in another - all
+equally stacked in dust.  Guns line the walls behind the counter full of
+jewelry.  A few sets of someones pre-owned, polished aluminum rims line up
+across the floor waiting for someone to trip over theme.  
+~
+0 8 0
+E
+XNUMB1~
+Widorski's Gun and Pawn~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D3
+(none)~
+(null)~
+ABR 0 6001
+D5
+(none)~
+rims~
+ABM 0 6004
+M 0 H 100
+S
+#6003
+Second Street~
+The people that live in the rundown part of town must seem rich to the
+people that live here in this almost forgotten corner of the city.  This
+small street is so narrow two cars could barely fit through it if they were
+to run one wheel almost into the ditch.  From here the street appears to be
+one-way although one couldn't be sure unless you follow it down.  
+~
+0 0 1
+E
+XNUMB1~
+Second Street~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 0 6001
+M 0 H 100
+S
+#6004
+The Sinkhole Under Widorsky's Place~
+Sparse light filters down through the old wood floor from above and the
+hole left open the rims upstairs were covering, but not enough to completely
+see by.  The smell of sulfur water permeates the air very strongly, but
+nothing that would kill anyone - quickly that is.  It seems this sink hole
+has been in the works for many years as it goes down maybe another five
+yards below the rock cleft you're on.  There also seems to be a ledge almost
+wide enough to walk on to the west from here.  
+~
+0 65545 0
+E
+XNUMB1~
+The Sinkhole Under Widorsky's Place~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D5
+(none)~
+(null)~
+0 0 6005
+S
+#6005
+The Bottom of the Sinkhole~
+Completely pitch-black down here, and extremely wet.  About three feet ofwater and a mile of the reeking sulfur-rotten egg like smell make this placeextremely uncomfortable to be in.  No way back up to the surface can be seenalong the slimy surface of the walls, might as well make do and follow thewater to the west from here.  Maybe somewhere along the way there'll be away up or out.  ~
+0 65545 0
+E
+XNUMB1~
+The Bottom of the Sinkhole~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D3
+(none)~
+(null)~
+0 0 6006
+S
+#6006
+The Bottom of the Sinkhole~
+Still trudging along the knee-deep water, the cavern itself seems to begetting shorter and shorter almost to the point that one would have to bebent over at the waist to get through.  At this point the water looks rathermilky and stagnant, definitely not drinkable.  A new smell, if it'spossible, seems to be coming from somewhere to the west of here.  ~
+0 65545 0
+E
+XNUMB1~
+The Bottom of the Sinkhole~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+0 0 6005
+D3
+(none)~
+(null)~
+0 0 6007
+S
+#6007
+The Bottom of the Sinkhole~
+The once almost milky water is now extremely white and seems to be almosta mud-like substance that makes traversing it very difficult.  The smell ofsulfur, now mixed with the smell of something else.  The almostuncomfortably small cavern now turns slightly to the north just aheadtowards a faint light or back east into more darkness.  ~
+0 65545 0
+E
+XNUMB1~
+The Bottom of the Sinkhole~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 0 6008
+D1
+(none)~
+(null)~
+0 0 6006
+S
+#6008
+The Bottom of the Sinkhole~
+The white milky substance hardens even more here making it mostly easy towalk on, but if one were to stand too long in one place it'd be like walkingin quicksand.  Oddly enough it looks as if there was once a dog runningaround in here at one point in time as a few paw prints sit here trapped inthe thick oozing sludge.  To the east the cavern seems to get taller, aswell as much brighter, while to the south is too dark to tell.  ~
+0 65545 0
+E
+XNUMB1~
+The Bottom of the Sinkhole~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+0 0 6009
+D2
+(none)~
+(null)~
+0 0 6007
+S
+#6009
+Under the Flood Drain~
+The floor and walls here seem to be made entirely of brick and are
+littered with all types of road debris that have fallen through the drain,
+up above, over the years.  A rusted steel ladder is bolted into the wall
+here allowing one to travel up, while there seems to be a limestone cavern
+to the west from here.  
+~
+0 65536 1
+E
+XNUMB1~
+Under the Flood Drain~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D3
+(none)~
+(null)~
+0 0 6008
+D4
+(none)~
+(null)~
+0 0 6010
+S
+#6010
+Under the Flood Drain~
+Standing on a ladder, just under a flood drain, one can see out onto what
+appears to be third street just up above.  The faint smell of sulfur can be
+smelled coming from somewhere below.  The almost ancient looking brick walls
+seem to be a little strained having an occupant on the severely rusted
+ladder that leads down to the drain floor as well as up to a street.  
+~
+0 65536 1
+E
+XNUMB1~
+Under the Flood Drain~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D4
+(none)~
+drain~
+ABM 0 6011
+D5
+(none)~
+(null)~
+0 0 6009
+S
+#6011
+Second Street~
+Here Second Street runs through a dirty, dilapidated part of town.  There
+is trash on the streets and an odd smell fills the nostrils.  Everyone there
+is to look, all there is to see is old and run down houses and buildings
+that were probably once very fine and grand.  A flood drain sits here as a
+reminder of where this neighborhood has gone.  
+~
+0 65536 1
+E
+XNUMB1~
+Second Street~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+E
+drain~
+Made of a strong steel, once upon a time, this drain cover serves as areminder of where this neighborhood has gone - down the drain.~
+D0
+(none)~
+(null)~
+0 0 10406
+D2
+(none)~
+(null)~
+0 0 6001
+D5
+(none)~
+drain~
+ABM 0 6010
+S
+#6012
+Inside an Abandoned Car~
+This old car looks like it was burned out from the inside as all theplastic on the dashboard is completely melted and the cushion on the seatsare completely gone.  The only thing left of it now is the outer shell andthe ashen remains of a once functional car.  The only exit from here is ontoSecond Street.  ~
+0 65544 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+windshield~
+BN 0 6003
+D1
+(none)~
+(null)~
+0 0 6003
+D3
+(none)~
+(null)~
+0 0 6003
+S
+#0
+
+
+
+#RESETS
+D 0 6001 1 131075
+D 0 6002 3 131075
+D 0 6002 5 4099
+D 0 6010 4 4099
+D 0 6011 5 4099
+D 0 6012 0 8194
+M 1 6001 1 6002 1
+E 0 6006 0 16
+G 0 6011 0
+G 0 6008 0
+G 0 6002 0
+G 0 6001 0
+G 0 6007 0
+G 0 6005 0
+G 0 6010 0
+G 0 6012 0
+G 0 6009 0
+G 0 6006 0
+G 0 6004 0
+G 0 6015 0
+G 0 4068 0
+G 0 6016 0
+O 0 6003 0 6005
+O 0 6003 0 6006
+O 0 6003 0 6008
+O 0 6018 0 6012
+P 0 6017 5 6018 5
+S
+
+
+
+#SHOPS
+6001 5 11 30 31 13 125 75 0 24 CHI
+6002 15 31 0 0 0 100 100 0 23 0
+0
+
+
+
+#MOBPROGS
+#0
+
+#$

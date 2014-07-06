@@ -1,0 +1,15 @@
+#!/bin/csh
+
+cd ~
+
+rm SRC.tar
+
+gunzip SRC.TGZ
+tar -xvf SRC.tar
+gzip SRC.tar
+mv SRC.tar.gz SRC.TGZ
+chmod og-rwx SRC.TGZ
+
+cd ~/mud/src/
+make wipe
+make

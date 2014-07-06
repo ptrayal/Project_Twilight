@@ -1,0 +1,361 @@
+#AREADATA
+Name [STAFF] Base Area~
+Builders Rayal~
+VNUMs 1000 1100
+Credits [STAFF]~
+Security 2
+Flags I
+Price 0
+End
+
+
+
+#MOBILES
+#1000
+alfonse tortorola~
+Alfonse Tortorola~
+A tall, regal looking man in fine clothes stands here.
+~
+Tall, blonde and refined, this man exudes charm and personal power and
+magnetism.  He constantly fingers a silver handled cane as he looks at
+everything around him with a well-concealed hint of disdain.  
+~
+vampire~
+AK 0 0 0 0 0 bite
+0 0 0 0
+10 10 1 100
+AHMVc ABCDEFGHIJK medium flesh
+A I
+I 0
+#1001
+clyde markham~
+Clyde Markham~
+A small, hideously ugly man sits here.
+~
+A small shrivelled man with pallid green skin and a perpetual lip-less
+grimace.  This creature is a perfect example of the Nosferatu.  
+~
+vampire~
+AK 0 0 0 0 0 bite
+0 0 0 0
+10 10 1 100
+AHMVc ABCDEFGHIJK medium flesh
+A 0
+I 0
+#1002
+samuel storing~
+Samuel Storing~
+A burly man dressed in brown tones stands here.
+~
+Obviously used to presenting a powerful front, this man seems to exude
+strength and self-confidence.  With the bearing of a natural leader, it
+appears as if this man could lead any number of causes and perhaps even has.
+~
+vampire~
+AK 0 0 0 0 0 bite
+0 0 0 0
+10 10 1 1000
+AHMVc ABCDEFGHIJK medium flesh
+A 0
+I 0
+#1003
+albion~
+Albion~
+Albion stands here smiling benevolently.
+~
+Albion is standing here, looking benevolently around.
+~
+vampire~
+A 0 0 0 0 0 none
+0 0 0 0
+10 10 1 0
+AHMVc ABCDEFGHIJK medium unknown
+A 0
+I 0
+#1004
+mudman~
+Mudman~
+The Mudman looks at you quizzically.
+~
+The Mudman is here, looking at you somewhat quizzically.
+~
+vampire~
+A 0 0 0 0 0 none
+0 0 0 0
+10 10 1 0
+AHMVc ABCDEFGHIJK medium unknown
+A 0
+I 0
+#1005
+arnotho mendez~
+Arnotho Mendez~
+Arnotho Mendez makes it quite clear what he thinks of things.
+~
+Arnotho is standing here.
+~
+vampire~
+A 0 0 0 0 0 none
+0 0 0 0
+10 10 1 0
+AHMVc ABCDEFGHIJK medium unknown
+A 0
+I 0
+#0
+
+
+
+#OBJECTS
+#1000
+dinner jacket~
+a dinner jacket~
+A black dinner jacket is here.~
+In the traditional black, this jacket speaks of style and class. Double
+breasted, complete with handkerchief and a tastefully chosen flower
+placed delicately in the button hole, the wearer of this jacket can move
+easily into high society, as readily acceptible in a ballroom as at a
+high stakes casino table.
+~
+silk~
+11 0 AK
+0 0 0 0 0
+0
+5 10000 100
+E
+--USES~
+-2~
+Q 0
+#1001
+dress shirt~
+a dress shirt~
+A dress shirt is here.~
+With a pleated front and pre-inserted black button-studs and cuff links,
+this handsome shirt is specially designed with the connoisseur in mind.
+~
+cotton~
+11 0 AD
+0 0 0 0 0
+0
+2 7500 100
+E
+--USES~
+-2~
+Q 0
+#1002
+bow tie~
+a black bow tie~
+A black, silk bow tie is here.~
+This black silk bow tie is the perfect accompaniment to a good tuxedo.
+~
+silk~
+11 0 AC
+0 0 0 0 0
+0
+1 3000 100
+E
+--USES~
+-2~
+Q 0
+#1003
+silk trousers dinner suit black~
+black trousers~
+A pair of black, silk trousers is here.~
+Stylishly cut with a ribbon of satin down the outside of each leg, these
+trousers were made to look good in.
+~
+silk~
+11 0 AF
+0 0 0 0 0
+0
+5 10000 100
+E
+--USES~
+-2~
+Q 0
+#1004
+black leather dress shoes~
+a pair of black leather dress shoes~
+A pair of black leather dress shoes.~
+A pair of black dinner dress shoes.
+~
+leather~
+11 0 AG
+0 0 0 0 0
+0
+2 15000 100
+E
+--USES~
+-2~
+Q 0
+#1005
+long black dress~
+a long black ball gown~
+A black satin ball gown is here.~
+This long, black satin dress is slit up the side to allow for much
+easier walking and to show the now traditional bit of leg. Drawing on
+the allure of the woman wearing it and heightening her looks by
+supporting and displaying even the smallest of busts to their best
+effect, this dress certainly enhances the effects of the feminine form.
+~
+satin~
+11 0 AD
+0 0 0 0 0
+0
+4 30000 100
+E
+--USES~
+-2~
+Q 0
+#1006
+high heeled dress shoes~
+a pair of high heeled dress shoes~
+A pair of high-heeled shoes is here.~
+With a glossy sheen and elegant stiletto heels, these shoes are sure to
+highlight the shape of the wearer's legs beautifully.
+~
+leather~
+11 0 AG
+0 0 0 0 0
+0
+1 7500 100
+E
+--USES~
+-2~
+Q 0
+#1007
+pearl necklace~
+a pearl necklace~
+A pearl necklace is here.~
+Hand selected pearls are strung together to make this enchanting piece
+of jewelry.
+~
+pearl~
+8 0 AC
+0 0 0 0 0
+0
+2 50000 100
+E
+--USES~
+-2~
+Q 0
+#1008
+black stockings~
+a pair of black stockings~
+A pair of black stockings is here.~
+Feel the sleek satiny stockings... ok... that's enough... I SAID ENOUGH
+ALREADY!!!
+~
+spandex~
+11 0 AF
+0 0 0 0 0
+0
+1 500 100
+E
+--USES~
+-2~
+Q 0
+#1009
+cummerbund~
+a cummerbund~
+A satin cumberbund is here.~
+A satin cummerbund is here, ready to go to the ball.
+~
+satin~
+11 0 AL
+0 0 0 0 0
+0
+1 5000 100
+E
+--USES~
+-2~
+Q 0
+#1010
+klaive~
+a klaive~
+A long, wide blade with a set of distinctly tribal sigils on the side is
+attached by no real visible means to a hilt adorned with feathers tied on
+with leather thongs.  It looks like a weapon designed to do some serious
+damage.  
+~
+A long, wide blade with a set of distinctly tribal sigils on the side is
+attached by no real visible means to a hilt adorned with feathers tied
+on with leather thongs. It looks like a weapon designed to do some
+serious damage.
+~
+silver~
+5 BGIJ AN
+2 7 1 slash 0 0
+4 50000 100
+E
+--USES~
+-2~
+Q 15
+#1020
+light revolver~
+a light revolver~
+A light revolver is here.~
+An example of a light revolver is a 38 special or a SW640.
+~
+steel~
+5 0 AN
+1 7 1021 blast BC 0
+0 0 100
+E
+--USES~
+-2~
+Q 2
+#1021
+light revolver ammo~
+ammo for a light revolver~
+Ammo for a light revolver is here.~
+This is the ammo for a light revolver.
+~
+steel~
+31 0 0
+BC C CD ABD 0
+0
+0 0 100
+E
+--USES~
+-2~
+Q 2
+#0
+
+
+
+#ROOMS
+#1000
+Storage Room~
+This is the storage room for base stuff.
+~
+0 12 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+S
+#0
+
+
+
+#RESETS
+S
+
+
+
+#SHOPS
+0
+
+
+
+#MOBPROGS
+#0
+
+#$

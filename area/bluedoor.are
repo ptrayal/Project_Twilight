@@ -1,0 +1,1538 @@
+#AREADATA
+Name The Blue Door~
+Builders Celia Opal~
+VNUMs 7001 7029
+Credits Celia~
+Security 5
+Flags F
+Price 0
+End
+
+
+
+#MOBILES
+#7001
+$f $l bartender man~
+$f~
+$f the bartender stands behind the bar dispensing drinks.
+~
+In his mid-twenties, this young man is of average height and weight. 
+Dressed in a flowing white peasant shirt, black leather pants, and a pair of
+black combat boots, the fellow fits the theme of the club perfectly.  His
+hair is worn in a long bob and has been dyed bluish-black in color.  
+~
+human~
+AB 0 50 0 0 0 punch
+EFIKN 0 0 0
+10 10 1 0
+AHMV ABCDEFGHIJK medium unknown
+A 0
+I 0
+#7002
+$f $l waitress~
+$f~
+$f wanders around the club picking up empty glasses.
+~
+Clad in a tight black dress, black tights and a pair of black Fluevog
+platforms, this waitress resembles many of the clubgoers.  Her hair, dyed
+black in color, is pinned up by a pair of white chopsticks and stands in
+stark contrast to the layers of foundation upon her face.  Wearing black
+lipstick, heavy mascara and even heavier eyeliner, she's the portrait of a
+twenty-year-old goth.  
+~
+human~
+ABC 0 50 0 0 0 punch
+EFIK 0 0 0
+10 10 2 10
+AHMV ABCDEFGHIJK medium unknown
+A 0
+I 0
+#7003
+manager Frankie~
+Frankie~
+Frankie sits at her desk, doodling on a small legal pad.
+~
+The manager of the club is surprisingly young, appearing no more than
+19-years-old.  Standing at only 5'3" tall and weighing no more than 100
+pounds, she is diminutive in size.  Her hair has been dyed a deep forest
+green and collected into a multitude of intricate braids which hang to just
+below her shoulders, covering most of her face.  Dressed in a Bauhaus
+concert t-shirt, combat boots and a black lace skirt over forest green
+tights, the young woman looks like someone you'd see on the club floor
+rather than behind a manager's desk.  Deep pools of darkness linger beneath
+her leafy-green eyes, and her head and shoulders seem bowed as if under some
+great weight.  
+~
+vampire~
+ABK DFJZc 120 0 0 0 beating
+EFGHIN ABIQR D HS
+10 10 2 200
+AHMVc ABCDEFGHIJK medium unknown
+A 0
+I 0
+#7004
+$f $l man leather young bouncer~
+$f~
+A young man wearing a leather half-trench stands here checking ID.
+~
+Approximately 25, this young man has an althletic build which is slightly
+disguised by his oversized leather coat and his long blue dreadlocks.  His
+angular face is dark in complection and marred by a small scar running
+across the bridge of his nose.  The fellow's green eyes seem to hold a "been
+there, done that" expression, which is echoed by his body language.  His
+clothing consists of the aforementioned coat, a t-shirt with "Rollins Band"
+written across the front, and a pair of army-green cargo pants tucked into
+some black combat boots.  $f holds a flashlight in his hand, helping him
+check identification in the darkness of the stairwell's landing.  
+~
+human~
+AB 0 75 0 0 0 beating
+CEHKN 0 0 0
+10 10 1 0
+AHMV ABCDEFGHIJK medium unknown
+A 0
+I 0
+#0
+
+
+
+#OBJECTS
+#7001
+bar lazy curving~
+a black marble bar~
+A black, marble bar is here.~
+This bar is done in an art deco style, fashioned into the shape of a
+long, curving "s."  There's just enough space between the bar and the wall
+for staff to move around comfortably.  Made of black marble, the sturcture
+appears much like a sinuous snake.  The surface of the bar is covered with a
+smattering of alabaster ashtrays.  
+~
+marble~
+12 SY 0
+0 1000 N 0 0 0
+0 0 100
+E
+--USES~
+-2~
+Q 0
+#7002
+chairs stools~
+a black and white chair~
+A black and white chair is positioned here.~
+Simple of design, these chairs are made of white oak that has been
+covered with a lightening stain, leaving them nearly white in color. 
+Standing higher than the average chair, each is just tall enough to allow
+patrons easy access to the bar.  Each chair is padded with a black leather
+cushion.  
+~
+wood~
+12 S 0
+10 2000 EH 0 0 0
+0 0 100
+E
+--USES~
+-2~
+Q 0
+#7003
+tables wooden~
+a black wooden table~
+A black, wooden table is here.~
+Scattered at regular intervals across the center area of the main club,
+these tables are crafted from teak and stained to a deep black.  Each table
+is accompanied by four chairs wooden chairs with a sleek white finish,
+comfortable padded with slender black cushions.  There are two white glass
+ashtrays atop each table, completing the look.  
+~
+wood~
+12 S 0
+28 4000 DN 0 0 0
+0 0 100
+E
+--USES~
+-2~
+Q 0
+#7004
+booth~
+a black velvet booth~
+A black, velvet booth is against the wall.~
+Five in all, these luxurious velvet booths are much smaller than the more
+typical variety.  Each side of the individual booths is only large enough to
+comfortably accomodate a single individual, creating a more private setting.
+The table between the seats is composed of a two hourglass-shaped blocks of
+white marble topped with a thick pane of glass.  A single ashtray of black
+glass decorates the surface of the table at each booth.  
+~
+unknown~
+12 S 0
+10 2000 FI 0 0 0
+0 0 100
+E
+--USES~
+-2~
+Q 0
+#7005
+couch velvet~
+a red velvet couch~
+A red, velvet couch is here.~
+Each of these couches boasts a trio of large, overstuffed velvet cusions.
+Standing on four wooden legs shaped like lions feet, the matching couches
+appear to be well-restored antiques.  Neither cigarette ashes nor alchohol
+stains mar the fabric, a sure sign of diligent cleaning.  
+~
+velvet~
+12 S 0
+6 1200 EHK 0 0 0
+0 0 100
+E
+--USES~
+-2~
+Q 0
+#7006
+table coffee glass~
+the coffee table~
+A small, coffee table is here, collecting nicks and scratches.~
+This small table is relatively nondescript, serving function over form. 
+Made of mahogany, the rich wood is attractive but unadorned with much
+carving or exotic joints.  A thick piece of glass protects the the surface
+of the table from rings of moisture, nicks and scratches.  
+~
+glass~
+12 S 0
+0 100 N 0 0 0
+0 0 100
+E
+--USES~
+-2~
+Q 0
+#7007
+stall bathroom toilet~
+the mahogany stall~
+A mahogany stall is here.~
+These stalls are stately, elegant, and most importantly, functional. 
+Made of richly-hued mohagany, each stall provides complete privacy.
+ 
+(ooc) "Enter stall" to use.
+~
+wood~
+29 S 0
+1000 A A 7018 0 0
+0 0 100
+E
+--USES~
+-2~
+Q 0
+#7008
+toilet~
+a porcelain toilet~
+A porcelain toilet is here for your use.~
+Clean, functional, and currently unoccupied- there is little left to be
+said.  The wooden seat provides a bit of relief from the typical cold
+porcelain varieties but, in the end, it is what it is.  
+~
+porcelain~
+12 S 0
+1 300 EH 1 0 0
+0 0 100
+E
+--USES~
+-2~
+Q 0
+#7009
+couch velvet~
+a black velvet couch~
+A black, velvet couch is here.~
+This couch is large enough to seat four people, providing a comfortable
+area to wait for the stalls to become available.  Made of lush black velvet,
+the cushions a firm and supportive.  
+~
+velvet~
+12 S 0
+4 800 EH 0 0 0
+0 0 100
+E
+--USES~
+-2~
+Q 0
+#7010
+stall mahogany~
+a mahogany stall~
+A mahogany stall is here.~
+Four mahogany stalls of simple yet elegant design stand against the
+western wall.  The edges of the stalls are nearly eight feet tall, providing
+even the most modest of gentlemen with complete privacy.  
+~
+wood~
+29 S 0
+100 B B 7019 0 0
+0 0 100
+E
+--USES~
+-2~
+Q 0
+#7011
+urinal porcelain~
+a porcelain urinal~
+A porcelain urinal is here.~
+Simple, effective, functional- these three words describe the set of
+urinals succinctly.  The only noticeable feature of the objects is that they
+appear to flush automatically.  Technology is truly a wonder.  
+
+(ooc) "use urinal" to use.  
+~
+porcelain~
+12 S 0
+6 1300 A 0 0 0
+0 0 100
+E
+--TUNONE~
+You pee in the urinal.~
+E
+--TRNONE~
+$n pees in the urinal.~
+E
+--USES~
+-1~
+Q 0
+#7012
+toilet~
+a porcelain toilet~
+A porecelain toilet is here.~
+Clean, functional, and currently unoccupied- there is little left to be
+said.  The wooden seat provides a bit of relief from the typical cold
+porcelain varieties but, in the end, it is what it is.  
+~
+porcelain~
+12 S 0
+1 350 EH 0 0 0
+0 0 100
+E
+--USES~
+-2~
+Q 0
+#7013
+column cylinder light glass~
+a glowing column~
+A glowing column made from glass and filled with water is here.~
+A truly extraodinary lighting fixture, this column is approximately three
+feet wide and fifteen feet tall in its entirety.  Its exterior is made of
+thick glass, holding untold gallons of inky black water within.  Floating at
+different heights within the cylinder are dozens upon dozens of glowing
+globes, each the size of a fist.  Apparently the globes have somehow been
+altered to affect their bouyancy, thus achieving the strange floating and
+bobbing light that covers the room.  Due to the dark water, the light
+radiates an eerie quality that is multiplied by the reflective surface of
+the marble walls, floor and ceiling.  
+~
+glass~
+1 ASY 0
+0 0 999 0 0 0
+0 0 100
+E
+--USES~
+-2~
+Q 0
+#7014
+column cylinder glass~
+a glowing column~
+A glowing column made from glass and filled with water is here.~
+Much like its twin to the east, this column is roughly three feet wide
+and fifteen feet tall.  Also like its twin, the column is made of thick
+glass within which float dozens of glowing globes at varying heights.  While
+the two share many features, however, the difference between them could not
+be more extreme.  This column's water is creamy white in color; when
+combined with the white light of the globes and the highly reflective marble
+walls, the entire chamber seems bathed in a pale glow.  
+~
+glass~
+1 ASY 0
+0 0 999 0 0 0
+0 0 100
+E
+--USES~
+-2~
+Q 0
+#7015
+coffee table~
+an enormous coffee table~
+An enormous coffee table is here.~
+This coffee table is huge, measuring roughly eight feet by eight feet. 
+Primarily formed of a 2" thick piece of glass, the table's surface has been
+sanded down to a matte finish.  The result is a glass tabletop that more
+closely resembles a piece of chiseled ice.  The legs which support the
+tabletop are also unusual; made of cut and sculpted black marble, each leg
+resembles that of a human.  Completely formed and detailed, the legs include
+every aspect of a human leg, stretching from the foot up to the knee.  
+~
+glass~
+12 S 0
+0 200 N 0 0 0
+0 0 100
+E
+--USES~
+-2~
+Q 0
+#7016
+couches black velvet~
+a black velvet couch~
+A nice black velvet couch is here.~
+Large enough to seat six people, each of these couches looks extremely
+comfortable.  Generously stuffed cushions of black velvet beckon invitingly
+to any who wish to chat, negotiate, flirt, or even sleep.  Given the size of
+the things, one could only guess at the amount of change that's been lost
+within over time.  
+~
+unknown~
+12 0 0
+24 5000 EHK 0 0 0
+0 0 100
+E
+--USES~
+-2~
+Q 0
+#7017
+payphone phone~
+a payphone receiver~
+A payphone is here.~
+A traditional payphone in all respects, the machine is mounted to the
+wall greedily anticipating the jingle of change.  A thick phonebook is
+attached to the base unit by a chain.  Like all payphone phonebooks, every
+page and number is present except for the one you need, which happens to be
+torn out.  
+~
+plastic~
+30 S 0
+0 0 0 0 0
+0
+0 0 100
+E
+--USES~
+-2~
+Q 0
+#7018
+little desk black stately~
+a small black desk~
+A little black desk is here.~
+This little desk is made of wood and covered with black lacquer.  The top
+is protected by a deep green velvet blotter, though it is difficult to see
+beneath the clutter of papers that cover it.  A bottle of black nail polish
+sits on the lefthand side atop a yellow legal pad covered in doodles.  
+~
+wood~
+12 S 0
+1 300 D 0 0 0
+0 0 100
+E
+--USES~
+-2~
+Q 0
+#7019
+chair armchair wooden~
+a wooden armchair~
+A wooden armchair is here.~
+While not exactly built for comfort, this chair appears to be one step
+better than standing.  Made of hard, varnished wood, the seat is strictly a
+courtesy for anyone who happens to have business with the manager.  
+~
+wood~
+12 S 0
+1 300 E 0 0 0
+0 0 100
+E
+--USES~
+-2~
+Q 0
+#7020
+matress boxspring bed~
+a worn mattress~
+A worn mattress is here.~
+This plain mattress shows no signs of the luxury evident in the rest of
+the club.  Appearing to be about ten years old, the bed lacks even a simple
+frame; instead, it has been placed directly on the floor.  While the sheets
+and quilt look clean, their black color has faded to a dark grey over time. 
+~
+cloth~
+12 S 0
+2 500 EHK 0 0 0
+0 0 100
+E
+--USES~
+-2~
+Q 0
+#7021
+chair padded wooden~
+a padded chair~
+A padded chair is here.~
+These chairs are of modern Scandinavian design, made of stained oak.  The
+back and seat are solid wood, both featuring well-padded black leather
+cushions.  Narrow arms extend from the midpoint of the back, providing
+additional support.  
+~
+wood~
+12 S 0
+4 1200 EH 0 0 0
+0 0 100
+E
+--USES~
+-2~
+Q 0
+#7022
+table glass~
+a glass table~
+A glass, patio table is here.~
+Made of a simple design similar to that of patio furniture, this table is
+composed of a stainless steel base with a slab of thick glass set into the
+top.  The steel base rings the edges, preventing the glass from sliding.  
+~
+glass~
+12 SY 0
+0 500 N 0 0 0
+0 0 100
+E
+--USES~
+-2~
+Q 0
+#7023
+vodka martini dry glass~
+a dry martini~
+A martini glass filled with a dry martini is here.~
+A typical martini glass, the object has a long neck, a round base, and a
+wide mouth.  It appears large enough to hold ten average-sized mouthfulls,
+depeding on the mouth in question.  
+[ooc: use martini]
+~
+glass~
+17 U AO
+10 10 'vodka' 0 0 0
+0 200 100
+E
+--TUNONE~
+you gaze off into the mirrored depths of a dry martini.~
+E
+--TUSELF~
+you take a sip of vodka from a dry martini.~
+E
+--TUOTH~
+you splash vodka from your dry martini all over $N.~
+E
+--TRNONE~
+$n stares into the mirrored depths of their dry martini as if in a daze.~
+E
+--TRSELF~
+$n takes a sip of vodka from a dry martini.~
+E
+--TROTH~
+$n splashes vodka from their dry martini all over $N.~
+E
+--TVOTH~
+$n splashes vodka from their dry martini all over you.~
+E
+--TRUSE~
+$n turns up the bottom of their dry martini trying to get the last drop of vodka out.~
+E
+--TUUSE~
+you turn up the bottom of your dry martini trying to get the last drop.~
+E
+--USES~
+6~
+Q 0
+#7024
+rum coke~
+a glass of rum and coke~
+A glass filled with rum and coke is here.~
+Served in a crystal 'old-fashioned' glass, this drink is exactly what the
+name implies- rum and coke.  The alcohol content is slightly higher than the
+standard variety, but two slices of lime prevent the taste from becoming too
+overbearing.  
+[ooc: use rum]
+~
+unknown~
+17 UY AO
+10 10 'rum' 0 0 0
+0 200 100
+E
+--TUNONE~
+you gaze off into the mirrored depths of a glass of rum and coke.~
+E
+--TUSELF~
+you take a sip of rum from your rum and coke.~
+E
+--TUOTH~
+you splash rum from your rum and coke all over $N.~
+E
+--TRNONE~
+$n stares nto the mirrored depths of their rum and coke.~
+E
+--TRSELF~
+$n takes a sip of rum from their rum and coke.~
+E
+--TROTH~
+$n splashes rum from their rum and coke all over $N.~
+E
+--TVOTH~
+$n splashes rum from their rum and coke all over you.~
+E
+--TRUSE~
+$n turns up the bottom of their rum and coke trying to get the last drop of rum out.~
+E
+--TUUSE~
+you turn up the bottom of your rum and coke trying to get the last drop.~
+E
+--USES~
+6~
+Q 0
+#7025
+shot Irish whisky~
+a shot of Irish whisky~
+A shot of Irish whisky is here.~
+This little shotglass holds just enough for one bracing jolt of whisky. 
+Made of glass with a narrow base that widens at the top, the small drink
+delivery device has an etched line circling the area just below the rim.  
+[ooc: use whisky]
+~
+glass~
+17 UY AO
+1 1 'whisky' 0 0 0
+0 200 100
+E
+--TUNONE~
+you gaze off into the mirrored depths of a shot of Irish whisky.~
+E
+--TUSELF~
+you gulp down your shot of Irish whisky.~
+E
+--TUOTH~
+you splash whisky from your shot glass all over $N.~
+E
+--TRNONE~
+$n stares into the mirrored depths of their shot of Irish whisky.~
+E
+--TRSELF~
+$n gulps down their shot of Irish whisky.~
+E
+--TROTH~
+$n splashes whisky from their shot glass all over $N.~
+E
+--TVOTH~
+$n splashes whisky from their shot glass all over you.~
+E
+--TRUSE~
+$n turns up the bottom of their shot glass trying to get the last drop of whisky out.~
+E
+--TUUSE~
+you turn up the bottom of your shot glass trying to get the last drop.~
+E
+--USES~
+1~
+Q 0
+#7026
+peach schnapps~
+a glass of peach schnapps~
+A cocktail glass with peach schnapps is here.~
+This little coctail glass is made for sipping rather than gulping, the
+rim turned slightly outward to guide the beverage within to the tastebuds at
+the front of the tongue.  
+[ooc: use glass]
+~
+glass~
+17 UY AO
+10 10 'sherry' 0 0 0
+0 200 100
+E
+--TUNONE~
+you play with the little umbrella sticking out of your glass.~
+E
+--TUSELF~
+you take a sip of sherry from your glass.~
+E
+--TUOTH~
+you splash sherry from your glass all over $N.~
+E
+--TRNONE~
+$n plays with the little umbrella placed within their glass of peach schnapps.~
+E
+--TRSELF~
+$n takes a sip of sherry from their glass.~
+E
+--TROTH~
+$n splashes sherry from their glass all over $N.~
+E
+--TVOTH~
+$n splashes sherry from their glass all over you.~
+E
+--TRUSE~
+$n turns up the bottom of their glass trying to get the last drop of sherry out.~
+E
+--TUUSE~
+you turn up the bottom of your glass trying to get the last drop.~
+E
+--USES~
+6~
+Q 0
+#7027
+champagne flute Blanc Noir~
+a flute of Blanc de Noir champagne~
+A wine flute of Blanc de Noir champagne is here.~
+Featuring a long stem with a tall, narrow, tapered cup, this champagne
+flute is crafted of fine crystal.  Delicate in appearance, the flute is
+nevertheless resilient and resistant to most forms of abuse.  
+~
+unknown~
+17 UY AO
+10 10 'champagne' 0 0 0
+0 750 100
+E
+--USES~
+-2~
+Q 0
+#7028
+coffee~
+a cup of coffee~
+A cup of coffee is here.~
+This large pottery cup has been fire-glazed to ensure maximum durability.
+Painted across its surface are blue doors of varying styles and sizes. 
+Lacking any chips or cracks, the cup has obviously been well-cared for.  
+[ooc: use cup]
+~
+pottery~
+17 UY AO
+15 15 'coffee' 0 0 0
+0 50 100
+E
+--TUNONE~
+you gaze off into the mirrored depths of a cup of coffee.~
+E
+--TUSELF~
+you take a sip from your cup of coffee.~
+E
+--TUOTH~
+you splash hot coffee from your cup all over $N.~
+E
+--TRNONE~
+$n stares into the mirrored depths of their cup of coffee.~
+E
+--TRSELF~
+$n takes a sip from their cup of coffee.~
+E
+--TROTH~
+$n splashes hot coffee from their cup all over $N.~
+E
+--TVOTH~
+$n splashes hot coffee from their cup all over you.~
+E
+--TRUSE~
+$n turns up the bottom of their cup trying to get the last drop of coffee out.~
+E
+--TUUSE~
+you turn up the bottom of your cup trying to get the last drop.~
+E
+--USES~
+6~
+Q 0
+#7029
+wooden large stage platform~
+a large wooden stage~
+A large wooden stage is positioned here.~
+A large half-circle in shape, this stage stands approximately three feet
+above the floor, accessible via two metal stairways located at the edges of
+the platform.  The stage's surface has been painted with black, fire
+retardent paint.  A large curtain at the back of the platform leads to the
+backstage area.  
+~
+wood~
+12 S 0
+20 6000 BEH 0 0 0
+0 0 100
+E
+--USES~
+-2~
+Q 0
+#0
+
+
+
+#ROOMS
+#7001
+The Alley's End~
+The alley reaches its end here; very shallow and only ten feet wide, it
+is little more than a narrow culvert between buildings.  The paement is
+cloaked in shadows for the majority of the day, being shielded from the sun
+by the surrounding buildings.  No streetlamps are evident other than those
+on the main street, though enough indirect light is shed from the
+thoroughfare to illuminate a sunken stairwell descending to a basement
+entrance just below.  The alley seems strangely clean of the garbage that
+typically decorates such areas.  
+~
+0 4 1
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+0 0 7047
+D5
+(none)~
+(null)~
+0 0 7002
+M 0 H 100
+S
+#7002
+At the Base of a Short Stairway~
+A set of twelve steps lead down from a dark alley above, reaching a
+small, even darker landing here.  A slim band of colored light seeps from a
+crack beneath a doorway in the west wall, barely providing enough
+luminescence to make out the door's blue color.  No signs are displayed
+anywhere in the little landing, but the distinctive sound of music emanating
+from behind the doorway seems to indicate a club of some kind.  
+~
+0 0 1
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D3
+(none)~
+(null)~
+A 0 7003
+D4
+(none)~
+(null)~
+0 0 7001
+M 0 H 100
+S
+#7003
+Within the "Blue Door"~
+The interior of this moderate-sized building is decorated in a strange
+style; the walls seem to be made of black marble with shallow white veins
+and their surfaces are lined with surreal, hynotic murals.  Vaulted ceilings
+supported by neo-classical granite vambraces arch high overhead into the
+space where the second story of the structure must once have been.  The
+floor looks something like a minimalistic mosaic, with circles of black
+marble set into a white marble base.  Along the northern wall can be seen a
+long, curving bar fashioned into the shape of a lazy "s" adorned with black
+and white chairs.  A series of black velvet booths line the southern wall of
+the club, while several black wooden tables with white chairs pepper the
+space between said booths and the bar.  To the west lies what appears to be
+a dance floor, while an arched doorway to the south leads down a narrow
+hallway.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+A 0 7002
+D2
+(none)~
+(null)~
+0 0 7006
+D3
+(none)~
+(null)~
+0 0 7004
+M 0 H 100
+S
+#7004
+The Blue Door Dance Floor~
+This extension of the club to the east is similar in features, though the
+floor pattern of black marble circles within a white base has been reversed,
+giving a brighter feel to the area.  Overhead, a multitude of floodlights
+have been suspended from the ceiling by chains set at alternating lengths,
+appearing much like an extremely bright night sky.  The surface of the floor
+is barren of furniture, ostensibly to provide room for dancing.  A raised
+half-circle made of mahogany along the west wall forms a stage for live
+performers and disc jockeys alike, the backdrop a black velvet curtain
+festooned with white Christmas lights, adding to the celestial feel.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+0 0 7003
+D3
+(none)~
+(null)~
+AB 0 7005
+M 0 H 100
+S
+#7005
+Backstage- Behind the Velvet Curtain~
+The area behind the stage, while large, also happens to be cluttered with
+electrical boxes, rigging, cables, and a variety of other items used to
+power the club.  A catwalk overhead at the edge of the curtain features a
+myriad of lighting switches and pulleys, extending the cramped feel of the
+area.  In the middle of the floor, amidst all the paraphenalia, a pair of
+red velvet couches have been placed on either side of mahogany coffee table.
+The table's surface is covered with glass, and atop it sit several onyx
+ashtrays.  Apparently this section of the club serves as a staging area, a
+green room and a dressing room all at once.  
+~
+0 24 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+AB 0 7004
+M 0 H 100
+S
+#7006
+A Dark Hallway~
+The interior of this hallway is narrow, just wide enough for two people
+to squeeze past one another, yet the ceiling arches nearly fifteen feet
+overhead.  Small globes have been suspended by chains from the apex of the
+arch, giving off just enough light to prevent bumping into walls.  The
+walls, like the rest of the club, are made of white-veined black marble,
+though the floor is composed of a deep red marble, its murky surface
+reflecting dim points of light every few paces.  A mahogany door on the west
+wall is emblazoned with a rose, and the occasional entrance and departure of
+women suggests it to be the ladies' room.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 0 7003
+D2
+(none)~
+(null)~
+0 0 7008
+D3
+(none)~
+(null)~
+A 0 7007
+M 0 H 100
+S
+#7007
+The Ladies' Water Closet~
+The interior of this room stands in stark contrast to the rest of the
+club's interior.  The floors, walls and ceilings have all been covered with
+slates of milky white marble, and a large salmon-hued chandolier hangs
+overhead, casting a deep pink glow about the chamber.  A black velvet couch
+rests against the western wall, plump with overstuffed cushions, while a
+long counter of rose-colored marble extends forth from the southern wall,
+its surface featuring four polished chrome sinks.  Strangely, the customary
+mirror is missing from the wall above the counter, though a small vanity
+mirror has been attached to the countertop next to each sink via an
+intricate steel chain.  The stalls themselves, six in all, appear to be made
+of rich mahogany and lie against the northern wall.  A large pedestal near
+the doorway holds a bowl of rose petals, filling the air with a rich
+fragrance.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+A 0 7006
+M 0 H 100
+S
+#7008
+A Dim Hallway~
+This stretch of the hallway is nearly identical to its northern section,
+featuring a high-arching ceiling peppered with glowing globes, walls of
+white-veined black marble, and a floor of dusky red marble slates.  Despite
+the dim light cast by the globes, however, the hallway seems brighter than
+it is to the north; a large pool of light seeps into the hall from a chamber
+at its southern end.  Additionally, a mahogany door set into the west wall
+has been emblazoned with a chain.  From time to time, a man can be seen
+coming or going from the room, probably designating it as the men's room.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 0 7006
+D2
+(none)~
+(null)~
+0 0 7010
+D3
+(none)~
+(null)~
+A 0 7009
+M 0 H 100
+S
+#7009
+The Gentlemen's Water Closet~
+This spacious chamber differs slightly from the rest of the club, its
+walls and floors made of light grey marble.  Like the hallway outside, the
+ceiling arches roughly fifteen feet overhead, though it sprouts a chandolier
+made of what appears to be fused barbed-wire; affixed along its edges are a
+series of electric candles, each giving off a strong white light.  The
+northern edge of the room features a a black marble counter dimpled with
+four polished chrome sinks.  For some reason, a small silver vanity mirror
+has been attached to the countertop next to each basin via a steel chain,
+apparently in place of a traditional wall-mounted mirror.  Instead, the wall
+above the counter has been covered with a sculpture of interwoven chains
+forming a series of men in women in different poses.  A series of white
+porcelain urinals line the southern wall, while the four stalls stand
+against the western wall.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+A 0 7008
+M 0 H 100
+S
+#7010
+The Gallery Macabre~
+Almost cavernous in size, this square chamber features rather interesting
+lighting.  In the center of the room stands a glass column which stretches
+from floor to ceiling.  The column is filled with water, and a series of
+glowing bulbs float within at varying heights due to differing bouyancy. 
+The walls, floor and ceiling are all covered in black marble polished to a
+glistening sheen which both absorbs and reflects the light cast from the
+column.  Along the walls have been mounted a collection of strange
+PAINTINGS, each lit from beneath by a small luminescent tube.  A doorway to
+the east has been covered with a black velvet curtain, while hallways lead
+off to both the north and west.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+E
+painting3~
+A darkly colored oil painting, the scene is that of a body within a
+brightly-polished casket.  Both halves of the lid are open, displaying
+the corpse within in full detail.  Clearly a woman, she is clad in black and
+appears to be holding herself, as if to keep from moving.  A pained
+expression seems to be etched into her pallid face, though the actual
+features of the face are obscured by shadows from the lid.  Scattered across
+the floor are fragments of a broken vase and thirteen lilies.  
+ 
+A brass plaque at the base reads, "Still Life #1" by Frankie Molloy.
+~
+E
+painting2~
+Done in transparent watercolor, this painting seems to be done in the
+style of Bev Doolittle "camoflauge art" with a dark twist.  At first
+glimpse, the work appears to be a landscape of a dim forest clearing.  After
+staring at it for a moment or two, the truth begins to present itself;
+everywhere are leering faces.  Clumps of grass meet each other and the
+shadows they cast form faces.  Jutting clusters of leaves in the trees form
+scowling expressions.  Clouds, rocks, and even a small puddle harbor images
+of angry spectres, their eyes all fixed on the viewer.  
+ 
+A brass plaque at the base reads, "Alone in a Crowd" by Frankie Molloy.
+~
+E
+painting1~
+This oil painting features a series of superimposed images.  The most
+noticeable is that of a female child of approximately seven years sitting in
+a dark bedroom.  Laid atop the child is a filmy figure of a woman on her
+knees with her hands pressed together.  A third figure, almost bestial in
+appearance, overlays the woman.  Its arms are raised toward the sky, though
+it is difficult to tell whether it is pleading or cursing due to its twisted
+expression.
+ 
+A brass plaque at the base reads, "Birth, Life, Death" by Frankie Molloy.
+~
+E
+paintings~
+(ooc) To view the paintings: look painting1, look painting2, etc.
+~
+D0
+(none)~
+(null)~
+0 0 7008
+D1
+(none)~
+(null)~
+A 0 7012
+D3
+(none)~
+(null)~
+0 0 7011
+M 0 H 100
+S
+#7011
+The Visitors' Gallery~
+The design of this room greatly resembles that of the gallery to the
+east, though the the coloration of the room's marble is ivory-hued rather
+than the oppressive black and the column at its center is filled with milky-
+white water rather than clear liquid.  It almost seems as if one is walking
+from night to day, nightmare to dream.  Another difference lies in the
+artwork lining its walls; rather than the stark, surreal works of Gallery
+Macabre, the PAINTINGS adorning this chamber vary greatly in style, quality
+and mood.  Upon closer examination, the brass plaques beneath the artwork
+feature names in addition to the titles, each name different than the name
+in the Gallery Macabre as well as the others in this room.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+E
+paintings~
+(ooc) The paintings in this room are made by players.  If your character
+is an artist, you can present your paintings and/or sculptures to the club's
+owner, Frankie.  Let an immortal know you are interested in soliciting a
+piece of art, and they'll switch into Frankie and roleplay the scene with
+you.  Before anything can be added to the Visitor's Gallery, it must be
+described in a fashion similar to the paintings in the Gallery Macabre. 
+While it's not necessary to format your description, please proofread it
+before submitting the piece.  Objects displayed in the Visitor's Gallery
+will go up for sale, so it is also important for you to set a minimum price.
+Anyone wishing to buy a piece of work can contact an immortal, who will then
+(again via roleplay in Frankie's lovely form) copy the description to an
+object and remove its description from the room.  Hopefully this will give
+all of you aspiring artists out there a reason to practice your craft!  =) 
+~
+D1
+(none)~
+(null)~
+0 0 7010
+M 0 H 100
+S
+#7012
+The Base of a Spiral Staircase~
+This little nook is dominated by a massive black ironwrought spiral
+staircase that extends to the second floor of the club.  The posts of the
+staircase are cast in the form of human legs, while the railings appear to
+be a series of forearms connected at the elbow, with each hand grasping
+another to form a continuous chain.  The steps feature a series of
+footprints set into the iron that appear to be climbing the stairs.  The
+base of the stairway is blocked with a black velvet rope from which hangs a
+sign reading, "Members Only."  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D3
+(none)~
+(null)~
+A 0 7010
+D4
+(none)~
+(null)~
+0 0 7013
+M 0 H 100
+S
+#7013
+A Sitting room~
+The interior of this room is both spacious and cozy at the same time. 
+While large in size, the bulk of floorspace is taken up by four large black
+velvet couches.  In the center of the room rests an enormous coffee table,
+its legs made of marble and fashioned into the shapes of human legs, much
+like the staircase below.  Atop the legs sits a large pane of thick glass,
+though it appears to have been sanded to the point where it gives no
+reflection.  A pair of large bay windows have been set into the eastern
+wall, though each features a set of thick stainless steel shutters, little
+more than decorative metal sheets.  An official-looking door stands along
+the western wall, a sign on it reading "Manager- Francine "Frankie" Molloy."
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D3
+(none)~
+(null)~
+A 0 7015
+D5
+(none)~
+(null)~
+0 0 7012
+M 0 H 100
+S
+#7014
+A Dark Bedchamber~
+Strangely, the interior in this room in no way resembles the rest of the
+club; its furnishings are very simple and utilitarian.  A mattress set atop
+a boxspring, which in turn has been set upon the floor, serves as the only
+visible bed.  A clothier's display rack in the corner, along with a stack of
+painted milk crates, seem to be where all of the inhabitant's clothing is
+stored.  The majority of said clothing looks very "goth" in nature,
+featuring such musical groups as black lace skirts, peasant shirts, and
+thrift-store cardigans.  The walls are decorated with a smattering of
+posters depicting such musical groups as Bauhaus and The Smiths and
+postcards featuring various pieces of classic art.  A doorway in the
+northern wall stands slightly ajar, while a door to the east leads back to
+the office.  Due to its location in the center of the building, the room
+lacks even a single window.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+AB 0 7016
+D1
+(none)~
+(null)~
+A 0 7015
+M 0 H 100
+S
+#7015
+A Dimly-Lit Office~
+Lit only by a single low-wattage lamp atop a stately black-lacquered
+desk, the small details of the office's decor are cloaked in shadows.  The
+muted forms of bookcases line the northern and southern walls and the dim
+silhouette of a plush armchair rests in the southeast corner.  Two other
+chairs rest on either side of the desk, one for management and the other for
+visitors.  Of particular interest is a black velvet curtain hanging along
+the western wall, a corner of which has fallen awkwardly, revealing what
+appears to be a steel door.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+A 0 7013
+D3
+(none)~
+(null)~
+A 0 7014
+M 0 H 100
+S
+#7016
+An Artist's Studio~
+Clearly a working studio, this small room is both well-lit and
+well-organized.  A wide set of steel shelves rests against the eastern wall,
+its surfaces stacked with compressed charcoal, watercolors, oil paints, and
+a variety of tools.  A number of paint palettes are visible soaking in large
+plastic buckets full of water in the northeast corner, and seven easels
+stand against the western wall holding works in progress.  Also evident are
+a series of mannequins in various poses standing beneath a large array of
+lights in the center of the room, apparently for use as models for a figure
+study.  On the northern wall lies a thickly padded door, though the muted
+sound of music from the club still manages to slip through the sound-proofed
+surface.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+AB 0 7017
+D2
+(none)~
+(null)~
+AB 0 7014
+M 0 H 100
+S
+#7017
+An Airy Balcony~
+A small BALCONY spreads forth from the doorway to the south, overlooking
+the main room of the Blue Door below.  An elegant glass table, round in
+shape, takes up the bulk of the balcony's space, flanked on each side by a
+padded wooden chair.  A tall air filter in the corner hums quietly while
+attempting to clear the area of cigarette smoke wafting up from the club,
+though it seems to be outmatched by the sheer volume of said smoke.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+E
+balcony~
+(ooc) Looking "down" will allow you to see what's going on in the club in
+real-time.  
+~
+D2
+(none)~
+(null)~
+AB 0 7016
+D5
+You look over the edge of the balcony at the club below.
+~
+(null)~
+BCFN 0 7003
+M 0 H 100
+S
+#7018
+Within a Mahogany Stall~
+The interior of this stall is much like the exterior, with four important
+differences: a toilet, a toilet paper dispenser, a seat cover dispenser, and
+a lidded can for disposing of certain products.  The floor is spotlessly
+clean, as is every aspect of the stall.  The two dispensers appear to be
+full of their respective tissues, and the stainless steel of the lidded
+cannister gleams brightly.  
+~
+0 2056 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D2
+(none)~
+(null)~
+AB 0 7007
+M 0 H 100
+S
+#7019
+Within a Mahogany Stall~
+The interior stall is much like the exterior, with four important
+differences: a toilet, a toilet paper dispenser, a seat cover dispenser, and
+a small condom machine.  The floor is spotlessly clean, as is every aspect
+of the stall.  The toilet paper and seat cover dispensers both seem to be
+fully stocked, though regrettably, the condom machine bears a sticker
+reading "Out of Service."  
+~
+0 2056 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+A 0 7009
+M 0 H 100
+S
+#0
+
+
+
+#RESETS
+D 0 7004 3 3
+D 0 7005 1 3
+D 0 7014 0 3
+D 0 7016 0 3
+D 0 7016 2 3
+D 0 7017 2 3
+D 0 7017 5 8230
+D 0 7018 2 3
+M 1 7004 1 7002 1
+O 0 7004 0 7003
+O 0 7003 0 7003
+O 0 7002 0 7003
+O 0 7001 0 7003
+M 1 7002 1 7003 1
+M 1 7001 1 7003 1
+G 0 7023 0
+G 0 7024 0
+G 0 7025 0
+G 0 7026 0
+G 0 7027 0
+G 0 7028 0
+O 0 7029 0 7004
+O 0 7006 0 7005
+O 0 7005 0 7005
+O 0 7017 0 7006
+O 0 7009 0 7007
+O 0 7007 0 7007
+O 0 7011 0 7009
+O 0 7010 0 7009
+O 0 7013 0 7010
+O 0 7014 0 7011
+O 0 7015 0 7013
+O 0 7016 0 7013
+O 0 7020 0 7014
+O 0 7019 0 7015
+O 0 7018 0 7015
+M 1 7003 1 7015 1
+O 0 7021 0 7017
+O 0 7022 0 7017
+O 0 7008 0 7018
+O 0 7012 0 7019
+S
+
+
+
+#SHOPS
+7001 17 19 0 0 0 100 0 0 23 CDEGIJLM
+0
+
+
+
+#MOBPROGS
+#0
+
+#$

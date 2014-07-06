@@ -1,0 +1,8 @@
+#!/bin/csh
+
+cd ~/ptmud/area/
+
+if( -e 'core' ) echo "The mud has left a core dump.\n"
+endif
+else echo "To our knowledge, the mud has not crashed.\n"
+endif

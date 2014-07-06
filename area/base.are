@@ -1,0 +1,789 @@
+#AREADATA
+Name [STAFF] Standard Area~
+Builders None~
+VNUMs 1 200
+Credits [STAFF]~
+Security 9
+Flags I
+Price 0
+End
+
+
+
+#MOBILES
+#5
+$f $l~
+$f $l~
+$f $l wanders past.
+~
+$f wanders past.
+~
+human~
+AC 0 25 0 0 0 punch
+0 0 0 0
+10 10 3 0
+AHMV ABCDEFGHIJK medium flesh
+A 0
+I 0
+#6
+stray dog~
+a stray dog~
+A stray dog stands here sniffing at the ground.
+~
+This rather mangy looking dog appears to be mutt mix of a dalmation and
+a hound of some type.  Standing around three feet tall, and a rather
+scrawny yet lightly muscled build this dog appears to be slowly starving
+to death.
+~
+dog~
+AT 0 50 0 0 0 claw
+H 0 0 0
+10 10 1 0
+AGV ACDEFHJKUV large flesh
+A FSab
+I 0
+#7
+stray cat~
+a stray cat~
+A stray cat wanders around aimlessly here.
+~
+Standing no more than a foot tall, this all black cat with it's slightly
+yellowish eyes stare out at the world with what appears to be an aura of
+caution.
+~
+cat~
+AT Z 50 0 0 0 claw
+FH 0 0 0
+10 10 2 0
+AGV ACDEFHJKQUV medium flesh
+A FSab
+I 0
+#8
+song bird~
+a small song bird~
+A small song bird flutters about here and there.
+~
+This small bird is of a brownish color and seems to be totally content
+to hop about and flutter here and there as it makes it's funny squawks
+from time to time.
+~
+song bird~
+AT T 25 0 0 0 peck
+FH 0 0 0
+10 10 0 0
+AGW ACDEFHKP medium flesh
+A FSab
+I 0
+#9
+glass elemental~
+a glass elemental~
+A glass elemental passes by.
+~
+Made completely out of glass, this almost humanoid figure darts around
+in a playfull manner, only stopping from time to time to carefully pat
+one of it's glass panels.
+~
+human~
+AT 0 75 0 0 0 pierce
+0 LQR HJ E
+10 10 0 0
+AHMV ABCDEFGHIJK large glass
+A FSab
+I 0
+#10
+concrete elemental~
+a concrete elemental~
+A concrete elemental passes by.
+~
+Made completely out of concrete, this almost humanoid figure darts around
+in a playfull manner, only stopping from time to time to carefully pat
+one of it's concrete panels.
+~
+human~
+AT 0 75 0 0 0 crush
+0 LQR FGI K
+10 10 0 0
+AHMV ABCDEFGHIJK huge concrete
+A FSab
+I 0
+#11
+electricity elemental~
+an electricity elemental~
+An electricity elemental passes by.
+~
+Almost invisible, this group of electical sparks seems more like a
+living "Jacobs Ladder" than an actual entity.  It seemingly floats
+through the air and swims through many objects here and there, better
+not get too close.
+~
+human~
+AT T 75 0 0 0 shock
+0 HJLQX FGO RYZ
+10 10 0 0
+AHMV ABCDEFGHIJK large unknown
+A FSab
+I 0
+#0
+
+
+
+#OBJECTS
+#1
+long cloak~
+a long cloak~
+A long cloak to hide your nakedness lies here.~
+A long, cotton cloak.~
+cotton~
+9 0 AK
+0 0 0 0 2 0
+0 0 100
+E
+--USES~
+-2~
+Q 0
+#2
+one 1 dollar~
+one dollar bill~
+A one dollar bill moves a little in the breeze.~
+A one dollar USA treasury note.~
+paper~
+20 0 AO
+0 1 0 0 0 0
+0 0 100
+E
+--USES~
+-2~
+Q 0
+#3
+dollars some pile~
+a pile of cash~
+A pile of dollar bills lies here.~
+A one dollar USA treasury note.~
+paper~
+20 0 AO
+0 0 0 0 0 0
+0 0 100
+E
+--USES~
+-2~
+Q 0
+#4
+cent penny coin~
+a one cent coin~
+A penny hides on the ground here.~
+A copper penny.~
+alloy~
+20 0 AO
+1 0 0 0 0 0
+0 0 100
+E
+--USES~
+-2~
+Q 0
+#5
+cents some coins~
+a pile of coins~
+A pile of coins in various denominations lies here.~
+A pile of copper and silver coins.~
+alloy~
+20 0 AO
+0 0 0 0 0 0
+0 0 100
+E
+--USES~
+-2~
+Q 0
+#6
+money pile cash~
+a pile of cash~
+A pile of money lies here, I wonder if it belongs to anyone.~
+A pile of money.~
+paper~
+20 0 AO
+0 0 0 0 0 0
+0 0 100
+E
+--USES~
+-2~
+Q 0
+#10
+corpse npc~
+the corpse of %s~
+the corpse of %s lies here.~
+This is the corpose of %s.~
+flesh~
+23 0 AO
+0 0 0 0 0
+0
+10 0 100
+E
+--USES~
+-2~
+Q 0
+#11
+corpse pc~
+the corpse of %s~
+the corpse of %s lies here.~
+This is the corpse of %s.~
+flesh~
+23 0 AO
+0 0 0 0 0
+0
+10 0 100
+E
+--USES~
+-2~
+Q 0
+#12
+severed head~
+the severed head of %s~
+the severed head of %s lies here.~
+The severed head of %s.~
+flesh~
+23 0 AO
+0 0 0 0 0
+0
+2 0 100
+E
+--USES~
+-2~
+Q 0
+#13
+heart torn dripping~
+the dripping heart of %s~
+the dripping and torn out heart of %s lies here.~
+The bloody and dripping heart of %s.~
+flesh~
+23 0 AO
+0 0 0 0 0
+0
+2 0 100
+E
+--USES~
+-2~
+Q 0
+#14
+arm sliced~
+the sliced off arm of %s~
+the sliced off arm of %s lies here.~
+The severed arm of %s.~
+flesh~
+23 0 AO
+0 0 0 0 0
+0
+4 0 100
+E
+--USES~
+-2~
+Q 0
+#15
+leg sliced~
+the sliced off leg of %s~
+the sliced off leg of %s lies here.~
+The sliced leg of %s.~
+flesh~
+23 0 AO
+0 0 0 0 0
+0
+6 0 100
+E
+--USES~
+-2~
+Q 0
+#16
+spilled guts innards~
+the innards of %s~
+the guts of %s have been spilled here.~
+The guts of %s.~
+flesh~
+23 0 AO
+0 0 0 0 0
+0
+5 0 100
+E
+--USES~
+-2~
+Q 0
+#17
+brain wobbling spattered~
+the wobbling bits of %s's brain~
+the brain of %s has been splattered about here.~
+The splattered brains of %s.~
+flesh~
+23 0 AO
+0 0 0 0 0
+0
+3 0 100
+E
+--USES~
+-2~
+Q 0
+#20
+gruel nourishing bland bowl~
+a small bowl of bland gruel~
+A bowl of grey, mostly tasteless but highly nourishing gruel rests here, steamin
+g gently.~
+A bowl of steaming gruel.~
+bread~
+19 0 A
+100 100 0 0 0 0
+1 0 100
+E
+--USES~
+-2~
+Q 0
+#21
+dummy object~
+a dummy object~
+Dummy object is used for loading non-existent objects~
+If you see this, please erport it!~
+paper~
+13 0 0
+0 0 0 0 0
+0
+0 0 100
+E
+--USES~
+-2~
+Q 0
+#22
+doors %s~
+an open door~
+An open %s door~
+The door gapes, allowing entrance into the %s.
+~
+steel~
+29 0 0
+-1 0 0 0 0 0
+5000 0 100
+E
+--USES~
+-2~
+Q 0
+#23
+newspaper %s~
+%s newspaper~
+A newspaper declares itself to be "%s".~
+The newsprint tells the story, starkly drawn in black and white. Today's
+news quickly becoming tomorrows garbage, as the hot topics become the
+wrappings for fish and chips or the linings of litter boxes.
+~
+paper~
+28 N AO
+0 0 0 0 0
+0
+2 1 100
+E
+--USES~
+-2~
+Q 4
+#24
+puddle %s liquid %s~
+a puddle of %s liquid~
+A puddle of %s liquid pools here.~
+A puddle of $s liquid sits here.
+~
+unknown~
+13 0 0
+0 0 0 0 0
+0
+0 0 100
+E
+--USES~
+-2~
+Q 2
+#25
+%s liquid %s~
+some %s liquid~
+Some %s liquid pools here.~
+A %s liquid ripples and sloshes as the container moves.
+~
+unknown~
+13 0 0
+0 0 0 0 0
+0
+0 0 100
+E
+--USES~
+-2~
+Q 2
+#50
+mobile phone~
+a sleek little mobile phone~
+A small, portable phone twinkles its display quietly.~
+A small, portable phone.~
+plastic~
+30 0 AO
+0 0 0 0 0
+0
+1 0 100
+E
+--USES~
+-2~
+Q 0
+#53
+bomb~
+a bomb~
+A bomb ticks quietly~
+A bomb sits here.~
+uranium~
+32 0 AO
+AB 0 0 0 0
+0
+50 5000 100
+E
+--USES~
+-2~
+Q 0
+#99
+book poetry dsarky~
+desc a book of poetry~
+A poorly made exercise book rests here.~
+An orange and black striped exercise book with pictures taped to the
+covers sits here. Inside the front cover you notice a dedication, and a
+list of poems numbered 1-100.
+~
+paper~
+8 GSY AO
+0 0 0 0 0
+0
+1 100000000 100
+E
+--USES~
+-2~
+E
+dedication~
+The dedication reads:
+          To the woman who taught me love.
+~
+Q 0
+#100
+m16a2 a2 m16 rifle~
+an M16-A2 rifle~
+A black, non reflective rifle sits here.~
+The rifle is a 5.56-mm, magazine-fed, gas-operated, shoulder-fired
+weapon. It is designed to fire either semiautomatic or a three-round
+burst through the use of a selector lever (SAFE, SEMI, and BURST). It
+can be indentified from early M16 rifles by the addition of the spent
+case deflector and the forward assist on the M16A2. The M16A2 variant
+was adopted by the US Marine Corps in 1983 and the US Army adopted it in
+1985.
+~
+aluminium~
+5 0 AN
+1 5 8384 frbite BCDE 0
+1 30000 70
+E
+--USES~
+-2~
+Q 2
+#101
+clip magazine m16a2 m16 a2~
+an M16-A2 30 round magazine~
+A fully loaded M16-A2 magazine sits here.~
+A fairly long clip about the size that would fit into a rifle sits here
+waiting to be used.  It has a flat black finish to the metal, and
+grooves that wrap around it and is spring loaded for her pleasure, and
+yours ....
+~
+aluminium~
+31 0 AO
+BCDE B AB 0 0
+0
+0 5000 70
+E
+--USES~
+-2~
+Q 2
+#102
+sword blade daisho dual pair wakazashi katana japanese~
+a pair of dual wielded daisho~
+A pair of Japanese swords sit here.~
+The wakizashi, or smaller sword, and the katana, or longer sword, sit
+here as a perfect pair and alike in every respect aside for their size.
+These swords seem to have what look like a butterfly carved into the
+base of their handles.
+~
+silver~
+5 0 AN
+2 8 0 slash 0 0
+1 0 70
+E
+--USES~
+-2~
+Q 2
+#103
+poker fire place fireplace iron cast~
+a fireplace poker~
+A fireplace poker sits here.~
+Blower & Poker in one piece. This wrought iron Blowpoke is designed with
+a tube in it that allows you to blow air into a flame or coals to
+increase the heat.
+~
+iron~
+5 0 AN
+3 4 0 flame 0 0
+0 0 70
+E
+--USES~
+-2~
+Q 2
+#104
+flame thrower flamethrower lpo 50~
+an LPO-50 flame thrower~
+A flame thrower sits here.~
+The LPO['Liquid' Plamya Obretz]-50 is Russian manufactured although not
+currently in use by their military.  Carrying an electrical ignition
+system that simultaneously ignites pyrotechnic charge on the front of
+the weapon, and compression charge in the selected tank.  Maximum
+effective firing range is considered to be 20 meters using the included
+diesel fuel.  Consisting of two nylon straps that attach the user to
+three small metal tanks and a hose-like wand that ignites and shoots the
+jet-stream of fuel.
+~
+steel~
+5 A ANR
+1 7 8388 pound ABC 0
+17 100000 70
+E
+--USES~
+-2~
+Q 2
+#105
+three small fuel tank~
+three small metal fuel tanks~
+Three small metal fuel tanks sit here.~
+The LPO['Liquid' Plamya Obretz]-50 3.3 liter fuel tanks x 3 are filled
+with conventional diesel fuel.  As an extra added precaution spare
+batteries are included with the tank to make sure the juice is always
+fresh.
+~
+steel~
+31 0 AO
+ABC AC A ABCF 0
+0
+4 7500 70
+E
+--USES~
+-2~
+Q 2
+#106
+magnum tanker boot black pair~
+a pair of Magnum tanker boots~
+A pair of heavy, black boots sit here gathering dust.~
+These heavy duty boots are made of heavy duty, black dyed leather and
+are held together with stainless steel rivets and clasp points.  With a
+quicklace feature up the front and a wide leather strap that overlaps
+that, these boots become a part of your feet.  They also appear to be
+steel toe reinforced.
+~
+leather~
+11 0 AG
+0 0 0 0 0
+0
+2 12000 70
+E
+--USES~
+-2~
+Q 2
+#107
+pair cargo pants~
+a pair of black cargo pants~
+A pair of cargo pants sit here.~
+These black cargo pants are made of a thick yet soft material that seems
+to slightly shimmer when light is shone on them.  The bottom of these
+pants have a strap that can be tightened to allow for a one size fits
+all length feature, and have a zipper about mid-way down to allow for
+these pants to become shorts.
+~
+cotton~
+11 0 AF
+0 0 0 0 0
+0
+1 4500 70
+E
+--USES~
+-2~
+Q 2
+#108
+mesh biker jacket~
+a yellow and black biker jacket~
+A yellow and black jacket sits here.~
+This "mesh" biker jacket is made of stiff synthetic leather that seems
+as if it would protect a rider from most any rideable terrain.  The
+jacket is a bright yellow with black accent stripes that give the jacket
+a very "yellow jacket" look to it.  Air vents along the underarms can be
+opened and closed for the riders comfort.
+~
+leather~
+11 0 AK
+0 0 0 0 0
+0
+0 8500 70
+E
+--USES~
+-2~
+Q 2
+#109
+plain shirt t-shirt t~
+a plain white t-shirt~
+A plain white t-shirt sits here.~
+This plain white t-shirt is slightly thicker than the one's worn as
+undershirts and seems a bit larger overall.
+~
+cotton~
+11 0 AD
+0 0 0 0 0
+0
+0 1500 70
+E
+--USES~
+-2~
+Q 2
+#110
+dress shoes~
+a pair of black dress shoes~
+A pair of highly polished dress shoes sit here.~
+These dress shoes have seen better days, but nevertheless shine as if
+they were brand new.  The wooden soles of these shoes seem to be cracked
+a little near the area where the ball of the foot would sit.
+~
+leather~
+11 0 AG
+0 0 0 0 0
+0
+1 9000 70
+E
+--USES~
+-2~
+Q 2
+#111
+pair dress slacks~
+a pair of black dress slacks~
+A pair of black dress slacks sit here.~
+These plain black pants are slightly faded so that they appear almost as
+a dark navy blue.  Woven with a little thicker than average dress slacks
+it's obvious these pants were made for more constant use.
+~
+cotton~
+11 0 AF
+0 0 0 0 0
+0
+1 12000 70
+E
+--USES~
+-2~
+Q 2
+#112
+dress shirt~
+a black dress shirt~
+A black dress shirt sits here.~
+Woven of a very thick cotton like material, this shirt seems to be in
+pretty good condition.
+~
+cotton~
+11 0 AD
+0 0 0 0 0
+0
+1 8000 70
+E
+--USES~
+-2~
+Q 2
+#113
+collar roman~
+a Roman collar~
+A Roman collar sits here.~
+This collar is made of a very stiff black and white material.  It seems
+to be worn quite often.
+~
+cotton~
+11 0 AC
+0 0 0 0 0
+0
+0 4500 70
+E
+--USES~
+-2~
+Q 2
+#114
+cream sports jacket~
+a cream colored sports jacket~
+A cream colored sports jacket sits here.~
+This is a cream-colored sports jacket.~
+cotton~
+11 0 AK
+0 0 0 0 0
+0
+2 8700 70
+E
+--USES~
+-2~
+Q 2
+#0
+
+
+
+#ROOMS
+#1
+The room with no walls~
+Where walls should be this room stretches to infinity, only to come back
+upon itself.  This room is for administration only, please respect that.  
+~
+0 12 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+(null) 
+~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+(null) 
+~
+M 0 H 100
+S
+#2
+The idle place~
+If you are in here you shouldn't be able to see the description anyway. 
+This room is where the idle people go when they dissappear.  
+~
+0 12 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+(null) 
+~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+(null) 
+~
+M 0 H 100
+S
+#0
+
+
+
+#RESETS
+S
+
+
+
+#SHOPS
+0
+
+
+
+#MOBPROGS
+#0
+
+#$

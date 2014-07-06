@@ -1,0 +1,164 @@
+#AREADATA
+Name Player Housing <not done>~
+Builders Rayal~
+VNUMs 12701 12900
+Credits Opal~
+Security 9
+Flags D
+Price 1
+End
+
+
+
+#MOBILES
+#0
+
+
+
+#OBJECTS
+#0
+
+
+
+#ROOMS
+#12701
+KEEP~
+The plush navy blue carpet travels north and west of here with a slight
+worn trail down the center.  The bright white walls help reflect the too few
+halogen lights hanging from above.  Doorways mark the hall on the east and
+west like open eyes always watching and always waiting.  
+~
+0 8 0
+E
+XNUMB1~
+Along a Quiet Hall~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+Along a Quiet Hall~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 12703
+S
+#12702
+Second Floor Lobby~
+A description goes here.
+~
+0 1164 0
+V
+12705 2
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+S
+#12703
+KEEP~
+The sounds of most footsteps that walk along the thick plush carpet are
+silenced by it's thick padding and the sound proofing material in the bright
+white walls.  Every now and then the overhead halogen light flickers
+creating an odd humming sound that lasts a moment or two and it breaks the
+silence like a warm blade.  
+~
+0 8 0
+E
+XNUMB1~
+Along a Quiet Hall~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+Along a Quiet Hall~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 12704
+D2
+~
+~
+0 0 12701
+S
+#12704
+KEEP~
+Between the doors here sits a public water fountain seemingly built onto
+the wall to prevent most folks from tampering with it.  A small leak seems
+to have made it's way down the wall at one point leaving a dark sticky mark.
+The hall continues south from here.  
+~
+0 1160 0
+V
+12705 1
+E
+XNUMB1~
+The End of a Quiet Hall~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+The End of a Quiet Hall~
+E
+XDDREAM~
+~
+D2
+~
+~
+0 0 12703
+M 0 H 100
+S
+#12705
+Elevator~
+This is an elevator.
+~
+0 396 0
+V
+12704 -1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+S
+#0
+
+
+
+#RESETS
+S
+
+
+
+#SHOPS
+0
+
+
+
+#MOBPROGS
+#0
+
+#$

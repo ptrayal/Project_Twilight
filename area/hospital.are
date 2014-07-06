@@ -1,0 +1,5367 @@
+#AREADATA
+Name Hospital~
+Builders Phaide Julie~
+VNUMs 7501 8000
+Credits Phaide Julie~
+Security 1
+Flags I
+Price 0
+End
+
+
+
+#MOBILES
+#7510
+doctor stahlman~
+Doctor Stahlman~
+A large-framed physician is making the rounds.
+~
+In his late fifties, this dark skinned man could dwarf Hulk Hogan.  He's
+clearly over six feet and at least three hundred pounds.  He appears to be
+of Native American origin, with a well trimmed beard.  There are old burn
+scars on the back of his left hand, and half of the ring finger on that hand
+is missing.  A his nametag identifies him as "Doctor Emanuel Stahlman".  
+~
+human~
+AG 0 0 0 0 0 none
+0 0 0 0
+10 10 1 0
+AHMV ABCDEFGHIJK large flesh
+A 0
+I 0
+#0
+
+
+
+#OBJECTS
+#7501
+Lobby Desk~
+a Lobby Desk~
+The hospital lobby desk is near the entrance.~
+A white L-shaped desk positioned next to the entrance.  A computer
+terminal competes for space with documents and a few knick-knacks.  A white
+plaque reads: "Welcome to Bal Harbour Medical Center" 
+~
+wood~
+12 0 0
+2 50 D 0 0 0
+100 0 100
+E
+--USES~
+-2~
+Q 0
+#7502
+chairs~
+a row of plastic chairs~
+A row of plastic chairs.~
+Ten simple chairs made of orange plastic fixed to a metal frame.  Nothing
+to write home about.  
+~
+plastic~
+12 0 0
+10 0 E 0 0 0
+0 0 100
+E
+--USES~
+-2~
+Q 2
+#7503
+tv~
+an old color tv~
+An old color TV is hanging from the ceiling.~
+A color television set that's at least five years out of date.  It sits
+in a black metal frame hung from the ceiling.  It seems to get network
+programming only.  
+~
+plastic~
+13 A 0
+0 0 0 0 0
+0
+0 0 100
+E
+--USES~
+-2~
+Q 2
+#7504
+shelves~
+rows of shelves~
+A row of gray metal shelves~
+A grey metal frame holding six shelves placed one atop the next.
+~
+steel~
+12 0 0
+0 200 N 0 0 0
+0 0 100
+E
+--USES~
+-2~
+Q 2
+#7505
+file cabinet~
+a file cabinet~
+A light-grey, steel filing cabinet is here.~
+A basic steel filing cabinet painted light grey.  It's five feet in
+height and width, with three drawers with locks.  On the drawers are square
+labels set above the handles.  From top to bottom they read: "A-J", "K-S",
+and "T-Z & MISC".  
+~
+steel~
+15 0 0
+100 CD 0 100 0 0
+0 0 100
+E
+--USES~
+-2~
+Q 2
+#7506
+bed~
+a hospital bed~
+A hopsital bed is here~
+An ajustable bed used by the hospital patients. The controls are attached by a cord that runs under the right side of the bed.
+There are also rails that can be raised along the side to keep patients from rolling out of bed.
+~
+steel~
+12 0 0
+1 0 EIL 0 0 0
+0 0 100
+E
+--USES~
+-2~
+Q 2
+#7507
+bag saline~
+an i.v. bag of saline~
+A saline bag is here.~
+A plastic bag in the half-gallon capacity range. Two short tubes protrude from one end. One of these was clearly meant to be attached to something. Small writing in red has been printed on the side in a same color frame. {R0.9% SODIUM CHLORIDE. WARNING! Do not use if seal is broken. {xThe rest is a set of instructions on the bag use and some list of chemicals.
+~
+plastic~
+17 0 AO
+12 12 'salt water' 0 0 0
+3 0 100
+E
+--USES~
+-2~
+Q 5
+#7508
+bag anticoagulant~
+an i.v. bag of anticoagulant~
+A plastic bag of anti-coagulant is here.~
+A plastic bag in the quarter-gallon capacity range.  Two short, think
+tubes protrude from one end.  From between them runs a clear, narrow tube
+about two feet in length.  Small writing in red has been printed on the side
+on a white colored label.  {RANTICOAGULANT.  WARNING!  Do not use if seal is
+broken.  Do NOT injest.  {xThe rest is a set of instructions on the bag use
+and some list of chemicals.  
+~
+plastic~
+17 0 AO
+8 8 'salt water' 1 0 0
+2 0 100
+E
+--USES~
+-2~
+Q 6
+#7509
+bag blood~
+a blood bag~
+A bag of chilled blood is here.~
+A plastic bag made to hold a pint of blood. Two stubby thick tubes protrude from one end.  From between them runs a clear, narrow tube about two feet in length. An attachment on the is a y-shaped affair to join with a second tube. A white label on the side identifies the contents as blood with the type scribbled on a blank line. A warning calls for imediate disposal if the bag's integrity has been compromised.
+~
+plastic~
+17 0 AO
+8 8 'blood' 0 0 0
+2 0 100
+E
+--USES~
+-2~
+Q 6
+#7510
+teal top scrubs~
+a teal scrub top~
+A teal-colored scrub top is here.~
+A simple unisex garment with short sleeves and a v-neck collar. A pocket
+is sewn onto the left breast.
+~
+cotton~
+11 0 AF
+0 0 0 0 0
+0
+5 1700 100
+E
+--USES~
+-2~
+Q 2
+#7511
+teal scrub pants~
+a pair of teal scrub pants~
+A pair of teal-colored scrub pants is here.~
+A pair of teal pants with a drawstring elastic waistband.
+~
+cotton~
+11 0 AD
+0 0 0 0 0
+0
+5 1700 100
+E
+--USES~
+-2~
+Q 2
+#7512
+white shoes~
+white, laceless shoes~
+A pair of white, laceless shoes is here.~
+A pair of durable white, laceless shoes for those in the medical
+profession. The insides are padded for comfort and the soles have large
+cleats to provide a strong grip on smooth and sometimes wet floors.
+~
+unknown~
+11 0 AG
+0 0 0 0 0
+0
+3 2000 100
+E
+--USES~
+-2~
+Q 2
+#7513
+white lab coat~
+a white lab coat~
+A white lab coat is here.~
+The trademark of the scientific profession, this lab coat is
+singlebreasted and, of course, white.  A pen pocket sits atop the left
+breast, while two larger pockets are set towards the front at hip level. 
+The garment goes down to mid thigh on those of average height.  
+~
+wool~
+11 0 AK
+0 0 0 0 0
+0
+6 3500 100
+E
+--USES~
+-2~
+Q 2
+#7514
+hospital gown~
+a hospital gown~
+A hospital gown is here.~
+The notorious hospital gown.  It ties in back and displays your assets to
+the world.  
+~
+cotton~
+11 0 AK
+0 0 0 0 0
+0
+5 600 100
+E
+--USES~
+-2~
+Q 2
+#7515
+hospital slippers~
+a pair of hospital slippers~
+A pair of hospital slippers is here.~
+Looks like wooly blue ankle high socks with elastic bands around the
+ankles and rubber criss-crosses attached to the soles.  
+~
+wool~
+11 0 AG
+0 0 0 0 0
+0
+1 200 100
+E
+--USES~
+-2~
+Q 2
+#7516
+latex gloves~
+a pair of latex gloves~
+A pair of latex gloves is here.~
+These thin, tight-fitting gloves provide the wearer with protection from
+bodily fluids and hazardous materials of a non-corrosive and non-radioactive
+nature.  
+~
+vinyl~
+11 0 AH
+0 0 0 0 0
+0
+1 10 100
+E
+--USES~
+-2~
+Q 2
+#7517
+box gloves~
+a box of medical gloves~
+A box of medical gloves is here.~
+A 7" x 5" x 3" white box with the label "KEN-MED Latex Examination
+Gloves" in large black print on the top and long sides. Twin 1 1/2"
+diagonal aqua blue bands run parallel across the top. Their smaller
+clones run along the centers of the sides. On one of the short sides is
+another label reading: "Kendall Medical Industries. Dubuque, Iowa" When
+KMI started out, it was named "Tall Corn Medical Surplus" in honor of
+the state it began in, but for obvious reasons, the name was quickly
+changed.
+~
+cardboard~
+15 0 A
+0 0 0 8 1 0
+1 1000 100
+E
+--USES~
+-2~
+Q 2
+#7518
+id badge~
+a {GBHMC{x ID badge~
+A hopsital ID bad is here.~
+A small white plastic rectangle with Bal Harbour Medical Center laser
+printed along the top.  Below on the right side is a picture of the employee
+it belongs to.  Next to the photo from top to bottom is the badge owners
+name, profession title, part of the hospital they are assigned to, the job
+they perform there, and a bar code.  On tha back, a metal alligator clamp
+secures the badge to the wearer's garment.  
+~
+plastic~
+13 0 AO
+0 0 0 0 0
+0
+1 100 100
+E
+--USES~
+-2~
+Q 2
+#7519
+hazmat helmet~
+a HazMat helmet~
+This white HazMat suit helmet has a fixed transparent visor and
+completely encloses the head.  A rubber liner built into the helmet extends
+below the rim to cover the next and connect the helmet to the rest of the
+suit.  
+~
+This white HazMat suit helmet has a fixed transparent visor and
+completely encloses the head. A rubber liner built into the helmet
+extends below the rim to cover the next and connect the helmet to the
+rest of the suit.
+~
+plas~
+11 0 AE
+0 0 0 0 0
+0
+15 25000 100
+E
+--USES~
+-2~
+Q 10
+#7520
+hazmat suit~
+a white Level A HazMat suit~
+A white HazMat suit is here.~
+White in color, this outfit is designed to be airtight to protect the
+wearer from airborne infection from viruses, bacteria, and other
+hazardous airborne elements. Seals are provided for other accessories
+such as the helmet, gloves, etc. Additional attachments are provided for
+a portable respirator or hoses that connect to outlets in a quarantine
+chamber.
+~
+plastic~
+13 0 AD
+0 0 0 0 0
+0
+15 70000 100
+E
+--USES~
+-2~
+Q 10
+#7521
+hazmat suit legs~
+level A HazMat suit legs~
+The bottom half of a HazMat suit.  Seals are provided for boots and the
+rest of the garment.  
+~
+The bottom half of a HazMat suit. Seals are provided for boots and the
+rest of the garment.
+~
+plas~
+11 0 AF
+0 0 0 0 0
+0
+10 40000 100
+E
+--USES~
+-2~
+Q 10
+#7522
+hazmat gloves~
+a pair of white HazMat gloves~
+White gloves with seals to attach to a HazMat suit.  Grooves cover the
+tips of the fingers and thumbs.  
+~
+White gloves with seals to attach to a HazMat suit. Grooves cover the
+tips of the fingers and thumbs.
+ 
+~
+plastic~
+11 0 AH
+0 0 0 0 0
+0
+5 7500 100
+E
+--USES~
+-2~
+Q 10
+#7523
+hazmat moon boots~
+a pair of white HazMat boots~
+White boots with seals to connect with the legs of a HazMat suit.  
+~
+White boots with seals to connect with the legs of a HazMat suit.
+~
+plastic~
+11 0 AG
+0 0 0 0 0
+0
+7 20000 100
+E
+--USES~
+-2~
+Q 10
+#7524
+hazmat air recycler~
+a HazMat chemical air recycler~
+A flat box-like apparatus that attaches to just below the neck of a level
+A HazMat suit.  A pair of tubes will run one along each side of the neck and
+fit onto the hose attachments built into the back of the suit.  The recycler
+is covered with the same material as the suit it's intended for, except for
+a fine white screen that takes up a third of the front.  A vertical pair of
+plastic covered buttons on the front are used to determine the recycling
+rate.  A lit reader next to the buttons displays the amount of recycling
+time left.  Typically, the reader consists of {Rred{x.  {Yyellow{x, and
+{Ggreen{x lights.  
+~
+A flat box-like apparatus that attaches to just below the neck of a
+level A HazMat suit. A pair of tubes will run one along each side of the
+neck and fit onto the hose attachments built into the back of the suit.
+The recycler is covered with the same material as the suit it's intended
+for, except for a fine white screen that takes up a third of the front.
+A vertical pair of plastic covered buttons on the front are used to
+determine the recycling rate. A lit reader next to the buttons displays
+the amount of recycling time left. Typically, the reader consists of
+{Rred{x. {Yyellow{x, and {Ggreen{x lights.
+~
+plast~
+11 0 AK
+0 0 0 0 0
+0
+75 1000000 100
+E
+--USES~
+-2~
+Q 10
+#7525
+hose~
+an air hose~
+A thin white hose meant to connect a HazMat suit to a life support
+system.  It's coiled up like a phone cord.  
+~
+A thin white hose meant to connect a HazMat suit to a life support
+system. It's coiled up like a phone cord.
+~
+vinyl~
+11 0 AC
+0 0 0 0 0
+0
+3 2500 100
+E
+--USES~
+-2~
+Q 2
+#7526
+hazmat locker~
+a HazMat suit locker~
+White painted maglock steel doors that slide open only when the proper
+keycard is used.  A slot for said card is built into the right edge of the
+frame at eye level.  In the center, a {Rbiohazard{x symbol sits at eye
+level.  Below is the legend: Biological Protection Gear - {RAuthorized
+Personnel Only{x.  
+~
+White painted maglock steel doors that slide open only when the proper
+keycard is used. A slot for said card is built into the right edge of
+the frame at eye level. In the center, a {Rbiohazard{x symbol sits at
+eye level. Below is the legend: Biological Protection Gear -
+{RAuthorized Personnel Only{x.
+~
+steel~
+15 0 0
+0 CD 0 500 0 0
+0 0 100
+E
+--USES~
+-2~
+Q 2
+#7527
+None~
+a {Dgrey{x TSSI shirt~
+A standard police type uniform shirt, dark grey in color, with flap
+pockets, epaulets, and sewn creases.  A badge tab is set above the left
+breast pocket.  Black trapezoidal patches are sewn onto both upper arms.  In
+white trim, they read: {WTerritorial Security Services Inc.  {x 
+~
+A standard police type uniform shirt, dark grey in color, with flap
+pockets, epaulets, and sewn creases. A badge tab is set above the left
+breast pocket. Black trapezoidal patches are sewn onto both upper arms.
+In white trim, they read: {WTerritorial Security Services Inc.{x
+~
+cotton~
+11 0 AD
+0 0 0 0 0
+0
+2 2000 100
+E
+--USES~
+-2~
+Q 2
+#7528
+black pants~
+black TSSI pants~
+The bottom half of a TSSI uniform.  Basic black uniform pants with sewn
+creases.  White braid run down the sides.  
+~
+The bottom half of a TSSI uniform. Basic black uniform pants with sewn
+creases. White braid run down the sides.
+~
+None~
+11 0 AF
+0 0 0 0 0
+0
+4 3500 100
+E
+--USES~
+-2~
+Q 2
+#7529
+leather holster~
+a black duty rig holster~
+A black leather holster of a design popular with security and law
+enforcement agencies.  It has a basket-stamped pattern and fits most modern
+handguns.  
+~
+A black leather holster of a design popular with security and law
+enforcement agencies. It has a basket-stamped pattern and fits most
+modern handguns.
+~
+leather~
+15 0 LS
+0 0 0 10 0 0
+1 5000 100
+E
+--USES~
+-2~
+Q 2
+#7530
+leather belt~
+a black duty rig belt~
+Covered in the basket-weave pattern like many duty rig belts, this one
+has a double pistol magazine case and a handcuff pouch.  Four belt keepers
+are evenly spaced along the belt.  A standard stainless steel buckle closes
+the belt around the waist.  
+~
+Covered in the basket-weave pattern like many duty rig belts, this one
+has a double pistol magazine case and a handcuff pouch.  Four belt
+keepers are evenly spaced along the belt. A standard stainless steel
+buckle closes the belt around the waist.
+~
+leather~
+15 0 0
+1 0 0 5 0 0
+2 4500 100
+E
+--USES~
+-2~
+Q 2
+#7531
+airlock 1~
+a contact lens case~
+White in color, this affair looks like something out of a science fiction
+movie.  Double tech-tooth doors leading to another chamber.  Built into the
+right side of the frame is a small status panel.  A lagre rectangular
+warning light occupies the frame at center top.  At the center where the
+doors meet, a cynlindrical affair houses the locking mechanism.  Upon this
+is a {Rred {xbiohazard symbol.  {RWARNING!!!  QUARANTINE AREA {xoccupies the
+upper half of the doors.  Writ below this: {RProtective clothing MUST be
+worn beyond this point.  {x 
+~
+White in color, this affair looks like something out of a science fiction
+movie.  Double tech-tooth doors leading to another chamber.  Built into the
+right side of the frame is a small status panel.  A lagre rectangular
+warning light occupies the frame at center top.  At the center where the
+doors meet, a cynlindrical affair houses the locking mechanism.  Upon this
+is a {Rred {xbiohazard symbol.  {RWARNING!!!  QUARANTINE AREA {xoccupies the
+upper half of the doors.  Writ below this: {RProtective clothing MUST be
+worn beyond this point.  {x 
+~
+steel~
+29 0 A
+0 0 0 0 0 0
+0 0 100
+E
+--USES~
+-2~
+Q 15
+#7532
+black contact lenses~
+a pair of black contact lenses~
+A pair of custom contact lenses made to change the wearer's eyes to the
+deepest obsidian.  
+~
+A pair of custom contact lenses made to change the wearer's eyes to the
+deepest obsidian.
+~
+plastic~
+11 0 AP
+0 0 0 0 0
+0
+0 2500 100
+E
+--USES~
+-2~
+Q 2
+#7989
+contact lens case~
+a contact lens case~
+A white case for holding a pair of contact lenses.  It consists of two
+lided, drum shape recepticles attached together.  Made for lenses of all
+types.  
+~
+A white case for holding a pair of contact lenses.  It consists of two
+lided, drum shape recepticles attached together.  Made for lenses of all
+types.  
+~
+plastic~
+15 0 AO
+0 A 0 0 0 0
+1 1995 100
+E
+--USES~
+-2~
+Q 2
+#7990
+black contact lenses~
+a pair of black contact lenses~
+A pair of custom contact lenses made to changes the wearers eyes to the
+deepest obsidian.  
+~
+A pair of custom contact lenses made to changes the wearers eyes to the
+deepest obsidian.  
+~
+plastic~
+11 0 AP
+0 0 0 0 0
+0
+0 70000 100
+E
+--USES~
+-2~
+Q 15
+#7991
+soap~
+a bar of soap~
+A tan oval object people use to clean themlves with.  Not for eating.  
+~
+A tan oval object people use to clean themlves with. Not for eating.
+~
+tofu~
+8 0 A
+0 0 0 0 0
+0
+1 300 100
+E
+--TUNONE~
+You wash your hands off with soap.~
+E
+--TUSELF~
+You lather up with soap.~
+E
+--TUOTH~
+You wash $N off.~
+E
+--TRNONE~
+$n washes $m hands with soap.~
+E
+--TRSELF~
+$n lathers $m body with a bar of soap.~
+E
+--TVOTH~
+other $n washes you down with a bar of soap.~
+E
+--TRUSE~
+$n is trying to cleam $mself with a shard of soap and getting nowhere fast.~
+E
+--TUUSE~
+It's just a shard of soap now. Time for a new bar.~
+E
+--USES~
+100~
+Q 2
+#7992
+soap~
+a small bar of soap~
+(no full description) This is the type of complementary soap you might
+see in a motel.  It's only big enough for two or three days use.  It looks
+like a small whitish brick.  
+~
+(no full description)
+This is the type of complementary soap you might see in a motel. It's only big enough for two or three days use. It looks like a small whitish brick.
+~
+tofu~
+8 0 AO
+0 0 0 0 0
+0
+0 89 100
+E
+--TUNONE~
+You wash your hands off with soap.~
+E
+--TUSELF~
+You lather up with soap.~
+E
+--TUOTH~
+You wash $N off.~
+E
+--TRNONE~
+$n washes $m hands with soap.~
+E
+--TRSELF~
+$n lathers $m body with a bar of soap.~
+E
+--TVOTH~
+$n washes you down with a bar of soap.~
+E
+--TRUSE~
+$n is trying to cleam $mself with a shard of soap and getting nowhere fast.~
+E
+--TUUSE~
+It's just a shard of soap now. Time for a new bar.~
+E
+--USES~
+10~
+Q 2
+#7993
+blue bottle shampoo~
+a bottle of AquaXtacy Shampoo~
+A clear, plastic bottle made to hold twelve ounces of thick, azure
+colored liquid.  On the front is a black-outlined bust of a woman smiling
+and running her fingers through her hair.  Above this is "AquaXtacy Shampoo"
+in large cursive script.  
+~
+A clear, plastic bottle made to hold twelve ounces of thick, azure
+colored liquid.  On the front is a black-outlined bust of a woman smiling
+and running her fingers through her hair.  Above this is "AquaXtacy Shampoo"
+in large cursive script.  
+~
+plastic~
+17 0 AO
+12 12 'ooze' 1 0 0
+2 700 100
+E
+--USES~
+-2~
+Q 2
+#7994
+light blue condistioner bottle~
+a bottle of AquaXtacy Conditioner~
+A clear, plastic bottle made to hold twelve ounces of thick, aqua colored
+liquid.  On the front is a black-outlined bust of a woman smiling and
+running her fingers through her hair.  Above this is "AquaXtacy Conditioner"
+in large cursive script.  
+~
+A clear, plastic bottle made to hold twelve ounces of thick, aqua colored
+liquid.  On the front is a black-outlined bust of a woman smiling and
+running her fingers through her hair.  Above this is "AquaXtacy Conditioner"
+in large cursive script.  
+~
+plastic~
+17 0 AO
+12 12 'ooze' 1 0 0
+2 700 100
+E
+--USES~
+-2~
+Q 2
+#7995
+bath towel~
+a bath towel~
+A large, wooly rectangular object to dry you when your wet, provide you
+with modesty, and the means to snap your friend's ass.  
+~
+A large, wooly rectangular object to dry you when your wet, provide you
+with modesty, and the means to snap your friend's ass.  
+~
+wool~
+11 0 AD
+0 0 0 0 0
+0
+3 0 100
+E
+--USES~
+-2~
+Q 2
+#0
+
+
+
+#ROOMS
+#7501
+Lobby~
+Rows of plastic seats take up most of the Reception area.  Pictures of
+landscapes hang on the west and north walls.  The south wall is compessed of
+panes of glass from floor to ceiling.  Centered in this transparancy are a
+pair of sliding glass doors.  The visitors parking lot can be seen beyond. 
+Suspended from the ceiling in the northeast corner, a cheap color tv blares
+out it's drone of local programing.  The receptionists desk sits in the
+southeast corner of the room.  To the east and west, hallways lead into
+different sections of the hospital.  A pair of metal doors to the north lead
+to the emergency treatment wing.  A pair of elevator doors can be seen in
+the northwest corner.  Suspended from the center of the ceiling is a sign
+designating different departments of BHMC.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+E
+sign~
+NORTH: ER (Staff Only)
+EAST: Exam Rooms, Admissions, Insurance
+WEST: Administration, Records, Intern  and Patient Garments
+SOUTH: Exit
+~
+D0
+A pair of metal doors leading into the ER.
+~
+(null)~
+AB 0 7510
+D1
+(none)~
+(null)~
+0 0 7502
+D2
+(none)~
+door~
+N 0 7539
+D3
+(none)~
+(null)~
+0 0 7506
+M 0 H 100
+S
+#7502
+East Wing Hallway, 1st floor~
+The lobby is just west of here, while the hallway stretches east until it
+ends at a stairway.  To the north is a white door leading to an exam room,
+while admissions are handled south.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+A 0 7511
+D1
+(none)~
+(null)~
+0 0 7503
+D2
+(none)~
+(null)~
+A 0 7514
+D3
+(none)~
+(null)~
+0 0 7501
+M 0 H 100
+S
+#7503
+East Wing Hallway, 1st Floor~
+The hallway continues both east and west, where it passes exam rooms
+north, and offices concerned with admissions and such south.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+0 0 7504
+D3
+(none)~
+(null)~
+0 0 7502
+M 0 H 100
+S
+#7504
+East Wing Hallway, 1st Floor~
+This hallway streches along the eastern wing.  Down the hallway you see
+various signs.  North of you is the X-ray room.  To the south, Adminstration
+offices.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+door~
+A 0 7512
+D1
+(none)~
+(null)~
+0 0 7505
+D2
+(none)~
+door~
+A 0 7513
+D3
+(none)~
+(null)~
+0 0 7503
+M 0 H 100
+S
+#7505
+East Wing Hallway, 1st Floor~
+Here, the East wing ends at a staircase that connects it to the second
+floor.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D3
+(none)~
+(null)~
+0 0 7504
+D4
+(none)~
+(null)~
+0 0 7528
+M 0 H 100
+S
+#7506
+West Wing Hallway, 1st Floor~
+This wing of BHMC concerns itself with hospital functions.  North is
+where the nursing staff aquire their gear, south is where they fill out
+thier reports.  The lobby lies just east of here.  The hallway continues
+west, where it eventually ends at the administrator's office.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+A 0 7515
+D1
+(none)~
+(null)~
+0 0 7501
+D2
+(none)~
+(null)~
+0 0 7517
+D3
+(none)~
+(null)~
+0 0 7507
+M 0 H 100
+S
+#7507
+West Wing Hallway, 1st Floor~
+The hallway continues both east and west.  A small door leads to a
+janitorial closet north.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+A narrow white door.
+~
+door~
+AB 0 7536
+D1
+(none)~
+(null)~
+0 0 7506
+D3
+(none)~
+(null)~
+0 0 7508
+M 0 H 100
+S
+#7508
+West Wing Hallway, 1st Floor~
+The hallway continues through the west wing.  The Hospital
+Administrator's office is just a little further west, while east eventually
+leads to Reception.  There is a door to the south with a sign next to it.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+E
+sign~
+HEALTH RECORDS
+            Authorized Hospital
+                Staff Only
+~
+D1
+(none)~
+(null)~
+0 0 7507
+D2
+(none)~
+door~
+ABC 0 7534
+D3
+(none)~
+(null)~
+0 0 7509
+M 0 H 100
+S
+#7509
+West Wing Hallway, 1st Floor~
+He west wing hallway comes to an end.  The only significane features are
+the wooden doors that lead to a conference room north and the
+Administrator's office west.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+door~
+A 0 7585
+D1
+(none)~
+(null)~
+0 0 7508
+D3
+A wooden door with a frosted glass pane in it.  The words "Dr.  Cohill
+Hospital Administrator" sit in black in the center of the pane.  
+~
+(null)~
+AB 0 7537
+M 0 H 100
+S
+#7510
+North Wing, 1st floor~
+This is the southern end of the Emergency Ward hallway.  An elevator to
+the east leads to other floors of the hospital.  "Staff Elevator Only"
+shares it's place on the elevator door with black and yellow warning stripes
+The lobby lies south past a pair of large metal doors.  North, the hall
+continues to the Emergency section of the hospital.  
+~
+0 1152 0
+V
+7544 1
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 0 7541
+D2
+A pair of double doors leading to the lobby.
+~
+door~
+AB 0 7501
+M 0 H 100
+S
+#7511
+Exam Room~
+In this room, preliminary tests are carried out to diagnose patient
+ailments.  Equipement to examine the eyes, ears, throat, reflexes, as well
+as more personal areas can be seen everywhere.  On everywall are posters
+displaying more than most people would care to know about a variety of
+ailments.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D2
+(none)~
+door~
+AB 0 7502
+M 0 H 100
+S
+#7512
+Exam Room~
+In this room, preliminary tests are carried out to diagnose patient
+ailments.  Equipement to examine the eyes, ears, throat, reflexes, as well
+as more personal areas can be seen everywhere.  On everywall are posters
+displaying more than most people would care to know about a variety of
+ailments.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D2
+(none)~
+door~
+A 0 7504
+M 0 H 100
+S
+#7513
+Health Insurance~
+This office is painted in light green (or, in the eyes of some, lima-bean
+puke green) Fortunately, much of this lovely decor has been covered up with
+various notices and posters explaining the details of health insurance. 
+Anyone one who wants to bring home a copy of this exiteing reading can take
+pamphlets from a table in the southeast corner, or ask the insurance worker.
+~
+0 0 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+door~
+A 0 7504
+M 0 H 100
+S
+#7514
+Admissions~
+Light blue is the decor for the walls of this room.  A mural of the cast
+of M*A*S*H crammed together ion a jeep has been painted on the west wall by
+an obviously amatuer artist.  Patients can describe their symptoms to
+interns seated behind booths along the south wall.  The hospital hallway
+lies north.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+A 0 7502
+M 0 H 100
+S
+#7515
+Intern Garmenting~
+In this room, the hospital staff can aquire clothing and accessories
+nessesary to practide their trade.  A counter runs along the north wall.  A
+door leading to the storage area can be seen west.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D2
+(none)~
+(null)~
+A 0 7506
+D3
+(none)~
+door~
+ABC 0 7516
+M 0 H 100
+S
+#7516
+Garment Storage~
+Here, the uniforms and accessories for all those seeking a career in the
+nursing trade can be found.  Fully stocked shelves run along every wall. 
+The only exit is west.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+ABC 0 7515
+M 0 H 100
+S
+#7517
+Administration~
+A large room where the nursing staff process their reports and other
+paperwork.  Notices can be seen on everywall except the east, where a set of
+shelves from floor to ceiling hold countless patient charts.  The Chief
+Resident's office is to the west, while the hallway is north.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 0 7506
+D3
+(none)~
+(null)~
+AB 0 7518
+M 0 H 100
+S
+#7518
+Chief Resident's Office~
+The offices is painted a light green.  Behind the desk on the west wall
+are various awards and honors, along with a few children's drawings of
+animals done in crayon.  A blind covereed window is on the south wall. 
+Beneath it are a couple of file cabinets.  The only exit is through the east
+door.  
+~
+0 0 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+door~
+AB 0 7517
+M 0 H 100
+S
+#7519
+WRECKED~
+(null)~
+0 4 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+S
+#7520
+Second Floor Intersection~
+All three wings on the second floor meet here.  To the south is a
+reception desk and lobby.  Hallways extend east, west, and north. 
+Continuous announcements can be heard over the PA system.  A sign suspended
+from the ceiling has directions on where to find what on this floor.  An
+elevator can be seen in the northwest corner.  
+~
+0 1032 0
+V
+7580 -1
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+E
+sign~
+NORTH: Recovery Rooms, Elevator (Staff Only)
+SOUTH: Reception, Lobby
+EAST: CT Scanning, Blood Testing, EEG, EKG, Radiology
+WEST: OR, Maternity Ward, Delivery Room, ICU, NRCU
+~
+D0
+(none)~
+(null)~
+0 0 7573
+D1
+(none)~
+(null)~
+0 0 7525
+D2
+(none)~
+(null)~
+0 0 7529
+D3
+(none)~
+(null)~
+0 0 7521
+M 0 H 100
+S
+#7521
+West Wing Hallway, 2nd Floor~
+The west wing starts here, where it extends west past the OR and
+Maternity Ward.  AN intersection to other wings is just east of here.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+0 0 7520
+D3
+(none)~
+(null)~
+0 0 7522
+M 0 H 100
+S
+#7522
+West Wing Hallway, 2nd Floor~
+To the north is an operating room for those scheduled for surgery, both
+critical and cosmetic.  For some reason it's been placed across the
+Maternity Ward located south.  East leads to the intersection, while west
+goes on to the observation rooms and delivery.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+AB 0 7530
+D1
+(none)~
+(null)~
+0 0 7521
+D2
+(none)~
+(null)~
+AB 0 7531
+D3
+(none)~
+(null)~
+0 0 7523
+M 0 H 100
+S
+#7523
+West Wing Hallway, 2nd floor~
+The hallway continues east and west.  To the west it eventually ends at
+an intersection connecting to two other wings.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+0 0 7522
+D3
+(none)~
+(null)~
+0 0 7524
+M 0 H 100
+S
+#7524
+West Wing Hallway, 2nd floor~
+The west wing comes to an end here.  North is the room for comatose
+patients.  West is a room for those on life support.  To the south is a
+delivery room.  The hallway continues east, past an operating room and the
+maternity ward.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+AB 0 7564
+D1
+(none)~
+(null)~
+0 0 7523
+D2
+(none)~
+(null)~
+AB 0 7563
+D3
+(none)~
+(null)~
+AB 0 7565
+M 0 H 100
+S
+#7525
+East Wing Hallway, 2nd Floor~
+Beyond a doorway to the north lies the wonderful world of heart rates and
+brain waves.  A sign proclaims that the task of Toxicology is performed
+beyond the door to the south.  The multiwing intersection to the west is
+near, the stairwell connecting this floor to the ground level is quite a
+distance east.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+door~
+AB 0 7556
+D1
+(none)~
+(null)~
+0 0 7526
+D2
+(none)~
+door~
+ABC 0 7557
+D3
+(none)~
+(null)~
+0 0 7520
+M 0 H 100
+S
+#7526
+East Wing Hallway, 2nd Floor~
+East and west, the hallway passes by a number of labs, each serving a
+seperate purpose yet contributing to the whole of BHMC's operations.  At the
+east end, a stairwell can be seen, while to the west, the hallway eventually
+ends at an intersection.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+0 0 7527
+D3
+(none)~
+(null)~
+0 0 7525
+M 0 H 100
+S
+#7527
+East Wing Hallway, 2nd Floor~
+This particular section of BHMC carries out patient scans, whether they
+are X-rays (carried out north) or Cat Scans (performed south) east, the hall
+ends at a stairwell, which clearly leads down, while to the west lie more
+labs and then an intersection.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+A 0 7554
+D1
+(none)~
+(null)~
+0 0 7528
+D2
+(none)~
+(null)~
+A 0 7555
+D3
+(none)~
+(null)~
+0 0 7526
+M 0 H 100
+S
+#7528
+East Wing Hallway, 2nd Floor~
+A staircase leading down to the East wings first floor.  The wing
+continues west, where more serious treatments and sophisticated tests are
+done.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D3
+(none)~
+(null)~
+0 0 7527
+D5
+(none)~
+(null)~
+0 0 7505
+M 0 H 100
+S
+#7529
+Reception~
+A large tan colored room with framed photo-posters of American land
+marks.  The receptionist's desk is located in the southwest corner, where
+visitors with apointments check in, then are seated in one of the many seats
+positioned about the room.  A window in the south wall overlooks the parking
+lot.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 0 7520
+M 0 H 100
+S
+#7530
+Prep Room~
+This is one of the rooms used by the medical staff to prepare for
+emergency surgery.  A sink on the north wall allows doctors to scrub before
+surgery (and clean off after) Above the sink are dispensers for
+anti-bacterial and anti-microbial soaps.  Lockers along the east wall
+contain operating smocks and caps.  The operating theater can be seen
+through a glass door in the west wall.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D2
+(none)~
+door~
+AB 0 7522
+D3
+(none)~
+(null)~
+ABN 0 7560
+M 0 H 100
+S
+#7531
+Maternity Ward~
+Newborns are brought here after delivery.  Windowed walls allow one to
+see the nursery to the east and the incubator room west.  Glass doors in
+each allow access to both rooms.  A chart is located on the south wall,
+identifying each infant.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+AB 0 7522
+D1
+(none)~
+(null)~
+ABN 0 7532
+D3
+(none)~
+(null)~
+ABN 0 7533
+M 0 H 100
+S
+#7532
+Nursury~
+A large room with pink walls.  Most of the west wall consists of a large
+window where couples can view their new additions without disturbing their
+care.  Newborn children are sent here after they've been delivered.  Most of
+them are sent home with their parents after one or two days.  Only maternity
+staff are permitted in here.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D3
+(none)~
+(null)~
+ABN 0 7531
+M 0 H 100
+S
+#7533
+Incubator Room~
+This room is reserved for newborns who are either born prematurely or
+cannot survive without assistance.  Vital sign monitors and life support
+equipment can be clearly seen.  This room is clearly for hospital personel
+only.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+door~
+ABN 0 7531
+M 0 H 100
+S
+#7534
+Health Records~
+This is where the patients charts are stored.  Rows of metal shelves
+holding files with color coded numbers can be seen everywhere.  The door to
+the north leads to the hallway.  More records can be found west.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+A plain white door leading to the hallway.
+~
+door~
+ABC 0 7508
+D3
+(none)~
+(null)~
+0 0 7535
+S
+#7535
+Health Records~
+Here is where the hospital keeps records of patients from the mid
+eighties and prior.  The room is a testament to rick-rack as shelves compete
+for space with filing cabinets, some of which are catagorized by decades,
+mostly from the thirties to the fifties.  There's barely room to move in
+here.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+0 0 7534
+S
+#7536
+Janitorial Supplies~
+A small room barely big enough for one, lined with shelves holding every
+cleaning substance and implement known to man.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D2
+A narrow door leading to the hallway.
+~
+door~
+AB 0 7507
+S
+#7537
+Administrator's Waiting Room~
+Anyone wishing to see Dr.  Cohill will find themselves having to wait
+here patiently until his secretary passes word that he's available.  The
+walls are painted in a cream color rather than the stark white of the rest
+fo the hospital.  The west wall is one continuous window pane, but the
+blinds covering it are closed.  Pictures of large-eyed children decorate the
+south wall.  Dr.  Cohill's office can be reached through a varnished wooden
+door to the north.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+A wooden door.
+~
+door~
+AB 0 7538
+D1
+A wooden door with a frosted glass pane in it.
+~
+door~
+AB 0 7509
+S
+#7538
+Dr. Cohill's Office~
+The east wall is lined with bookshelves, while the other three walls are
+covered with framed degrees, honors, and award certificates.  A shelf runs
+across the center of the west wall, displaying more awards and trophies.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D2
+A wooden door.
+~
+door~
+AB 0 7537
+S
+#7539
+BHMC Parking Lot~
+A large white sign embedded in a granite rectangle declares this to be
+the Bal Harbour Medical Center, although this is simply the part of it used
+for visitor parking.  Vehicles of nearly every make and model are parked
+here.  Staff parking lies to the east.  To the north lies the hospital,
+access to which is gain through a set of sliding glass doors.  
+~
+0 0 1
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+E
+sign~
+A horizontal rectangle made of granite five feet long and three high.  In
+it a white sign reads "Bal Harbour Medical Center" The sign is lit to be
+read at night.  
+~
+D0
+A walkway leading up to a pair of glass doors.
+~
+(null)~
+N 0 7501
+D1
+Staff parking.  Even from here, many of the cars in it look like they
+cost an arm and a leg.  
+~
+(null)~
+0 0 7540
+S
+#7540
+Hospital Staff Parking~
+The parking lot continues from the west.  Many of the cars here clearly
+had at least three zeros on their price tags.  The brown granite bricks of
+Bal Harbour Medical can be seen to the north.  Between the hospital and the
+edge of the lot is a sign reading "Hospital Staff Only".  
+~
+0 0 1
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D3
+The visitor's parking lot can be seen, with a walkway leading to the
+hospital.  
+~
+(null)~
+0 0 7539
+S
+#7541
+North Wing, 1st floor~
+This portion of the hospital is concered with emergency treatments.  To
+the west is an operation room.  To the north the hall eventually leads to
+Emergency Admissions, and south to the lobby.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 0 7542
+D2
+(none)~
+(null)~
+0 0 7510
+D3
+A door with a sign reading: "Emergency Operating Room 2"
+~
+door~
+AB 0 7545
+S
+#7542
+North Wing, 1st floor~
+The Emergency Ward leads north to the admissions section and to the south
+it eventually ends at the lobby.  East is a door leading to an operating
+room.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 0 7543
+D1
+A door with a sign reading: "Emergency Operating Room 1"
+~
+door~
+AB 0 7547
+D2
+(none)~
+(null)~
+0 0 7541
+S
+#7543
+North Wing, 1st floor~
+The hallway comes to an end at the north where the admissions for
+emergency arrivals is at.  A breakroom for the ER staff is to the east. 
+Ther hallway continues south past operating rooms until it comes to the
+lobby.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 0 7549
+D1
+(none)~
+(null)~
+AB 0 7550
+D2
+(none)~
+(null)~
+0 0 7542
+S
+#7544
+Elevator~
+An elevator with a simple design.  White metal walls with a black padded
+railing halfway up.  A panel on the right side of the doors lists a series
+of stops along with their respective buttons.  
+~
+0 396 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+Link link 
+~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+E
+panel~
+[3] @ Roof
+ 
+[2] @ Second Floor
+ 
+[1] @ Ground Floor
+ 
+[0] @ Sublevel
+ 
+[*] @ Close Doors
+ 
+[^] @ Open Doors
+ 
+[#] @ Press for Emergency
+~
+S
+#7545
+Prep Room~
+This is one of the rooms used by the medical staff to prepare for
+emergency surgery.  A sink on the west wall allows doctors to scrub before
+surgery (and clean off after) Above the sink are dispensers for
+anti-bacterial and anti-microbial soaps.  Lockers along the south wall
+contain operating smocks and caps.  The operating theater can be seen
+through a glass door in the north wall.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+A large glass door.
+~
+door~
+ABN 0 7546
+D1
+A grey metal door.
+~
+door~
+AB 0 7541
+S
+#7546
+Emergency Surgery 2~
+Various forms of equipment can be seen everywhere.  Vital sign monitors,
+anesthetics delivery systems, defibrilators, and an array of bright lights
+conected to the ceiling by metal swing-arms and mounts.  Specially made
+cabinets hold a variety of scalpels and tools as well as the agents to
+sterilize them.  
+~
+0 0 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D2
+A large glass door.
+~
+(null)~
+ABN 0 7545
+S
+#7547
+Prep Room~
+This is one of the rooms used by the medical staff to prepare for
+emergency surgery.  A sink on the east wall allows doctors to scrub before
+surgery (and clean off after) Above the sink are dispensers for
+anti-bacterial and anti-microbial soaps.  Lockers along the south wall
+contain operating smocks and caps.  The operating theater can be seen
+through a glass door in the north wall.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+ABN 0 7548
+D3
+(none)~
+door~
+AB 0 7542
+S
+#7548
+Emergency Surgery 1~
+Various forms of equipment can be seen everywhere.  Vital sign monitors,
+anesthetics delivery systems, defibrilators, and an array of bright lights
+conected to the ceiling by metal swing-arms and mounts.  Specially made
+cabinets hold a variety of scalpels and tools as well as the agents to
+sterilize them.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D2
+A glass door.
+~
+(null)~
+ABN 0 7547
+S
+#7549
+Emergency Admissions~
+The nurses station is located at a desk in the North east corner of the
+room, which is cleared of all obstruction that the paramedics can rush
+patients on gurneys to the treatment rooms.  Sliding glass doors in the west
+wall lead outside.  
+~
+0 0 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D2
+(none)~
+(null)~
+0 0 7543
+D3
+(none)~
+door~
+ABN 0 7551
+S
+#7550
+Break Room~
+A small room with couches set against the east and south walls.  A table
+meant to hold a coffee maker sits in the southeast corner.  ANother table
+with a color tv on it is located at the southwest corner.  Lockers and
+vending machines are at the north wall.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D3
+(none)~
+door~
+AB 0 7543
+S
+#7551
+Emergency Entrance~
+South and east the granite walls of the hospital stand, their stark
+features broken only by a pair of glass doors set in the east wall below a
+sign reading: "Bal Harbour Medical Center Emergency Entrance" White warning
+lines painted on the asphalt declare this area for ambulance use only.  The
+street continues west.  
+~
+0 0 1
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+ABN 0 7549
+D3
+(none)~
+(null)~
+0 0 7552
+S
+#7552
+Emergency Access Route~
+The route leads west to the street and east, where it ends at the
+hospital.  A parking space for the BHMC ambulance fleet is to the south.  A
+sign declares this area for ambulances only.  
+~
+0 0 1
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+0 0 7551
+D2
+(none)~
+(null)~
+0 0 7553
+S
+#7553
+Ambulance Parking~
+A garage built to hold four of the hospital's ambulances, although a
+chart on the east wall seems to indicate that BHMC's fleet is actually
+larger.  In the rear of the garage south lies a room where the paramedics
+spare gear is stored.  The emergency route is north past the garage doors. 
+L A garage built to hold four of the hospital's ambulances, although a chart
+on the east wall seems to indicate that BHMC's fleet is actually larger.  In
+the rear of the garage south lies a room where the paramedics spare gear is
+stored.  The emergency route is north past the garage doors.  
+~
+0 8 1
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 0 7552
+D2
+(none)~
+(null)~
+0 0 7604
+S
+#7554
+Radiology~
+This is the room where X-rays are taken and processed.  The X-ray machine
+is situated in the northwest corner.  Near the west wall is where the
+pateint stands when the X-ray is taken.  The processing equipment stands at
+the northwall.  On the east wall a lit panel has been built in, allowing the
+X-rays to be posted and viewed.  A sign on the north wall advises that lead
+aprons are to be worn by the technicians.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D2
+(none)~
+(null)~
+A 0 7527
+S
+#7555
+CT Scanning~
+Patients whose diagnosis cannot be determined by a simple X-ray are
+brought here for a more detailed scan.  By the west wall stands the Cat Scan
+platform, while the ope rating panel is located near the east wall.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+A 0 7527
+S
+#7556
+Vital Analisys~
+Along the north wall, a bank of machines stands, displaying an array of
+electrodes.  Patients requiring either an electrocardiogram or an
+electroencephlogram have them taken here.  Among the equipment used for
+these tounge twisting procedures is a strobe light and set of headphones.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D2
+(none)~
+(null)~
+AB 0 7525
+S
+#7557
+Toxicology~
+Tests on blood and urine samples are carried out here.  Here in this
+room, it can be determined if a patient is or recently was under the
+influence of drugs or alchohol, or has an unusual factor or two in thier
+blood.  Posters and charts related to blood and blood related topics are
+posted on the north and west walls.  At the south and east walls, an
+L-shaped counter top affair holds all the equipment used in this lab.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+ABC 0 7525
+S
+#7558
+North Wing, 2nd floor~
+To the north the fist of the recovery rooms can be reached.  On the east
+side of the hall is a counter-like desk for the duty nurse.  Further east is
+the rest of the nurses station.  The entrance to room 201 is west.  The
+staff elevator is just south of here.  At the end of the hallway, it seems
+that someone has painted a mural of a couple of bears dressed as doctors.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 0 7559
+D1
+(none)~
+(null)~
+0 0 7587
+D2
+(none)~
+(null)~
+0 0 7573
+D3
+(none)~
+door~
+AB 0 7588
+S
+#7559
+North Wing, 2nd floor~
+Numbered doors east and west indicate that behind them are rooms 202 and
+203.  201 is nearby south across from the nurese Numbered doors east and
+west indicate that behind them are rooms 202 and 203.  201 is nearby south
+across from the nurses station Numbered doors east and west indicate that
+behind them are rooms 202 and 203.  South lies the nurses station with
+another room across from it.  More doors line the hall north.  The bear
+mural can be seen a little better from here.  It appears to be yogi and
+Booboo...  Barely.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 0 7561
+D1
+(none)~
+(null)~
+A 0 7583
+D2
+(none)~
+(null)~
+0 0 7558
+D3
+(none)~
+201~
+A 0 7584
+S
+#7560
+Operating Room~
+Various forms of equipment can be seen everywhere.  Vital sign monitors,
+anesthetics delivery systems, defibrilators, and an array of bright lights
+conected to the ceiling by metal swing-arms and mounts.  Specially made
+cabinets hold a variety of scalpels and tools as well as the agents to
+sterilize them.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+door~
+ABN 0 7530
+S
+#7561
+North Wing, 2nd floor~
+Rooms 204 and 205 open into this part of the hall.  The hallway passes
+more rooms on it's journey south, and north lie two more rooms before the
+hallway comes to an end.  The mural draws nearer in it's hideousness.  It's
+Yogi and Booboo dressed as hospital staff.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 0 7562
+D1
+(none)~
+204~
+A 0 7590
+D2
+(none)~
+(null)~
+0 0 7559
+D3
+(none)~
+205~
+A 0 7589
+S
+#7562
+North Wing, 2nd floor~
+The north hall ends here, where the mural can very clearly be seen.  It's
+a very splotchy looking Yogi bear hopping along dressed as a doctor, an
+equally splotchy Booboo tags along behind him, hopping along clad in a
+nurse's dress, complete with winged hat.  Both of them wear expressions far
+goofier than Hana-Barbera ever bestowed upon them.  Each of them carries a
+pic-a-nic basket, presumably full of happiness (or whatever drugs the artist
+was on when he or she inflicted this violation of the Geneva Convention upon
+the eyes of the world) Hopping along in the background is the final
+indignity; an even splotchier Ranger Smith hopping just as horridly gleeful,
+dressed as a candy striper and brandishing a huge syringe.  Temporary asylum
+from this eyesore can be found in rooms 206 and 207 to the east and west. 
+For those seeking a more permanent means of preserving their sight and mind,
+escape lies south, as the hallway stretches through the Recovery Ward and
+away from this abomination.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+206~
+A 0 7581
+D2
+(none)~
+(null)~
+0 0 7561
+D3
+(none)~
+207~
+A 0 7582
+S
+#7563
+Delivery Room~
+(null)~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+AB 0 7524
+S
+#7564
+Non-Responsive Care Unit~
+Smelling of anti-septics and disinfectants, this room is reserved for
+comatose patients on life support.  Monitors and life support equipment are
+located by the north wall, where they are checked periodically.  Named the
+"Veggie Ward" by the interns, very few who end up here ever leave again.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D2
+(none)~
+door~
+AB 0 7524
+S
+#7565
+Intensive Care Unit~
+Patients requiring life support are brought here.  Throughout the room
+are monitors, respirators, feeding tubes and other life support equipment. 
+This is not a place for those with just an overnight stay.  
+~
+0 0 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+door~
+AB 0 7524
+S
+#7566
+Sublevel Red Corridor~
+The red line coninues west along the length of the hall.  To the east, a
+heavy door with a keycard lock leads to other areas on this level.  To the
+south is a similar door with a biohazard symbol.  A sign posted above the
+symbol reads "Level 1 Viral Pathology Lab.  No admittance without proper
+clearance.  Protective gear MUST be worn before entry.  NO exceptions!"  The
+door to the north seems to be much heavier and more secured than the other
+two.  It also displays a biohazard symbol.  A sign with the same warning
+identifies this as the portal to the Level 2 Viral Pathology Lab.  From the
+looks, forced access is almost impossible.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+ABR 0 7608
+D1
+(none)~
+(null)~
+ABR 0 7568
+D2
+(none)~
+(null)~
+ABR 0 7603
+D3
+(none)~
+(null)~
+0 0 7572
+S
+#7567
+Sublevel Green Corridor~
+The green and yellow lines continue on the floor here, looking alot like
+a miscolored no-passing lane.  Doors to the north and south display signs
+that they grant acess to Blood Storage and Pharmaceutical Storage in that
+order.  The hall continues east until it bends south a little further on.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+AB 0 7651
+D1
+(none)~
+(null)~
+0 0 7571
+D2
+(none)~
+(null)~
+AB 0 7597
+D3
+(none)~
+(null)~
+0 0 7568
+S
+#7568
+Sublevel Main Corridor~
+The different colored lines split up here.  Green and yellow continue
+east, while red ends west at a Heavy door with a card-key lock.  To the
+north is what appears to be a security post.  
+~
+0 8 0
+V
+7572 -1
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 0 7602
+D1
+(none)~
+(null)~
+0 0 7567
+D2
+(none)~
+(null)~
+0 0 7570
+D3
+(none)~
+(null)~
+ABR 0 7566
+S
+#7569
+Main Grey Corridor~
+(null)~
+0 1152 0
+V
+7570 -1
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+A 0 7644
+D1
+(none)~
+(null)~
+0 0 7616
+D2
+(none)~
+(null)~
+A 0 7643
+D3
+(none)~
+(null)~
+0 0 7611
+S
+#7570
+Sublevel Main Corridor~
+A well-lit hallway of white.  Red, yellow, and green lines run along the
+floor from the card-key door south to an intersection to the north, where
+they can be seen to branch off in different directions.  A sign is the only
+break in an otherwise featureless west wall.  
+~
+0 136 0
+V
+7569 -1
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+E
+sign~
+{RViral Pathology, Quaranitine Section
+{YPostmortem Services
+{GPharmacuticals, Blood Stores
+~
+D0
+(none)~
+(null)~
+0 0 7568
+D2
+(none)~
+(null)~
+A 0 7614
+S
+#7571
+Sublevel Green Corridor~
+The bi-colored lines on the floor continue both east, where the corridor
+turns south, and west where it passes by a pair of doors before ending at
+the sublevel intersection.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+0 0 7576
+D3
+(none)~
+(null)~
+0 0 7567
+S
+#7572
+Sublevel Red Corridor~
+The red line continues along the floor east where the corridor ends and
+west to a set of heavy looking doors.  Signs posted state that protective
+clothing can be obtained north, and that a quarantine monitoring room lies
+south.  
+~
+0 1032 0
+V
+7568 -1
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+ABR 0 7650
+D1
+(none)~
+(null)~
+0 0 7566
+D2
+(none)~
+(null)~
+ABR 0 7600
+D3
+(none)~
+(null)~
+0 0 7575
+S
+#7573
+North Wing, 2nd floor~
+The recovery wing hallway continues past patients sickrooms north, and
+just south to the section where it meets the other second floor wings. 
+Further south lies a lobby.  An elevator east bares a set of black and
+yellow warning stripes and the legend: "Staff Elevator Only" A door baring a
+sign reading "Linen" stands west across from the elevator.  Further north a
+desk can be seen, and much further north, on the wall at the end of the
+hall, it seems as if someone has painted a mural on the wall.  
+~
+0 1032 0
+V
+7544 2
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 0 7558
+D2
+(none)~
+(null)~
+0 0 7520
+D3
+(none)~
+(null)~
+AB 0 7586
+S
+#7574
+Helipad Access Corridor~
+The corridor here has been built wide enough so that patients can be
+rushed into the hospital from the helipad that lies south.  An elevator in
+the east wall provides the only access into BHMC.  
+~
+0 1032 0
+V
+7544 3
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D2
+(none)~
+(null)~
+0 0 7577
+S
+#7575
+Sublevel Red Corridor~
+The corridor comes to an end here.  It's only features are an airlock
+built into the south wall, and a sign warning that protective gear must be
+worn beyond the lock.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+0 0 7572
+S
+#7576
+Sublevel Green/Yellow Intersection~
+The green line comes to an abrupt halt, but the yellow continues, making
+a right-angle bend with the corridor as it heads south past several doors. 
+The green line continues west, past more doorways.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D2
+(none)~
+(null)~
+0 0 7591
+D3
+(none)~
+(null)~
+0 0 7571
+S
+#7577
+Helipad Junction~
+A wide, well-lit corridor that opens up at the helipad south, and leads
+north to the elevator.  A metal stairway by the east wall allows access to
+the control room above.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 0 7574
+D2
+(none)~
+(null)~
+0 0 7578
+D4
+(none)~
+(null)~
+0 0 7579
+S
+#7578
+Helipad~
+On the roof of the hospital is a raised platform with a red cross painted
+in the center of it.  Lights are built into the edges of it so that the
+chopper pilot can land here at night.  To the north is a wide corridor
+providing access to the hospital.  Bal Harbour can be seen in every
+direction.  
+~
+0 0 11
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 0 7577
+S
+#7579
+Helipad Tower~
+A control room where the helipad lighting is controlled, as well as
+communications to the hospitals helicopter.  Banks of readouts and displays
+can be clearly seen.  The upper half of all the walls consists of windows,
+allowing for an unobstructed view of the sky above the surrounding areas.  A
+rail-guarded rectangular opening near the east wall opens onto a stairway
+leading to the corridor below.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D5
+(none)~
+(null)~
+0 0 7577
+S
+#7580
+Elevator~
+An elevator with a simple design: Fake wood panel walls with a black
+padded railing halfway up.  Music (or at least that's what it was supposed
+to be in the minds of it's creators) can clearly be heard; a rehash of
+popular tunes.  A panel on the right side of the doors lists a pair of stops
+along with their respective buttons.  
+~
+0 388 0
+V
+7520 -1
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+E
+panel~
+[2] @ Second Floor
+ 
+[1] @ Ground Floor
+ 
+[*] @ Close Doors
+ 
+[^] @ Open Doors
+ 
+[#] @ Press for Emergency
+ 
+~
+S
+#7581
+Recovery Room 206~
+Simple in it's design, this room is intended for patients to recover from
+whatever ailments led them to be here.  The room consists of a pair of beds
+and a television set mounted into the wall.  The only exit leads west into
+the hall.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D3
+(none)~
+door~
+A 0 7562
+S
+#7582
+Recovery Room 207~
+Simple in it's design, this room is intended for patients to recover from
+whatever ailments led them to be here.  The room consists of a pair of beds
+and a television set mounted into the wall.  The only exit leads east into
+the hall.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+door~
+A 0 7562
+S
+#7583
+Recovery Room 202~
+Simple in it's design, this room is intended for patients to recover from
+whatever ailments led them to be here.  The room consists of a pair of beds
+and a television set mounted into the wall.  The only exit leads west into
+the hall.  
+~
+0 0 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D3
+(none)~
+door~
+A 0 7559
+S
+#7584
+Recovery Room 203~
+Simple in it's design, this room is intended for patients to recover from
+whatever ailments led them to be here.  The room consists of a pair of beds
+and a television set mounted into the wall.  The only exit leads east into
+the hall.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+door~
+A 0 7559
+S
+#7585
+Conference Room~
+A large room done in maple wood panelling.  Various charts displaying
+medical data have been posted on the walls.  A screen for slideshows is
+attached to the north wall.  Padded swivel chairs flank a large table in the
+center of the room, where a slideshow projector sits.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D2
+(none)~
+door~
+A 0 7509
+S
+#7586
+Linen Closet~
+The west wall is made up of shelves holding blankets and bedding, as well
+as garments for the patients, including those gowns that leave nothing in
+back to the imagination.  
+~
+0 0 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+AB 0 7573
+S
+#7587
+Nurses Station~
+A small room with a shelf holding patients charts and equipment to check
+vital signs.  A monitor displays vital sings for patients hooked up to
+either life support or j ust a heart monitor.  A small cabinet holding
+medications is in the northwest corner.  To the west the nurse's desk can be
+seen in front of the room's only entrance.  
+~
+0 0 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D3
+(none)~
+(null)~
+0 0 7558
+S
+#7588
+Recovery Room 201~
+Simple in it's design, this room is intended for patients to recover from
+whatever ailments led them to be here.  The room consists of a pair of beds
+and a television set mounted into the wall.  The only exit leads east into
+the hall.  
+~
+0 0 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+door~
+AB 0 7558
+S
+#7589
+Recovery Room 205~
+Simple in it's design, this room is intended for patients to recover from
+whatever ailments led them to be here.  The room consists of a pair of beds
+and a television set mounted into the wall.  The only exit leads east into
+the hall.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+door~
+A 0 7561
+S
+#7590
+Recovery Room 204~
+Simple in it's design, this room is intended for patients to recover from
+whatever ailments led them to be here.  The room consists of a pair of beds
+and a television set mounted into the wall.  The only exit leads west into
+the hall.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D3
+(none)~
+door~
+A 0 7561
+S
+#7591
+Sublevel Yellow Corridor~
+The yellow line follows the hallway north where the corridor turns west
+and south where it passes a couple of westward doors before coming to an
+end.  To the west, one can see a door marked "Autopsy Lab".  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 0 7576
+D2
+(none)~
+(null)~
+0 0 7592
+D3
+(none)~
+(null)~
+AB 0 7596
+S
+#7592
+Sublevel Yellow Corridor~
+The yellow line follows the hallway north where the corridor eventually
+turns west after passing a door in the west wall and south where it passes
+another westward door before coming to an end.  To the west is a door marked
+"Morgue".  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 0 7591
+D2
+(none)~
+(null)~
+0 0 7593
+D3
+(none)~
+(null)~
+AB 0 7595
+S
+#7593
+Sublevel Yellow Corridor~
+The yellow corridor end here.  West is a door marked "Postmortem
+Chemicals".  The only other way lies north past more doors.  Even from here,
+it's clear that the hall turns west after a distance.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 0 7592
+D3
+(none)~
+(null)~
+A 0 7594
+S
+#7594
+Chemical Storage~
+Shelves and cabinets hold the chemicals used by those whose duties
+require the handling of the dead.  Biohazard signs and warnings against
+those not supposed to be here have been posted.  The lights have been broken
+for some time, and for whatever reason are still awaiting repairs.  The only
+way out is east.  
+~
+0 9 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+A 0 7593
+S
+#7595
+Morgue~
+A cold room (perhaps in every sense of the word) whose east wall is
+dominated by rows of vaults, used to store bodies.  Autopsies on those
+unfortuneate enough to end up here are carried out in a lab to the north. 
+East leads back to the hallway.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 0 7596
+D1
+(none)~
+(null)~
+AB 0 7592
+S
+#7596
+Autopsy Lab~
+Countertops hold trays of cutting implements and tools used by doctors
+specializing in postmortem operations.  Charts and posters on the north and
+west walls graphically display the inner workings of the human form as well
+as a variety of causes of death.  The smell of formaldehyde lingers here, an
+eteranl testament, as powerful as it is invisible, that here is a place of
+death, a clear tesament of one's mortality.  This room is nor for the
+squeamish or faint of heart.  Those whose bodies have been or are awaiting
+examination can be found in the vaults to the south.  Non-morbid types as
+well as those of weak stomachs can find passage back to the hallway east.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+AB 0 7591
+D2
+(none)~
+(null)~
+0 0 7595
+S
+#7597
+Pharmaceutical Storage~
+Drugs, drugs, drugs.  Drugs in cabinets, drugs in freezers, drugs in
+tupperware-like drawers.  Anything BHMC uses, from aspirin to penecilin,
+novacaine, codiene, darvocet, and exotic substances with such nomunclature
+that can't be pronounced -let alone understood- by someone without a Harvard
+degree and an alphabet after their name, are stored here awaiting use.  
+~
+0 0 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+AB 0 7567
+S
+#7598
+Viral Pathology~
+(null)~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 0 7603
+D2
+(none)~
+(null)~
+AB 0 7599
+S
+#7599
+V-B Storage Facility~
+The temperature here is maintained somewhere between 20 to 30 degrees. 
+On the south wall are rows of several small doors each baring a biohazard
+symbol.  This room is clearly intended for the storage of various viruses
+and bacterium.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+AB 0 7598
+S
+#7600
+Quarantine Monitor Station~
+A huge single-pane window takes up the bulk of the west wall.  Below it,
+as well as along every wall in the room, machines with screens display all
+kinds of data, as much about the environment in the room beyond the window
+as well as that of anyone who might be in there.  Although filled to the
+brim with computerized equipment, this room is large enough for a number of
+people to come and go freely.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+ABR 0 7572
+D3
+(none)~
+(null)~
+BCFGNRU 0 7601
+S
+#7601
+Quarantine Chamber~
+White walls cry sterility in the brightly-lit room.  Centered here is a
+bed surrounded by a clear plastic curtain.  A variety of monitors and other
+equipment flank both sides of the bed.  A thick window comprises most of the
+west wall.  Access to this room is controlled by an airlock built into the
+north wall.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+BCFGNRU 0 7600
+S
+#7602
+Security Control Room~
+Basically the dispatch center for every security guard in the hospital on
+this level and above.  The main feature in this room is the large desk in
+the center where the supervisor sits, surrounded by communications equipment
+and monitors.  A duty roster can be seen on the west all.  By the east is a
+break table.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D2
+(none)~
+(null)~
+0 0 7568
+S
+#7603
+Sterilization Chamber~
+(null)~
+0 0 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+ABR 0 7566
+D2
+(none)~
+(null)~
+0 0 7598
+S
+#7604
+Equipment Storage~
+Lockers on the south wall have been labeled and organized for quick
+access.  Gurneys have been placed in standing postions along the west wall. 
+A duty chart has been posted on the east wall next to a bulletin board.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 0 7553
+S
+#7607
+High Security Corridor~
+White walled, and brightly lit, this part of the underground facility
+seems to be under tight security.  Huge, and obviously strong, tooth doors
+control access through the north and south ends of this short hall.  The
+north being the elevator, and the south further into the depths of the
+sublevel.  The rush of air can be heard through rows of ventilator grilles
+that run just below the ceiling along the east and west walls.  The lens of
+a security camera peeks out of a panel just above the south door, which
+seems to require a palm print.  
+~
+0 1036 0
+V
+7649 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+S
+#7608
+Brief Corridor~
+A plain white hall that's brightly lit.  All that can be seen is the
+heavy door to the south, the elevator door north, and a security camera
+mounted from the ceiling in the northwest corner.  
+~
+0 1032 0
+V
+7649 1
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D2
+(none)~
+(null)~
+ABR 0 7566
+S
+#7609
+{wGrey {CSublevel Intersection~
+A door that appears to be worthy of securing a bank vault blocks the way
+north.  Other doors that look like they belong on the set of a science
+fiction feature lead to the remaining compass points.  All of them are
+paired with a panel possesing a cardkey slot.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+ABCF 0 7607
+D1
+(none)~
+(null)~
+A 0 7611
+D2
+(none)~
+(null)~
+A 0 7612
+D3
+(none)~
+(null)~
+ABF 0 7610
+S
+#7610
+{wGrey {CCorridor 1~
+Well lit, and all white, this hall leads west where it seems to bend
+south.  To the east, a door that looks like something seen at NASA blocks
+any further travel that way.  A similar door lies north.  This one boasts a
+sign that reads: "SECURITY CONTROL ROOM" Both portals seem to require a
+card.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+AB 0 7640
+D1
+(none)~
+(null)~
+ABF 0 7609
+D3
+(none)~
+(null)~
+0 0 7613
+S
+#7611
+Main {wGrey {CCorridor~
+(null)~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+A 0 7641
+D1
+(none)~
+(null)~
+0 0 7569
+D2
+(none)~
+(null)~
+0 0 7645
+D3
+(none)~
+(null)~
+A 0 7609
+S
+#7612
+{wGrey {CCorridor 2~
+A highly-secured, futuristic looking card-key door marks the end of the
+hall to the north.  The corridor continues south, where it seems to turn
+east, after passing several doors on the west wall.  One of those doors is
+here, barring entry past the west wall.  It posses another cardkey slot, and
+bares a large "{R1{g" centered in the upper half of it.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+A 0 7609
+D2
+(none)~
+(null)~
+0 0 7617
+D3
+(none)~
+(null)~
+ACJ 0 7626
+S
+#7613
+{wGrey {CCorridor 1~
+Leading east and west, the hall ends at some kind of space age door east,
+and turns south after a ways west.  It's very well lit here.  
+~
+0 12 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+0 0 7610
+D3
+(none)~
+(null)~
+0 0 7615
+S
+#7614
+Sublevel Checkpoint~
+A room with all-white decor.  The architect seemed only concerned with
+utility when it was designed.  It's only features are a black desk where a
+security guard sits, a door with a card-key reader to the north, and the
+elevator to the east.  In the southwest corner, just below the ceiling, is a
+security camera.  
+~
+0 1032 0
+V
+7544 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+A 0 7570
+S
+#7615
+{wGrey {CCorridor 1~
+The corridor bends here, from an airlock type door at the south end to
+another pair of similare doors that mark the end of the hall to the east. 
+Another door marked "PREP ROOM" lies north.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+AB 0 7638
+D1
+(none)~
+(null)~
+0 0 7613
+D2
+(none)~
+(null)~
+AB 0 7620
+S
+#7616
+Main {wGrey {CCorridor~
+(null)~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+A 0 7646
+D3
+(none)~
+(null)~
+0 0 7569
+S
+#7617
+{wGrey {CCorridor 2~
+The door in the west wall here displays a red "{R2{g".  More doors like
+it line west wall as the corridor leads on north and south, indicating that
+this is some type of holding facility.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 0 7612
+D2
+(none)~
+(null)~
+0 0 7618
+D3
+(none)~
+(null)~
+A 0 7628
+S
+#7618
+{wGrey {CCorridor 2~
+The corridor continues northwards, where it eventually ends at a secured
+door, and southwards, where it heads east.  The line of numbered cardkey
+doors along the west wall continues.  The one here is marked as "{R3{g".  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 0 7617
+D2
+(none)~
+(null)~
+0 0 7619
+D3
+(none)~
+(null)~
+ACJ 0 7627
+S
+#7619
+{wGrey {CCorridor 2~
+An L-shaped intersection in the corridor leads north and east.  A
+reinforced door, labeled with a red "{R4{g" is set in the west wall,
+requiring a cardkey for entry.  Towards the north, several more doors like
+it can be seen in the west wall as the corridor leads north.  The corridor
+passes even more doors like it as it heads east.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 7580 7618
+D1
+(none)~
+(null)~
+0 0 7629
+D3
+(none)~
+(null)~
+ACJ 0 7625
+S
+#7620
+Entrypoint~
+A large double door, constructed of some type of alloy, makes up the bulk
+of the west wall.  To the north, lies a door with a sign that can't be made
+out from here, and a bend in the corridor as it continues east.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+AB 0 7615
+D3
+(none)~
+(null)~
+0 0 7621
+S
+#7621
+Underground Stop~
+Here, a square concrete tunnel connects to a larger tunnel with a
+monorail track.  To the east is a large wall will a huge metal door built
+into it.  A series of lights hangs from the ceiling from mounts vying for
+space among sets of pipes designed to hold power lines.  A metal panel is
+set in the north wall, displaying a cardkey slot and a single button.  
+~
+0 1032 0
+V
+7622 1
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+0 0 7620
+S
+#7622
+Monorail Compartment~
+The inside compartment is a stark, utlilitarian affair, possesing nothing
+more than a pair of seats by the west wall and a series of buttons set in a
+panel in th east wall near the doors.  A small door in the south wall leads
+to the operator's cabin, while a largerdoor north leads to another section
+of the train.  
+~
+0 904 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+AB 0 7623
+D2
+(none)~
+(null)~
+AB 0 7624
+S
+#7623
+Monorail Compartment~
+A nondescript compartment.  The lighting here is pretty low.  The only
+noticeable features are the door in the south wall, and a set of small
+clamps in the north wall.  They look similar to the ones used to secure
+wheelchairs on public transit systems.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D2
+(none)~
+(null)~
+AB 0 7622
+S
+#7624
+Monorail Control Room~
+While largely automated, this compartment has been allocated for an
+operator who will control the mono should the automated systems fail.  The
+cabin is fairly simple , consisting of a single chair facing a lit panel,
+below a window that looks out onto a dark empty tunnel.  
+~
+0 2056 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+AB 0 7622
+S
+#7625
+Cell~
+A dark, depressing room.  It looks like those who end up here are here
+for the long haul.  The only exit is a heavy door in the east wall.  There
+isn't much to look at, except the ceiling camera, monitoring everything
+behind the safety of a clear, plexiglass dome.  The walls are marking by
+writing, most of it made by scratching.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+E
+writing~
+Most of whats here was done by scratching, probably by fingerhnails... 
+"Oh, god, why have you forsaken me?"  "Remember me, for I once lived,
+Lawrence Holden" "James Louis Catz" "Mark, I never told you I loved you... 
+Janice" Other things are scratched here, but they seem incomprehensible.  
+~
+D1
+(none)~
+(null)~
+ACJ 0 7619
+S
+#7626
+Cell~
+A dark, depressing room.  It looks like those who end up here are here
+for the long haul.  The only exit is a heavy door in the east wall.  There
+isn't much to look at, except the ceiling camera, monitoring everything
+behind the safety of a clear, plexiglass dome.  The walls are marking by
+writing, most of it made by scratching.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+E
+writing~
+Some of what's here was done by scratching, probably by fingerhnails... 
+"I have found Jesus.  They can't touch me now" "George Underhill Jr."  "Let
+my children be safe.  Lois" The most noticable doggerel is in dried blood:
+"{rMArch ?  90?  They think they own me but it is I who rule them.  Pissing
+blood reminds me of Super Milk Chan.  The Home of the Brave.  I am the
+incarnate of the Gorgon.  The CIA will soon be under my command.  Hail Me,
+GALMANETH Ruler of the Rat People, Emperor of the North, Keeper of the Seven
+Seals.  Jay Edgar Hoover was OLIVE OIL not CASTORIA!!!  PAPARAU PAPARAMU
+ookookookookookookookookookookookookookookookookookook{W" Other things are
+scratched here, but they seem incomprehensible.  
+~
+D1
+(none)~
+(null)~
+ACJ 0 7612
+S
+#7627
+Cell~
+A dark, depressing room.  It looks like those who end up here are here
+for the long haul.  The only exit is a heavy door in the east wall.  There
+isn't much to look at, except the ceiling camera, monitoring everything
+behind the safety of a clear, plexiglass dome.  The walls are marking by
+writing, most of it made by scratching.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+E
+writing~
+Most of whats here was done by scratching, probably by fingerhnails... 
+"Pray for death" Marking of days adding up to roughly six months under the
+name "Cara Laine".  "I killed a family of six in Vietnam over a bowl of rice
+and one of those stupid hats to keep off the rain.  God knows I deserve
+this.  Robert Ross" "God will help us through this time of trial" Other
+things are scratched here, but they seem incomprehensible.  
+~
+D1
+(none)~
+(null)~
+ACJ 0 7618
+S
+#7628
+Cell~
+A dark, depressing room.  It looks like those who end up here are here
+for the long haul.  The only exit is a heavy door in the east wall.  There
+isn't much to look at, except the ceiling camera, monitoring everything
+behind the safety of a clear, plexiglass dome.  The walls are marking by
+writing, most of it made by scratching.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+E
+writing~
+Most of whats here was done by scrathing, probably by fingerhnails... 
+Lines adding up to a three months stay have been carved in by the initials
+"R.  F."  A disturbing declaration reads: "I have tried to close my mind to
+the horrors I am privy to, but to no avail.  I can only pray that
+sacrificing what light I have left will preserve my sanity.  My prayers go
+out that no one else has to read this.  Cassandra Selene, born of Mary and
+Clark" Other things are scratched here, but they seem incomprehensible.  
+~
+D1
+(none)~
+(null)~
+A 0 7617
+S
+#7629
+{wGrey {CSublevel Research Section~
+An east-west corridor.  To the west, the corridor turns north, while the
+east end eventually leads to a pair of heavy doors.  A red biohazard symbol
+can be seen on the wall of the east end even from here.  A tech door of some
+sort is in the north wall, with a sign posted above it.  An airlock has been
+installed in the south wall.  Above it is a lit panel.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+E
+panel~
+{rOperation In progress
+{GLab Not In Use
+~
+E
+sign~
+{YLab A Control Room
+{yResearch Staff Only
+~
+D0
+(none)~
+(null)~
+AB 0 7630
+D1
+(none)~
+(null)~
+0 0 7631
+D3
+(none)~
+(null)~
+0 0 7619
+S
+#7630
+Lab A Control Room~
+A large window in the east wall shows an operating theater.  Monitors and
+control panels have been built into stations set in front of it, with seats
+to accomodate four people.  Another pair of seats are set before even more
+equipment at the north wall.  A sliding, high-tech door provides exit to the
+south.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+BCFNR 0 7634
+D2
+(none)~
+(null)~
+AB 0 7629
+S
+#7631
+{wGrey {CSublevel Research Section~
+The wall at the east end of the corridor displays a large red Biohazard
+symbol, flanked by heavy doors.  The eastern end turns north after a bit.  A
+sign is posted above a tech door in the south wall.  A lit panel sits in the
+north wall above an airlock.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+E
+panel~
+{ROperation In Progress
+{gLab Not In Use
+~
+E
+sign~
+{YLab B Control Room
+{yResearch Staff Only
+~
+D1
+(none)~
+(null)~
+A 0 7635
+D2
+(none)~
+(null)~
+B 0 7632
+D3
+(none)~
+(null)~
+0 0 7629
+S
+#7632
+Lab B Control Room~
+A large window in the west wall shows an operating theater.  Monitors and
+control panels have been built into stations set in front of it, with seats
+to accomodate four people.  Another pair of seats are set before even more
+equipment at the south wall.  A sliding, high-tech door provides exit to the
+north.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+B 0 7631
+D3
+(none)~
+(null)~
+BCFNR 0 7633
+S
+#7633
+name Test Subject Research Lab B~
+This white room looks completely sterile.  Bright operating room lights
+surround an array of robotic swing arms hang suspended from the center of
+the ceiling above a surgical bed with heavy restraints.  There is a large
+window in the east wall, showing what appears to be a control room.  An
+airlock has been built into the north wall.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+BCFNR 0 7632
+S
+#7634
+Test Subject Research A~
+This white room looks completely sterile.  Bright operating room lights
+surround an array of robotic swing arms hang suspended from the center of
+the ceiling above a surgical bed with heavy restraints.  There is a large
+window in the west wall, showing what appears to be a control room.  An
+airlock has been built into the south wall.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D3
+(none)~
+(null)~
+BCFNR 0 7630
+S
+#7635
+Sanitation Section~
+(null)~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+A 0 7636
+D2
+(none)~
+(null)~
+A 0 7637
+D3
+(none)~
+(null)~
+A 0 7631
+S
+#7636
+Organic Disposal Facility~
+(null)~
+0 196616 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D2
+(none)~
+(null)~
+A 0 7635
+S
+#7637
+Incinerator~
+(null)~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+A 0 7635
+S
+#7638
+Test Subject Prep Room~
+This does not look like a pleasant place to visit.  On the north wall,
+gurneys with heavy straps have been set standing on end next to shelves
+holding a variety of restraints.  Also present are gas cylinders with masks,
+ready for use.  On a counter on the east wall a tray holds syringes to
+dispense who knows what kind of drugs.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D2
+(none)~
+(null)~
+AB 0 7615
+S
+#7639
+Security Equipment Depot~
+(null)~
+0 0 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+A 0 7640
+S
+#7640
+{wGrey {CSecurity Control~
+(null)~
+0 0 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 0 7642
+D2
+(none)~
+(null)~
+AB 0 7610
+D3
+(none)~
+(null)~
+A 0 7639
+S
+#7641
+Analysis Floor~
+(null)~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+0 0 7644
+D2
+(none)~
+(null)~
+A 0 7611
+S
+#7642
+Security Chief's Office~
+(null)~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D2
+(none)~
+(null)~
+0 0 7640
+S
+#7643
+Organic Storage~
+(null)~
+0 0 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+A 0 7569
+S
+#7644
+Analysis Floor~
+(null)~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D2
+(none)~
+(null)~
+A 0 7569
+D3
+(none)~
+(null)~
+0 0 7641
+S
+#7645
+Test Subject Autopsy~
+(null)~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 0 7611
+S
+#7646
+Supervisor's Office~
+(null)~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D3
+(none)~
+(null)~
+A 0 7616
+S
+#7647
+(null)~
+(null)~
+0 1028 0
+V
+7622 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+S
+#7648
+(null)~
+(null)~
+0 1028 0
+V
+7622 2
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+S
+#7649
+Reinforced Elevator~
+The walls of the elevator appear to be made of thick alloy plating and
+look stong enough to withstand anything short of ground zero.  The doors are
+made of the same material, with trapazoidal teeth that interlock when
+closed.  A red biohazard sign three feet in circumfrence is painted on them.
+Rectangualr lighting panels form a bright square on the ceiling, centered by
+a black plastic dome.  
+~
+0 396 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+S
+#7650
+Suit Stores~
+A well-lit, white-walled room.  Warning signs stating that wearers of the
+suits stored here should doublecheck for rips, tears, and improper seals. 
+Helmets sit neatly o n a shelf on the east wall, while a locker built into
+the north wall hold the rest of the protective gear.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D2
+(none)~
+(null)~
+ABR 0 7572
+S
+#7651
+Blood Storage~
+Stripped to the basics, this room is just a large freezer.  Bags of blood
+labeled for transfusion take up the shelves on the north and east walls,
+while vials of blood -many earmarked for testing- occupy the shelves on the
+west.  Signs reminding one of the dangers of contact with raw blood have
+been posted along with ones stating only authorized persons can be in here. 
+Needless to say, it's cold in here.  
+~
+0 12 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Cold Place~
+E
+XDDREAM~
+None~
+D2
+(none)~
+(null)~
+AB 0 7567
+S
+#0
+
+
+
+#RESETS
+D 0 7501 0 3
+D 0 7507 0 3
+D 0 7508 2 7
+D 0 7509 3 3
+D 0 7510 2 3
+D 0 7511 2 3
+D 0 7515 3 7
+D 0 7516 1 7
+D 0 7517 3 3
+D 0 7518 1 3
+D 0 7522 0 3
+D 0 7522 2 3
+D 0 7524 0 3
+D 0 7524 2 3
+D 0 7524 3 3
+D 0 7525 0 3
+D 0 7525 2 7
+D 0 7530 2 3
+D 0 7530 3 8195
+D 0 7531 0 3
+D 0 7531 1 8195
+D 0 7531 3 8195
+D 0 7532 3 8195
+D 0 7533 1 8195
+D 0 7534 0 7
+D 0 7536 2 3
+D 0 7537 0 3
+D 0 7537 1 3
+D 0 7538 2 3
+D 0 7541 3 3
+D 0 7542 1 3
+D 0 7543 1 3
+D 0 7545 0 8195
+D 0 7545 1 3
+D 0 7546 2 8195
+D 0 7547 0 8195
+D 0 7547 3 3
+D 0 7548 2 8195
+D 0 7549 3 8195
+D 0 7550 3 3
+D 0 7551 1 8195
+D 0 7556 2 3
+D 0 7557 0 7
+D 0 7558 3 3
+D 0 7560 1 8195
+D 0 7563 0 3
+D 0 7564 2 3
+D 0 7565 1 3
+D 0 7566 0 131075
+D 0 7566 1 131075
+D 0 7566 2 131075
+D 0 7567 0 3
+D 0 7567 2 3
+D 0 7568 3 131075
+D 0 7572 0 131075
+D 0 7572 2 131075
+D 0 7573 3 3
+D 0 7586 1 3
+D 0 7588 1 3
+D 0 7591 3 3
+D 0 7592 3 3
+D 0 7595 1 3
+D 0 7596 1 3
+D 0 7597 0 3
+D 0 7598 2 3
+D 0 7599 0 3
+D 0 7600 0 131075
+D 0 7600 3 1187942
+D 0 7601 1 1187942
+D 0 7603 0 131075
+D 0 7608 2 131075
+D 0 7609 0 39
+D 0 7609 3 35
+D 0 7610 0 3
+D 0 7610 1 35
+D 0 7612 3 517
+D 0 7615 0 3
+D 0 7615 2 3
+D 0 7618 3 517
+D 0 7619 3 517
+D 0 7620 0 3
+D 0 7622 0 3
+D 0 7622 2 3
+D 0 7623 2 3
+D 0 7624 0 3
+D 0 7625 1 517
+D 0 7626 1 517
+D 0 7627 1 517
+D 0 7629 0 3
+D 0 7630 1 139302
+D 0 7630 2 3
+D 0 7631 2 2
+D 0 7632 0 2
+D 0 7632 3 139302
+D 0 7633 1 139302
+D 0 7634 3 139302
+D 0 7638 2 3
+D 0 7640 2 3
+D 0 7650 2 131075
+D 0 7651 2 3
+O 0 7501 0 7501
+O 0 7502 0 7501
+O 0 7503 0 7501
+M 1 7510 1 7502 1
+O 0 7514 0 7506
+O 0 7504 0 7516
+O 0 7505 0 7534
+O 0 7505 0 7535
+S
+
+
+
+#SHOPS
+0
+
+
+
+#MOBPROGS
+#0
+
+#$

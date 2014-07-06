@@ -1,0 +1,1190 @@
+#AREADATA
+Name arms~
+Builders Staff~
+VNUMs 19000 19100
+Credits Staff~
+Security 1
+Flags I
+Price 1
+End
+
+
+
+#MOBILES
+#19000
+OOC TEST HUMAN~
+OOC Test Human~
+An OOC Test Human
+~
+A human Mob made for firearms testing.  
+~
+human~
+AB 0 100 0 0 0 none
+0 0 0 0
+10 10 3 0
+AHMV ABCDEFGHIJK small flesh
+A 0
+I 0
+#19001
+OOC TEST VAMPIRE~
+OOC Test Vampire~
+An OOC Test Vampire
+~
+A Vampire Mob made for firearms testing.  Careful, they tend to bite...  
+~
+vampire~
+AB 0 100 0 0 0 none
+0 0 0 H
+10 10 3 0
+AHMVc ABCDEFGHIJK small flesh
+A 0
+I 0
+#19002
+OOC TEST WEREWOLF~
+OOC Test Werewolf~
+An OOC Test Werewolf
+~
+A Werewolf Mob made for firearms testing.  Not housebroken, I'm afraid,
+but it won't live long enough for that anyway.  
+~
+werewolf~
+AB 0 100 0 0 0 none
+0 0 0 Y
+10 10 3 0
+AHMV ABCDEFGHIJK small flesh
+A 0
+I 0
+#0
+
+
+
+#OBJECTS
+#19000
+stanag magazine clip~
+a 30-round STANAG magazine~
+A curved steel clip with grooves running down it's length, designed to
+hold 30 5.  56x45mm NATO rounds.  Although primarily intended for the M16
+series of weapons, the magazine is compatable with a variety of assault
+rifles, particularly those used by NATO member nations.  
+~
+A curved steel clip with grooves running down it's length, designed to hold 30 5.56x45mm NATO rounds. Although primarily intended for the M16 series of weapons, the magazine is compatable with a variety of assault rifles, particularly those used by NATO member nations.
+~
+plastic~
+31 0 A
+BCDE B BC ABD 0
+0
+1 12345 100
+E
+--USES~
+-2~
+Q 6
+#19001
+M4 carbine~
+an M4 carbine~
+Blue steeled, with a detachable sight rail, ribbed barrel shroud and a
+telescopic stock, the M4 is the primary firearm of the United States armed
+forces, second only to the M16A2.  A variety of accessories can be employed;
+night vision system, Aimpont CompM2 red-dot scope, grenade launcher,
+foreward pistol grip, depending on situational requirements.  It fires the
+5.  56x45mm NATO round, and has selective-fire options, mainly semi-auto and
+three round burst.  
+~
+Blue steeled, with a detachable sight rail, ribbed barrel shroud and a telescopic stock, the M4 is the primary firearm of the United States armed forces, second only to the M16A2. A variety of accessories can be employed; night vision system, Aimpont CompM2 red-dot scope, grenade launcher, foreward pistol grip, depending on situational requirements. It fires the 5.56x45mm NATO round, and has selective-fire options, mainly semi-auto and three round burst.
+~
+steel~
+5 0 ANR
+1 7 19000 frbite BCDE 0
+2 189975 100
+E
+--USES~
+-2~
+Q 8
+#19002
+ak magazine clip~
+a 30-round AK series clip~
+A curved blued steel clip with ribs running down it's sides, designed to
+hold 30 7.  62x39mm rounds.  Usable by just about any Soviet made AK rifle
+variant.  
+~
+A curved blued steel clip with ribs running down it's sides, designed to hold 30 7.62x39mm rounds. Usable by just about any Soviet made AK rifle variant.
+~
+plastic~
+31 0 A
+BCDE B AC 0 0
+0
+1 9999 100
+E
+--USES~
+-2~
+Q 5
+#19003
+AK-47 assault rifle~
+an AK-47 assault rifle~
+Firing the Soviet 7.  62x39mm M43 catridge (possibly one of the few
+pieces of Soviet technology where reliability could be taken for granted),
+this blue steel brain-child of Mikhail Kalashnikov can be found all over the
+world in one form or another.  Simple to use, easy to maintain, cheap to
+manufacture, and highly durable and reliable, the AK-47 was the weapon of
+choice for armies and geurilla factions throughout the latter half of the
+Twentieth Century, and is still widely used today.  
+~
+Firing the Soviet 7.62x39mm M43 catridge (possibly one of the few pieces of Soviet technology where reliability could be taken for granted), this blue steel brain-child of Mikhail Kalashnikov can be found all over the world in one form or another. Simple to use, easy to maintain, cheap to manufacture, and highly durable and reliable, the AK-47 was the weapon of choice for armies and geurilla factions throughout the latter half of the Twentieth Century, and is still widely used today.
+~
+steel~
+5 0 ANR
+1 7 19002 frbite BCDE 0
+2 94447 100
+E
+--USES~
+-2~
+Q 7
+#19004
+HK g36 clip magazine~
+an HK 30-round magazine~
+A curved box magazine made of translucent black polymer, allowing for
+quick determination as to how many rounds are left.  It hols thirty 5. 
+56x45mm NATO rounds in a double-column when fully loaded.  Usable only by
+the HK G36 variants.  
+~
+A curved box magazine made of translucent black polymer, allowing for quick determination as to how many rounds are left. It hols thirty 5.56x45mm NATO rounds in a double-column when fully loaded. Usable only by the HK G36 variants.
+~
+plastic~
+31 0 A
+BCDE B BC ABD 0
+0
+0 23636 100
+E
+--USES~
+-2~
+Q 8
+#19005
+G36 assault rifle~
+a G36 assault rifle~
+The current rifle of the German military, the Heckler & Koch G36 comes
+with standard 3x optical and red-dot sights positioned behind it's carry
+handle, with the option of adding more sophicticated aiming hardware.  It's
+black polymer frame possesses a side-folding stock and folding bipod (the
+latter being detachable).  Like most good assault rifles, descendant
+variants have sprung from it.  It's chambered for the 5.  56x45mm NATO
+round.  
+~
+The current rifle of the German military, the Heckler & Koch G36 comes with standard 3x optical and red-dot sights positioned behind it's carry handle, with the option of adding more sophicticated aiming hardware. It's black polymer frame possesses a side-folding stock and folding bipod (the latter being detachable). Like most good assault rifles, descendant variants have sprung from it. It's chambered for the 5.56x45mm NATO round.
+~
+poly-carbide steel~
+5 0 ANR
+1 7 19004 frbite BCDE 0
+1 201145 100
+E
+--USES~
+-2~
+Q 8
+#19006
+SAR-21 assault rifle~
+a SAR-21 assault rifle~
+A black polymer frame rifle with a handguard and a scope/carry handle
+combination.  The SAR-21 is of the bullpup family, and comes equipped with a
+Laser Aiming Module (built into the barral shroud) and a 1.  5x optical
+scope (carry handle).  It's gas operated and fires the 5.  56x45mm NATO
+round.  
+~
+A black polymer frame rifle with a handguard and a scope/carry handle combination. The SAR-21 is of the bullpup family, and comes equipped with a Laser Aiming Module (built into the barral shroud) and a 1.5x optical scope (carry handle). It's gas operated and fires the 5.56x45mm NATO round.
+~
+steel~
+5 0 ANR
+1 6 19000 frbite BCDE 0
+2 167789 100
+E
+--USES~
+-2~
+Q 7
+#19007
+smg clip magazine~
+a 32-round SMG magazine~
+A gunmetal steel clip for a macine pistol.  Made to hold 32 9mm rounds in
+a double column.  
+~
+A gunmetal steel clip for a macine pistol. Made to hold 32 9mm rounds in a double column.
+~
+steel~
+31 0 A
+F AB AB 0 0
+0
+1 10016 100
+E
+--USES~
+-2~
+Q 5
+#19008
+smg clip magazine~
+a 20-round SMG magazine~
+A gunmetal steel clip for a macine pistol.  Made to hold 20 9mm rounds in
+a double column.  
+~
+A gunmetal steel clip for a macine pistol.  Made to hold 20 9mm rounds in
+a double column.  
+~
+steel~
+31 0 A
+CE AB AB 0 0
+0
+1 9716 100
+E
+--USES~
+-2~
+Q 5
+#19009
+micro uzi pistol~
+a micro-Uzi~
+A matte-black, highly compact version of the famous Israeli sub-machine
+gun, the 9mm Micro Uzi, like it's ancestor, has a rate of fire of 600 rounds
+per minute.  The wet dream of the antithesis of "say it, don't spray it".  
+~
+A matte-black, highly compact version of the famous Israeli sub-machine
+gun, the 9mm Micro Uzi, like it's ancestor, has a rate of fire of 600 rounds
+per minute.  The wet dream of the antithesis of "say it, don't spray it".  
+~
+steel~
+5 0 AN
+1 8 19008 divine F 0
+1 100123 100
+E
+--USES~
+-2~
+Q 6
+#19010
+smg MAC-10 clip magazine~
+a 30-round SMG magazine~
+A box magazine made of stamped steel, with a raised ridge running along
+the backside, thus ensuring that the clip is loaded into it's weapon
+correctly.  Designed to hold thirty .  45 ACP rounds.  
+~
+A box magazine made of stamped steel, with a raised ridge running along the backside, thus ensuring that the clip is loaded into it's weapon correctly. Designed to hold thirty .45 ACP rounds.
+~
+steel~
+31 0 A
+0 C AB 0 0
+0
+1 11199 100
+E
+--USES~
+-2~
+Q 5
+#19011
+MAC-10 smg machine pistol~
+a MAC-10 machine pistol~
+This gunmetal grey, stamped steel machine pistol was made famous by John
+Wayne, who was the first actor to use one in "McQ" (1974).  Also adding to
+it's fame; Snake "Why does everyone think I'm dead?"  Plisken, and the Tomb
+Raider franchise (where a pair of these weapons are mistakenly referred to
+as uzis).  The barrel is threaded, allowing it's user to attach a sound
+supressor.  The blowback mechanism inside the MAC-10's box-frame is
+chambered for 45ACP cartridges.  It's high rate of fire -a thousand rounds
+per minute- makes the weapon difficult to use.  In the hands of an amateur,
+the MAC-10, like much of the Lara Croft fan base, tends to spray everywhere.
+~
+This gunmetal grey, stamped steel machine pistol was made famous by John
+Wayne, who was the first actor to use one in "McQ" (1974).  Also adding to
+it's fame; Snake "Why does everyone think I'm dead?"  Plisken, and the Tomb
+Raider franchise (where a pair of these weapons are mistakenly referred to
+as uzis).  The barrel is threaded, allowing it's user to attach a sound
+supressor.  The blowback mechanism inside the MAC-10's box-frame is
+chambered for 45ACP cartridges.  It's high rate of fire -a thousand rounds
+per minute- makes the weapon difficult to use.  In the hands of an amateur,
+the MAC-10, like much of the Lara Croft fan base, tends to spray everywhere.
+~
+steel~
+5 0 AN
+1 8 19010 frbite BCDE 0
+2 99999 100
+E
+--USES~
+-2~
+Q 6
+#19012
+MP5 clip magazine~
+a 30-round MP5 magazine~
+A curved, blue steel magazine that can hold up to thirty rounds of 9mm
+parabellum ammunition.  Made for the MP5 sub-machinegun series.  
+~
+A curved, blue steel magazine that can hold up to thirty rounds of 9mm
+parabellum ammunition.  Made for the MP5 sub-machinegun series.  
+~
+steel~
+31 0 A
+BCDE AB AB 0 0
+0
+1 15089 100
+E
+--USES~
+-2~
+Q 5
+#19013
+MP5 smg~
+an MP5 submachine gun~
+Now one of the most widely used submachine guns in the world, the 9mm MP5
+is a favorite of military units and law enforcement agencies.  A multitude
+of variants exist for it, equipped with either silencers, foregrips, fixed
+or folding stocks.  An adapter on the weapon's housing allows for an
+attachment of various scopes or aiming systems.  Brought to you by Heckler
+and Koch.  
+~
+Now one of the most widely used submachine guns in the world, the 9mm MP5
+is a favorite of military units and law enforcement agencies.  A multitude
+of variants exist for it, equipped with either silencers, foregrips, fixed
+or folding stocks.  An adapter on the weapon's housing allows for an
+attachment of various scopes or aiming systems.  Brought to you by Heckler
+and Koch.  
+~
+steel~
+5 0 ANR
+1 7 19012 frbite BCDE 0
+2 129915 100
+E
+--USES~
+-2~
+Q 6
+#19014
+paper cartridge shot ball~
+a paper cartridge~
+A round for an antique muzzleloading weapon; a tube of yellowish paper
+twisted at both ends.  It contains hundreds of fine black powder grains and
+a large lead ball.  , as well as wadding to seperate ball from powder and
+seal the shot tightly in the barrel.  The ball looks roughly .  50 calibre. 
+~
+A round for an antique muzzleloading weapon; a tube of yellowish paper twisted at both ends. It contains hundreds of fine black powder grains and a large lead ball., as well as wadding to seperate ball from powder and seal the shot tightly in the barrel. The ball looks roughly .50 calibre.
+~
+c-4~
+31 0 A
+A AC B D 0
+0
+1 2999 100
+E
+--USES~
+-2~
+Q 4
+#19015
+flintlock pistol~
+a .50 calibre flintlock pistol~
+A muzzle loading flintlock with an octagonal, 13" steel barrel with a
+light gray finish.  The mechanism plate ans trigger guard are made of
+polished brass, as are the front sight blade and ramrod handle.  A gray
+steel belthook is attached to the left side of the gun, opposite the flint
+and pan.  A brass cap covers the end of the grip, which is part of a
+varnished maple stock that runs along the pistol's length, stopping about
+half an inch from the end of the barrel.  The weapon is circa 1830 and is in
+good condition considering it's age.  
+~
+A muzzle loading flintlock with an octagonal, 13" steel barrel with a
+light gray finish.  The mechanism plate ans trigger guard are made of
+polished brass, as are the front sight blade and ramrod handle.  A gray
+steel belthook is attached to the left side of the gun, opposite the flint
+and pan.  A brass cap covers the end of the grip, which is part of a
+varnished maple stock that runs along the pistol's length, stopping about
+half an inch from the end of the barrel.  The weapon is circa 1830 and is in
+good condition considering it's age.  
+~
+steel~
+5 0 AN
+1 4 19014 none A 0
+1 67988 100
+E
+--USES~
+-2~
+Q 5
+#19016
+.44 round bullet~
+a .44 cal revolver round~
+(no full description) A lead bullet in a rimmed, brass case.  The words
+".  44 S&W Special" cirlce the primer.  
+~
+(no full description)
+A lead bullet in a rimmed, brass case. The words ".44 S&W Special" cirlce the primer.
+~
+dynamite~
+31 0 A
+A AC AB D 0
+0
+0 599 100
+E
+--USES~
+-2~
+Q 5
+#19017
+colt dragoon .44 revolver~
+an 1848 Colt Dragoon revolver~
+~
+~
+iron~
+5 0 AN
+1 6 19016 none BC 0
+1 130298 100
+E
+--USES~
+-2~
+Q 4
+#19018
+cz-52 pistol magazine clip~
+a CZ-52 pistol magazine~
+A steel pistol magazine with diagonal capsule shaped slots cut out of the
+sides, allowing one to see how many rounds are remaining.  Designed to hold
+eight bottlenecked 7.  62x25mm rounds in a single column.  
+~
+A steel pistol magazine with diagonal capsule shaped slots cut out of the sides, allowing one to see how many rounds are remaining. Designed to hold eight bottlenecked 7.62x25mm rounds in a single column.
+~
+aluminium~
+31 0 A
+D AB B 0 0
+0
+1 8901 100
+E
+--USES~
+-2~
+Q 3
+#19019
+CZ-52 pistol~
+a CZ-52 pistol~
+The sidearm of former Czechoslovakia (until 1982), the CZ-52 fires 7. 
+62x25mm rounds.  With it's parkerized finish and black, horizontal ridged
+plastic grips, this pistol isn't going to win any beauty contests anytime
+soon, but looks aren't what it was made for anyways.  
+~
+The sidearm of former Czechoslovakia (until 1982), the CZ-52 fires 7.62x25mm rounds. With it's parkerized finish and black, horizontal ridged plastic grips, this pistol isn't going to win any beauty contests anytime soon, but looks aren't what it was made for anyways.
+~
+steel~
+5 0 AN
+1 5 19018 none D 0
+1 75299 100
+E
+--USES~
+-2~
+Q 4
+#19020
+.45 clip magazine~
+an M1911A1 magazine~
+Made for the timeless Colt 45 semi-auto handgun, this black steel
+magazine has five holes running up the sides in a zigzag pattern so you can
+see how many of it's seven 45ACP rounds are left.  
+~
+Made for the timeless Colt 45 semi-auto handgun, this black steel
+magazine has five holes running up the sides in a zigzag pattern so you can
+see how many of it's seven 45ACP rounds are left.  
+~
+aluminium~
+31 0 A
+ABC C AB 0 0
+0
+1 9999 100
+E
+--USES~
+-2~
+Q 6
+#19021
+Colt M1911A1 .45 pistol~
+an M1911A1 .45 handgun~
+The timeless Colt .  45 calibre semi-auto pistol, a veteran of many wars
+and the official sidearm of the United States military throughout most of
+the Twentieth Century (as well as adopted by many foreign armed forces). 
+It's power and reliability goes without saying.  A century since it's
+invention, the pistol is still widely used and manufactured in a variety of
+forms.  This one has the standard 5" barrel and a blued finish.  
+~
+The timeless Colt .45 calibre semi-auto pistol, a veteran of many wars and the official sidearm of the United States military throughout most of the Twentieth Century (as well as adopted by many foreign armed forces). It's power and reliability goes without saying. A century since it's invention, the pistol is still widely used and manufactured in a variety of forms. This one has the standard 5" barrel and a blued finish.
+~
+steel~
+5 0 AN
+1 5 19020 none ABC 0
+1 0 100
+E
+--USES~
+-2~
+Q 7
+#19022
+.38 round bullet speedloader~
+a .38 special speedloader~
+A black plastic cylinder holding half-a-dozen rounds.  The forward halves
+are exposed, allowing one to see the lead tips.  The base ends are concealed
+within the cylinder, which is centered by a grooved stainless-steel knob
+with ".  38 special" stamped into it.  
+~
+A black plastic cylinder holding half-a-dozen rounds.  The forward halves are exposed, allowing one to see the lead tips.  The base ends are concealed within the cylinder, which is centered by a grooved stainless-steel knob with ".38 special" stamped into it.
+~
+aluminium~
+31 0 A
+BC AB B 0 0
+0
+1 10299 100
+E
+--USES~
+-2~
+Q 6
+#19023
+smith & wesson .38 pistol gun revolver~
+a S&W .38 revolver~
+The Smith and Wesson revolver has been the freind of police detectives
+and those whose preferences lean towards easy-to-handle-and-conceal
+firearms.  It holds six rounds of .  38 special ammunition.  It has a three
+inch barrel and black plastic grips with finger grooves for better handling.
+The frame has a matte gray finish.  
+~
+The Smith and Wesson revolver has been the freind of police detectives and those whose preferences lean towards easy-to-handle-and-conceal firearms. It holds six rounds of .38 special ammunition. It has a three inch barrel and black plastic grips with finger grooves for better handling. The frame has a matte gray finish.
+~
+steel~
+5 0 AN
+1 4 19022 none BC 0
+1 71199 100
+E
+--USES~
+-2~
+Q 6
+#19024
+arrow~
+a carbon-fiber game arrow~
+This olive green carbon-fiber arrow has black flechtes and a broadpoint
+arrowhead with triple-edges.  Made for game-hunting.  
+~
+This olive green carbon-fiber arrow has black flechtes and a broadpoint
+arrowhead with triple-edges.  Made for game-hunting.  
+~
+plexi-glass~
+31 0 A
+A AB C ABD 0
+0
+0 1399 100
+E
+--USES~
+-2~
+Q 7
+#19025
+compound bow~
+a compound bow~
+The riser (center portion) of the bow is made of aluminium, while the
+limbs are carbon-fiber with wheels at each end.  A four-pin sight sits above
+the polymer grip and arrow rest, while below the grip are the stabilizer and
+cable-guard, combined into a single rod running perpendicular to the bow
+frame.  The entire bow has a digital camouflage finish.  
+~
+The riser (center portion) of the bow is made of aluminium, while the
+limbs are carbon-fiber with wheels at each end.  A four-pin sight sits above
+the polymer grip and arrow rest, while below the grip are the stabilizer and
+cable-guard, combined into a single rod running perpendicular to the bow
+frame.  The entire bow has a digital camouflage finish.  
+~
+aluminium~
+5 0 ANR
+1 10 19024 none A 0
+3 47989 100
+E
+--USES~
+-2~
+Q 7
+#19026
+.38 tracer bullet speedloader~
+a .38 tracer-round speedloader~
+A black plastic cylinder holding half-a-dozen rounds.  The forward halves
+are exposed, allowing one to see the tips, white are white with a yellow
+tinge.  The base ends are concealed within the cylinder, which is centered
+by a grooved stainless-steel knob with ".  38 special" stamped into it.  
+~
+A black plastic cylinder holding half-a-dozen rounds.  The forward halves are exposed, allowing one to see the tips, white are white with a yellow tinge.  The base ends are concealed within the cylinder, which is centered by a grooved stainless-steel knob with ".38 special" stamped into it.
+~
+aluminium~
+31 0 A
+BC AB B 0 A
+0
+1 32000 100
+E
+--USES~
+-2~
+Q 5
+#19027
+webley .38 revolver~
+a Webley Mk IV revolver~
+A webley .38 revolver lies here.~
+A break open revolver with a five in barrel sporting a trapazoidal blade, and a loop at the butt for a lanyard. The Webley Mk IV dates back to pre-World War II and, like it's predessesors, fired a .455 calibre round. This one has be converted to .38, ass .455 rounds are no longer made. It's blued finish has long since begun to flake, showing it's age, though it appears reliable enough.
+~
+steel~
+5 0 AN
+1 6 19022 none BC 0
+1 95629 100
+E
+--USES~
+-2~
+Q 4
+#19028
+12 gauge shotgun shell~
+a standard 12 gauge shell~
+A red shotgun shell with a brass with a brass cap holding the primer on
+one end, and crimped at the other.  Circling the primer is the phrase "12
+Gauge", which has been stamped into the brass.  
+~
+A red shotgun shell with a brass with a brass cap holding the primer on
+one end, and crimped at the other.  Circling the primer is the phrase "12
+Gauge", which has been stamped into the brass.  
+~
+plastic~
+31 0 A
+A AC B BC 0
+0
+1 299 100
+E
+--USES~
+-2~
+Q 5
+#19029
+Spas 12 shotgun~
+a SPAS-12 shotgun~
+Matte-black with a folding stock, the Franchi SPAS-12 is often associated
+with action movies and law enforcement, though it managed to bypass U.  S. 
+Firearms limitations by being classified as a sporting weapon.  An
+underbarrel tube magazine holds eight 12 gauge shotgun rounds.  Covering
+this is a vented heat shield with a bulky black foregrip, with a matching
+black pistol grip behind the trigger.  
+~
+Matte-black with a folding stock, the Franchi SPAS-12 is often associated
+with action movies and law enforcement, though it managed to bypass U.  S. 
+Firearms limitations by being classified as a sporting weapon.  An
+underbarrel tube magazine holds eight 12 gauge shotgun rounds.  Covering
+this is a vented heat shield with a bulky black foregrip, with a matching
+black pistol grip behind the trigger.  
+~
+steel~
+5 0 ANR
+1 6 19028 none D 0
+2 88999 100
+E
+--USES~
+-2~
+Q 5
+#19030
+.22 LR round~
+a .22 LR round~
+A small round with a rimmed brass case and lead bullet.  Instead of a
+primer, the rim itself is crushed to ignite the grains.  The best defense
+against empty beer cans and chipmunks (though the NRA would have you beleive
+otherwise).  
+~
+A small round with a rimmed brass case and lead bullet.  Instead of a
+primer, the rim itself is crushed to ignite the grains.  The best defense
+against empty beer cans and chipmunks (though the NRA would have you beleive
+otherwise).  
+~
+steel~
+31 0 A
+A B AB 0 0
+0
+0 199 100
+E
+--USES~
+-2~
+Q 5
+#19031
+Marlin model 60 .22 rifle~
+a Marlin Model 60 rifle~
+The Marlin Model 60 (introduced in 1960) is a semi-auto rifle that fires
+the .  22 Long Rifle round; it holds fourteen in it's underbarrel tube
+magazine.  This is the basic model, with a black magazine/barrel assembly
+and walnut stock.  The chrome ejection port sits on the right side of the
+firing chamber, above and forward of the trigger.  
+~
+The Marlin Model 60 (introduced in 1960) is a semi-auto rifle that fires the .22 Long Rifle round; it holds fourteen in it's underbarrel tube magazine. This is the basic model, with a black magazine/barrel assembly and walnut stock. The chrome ejection port sits on the right side of the firing chamber, above and forward of the trigger.
+~
+titanium~
+5 0 ANR
+1 5 19030 none BCD 0
+1 47899 100
+E
+--USES~
+-2~
+Q 5
+#19032
+pepper spray~
+a pool of pepper-spray~
+Pepper-spray without the sprayer.  Not much use against those not dumb
+enough to stick their face in it.  
+~
+Pepper-spray without the sprayer.  Not much use against those not dumb
+enough to stick their face in it.  
+~
+ooze~
+31 B A
+CD A 0 BC F
+0
+1 0 100
+E
+--USES~
+-2~
+Q 5
+#19033
+mace spray canister~
+a canister of mace~
+A black Mace canister with a large red trigger.  Below the nozzle is a
+finger groove.  Oposite the groove is a warning label.  The can has a hook,
+allowing it to be placed on a belt.  
+~
+A black Mace canister with a large red trigger.  Below the nozzle is a
+finger groove.  Oposite the groove is a warning label.  The can has a hook,
+allowing it to be placed on a belt.  
+~
+plastic~
+5 0 AN
+1 4 19032 suction CD 0
+2 1299 100
+E
+--USES~
+-2~
+Q 4
+#19034
+CO2~
+some CO2~
+Try to find the black lining in this!  
+~
+Try to find the black lining in this!
+~
+none~
+31 0 A
+AD A 0 0 B
+0
+0 0 100
+E
+--USES~
+-2~
+#19035
+CO2 fire extinguisher~
+a CO2 fire extinguisher~
+A large red cylinder with an instruction and warning label on one side,
+as well as a large conical, black nozzle and stainless-steel squeeze
+trigger.  Just your basic fire extinguisher.  Employs CO2 against those
+pesky flames.  
+~
+A large red cylinder with an instruction and warning label on one side,
+as well as a large conical, black nozzle and stainless-steel squeeze
+trigger.  Just your basic fire extinguisher.  Employs CO2 against those
+pesky flames.  
+~
+steel~
+5 0 ANR
+1 5 19034 grep AD 0
+1 1899 100
+E
+--USES~
+-2~
+Q 5
+#19036
+.30-30 round~
+a .30-30 rifle round~
+A bottlenecked rifle round with a copper, full metal jacketed bullet with
+a rounded tip.  Made for the Winchester .  30-30 rifle.  "U.  M.  C.. 
+30-30" is stamped into the base, circling the primer.  
+~
+A bottlenecked rifle round with a copper, full metal jacketed bullet with a rounded tip. Made for the Winchester .30-30 rifle. "U.M.C. .30-30" is stamped into the base, circling the primer.
+~
+aluminium~
+31 0 A
+A C AC 0 0
+0
+1 0 100
+E
+--USES~
+-2~
+Q 5
+#19037
+Winchester 1894 Rifle~
+a Winchester 1894 .30-30 rifle~
+The Winchester Model 1894 is a lever-action hunting rifle that uses the .
+30-30 Winchester cartridge.  The frame, barrel and underbarrel tube magazine
+have a blue-steel finish, while the wooden stock and foregrip are stained
+Dark Maple.  The cartridges are loaded in through a capsule-shaped loading
+gate on the right side of the frame into the tube magazine, which holds
+seven rounds.  
+~
+The Winchester Model 1894 is a lever-action hunting rifle that uses the .30-30 Winchester cartridge. The frame, barrel and underbarrel tube magazine have a blue-steel finish, while the wooden stock and foregrip are stained Dark Maple. The cartridges are loaded in through a capsule-shaped loading gate on the right side of the frame into the tube magazine, which holds seven rounds.
+~
+steel~
+5 0 ANR
+1 6 19036 none ABC 0
+2 128499 100
+E
+--USES~
+-2~
+Q 5
+#19038
+.38 silver bullet speedloader~
+a .38 silver bullet speedloader~
+A black plastic cylinder holding half-a-dozen rounds.  The forward halves
+are exposed, allowing one to see the silver tips.  The base ends are
+concealed within the cylinder, which is centered by a grooved
+stainless-steel knob with ".  38 special" stamped into it.  
+~
+A black plastic cylinder holding half-a-dozen rounds.  The forward halves are exposed, allowing one to see the silver tips.  The base ends are concealed within the cylinder, which is centered by a grooved stainless-steel knob with ".38 special" stamped into it.
+~
+silver~
+31 0 A
+BC AB B 0 0
+0
+1 50000 100
+E
+--USES~
+-2~
+Q 5
+#19039
+nail gun~
+a cordless nail gun~
+Red-orange in color, this device is shaped like an electric drill with a
+skeletal diagonal magazine in front of the trigger.  It holds fifteen nails
+for use in home repairs.  It's electric and cordless, requiring only a
+charger.  A warning label has been stuck on the top of the frame, though it
+doesn't stop 37,000 people for going to the emergency room for nail gun
+injuries, mostly to the hands and feet.  
+~
+Red-orange in color, this device is shaped like an electric drill with a
+skeletal diagonal magazine in front of the trigger.  It holds fifteen nails
+for use in home repairs.  It's electric and cordless, requiring only a
+charger.  A warning label has been stuck on the top of the frame, though it
+doesn't stop 37,000 people for going to the emergency room for nail gun
+injuries, mostly to the hands and feet.  
+~
+aluminium~
+5 0 AN
+1 7 19040 none ABCD 0
+2 0 100
+E
+--USES~
+-2~
+#19040
+nail strip~
+a strip of nails~
+A column of nails held together by strip of plastic with a brown paper
+label reading: "SENCO: The Professional's Choice".  Holds fifteen nails to
+start.  
+~
+A column of nails held together by strip of plastic with a brown paper
+label reading: "SENCO: The Professional's Choice".  Holds fifteen nails to
+start.  
+~
+steel~
+31 0 A
+ABCD A 0 ABD 0
+0
+0 0 100
+E
+--USES~
+-2~
+Q 3
+#0
+
+
+
+#ROOMS
+#19000
+FB Room {RStaff Only{x~
+This is the OOC Firearms Deposit.  This is one end of the range where
+builders can test out their creations.  I made this so I don't have to go
+back and forth plinking rats and hunt down mobs like the Predator on crack
+(actually, they look more like extreme long-term meth addicts, when you
+think about it, and I'm one of those people who does.  And I'm one of those
+poeple whose posts it as well.  Well, it's here, it's not going anywhere. 
+So Nyaaaagh!!!)  This room is ooc and for Admins and staff.  Please respect
+this.  
+~
+0 32780 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 19001
+S
+#19001
+armsbank {Rstaff only{x~
+Part of the Firearms Bank testing range.  This room is ooc and for Admins
+and staff.  Please respect this.  
+~
+0 32776 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 19002
+D3
+~
+~
+0 0 19000
+S
+#19002
+armsbank {Rstaff only{x~
+Part of the Firearms Bank testing range.  This room is ooc and for Admins
+and staff.  Please respect this.  
+~
+0 32776 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 19003
+D3
+~
+~
+0 0 19001
+S
+#19003
+armsbank {Rstaff only{x~
+Part of the Firearms Bank testing range.  This room is ooc and for Admins
+and staff.  Please respect this.  
+~
+0 32776 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 19004
+D3
+~
+~
+0 0 19002
+S
+#19004
+armsbank {Rstaff only{x~
+Part of the Firearms Bank testing range.  This room is ooc and for Admins
+and staff.  Please respect this.  
+~
+0 32776 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 19005
+D3
+~
+~
+0 0 19003
+S
+#19005
+armsbank {Rstaff only{x~
+Part of the Firearms Bank testing range.  This room is ooc and for Admins
+and staff.  Please respect this.  
+~
+0 32776 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 19006
+D3
+~
+~
+0 0 19004
+S
+#19006
+armsbank {Rstaff only{x~
+Part of the Firearms Bank testing range.  This room is ooc and for Admins
+and staff.  Please respect this.  
+~
+0 32776 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 19007
+D3
+~
+~
+0 0 19005
+S
+#19007
+armsbank {Rstaff only{x~
+Part of the Firearms Bank testing range.  This room is ooc and for Admins
+and staff.  Please respect this.  
+~
+0 32776 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 19008
+D3
+~
+~
+0 0 19006
+S
+#19008
+armsbank {Rstaff only{x~
+Part of the Firearms Bank testing range.  This room is ooc and for Admins
+and staff.  Please respect this.  
+~
+0 32776 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 19009
+D3
+~
+~
+0 0 19007
+S
+#19009
+armsbank {Rstaff only{x~
+Part of the Firearms Bank testing range.  This room is ooc and for Admins
+and staff.  Please respect this.  
+~
+0 32776 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 19010
+D3
+~
+~
+0 0 19008
+S
+#19010
+armsbank {Rstaff only{x~
+This is the far end of the Arms bank testing range.  I can't imagine what
+would have the range here from rm 19000, though.  Act of god maybe?  
+~
+0 32776 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D3
+~
+~
+0 0 19009
+S
+#0
+
+
+
+#RESETS
+S
+
+
+
+#SHOPS
+0
+
+
+
+#MOBPROGS
+#0
+
+#$

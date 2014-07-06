@@ -1,0 +1,844 @@
+#AREADATA
+Name The First Bank of America~
+Builders Alissa Siscia~
+VNUMs 10800 10900
+Credits Bran~
+Security 1
+Flags I
+Price 0
+End
+
+
+
+#MOBILES
+#10802
+Danielle Silvani~
+{name} appears to be rifling through papers on a clipboard.~
+(no long description)
+~
+~
+human~
+A 0 25 0 0 0 none
+0 0 0 0
+8 10 2 5
+AHMV ABCDEFGHIJK small Flesh
+A 0
+I 0
+#10810
+Alissa Reone~
+Appearing to pay more attention to a book in front of her than anything else, she holds a bright smile... perhaps something is amusing?~
+Alissa Reone stands here.
+~
+~
+human~
+ABG 0 25 0 0 0 none
+0 0 0 0
+10 10 2 0
+AHMV ABCDEFGHIJK small Flesh
+A 0
+I 0
+#10811
+Frank Bellard~
+Shuffling a stack of papers, the young man behind the counter peers around, waiting for the next customer.~
+Frank Bellard stands here.
+~
+~
+human~
+ABG 0 25 0 0 0 none
+0 0 0 0
+10 10 1 0
+AHMV ABCDEFGHIJK large Flesh
+A 0
+I 0
+#10812
+Kiani Rae~
+A young woman seems to wait patiently for a customer as she reads through some papers in front of her, chewing lighly on a pen.~
+Kiani Rae stands here.
+~
+~
+human~
+ABG 0 25 0 0 0 none
+0 0 0 0
+10 10 2 0
+AHMV ABCDEFGHIJK medium Flesh
+A 0
+I 0
+#10813
+Gene Gonol~
+Using a cloth to polish a rather old trinket, the man seems to be turning it in various ways, occasionally checking the level of current specularity under the bright lights. On rare occasions, he glances over toward the ropes to see if anyone is waiting in line.~
+Gene Gonol stands here.
+~
+~
+human~
+ABG 0 25 0 0 0 none
+0 0 0 0
+10 10 1 0
+AHMV ABCDEFGHIJK small Flesh
+A 0
+I 0
+#0
+
+
+
+#OBJECTS
+#10899
+The First Bank of America: Master Key~
+(no short description)~
+(no description)
+~
+(no full description)
+~
+Sapphire~
+18 JKLTe 0
+0 0 0 0 0
+0
+0 0 100
+E
+--USES~
+-2~
+#10900
+Undefined~
+elegantly lies in a temptatious manner.~
+(no description)
+~
+(no full description)
+~
+Sapphire~
+18 JKLTe 0
+0 0 0 0 0
+0
+0 0 100
+E
+--USES~
+-2~
+#0
+
+
+
+#ROOMS
+#10800
+The First Bank of America~
+Two sets of glass double-doors are the only visible means of entry. 
+Although the entryway appears to have suffered a sizeable amount of abuse,
+the rest of the building seems almost new - as if perhaps it had only
+recently been constructed.  Debris frequently falls from large claw marks in
+the stone door frames, giving the impression that something unnatural
+attempted to bust through.  
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+(null) 
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+(null) 
+~
+D0
+~
+~
+0 0 10047
+D2
+~
+~
+A 10899 10801
+M 0 H 100
+S
+#10801
+Lobby~
+Embedded into the floor and covered with thick glass, the emblem of The
+First Bank of America rests beneath the ground, viewable by any who enter
+from the front doors.  Small offices easily viewable by means of windows are
+scattered about the lobby, likely designed for specific sectors of
+expertise.  A carpetted walkway separates the lobby into two halves, leading
+directly to a long counter full of papers, pens and clipboards.  
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+(null) 
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+(null) 
+~
+D0
+~
+~
+A 0 10800
+D1
+~
+~
+BCN 10899 10802
+D2
+~
+~
+0 0 10804
+D3
+~
+~
+BCN 10899 10803
+M 0 H 100
+S
+#10802
+Local Advice Office~
+Sheets of paper full of text hang along the walls, most of which appear
+to be short stories of success from customers or advice from various
+sources.  A poster of a human female is attached to the back wall with tape,
+the word 'Save' hanging above her head.  Near the bottom, text is formed to
+elaborate: "Defining Savings and Success for Over 300 Years."  
+~
+0 10 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+(null) 
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+(null) 
+~
+D2
+~
+~
+AB 0 10805
+D3
+~
+~
+BCN 10899 10801
+M 0 H 100
+S
+#10803
+Home Loan Office~
+Various posters of houses, apartment complexes and even mansions are scattered and layered on the eastern wall, accompanied by spreadsheet forms, pie charts and graphs. An enourmous stack of papers are piled up on the floor beside the desk, barely reaching the flat surface in height.
+~
+0 10 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+BCN 10899 10801
+D2
+~
+~
+AB 0 10806
+S
+#10804
+Walkway~
+A thick, soft red fabric generates a walkway toward the teller stations
+while smooth stone pathways furtherly separate the floor into fourths,
+leading to glassed-in offices.  Each office seems to be decorated with
+papers and posters on the walls, mostly giving away what each office is
+designed for.  
+~
+0 0 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 10801
+D1
+~
+~
+0 0 10805
+D2
+~
+~
+0 0 10809
+D3
+~
+~
+0 0 10806
+S
+#10805
+Advice Sector~
+Black paint seems to have been sprayed carefully against the wall to
+write 'Advice'.  On the floor, two words are engraved, one toward the North,
+the other toward the South: 'Local' and 'Business'.  Looking to the
+respective directed offices, small white-gold plates hang from the wall
+beside the doorway, embedding the same words.  
+~
+0 0 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+AB 10899 10802
+D2
+~
+~
+AB 10899 10807
+D3
+~
+~
+0 0 10804
+S
+#10806
+Loan Sector~
+Against the back wall, the word 'Loans' is written in black paint.  On
+the floor, the word 'Business' is engraved into the otherwise smooth stone
+to the South, the word 'Home' to the North.  Beside the respective doors are
+small white-gold plates with the same words embedded, hanging beside glass
+doors.  
+~
+0 0 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+AB 10899 10803
+D1
+~
+~
+0 0 10804
+D2
+~
+~
+AB 10899 10808
+S
+#10807
+Business Advice Office~
+Mostly empty, it's difficult to tell this office has ever been used.  The
+only major signs of previous use are a very small stack of papers sitting on
+the edge of the desk, the top marked 'Approved'.  
+~
+0 2 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+AB 0 10805
+D3
+~
+~
+BCN 10899 10809
+S
+#10808
+Business Loan Office~
+Small clay-created models rest on various shelves around the room,
+depicting different parts of the city, most with stacks of papers - likely
+proposals - taped to the front, some stamped 'Approved', others stamped
+'Pending'.  Papers are spread out carefully across the desk to form an
+easy-to-read layout.  
+~
+0 2 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+AB 0 10806
+D1
+~
+~
+BCN 10899 10809
+S
+#10809
+Waiting Area~
+Red ropes hanging casually from white gold poles form a wall between
+those who enter the building and the teller stations.  Above each teller
+station is a sign which states a number - likely the number of the station. 
+Each is decorated differently, likely to the specifications of the employee
+if the gold nameplates embedded into the front of each station happens to be
+any indication.  
+~
+0 0 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 10804
+D1
+~
+~
+BCN 10899 10807
+D2
+~
+~
+0 0 10810
+D3
+~
+~
+CN 10899 10808
+S
+#10810
+Teller Three~
+Almost engulfed by small, bean-filled animals, the desk appears to be
+very child-friendly.  A silver bowl filled with various types of candy is
+decorated with a clash of flowers and dinosaurs.  Across the front, a gold
+plate covered with seemingly thick glass presents the name 'Alissa Reone'.  
+~
+0 2 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 10809
+D1
+~
+~
+0 0 10813
+D3
+~
+~
+0 0 10811
+S
+#10811
+Teller Two~
+Glassed into the front of the counter, the name 'Frank Bellard' is
+engaved into a gold nameplate and backlit.  Various trophies are scattered
+about on the back shelf, posters of several sports hanging behind them.  
+~
+0 2 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 10810
+D3
+~
+~
+0 0 10812
+S
+#10812
+Teller One~
+A golden nameplate appears to be backlit and glassed into the front of
+this station, reading 'Kiani Rae'.  Various pictures - possibly of her
+friends or family - are placed on a shelf in the back, carefully organized
+and visible to most.  Several printed out papers are laying on the counter,
+which she seems to be paying more attention to than much else in the area. 
+Small sticker-like images are lined up of animated characters along the edge
+of the counter.  
+~
+0 2 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 10811
+S
+#10813
+Teller Four~
+Small trinkets, seemingly very old in nature are scattered along the desk
+and across a back shelf.  Many of these objects appear to be fairly
+tarnished and well-used, but still hold a particular elegance to them, as
+far as an antique-collector might be concerned.  A small trinket that almost
+looks like a miniature weapon rack holds a variety of pens where the weapons
+would ordinarily go.  The name 'Gene Gonol' almost seems to be carved, as
+opposed to laser-printed, into a golden plate locked in with thick glass.  
+~
+0 0 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+ABCM 0 10814
+D3
+~
+~
+0 0 10810
+S
+#10814
+Transit Hallway~
+~
+0 0 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 10815
+D3
+~
+~
+ABCM 0 10813
+S
+#10815
+Transit Entry~
+~
+0 0 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 10818
+D1
+~
+~
+ABC 10899 10816
+D2
+~
+~
+0 0 10814
+D3
+~
+~
+ABC 10899 10817
+S
+#10816
+Elevator~
+~
+0 0 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D3
+~
+~
+ABC 0 10815
+S
+#10817
+Elevator~
+~
+0 0 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+ABC 0 10815
+S
+#10818
+Staircase~
+~
+0 0 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D2
+~
+~
+0 0 10815
+D4
+~
+~
+0 0 10819
+S
+#10819
+Staircase~
+~
+0 0 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D2
+~
+~
+0 0 10820
+D5
+~
+~
+0 0 10818
+S
+#10820
+Transit Entry~
+~
+0 0 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 10819
+D1
+~
+~
+ABC 10899 10821
+D3
+~
+~
+ABC 10899 10822
+S
+#10821
+Elevator~
+~
+0 0 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D3
+~
+~
+ABC 0 10820
+S
+#10822
+Elevator~
+~
+0 0 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+ABC 0 10820
+S
+#0
+
+
+
+#RESETS
+D 0 10801 1 8198
+D 0 10801 3 8198
+D 0 10802 2 3
+D 0 10802 3 8198
+D 0 10803 1 8198
+D 0 10803 2 3
+D 0 10805 0 3
+D 0 10805 2 3
+D 0 10806 0 3
+D 0 10806 2 3
+D 0 10807 0 3
+D 0 10807 3 8198
+D 0 10808 0 3
+D 0 10808 1 8198
+D 0 10809 1 8198
+D 0 10809 3 8196
+D 0 10813 1 4103
+D 0 10814 3 4103
+D 0 10815 1 7
+D 0 10815 3 7
+D 0 10816 3 7
+D 0 10817 1 7
+D 0 10820 1 7
+D 0 10820 3 7
+D 0 10821 3 7
+D 0 10822 1 7
+M 1 10811 1 10811 1
+M 1 10812 1 10812 1
+S
+
+
+
+#SHOPS
+0
+
+
+
+#MOBPROGS
+#0
+
+#$

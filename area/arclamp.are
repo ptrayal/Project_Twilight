@@ -1,0 +1,457 @@
+#AREADATA
+Name The Arc Lamp~
+Builders Bethany~
+VNUMs 4501 5000
+Credits Bethany~
+Security 1
+Flags F
+Price 0
+End
+
+
+
+#MOBILES
+#4501
+mandy bartender~
+Mandy~
+Mandy stands here, busily filling drinks.
+~
+The bartender for the Arc Lamp is Mandy, an attractive and shapely
+brunette.  With skill and ease, she fills drinks and chats with the people
+at the bar.  
+~
+human~
+ABY 0 50 0 0 0 none
+0 0 0 0
+10 10 2 500
+AHMV ABCDEFGHIJK medium flesh
+A G
+I 0
+#4502
+stan~
+Stan~
+Stan stands here glaring into the monitors as if watching for something.
+~
+Stan looks to be a middle aged man complete with thinning hair line and
+fancy Italian suit.  The hair he does have left is brown and his also dark
+brown eyes make for a very average appearance.  Mumbling to himself almost
+constantly it seems as if he's holding a conversation with himself.  
+~
+vampire~
+ABGKYc 0 75 0 0 0 none
+0 0 0 NY
+10 10 1 100
+AHMVc ABCDEFGHIJK large flesh
+A F
+I 0
+#0
+
+
+
+#OBJECTS
+#4501
+pint beer~
+a pint of beer~
+A pint of cheap beer was left here.  ~
+A pint of cheap beer was left here.~
+glass~
+17 0 AN
+2 2 'beer' 0 0 0
+1 350 100
+E
+--USES~
+-2~
+Q 0
+#4502
+key small silver~
+a small silver key~
+A small silver key is here.~
+This small key looks as if it fits into a padlock but the grooves seem to
+indicate it fits into a door lock of some type.  The word west has been
+engraved into it.  
+~
+steel~
+18 P AO
+0 0 0 0 0
+0
+0 0 100
+E
+--USES~
+-2~
+Q 0
+#0
+
+
+
+#ROOMS
+#4501
+Entry of the "Arc Lamp" Nightclub~
+The party never seems to sleep here, always loud, always happening, the
+"Arc Lamp" rocks on.  Somehow the club always has music, often good, and
+always fun to dance to.  The entrance is manned by two very large men who
+look like they could easily keep the peace by force.  
+~
+0 12 0
+E
+XNUMB1~
+Entry of the "Arc Lamp" Nightclub~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Entry of the "Arc Lamp" Nightclub~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 0 10052
+D1
+(none)~
+(null)~
+0 0 4502
+M 0 H 100
+S
+#4502
+The Arc Lamp~
+A blast of hard rock music and laughing voices pound against the walls
+like an anvil.  The smell of sweat and alcohol fills the air.  A dance floor
+packed shoulder to shoulder with young, gothic people can be seen to the
+south while a blood streaked fountain lies to the west.  
+~
+0 8 0
+E
+XNUMB1~
+The Arc Lamp~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D2
+(none)~
+(null)~
+0 0 4503
+D3
+(none)~
+(null)~
+0 0 4501
+M 0 H 100
+S
+#4503
+On the Dance Floor~
+Young men and women are here drinking and carrying on making it hard to
+move around.  The "dance floor", as it's called, seems to be more of crowded
+mingling area.  A few more extreme people are a little closer to the stage
+south of here trying to start their own mosh pit.  There appears to be a bar
+to the west and an empty hall to the east.  
+~
+0 8 0
+E
+XNUMB1~
+On the Dance Floor~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+entrance~
+0 0 4502
+D1
+(none)~
+restrooms~
+0 0 4505
+D2
+(none)~
+(null)~
+0 0 4508
+D3
+(none)~
+bar~
+0 0 4504
+M 0 H 100
+S
+#4504
+At the Bar~
+A long black marble bar is here bristling with people ordering drinks and
+chatting with each other.  A large mirror behind the bar is almost covered
+by multiple shelves of various liquors.  The dance floor can be seen to the
+east from here.  
+~
+0 8 0
+E
+XNUMB1~
+At the Bar~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+0 0 4503
+M 0 H 100
+S
+#4505
+A Back Hallway~
+This short hallway dead ends with a door to the north marked "Men" and
+one to the south marked "Women".  The wall to the east seems to have been
+forgotten in the decorating as the plain drywall shows through.  A large
+gathering of people can be seen dancing just to the west from here.  
+~
+0 0 0
+E
+XNUMB1~
+A Back Hallway~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+E
+wall~
+Among all the other markings drawn or carved into the wall one sticks outfrom the others.  Maria "key"~
+D0
+(none)~
+(null)~
+AB 0 4506
+D2
+(none)~
+(null)~
+AB 0 4507
+D3
+(none)~
+(null)~
+0 0 4503
+M 0 H 100
+S
+#4506
+Inside the Mens Bathroom~
+Covered with mildew, urine stains, and years of dust rust and corrosion
+this is almost the nastiest place imaginable.  The sink, long lost of it's
+mirror, sits here clogged with who knows what while green algae builds it's
+home in the water.  The toilet has leaks all in the tank, and the seat seems
+to have been removed long ago.  Think you can hold it a little while longer?
+~
+0 8 0
+E
+XNUMB1~
+Inside the Mens Bathroom~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D2
+(none)~
+(null)~
+AB 0 4505
+M 0 H 100
+S
+#4507
+Inside the Womens Bathroom~
+Covered with mildew, urine stains, and years of dust rust and corrosion
+this is almost the nastiest place imaginable.  The sink, long lost of it's
+mirror, sits here clogged with who knows what while green algae builds it's
+home in the water.  The toilet has leaks all in the tank, and the seat seems
+to have been removed long ago.  Think you can hold it a little while longer?
+~
+0 8 0
+E
+XNUMB1~
+Inside the Womens Bathroom~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+A 0 4505
+S
+#4508
+On Stage~
+Curtains cover the walls and a low ceiling hides the lack of investment
+put into this place to transform it from a storage building into a party
+house.  Oversized speakers cover the entire rear of the stage leaving little
+room up front for a small band of rockers to perform live for the gathering
+mass of mostly teens and young adults.  Some type of dance floor can be seen
+to the north.  
+~
+0 8 0
+E
+XNUMB1~
+On Stage~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 0 4503
+D3
+(none)~
+(null)~
+ABCFMRW 4502 4509
+S
+#4509
+The Storage Room~
+This large storage area is filled with crates of all types of bar food as
+well as a wide assortment of kegs of some very old beer.  Some crates in the
+corner seem to be stacked in a way so that one could climb them up through
+the ceiling.  
+~
+0 8 0
+E
+XNUMB1~
+The Storage Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+ABCFMRW 0 4508
+D4
+(none)~
+ceiling~
+AB 0 4510
+S
+#4510
+At the Top of the Crates~
+These crates seem sturdy enough to hold a lot of weight.  It's almost as
+if they're left here to be climbed up and down.  There is some sort of
+office to the east while a storage room is down from here.  
+~
+0 8 0
+E
+XNUMB1~
+At the Top of the Crates~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+0 0 4511
+D5
+(none)~
+ceiling~
+AB 0 4509
+S
+#4511
+The Office in the Arc Lamp~
+In a sudden change of surroundings this office seems as if it belongs in
+a large office building instead of on the second floor of a nightclub.  A
+single large oak desk sits in the center of the room and has papers and
+files stacked here and there on it.  A small lap top computer sits in the
+middle plugged in through a small hole near the front of the desk.  Monitors
+cover the northern wall and show at least two different angles to every room
+in the club downstairs.  The only exit is to the west.  
+~
+0 8 0
+E
+XNUMB1~
+The Office in the Arc Lamp~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D3
+(none)~
+(null)~
+0 0 4510
+S
+#0
+
+
+
+#RESETS
+D 0 4505 0 3
+D 0 4505 2 3
+D 0 4506 2 3
+D 0 4508 3 4329511
+D 0 4509 1 4329511
+D 0 4509 4 3
+D 0 4510 5 3
+O 0 10001 0 4501
+O 0 7001 0 4504
+M 1 4501 1 4504 1
+G 0 4501 0
+G 0 7023 0
+G 0 7024 0
+G 0 7025 0
+G 0 7026 0
+G 0 8048 0
+G 0 10100 0
+G 0 7035 0
+G 0 4502 0
+O 0 7018 0 4511
+M 1 4502 1 4511 1
+S
+
+
+
+#SHOPS
+4501 17 19 0 0 0 110 70 0 24 0
+0
+
+
+
+#MOBPROGS
+#0
+
+#$

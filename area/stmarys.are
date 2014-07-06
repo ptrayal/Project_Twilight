@@ -1,0 +1,526 @@
+#AREADATA
+Name St. Mary's Church~
+Builders Julie~
+VNUMs 9057 9066
+Credits Julie Celia~
+Security 5
+Flags E
+Price 0
+End
+
+
+
+#MOBILES
+#9057
+Father Hallet~
+Father Hallet~
+Father Hallet is here.
+~
+Tall and gray, with wild, sunken eyes in a face that's all sharp angles,
+Father Hallet clearly inspires fear with his hellfire sermons.  He
+doesn'tlook like he's ever eaten a decent meal in his life.  Sheer will
+power seemsto drive him on.  Rumors persist as to his exact age, though
+those who claimthe sixties to seventies mark are, hopefully, closer to the
+truth.  
+~
+human~
+ACY 0 0 0 0 0 none
+0 0 0 0
+10 10 1 0
+AHMV ABCDEFGHIJK medium flesh
+A 0
+I 0
+Tr 0 spit~ room Father Hallet cries out in disbelief. "Have you no regard for our Lord in Heaven?" He points towards Broadway. "Take your base behavior to the other barbarians!"~
+Tr 0 spit spits~ room Father Hallet cries out in disbelief. "Have you no regard for our Lord in Heaven?" He points towards Broadway. "Take your base behavior to the other barbarians!"~
+Tr 0 drops~ room A look of horror rips across Father Hallet's skeletal visage. "Heathen! Can't you see this is a House of GOD?", he cries as he quickly steps forward and gathers up the discarded debris, lest his holy station be cluttered with the flotsam and jetsam of the unwashed masses.get all~
+Tr 0 drops a~ room A look of horror rips across Father Hallet's skeletal visage. "Heathen! Can't you see this is a House of GOD?", he cries as he quickly steps forward and gathers up the discarded debris, lest his holy station be cluttered with the flotsam and jetsam of the unwashed masses.get all~
+#9058
+Bishop Pelgarde~
+Bishop Pelgarde~
+Bishop Pelgarde quietly attends to his duties.
+~
+A short, rotund man, Bishop Pelgarde has been the administer of Saint
+Mary's since the late sixties.  He seems nondescript and unassuming.  
+~
+human~
+AB 0 0 0 0 0 none
+0 0 0 0
+10 10 1 0
+AHMV ABCDEFGHIJK medium flesh
+A 0
+I 0
+#9059
+$f $l~
+$f $l~
+$f mans the soup kitchen.
+~
+Just a face in the crowd, volunteering to do a public service.  
+~
+human~
+AB 0 0 0 0 0 none
+0 0 0 0
+10 10 3 0
+AHMV ABCDEFGHIJK medium flesh
+A 0
+I 0
+#9060
+$f $l~
+$f $l~
+One of the mission residents tends to the cleaning.
+~
+One of the down-trodden, $f $l cares for the maintenence of the mission.  
+~
+human~
+AY 0 0 0 0 0 none
+0 0 0 0
+10 10 1 0
+AHMV ABCDEFGHIJK small flesh
+A 0
+I 0
+Tr 0 Father Hallet gets~ room One of the mission residents shakes his head and resumes cleaning.~
+#9061
+$f $l~
+$f $l~
+One of the mission residents tends to the cleaning.
+~
+Down on her luck, $f $l carries out cleaning duties during her stay here.  
+~
+human~
+AY 0 0 0 0 0 none
+0 0 0 0
+10 10 2 0
+AHMV ABCDEFGHIJK small flesh
+A 0
+I 0
+Tr 0 Father Hallet gets~ room One of the mission residents rolls her eyes over Father Hallet's behaviour.~
+#0
+
+
+
+#OBJECTS
+#9057
+key~
+a small steel key~
+A small brass key with the label reading "staff" taped to it.~
+A small brass key with a label reading "staff" taped to it.  ~
+brass~
+18 0 AO
+0 0 0 0 0
+0
+0 0 100
+E
+--USES~
+-2~
+Q 2
+#9058
+bread~
+a piece of rye bread~
+A slice of rye bread, no more, no less.  Yet man doesn't live on breadalone, unless he's stranded on a desert island with naught but bread to eat.~
+A slice of rye bread, no more, no less.  Yet man doesn't live on breadalone, unless he's stranded on a desert island with naught but bread to eat.~
+bread~
+19 0 A
+30 30 0 0 0 0
+1 1 100
+E
+--USES~
+-2~
+Q 2
+#9059
+mashed potatoes~
+a bowl of mashed potatoes~
+A styrofoam bowl with a few scoops of mashed potatoes with melted butterin it.  Contrary to what certain past Vice Presidents would have us believe,the singular, potato, is not, repeat NOT spelled with an "e"!  ~
+A styrofoam bowl with a few scoops of mashed potatoes with melted butterin it.  Contrary to what certain past Vice Presidents would have us believe,the singular, potato, is not, repeat NOT spelled with an "e"!  ~
+vegetables~
+19 0 A
+30 30 0 0 0 0
+1 1 100
+E
+--USES~
+-2~
+Q 2
+#9060
+a salad~
+a plate of ...salad~
+Yes, it's what you've searched for your whole life, a lima bean, spinach,broccoli salad.  And it's right here in all it's glory.  Why search for theHoly Grail, the meaning of life or await the return of Luke and Laura wheneverything that really and truly matters has been heaped on this plate rightin front of you?  There's no film, this is live.  That's right, it's a reallife, geniune lima bean, spinach, and broccoli salad.  That's right, LIMABEANS and SPINACH and BROCCOLI, oh my!  LIMA BEANS and SPINACH and BROCCOLI,oh my!  Wait, where's the beet?  ~
+Yes, it's what you've searched for your whole life, a lima bean, spinach,broccoli salad.  And it's right here in all it's glory.  Why search for theHoly Grail, the meaning of life or await the return of Luke and Laura wheneverything that really and truly matters has been heaped on this plate rightin front of you?  There's no film, this is live.  That's right, it's a reallife, geniune lima bean, spinach, and broccoli salad.  That's right, LIMABEANS and SPINACH and BROCCOLI, oh my!  LIMA BEANS and SPINACH and BROCCOLI,oh my!  Wait, where's the beet?  ~
+vegetables~
+19 0 A
+30 30 0 0 0 0
+1 1 100
+E
+--USES~
+-2~
+Q 2
+#9061
+mystery meat~
+a mystery meat sandwich~
+Mystery Meat.  What is it?  A mystery.  Why is it here?  A mystery.  Whoinvented it and why haven't they been dumped into a meat grinder?  Amystery.  Will you actually try it?  Best left a mystery...  ~
+Mystery Meat.  What is it?  A mystery.  Why is it here?  A mystery.  Whoinvented it and why haven't they been dumped into a meat grinder?  Amystery.  Will you actually try it?  Best left a mystery...  ~
+meat~
+19 0 A
+300 300 0 A 0 0
+1 1 100
+E
+--USES~
+-2~
+Q 2
+#0
+
+
+
+#ROOMS
+#9057
+Saint Mary's Catholic Church & Mission~
+The interior of this large builing's main room clearly serves as the
+mission's Chapel.  Rows of pews extend from the doorway all the way to the
+dais to the west, which is adorned with a large statue depicting the
+familiar crucified form of Christ.  A velvet carpet of deep red runs down
+the center aisle between the pews, stopping at the aforementioned dais. 
+Originally a church, Saint Mary's still serves its original purpose, though
+the rectory to the north has long ago been converted to a makeshift
+dormitory for the homeless, many of whom can be seen decorating the pews
+with heads bowed in prayer.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+A 0 9058
+D1
+(none)~
+(null)~
+A 0 7042
+D3
+(none)~
+(null)~
+ABC 0 9060
+M 0 H 100
+S
+#9058
+The Mission Dormitory~
+Filled from end to end with cots, the mission's dormitory serves as home
+to dozens upon dozens of people who have found themselves in need of the
+Lord's protection, regardless of their own religious belief.  Once the
+church's rectory, the clergy-in-residence long ago gave up their own housing
+in order to lend a helping hand to the city's downtrodden.  While the
+dormitory lacks in the majority of amenities, it nevertheless provides a
+roof, bed and blanket to those in need.  Due to the occupants, the room is
+rather pungent with the smell of unwashed bodies; the occupants themselves
+do not seem troubled by the odor, however.  A large pair of double doors to
+the west lead to the mission's dining area.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D2
+(none)~
+(null)~
+A 0 9057
+D3
+(none)~
+(null)~
+A 0 9059
+M 0 H 100
+S
+#9059
+The Dining Hall~
+Little more than a glorified soup kitchen, this large room is furnished
+with long formica tables and dozens of metal folding chairs.  Surpisingly,
+the entire area is spotlessly clean, though perhaps this is due to the fact
+that boarders are required to participate in the maintenance of the
+establisment in exchange for food and shelter.  A long buffet-style counter
+runs along the western wall of the room, stocked with food provided by both
+public and private donations.  While there are no cuts of prime rib
+displayed, the food available is high in carbohydrates, protein and
+vitamins.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D1
+(none)~
+(null)~
+A 0 9058
+M 0 H 100
+S
+#9060
+East end of the hallway~
+The hallway is made up of gray stone bricks and basic archways.  The door
+on the east end, leading to the chapel, was originally of wooden planks as
+was typical of common colonial residences, though a more conventional door
+now stands in it's place.  There is in inscription carved in the arch above
+the doorway.  The hall continues to the west.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+E
+inscription~
+May Is servo quod servo nos ex reverto of Caligula ~
+D1
+(none)~
+(null)~
+ABC 9057 9057
+D3
+(none)~
+(null)~
+0 0 9061
+S
+#9061
+a brief hallway~
+This end hallway is made up of gray stone bricks and basic archways,
+which conflict with simple modern stairway built into the north wall.  The
+stairs lead up to next floor.  A small wooden door sits beneath them.  The
+hall continues to the east.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+ABC 9057 9064
+D1
+(none)~
+(null)~
+0 0 9060
+D4
+(none)~
+(null)~
+0 0 9062
+S
+#9062
+An antechamber~
+A small room of gray bricks leading to the Rectory Office to the north,
+where an elaborately carved lip of stone sits above the doorframe, with an
+inscription chiseled into it.  On the east wall hangs a large wooden cross
+upon which a brass Christ is eternally crufied.  On the west wall, the Last
+Supper is still being served in a plain wooden frame.  A wooden stairway
+leads to the floor below.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+E
+inscription~
+Three Quod Viginti Adore Vos ~
+D0
+(none)~
+(null)~
+A 0 9063
+D5
+(none)~
+(null)~
+0 0 9061
+S
+#9063
+Rectory Office~
+A large room originally used as the Pontiff's admistration and clerical
+duties, it now doubles as a private library for Bishop Pelgarde and Father
+Hallet.  During the day, a stained-glass window depicting Pontiff Iphitus
+Patroclus on the north wall.  
+~
+0 0 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+E
+window~
+A white-haried middle-aged man of average build sporting a long,french-forked beard, Pontiff Patroclus is depicted here smiling benevolentlyupon the masses.  "Suus Holiness Iphitus Patroclus Unus Verus PontiffMDCLXVI-MDCCXVII" is inscribed in a banner above his halloed head.  Inanother banner at his feet, "Servo Romanorum Catholic TemplumMDCCII-MDCCXVII" can be read.  ~
+D2
+(none)~
+(null)~
+A 0 9062
+S
+#9064
+A small storage room~
+A small room used to hold cleaning supplies.  The north wall is made of
+gray stone bricks, while the other walls and ceiling are of wood, with
+wooden beam supports reifornced with alluminum bracings.  A small door leads
+south.  
+~
+0 9 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+ABMU 0 9065
+D2
+(none)~
+(null)~
+ABC 0 9061
+S
+#9065
+A stone chamber~
+A square chamber made of large gray blocks, except for the south wall,
+which is made of bricks.  The floor is made up of cobblestones set in a
+concentric circlular pattern radiating from the circular pit leading
+downward into darkness.  
+~
+0 9 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D2
+(none)~
+(null)~
+ABMU 0 9064
+D5
+(none)~
+(null)~
+0 0 9066
+S
+#9066
+A tight tunnel~
+A cylindrical cement chamber leading upwards and down.  A metal ring
+ladder runs up along the east side.  There's scarecly room for one person in
+here.  
+~
+0 2057 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D4
+(none)~
+(null)~
+0 0 9065
+S
+#0
+
+
+
+#RESETS
+D 0 9057 3 7
+D 0 9060 1 7
+D 0 9061 0 7
+D 0 9064 0 1052675
+D 0 9064 2 7
+D 0 9065 2 1052675
+M 1 9061 1 9057 1
+M 1 9060 1 9057 1
+M 1 9057 1 9057 1
+G 0 9057 0
+M 1 9060 1 9058 1
+M 1 9061 1 9058 1
+M 1 9061 1 9059 1
+M 1 9060 1 9059 1
+M 1 9059 1 9059 1
+G 0 9061 0
+G 0 9060 0
+G 0 9059 0
+G 0 9058 0
+M 1 9058 1 9063 1
+S
+
+
+
+#SHOPS
+9059 19 0 0 0 0 100 100 0 23 0
+0
+
+
+
+#MOBPROGS
+#0
+
+#$

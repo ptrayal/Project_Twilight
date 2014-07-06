@@ -1,0 +1,3865 @@
+#AREADATA
+Name FBI Building~
+Builders Kial Rafkin~
+VNUMs 12501 12600
+Credits Rafkin~
+Security 1
+Flags I
+Price 0
+End
+
+
+
+#MOBILES
+#12501
+$f $l~
+$f~
+$f stands here checking ID's.
+~
+About in his mid-thirties with a partially baldhead and thick coke bottle
+sized glasses $f looks as if he's been working here for some time under a
+lot of stress.  It also looks like he's waiting for you to say something.  
+~
+human~
+ABGYc 0 50 0 0 0 punch
+0 0 0 0
+10 10 1 0
+AHMV ABCDEFGHIJK large flesh
+A 0
+I 0
+Tr 1 Julie gives you a photo ID card.~ unlock east
+open east
+emote briefly looks at a photo ID card, {Y'{COkay looks good to me, please step to the room to your east.{Y'{x
+give id julie
+~
+Tr 0 **base**~ **base**
+~
+Tr 0 leaves east~ close east
+lock east
+emote fidgets nervously.
+~
+Tr 0 has arrived~ close east
+lock east
+emote smiles nervously as he shifts something on his desk and says, {Y'{CHello, can you please give me your ID card?  You'll need it before you can continue.{Y'{x
+~
+Tr 0 into an open door..~ close east
+lock east
+emote looks around carefully and then begins looking through the playboy magazine on his desk.
+~
+Tr 0 Dsarky gives you a photo ID card.~ unlock east
+open east
+give id dsarky
+emote smiles, "On yer bike then!"
+~
+Tr 0 Rafkin gives you a photo ID card.~ unlock east
+open east
+emote briefly looks at a photo ID card, {Y'{COkay looks good to me, please step to the room to your east.{Y'{x
+give id rafkin
+~
+Tr 0 Bran gives you a photo ID card.~ unlock east
+open east
+emote briefly looks at a photo ID card, {Y'{COkay looks good to me, please step to the room to your east.{Y'{x
+give id bran
+~
+Tr 0 Rayal gives you a photo ID card.~ unlock east
+open east
+emote briefly looks at a photo ID card, {Y'{COkay looks good to me, please step to the room to your east.{Y'{x
+give id rayal
+~
+Tr 0 Stefan gives you a photo ID card.~ unlock east
+open east
+emote briefly looks at a photo ID card, {Y'{COkay looks good to me, please step to the room to your east.{Y'{x
+give id stefan
+~
+Tr 0 Angelina gives you a photo ID card.~ unlock east
+open east
+emote briefly looks at a photo ID card, {Y'{COkay looks good to me, please step to the room to your east.{Y'{x
+give id angelina
+~
+Tr 0 Opal gives you a photo ID card.~ unlock east
+open east
+emote briefly looks at a photo ID card, {Y'{COkay looks good to me, please step to the room to your east.{Y'{x
+give id opal
+~
+#12502
+$f $l~
+$f~
+$f stands here checking ID's
+~
+About in his mid-thirties with a partially baldhead and thick coke bottle
+sized glasses $f looks as if he's been working here for some time under a
+lot of stress.  It also looks like he's waiting for you to say something.  
+~
+human~
+ABY 0 50 0 0 0 none
+0 0 0 0
+10 10 1 0
+AHMV ABCDEFGHIJK large flesh
+A 0
+I 0
+Tr 1 Julie gives you a photo ID card.~ unlock west
+open west
+emote smiles an says, {Y'{CAllrighty looks official enuff fer me, hustle on to yer west now.{Y'{x
+give ID julie
+~
+Tr 0 Dsarky gives you a photo ID card.~ unlock west
+open west
+emote smiles and says, {Y'{CAllrighty looks official enuff fer me, hustle on t
+o yer west now.{Y'{x
+give ID dsarky
+~
+Tr 0 Rafkin gives you a photo ID card.~ unlock west
+open west
+emote smiles and says, {Y'{CAllrighty looks official enuff fer me, hustle on to yer west now.{Y'{x
+give ID rafkin
+~
+Tr 0 **base**~ ~
+Tr 0 leaves west~ emote murmurs to himself, {Y'{CHeh, bet I won't be seeing them again.{Y'{x
+~
+Tr 0 leaves east~ emote says, {Y'{CRight then, I'll just wait here.{Y'{x
+close west
+lock west
+~
+Tr 0 has arrived~ emote says, {Y'{CPardon me, if you're goin back out I'll need ya to gimmie me yer ID card.{Y'{x
+~
+Tr 0 Bran gives you a photo ID card.~ unlock west
+open west
+emote smiles and says, {Y'{CAllrighty looks official enuff fer me, hustle on to yer west now.{Y'{x
+give id bran
+~
+Tr 0 Rayal gives you a photo ID card.~ unlock west
+open west
+emote smiles and says, {Y'{CAllrighty looks official enuff fer me, hustle on t
+o yer west now.{Y'{x
+give id rayal
+~
+Tr 0 Stefan gives you a photo ID card.~ unlock west
+open west
+emote smiles and says, {Y'{CAllrighty looks official enuff fer me, hustle on t
+o yer west now.{Y'{x
+give id stefan
+~
+#12503
+holo vampire medium~
+a holographic vampire~
+A holographic vampire [medium] stands here waiting to be shot.
+~
+Made to look like a vampire would, once attacked, this holographic image
+aside from a slight shimer every once in a while looks like the real thing. 
+~
+vampire~
+ABKYc c 75 0 0 0 none
+F 0 0 HJNY
+6 6 0 0
+AHMVc ABCDEFGHIJK large flesh
+A 0
+I 0
+#12504
+holo werewolf medium~
+a holographic werewolf~
+A holographic werewolf [medium] stands here waiting to be attacked.
+~
+Made to look like a werewolf would, once attacked, this holographic image
+aside from a slight shimer every once in a while looks like the real thing. 
+~
+vampire~
+ABOYc c 75 0 0 0 none
+F 0 0 Y
+6 6 0 0
+AHMVc ABCDEFGHIJK large unknown
+A 0
+I 0
+#12505
+$f~
+$f~
+$f stands here in the middle of another very important science experiment.
+~
+$f looks to be in his late 50's with a full gray beard and mustache. 
+Wearing the typical white lab coat and white gloves he stands here mubling
+to himself while peering through the lens of a microscope.  
+~
+human~
+ABCGYc 0 25 0 0 0 none
+0 0 0 0
+10 10 1 0
+AHMV ABCDEFGHIJK large flesh
+A 0
+I 0
+#12506
+$f security guard~
+$f, a security guard~
+$f, a security guard, stands here monitoring traffic.
+~
+$f stands here scanning the crowd through his dark shades with a
+disgruntled look.  Wearing the customary FBI security uniform complete with
+sidearm, $f is the last person that needs to be pissed of.  
+~
+human~
+ABCGc 0 50 0 0 0 none
+0 0 0 0
+10 10 1 0
+AHMV ABCDEFGHIJK large flesh
+A A
+I 0
+Tr 0 has arrived.~ emote nods and smiles, {Y'{c{CCarry on then, move along please.  Nothing to see here.{Y'{x
+
+~
+Tr 0 **Base**~ **Base**
+~
+Tr 0 Claws extend~ emote glances around warily.
+~
+Tr 0 Fangs extend~ emote glances around warily.
+~
+#12507
+$f case worker~
+$f, a case worker~
+$f, a case worker, sits here processing paperwork.
+~
+Just a nondescript caseworker filing things away and sorting through
+stacks and stacks of paperwork trying to just get by on his "nine to five". 
+~
+human~
+ABYc 0 25 0 0 0 none
+0 0 0 0
+10 10 1 20
+AHMV ABCDEFGHIJK large flesh
+A 0
+I 0
+#12508
+holo vampire easy~
+a holographic vampire~
+A holographic vampire [easy] stands here waiting to be shot.
+~
+Made to look like a vampire would, once attacked, this holographic image
+aside from a slight shimer every once in a while looks like the real thing. 
+~
+vampire~
+ABKYc c 50 0 0 0 none
+F 0 0 HJNY
+6 6 0 0
+AHMVc ABCDEFGHIJK large unknown
+A 0
+I 0
+#12509
+holo vampire hard~
+a holographic vampire~
+A holographic vampire [hard] stands here waiting to be shot.
+~
+Made to look like a vampire would, once attacked, this holographic image
+aside from a slight shimer every once in a while looks like the real thing. 
+~
+vampire~
+ABKYc c 100 0 0 0 none
+F 0 0 HJNY
+6 6 0 0
+AHMVc ABCDEFGHIJK large flesh
+A 0
+I 0
+#12510
+holo werewolf easy~
+a holographic werewolf~
+A holographic werewolf [easy] stands here waiting to be shot.
+~
+Made to look like a werewolf would, once attacked, this holographic image
+aside from a slight shimer every once in a while looks like the real thing. 
+~
+vampire~
+ABOYc c 50 0 0 0 none
+F 0 0 Y
+6 6 0 0
+AHMVc ABCDEFGHIJK large flesh
+A 0
+I 0
+#12511
+holo werewolf hard~
+a holographic werewolf~
+A holographic werewolf [hard] stands here waiting to be shot.
+~
+Made to look like a werewolf would, once attacked, this holographic image
+aside from a slight shimer every once in a while looks like the real thing. 
+~
+vampire~
+ABOYc c 100 0 0 0 none
+F 0 0 Y
+6 6 0 0
+AHMVc ABCDEFGHIJK large flesh
+A 0
+I 0
+#12512
+john smith~
+John Smith~
+John Smith stands behind a counter sorting mail.
+~
+John looks to be in his mid to late 50's, wears his light gray hair long
+with a ponytail in the back and a short stubby beard in the front.  Wearing
+a traditional postal outfit of a light blue shirt with, dark blue slacks,
+and plain black shoes he seems as if he feels fairly at home in his current
+job position.  
+~
+human~
+ABCGYc 0 50 0 0 0 none
+0 0 0 0
+10 10 1 200
+AHMV ABCDEFGHIJK huge flesh
+A GHS
+I 0
+Tr 0 **base**~ **base**
+~
+Tr 0 has arrived.~ emote greets you without looking up from his sorting bins, {Y'{CHello there, please make sure your packages are wrapped before you try to mail them!{Y'{x
+
+
+~
+#0
+
+
+
+#OBJECTS
+#12501
+ammo clip enforcer-1 e-1 1~
+an Enforcer-1 clip~
+Extremely long for a handgun magazine, this device manages to hold 30
+small silver rounds and only fits the Enforcer handgun with it's extra long
+handle for stability in it's fully automatic use.  A silver "E" is stamped
+on one side of the clip while a small crest of the pope is on the other.  
+~
+Extremely long for a handgun magazine, this device manages to hold 30
+small silver rounds and only fits the Enforcer handgun with it's extra
+long handle for stability in it's fully automatic use.  A silver "E" is
+stamped on one side of the clip while a small crest of the pope is on
+the other.
+~
+silver~
+31 IJKL AO
+BCDE C B 0 0
+0
+1 0 100
+E
+--USES~
+-2~
+Q 15
+#12502
+key~
+a small door key~
+This small door key seems fairly old and well worn.  It looks to be a
+house key or a door key of some type.  
+~
+This small door key seems fairly old and well worn.  It looks to be a
+house key or a door key of some type.
+~
+steel~
+18 FMPUe AO
+0 0 0 0 0
+0
+0 0 100
+E
+--USES~
+-2~
+Q 0
+#12503
+shell tube enforcer-2 e-2 2~
+an Enforcer-2 clip~
+This six inch long flat black tube mounts to the front of the Enforcer-2
+shotgun just under the barrel with a quick snap-in-place action, and carries
+four rounds just in case.  Carrying the silver "E" stamped on one side and a
+small crest of the pope on the other this item is ready for issue.  
+~
+This six inch long flat black tube mounts to the front of the Enforcer-2
+shotgun just under the barrel with a quick snap-in-place action, and
+carries four rounds just in case.  Carrying the silver "E" stamped on
+one side and a small crest of the pope on the other this item is ready
+for issue.
+~
+silver~
+31 IJKL AO
+C AC A 0 0
+0
+1 0 100
+E
+--USES~
+-2~
+Q 15
+#12504
+ammo clip enforcer-3 e-3 3~
+an Enforcer-3 clip~
+This four inch long flat black cylindrical rod slides into the back of
+the collapsible stock of the Enforcer-3.  Holding a 9 shot capacitive charge
+and with a shooting capability of 250 meters this has been the leading
+weapon for many agents.  A silver "E" is stamped on one side and a small
+crest of the pope is on the other.  
+~
+This four inch long flat black cylindrical rod slides into the back of
+the collapsible stock of the Enforcer-3.  Holding a 9 shot capacitive
+charge and with a shooting capability of 250 meters this has been the
+leading weapon for many agents.  A silver "E" is stamped on one side and
+a small crest of the pope is on the other.
+~
+silver~
+31 IJKL AO
+AD ABC AB 0 E
+0
+1 0 100
+E
+--USES~
+-2~
+Q 15
+#12505
+handgun gun e-1 1 enforcer~
+an Enforcer-1 handgun~
+This rather small black handgun has a rather long handle is extremely
+lightweight thanks to the use of titanium.  In fact not loaded this weapon
+only weighs 15 ounces.  Loaded with it's specially designed clip of 30
+silver rounds it weighs in at two pounds.  Still very light and very
+effective; the only markings on this gun are a silver stamped "E-1" on it's
+side just under the sliding bolt.  
+~
+This rather small black handgun has a rather long handle is extremely
+lightweight thanks to the use of titanium.  In fact not loaded this
+weapon only weighs 15 ounces.  Loaded with it's specially designed clip
+of 30 silver rounds it weighs in at two pounds.  Still very light and
+very effective; the only markings on this gun are a silver stamped "E-1"
+on it's side just under the sliding bolt.
+~
+fibreglass~
+5 JKL AN
+1 5 12501 frbite BCDE 0
+1 0 99
+E
+--USES~
+-2~
+Q 15
+#12506
+shotgun gun e-2 2 enforcer~
+an Enforcer-2 shotgun~
+This tool from older times still in use today comes in stock with a
+titanium construction and a four round clip adapter just under the barrel. 
+Mounted with only a pistol grip, it seems this weapon was designed only for
+close quarter battles.  The only markings on this gun is a silver stamped
+"E-2" on it's side near the top of the handle.  
+~
+This tool from older times still in use today comes in stock with a
+titanium construction and a four round clip adapter just under the
+barrel.  Mounted with only a pistol grip, it seems this weapon was
+designed only for close quarter battles.  The only markings on this gun
+is a silver stamped "E-2" on it's side near the top of the handle.
+~
+fibreglas~
+5 JKL ANR
+1 7 12503 whip C 0
+1 0 100
+E
+--USES~
+-2~
+Q 15
+#12507
+psc gun e-3 3 enforcer rifle~
+an Enforcer-3 PSC rifle~
+Built to look like a normal rifle most of this weapon is constructed of a
+poly-resin/fiber composite for lightweight and insulation properties. 
+Called a PSC Gun which stands for Photo Static Conductor Gun it takes the
+positively charged particles from it's clip and uses the natural static in
+it's target as a type of homing device to unleash it's lightning-like
+rounds.  This weapon is currently classified and is not issued to agents
+known to be traveling in view of the public.  A silver "E-3" is stamped on
+it's side.  
+~
+Built to look like a normal rifle most of this weapon is constructed of
+a poly-resin/fiber composite for lightweight and insulation properties.
+Called a PSC Gun which stands for Photo Static Conductor Gun it takes
+the positively charged particles from it's clip and uses the natural
+static in it's target as a type of homing device to unleash it's
+lightning-like rounds.  This weapon is currently classified and is not
+issued to agents known to be traveling in view of the public.  A silver
+"E-3" is stamped on it's side.
+~
+carbon fibre~
+5 JKL ANR
+1 8 12504 grep AD 0
+1 0 100
+E
+--USES~
+-2~
+Q 15
+#12508
+rack~
+a gun rack~
+Made to hold many different weapons, this rack sits here wall mounted
+holding the enforcer line of tools.  Get your enforcer today!  
+~
+Made to hold many different weapons, this rack sits here wall mounted
+holding the enforcer line of tools.  Get your enforcer today!
+~
+aluminium~
+15 0 0
+9999 0 0 9999 0 0
+0 0 100
+E
+--USES~
+-2~
+Q 15
+#12509
+crate~
+a large ammunitions crate~
+This large aluminum crate sits here on the floor filled to the brim with
+all sorts of different things.  The lid seems to have been removed for
+easier access.  
+~
+This large aluminum crate sits here on the floor filled to the brim with
+all sorts of different things.  The lid seems to have been removed for
+easier access.
+~
+aluminium~
+15 0 0
+9999 0 0 9999 0 0
+0 0 100
+E
+--USES~
+-2~
+Q 0
+#12510
+jacket dress~
+a black dress jacket~
+Made of a thin, black, wool-like material and with the official symbol of
+Project Twilight embroidered on the tag.  This jacket holds state of the art
+technology which enables it to hold contents almost the size of a suitcase
+within it's pockets.  This jacket, known as the RJ or Rift Jacket is one
+piece in an outfit of six which is the last suit you will ever wear.  
+~
+Made of a thin, black, wool-like material and with the official symbol
+of Project Twilight embroidered on the tag.  This jacket holds state of
+the art technology which enables it to hold contents almost the size of
+a suitcase within it's pockets.  This jacket, known as the RJ or Rift
+Jacket is one piece in an outfit of six which is the last suit you will
+ever wear.
+~
+wool~
+15 JKL AK
+5 AC 0 5 0 0
+1 0 100
+E
+--USES~
+-2~
+Q 15
+#12511
+slacks dress~
+a pair of black dress slacks~
+Made of a thick black wool material and with the official symbol of
+Project Twilight embroidered in it, these slacks look as if it's worn by
+someone important.  Possibly the last suit one would ever wear.  
+~
+Made of a thick black wool material and with the official symbol of
+Project Twilight embroidered in it, these slacks look as if it's worn by
+someone important.  Possibly the last suit one would ever wear.
+~
+wool~
+11 JKL AF
+0 0 0 0 0
+0
+1 0 100
+E
+--USES~
+-2~
+Q 15
+#12512
+foot locker~
+a foot locker~
+Crammed with Project Twilight sanctioned clothing, this locker sits here
+for all the new members of the society.  
+~
+Crammed with Project Twilight sanctioned clothing, this locker sits here
+for all the new members of the society.
+~
+aluminium~
+15 0 0
+9999 0 0 9999 0 0
+0 0 100
+E
+--USES~
+-2~
+Q 15
+#12513
+black high heels~
+a pair of black high heels~
+Officially sanctioned heels for members of Project Twilight.  
+~
+Officially sanctioned heels for members of Project Twilight.
+~
+leather~
+11 JKL AG
+0 0 0 0 0
+0
+2 0 100
+E
+--USES~
+-2~
+Q 0
+#12514
+dress shoes~
+a pair of black dress shoes~
+Officially sanctioned shoes for members of Project Twilight.  
+~
+Officially sanctioned shoes for members of Project Twilight.
+~
+leather~
+11 JKL AG
+0 0 0 0 0
+0
+2 0 100
+E
+--USES~
+-2~
+Q 0
+#12515
+dress shirt~
+a white long sleeved dress shirt~
+This white long sleeved dress shirt, a part of the KBPS or Kevlar Body
+Protection System, looks as if it's been freshly starched because of the
+kevlar fibers used to make the shirt.  It looks like any other dress shirt,
+but is the only current shirt sanctioned for use by Project Twilight
+personnel in and out of field operations.  
+~
+This white long sleeved dress shirt, a part of the KBPS or Kevlar Body
+Protection System, looks as if it's been freshly starched because of the
+kevlar fibers used to make the shirt.  It looks like any other dress
+shirt, but is the only current shirt sanctioned for use by Project
+Twilight personnel in and out of field operations.
+~
+leather~
+9 JKL AD
+0 0 5 0 0 0
+1 0 100
+E
+--USES~
+-2~
+Q 15
+#12516
+ear piece earpiece~
+a small earpiece~
+This Tiny clear Plastic Earpiece, known as the TPE, has a small almost
+invisible antenna that loops over the ear and surprisingly has great
+reception.  This particular model is good for sending and receiving cellular
+transmissions.  
+~
+This Tiny clear Plastic Earpiece, known as the TPE, has a small almost
+invisible antenna that loops over the ear and surprisingly has great
+reception.  This particular model is good for sending and receiving
+cellular transmissions.
+~
+plastic~
+30 JKLU AP
+0 0 0 0 0
+0
+0 0 100
+E
+--USES~
+-2~
+Q 15
+#12517
+long conference table~
+a long conference table~
+This long wooden table has a very glossy surface to it and is long enough
+to seat about eight to ten people.  
+~
+This long wooden table has a very glossy surface to it and is long
+enough to seat about eight to ten people.
+~
+wood~
+12 0 0
+10 9999 D 0 0 0
+0 0 100
+E
+--USES~
+-2~
+Q 0
+#12518
+tie~
+a black silk tie~
+This plain black, silk neck tie seems fairly average aside from the small
+PT crest woven along the inside seam where a brand name tag should be.  
+~
+This plain black, silk neck tie seems fairly average aside from the small
+PT crest woven along the inside seam where a brand name tag should be.
+~
+silk~
+11 0 AC
+0 0 0 0 0
+0
+1 0 100
+E
+--USES~
+-2~
+Q 15
+#12519
+LED flash light flashlight~
+a small black LED flashlight~
+A small black flashlight made of carbon fiber and powered by a small fuel
+cell the size of a "AAA" battery.  Four LED's sit in the front with an
+ultraviolet filter in the front - just in case.  A tightly woven lanyard
+strap attaches to the back of the small flashlight to make it that much
+harder to loose it.  
+~
+A small black flashlight made of carbon fiber and powered by a small
+fuel cell the size of a "AAA" battery.  Four LED's sit in the front with
+an ultraviolet filter in the front - just in case.  A tightly woven
+lanyard strap attaches to the back of the small flashlight to make it
+that much harder to loose it.
+~
+carbon fibre~
+1 IJKL AO
+0 0 100 0 0 0
+1 0 100
+E
+--USES~
+-2~
+Q 15
+#12520
+bag evidence lipstick eyeliner container~
+a small bag of evidence~
+The lipstick eyeliner containers from the bathtub appear to be the same
+type used on the walls to draw the stick figures running around shooting
+each other with stick figure guns.  Nothing unusual is found on them due to
+the water from the tub ruining any chances at finding a solid lead.  
+~
+The lipstick eyeliner containers from the bathtub appear to be the same
+type used on the walls to draw the stick figures running around shooting
+each other with stick figure guns.  Nothing unusual is found on them due
+to the water from the tub ruining any chances at finding a solid lead.
+~
+plastic~
+11 0 AO
+0 0 0 0 0
+0
+0 0 100
+E
+--USES~
+-2~
+Q 4
+#12521
+bag evidence bullet ~
+a small bag of evidence~
+The bullet examined appears to have been shot from the gun held by
+Timothy O'Connor found dead at the scene of the crime.  The bullet then hit
+something solid, perhaps a bone or a metal plate.  Traces of Timothy's blood
+can be found on it.  
+~
+The bullet examined appears to have been shot from the gun held by
+Timothy O'Connor found dead at the scene of the crime.  The bullet then
+hit something solid, perhaps a bone or a metal plate.  Traces of
+Timothy's blood can be found on it.
+~
+steel~
+11 0 AO
+0 0 0 0 0
+0
+0 0 100
+E
+--USES~
+-2~
+Q 4
+#12522
+corpse timothy o'connor~
+the corpse of Timothy O'Connor~
+Timothy O'Connor lies here completely still and completely pale, he's
+wearing a pair of casual brown business slacks and a white golf shirt, each
+with plenty of blood all over them.  Timothy was gutted from one side of his
+stomach to the other, his heart was punctured and adam's apple crushed with
+a sharp object about the same size as the other two wounds.  There appears
+to be a bruise around his mouth as if at one point he had something
+forcefully placed over and/or around his mouth.  
+~
+Timothy O'Connor lies here completely still and completely pale, he's
+wearing a pair of casual brown business slacks and a white golf shirt,
+each with plenty of blood all over them.  Timothy was gutted from one
+side of his stomach to the other, his heart was punctured and adam's
+apple crushed with a sharp object about the same size as the other two
+wounds.  There appears to be a bruise around his mouth as if at one
+point he had something forcefully placed over and/or around his mouth.
+~
+flesh~
+23 0 AOR
+0 0 0 0 0
+0
+20 0 100
+E
+--USES~
+-2~
+E
+bruise~
+it looks as if he was gagged or partially suffocated for a time as a large
+bruise has formed across his mouth and all along the inside of his bottom lip
+is markings from his upper teeth involuntarily biting down.
+~
+E
+shirt~
+the white golf shirt is torn open with something sharp and with a blade of
+about three or so inches long all along the stomach in a straight horizontal
+line.  There is a single piercing wound just above the breast pocket.
+~
+E
+slacks~
+fibers from the carpet can be found all over these slacks, it's as if he was
+sitting on the carpet quite a bit in these.
+~
+E
+blood~
+Blood samples taken match both Timothy's blood and another blood like that
+found on the floor by the door of the master bedroom.
+~
+Q 1
+#12523
+corpse hannah o'connor~
+the corpse of Hannah O'Connor~
+Hannah O'Connor lies here completely still and completely pale, she's
+wearing a single piece white and flowery summer dress to hide her full
+figure.  She has blood all over her dress, and several apparent wounds.  She
+was stabbed once in the chest, once again across the neck.  There seems to
+be a set of almost readable finger prints on each side of her neck.  
+~
+Hannah O'Connor lies here completely still and completely pale, she's
+wearing a single piece white and flowery summer dress to hide her full
+figure.  She has blood all over her dress, and several apparent wounds.
+She was stabbed once in the chest, once again across the neck. There
+seems to be a set of almost readable finger prints on each side of her
+neck.
+~
+flesh~
+23 0 AOR
+0 0 0 0 0
+0
+20 0 100
+E
+--USES~
+-2~
+E
+neck~
+Although the apparent wound of a sliced neck, x-ray's show her neck is also
+broken.  This may be why she has her own dried blood along the upper part of
+her neck ....
+~
+E
+chest~
+The odd thing about the chest wound is it seems the killer missed his mark
+on the first 'go-round' and struck again just across the neck with a very
+sharp instrument about three inches in length.
+~
+Q 1
+#12524
+small envelope 10 #10~
+a small white #10 envelope~
+This is a plain, unmarked white mailing envelope.  
+~
+This is a plain, unmarked white mailing envelope.
+~
+paper~
+15 0 AO
+2 AC 0 1 0 0
+0 25 100
+E
+--USES~
+-2~
+Q 5
+#12525
+manilla envelope~
+a manilla envelope~
+This is a plain unmarked manilla envelope.  
+~
+This is a plain unmarked manilla envelope.
+~
+paper~
+15 0 AO
+1 AC 0 1 0 0
+0 25 100
+E
+--USES~
+-2~
+Q 5
+#12526
+book stamps~
+a book of stamps~
+This small book of stamps holds $5.  00 worth of stamps inside of it's
+pages.  Now to find something to use them on ....  
+~
+This small book of stamps holds $5.00 worth of stamps inside of it's
+pages. Now to find something to use them on ....
+~
+paper~
+13 0 AO
+0 0 0 0 0
+0
+0 500 100
+E
+--TUNONE~
+you open a book of stamps and inspect it's contents.~
+E
+--TUSELF~
+you open a book of stamps, and peel off a stamp.~
+E
+--TUOTH~
+you open a book of stamps, peel off a stamp, and give it to $N.~
+E
+--TRNONE~
+$n opens a book of stamps and begins to inspect it's contents.~
+E
+--TRSELF~
+$n opens a book of stamps and peels off a stamp.~
+E
+--TROTH~
+$n opens a book of stamps, peels off a stamp, and gives it to $N.~
+E
+--TVOTH~
+$n opens a book of stamps, peels off a stamp, and gives it to you.~
+E
+--TRUSE~
+$n opens a book of stamps but can't seem to find any stamps in it.~
+E
+--TUUSE~
+you open a book of stamps but can't seem to find any stamps left in it.~
+E
+--USES~
+14~
+Q 5
+#12527
+fbi badge~
+fBI badge~
+An FBI badge is here.~
+~
+unknown~
+11 0 0
+0 0 0 0 0
+0
+0 0 100
+E
+--USES~
+-2~
+#12529
+fbi badge~
+an FBI badge and case~
+A hand-sized wallet case made out of black leather.  Within, on one side,
+is a gold shield with a gold eagle perched atop it.  In the center of the
+shield, the muse of justice stands blindfolded, holding a sword in her left
+hand and a set of scales in her right.  She is positioned between the
+letters "U S".  "Federal Bureau of Investigation" is printed above her, and
+below her are the words: "Department of Justice".  In the other half of the
+case, a white card has been placed.  The card reads: "FBI Special Agent"
+Next to the words is a small photograph of a {MYOUR DESC HERE{x.  Below the
+FBI designation, the name "{MYOUR NAME HERE{x" is printed, above a line
+where the same name has been signed.  
+~
+A hand-sized wallet case made out of black leather.  Within, on one side,
+is a gold shield with a gold eagle perched atop it.  In the center of the
+shield, the muse of justice stands blindfolded, holding a sword in her left
+hand and a set of scales in her right.  She is positioned between the
+letters "U S".  "Federal Bureau of Investigation" is printed above her, and
+below her are the words: "Department of Justice".  In the other half of the
+case, a white card has been placed.  The card reads: "FBI Special Agent"
+Next to the words is a small photograph of a {MYOUR DESC HERE{x.  Below the
+FBI designation, the name "{MYOUR NAME HERE{x" is printed, above a line
+where the same name has been signed.  
+~
+copper~
+11 0 AO
+0 0 0 0 0
+0
+1 0 100
+E
+--USES~
+-2~
+Q 10
+#0
+
+
+
+#ROOMS
+#12501
+In Front of the FBI Office Building~
+In front of the FBI offices building stand three tall flagpoles carrying
+state, nation, and company flags each one flittering noisily in the wind. 
+Noise from the garage entrance to the north seem to come in drafts or waves
+seemingly to remind one that it's still there although mostly unseen.  The
+darkly tinted windows of the building seem to look out at the world like
+empty eye sockets, haunted by it's days of power and always struggling to
+see once more.  The entrance to the building is to the west, the scent of
+cigarettes can be smelled coming from the south while the sound of squealing
+tires can be heard from the north.  
+~
+0 65536 1
+E
+XNUMB1~
+null~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+null~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 12502
+D2
+~
+~
+0 0 12503
+D3
+~
+~
+0 0 12504
+M 0 H 100
+S
+#12502
+On a Parking Ramp~
+The sounds and smells of vehicles and their massive potential to pollute
+everything around them waft up from the parking garage down below.  To
+continue down on foot might seem like suicide!  The front of the FBI offices
+building is to the south.  
+~
+0 65536 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D2
+~
+~
+0 0 12501
+D5
+~
+~
+0 0 12516
+M 0 H 100
+S
+#12503
+The FBI Designated Smoking Area~
+Decorated only with a cement bench and a shiny metal ashtray overcrowded
+with cigarette butts and the trash area filled with Styrofoam coffee cups,
+this place is the designated smoking area for the FBI.  Caught smoking
+anywhere else and it's against the rules!  A small sign in the grass reminds
+people passing by to keep off the grass.  The front of the FBI offices
+building is to the north.  
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 12501
+M 0 H 100
+S
+#12504
+Inside the FBI offices Building~
+Just inside the glass doors this room with it's all white walls and black
+marble tiling opens up to the west where security hand checks everything
+that comes in and out of the building.  A list of the offices in this
+building is contained in a large glass case hung up on the wall, and several
+more cameras monitor anything that moves.  
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 12501
+D3
+~
+~
+0 0 12505
+M 0 H 100
+S
+#12505
+A Security Checkpoint on the First Floor~
+Several lightly armed security guards hand check everyone and everything
+going in and out of the building at this strategically located bottleneck. 
+All different types of detectors shower this area in an effort to assist the
+guards in their ceaseless efforts to keep everyone within safe.  A brightly
+lit hallway is to the north and south while an elevator is to the west. 
+<ooc> 'press button' to call the elevator, and 'enter elevator' to go
+inside.  
+~
+0 1160 0
+V
+12561 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 12508
+D1
+~
+~
+0 0 12504
+D2
+~
+~
+0 0 12506
+M 0 H 100
+S
+#12506
+A Brightly Lit Hallway~
+The bright halogen lights reflect off of the bright white paint on the
+walls, which seem to cast a shadow on the black tiled floor even though it's
+really only an illusion.  The faint smell of paperwork and warm electronics
+remind one that although this is a fancy government building - it is 'just'
+an office building.  A brightly lit hall continues north and west, while a
+security door stands to the south.  
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 12505
+D2
+~
+~
+AB 0 12556
+D3
+~
+~
+0 0 12507
+M 0 H 100
+S
+#12507
+A Brightly Lit Hallway~
+The bright halogen lights reflect off of the bright white paint on the
+walls, which seem to cast a shadow on the black tiled floor even though it's
+really only an illusion.  The faint smell of paperwork and warm electronics
+remind one that although this is a fancy government building - it is 'just'
+an office building.  A brightly lit hall continues to the east while a door
+stands to the west that says: Organized Crime.  
+~
+0 128 0
+E
+XNUMB1~
+none~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+none~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 12506
+D3
+~
+~
+AB 0 12550
+M 0 H 100
+S
+#12508
+Intersection in a Brightly Lit Hallway~
+The bright halogen lights reflect off of the bright white paint on the
+walls, which seem to cast a shadow on the black tiled floor even though it's
+really only an illusion.  The faint smell of paperwork and warm electronics
+remind one that although this is a fancy government building - it is 'just'
+an office building.  A brightly lit hall continues north and west while a
+security checkpoint can be seen to the south.  
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 12509
+D2
+~
+~
+0 0 12505
+D3
+~
+~
+0 0 12512
+M 0 H 100
+S
+#12509
+A Brightly Lit Hallway~
+The bright halogen lights reflect off of the bright white paint on the
+walls, which seem to cast a shadow on the black tiled floor even though it's
+really only an illusion.  The faint smell of paperwork and warm electronics
+remind one that although this is a fancy government building - it is 'just'
+an office building.  A brightly lit hall continues north and south.  
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 12510
+D2
+~
+~
+0 0 12508
+M 0 H 100
+S
+#12510
+A Brightly Lit Hallway~
+The bright halogen lights reflect off of the bright white paint on the
+walls, which seem to cast a shadow on the black tiled floor even though it's
+really only an illusion.  The faint smell of paperwork and warm electronics
+remind one that although this is a fancy government building - it is 'just'
+an office building.  A brightly lit hall continues north and south, while a
+door to the east says: Missing Persons, and a door to the west says: Most
+Wanted.  
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 12511
+D1
+~
+~
+AB 0 12528
+D2
+~
+~
+0 0 12509
+D3
+~
+~
+AB 0 12535
+M 0 H 100
+S
+#12511
+End of a Brightly Lit Hallway~
+The bright halogen lights reflect off of the bright white paint on the
+walls, which seem to cast a shadow on the black tiled floor even though it's
+really only an illusion.  The faint smell of paperwork and warm electronics
+remind one that although this is a fancy government building - it is 'just'
+an office building.  A brightly lit hall continues to the south.  
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D2
+~
+~
+0 0 12510
+M 0 H 100
+S
+#12512
+A Brightly Lit Hallway~
+The bright halogen lights reflect off of the bright white paint on the
+walls, which seem to cast a shadow on the black tiled floor even though it's
+really only an illusion.  The faint smell of paperwork and warm electronics
+remind one that although this is a fancy government building - it is 'just'
+an office building.  A brightly lit hall continues east and west.  
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 12508
+D3
+~
+~
+0 0 12513
+M 0 H 100
+S
+#12513
+A Brightly Lit Hallway~
+The bright halogen lights reflect off of the bright white paint on the
+walls, which seem to cast a shadow on the black tiled floor even though it's
+really only an illusion.  The faint smell of paperwork and warm electronics
+remind one that although this is a fancy government building - it is 'just'
+an office building.  A brightly lit hall continues east and west.  
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 12512
+D3
+~
+~
+0 0 12514
+M 0 H 100
+S
+#12514
+A Brightly Lit Hallway~
+The bright halogen lights reflect off of the bright white paint on the
+walls, which seem to cast a shadow on the black tiled floor even though it's
+really only an illusion.  The faint smell of paperwork and warm electronics
+remind one that although this is a fancy government building - it is 'just'
+an office building.  A brightly lit hall continues east and west, while a
+door to the north says: Bathrooms and a door to the south says: Organized
+Crime.  
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+AB 0 12539
+D1
+~
+~
+0 0 12513
+D2
+~
+~
+AB 0 12547
+D3
+~
+~
+0 0 12515
+S
+#12515
+End of a Brightly Lit Hallway~
+The bright halogen lights reflect off of the bright white paint on the
+walls, which seem to cast a shadow on the black tiled floor even though it's
+really only an illusion.  The faint smell of paperwork and warm electronics
+remind one that although this is a fancy government building - it is 'just'
+an office building.  A brightly lit hall continues to the east while a plain
+wooden door with a brass handle lies to the south.  
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 12514
+D2
+~
+~
+AB 0 12551
+S
+#12516
+On a Parking Ramp~
+The main exit/entrance to the parking garage shows the contrast of
+natural lights outside and the artificial halogen lights flickering on and
+off inside.  The musty smell of pollution taints this entire area despite
+the ventilation systems best efforts.  Parking can be attained west and
+south while the exit is up from here.  
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D2
+~
+~
+0 0 12517
+D3
+~
+~
+0 0 12520
+D4
+~
+~
+0 0 12502
+S
+#12517
+The Parking Garage~
+The lights down here always seem to be just short of totally lighting the
+area properly.  Dried oil spots and rubber marks from tires mark up the
+cement floor here and there.  Parking can be attained here south and west,
+while the exit ramp lies to the north.  
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 12516
+D2
+~
+~
+0 0 12518
+D3
+~
+~
+0 0 12521
+S
+#12518
+The Parking Garage~
+The lights down here always seem to be just short of totally lighting the
+area properly.  Dried oil spots and rubber marks from tires mark up the
+cement floor here and there.  Parking can be attained here, north, and
+south.  
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 12517
+D2
+~
+~
+0 0 12519
+S
+#12519
+The Parking Garage~
+The lights down here always seem to be just short of totally lighting the
+area properly.  Dried oil spots and rubber marks from tires mark up the
+cement floor here and there.  Parking can be attained here, north, and west.
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 12518
+D3
+~
+~
+0 0 12523
+S
+#12520
+The Parking Garage~
+The lights down here always seem to be just short of totally lighting the
+area properly.  Dried oil spots and rubber marks from tires mark up the
+cement floor here and there.  Parking can be attained here, west and south
+while the exit ramp is to the east.  
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 12516
+D2
+~
+~
+0 0 12521
+D3
+~
+~
+0 0 12524
+S
+#12521
+The Parking Garage~
+The lights down here always seem to be just short of totally lighting the
+area properly.  Dried oil spots and rubber marks from tires mark up the
+cement floor here and there.  Parking can be attained here, east, west, and
+to the north.  
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 12520
+D1
+~
+~
+0 0 12517
+D3
+~
+~
+0 0 12525
+S
+#12522
+VIP Parking~
+Several reserved parking spaces for several named head members of the
+office team staff are here.  Often times it's odd to see the vehicles people
+in power drive versus the vehicles the lower paid assistant drives.  Either
+way this area is also monitored much like the area around the elevators. 
+Other parking spots can be seen to the south.  
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D2
+~
+~
+0 0 12523
+S
+#12523
+The Parking Garage~
+The lights down here always seem to be just short of totally lighting the
+area properly.  Dried oil spots and rubber marks from tires mark up the
+cement floor here and there.  Parking can be attained here, east, west, and
+VIP parking to the north.  
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 12522
+D1
+~
+~
+0 0 12519
+D3
+~
+~
+0 0 12527
+S
+#12524
+The Parking Garage~
+The lights down here always seem to be just short of totally lighting the
+area properly.  Dried oil spots and rubber marks from tires mark up the
+cement floor here and there.  Parking can be attained here and to the east,
+while a no parking area can be seen to the south.  
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 12520
+D2
+~
+~
+0 0 12525
+S
+#12525
+The Parking Garage [B1]~
+A no parking zone just outside of the elevator makes it hopefully safer
+for pedestrians going in and out of the offices just above.  Several cameras
+and extra lights scan this entire area for "suspicious activity".  It might
+be wise to keep moving.  Parking can be attained to the east and the south. 
+<ooc> 'press button' to call the elevator, and 'enter elevator' to go
+inside.  
+~
+0 1032 0
+V
+12561 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 12524
+D1
+~
+~
+0 0 12521
+D2
+~
+~
+0 0 12526
+S
+#12526
+The Parking Garage~
+The lights down here always seem to be just short of totally lighting the
+area properly.  Dried oil spots and rubber marks from tires mark up the
+cement floor here and there.  Parking can be attained here and to the south.
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 12525
+D2
+~
+~
+0 0 12527
+S
+#12527
+The Parking Garage~
+The lights down here always seem to be just short of totally lighting the
+area properly.  Dried oil spots and rubber marks from tires mark up the
+cement floor here and there.  Parking can be attained here, north, and to
+the east.  
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 12526
+D1
+~
+~
+0 0 12523
+S
+#12528
+Offices for Missing Persons~
+In contrast to the clean and quiet hallway these offices are a complete
+disaster.  Papers stacked up on top of desks and files cluttering any other
+free space that there might once have been.  Office cubicles lead to the
+north, east, and south from here while a brightly lit hallway is to the
+west.  
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 12529
+D1
+~
+~
+0 0 12533
+D2
+~
+~
+0 0 12530
+D3
+~
+~
+AB 0 12510
+S
+#12529
+Offices for Missing Persons~
+Short gray cubicle walls lined with personal photos of the family members
+of the person who works in this area and a small desk with a networked
+computer terminal sitting on it make up this entire area.  Just another
+example of the government minimalizing costs while still trying to remain
+functional.  More cubical space can be seen to the east, while the main
+entrance is to the south.  
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 12532
+D2
+~
+~
+0 0 12528
+S
+#12530
+Offices for Missing Persons~
+Short gray cubicle walls lined with personal photos of the family members
+of the person who works in this area and a small desk with a networked
+computer terminal sitting on it make up this entire area.  Just another
+example of the government minimalizing costs while still trying to remain
+functional.  The main entrance can be seen to the north while more cubicle
+space is to the east and south.  
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 12528
+D1
+~
+~
+0 0 12534
+D2
+~
+~
+0 0 12531
+S
+#12531
+Offices for Missing Persons~
+Short gray cubicle walls lined with personal photos of the family members
+of the person who works in this area and a small desk with a networked
+computer terminal sitting on it make up this entire area.  Just another
+example of the government minimalizing costs while still trying to remain
+functional.  More cubicle space is to the north.  
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 12530
+S
+#12532
+Offices for Missing Persons~
+Short gray cubicle walls lined with personal photos of the family members
+of the person who works in this area and a small desk with a networked
+computer terminal sitting on it make up this entire area.  Just another
+example of the government minimalizing costs while still trying to remain
+functional.  More cubical space can be seen to the west from here.  
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D3
+~
+~
+0 0 12529
+S
+#12533
+Offices for Missing Persons~
+Short gray cubicle walls lined with personal photos of the family members
+of the person who works in this area and a small desk with a networked
+computer terminal sitting on it make up this entire area.  Just another
+example of the government minimalizing costs while still trying to remain
+functional.  The main entrance can be seen to the west from here.  
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D3
+~
+~
+0 0 12528
+S
+#12534
+Offices for Missing Persons~
+Short gray cubicle walls lined with personal photos of the family members
+of the person who works in this area and a small desk with a networked
+computer terminal sitting on it make up this entire area.  Just another
+example of the government minimalizing costs while still trying to remain
+functional.  More cubicle space is to the west.  
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D3
+~
+~
+0 0 12530
+S
+#12535
+Offices for FBI Most Wanted~
+Posters line the walls of gray cubicles and corkboards all over the place
+always in search of someone.  One corkboard in particular stands out as it
+only has ten wanted posters on it and it appears to be frequently updated as
+the cork is fairly worn out in most spots.  Cubicles lie to the north and
+south of here while this small walkway continues west.  
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 12540
+D1
+~
+~
+AB 0 12510
+D2
+~
+~
+0 0 12544
+D3
+~
+~
+0 0 12536
+S
+#12536
+Offices for FBI Most Wanted~
+Posters line the walls of gray cubicles and corkboards all over the place
+always in search of someone.  One corkboard in particular stands out as it
+only has ten wanted posters on it and it appears to be frequently updated as
+the cork is fairly worn out in most spots.  Cubicles lie to the north and
+south of here while this small walkway continues east towards the exit.  
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 12541
+D1
+~
+~
+0 0 12535
+D2
+~
+~
+0 0 12546
+S
+#12537
+The Public Restrooms~
+The black tiled floor continues through to the public restrooms here,
+while the white walls are covered in a bit of an egg white paint.  Two sinks
+line the eastern wall here just below a thick mirror.  The men's' and
+women's bathrooms lie to the west while the exit lies to the south.  
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 12542
+D2
+~
+~
+0 0 12539
+D3
+~
+~
+0 0 12538
+S
+#12538
+The Public Restrooms~
+The only division between the men's and women's restrooms are the actual
+room with the toilet in it.  Another classic act of the government cutting
+any corner it can to best utilize our tax dollars.  Men's lies to the north
+while Women's lies to the south, and the sinks can be seen off to the east. 
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+AB 0 12543
+D1
+~
+~
+0 0 12537
+D2
+~
+~
+AB 0 12545
+S
+#12539
+The Public Restrooms~
+The black tiled floor continues through to the public restrooms here,
+while the white walls are covered in a bit of an egg white paint.  A single
+camera sits in the corner just above the door to the south pointing towards
+the sinks to the north.  
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 12537
+D2
+~
+~
+AB 0 12514
+S
+#12540
+Offices for FBI Most Wanted~
+This small gray cubicle filled with a single desk, chair, and personal
+computer seems to be already crowded even without the stacks of files and
+photos of criminals new and old.  A small walkway lies to the south.  
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D2
+~
+~
+0 0 12535
+S
+#12541
+Offices for FBI Most Wanted~
+This small gray cubicle filled with a single desk, chair, and personal
+computer seems to be already crowded even without the stacks of files and
+photos of criminals new and old.  A small walkway lies to the south.  
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D2
+~
+~
+0 0 12536
+S
+#12542
+The Public Restrooms~
+This small corner holds only one sink along the eastern wall, and a large
+roll of what seems to be an endless supply of paper towels.  Another row of
+sinks can be seen to the south from here.  
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D2
+~
+~
+0 0 12537
+S
+#12543
+The Mens Room~
+A simple small, white tiled bathroom with a single white porcelain throne
+in the center.  The only exit from this room is to the south - away from
+that smell ....  
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D2
+~
+~
+AB 0 12538
+S
+#12544
+Offices for FBI Most Wanted~
+This small gray cubicle filled with a single desk, chair, and personal
+computer seems to be already crowded even without the stacks of files and
+photos of criminals new and old.  A small walkway lies to the north.  
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 12535
+S
+#12545
+The Womens Room~
+A simple, small, white tiled bathroom, with a single white porcelain
+throne in the center.  The only exit from this room is to the north to get
+in line at the mirror to apply makeup.  
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+AB 0 12538
+S
+#12546
+Offices for FBI Most Wanted~
+This small gray cubicle filled with a single desk, chair, and personal
+computer seems to be already crowded even without the stacks of files and
+photos of criminals new and old.  A small walkway lies to the north.  
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 12536
+S
+#12547
+Offices for Organized Crime~
+Boxes crammed full of picture books line the office cubicles all along
+this small aisle.  The cubicles themselves have maps and diagrams of the
+city all over the place.  From residential areas to citywide wiring
+schematics, the FBI is on top of it.  A doorway to the north leads to the
+main hall while this small aisle continues south.  
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+AB 0 12514
+D2
+~
+~
+0 0 12549
+S
+#12548
+Computer Storage Office~
+Not so much an office as it is computer storage, large cases bolted to
+the floor fill this room and extend to the north and south humming to
+themselves as if in a language of their own.  The temperature in this room
+feels as if it's twenty degrees colder than in the other offices, these
+giant towers must have serious overheating problems.  
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 12551
+D2
+~
+~
+0 0 12553
+S
+#12549
+Offices for Organized Crime~
+More boxes are lined along the aisle here crammed full of picture books
+which are filled with pictures of the many crime families and some of their
+known signatures.  More maps of the surrounding terrain and air zones line
+the cubicle walls in this part of the aisle.  A small cubicle can be seen
+south of here while this aisle continues north and east.  
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 12547
+D1
+~
+~
+0 0 12550
+D2
+~
+~
+0 0 12554
+S
+#12550
+Offices for Organized Crime~
+Boxes crammed full of picture books line the office cubicles all along
+this small aisle.  The cubicles themselves have maps and diagrams of the
+city all over the place.  Arial pictures of the city and the surrounding
+area with their respective hotspots outlined, the FBI is on top of it.  A
+doorway to the east leads to the main hall while this small aisle continues
+west, and a small cubicle can be seen to the north and south.  
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 12552
+D1
+~
+~
+AB 0 12507
+D2
+~
+~
+0 0 12555
+D3
+~
+~
+0 0 12549
+S
+#12551
+Computer Storage Office~
+Not so much an office as it is computer storage, large cases bolted to
+the floor fill this room and extend to the south humming to themselves as if
+in a language of their own.  Maintenance and diagnostics tools sit in the
+corner of the room in a jumbled heap.  
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+AB 0 12515
+D2
+~
+~
+0 0 12548
+S
+#12552
+Offices for Organized Crime~
+A large oversized monitor takes up most of the desk space in this
+cubicle, leaving what's left over to be piled high with case files and new
+leads.  A small aisle can be seen to the south from here.  
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D2
+~
+~
+0 0 12550
+S
+#12553
+Computer Storage Office~
+Not so much an office as it is computer storage, large cases bolted to
+the floor fill this room and extend to the north humming to themselves as if
+in a language of their own.  Giant stacks of removable hard drives stand
+proudly against the southern wall.  
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 12548
+S
+#12554
+Offices for Organized Crime~
+A large oversized monitor takes up most of the desk space in this
+cubicle, leaving what's left over to be piled high with case files and new
+leads.  A small aisle can be seen to the north from here.  
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 12549
+S
+#12555
+Offices for Organized Crime~
+A large oversized monitor takes up most of the desk space in this
+cubicle, leaving what's left over to be piled high with case files and new
+leads.  A small aisle can be seen to the north from here.  
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 12550
+S
+#12556
+FBI Security HQ~
+The entrance to the FBI security team seems just as neat and orderly as
+the rest of the building with its plush gray carpeting and same white walls
+that reflect the bright halogen lights from above.  All sorts of power
+switches line the wall to the south as well as what looks like most of the
+wiring for the phone system.  This place was meant to be like a central hub
+- just in case.  To the west is a thick solid steel door with what looks
+like a bumper sticker on it, while to the east the security office
+continues, while the exit lies to the north.  
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+E
+bumper~
+{gPT [{W2{g]{x
+~
+E
+sticker~
+test piloting~
+D0
+~
+~
+AB 0 12506
+D1
+~
+~
+0 0 12559
+D3
+~
+~
+ABCF 0 12557
+S
+#12557
+FBI Security Holding Room~
+This is grey, unpleasant cell sealed with a solid steel door which never
+seems to have enough air to breath in it.  The cold walls feel like they're
+closing in, crushing your spirit, and even though you can't see them, you're
+sure someone is watching you.  
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+ABCF 0 12556
+S
+#12558
+FBI Security HQ~
+This room is lit with several red lights that line the ceiling as well as
+several red light desk lamps.  Flat screen monitors bolted side to side are
+all along the wall and look to cover most every nook and cranny of the FBI
+offices building.  The only exit from here is to the south.  
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D2
+~
+~
+AB 0 12559
+S
+#12559
+FBI Security HQ~
+Several lockers line the southern wall here as well as several small bins
+lined across the floor which seem to be full of basic security gear as well
+as riot gear - again just in case.  The plush gray carpeting looks a little
+stressed here and there in this area due to the amount of traffic but
+otherwise looks fairly new.  A wooden door to the east says: Private,
+another wooden door to the north says: Keep Out, while the main entrance is
+to the west.  
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+AB 0 12558
+D1
+~
+~
+AB 0 12560
+D3
+~
+~
+0 0 12556
+S
+#12560
+FBI Interrogation Room~
+This room in contrast to the rest of the building seems very different. 
+The walls are covered in a seamless two-way mirror and the floor is a flat
+white tile.  The air itself seems stale as if the ventilation doesn't reach
+this part of the building.  Three objects occupy this room and are bolted to
+the floor: two steel chairs and a single steel table in the center of the
+room.  The only exit out of here is to the west.  
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D3
+~
+~
+AB 0 12559
+S
+#12561
+Inside the Elevator~
+The walls here have a slightly polished finish to them, which reflect the
+dual halogen lights just above the refracted ceiling tile.  A small camera
+in the rear right corner monitors all users in here.  Two small white
+buttons line themselves up by the left side of the doorway which read:
+[{W0{g] [{W1{g].  <ooc> [{W0{g] leads to the parking garage [{W1{g] leads to
+1st floor.  'press #' to go to that floor, and 'leave elevator' to step out.
+{x 
+~
+0 396 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+S
+#12562
+A Dimly Lit Hallway on the Second Floor~
+A dimly lit hallway made to look larger than it really is by use of
+creative architecture expands to the east and then abruptly stops in a
+doorway.  The only other exit lies back inside the elevator to the south. 
+<ooc> 'press button' to call the elevator, and 'enter elevator' to go
+inside.  
+~
+0 1032 0
+V
+12561 2
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+ABCJR 12502 12563
+S
+#12563
+A Dimly Lit Hallway~
+A dimly lit hallway made to look larger than it really is by use of
+creative architecture expands mainly to the east where a turn to the north
+lies, while to the west is a locked door.  Old oil paintings hang on the
+wall, each with specially engraved markings along the highly polished wooden
+frames.  At the bottom of each painting is a golden plate with the title of
+the painting on it.  
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 12564
+D3
+~
+~
+ABCJR 12502 12562
+S
+#12564
+A Dimly Lit Hallway~
+The echoes from the sounds of one's shoes and clothing echo off of this
+seemingly dead silent hallway.  The seemingly large hallway travels west
+towards a closed door and north where it's really too dark to clearly see
+what's ahead.  More old paintings with intricately designed wooden frames
+hang all along the walls here.  Each painting seems different from the last
+but seem to be centrally themed somehow.  
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 12565
+D3
+~
+~
+0 0 12563
+S
+#12565
+A Dimly Lit Hallway~
+A dimly lit hallway made to look larger than it really is by use of
+creative architecture expands mainly to the north while to the south lies a
+turn to the west.  A door to the west from here has a sign that says Study
+on it.  Old oil {Cpainting{gs hang on the wall, each with specially engraved
+markings along the highly polished wooden frames.  At the bottom of each
+painting is a golden plate with the title of the painting on it.  {x 
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+E
+painting~
+A large pile of naked corpses fill the center of the painting while two
+men on either side of the pile are shown wearing thick plate and chain
+mail as well as wielding longswords.  The pile of bodies seems to be
+made up of humans and wolves.
+ 
+[Victory Pose]
+~
+D0
+~
+~
+0 0 12570
+D2
+~
+~
+0 0 12564
+D3
+~
+~
+AB 0 12566
+S
+#12566
+The Conference Room~
+Sparse, but strategic lighting in this room mostly huddle around the long
+conference table in the center of the room.  Like a theater long dark
+curtains hang over the walls which make the doorways stand out oddly.  The
+Library lies to the west while the exit is to the east.  
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+AB 0 12565
+D3
+~
+~
+AB 0 12567
+S
+#12567
+The Electronic Library~
+Several computer terminals line the walls of this room while in the
+center stands the largest {Ccomputer{g on the east coast of the United
+States, but hardly anyone knows about.  Drawing it's memory from the early
+days of the inquisition case files to the current case files of missing
+children and serial killers, this computer holds any and every case file
+with anything out of the ordinary in it as well as the master list of all
+past and present council members.  {x {g<ooc> look at all the
+{Chighlighted{g items for more information{x 
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+E
+a63952~
+{c----------------------------------------------------------------------{x
+{WCase File: A63952
+ 
+Incident: A pair of rabid dogs attacked at The Haven Hotel, injuring
+numerous civilians before being put down by several anonymous
+bystanders.  One dog was slain in a nearby parking lot and another was
+found dead in one of the hotel hallways.
+ 
+Jason Maddock, a policeman on the force for 3 years, was gunned
+down in front of the Haven while responding to calls about the rabid
+dogs.  His partner, Melissa Starks, responded to the gunshots she was
+assaulted by a woman and two men and was left alive, but unconscious
+outside the establishment.
+ 
+Follow-up: [May-12-2004]:  Officer Melissa Starks was taken in to the local
+hospital's emergency room for immediate treatment where blood, urine, and
+skin samples were taken for further analysis.  It is undetermined at this time
+what wounds she currently suffers from.  On the scene of the rabid dog incident
+the dogs found were of mixed breed and only one of which had any identifying
+tags on them.  The tags were on the dog found beheaded inside of The Haven
+Hotel which identify the owners to live at 1691 Montgomery Dr. Bal Harbor.
+Both of the dogs had some type of acidic fluid in their mouth shortly before
+their deaths, samples were taken for further analysis of their saliva.
+ 
+Officer: Stevens, John - Assault Department
+ 
+cc: FBI case files
+ 
+Please use {Cmain {Wor {Ccase files {Wfor more options.{x
+{c--------------------------------------------------------------------------------{x
+~
+E
+hack~
+{W>telnet portent.genesismuds.com
+ 
+Connecting To portent.genesismuds.com...
+One connection found to the host, on port 9090.
+Reconnecting may end current game in progress, do you wish 
+to reconnect anyway?
+ 
+{g<ooc> Thanks for taking the time to look for hidden content
+within PT -Rafkin.{x
+~
+E
+rj~
+{c--------------------------------------------------------------------------------
+ 
+{WMade of a thin, black, wool-like material and with the official symbol
+of Project Twilight embroidered on the tag.  This jacket holds state of
+the art technology which enables it to hold contents almost the size of
+a suitcase within it's pockets.  This jacket, known as the RJ or Rift
+Jacket is one piece in an outfit of six which is the last suit you will
+ever wear.
+ 
+Please use {Cmain {Wor {Cequipment listings {Wfor more options.
+ 
+{c--------------------------------------------------------------------------------{x
+~
+E
+tpe~
+{c--------------------------------------------------------------------------------
+ 
+{WThis Tiny clear Plastic Earpiece, known as the TPE, has a small almost
+invisible antenna that loops over the ear and surprisingly has great
+reception.  This particular model is good for sending and receiving
+cellular transmissions.
+ 
+Please use {Cmain {Wor {Cequipment listings {Wfor more options.
+ 
+{c--------------------------------------------------------------------------------{x
+~
+E
+clothing~
+{c--------------------------------------------------------------------------------
+ 
+{WThank you for selecting Clothing/Equipment Listings.  There are
+currently two items in this category.
+ 
+{Ctpe
+rj
+kbps
+ 
+{WPlease use {Cmain {Wor {Cequipment listings {Wfor more options.
+ 
+{c--------------------------------------------------------------------------------{x
+~
+E
+highlighted~
+type: look computer
+~
+E
+enforcer-3~
+{c--------------------------------------------------------------------------------
+ 
+{WBuilt to look like a normal rifle most of this weapon is constructed
+of a poly-resin/fiber composite for lightweight and insulation
+properties. Called a PSC Gun which stands for Photo Static Conductor Gun
+it takes the positively charged particles from it's clip and uses the
+natural static in it's target as a type of homing device to unleash it's
+lightning-like rounds.  This weapon is currently classified and is not
+issued to agents known to be traveling in view of the public.  A silver
+"E-3" is stamped on it's side.
+ 
+Please use {Cmain {Wor {Cequipment listings {Wfor more options.
+ 
+{c--------------------------------------------------------------------------------{x
+~
+E
+enforcer-2~
+{c--------------------------------------------------------------------------------
+ 
+{WThis tool from older times still in use today comes in stock with a
+titanium construction and a four round clip adapter just under the
+barrel.  Mounted with only a pistol grip, it seems this weapon was
+designed only for close quarter battles.  The only markings on this gun
+is a silver stamped "E-2" on it's side near the top of the handle.
+ 
+Please use {Cmain {Wor {Cequipment listings {Wfor more options.
+ 
+{c--------------------------------------------------------------------------------{x
+~
+E
+enforcer-1~
+{c--------------------------------------------------------------------------------
+ 
+{WThis rather small black handgun has a rather long handle is extremely
+lightweight thanks to the use of titanium.  In fact not loaded this
+weapon only weighs 15 ounces.  Loaded with it's specially designed clip
+of 30 silver rounds it weighs in at two pounds.  Still very light and
+very effective; the only markings on this gun are a silver stamped "E-1"
+on it's side just under the sliding bolt.
+ 
+Please use {Cmain {Wor {Cequipment listings {Wfor more options.
+ 
+{c--------------------------------------------------------------------------------{x
+~
+E
+weapons~
+{c--------------------------------------------------------------------------------
+ 
+{WThank you for selecting Weapons/Equipment Listings.  There are
+currently three items in this category.
+ 
+{Cenforcer-1
+enforcer-2
+enforcer-3
+ 
+{WPlease use {Cmain {Wor {Cequipment listings {Wfor more options.
+ 
+{c--------------------------------------------------------------------------------{x
+~
+E
+main~
+{c--------------------------------------------------------------------------------
+ 
+{WWlecome to the Project Twilight database, please make a selection from
+the following options:
+ 
+{Ccase files
+mol
+equipment listings
+ 
+ 
+{c--------------------------------------------------------------------------------{x
+~
+E
+equipment~
+{c--------------------------------------------------------------------------------
+ 
+{WThank you for selecting Equipment Listings. Subcategories include the
+following:
+ 
+{Cweapons
+clothing
+ 
+{WPlease use {Cmain {Wfor more options.
+ 
+{c--------------------------------------------------------------------------------{x
+~
+E
+case~
+{c--------------------------------------------------------------------------------
+ 
+{WThank you for selecting Case Files. Subcategories include the following:
+ 
+{Cassault
+inquisition
+kidnapping
+murder
+ 
+{WPlease use {Cmain {Wfor more options
+ 
+{c--------------------------------------------------------------------------------{x
+~
+E
+computer~
+{c--------------------------------------------------------------------------------
+ 
+{WWelcome to the Project Twilight database, please make a selection from    
+the following options:
+ 
+{Ccase files
+mol
+equipment listings
+ 
+{c--------------------------------------------------------------------------------{x
+~
+E
+mol~
+{c--------------------------------------------------------------------------------
+ 
+{WThank you for selecting Mission Operatives Listing.  The following
+personnel have at one point in time been given knowledge of Project
+Twilight:
+ 
+{C{Y-classified-{x
+ 
+{WPlease use {Cmain {Wfor more options.
+ 
+{c--------------------------------------------------------------------------------{x
+~
+E
+kbps~
+{c--------------------------------------------------------------------------------
+ 
+{W The KBPS, or Kevlar Body Protection System, was founded many years ago with various models still in use today by crime fighting organizations throughout the world.  From bullet resistant vests to the full blown red-man body armor this technology has come very far - yet still has so far to go.  The current authorized KBPS for PT personnel comes only with a modified vest.  For more information, or to be issued a vest - stop by the local distribution department.
+ 
+{WPlease use {Cmain {Wor {Cequipment listings {Wfor more options.
+ 
+{c--------------------------------------------------------------------------------{x
+~
+E
+kidnapping~
+{c--------------------------------------------------------------------------------
+ 
+{WThank you for selecting Kidnapping.  Current case listings include 
+the following:
+ 
+{C K5779C
+ 
+{WPlease use {Cmain {Wor {Ccase files {Wfor more options.
+ 
+{c--------------------------------------------------------------------------------{x
+~
+E
+k5779c~
+{c--------------------------------------------------------------------------------
+ 
+{W Case File: K5779C
+ 
+Incident: A missing persons was filed on [Oct.-12-1992] for a Donna
+Eldridge, 20, who at the time lived with her parents/legal guardians
+John and Michelle Eldridge.  She was last seen at a local night club,
+"Arc Lamp" with her sister Lisa, 17.  Lisa's stated that an older guy
+calling himself Greg had actually wanted the two to go back to his room
+for a party as the club itself was closing.  Donna left with Greg while
+Lisa left for her parent's house.  This was the last time anyone saw
+Donna alive.  Lisa described Greg as appearing around six foot, bleached
+hair and a lightly muscled build.  Strong identifiable features were his
+dimpled chin, and bushy eyebrows.  Donna is described as being an
+overall "tomboy" and never dressing up more than she has to and
+frequenting the gym more than she studied for classes.  Oddly enough she
+was one of the few people in her family with naturally silver hair and
+very dark gray-like eyes.
+ 
+Follow-up: [Oct-20-1992]:  After questioning all of the local hotels and
+apartments within the Bal Harbor area no clues came up as no one had
+seen the artist conception of Lisa's description of Greg or Donna.  Greg
+is currently wanted for questioning only.
+ 
+[Jan-5-1993]:  Bal Harbor reported the arrival of a "John Doe " corpse
+on [Oct-14-1992] and up until now were unable to identify the body.  The
+police autopsy shows our "John Doe" was murdered very swiftly from
+elongated claw like wounds all across his back made during or shortly
+after intercourse.  Hair follicles that didn't match our "John Doe" were
+found in dried blood samples on his back were sent to a crime lab in
+D.C. for analysis, and came back matching a birth DNA sample from Donna
+Eldridge. The DNA from a dried blood sample from John Doe was tampered
+with during shipping and has been resubmitted for reanalysis.
+ 
+[Jan-5-1993]:  Due to an odd turn in events both Greg and Donna are now
+wanted for questioning.  Missing persons case K5779C amended by new case
+file: M99811ZA opened for the murder of John Doe.
+ 
+[Feb-12-1993]: DNA for "John Doe" returns with no matches, this officer
+believes our "John Doe" is really the aforementioned Greg.
+ 
+Officer: Hayes, Jennifer - Missing Persons Department
+ 
+cc: FBI case files
+ 
+{WPlease use {Cmain {Wor {Ccase files {Wfor more options.
+ 
+{c--------------------------------------------------------------------------------{x
+~
+E
+assault~
+{c--------------------------------------------------------------------------------{x
+ 
+{WThank you for selecting Assault.  Current case listings include
+the following:{x
+ 
+{CA63952{x
+ 
+{WPlease use {Cmain {Wor {Ccase files {Wfor more options.{x
+ 
+{c--------------------------------------------------------------------------------{x
+~
+E
+inquisition~
+{c--------------------------------------------------------------------------------
+ 
+{WThank you for selecting Inquisition. Current case listings include the 
+following:
+ 
+{YError 117!  Current listing not available!
+ 
+Use {Cmain {Yor {Ccase files {Yto continue. 
+ 
+{c--------------------------------------------------------------------------------{x
+~
+E
+murder~
+{c--------------------------------------------------------------------------------
+ 
+{WThank you for selecting Murder. Current case listings include the 
+following:
+ 
+{CM99811ZA
+ 
+{WUse {Cmain {Wor {Ccase files {Wto continue. 
+ 
+{c--------------------------------------------------------------------------------{x
+~
+E
+m99811za~
+{c--------------------------------------------------------------------------------
+ 
+{WCase File: M99811ZA
+ 
+File to amend {CK5779C{W.
+ 
+Original Incident: A missing persons was filed on [Oct.-12-1992] for a Donna
+Eldridge, 20, who at the time lived with her parents/legal guardians
+John and Michelle Eldridge.  She was last seen at a local night club,
+"Arc Lamp" with her sister Lisa, 17.  Lisa's stated that an older guy
+calling himself Greg had actually wanted the two to go back to his room
+for a party as the club itself was closing.  Donna left with Greg while
+Lisa left for her parent's house.  This was the last time anyone saw
+Donna alive.  Lisa described Greg as appearing around six foot, bleached
+hair and a lightly muscled build.  Strong identifiable features were his
+dimpled chin, and bushy eyebrows.  Donna is described as being an
+overall "tomboy" and never dressing up more than she has to and
+frequenting the gym more than she studied for classes.  Oddly enough she
+was one of the few people in her family with naturally silver hair and
+very dark gray-like eyes.
+ 
+Followup:  [Feb-12-1993]: Case file M99811ZA amends K5779C.
+ 
+[Feb-25-1993]: DNA from dried blood pulled from a shootout at a local residence 
+links Donna to the scene of the crime.
+ 
+Officer: Smith, Frederick - Murder Department
+ 
+cc: FBI case files
+ 
+{WUse {Cmain {Wor {Ccase files {Wfor more options. 
+ 
+{c--------------------------------------------------------------------------------{x
+~
+D1
+~
+~
+AB 0 12566
+S
+#12568
+The Specimen Room~
+Small medium and large cages line the northern wall while huge glass vats
+line the eastern wall with all the electrical components for the vats
+crouched over by the southern wall.  Dried blood and animal hair can be seen
+on the floor here and there.  A laboratory to the east is the only exit from
+here.  
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 12569
+S
+#12569
+The Laboratory~
+The laboratory is kept under very strict cleanliness policies as per the
+council members decree.  All sorts of very expensive looking electrical and
+chemical equipment fill the tabletops in the room.  Lab gowns and facemasks
+are kept in small sealed baggies and are encouraged to be worn before using
+any laboratory equipment.  A specimen room can be seen to the west while the
+exit is to the east.  
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+AB 0 12570
+D3
+~
+~
+0 0 12568
+S
+#12570
+A Dimly Lit Hallway~
+A dimly lit hallway made to look larger than it really is by use of
+creative architecture expands to the north and south.  A door to the west
+from here has a sign that says Lab on it.  Old oil {Cpainting{gs hang on the
+wall, each with specially engraved markings along the highly polished wooden
+frames.  At the bottom of each painting is a golden plate with the title of
+the painting on it.  {x 
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+E
+painting~
+The face of a man is shown in close range and tilted to the side on a
+metal table or something similar, the skin and muscles around the mouth
+have been cleanly cut off to reveal a full set of teeth as well as the
+upper and lower jaw.  A large incisor tooth can be seen protruding from
+the upper jaw with a ruler placed next to it showing that it's a little
+longer than a normal human tooth.
+ 
+[Autopsy Table]
+~
+D0
+~
+~
+0 0 12571
+D2
+~
+~
+0 0 12565
+D3
+~
+~
+AB 0 12569
+S
+#12571
+A Dimly Lit Hallway~
+The echoes from the sounds of one's shoes and clothing echo off of this
+seemingly dead silent hallway.  The seemingly large hallway travels south
+into the darkness.  More old {Cpainting{gs with intricately designed wooden
+frames hang all along the walls here.  Each painting seems different from
+the last but seem to be centrally themed somehow.  {x 
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+E
+painting~
+Caught forever in her most delicate moment, a female wolf gives birth to
+her cubs next to a wooden pew on a hard wood floor.  Seven cubs, from
+the looks of it, portrayed in their first moments of life with their fur
+all matted down.
+ 
+[Wolf Cubs]
+~
+D2
+~
+~
+0 0 12570
+D3
+~
+~
+AB 0 12572
+S
+#12572
+The Armory~
+The bright white halogen lights and the faint smell of gunpowder are the
+first things to hit the senses.  Being an armory the almost tangible smell
+of gun oil hangs like a fog in the air, a smell so strong that it can almost
+be tasted.  Gun racks of different sizes and shapes line the walls of this
+room and various drawers hide even more weapons of destruction.  A shooting
+range can be seen to the west while the exit lies to the east.  
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+AB 0 12571
+D3
+~
+~
+0 0 12573
+S
+#12573
+The Practice Range~
+White lights shine down from the ceiling in this room and the smell of
+spent gunpowder overtakes the smell of gun oil as if in an unseen war, much
+like the one project twilight stands for.  This room is kept spotless as all
+the guns used here are given brass catchers and dust is nowhere present. 
+Several shooting booths stand here allowing hunters to practice their skills
+on dummies rather than the real thing.  
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 12572
+S
+#12574
+United States Postal Office #12574~
+This old brick building, which was made during this city's original
+settling, boasts very few amenities found in the buildings of today which
+all have indoor plumbing, and central heat and air.  This single room
+building does boast a nice window front which allows the outdoor air to
+circulate through the building although lately a pair of window air
+conditioning units have made their home there.  Stacks of mail line up
+behind small wooden counter and inside various mail carts waiting to be
+sorted and delivered.  
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+AB 0 10414
+S
+#12575
+Western Entrance of the City Park~
+The cheap urban tract of the western suburbs provide the backdrop for
+this park entrance.  Though it is smaller than the large plaza at the
+eastern entrance, it is even more run down.  Bright wildstyle street art has
+been sprayed over every possible flat surface, the ground included.  The
+equiment of the childrens playground that sits at one side of the plaza is
+either broken or so rusty that it is completely unusable by anyone and
+judging by the used syringes that are scattered all over the ground it is a
+junkies paradise as well.  In the centre of the plaza there is a wide,
+shallow pool that is almost completed choked by leaves and other debris.  At
+some time in the past, the southern edge of the plaza was set up with stools
+and tables for playing chess, now all that is left is their charred remains.
+~
+0 0 0
+E
+XNUMB1~
+Western Entrance of the City Park~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 10015
+D3
+~
+~
+0 0 10016
+S
+#12576
+Lincoln Ave~
+Busy Lincoln Ave roars with the traffic flying past.  The street itself
+is relatively well-kept, but less can be said for the fairly industrial area
+bordering it.  Many of the buildings are monoliths of the previous economic
+high times when jobs were plentiful and life was good for most sectors of
+the community.  The area has long since fallen into some serious disrepair. 
+~
+0 0 0
+E
+XNUMB1~
+Licoln Avenue~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 10053
+D3
+~
+~
+0 0 10052
+S
+#12577
+Coleman Street~
+Cafe's spill out onto the sidewalk, on this part of Coleman Street, and
+there are clean, new windows displaying the boutiques wares yet boarded up
+shops are still more numerous than the newly renovated ones.  About midway
+along the street the bitumen gives way to brick red and slate colored
+cobblestones that lead up to the shiny new shopping mall and its large
+parking lot.  
+~
+0 0 0
+E
+XNUMB1~
+Coleman Street~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 10049
+D3
+~
+~
+0 0 10070
+S
+#12578
+Along Second Avenue~
+A thick line of trees just off the side of the road block the view to the
+east and west down this part of Second Avenue.  The pavement all along this
+part of the street seem to be patched here and there and makes for an
+uncomfortable drive.  A large hotel can be seen to the south while a small
+intersection can be seen to the north.  
+~
+0 0 0
+E
+XNUMB1~
+Along Second Avenue~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 10032
+D2
+~
+~
+0 0 8054
+S
+#0
+
+
+
+#RESETS
+D 0 12506 2 3
+D 0 12507 3 3
+D 0 12510 1 3
+D 0 12510 3 3
+D 0 12514 0 3
+D 0 12514 2 3
+D 0 12515 2 3
+D 0 12528 3 3
+D 0 12535 1 3
+D 0 12538 0 3
+D 0 12538 2 3
+D 0 12539 2 3
+D 0 12543 2 3
+D 0 12545 0 3
+D 0 12547 0 3
+D 0 12550 1 3
+D 0 12551 0 3
+D 0 12556 0 3
+D 0 12556 3 39
+D 0 12557 1 39
+D 0 12558 2 3
+D 0 12559 0 3
+D 0 12559 1 3
+D 0 12560 3 3
+D 0 12562 1 131591
+D 0 12563 3 131591
+D 0 12565 3 3
+D 0 12566 1 3
+D 0 12566 3 3
+D 0 12567 1 3
+D 0 12569 1 3
+D 0 12570 3 3
+D 0 12571 3 3
+D 0 12572 1 3
+D 0 12574 0 3
+M 1 12506 1 12501 1
+E 0 8047 0 16
+M 1 12506 1 12505 5
+E 0 8047 0 16
+M 1 8007 1 12511 1
+G 0 5502 0
+G 0 8039 0
+G 0 8040 0
+G 0 8041 0
+O 0 12529 0 12513
+O 0 8005 0 12515
+M 1 12507 1 12529 12
+M 1 12507 1 12531 12
+M 1 12507 1 12532 12
+M 1 12507 1 12533 12
+M 1 12507 1 12534 12
+M 1 12507 1 12540 12
+M 1 12507 1 12541 12
+M 1 12507 1 12544 12
+M 1 12507 1 12546 12
+M 1 12507 1 12552 12
+M 1 12507 1 12554 12
+M 1 12507 1 12555 12
+M 1 12506 1 12556 5
+E 0 8047 0 16
+M 1 12506 1 12558 5
+E 0 8047 0 16
+M 1 12506 1 12561 5
+E 0 8047 0 16
+M 1 12501 1 12562 1
+G 0 12502 0
+M 1 12502 1 12563 1
+G 0 12502 0
+O 0 12517 0 12566
+O 0 12512 0 12568
+P 0 12510 3 12512 3
+P 0 12511 3 12512 3
+P 0 12513 3 12512 3
+P 0 12514 3 12512 3
+P 0 12515 3 12512 3
+P 0 12516 3 12512 3
+P 0 12518 3 12512 3
+P 0 12519 3 12512 3
+M 1 12505 1 12569 1
+O 0 12508 0 12572
+P 0 12507 3 12508 3
+P 0 12506 3 12508 3
+P 0 12505 3 12508 3
+O 0 12509 0 12573
+P 0 12504 8 12509 8
+P 0 12503 8 12509 8
+P 0 12501 8 12509 8
+M 1 12508 1 12573 1
+M 1 12503 1 12573 1
+M 1 12509 1 12573 1
+M 1 12510 1 12573 1
+M 1 12504 1 12573 1
+M 1 12511 1 12573 1
+M 1 12512 1 12574 1
+G 0 12524 0
+G 0 12525 0
+G 0 12526 0
+S
+
+
+
+#SHOPS
+12512 15 13 0 0 0 100 0 0 24 0
+0
+
+
+
+#MOBPROGS
+#0
+
+#$

@@ -1,0 +1,6740 @@
+#AREADATA
+Name China Town~
+Builders Julie~
+VNUMs 8501 8779
+Credits Julie~
+Security 1
+Flags G
+Price 1
+End
+
+
+
+#MOBILES
+#0
+
+
+
+#OBJECTS
+#8501
+Chinatown gate~
+the Chinatown Gate~
+A two-story high gateway reminiscent of a pagoda.  Five roof-like
+structures, made of green tiles with upward turning corners, sit atop the
+gate in a triangular formation, the topmost wider than the rest.  Below it,
+between the middle two roofs, is a large sign written in Traditional Chinese
+ideograms.  The arrangement is heavily decorated in ancient Chinese designs
+and is supported by two large red pillars.  
+~
+A two-story high gateway reminiscent of a pagoda.  Five roof-like
+structures, made of green tiles with upward turning corners, sit atop the
+gate in a triangular formation, the topmost wider than the rest.  Below it,
+between the middle two roofs, is a large sign written in Traditional Chinese
+ideograms.  The arrangement is heavily decorated in ancient Chinese designs
+and is supported by two large red pillars.  
+~
+concrete~
+12 0 0
+20 0 ADGJ 0 0 0
+0 0 100
+E
+--USES~
+-2~
+Q 10
+#0
+
+
+
+#ROOMS
+#8501
+King's Promenade and Yao Lam Avenue~
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8502
+D1
+~
+~
+0 0 8504
+D2
+~
+~
+0 0 8622
+D3
+~
+~
+0 0 8741
+S
+#8502
+N Yao Lam Avenue~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8503
+D2
+~
+~
+0 0 8501
+S
+#8503
+N Yao Lam Avenue~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8506
+D2
+~
+~
+0 0 8502
+S
+#8504
+King's Promenade~
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 13000
+D1
+~
+~
+0 0 8547
+D2
+~
+~
+0 0 13001
+D3
+~
+~
+0 0 8501
+S
+#8505
+Xiang Avenue~
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8539
+D2
+~
+~
+0 0 8660
+S
+#8506
+N Yao Lam Avenue~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8507
+D2
+~
+~
+0 0 8503
+S
+#8507
+N Yao Lam Avenue~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8508
+D2
+~
+~
+0 0 8506
+S
+#8508
+Garden Lane and N Yao Lam Avenue~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8510
+D1
+~
+~
+0 0 8509
+D2
+~
+~
+0 0 8507
+S
+#8509
+Garden Lane~
+Garden Lane runs west until it meets N Yao Lam Avenue and stretches east
+across the northern half of Chinatown.  The upper-class condominuins lie
+north while the houses that shelter Chinatown's middle class lie south,
+surrounded by their lush yards and decorative wooden fences.  A red brick
+sidwalk runs along Garden Lane's southside.  
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8520
+D3
+~
+~
+0 0 8508
+S
+#8510
+N Yao Lam Avenue~
+N Yao Lam Avenue runs it's north-south course up the hillside, between
+the condominuims of Chinatown's more successful denizens to the east, and
+the eight-foot, roof-shingled wall running parallel along the avenue on the
+west.  The wall marks the border between Chinatown and downtown Bal Harbour.
+The tops of some of the taller downtown buildimgs can be seen past it.  
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8511
+D2
+~
+~
+0 0 8508
+S
+#8511
+N Yao Lam Avenue~
+N Yao Lam Avenue runs it's north-south course up the hillside, between
+the condominuims of Chinatown's more successful denizens to the east, and
+the eight-foot, roof-shingled wall running parallel along the avenue on the
+west.  The wall marks the border between Chinatown and downtown Bal Harbour.
+The tops of some of the taller downtown buildimgs can be seen past it.  
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8512
+D2
+~
+~
+0 0 8510
+S
+#8512
+N Yao Lam Avenue~
+N Yao Lam Avenue runs it's north-south course up the hillside, between
+the condominuims of Chinatown's more successful denizens to the east, and
+the eight-foot, roof-shingled wall running parallel along the avenue on the
+west.  The wall marks the border between Chinatown and downtown Bal Harbour.
+The tops of some of the taller downtown buildimgs can be seen past it.  
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8513
+D2
+~
+~
+0 0 8511
+S
+#8513
+N Yao Lam Avenue~
+N Yao Lam Avenue runs it's north-south course up the hillside, between
+the condominuims of Chinatown's more successful denizens to the east, and
+the eight-foot, roof-shingled wall running parallel along the avenue on the
+west.  The wall marks the border between Chinatown and downtown Bal Harbour.
+The tops of some of the taller downtown buildimgs can be seen past it.  
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8514
+D2
+~
+~
+0 0 8512
+S
+#8514
+River Road and N Yao Lam Avenue~
+Here, North Yao Lam Avenue turns into River Road.  An eight foor high
+concrete wall with rust colored shingles separates Chinatown from the
+suburbs to the north and the downtown area west.  The condominiums of
+Chinatopwn's upper-class lie to the southeast.  Yoa Lam runs south from
+here, while River Road leads east, flanked on either side by tallow trees. 
+Down the hillside, south, the western entry to Chinatown can just barely be
+made out where Yao Lam crosses King's Promenade at the base of the hill.  
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8515
+D2
+~
+~
+0 0 8513
+S
+#8515
+River Road~
+Tallow trees flank River Road as it runs it's east-west course.  To the
+north, an eight foor high concrete wall with rust colored shingles separates
+Chinatown from the suburbs.  To the south are condominiums domiciling the
+more well-to-do among Chinatown's residents.  From up here, the hillside's
+southwards slope allows for a full view of Chinatown, broken only by the
+condos and the nearest trees.  Even the surrounding Bal Harbour districts
+can be seen, though they're too far away to make out.  
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8516
+D3
+~
+~
+0 0 8514
+S
+#8516
+River Road~
+Tallow trees flank River Road as it runs it's east-west course.  To the
+north, an eight foor high concrete wall with rust colored shingles separates
+Chinatown from the suburbs.  To the south are condominiums domiciling the
+more well-to-do among Chinatown's residents.  From up here, the hillside's
+southwards slope allows for a full view of Chinatown, broken only by the
+condos and the nearest trees.  Even the surrounding Bal Harbour districts
+can be seen, though they're too far away to make out.  
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8517
+D3
+~
+~
+0 0 8515
+S
+#8517
+River Road~
+Tallow trees flank River Road as it runs it's east-west course.  To the
+north, an eight foor high concrete wall with rust colored shingles separates
+Chinatown from the suburbs.  To the south are condominiums domiciling the
+more well-to-do among Chinatown's residents.  From up here, the hillside's
+southwards slope allows for a full view of Chinatown, broken only by the
+condos and the nearest trees.  Even the surrounding Bal Harbour districts
+can be seen, though they're too far away to make out.  
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8518
+D3
+~
+~
+0 0 8516
+S
+#8518
+River Road~
+Tallow trees flank River Road as it runs it's east-west course.  To the
+north, an eight foor high concrete wall with rust colored shingles separates
+Chinatown from the suburbs.  To the south are condominiums domiciling the
+more well-to-do among Chinatown's residents.  From up here, the hillside's
+southwards slope allows for a full view of Chinatown, broken only by the
+condos and the nearest trees.  Even the surrounding Bal Harbour districts
+can be seen, though they're too far away to make out.  
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8519
+D3
+~
+~
+0 0 8517
+S
+#8519
+River Road and Eu Sen Avenue~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8525
+D2
+~
+~
+0 0 8526
+D3
+~
+~
+0 0 8518
+S
+#8520
+Garden Lane~
+Garden Lane runs west until it meets N Yao Lam Avenue and stretches east
+across the northern half of Chinatown.  The upper-class condominuins lie
+north while the houses that shelter Chinatown's middle class lie south,
+surrounded by their lush yards and decorative wooden fences.  A red brick
+sidwalk runs along Garden Lane's southside.  
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8521
+D3
+~
+~
+0 0 8509
+S
+#8521
+Garden Lane~
+Garden Lane runs west until it meets N Yao Lam Avenue and stretches east
+across the northern half of Chinatown.  The upper-class condominuins lie
+north while the houses that shelter Chinatown's middle class lie south,
+surrounded by their lush yards and decorative wooden fences.  A red brick
+sidwalk runs along Garden Lane's southside.  
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8522
+D3
+~
+~
+0 0 8520
+S
+#8522
+Garden Lane~
+Garden Lane runs west until it meets N Yao Lam Avenue and stretches east
+across the northern half of Chinatown.  The upper-class condominuins lie
+north while the houses that shelter Chinatown's middle class lie south,
+surrounded by their lush yards and decorative wooden fences.  A red brick
+sidwalk runs along Garden Lane's southside.  
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8523
+D3
+~
+~
+0 0 8521
+S
+#8523
+Garden Lane~
+Garden Lane runs west until it meets N Yao Lam Avenue and stretches east
+across the northern half of Chinatown.  The upper-class condominuins lie to
+the north.  On the south side of Garden lane runs a six foot high hedge,
+beyond which you can see the earth-tone shingled rooftop of the Falling Swan
+restaraunt, a reservation-only establishment where the appitizers along cost
+more than the average joe makes in a month.  A red brick sidwalk runs along
+Garden Lane's southside.  The interesection of Garden and Eu Sen lies just
+east.  
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8524
+D3
+~
+~
+0 0 8522
+S
+#8524
+Garden Lane and Eu Sen Avenue~
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8530
+D1
+~
+~
+0 0 8531
+D2
+~
+~
+0 0 8532
+D3
+~
+~
+0 0 8523
+S
+#8525
+River Road~
+Tallow trees flank River Road as it runs it's east-west course.  To the
+north, an eight foor high concrete wall with rust colored shingles separates
+Chinatown from the suburbs.  Manor houses symbolizing the wealth of
+Chinatown's upper-crust can be seen if one looks south.  Tall, decorative
+iron fences enclose the manor properties.  The hillside's southwards slope
+allows for a full view of Chinatown, when not interupted by the trees and
+the taller houses.  Even the surrounding Bal Harbour districts can be seen,
+though they're too far away to make out.  
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8541
+D3
+~
+~
+0 0 8519
+S
+#8526
+Eu Sen Avenue~
+On the west lie the condominiums of Chinatown's upper class.  On the east
+side of the street, the tall, decorative iron-fences surrounding the manor
+houses of Chinatown's elite.  Eu Sen Avenue continues north up the hillside
+and south down to central Chinatown.  
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8519
+D2
+~
+~
+0 0 8527
+S
+#8527
+Eu Sen Avenue~
+On the west lie the condominiums of Chinatown's upper class.  On the east
+side of the street, the tall, decorative iron-fences surrounding the manor
+houses of Chinatown's elite.  Eu Sen Avenue continues north up the hillside
+and south down to central Chinatown.  
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8526
+D2
+~
+~
+0 0 8528
+S
+#8528
+Eu Sen Avenue~
+On the west lie the condominiums of Chinatown's upper class.  On the east
+side of the street, the tall, decorative iron-fences surrounding the manor
+houses of Chinatown's elite.  Eu Sen Avenue continues north up the hillside
+and south down to central Chinatown.  
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8527
+D2
+~
+~
+0 0 8529
+S
+#8529
+Eu Sen Avenue~
+On the west lie the condominiums of Chinatown's upper class.  On the east
+side of the street, the tall, decorative iron-fences surrounding the manor
+houses of Chinatown's elite.  Eu Sen Avenue continues north up the hillside
+and south down to central Chinatown.  
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8528
+D2
+~
+~
+0 0 8530
+S
+#8530
+Eu Sen Avenue~
+On the west lie the condominiums of Chinatown's upper class.  On the east
+side of the street, the tall, decorative iron-fences surrounding the manor
+houses of Chinatown's elite.  Eu Sen Avenue continues north up the hillside
+and south down to central Chinatown.  
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8529
+D2
+~
+~
+0 0 8524
+S
+#8531
+Garden Lane~
+Running along Garden Lane's north side is an iron fence, tall and
+decorative, behind which Chinatown's elite reside in their oppulent manor
+houses.  
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8533
+D3
+~
+~
+0 0 8524
+S
+#8532
+Eu Sen Avenue~
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8524
+D2
+~
+~
+0 0 8634
+S
+#8533
+Garden Lane~
+Running along Garden Lane's north side is an iron fence, tall and
+decorative, behind which Chinatown's elite reside in their oppulent manor
+houses.  
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8534
+D3
+~
+~
+0 0 8531
+S
+#8534
+Garden Lane~
+Running along Garden Lane's north side is an iron fence, tall and
+decorative, behind which Chinatown's elite reside in their oppulent manor
+houses.  
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8536
+D3
+~
+~
+0 0 8533
+S
+#8535
+Alleyway~
+~
+0 0 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8537
+S
+#8536
+Garden Lane and Xiang Avenue~
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8653
+D1
+~
+~
+0 0 8540
+D2
+~
+~
+0 0 8539
+D3
+~
+~
+0 0 8534
+S
+#8537
+Bend in the alleyway~
+~
+0 0 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D2
+~
+~
+0 0 8535
+D3
+~
+~
+0 0 8538
+S
+#8538
+behind the menotknowyet~
+~
+0 0 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8537
+S
+#8539
+Xiang Avenue~
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8536
+D2
+~
+~
+0 0 8505
+S
+#8540
+Garden Lane~
+Running along Garden Lane's north side is an iron fence, tall and
+decorative, behind which Chinatown's elite reside in their oppulent manor
+houses.  
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8571
+D3
+~
+~
+0 0 8536
+S
+#8541
+River Road~
+Tallow trees flank River Road as it runs it's east-west course.  To the
+north, an eight foor high concrete wall with rust colored shingles separates
+Chinatown from the suburbs.  Manor houses symbolizing the wealth of
+Chinatown's upper-crust can be seen if one looks south.  Tall, decorative
+iron fences enclose the manor properties.  The hillside's southwards slope
+allows for a full view of Chinatown, when not interupted by the trees and
+the taller houses.  Even the surrounding Bal Harbour districts can be seen,
+though they're too far away to make out.  
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8543
+D3
+~
+~
+0 0 8525
+S
+#8542
+Xiang Avenue~
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8655
+D2
+~
+~
+0 0 8657
+S
+#8543
+River Road~
+Tallow trees flank River Road as it runs it's east-west course.  To the
+north, an eight foor high concrete wall with rust colored shingles separates
+Chinatown from the suburbs.  Manor houses symbolizing the wealth of
+Chinatown's upper-crust can be seen if one looks south.  Tall, decorative
+iron fences enclose the manor properties.  The hillside's southwards slope
+allows for a full view of Chinatown, when not interupted by the trees and
+the taller houses.  Even the surrounding Bal Harbour districts can be seen,
+though they're too far away to make out.  
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8544
+D3
+~
+~
+0 0 8541
+S
+#8544
+River Road and Xiang Avenue~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8586
+D2
+~
+~
+0 0 8545
+D3
+~
+~
+0 0 8543
+S
+#8545
+Xiang Avenue~
+The manor houses of Chinatown's wealthiest residents can be found on
+either side of the street, surrounded by iron fences, tall and decorative. 
+The manor yards and gardens, as decorative as they are well kept, can be
+seen through the bars which keep the common folk at bay.  Xiang Aveneue
+continues north up the hillside and south down to central Chinatown.  
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8544
+D2
+~
+~
+0 0 8650
+S
+#8546
+Market Street~
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8583
+D3
+~
+~
+0 0 8675
+S
+#8547
+King's Promenade~
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 13002
+D1
+~
+~
+0 0 8548
+D2
+~
+~
+0 0 13003
+D3
+~
+~
+0 0 8504
+S
+#8548
+King's Promenade~
+~
+0 0 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 13004
+D1
+~
+~
+0 0 8549
+D2
+~
+~
+0 0 13005
+D3
+~
+~
+0 0 8547
+S
+#8549
+King's Promenade~
+~
+0 0 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 13006
+D1
+~
+~
+0 0 8550
+D2
+~
+~
+0 0 13007
+D3
+~
+~
+0 0 8548
+S
+#8550
+King's Promenade~
+~
+0 0 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 13008
+D1
+~
+~
+0 0 8551
+D2
+~
+~
+0 0 13009
+D3
+~
+~
+0 0 8549
+S
+#8551
+King's Promenade and Eu Sen Ave~
+~
+0 0 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8637
+D1
+~
+~
+0 0 8552
+D2
+~
+~
+0 0 8638
+D3
+~
+~
+0 0 8550
+S
+#8552
+King's Promenade~
+~
+0 0 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 13010
+D1
+~
+~
+0 0 8553
+D2
+~
+~
+0 0 13011
+D3
+~
+~
+0 0 8551
+S
+#8553
+King's Promenade~
+~
+0 0 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 13012
+D1
+~
+~
+0 0 8554
+D2
+~
+~
+0 0 13013
+D3
+~
+~
+0 0 8552
+S
+#8554
+King's Promenade~
+~
+0 0 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 13014
+D1
+~
+~
+0 0 8555
+D2
+~
+~
+0 0 13015
+D3
+~
+~
+0 0 8553
+S
+#8555
+King's Promenade and Xiang Avenue~
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8695
+D1
+~
+~
+0 0 8556
+D2
+~
+~
+0 0 8654
+D3
+~
+~
+0 0 8554
+S
+#8556
+King's Promenade~
+{MSouth- Jazz Club (Bomani's Area){x {MNorth- Hotel (mine){x 
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8557
+D3
+~
+~
+0 0 8555
+S
+#8557
+King's Promenade~
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 13018
+D1
+~
+~
+0 0 8558
+D2
+~
+~
+0 0 13017
+D3
+~
+~
+0 0 8556
+S
+#8558
+King's Promenade~
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 13020
+D1
+~
+~
+0 0 8559
+D2
+~
+~
+0 0 13019
+D3
+~
+~
+0 0 8557
+S
+#8559
+King's Promenade and Chow Dam Lane~
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8669
+D1
+~
+~
+0 0 8560
+D2
+~
+~
+0 0 8670
+D3
+~
+~
+0 0 8558
+S
+#8560
+King's Promenade~
+{MNorth- massage parlor by me{x 
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8561
+D2
+~
+~
+0 0 13021
+D3
+~
+~
+0 0 8559
+S
+#8561
+King's Promenade~
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8562
+D2
+~
+~
+0 0 13023
+D3
+~
+~
+0 0 8560
+S
+#8562
+King's Promenade~
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 13024
+D1
+~
+~
+0 0 8563
+D2
+~
+~
+0 0 13025
+D3
+~
+~
+0 0 8561
+S
+#8563
+King's Promenade~
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 13022
+D1
+~
+~
+0 0 8564
+D2
+~
+~
+0 0 13027
+D3
+~
+~
+0 0 8562
+S
+#8564
+King's Promenade~
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8565
+D2
+~
+~
+0 0 13029
+D3
+~
+~
+0 0 8563
+S
+#8565
+King's Promenade and Han Lung Way~
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8676
+D1
+~
+~
+0 0 8566
+D3
+~
+~
+0 0 8564
+S
+#8566
+King's Promenade~
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8567
+D3
+~
+~
+0 0 8565
+S
+#8567
+King's Promenade~
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8568
+D3
+~
+~
+0 0 8566
+S
+#8568
+King's Promenade~
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8569
+D3
+~
+~
+0 0 8567
+S
+#8569
+King's Promenade and Qin Shi Huang Heights~
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8742
+D2
+~
+~
+0 0 8610
+D3
+~
+~
+0 0 8568
+S
+#8570
+Qin Shi Huang Heights~
+~
+0 4 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+S
+#8571
+Garden Lane~
+Running along Garden Lane's north side is an iron fence, tall and
+decorative, behind which Chinatown's elite reside in their oppulent manor
+houses.  
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8572
+D3
+~
+~
+0 0 8540
+S
+#8572
+Garden Lane~
+Running along Garden Lane's north side is an iron fence, tall and
+decorative, behind which Chinatown's elite reside in their oppulent manor
+houses.  
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8573
+D3
+~
+~
+0 0 8571
+S
+#8573
+Garden Lane and Chow Dam Lane~
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8664
+D1
+~
+~
+0 0 8574
+D2
+~
+~
+0 0 8665
+D3
+~
+~
+0 0 8572
+S
+#8574
+Garden Lane~
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8575
+D3
+~
+~
+0 0 8573
+S
+#8575
+Garden Lane~
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8576
+D3
+~
+~
+0 0 8574
+S
+#8576
+Garden Lane~
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8577
+D3
+~
+~
+0 0 8575
+S
+#8577
+Garden Lane~
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8578
+D3
+~
+~
+0 0 8576
+S
+#8578
+Garden Lane and Han Lung Way~
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8685
+D1
+~
+~
+0 0 8579
+D2
+~
+~
+0 0 8680
+D3
+~
+~
+0 0 8577
+S
+#8579
+Garden Lane~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8580
+D3
+~
+~
+0 0 8578
+S
+#8580
+Garden Lane~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8581
+D3
+~
+~
+0 0 8579
+S
+#8581
+Garden Lane~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8582
+D3
+~
+~
+0 0 8580
+S
+#8582
+Garden Lane and Qin Shi Huang Heights~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8604
+D2
+~
+~
+0 0 8605
+D3
+~
+~
+0 0 8581
+S
+#8583
+Market Street~
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8584
+D3
+~
+~
+0 0 8546
+S
+#8584
+Market Street~
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8585
+D3
+~
+~
+0 0 8583
+S
+#8585
+Market Street and Ching Zun Alley~
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8703
+D2
+~
+~
+0 0 8722
+D3
+~
+~
+0 0 8584
+S
+#8586
+River Road~
+Tallow trees flank River Road as it runs it's east-west course.  To the
+north, an eight foor high concrete wall with rust colored shingles separates
+Chinatown from the suburbs.  Manor houses symbolizing the wealth of
+Chinatown's upper-crust can be seen if one looks south.  Tall, decorative
+iron fences enclose the manor properties.  The hillside's southwards slope
+allows for a full view of Chinatown, when not interupted by the trees and
+the taller houses.  Even the surrounding Bal Harbour districts can be seen,
+though they're too far away to make out.  
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8587
+D3
+~
+~
+0 0 8544
+S
+#8587
+River Road~
+Tallow trees flank River Road as it runs it's east-west course.  The
+avenue leads to Bal Harbour suburbs through a break in the wall.  Just past
+the wall, one can see the red-pillared arch marking the northern entry into
+Chinatown.  Manor houses symbolizing the wealth of Chinatown's upper-crust
+can be seen if one looks south.  Tall, decorative iron fences enclose the
+manor properties.  The hillside's southwards slope allows for a full view of
+Chinatown, when not interupted by the trees and the taller houses.  Even the
+surrounding Bal Harbour districts can be seen, though they're too far away
+to make out.  
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8744
+D1
+~
+~
+0 0 8588
+D3
+~
+~
+0 0 8586
+S
+#8588
+River Road~
+Tallow trees flank River Road as it runs it's east-west course.  To the
+north, an eight foor high concrete wall with rust colored shingles separates
+Chinatown from the suburbs.  Manor houses symbolizing the wealth of
+Chinatown's upper-crust can be seen if one looks south.  Tall, decorative
+iron fences enclose the manor properties.  The hillside's southwards slope
+allows for a full view of Chinatown, when not interupted by the trees and
+the taller houses.  Even the surrounding Bal Harbour districts can be seen,
+though they're too far away to make out.  
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8589
+D3
+~
+~
+0 0 8587
+S
+#8589
+River Road and Chow Dam Lane~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8590
+D2
+~
+~
+0 0 8656
+D3
+~
+~
+0 0 8588
+S
+#8590
+River Road~
+Tallow trees flank River Road as it runs it's east-west course.  To the
+north, an eight foor high concrete wall with rust colored shingles separates
+Chinatown from the suburbs.  To the south lies the property of Gou Xu
+Kuan-Yin, perhaps the wealthiest of Chinatown's elite.  A stone wall,
+decorated with dragons and ocean waves, encloses the Kuan-Yin estate.  Like
+it's northern counterpart, the south wall is also roof-tiled, as well as
+eight feet high, obstructing any southward view.  
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8591
+D3
+~
+~
+0 0 8589
+S
+#8591
+River Road~
+Tallow trees flank River Road as it runs it's east-west course.  To the
+north, an eight foor high concrete wall with rust colored shingles separates
+Chinatown from the suburbs.  To the south lies the property of Gou Xu
+Kuan-Yin, perhaps the wealthiest of Chinatown's elite.  A stone wall,
+decorated with dragons and ocean waves, encloses the Kuan-Yin estate.  Like
+it's northern counterpart, the south wall is also roof-tiled, as well as
+eight feet high, obstructing any southward view.  
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8592
+D3
+~
+~
+0 0 8590
+S
+#8592
+River Road~
+Tallow trees flank River Road as it runs it's east-west course.  To the
+north, an eight foor high concrete wall with rust colored shingles separates
+Chinatown from the suburbs.  A stone wall, decorated with dragons and ocean
+waves, encloses the Kuan-Yin estate.  To the south, the wall is broken by
+square pillars flanking the driveway to Gou Xu Kuan-Yin's manor house.  The
+tops of the pillars are joined by a roof-shingled arch, bearing golden
+ideograms of the Kyun-Yin family.  A large iron gate, displaying a pair of
+dragons eternally locked in a firebrathing duel, deter most whose plans
+require travel down the Kyun-Yin driveway.  
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8593
+D2
+~
+~
+ACJN 0 13151
+D3
+~
+~
+0 0 8591
+S
+#8593
+River Road~
+Tallow trees flank River Road as it runs it's east-west course.  To the
+north, an eight foor high concrete wall with rust colored shingles separates
+Chinatown from the suburbs.  To the south lies the property of Gou Xu
+Kuan-Yin, perhaps the wealthiest of Chinatown's elite.  A stone wall,
+decorated with dragons and ocean waves, encloses the Kuan-Yin estate.  Like
+it's northern counterpart, the south wall is also roof-tiled, as well as
+eight feet high, obstructing any southward view.  
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8594
+D3
+~
+~
+0 0 8592
+S
+#8594
+River Road~
+Tallow trees flank River Road as it runs it's east-west course.  To the
+north, an eight foor high concrete wall with rust colored shingles separates
+Chinatown from the suburbs.  To the south lies the property of Gou Xu
+Kuan-Yin, perhaps the wealthiest of Chinatown's elite.  A stone wall,
+decorated with dragons and ocean waves, encloses the Kuan-Yin estate.  Like
+it's northern counterpart, the south wall is also roof-tiled, as well as
+eight feet high, obstructing any southward view.  
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8595
+D3
+~
+~
+0 0 8593
+S
+#8595
+River Road and Han Lung Way~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8596
+D2
+~
+~
+0 0 8681
+D3
+~
+~
+0 0 8594
+S
+#8596
+River Road~
+Tallow trees flank River Road as it runs it's east-west course.  To the
+north, an eight foor high concrete wall with rust colored shingles separates
+Chinatown from the suburbs.  To the south are condominiums domiciling the
+more well-to-do among Chinatown's residents.  From up here, the hillside's
+southwards slope allows for a full view of Chinatown, broken only by the
+condos and the nearest trees.  Even the surrounding Bal Harbour districts
+can be seen, though they're too far away to make out, the exeption being
+some of the taller buildings in Bal Harbour's shoreline business district.  
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8597
+D3
+~
+~
+0 0 8595
+S
+#8597
+River Road~
+Tallow trees flank River Road as it runs it's east-west course.  To the
+north, an eight foor high concrete wall with rust colored shingles separates
+Chinatown from the suburbs.  To the south are condominiums domiciling the
+more well-to-do among Chinatown's residents.  From up here, the hillside's
+southwards slope allows for a full view of Chinatown, broken only by the
+condos and the nearest trees.  Even the surrounding Bal Harbour districts
+can be seen, though they're too far away to make out, the exeption being
+some of the taller buildings in Bal Harbour's shoreline business district.  
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8598
+D3
+~
+~
+0 0 8596
+S
+#8598
+River Road~
+Tallow trees flank River Road as it runs it's east-west course.  To the
+north, an eight foor high concrete wall with rust colored shingles separates
+Chinatown from the suburbs.  To the south are condominiums domiciling the
+more well-to-do among Chinatown's residents.  From up here, the hillside's
+southwards slope allows for a full view of Chinatown, broken only by the
+condos and the nearest trees.  Even the surrounding Bal Harbour districts
+can be seen, though they're too far away to make out, the exeption being
+some of the taller buildings in Bal Harbour's shoreline business district.  
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8599
+D3
+~
+~
+0 0 8597
+S
+#8599
+River Road and Qin Shi Huang Heights~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D2
+~
+~
+0 0 8600
+D3
+~
+~
+0 0 8598
+S
+#8600
+Qin Shi Huang Heights~
+On the west of Qin Shi Huang, a row of tallow trees mark the boundary of
+Chinatown's upper-class condominium properties.  On the east, a three-foot
+high white fence, displaying a latticework pattern of right angles, typical
+of old China architecture.  Behind it, the hillside, considerably steep on
+it's eastern side, begins the downward slope that serves as upper
+Chinatown's eastern border.  Further east lies the shoreside business
+district.  
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8599
+D2
+~
+~
+0 0 8601
+S
+#8601
+Qin Shi Huang Heights~
+On the west of Qin Shi Huang, a row of tallow trees mark the boundary of
+Chinatown's upper-class condominium properties.  On the east, a three-foot
+high white fence, displaying a latticework pattern of right angles, typical
+of old China architecture.  Behind it, the hillside, considerably steep on
+it's eastern side, begins the downward slope that serves as upper
+Chinatown's eastern border.  Further east lies the shoreside business
+district.  
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8600
+D2
+~
+~
+0 0 8602
+S
+#8602
+Qin Shi Huang Heights~
+On the west of Qin Shi Huang, a row of tallow trees mark the boundary of
+Chinatown's upper-class condominium properties.  On the east, a three-foot
+high white fence, displaying a latticework pattern of right angles, typical
+of old China architecture.  Behind it, the hillside, considerably steep on
+it's eastern side, begins the downward slope that serves as upper
+Chinatown's eastern border.  Further east lies the shoreside business
+district.  
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8601
+D2
+~
+~
+0 0 8603
+S
+#8603
+Qin Shi Huang Heights~
+On the west of Qin Shi Huang, a row of tallow trees mark the boundary of
+Chinatown's upper-class condominium properties.  On the east, a three-foot
+high white fence, displaying a latticework pattern of right angles, typical
+of old China architecture.  Behind it, the hillside, considerably steep on
+it's eastern side, begins the downward slope that serves as upper
+Chinatown's eastern border.  Further east lies the shoreside business
+district.  
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8602
+D2
+~
+~
+0 0 8604
+S
+#8604
+Qin Shi Huang Heights~
+On the west of Qin Shi Huang, a row of tallow trees mark the boundary of
+Chinatown's upper-class condominium properties.  On the east, a three-foot
+high white fence, displaying a latticework pattern of right angles, typical
+of old China architecture.  Behind it, the hillside, considerably steep on
+it's eastern side, begins the downward slope that serves as upper
+Chinatown's eastern border.  Further east lies the shoreside business
+district.  
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8603
+D2
+~
+~
+0 0 8582
+S
+#8605
+Qin Shi Huang Heights~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8582
+D2
+~
+~
+0 0 8606
+S
+#8606
+Qin Shi Huang Heights~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8605
+D2
+~
+~
+0 0 8607
+S
+#8607
+Qin Shi Huang Heights~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8606
+D2
+~
+~
+0 0 8608
+S
+#8608
+Qin Shi Huang Heights~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8607
+D2
+~
+~
+0 0 8609
+S
+#8609
+Qin Shi Huang Heights~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8608
+D2
+~
+~
+0 0 8569
+S
+#8610
+Qin Shi Huang Heights~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8569
+D2
+~
+~
+0 0 8611
+S
+#8611
+Qin Shi Huang Heights~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8610
+D2
+~
+~
+0 0 8612
+S
+#8612
+Qin Shi Huang Heights~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8611
+D2
+~
+~
+0 0 8613
+S
+#8613
+Qin Shi Huang Heights~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8612
+D2
+~
+~
+0 0 8614
+S
+#8614
+Qin Shi Huang Heights~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8613
+D2
+~
+~
+0 0 8615
+S
+#8615
+Market Street and Qin Shi Huang Heights~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8614
+D2
+~
+~
+0 0 8616
+D3
+~
+~
+0 0 8699
+S
+#8616
+Qin Shi Huang Heights~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8615
+D2
+~
+~
+0 0 8617
+S
+#8617
+Qin Shi Huang Heights~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8616
+D2
+~
+~
+0 0 8618
+S
+#8618
+Qin Shi Huang Heights~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8617
+D2
+~
+~
+0 0 8619
+S
+#8619
+Qin Shi Huang Heights~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8618
+D2
+~
+~
+0 0 8620
+S
+#8620
+Qin Shi Huang Heights~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8619
+D2
+~
+~
+0 0 8621
+S
+#8621
+Tanchun Street and Qin Shi Huang Heights~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8620
+D3
+~
+~
+0 0 8715
+S
+#8622
+S Yao Lam Avenue~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8501
+D2
+~
+~
+0 0 8623
+S
+#8623
+S Yao Lam Avenue~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8622
+D2
+~
+~
+0 0 8624
+S
+#8624
+S Yao Lam Avenue~
+{MEast, Player Housing (basic apartments, perhaps somewhat shoddy) NO
+builder selected yet{x 
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8623
+D2
+~
+~
+0 0 8625
+S
+#8625
+S Yao Lam Avenue~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8624
+D2
+~
+~
+0 0 8626
+S
+#8626
+S Yao Lam Avenue~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8625
+D2
+~
+~
+0 0 8627
+S
+#8627
+Market Street and S Yao Lam Avenue~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8626
+D1
+~
+~
+0 0 8686
+D2
+~
+~
+0 0 8628
+S
+#8628
+S Yao Lam Avenue~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8627
+D2
+~
+~
+0 0 8629
+S
+#8629
+S Yao Lam Avenue~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8628
+D2
+~
+~
+0 0 8630
+S
+#8630
+S Yao Lam Avenue~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8629
+D2
+~
+~
+0 0 8631
+S
+#8631
+S Yao Lam Avenue~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8630
+D2
+~
+~
+0 0 8632
+S
+#8632
+S Yao Lam Avenue~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8631
+D2
+~
+~
+0 0 8633
+S
+#8633
+Tanchun Street and S Yao Lam Avenue~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8632
+D1
+~
+~
+0 0 8728
+S
+#8634
+Eu Sen Avenue~
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8532
+D2
+~
+~
+0 0 8635
+S
+#8635
+Eu Sen Avenue~
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8634
+D2
+~
+~
+0 0 8636
+S
+#8636
+Eu Sen Avenue~
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8635
+D2
+~
+~
+0 0 8637
+S
+#8637
+Eu Sen Avenue~
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8636
+D2
+~
+~
+0 0 8551
+S
+#8638
+Eu Sen Avenue~
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8551
+D2
+~
+~
+0 0 8639
+S
+#8639
+Eu Sen Avenue~
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8638
+D1
+~
+~
+0 0 13028
+D2
+~
+~
+0 0 8640
+S
+#8640
+Eu Sen Avenue~
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8639
+D2
+~
+~
+0 0 8641
+S
+#8641
+Eu Sen Avenue~
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8640
+D1
+~
+~
+0 0 13026
+D2
+~
+~
+0 0 8642
+S
+#8642
+Eu Sen Avenue~
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8641
+D2
+~
+~
+0 0 8643
+S
+#8643
+Market Street and Eu Sen Avenue~
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8642
+D1
+~
+~
+0 0 8691
+D2
+~
+~
+0 0 8644
+D3
+~
+~
+0 0 8690
+S
+#8644
+Eu Sen Avenue~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8643
+D2
+~
+~
+0 0 8645
+S
+#8645
+Eu Sen Avenue~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8644
+D2
+~
+~
+0 0 8646
+S
+#8646
+Zhu Mei Court and Eu Sen Avenue~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8645
+D2
+~
+~
+0 0 8647
+D3
+~
+~
+0 0 8738
+S
+#8647
+Eu Sen Avenue~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8646
+D2
+~
+~
+0 0 8648
+S
+#8648
+Eu Sen Avenue~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8647
+D2
+~
+~
+0 0 8649
+S
+#8649
+Tanchun Street and Eu Sen Avenue~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8648
+D1
+~
+~
+0 0 8733
+D3
+~
+~
+0 0 8732
+S
+#8650
+Xiang Avenue~
+The manor houses of Chinatown's wealthiest residents can be found on
+either side of the street, surrounded by iron fences, tall and decorative. 
+The manor yards and gardens, as decorative as they are well kept, can be
+seen through the bars which keep the common folk at bay.  Xiang Aveneue
+continues north up the hillside and south down to central Chinatown.  
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8545
+D2
+~
+~
+0 0 8651
+S
+#8651
+Xiang Avenue~
+The manor houses of Chinatown's wealthiest residents can be found on
+either side of the street, surrounded by iron fences, tall and decorative. 
+The manor yards and gardens, as decorative as they are well kept, can be
+seen through the bars which keep the common folk at bay.  Xiang Aveneue
+continues north up the hillside and south down to central Chinatown.  
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8650
+D2
+~
+~
+0 0 8652
+S
+#8652
+Xiang Avenue~
+The manor houses of Chinatown's wealthiest residents can be found on
+either side of the street, surrounded by iron fences, tall and decorative. 
+The manor yards and gardens, as decorative as they are well kept, can be
+seen through the bars which keep the common folk at bay.  Xiang Aveneue
+continues north up the hillside and south down to central Chinatown.  
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8651
+D2
+~
+~
+0 0 8653
+S
+#8653
+Xiang Avenue~
+The manor houses of Chinatown's wealthiest residents can be found on
+either side of the street, surrounded by iron fences, tall and decorative. 
+The manor yards and gardens, as decorative as they are well kept, can be
+seen through the bars which keep the common folk at bay.  Xiang Aveneue
+continues north up the hillside and south down to central Chinatown.  
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8652
+D2
+~
+~
+0 0 8536
+S
+#8654
+Xiang Avenue~
+{MEast- Jazz Club (Bomani's Area){x 
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8555
+D2
+~
+~
+0 0 8655
+S
+#8655
+Xiang Avenue~
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8654
+D2
+~
+~
+0 0 8542
+D3
+~
+~
+0 0 13030
+S
+#8656
+Chow Dam Lane~
+Tall, decorative iron fences, run along the west.  Through the bars, the
+manor houses and lush yards they enclose can be seen, albiet out of reach. 
+On the east side, the stone wall of the Kuan-Yin estate, eight feet in
+height and boasting it's carvings of dragons and ocean waves.  Chow Dam Lane
+continues north up the hillside and south down to central Chinatown.  
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8589
+D2
+~
+~
+0 0 8661
+S
+#8657
+Xiang Avenue~
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8542
+D2
+~
+~
+0 0 8658
+S
+#8658
+Xiang Avenue~
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8657
+D2
+~
+~
+0 0 8659
+S
+#8659
+Market Street and Xiang Avenue~
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8698
+D3
+~
+~
+0 0 8693
+S
+#8660
+Xiang Avenue~
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8505
+D2
+~
+~
+0 0 8694
+S
+#8661
+Chow Dam Lane~
+Tall, decorative iron fences, run along the west.  Through the bars, the
+manor houses and lush yards they enclose can be seen, albiet out of reach. 
+On the east side, the stone wall of the Kuan-Yin estate, eight feet in
+height and boasting it's carvings of dragons and ocean waves.  Chow Dam Lane
+continues north up the hillside and south down to central Chinatown.  
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8656
+D2
+~
+~
+0 0 8662
+S
+#8662
+Chow Dam Lane~
+Tall, decorative iron fences, run along the west.  Through the bars, the
+manor houses and lush yards they enclose can be seen, albiet out of reach. 
+On the east side, the stone wall of the Kuan-Yin estate, eight feet in
+height and boasting it's carvings of dragons and ocean waves.  Chow Dam Lane
+continues north up the hillside and south down to central Chinatown.  
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8661
+D2
+~
+~
+0 0 8663
+S
+#8663
+Chow Dam Lane~
+Tall, decorative iron fences, run along the west.  Through the bars, the
+manor houses and lush yards they enclose can be seen, albiet out of reach. 
+On the east side, the stone wall of the Kuan-Yin estate, eight feet in
+height and boasting it's carvings of dragons and ocean waves.  Chow Dam Lane
+continues north up the hillside and south down to central Chinatown.  
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8662
+D2
+~
+~
+0 0 8664
+S
+#8664
+Chow Dam Lane~
+Tall, decorative iron fences, run along the west.  Through the bars, the
+manor houses and lush yards they enclose can be seen, albiet out of reach. 
+On the east side, the stone wall of the Kuan-Yin estate, eight feet in
+height and boasting it's carvings of dragons and ocean waves.  Chow Dam Lane
+continues north up the hillside and south down to central Chinatown.  
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8663
+D2
+~
+~
+0 0 8573
+S
+#8665
+Chow Dam Lane~
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8573
+D2
+~
+~
+0 0 8666
+S
+#8666
+Chow Dam Lane~
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8665
+D2
+~
+~
+0 0 8667
+S
+#8667
+Chow Dam Lane~
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8666
+D2
+~
+~
+0 0 8668
+S
+#8668
+Chow Dam Lane~
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8667
+D2
+~
+~
+0 0 8669
+S
+#8669
+Chow Dam Lane~
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8668
+D2
+~
+~
+0 0 8559
+S
+#8670
+Chow Dam Lane~
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8559
+D2
+~
+~
+0 0 8671
+S
+#8671
+Chow Dam Lane~
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8670
+D2
+~
+~
+0 0 8672
+S
+#8672
+Chow Dam Lane~
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8671
+D2
+~
+~
+0 0 8673
+S
+#8673
+Chow Dam Lane~
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8672
+D2
+~
+~
+0 0 8674
+S
+#8674
+Chow Dam Lane~
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8673
+D2
+~
+~
+0 0 8675
+S
+#8675
+Market Street and Chow Dam Lane~
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8674
+D1
+~
+~
+0 0 8546
+D3
+~
+~
+0 0 8696
+S
+#8676
+Han Lung Way~
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8677
+D2
+~
+~
+0 0 8565
+S
+#8677
+Han Lung Way~
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8678
+D2
+~
+~
+0 0 8676
+S
+#8678
+Han Lung Way~
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8679
+D2
+~
+~
+0 0 8677
+S
+#8679
+Han Lung Way~
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8680
+D2
+~
+~
+0 0 8678
+S
+#8680
+Han Lung Way~
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8578
+D2
+~
+~
+0 0 8679
+S
+#8681
+Han Lung Way~
+Several condominuims housing the more solvent of chinatown's denizens lie
+beyond a row of tallow trees that run along the east side of the street.  On
+the west side, the stone wall of the Kuan-Yin estate, eight feet in height
+and boasting it's carvings of dragons and ocean waves.  Han Lung Way
+continues north up the hillside and south down to central Chinatown.  
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8595
+D2
+~
+~
+0 0 8682
+S
+#8682
+Han Lung Way~
+Several condominuims housing the more solvent of chinatown's denizens lie
+beyond a row of tallow trees that run along the east side of the street.  On
+the west side, the stone wall of the Kuan-Yin estate, eight feet in height
+and boasting it's carvings of dragons and ocean waves.  Han Lung Way
+continues north up the hillside and south down to central Chinatown.  
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8681
+D2
+~
+~
+0 0 8683
+S
+#8683
+Han Lung Way~
+Several condominuims housing the more solvent of chinatown's denizens lie
+beyond a row of tallow trees that run along the east side of the street.  On
+the west side, the stone wall of the Kuan-Yin estate, eight feet in height
+and boasting it's carvings of dragons and ocean waves.  Han Lung Way
+continues north up the hillside and south down to central Chinatown.  
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8682
+D2
+~
+~
+0 0 8684
+S
+#8684
+Han Lung Way~
+Several condominuims housing the more solvent of chinatown's denizens lie
+beyond a row of tallow trees that run along the east side of the street.  On
+the west side, the stone wall of the Kuan-Yin estate, eight feet in height
+and boasting it's carvings of dragons and ocean waves.  Han Lung Way
+continues north up the hillside and south down to central Chinatown.  
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8683
+D2
+~
+~
+0 0 8685
+S
+#8685
+Han Lung Way~
+Several condominuims housing the more solvent of chinatown's denizens lie
+beyond a row of tallow trees that run along the east side of the street.  On
+the west side, the stone wall of the Kuan-Yin estate, eight feet in height
+and boasting it's carvings of dragons and ocean waves.  Han Lung Way
+continues north up the hillside and south down to central Chinatown.  
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8684
+D2
+~
+~
+0 0 8578
+S
+#8686
+Market Street~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8687
+D3
+~
+~
+0 0 8627
+S
+#8687
+Market Street~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8688
+D3
+~
+~
+0 0 8686
+S
+#8688
+Market Street~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8689
+D3
+~
+~
+0 0 8687
+S
+#8689
+Market Street~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8690
+D3
+~
+~
+0 0 8688
+S
+#8690
+Market Street~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8643
+D3
+~
+~
+0 0 8689
+S
+#8691
+Market Street~
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8692
+D3
+~
+~
+0 0 8643
+S
+#8692
+Market Street~
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8693
+D3
+~
+~
+0 0 8691
+S
+#8693
+Market Street~
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8659
+D3
+~
+~
+0 0 8692
+S
+#8694
+Xiang Avenue~
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8660
+D2
+~
+~
+0 0 8695
+S
+#8695
+Xiang Avenue~
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8694
+D2
+~
+~
+0 0 8555
+S
+#8696
+Market Street~
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8675
+D3
+~
+~
+0 0 8697
+S
+#8697
+Market Street and Fork Grove~
+{MNorth, Bhuddist temple -Aeris's Area{x 
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8696
+D2
+~
+~
+0 0 8716
+D3
+~
+~
+0 0 8698
+S
+#8698
+Market Street~
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8697
+S
+#8699
+Market Street~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8615
+D3
+~
+~
+0 0 8700
+S
+#8700
+Market Street~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8699
+D3
+~
+~
+0 0 8701
+S
+#8701
+Market Street~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8700
+D3
+~
+~
+0 0 8702
+S
+#8702
+Market Street~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8701
+D3
+~
+~
+0 0 8703
+S
+#8703
+Market Street~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8702
+D3
+~
+~
+0 0 8585
+S
+#8704
+???~
+~
+0 4 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+S
+#8705
+Tanchun Street~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D3
+~
+~
+0 0 8706
+S
+#8706
+Tanchun Street~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8705
+D3
+~
+~
+0 0 8707
+S
+#8707
+Tanchun Street~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8706
+D3
+~
+~
+0 0 8708
+S
+#8708
+Tanchun Street~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8707
+D3
+~
+~
+0 0 8709
+S
+#8709
+Tanchun Street~
+~
+0 4 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8708
+D3
+~
+~
+0 0 8721
+S
+#8710
+Tanchun Street~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8711
+D3
+~
+~
+0 0 8727
+S
+#8711
+Tanchun Street~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8712
+D3
+~
+~
+0 0 8710
+S
+#8712
+Tanchun Street~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8713
+D3
+~
+~
+0 0 8711
+S
+#8713
+Tanchun Street~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8714
+D3
+~
+~
+0 0 8712
+S
+#8714
+Tanchun Street~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8715
+D3
+~
+~
+0 0 8713
+S
+#8715
+Tanchun Street~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8621
+D3
+~
+~
+0 0 8714
+S
+#8716
+Fork Grove~
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8697
+D2
+~
+~
+0 0 8717
+S
+#8717
+Fork Grove~
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8716
+D2
+~
+~
+0 0 8718
+S
+#8718
+Fork Grove~
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8717
+D2
+~
+~
+0 0 8719
+S
+#8719
+Fork Grove~
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8718
+D2
+~
+~
+0 0 8720
+S
+#8720
+Fork Grove~
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8719
+D2
+~
+~
+0 0 8721
+S
+#8721
+Tanchun Street and Fork Grove~
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8720
+D1
+~
+~
+0 0 8709
+D2
+~
+~
+0 0 8743
+D3
+~
+~
+0 0 8737
+S
+#8722
+Ching Zun Alley~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8585
+D2
+~
+~
+0 0 8723
+S
+#8723
+Ching Zun Alley~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8722
+D2
+~
+~
+0 0 8724
+S
+#8724
+Ching Zun Alley~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8723
+D2
+~
+~
+0 0 8725
+S
+#8725
+Ching Zun Alley~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8724
+D2
+~
+~
+0 0 8726
+S
+#8726
+Ching Zun Alley~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8725
+D2
+~
+~
+0 0 8727
+S
+#8727
+Tanchun Street and Ching Zun Alley~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8726
+D1
+~
+~
+0 0 8710
+D3
+~
+~
+0 0 8705
+S
+#8728
+Tanchun Street~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8729
+D3
+~
+~
+0 0 8633
+S
+#8729
+Tanchun Street~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8730
+D3
+~
+~
+0 0 8728
+S
+#8730
+Tanchun Street~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8731
+D3
+~
+~
+0 0 8729
+S
+#8731
+Tanchun Street~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8732
+D3
+~
+~
+0 0 8730
+S
+#8732
+Tanchun Street~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8649
+D3
+~
+~
+0 0 8731
+S
+#8733
+Tanchun Street~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8734
+D3
+~
+~
+0 0 8649
+S
+#8734
+Tanchun Street~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8735
+D3
+~
+~
+0 0 8733
+S
+#8735
+Tanchun Street~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8736
+D3
+~
+~
+0 0 8734
+S
+#8736
+Tanchun Street~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8737
+D3
+~
+~
+0 0 8735
+S
+#8737
+Tanchun Street~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8721
+D3
+~
+~
+0 0 8736
+S
+#8738
+Zhu Mei Court~
+{MFrom here east, private residences, working stiff crowd (npcs.  Players
+chars, maybe.  Note me or dsarky if you wish this to be the case){x 
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8646
+D3
+~
+~
+0 0 8739
+S
+#8739
+Zhu Mei Court~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8738
+D3
+~
+~
+0 0 8740
+S
+#8740
+Zhu Mei Court~
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8739
+S
+#8741
+Chinatown West Gate~
+~
+0 0 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 8501
+S
+#8742
+Chinatown East Gate~
+~
+0 0 11
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D3
+~
+~
+0 0 8569
+S
+#8743
+Chinatown South Gate~
+~
+0 0 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 8721
+S
+#8744
+Chinatown North Gate~
+~
+0 0 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D2
+~
+~
+0 0 8587
+S
+#0
+
+
+
+#RESETS
+D 0 8592 2 8709
+O 0 8501 0 8741
+O 0 8501 0 8742
+O 0 8501 0 8743
+O 0 8501 0 8744
+S
+
+
+
+#SHOPS
+0
+
+
+
+#MOBPROGS
+#0
+
+#$

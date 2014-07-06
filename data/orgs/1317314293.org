@@ -1,0 +1,25 @@
+#ORG
+Camarilla~ CAM~
+Rayal~
+0 1 0
+None~
+Vampire~
+0
+
+~
+~
+~
+~
+~
+
+~
+~
+~
+~
+~
+~
+
+#MEMBERS
+#Rayal~ 5 ABCDEFGHIJK 0
+#$
+#$

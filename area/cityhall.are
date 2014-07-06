@@ -1,0 +1,670 @@
+#AREADATA
+Name City Hall~
+Builders Siscia~
+VNUMs 19200 19400
+Credits Siscia~
+Security 1
+Flags I
+Price 1
+End
+
+
+
+#MOBILES
+#0
+
+
+
+#OBJECTS
+#19399
+City Hall: Master Key~
+(no short description)~
+(no description)
+~
+(no full description)
+~
+Ruby~
+18 0 0
+0 0 0 0 0
+0
+0 0 100
+E
+--USES~
+-2~
+#0
+
+
+
+#ROOMS
+#19200
+City Hall~
+Seemingly countless stairs lead up to the gigantic gate of the vibrant,
+elegant and very white building.  Large pillars range from the smooth ground
+to the ceiling of the porch, providing a strong source of support for the
+roof - including the front part of the gigantic dome escalating the height
+of the building, topped with a flag.  
+~
+0 0 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+City Hell~
+E
+XDDREAM~
+The staircase of seemingly endless steps are decorated on both sides with
+bloodied bones, possibly serving as a warning to any who would dare move any
+closer to the building.  A rather soft mist stirs near the staircase as far
+as view is concerned, one could conclude that the mist grows stronger the
+closer to the building they become.  Small amounts of flickering peer from
+one of the second-storey windows.  
+~
+D0
+(null)~
+(null)~
+0 0 19201
+S
+#19201
+The Gates of City Hall~
+Towering high above the average creature, two doors form an intimidating
+gate.  Decorated to blend with the rest of the building, it would be quite
+clear that these doors are made from a very durable metallic alloy, based on
+the fact they seem almost entirely incapable of being moved by normal means.
+Beside the gate, a keypad is placed to the left - a buzzer to the right.  
+~
+0 0 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+The Gates of City Hell~
+E
+XDDREAM~
+Flames surging from within, slipping through the very small cracks
+between the gigantic gate doors and the doorway, it's evident something bad
+has happened within the building.  A thick red fog makes it difficult to see
+much of anything, engulfing a great deal of the staircase South and building
+North.  If one were to merely glance, they'd swear they saw lava seeping
+from beneath the gates...  Yet a long look provokes certainty that it was
+merely a hallucination.  
+~
+D0
+(null)~
+(null)~
+A 0 19202
+D2
+(null)~
+(null)~
+0 0 19200
+S
+#19202
+Lobby~
+Decorated with a strong sense of high-class fashion, various old
+paintings cover the walls spaced by, seemingly, very specific measurements. 
+The major form of lighting appears to be emitted by candles - suggested by
+the various wall-hung candles in what appear to be metal brackets painted to
+appear pure silver.  
+~
+0 0 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+Lobby~
+E
+XDDREAM~
+Picture frames cover the walls in the form of smoldering ash, flames
+soaring all around.  Only the exits to the South and West appear safe from
+the ever-growing ember.  Those with strong paranoia may feel a presence - a
+set of eyes from an unknown location.  
+~
+D0
+(null)~
+(null)~
+AB 0 19218
+D2
+(null)~
+(null)~
+A 19399 19201
+D3
+(null)~
+(null)~
+A 0 19203
+D4
+(null)~
+(null)~
+ABM 0 19219
+S
+#19203
+Corridor~
+Seemingly created from stone, this corridor doesn't seem to contain any
+doors - though it seems to lead a great distance to the West.  Navy blue
+carpet provides the only source of particular life, beyond the candles
+mounted on the walls.  
+~
+0 0 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+Corridor~
+E
+XDDREAM~
+Damp and dark, the whistling breezes echoing from wall to wall aid in
+creating dark and unforgiving surroundings.  At times, it almost appears as
+if the walls are closing in gradually - and the sounds of stone brushing
+stone don't provide much comfort.  Occasionally, the feeling of air flowing
+through a doorway may be felt from the North or South.  
+~
+D0
+(null)~
+(null)~
+AM 0 19204
+D1
+(null)~
+(null)~
+A 0 19202
+D2
+(null)~
+(null)~
+ABM 0 19205
+D3
+(null)~
+(null)~
+0 0 19206
+S
+#19204
+Library~
+A practical maze of bookshelves, all filled and cluttered - some only
+with books, others with books and stacks of papers.  Each bookshelf appears
+to be numbered, though it looks as if the room was designed more as a
+labyrinth than a library, judging by the various uncertainties of what might
+be around the corner.  The bookshelves even contain their own brackets for
+candle-light, though these are spread out and leave a great deal of darkness
+behind.  
+~
+0 0 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+Library~
+E
+XDDREAM~
+A practical maze of bookshelves, all filled and cluttered - some only
+with books, others with books and stacks of papers.  Each bookshelf appears
+to be numbered, though it looks as if the room was designed more as a
+labyrinth than a library, judging by the various uncertainties of what might
+be around the corner.  One bookshelf is marked with an 'E' instead of a
+number...  It seems to be glowing lightly, making it the most
+attention-grabbing of the room.  To the North, a doorway which appears to be
+a magical portal is present.  Those with intense awarenesses of their
+surroundings may notice that light breezes frequent the room, as if someone
+- or something - is quickly racing from one location to another.  Paranoia
+would suggest that something is creeping...  Watching from the endless
+shadows.  
+~
+D2
+(null)~
+(null)~
+AM 0 19203
+S
+#19205
+(null)~
+(null)~
+0 0 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+ABM 0 19203
+S
+#19206
+Corridor~
+Lit only by candlelight, this part of the corridor appears to be little
+more than a very unnerving and intimidating place.  A combination of
+seemingly black dye trails along the once navy blue carpet and a subtle
+stench traveling from the West likely provokes less frequently asked
+questions about the building.  
+~
+0 0 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+Corridor~
+E
+XDDREAM~
+Small shards of ice hang from the ceiling against the Southern wall -
+likely a product of the icy winds traveling through the corridor.  Despite
+these shards, a small puddle of water rests upon the bare stone floor near
+the North wall.  
+~
+D1
+(null)~
+(null)~
+0 0 19203
+D2
+(null)~
+(null)~
+ABM 0 19207
+D3
+(null)~
+(null)~
+0 0 19208
+S
+#19207
+(null)~
+(null)~
+0 0 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+ABM 0 19206
+S
+#19208
+Corridor~
+Perhaps the darkest part of the Corridor, this corner contains almost no
+light - it probably wouldn't at all if not for the light from the North and
+East.  
+~
+0 0 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+Corridor~
+E
+XDDREAM~
+Stepping on a particular part of the floor seems to emit a bright light
+from the ceiling.  Despite this, there doesn't appear to be a visible source
+of light.  In some ways, when this light is on, a sense of ease flows
+through the corridor.  Occasional unexplainable shadows dart away when the
+light beams down.  
+~
+D0
+(null)~
+(null)~
+0 0 19210
+D1
+(null)~
+(null)~
+0 0 19206
+D5
+(null)~
+(null)~
+ABMQ 0 19209
+S
+#19209
+Hidden Chamber~
+Strong hints of lingering winds seem to escalate and expand from the
+East.  Despite the almost definite feel, there doesn't appear to be a
+visible source of where the air may be coming from.  
+~
+0 0 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+Hidden Chamber~
+E
+XDDREAM~
+Strong, chilling winds seem to erupt from the West, while the North and
+South continue the corridor.  
+~
+D4
+(null)~
+(null)~
+ABMQ 0 19208
+S
+#19210
+Corridor~
+Strong hints of lingering winds seem to escalate and expand from the
+East.  Despite the almost definite feel, there doesn't appear to be a
+visible source of where the air may be coming from.  
+~
+0 0 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+Corridor~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 19215
+D1
+(null)~
+(null)~
+ABM 0 19211
+D2
+(null)~
+(null)~
+0 0 19208
+D3
+(null)~
+(null)~
+0 0 19212
+S
+#19211
+Lockup~
+(null)~
+0 0 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+Lockup~
+E
+XDDREAM~
+(null)~
+D3
+(null)~
+(null)~
+ABM 0 19210
+S
+#19212
+Corridor~
+(null)~
+0 0 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+Corridor~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 19213
+D1
+(null)~
+(null)~
+0 0 19210
+D2
+(null)~
+(null)~
+0 0 19214
+S
+#19213
+Wind Tunnel~
+(null)~
+0 0 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+Wind Tunnel~
+E
+XDDREAM~
+(null)~
+D2
+(null)~
+(null)~
+0 0 19212
+S
+#19214
+Wind Tunnel~
+(null)~
+0 0 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+Wind Tunnel~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 19212
+S
+#19215
+Corridor~
+(null)~
+0 0 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+Corridor~
+E
+XDDREAM~
+(null)~
+D1
+(null)~
+(null)~
+0 0 19216
+D2
+(null)~
+(null)~
+0 0 19210
+S
+#19216
+Corridor~
+(null)~
+0 0 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+Corridor~
+E
+XDDREAM~
+(null)~
+D1
+(null)~
+(null)~
+0 0 19217
+D3
+(null)~
+(null)~
+0 0 19215
+S
+#19217
+Corridor~
+(null)~
+0 0 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+Corridor~
+E
+XDDREAM~
+(null)~
+D1
+(null)~
+(null)~
+0 0 19218
+D3
+(null)~
+(null)~
+0 0 19216
+S
+#19218
+Ball Room~
+(null)~
+0 0 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+Ball Room~
+E
+XDDREAM~
+(null)~
+D2
+(null)~
+(null)~
+AB 0 19202
+D3
+(null)~
+(null)~
+0 0 19217
+S
+#19219
+Transition~
+(null)~
+0 0 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+(null)~
+D5
+(null)~
+(null)~
+ABM 0 19202
+S
+#19220
+(null)~
+(null)~
+0 4 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+(null)~
+S
+#0
+
+
+
+#RESETS
+D 0 19202 0 3
+D 0 19202 4 4099
+D 0 19203 2 4099
+D 0 19205 0 4099
+D 0 19206 2 4099
+D 0 19207 0 4099
+D 0 19208 5 69635
+D 0 19209 4 69635
+D 0 19210 1 4099
+D 0 19211 3 4099
+D 0 19218 2 3
+D 0 19219 5 4099
+S
+
+
+
+#SHOPS
+0
+
+
+
+#MOBPROGS
+#0
+
+#$

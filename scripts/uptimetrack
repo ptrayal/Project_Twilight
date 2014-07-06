@@ -1,0 +1,15 @@
+#!/usr/bin/perl -w
+
+chdir('../log');
+
+@pfiles = grep { -f } <*>;
+
+foreach $file (@pfiles) {
+print "$file,";
+if(system("head -n 1 $file | head -c 25"))
+	{print "Unable to pull first line from $file";}
+print ",";
+if(system("tail -n 1 $file | head -c 25"))
+	{print "Unable to pull last line from $file";}
+print "\n";
+}

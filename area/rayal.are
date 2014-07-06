@@ -1,0 +1,2268 @@
+#AREADATA
+Name Former Tremere Chantry~
+Builders Rayal~
+VNUMs 3401 3480
+Credits Rayal~
+Security 7
+Flags 0
+Price 0
+End
+
+
+
+#MOBILES
+#3401
+ghoul servant butler~
+a butler~
+A butler is here to take your coat for you.
+~
+The butler, Igor (pronounced Eye-Gore), stands before you.  He is tall,
+almost obscenely so.  
+~
+human~
+AB 0 50 0 0 0 pound
+0 0 0 0
+10 10 1 2
+AHMV ABCDEFGHIJK medium flesh
+A 0
+I 0
+#3402
+giant maggot~
+a giant maggot~
+A black, giant maggot opens it's mouth and attacks!
+~
+This black, giant maggot looks like a mutant fly larva gone wrong.  It's
+easy the length of the two cars and as big around.  The creature's maw is
+filled with teeth the size of dinner knives and twice as sharp.  You cannot
+help but wonder how in the world it got here!  
+~
+human~
+ACFG M 30 0 0 0 chomp
+O 0 E 0
+10 10 0 0
+ABDGHMRVc ABCDEFGHIJKL huge flesh
+A I
+I 0
+#3450
+blood bane human spirit~
+A spirit of blood~
+A human form, covered in slick bood, hovers before you.
+~
+~
+formori~
+AGT G 50 0 0 0 chill
+M 0 0 0
+10 10 3 0
+ADHMVc ABCDEFGHIJK medium unknown
+A IL
+I 0
+#3451
+acid dog tibetian mastiff~
+a growling fetid smelling mastiff~
+A large, growling mastiff with a foaming mouth growls viciously at you.
+~
+A large mastiff stands before you.  It's probably three feet tall at it's
+shoulders and it smells like rancid meet.  Around its mouth and from between
+its large teeth, a greenish foam seems to drip out.  
+~
+dog~
+ABF 0 50 0 0 0 acbite
+H 0 0 0
+10 10 3 0
+AGV ACDEFHJKUV medium flesh
+A I
+I 0
+#0
+
+
+
+#OBJECTS
+#3401
+rocking chair~
+a white plastic rocking chair~
+~
+~
+plastic~
+12 T 0
+1 200 F 0 0 0
+40 0 100
+E
+--USES~
+-2~
+E
+chair~
+This plastic rocking chair is painted in such a way so that it looks like
+it is a wood chair, but really is not.  
+~
+Q 0
+#3402
+apprentice key~
+a small key~
+~
+~
+silver~
+18 0 AO
+0 0 0 0 0
+0
+1 0 100
+E
+--USES~
+-2~
+E
+key~
+This key is a small silver key.  Carved into the head of the key is a
+black pawn.  
+~
+Q 0
+#3403
+table~
+an oak table~
+~
+~
+wood~
+12 0 0
+0 0 0 0 0 0
+500 0 100
+E
+--USES~
+-2~
+E
+table~
+This large, dark oak table is well-crafted, that much is obvious. 
+Whoever made and crafted this table did so with much care and thought.  Each
+piece is carefully crafted so as to appear to be one piece.  It can easily
+seat ten people around it if it needed to.  
+~
+Q 0
+#3404
+chair~
+an oak chair~
+~
+~
+wood~
+12 a 0
+1 300 EF 0 0 0
+25 0 100
+E
+--USES~
+-2~
+E
+chair~
+This chair, much like it's matching table, is handcrafted and done is
+quite well.  It is stained dark and looks very comfortable.  
+~
+Q 0
+#3405
+large wood table~
+a large wooden table~
+~
+~
+wood~
+15 0 0
+100 0 0 5 100 0
+500 0 100
+E
+--USES~
+-2~
+Q 0
+#3406
+book tremere~
+a book on the Tremere~
+~
+~
+paper~
+13 0 A
+0 0 0 0 0
+0
+1 0 100
+E
+--USES~
+-2~
+E
+pageb~
+I hereby swear this oath on [current date].  Woe to they who try to tempt
+me to break this oath, and woe to me if I succumb to such temptation.  
+~
+E
+pagea~
+I recognize that the enemies of the House and Clan are my enemies, that
+the friends of the House and Clan are my friends, and that the allies of the
+House and Clan are my allies.  Let us work as one and grow hale and strong. 
+Read pageb for the final page.  
+~
+E
+page9~
+I demand that, should I break this oath, I should be cast out of the
+House and Clan.  If I am cast out, I ask my brothers to find and slay me
+that my life may not continue in degradation and infamy.  Read pagea for
+more.  
+~
+E
+page8~
+I shall further the knowledge of the House and Clan and share with its
+members all that I find in my search for wisdom and power.  No secrets are
+to be kept, or given, regarding the arts of magic, nor shall I keep secret
+the doings of others which might bring harm to the House and Clan.  Read
+page9 for more.  
+~
+E
+page7~
+I concede to my elders the right to take my apprentice should it be found
+that my apprentice is valuable to an elder's work.  All are members of the
+House and Clan and valuable first to these precepts.  I shall abide by the
+right of my superiors to make such decisions.  Read page8 for more.  
+~
+E
+page6~
+I will train only apprentices who will swear to this code, and should any
+of them turn against the House and Clan, I shall be the first to strike them
+down and bring them to justice.  No apprentice of mine shall be called magus
+until he first swears to uphold the code.  I shall treat my apprentices with
+the care and respect that they earn.  Read page7 for more.  
+~
+E
+page5~
+I will not use magic to scry upon members of the House and Clan Tremere,
+nor shall I use it to peer into their affairs.  It is expressly forbidden. 
+Read page6 for more.  
+~
+E
+page4~
+I will not endanger House and Clan Tremere through my actions.  Nor will
+I interfere with the affairs of mundanes in any way that brings ruin upon my
+House and Clan.  I will not, when dealing with devils, or others, in any way
+bring danger to the clan, nor will I disturb the faeries in any way that
+should cause them to take vengeance on the House and Clan.  I also swear to
+uphold the values and goals of the Camarilla, and I will maintain the
+Masquerade.  Insofar as these goals may conflict with my goals, I will not
+pursue my own ends in any way that would endanger the Masquerade.  The
+strength of the House and Clan Tremere depends on the strength of the
+Masquerade.  Read page5 for more.  
+~
+E
+page3~
+I will not deprive nor attempt to deprive any member of House and Clan
+Tremere of his magical power.  To do so would be to act against the strength
+of our House.  I will not slay nor attempt to slay any member of the House
+and Clan except in self-defense, or when a magus has been ruled outlaw by a
+properly constituted tribunal.  If a magus has been ruled an outlaw, I shall
+bend all efforts to bring such magus to justice.  Read page4 for more.  
+~
+E
+page2~
+I, [initiate's name], hearby swear my everlasting loyalty to House and
+Clan Tremere and all its members.  I am of their blood, and they are of
+mine.  We share our lives, our goals, and our achievements.  I shall obey
+those the House sees fit to name my superior, and treat my inferiors with
+all the respect and care they earn for themselves.  Read page3 for more.  
+~
+E
+page1~
+The code of the Tremere is a solemn oath that binds all Tremere to House
+and Clan.  It is a ritual, which is always performed in front of the eldest
+Tremere of the city, typically the Regent, when arriving into the city to
+reaffirm the strength of the Pyramid.  Read page2 for more.  
+~
+E
+book~
+This book, though old and a little tattered, appears to be a book about
+the Oath of the Tremere.  Read page1 for more.  
+~
+Q 0
+#3407
+cleaver knife~
+a kitchen cleaver~
+~
+~
+steel~
+5 0 AN
+0 7 0 slash 0 0
+4 23 100
+E
+--USES~
+-2~
+Q 0
+#3408
+cooking apron~
+a cooking apron~
+~
+~
+cloth~
+11 0 AD
+0 0 0 0 0
+0
+0 7 100
+E
+--USES~
+-2~
+Q 0
+#3409
+silver cane~
+a silver cane~
+~
+~
+extra~
+5 0 AN
+3 5 0 pound 0 0
+0 0 100
+E
+--USES~
+-2~
+Q 0
+#3410
+cellular phone~
+a cellular phone~
+~
+~
+unknown~
+30 0 AO
+0 0 0 0 0
+0
+2 0 100
+E
+--USES~
+-2~
+Q 0
+#3411
+no name~
+(no short description)~
+~
+~
+unknown~
+13 0 0
+0 0 0 0 0
+0
+0 0 100
+E
+--USES~
+-2~
+E
+bob~
+Duh!
+~
+Q 0
+#3412
+long table~
+a long table~
+~
+~
+wood~
+12 0 0
+0 300 N 0 0 0
+0 0 100
+E
+--USES~
+-2~
+Q 0
+#3413
+computer pc~
+a slightly damaged computer~
+This computer looks like it somehow managed to survive a minor war.  The
+sides of it are blackened from smoke and fire and the monitor has a slight
+crack in it.  
+~
+This computer looks like it somehow managed to survive a minor war.  The
+sides of it are blackened from smoke and fire and the monitor has a slight
+crack in it.  
+~
+plastic~
+12 a A
+0 0 0 0 0 0
+12 0 75
+E
+--USES~
+-2~
+E
+security_log~
+Data Entry: Security Log
+Operator: Security Chief Tamara Rose
+Priority: Alpha Red
+ 
+At 20:51:33 the primary wards on the chantry failed from overload.
+At 20:51:55 the front security door was destroyed.  Visual verification
+was made by security cameras.
+At 20:52:02 all security cameras went blank.  Chantry suffered power loss
+as the primary generator went down.  Failsafe activated and went into
+secondary generators.  All other security systems active.
+At 20:52:20 Regent Black activated Water Wards in chantry.  Security
+Chief Tamara sealed off the lower chantry levels, including basement and
+sub-basement.  A priority alert was sent out to the Lord.
+At 20:52:40 the water wards encountered and engaged the invading entity.
+Classification of entity unknown.  Appears to be a manifesting spirit.
+Warning: Invalid Query.
+At 20:52:00 all elemental wards collapsed.  Warning: Unauthorized gate
+opened to unknown location.  Security collapse immenient.
+At 20:53:15 Regent Black authorized security condition Alpha Zeta Red.
+All security systems on automatic.  Lockout of all personnel without
+proper security codes.
+At 20:53:24 Regent Black engages with invading entity.  Chantry automated
+defense systems engage entity.  Security Chief Tamara engages new entitys.
+At 20:54:02 security system loops into automatic mode.  Weapon magazines
+empty.  Visual cameras inoperable.  Wards collapsed.  All chantry
+personnel MIA or KIA.
+~
+E
+chantry_roster~
+Data Entry: [Chantry Roster]
+ 
+Query:  Current Status of Chantry Personnel
+ 
+Regent Level:
+(R2) Alexander Black [Dead - Chantry]
+ 
+Apprentice Level:
+(A6) Security Chief Tamara Rose [Dead - Chantry]
+(A4) Librarian Oswald Morris [Dead - Chantry]
+(A3) Wera Kraftkuk [Dead - Chantry]
+(A3) Max Escot [MIA - Airport]
+(A3) Thomas Calhoun [Dead - Chantry]
+(A1) Issac Yarmand [Torpor - Chantry]
+ 
+Current Status of Chantry Personnel displayed
+~
+E
+chantry_files~
+[Directory of Chantry Files]
+chantry_roster -- Status of Chantry Personnel
+security_log -- Last active security log
+ 
+All other files purged during emergency chantry shutdown, please
+see hardcopies for additional information.
+~
+Q 0
+#3414
+leather backpack~
+a leather backpack~
+~
+~
+leather~
+15 0 AD
+75 A 0 75 75 0
+0 0 100
+E
+--USES~
+-2~
+Q 0
+#3415
+oak desk~
+an oak desk~
+This oak desk looks heavy and large.  It also looks very old and well
+carefored.  It's got a burnished glow to it from the polish.  
+~
+This oak desk looks heavy and large.  It also looks very old and well
+carefored.  It's got a burnished glow to it from the polish.
+~
+wood~
+12 0 0
+0 0 0 0 0 0
+1000 0 100
+E
+--USES~
+-2~
+Q 5
+#3440
+key~
+key~
+~
+~
+steel~
+18 0 AO
+0 0 0 0 0
+0
+0 0 100
+E
+--USES~
+-2~
+Q 0
+#3450
+toilet ceramic~
+a ceramic toilet~
+A ceramic toilet is here.  It looks like it was cleaned recently and
+smells of disinfectant.  
+~
+A ceramic toilet is here.  It looks like it was cleaned recently and
+smells of disinfectant.
+~
+ceramic~
+12 0 0
+1 300 E 0 0 0
+0 0 100
+E
+--USES~
+-2~
+E
+tank~
+You open the toilet tank and look inside.  Written in black magic
+market, you can read "XOXOXO".
+~
+#3451
+king sized bed 'king-sized'~
+a king-sized bed~
+This bed is clearly king-sized and draped with purple satin bedding. 
+Ornate four corner bedposts and a decorative headboard complete the nice
+looking bed.  
+~
+This bed is clearly king-sized and draped with purple satin bedding.
+Ornate four corner bedposts and a decorative headboard complete the nice
+looking bed.
+~
+polyester~
+12 0 0
+3 1000 K 1 0 0
+0 0 100
+E
+--USES~
+-2~
+#3452
+steel footlocker~
+a steel footlooker~
+This footlocker is made of quality steel and is painted camouflage green.
+It has a combination lock built into it and it appears that the hinges are
+on the inside of the footlocker.  It looks difficult to open.  
+~
+This footlocker is made of quality steel and is painted camouflage
+green. It has a combination lock built into it and it appears that the
+hinges are on the inside of the footlocker.  It looks difficult to open.
+~
+steel~
+15 Y A
+200 ACD 0 200 2 0
+200 200 100
+E
+--USES~
+-2~
+Q 15
+#3453
+silver bounde black leather book~
+a silver-bound book~
+This silver-bound, black leather book is in extremely bad condition.  The
+sign of Solomon is engraved in silver on the cover and that is the only
+adornment on the book.  There is no title, no other engravings on the book
+what so ever.  The table of contents in the book reads like some horrific
+scientific story: Caustic Molossoid Breeds (Chapter_One) Vitae Spiritual
+Entities (Chapter_Two) 
+~
+This silver-bound, black leather book is in extremely bad condition.
+The sign of Solomon is engraved in silver on the cover and that is the
+only adornment on the book. There is no title, no other engravings on
+the book what so ever.
+
+The table of contents in the book reads like some horrific scientific
+story:
+Caustic Molossoid Breeds (Chapter_One)
+Vitae Spiritual Entities (Chapter_Two)
+~
+unknown~
+8 E A
+0 0 0 0 0
+0
+1 0 10
+E
+--USES~
+-2~
+E
+chapter_one~
+(This chapter is written in quick and sharp hand writing.  Whomever was
+writing it was writing it quickly, but clearly.)
+
+The caustic Tibetian Wolves are doing quite nicely, better than I
+expected.  Their acidic blood inflicts wonderous wounds upon their
+victims and their death leaves little remains.  My first few did not
+dissolve as planned but my later versions are doing quite nicely.
+
+I now realize that some levels of the ability to control these beasts is
+necessary but my benefactor is doing a good job of supplying me with
+both beasts and the necessary components for creating them.
+
+Ingrediants:  One Molossoid, two pounds of the necessary feed, one vial
+of the concentrated acidic blood supplied from the 'outside' supplier
+and one living child.
+~
+E
+chapter_two~
+(This chapter is written in the same handwriting as the first chapter,
+but not nearly as neatly.)
+
+It seems that this area seems to have a problem with vitae spirits and
+spirits having to deal with vitae.  More and more thaumaturgy is
+becoming unstable.  My attempts to create a homoculi with the standard
+ritual has created some sort of spiritual vitae entity.  All attempts to
+control it have failed, so I've abandoned this place and left it as a
+trap. I imagine the first people who venture into the spirit world
+around here will be in for quite a surprise.  Still, it presents an
+interesting possibility to consider down the road.
+
+~
+Q 0
+#3454
+refrigerator fridge~
+a Refrigerator~
+This refrigerator is a plain white, Maytag refrigerator.  
+~
+This refrigerator is a plain white, Maytag refrigerator.
+~
+steel~
+15 0 0
+400 AC 0 100 2 0
+0 0 50
+E
+--USES~
+-2~
+#3455
+bag purrena food~
+a bag of Purrena dog food~
+A five pound bag of Breeders-Choice Purrena dog food stands here.  The
+top has been ripped off and looks like half the bag is gone.  A red plastic
+cup is in the bag.  
+~
+A five pound bag of Breeders-Choice Purrena dog food stands here.  The
+top has been ripped off and looks like half the bag is gone.  A red
+plastic cup is in the bag.
+~
+paper~
+8 0 A
+0 0 0 0 0
+0
+0 0 100
+E
+--USES~
+-2~
+#3456
+wooden table~
+a wooden table~
+A simple wooden table stands here.  
+~
+A simple wooden table stands here.
+~
+wood~
+15 0 0
+100 0 0 100 2 0
+0 0 100
+E
+--USES~
+-2~
+#3457
+dell laptop c400 computer~
+a Dell laptop C400 computer~
+A grey Dell C400 laptop lies here.  There is no floppy or CD drive.  
+~
+A grey Dell C400 laptop lies here.  There is no floppy or CD drive.
+~
+unknown~
+13 0 A
+0 0 0 0 0
+0
+0 0 100
+E
+--USES~
+-2~
+E
+xoxoxo~
+As you enter "XOXOXO" into the computer, the following appears on the
+screen:
+
+Topic: Max Escot
+
+Max Escot is a traitor to the Camarilla.  If you are reading this, you
+must find him and kill him before he succeeds.  Max is trying to bring
+something awful into the city.  His experiments are only the beginning
+of what he is learning how to do.
+~
+#3460
+king sized waterbed~
+a king-sized waterbed~
+A king-sized waterbed is here.  There are 4 corner posts on the bed, made
+of solid ebony that rise six feet tall each.  The bed is covered in deep
+blue silk sheets with matching queen-sized pillows.  
+~
+A king-sized waterbed is here.  There are 4 corner posts on the bed,
+made of solid ebony that rise six feet tall each.  The bed is covered in
+deep blue silk sheets with matching queen-sized pillows.
+~
+silk~
+12 0 0
+4 1000 BEHK 2 0 0
+100 0 100
+E
+--USES~
+-2~
+Q 15
+#3461
+padded construction horse~
+a padded construction horse~
+A construction horse, painted all black, has been modified so that there
+is some padding on the top of it.  
+~
+A construction horse, painted all black, has been modified so that there
+is some padding on the top of it.
+~
+unknown~
+12 0 0
+1 0 EHKN 1 0 0
+0 0 100
+E
+--USES~
+-2~
+#3462
+manilla envelope~
+a manilla envelope~
+This is plain, unmarked manilla envelope.  
+~
+This is plain, unmarked manilla envelope.
+~
+paper~
+15 0 AO
+1 AC 0 1 0 0
+0 1 100
+E
+--USES~
+-2~
+#3463
+picture blackmail~
+a 8"x11" picture~
+An 8x11 inch picture of a living room is here.  A small woman, maybe no
+more than five and a half feet tall, is flanked by a much taller, rugged
+looking man and and another man, maybe just shy of six feet tall in baggier
+clothing.  They are standing around a dead dog and the rugged man is holding
+a laptop computer under his arm.  In black magic marker, the faces of the
+three people are circled.  In crisp, neat printing, it is written at the
+bottom.  "Stay away and these pictures do not make the newspaper.  It would
+be a shame if you had anything to do with the fire or the murders."  
+~
+An 8x11 inch picture of a living room is here.  A small woman, maybe no
+more than five and a half feet tall, is flanked by a much taller, rugged
+looking man and and another man, maybe just shy of six feet tall in
+baggier clothing.  They are standing around a dead dog and the rugged
+man is holding a laptop computer under his arm.
+
+In black magic marker, the faces of the three people are circled.  In
+crisp, neat printing, it is written at the bottom.
+
+"Stay away and these pictures do not make the newspaper.  It would be a
+shame if you had anything to do with the fire or the murders."
+~
+paper~
+8 0 AO
+0 0 0 0 0
+0
+0 0 100
+E
+--USES~
+-2~
+#3470
+handcuffs~
+a pair of handcuffs~
+~
+~
+steel~
+11 0 AH
+0 0 0 0 0
+0
+0 0 100
+E
+--USES~
+-2~
+#3475
+paper note~
+a crumbled piece of paper~
+A crumbled piece of paper lies here.  "The security room is the key."  
+~
+A crumbled piece of paper lies here.
+"The security room is the key."
+~
+paper~
+8 0 AO
+0 0 0 0 0
+0
+0 0 100
+E
+--USES~
+-2~
+#3476
+folded letter~
+folded letter~
+A letter is here and it reads: "To whom it may concern.  I have returned.
+Let those who follow the six find me."  
+~
+A letter is here and it reads: "To whom it may concern.  I have returned.
+Let those who follow the six find me."  
+~
+paper~
+8 0 AO
+0 0 0 0 0
+0
+0 0 100
+E
+--USES~
+-2~
+#0
+
+
+
+#ROOMS
+#3401
+The Sidewalk in front of an Old Estate~
+You are on the sidewalk in front of an old estate.  A wall of thick brick
+surrounds the whole estate and a iron gate is to your north.  A intercom
+buzzer is here, but looks to be inactive.  A little bronze sign here looks
+like it contains the address, but you'd have to move closer to get a better
+idea of what it says.  
+~
+0 4 1
+E
+XNUMB1~
+A Dark and Menacing sidewalk~
+E
+XDUMB1~
+This sidewalk has taken a decidedly darker turn.  The walls around this
+estate practically glow with mystic writing and warnings.  The bronze gate
+is dull and lifeless.  
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+(null) 
+~
+E
+sign~
+Residence of Philmor Ascot.
+ 
+Private Property - No Trespassing
+ 
+Beware of Dogs
+~
+E
+gate~
+The gate is made of cold-tempered iron and the lock is both formidable
+looking and complex.  
+~
+D0
+~
+~
+AB 3402 3402
+M 0 H 100
+S
+#3402
+A Pathway to the Estate~
+You are on a white stone pathway that leads to and from this estate.  On
+either side of the pathway is a beautiful expanse of lawn, dotted with only
+the occassional tree.  From here, you can get a better view of the three
+story estate.  Just to your north is the front porch of the estate.  
+~
+0 0 2
+E
+XNUMB1~
+A Darkened Pathway~
+E
+XDUMB1~
+The grey stone pathway leads to a dark and forboding estate.  On either
+side of the lawn, there are mystical glyphs and wards, a veritable mystic
+minefield.  Someone is trying their hardest to warn off or deter intruders. 
+The trees that you see are dark and warped, obviously a victim of the
+overwhelming magic surrounding them.  
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+(null) 
+~
+E
+path~
+You look more carefully at the path and realize that the stones are not
+marble stones, but large blocks of white chalk.  
+~
+E
+stone~
+You look more carefully at the path and realize the stones are not marble
+stones, but large blocks of white chalk.  
+~
+E
+lawn~
+As you look across the lawn, you notice that there is a very elaborate
+system of lawn sprinklers, not unusual alone.  However, there are many more
+sprinklers then one would expect in a lawn of this size.  
+~
+E
+gate~
+The gate is made of cold-tempered iron and the lock is both formidable
+looking and complex.  
+~
+D0
+As you gaze north, you can see the front porch of the estate and you
+think you see chair on the porch, but from this distance it is hard to tell.
+~
+~
+0 0 3403
+D2
+~
+~
+AC 3402 3401
+M 0 H 100
+S
+#3403
+The Front Porch of the Estate~
+You are standing on the front porch of this nice looking estate.  From
+here, you look to the south and see the pathway which leads back to the
+heart of the city.  The porch is equipped with a nice rocking chair which
+faces south.  There is a door that leads to the north.  
+~
+0 0 1
+E
+XNUMB1~
+~
+E
+XDUMB1~
+(null) 
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+(null) 
+~
+D0
+~
+~
+ABC 0 3404
+D2
+~
+~
+0 0 3402
+M 0 H 100
+S
+#3404
+Entry Foyer of the Chantry~
+You are standing in the entry foyer of the Tremere chantry.  Obviously,
+this chantry is very old, because the cobblestones in the foyer are rounded
+with age and use.  A wrought-iron chandlier hangs above you, casting light
+all around.  To the west appears to be a closet of some type, while to the
+east appears to be some sort of sitting room.  A set of double doors is in
+the northern wall.  
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+(null) 
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+(null) 
+~
+E
+chandlier~
+The iron chandlier appears to be very old and is dull and blackened with
+age.  Seven large candles are positioned on the outer perimeter of the
+candlier with one extremely large candle set in the middle.  
+~
+D0
+A set of oak doubledoors keeps guard over the northern wall.
+~
+~
+A 0 3407
+D1
+~
+~
+0 0 3406
+D2
+~
+~
+ABC 3402 3403
+D3
+~
+~
+0 0 3405
+M 0 H 100
+S
+#3405
+Coat Closet~
+This room is quite obviously a coat closet.  Many coats of different
+shapes and sizes hang in here, a testimony to the fact that the apprentices
+share this closet to hand their coats.  The lightbulb that once lit this
+closet has long sinced burned out.  
+~
+0 9 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+(null) 
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+(null) 
+~
+D1
+~
+~
+0 0 3404
+M 0 H 100
+S
+#3406
+The Ground Floor Sitting Room~
+This sitting room is clean and well-lit.  In addition to being clean, the
+room is very spacious and graciously decorated.  Several paintings adorn the
+walls and the furniture looks to be very comfortable.  It's this sitting
+room where all guests wait while whomever they seek is found and brought to
+them.  Back to the west is the entry foyer of the chantry.  A beautiful
+window gazes out to the south.  A door to the north leads to the chantry
+kitchen.  
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+(null) 
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+(null) 
+~
+E
+window~
+You look out the southern window onto the lawn of the Chantry, you notice
+from where you are looking that the chantry has some very well hidden
+protections.  In a tree here and there, you see well-hidden security cameras
+and you can barely see razor wire on top of the wall surrounding the
+chantry.  
+~
+E
+painting~
+This painting is one of a strange looking stone hendge.  This one has
+only seven stone monoliths, but one of them has toppled and is broken. 
+There is now a big gap in the circle, which is an obvious hole in the
+circle.  
+~
+D0
+~
+~
+A 0 3408
+D3
+~
+~
+0 0 3404
+M 0 H 100
+S
+#3407
+A Hallway~
+This hallway, painted a light gray color, is one that connects much of
+the lower level.  Soft light emenates from the electric wall sconces,
+helping to dispel some of the drab of the hallway.  On the south wall, there
+is a set of doubledoors while the hallway leads to additional rooms to the
+east and west.  
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+(null) 
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+(null) 
+~
+D1
+~
+~
+0 0 3408
+D2
+~
+~
+A 0 3404
+D3
+~
+~
+0 0 3410
+M 0 H 100
+S
+#3408
+The Chantry Kitchen~
+This kitchen is done in bright white tiling with blue accents, making the
+room bright, but not stark.  Recessed lighting helps illuminate the kitchen
+while helping not to create many shadows.  It is obvious this kitchen was
+recently remodelled, for almost everything looks new.  To the north it looks
+like there is a pantry, while other exits lead south and west.  
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+(null) 
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+(null) 
+~
+D0
+~
+~
+0 0 3409
+D2
+~
+~
+A 0 3406
+D3
+~
+~
+0 0 3407
+M 0 H 100
+S
+#3409
+The Pantry~
+This is where the chantry keeps their supply of "non-perishables". 
+Lining the shelves of the pantry are numerous household kitchen items, which
+the Tremere keep around for their ghouls and for whatever mortal guests may
+stop in.  
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+(null) 
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+(null) 
+~
+D2
+~
+~
+0 0 3408
+M 0 H 100
+S
+#3410
+The Sun Room~
+This is the sun room.  A beautiful skylight would normally rain in
+sunlight if it were not for the rituals that guard the Chantry.  Directly
+underneath the sunlight is a solid wooden table.  A palm tree sits in the
+corner of the room, while many other plants hang from planters.  A bay
+window would provide further sunlight should it be needed.  
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+(null) 
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+(null) 
+~
+D0
+~
+~
+0 0 3411
+D1
+~
+~
+0 0 3407
+D4
+~
+~
+0 0 3412
+M 0 H 100
+S
+#3411
+The Ground Floor Library~
+This room is probably the largest room on the ground floor.  One three of
+the four walls there are shelves built into the walls and books fill the
+shelves.  In contrast to the rest of the ground floor, this room is not lit
+by electricity, but instead by a fireplace in the southeastern corner of the
+room and candles that line the walls.  
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+(null) 
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+(null) 
+~
+D2
+~
+~
+0 0 3410
+M 0 H 100
+S
+#3412
+The Stairway Landing~
+The landing that you are on is well cared for.  The railing is made of
+fine oak and looks like it was well-cared for.  The stairs are a deep blue
+carpet that still looks as new as the day it was bought.  Yet, in contrast
+to this, there is a velvet painting of Elvis on the wall.  
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+(null) 
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+(null) 
+~
+E
+painting~
+Here is a velvet painting of Elvis.  While the artist obviously tried to
+make it as life-like as possible, they failed miserably.  His belly looks
+bigger then the rest of his body and though it's been a while, you have
+never seen a picture of him with blue hair.  
+~
+D4
+~
+~
+0 0 3413
+D5
+~
+~
+0 0 3410
+M 0 H 100
+S
+#3413
+The West End of the Second Floor Hallway~
+Unlike the first floor, this level is in complete disarray.  It seems
+like everyone left this floor in a hurry or something really big happened on
+this floor.  There is the smell of putrid water in the air and the slight
+haze of of smoke hangs slightly in the air.  An overhead light provides the
+illumination in the hallway.  
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+A 0 3415
+D1
+~
+~
+0 0 3414
+D3
+~
+~
+A 0 3416
+D5
+~
+~
+0 0 3412
+M 0 H 100
+S
+#3414
+The Central section of the Second Floor Hallway~
+Unlike the first floor, this level is in complete disarray.  It seems
+like everyone left this floor in a hurry or something really big happened on
+this floor.  There is the smell of putrid water in the air and the slight
+haze of of smoke hangs slightly in the air.  The lights that hang overhead
+are shattered, filling the carpet with shards of broken and shattered glass.
+Ashes are scattered about the carpeting with the glass.  
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+AB 0 3418
+D1
+~
+~
+0 0 3417
+D2
+~
+~
+A 0 3419
+D3
+~
+~
+0 0 3413
+M 0 H 100
+S
+#3415
+A Destroyed Bedroom~
+This bedroom looks as if a battle was fought in it.  The walls are
+battered and are pockmarked with bullet holes.  The wall sconces have been
+ripped out and lay in the middle of the room.  The acrid smell of gunpowder
+and burnt wallpaper linger in the air.  The doorway to the south looks like
+it was kicked into the room and splintered when it shattered against the
+northern wall.  
+~
+0 9 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D2
+~
+~
+A 0 3413
+M 0 H 100
+S
+#3416
+A Destroyed Bedroom~
+This bedroom looks like a small war was fought in it.  The northeast
+corner of the room looks like a small explosion went off, while the
+furniture and walls are battered, slashed, and rended.  The shattered
+remains of the overhead light dangle dangerously above.  The acrid smell of
+burnt flesh and wallpaper hang in the air.  
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+A 0 3413
+M 0 H 100
+S
+#3417
+The Eastern End of the Second Floor Hallway~
+Unlike the first floor, this level is in complete disarray.  It seems
+like everyone left this floor in a hurry or something really big happened on
+this floor.  There is the smell of putrid water in the air and the slight
+haze of of smoke hangs slightly in the air.  The lights that hang overhead
+are shattered, filling the carpet with shards of broken and shattered glass.
+Ashes are scattered about the carpeting with the glass.  
+~
+0 13 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+AB 3440 3421
+D1
+~
+~
+A 0 3423
+D2
+~
+~
+A 0 3422
+D3
+~
+~
+0 0 3414
+M 0 H 100
+S
+#3418
+A Large Bedroom~
+This room looks like it was flooded, though from where you cannot tell. 
+The carpet "squishes" when you walk on it and there is that smell of the
+ocean in the room.  The water has damaged everything in the room, soaking
+everything.  There looks to be a large walk-in closet to your east.  
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D2
+~
+~
+AB 0 3414
+D3
+~
+~
+AB 0 3420
+M 0 H 100
+S
+#3419
+A Computer Lab~
+This computer room is completely destroyed.  The occassional bit of
+electricty trinkles into the room through the few unmangled wires. 
+Fragments of glass and plastics litter the room, making it a dangerous place
+to walk.  Yet, for all the damage, one computer remains intact, against the
+far wall.  The monitor even appears to be on.  
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+This room appears sterile and devoid of all life.  Glowing runes are
+etched into the wall, apparent wards versus shapechangers.  Even looking at
+them is painful.  The computer on the far wall has tiny cobwebs hanging from
+it and a small web trails from the back of the computer to the phone socket.
+There were more webs that once littered the room, but they are torn and
+scattered about the room.  
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+A 0 3414
+M 0 H 100
+S
+#3420
+A Bedroom Closet~
+This bedroom closet reeks of sulphur and rotten fruit.  Whatever was in
+here though certainly isn't anymore.  The walls look like something with
+very long nails rended them and the glisten of mucus lines the walls.  
+~
+0 13 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+AB 0 3418
+M 0 H 100
+S
+#3421
+A Destroyed Library~
+This library is in utter shambles.  Bookcases look to have been tossed
+around, while water damaged books and carpeting reek of mold and mildew. 
+Some sort of nest looks to have been built in the corner of the room, held
+together by mucus and paper.  
+~
+0 0 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D2
+~
+~
+AB 0 3417
+M 0 H 100
+S
+#3422
+The Clock Room~
+This room is surprisingly untouched by the damage that seems to have
+ravaged the rest of the upstairs.  Outside of a few wall clocks that seem to
+have fallen, there is little to no damage here.  On the far south wall,
+there is an ancient looking grandfather clock.  
+~
+0 0 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+A 0 3417
+M 0 H 100
+S
+#3423
+The Prince's Office~
+This room is rather spartan.  There is thick red carpeting on the floor,
+and the walls have an abstract stucco pattern on them while being painted a
+light grey.  There is recessed lighting which creates some shadows in the
+room.  
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+A 0 3424
+D3
+~
+~
+A 0 3417
+M 0 H 100
+S
+#3424
+The Sanctuary of the Prince~
+At one point, this room served as the sanctuary and safe haven of the
+Prince.  Now, this room served as the place where he met his final demise. 
+The room looks like someone set off an explosive device in the room, the
+damage is so great.  The shattered furniture gives testiment to the damage
+done.  
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D2
+~
+~
+A 0 3423
+D5
+~
+~
+AM 0 3425
+M 0 H 100
+S
+#3425
+The Secret Escape Tunnel~
+This small tunnel is obviously designed as an escape tunnel for one.  It
+is built into the wall of the estate building and the steel rung ladder
+leads down further into the darkness.  
+~
+0 9 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D4
+~
+~
+AM 0 3424
+D5
+~
+~
+0 0 3426
+M 0 H 100
+S
+#3426
+The Secret Escape Tunnel~
+This small tunnel is obviously designed as an escape tunnel for one.  It
+is built into the wall of the estate building and the steel rung ladder
+leads down further into the darkness.  
+~
+0 9 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D4
+~
+~
+0 0 3425
+D5
+~
+~
+0 0 3427
+M 0 H 100
+S
+#3427
+Bottom of the Tunnel~
+This small tunnel is obviously designed as an escape tunnel for one.  It
+is built into the wall of the estate building and the steel rung ladder
+leads up into the darkness.  
+~
+0 9 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D2
+~
+~
+0 0 3428
+D4
+~
+~
+0 0 3426
+M 0 H 100
+S
+#3428
+The Chamber of Mirrors~
+This room is lined with mirrors along all the walls and in the upper
+corner's of the ceiling.  And then, seemingly without pattern, the mirrors
+rotate and the mirrors change, giving off an eerie fun house feeling to it. 
+This room makes you feel very uncomfortable.  
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 3427
+D1
+~
+~
+0 0 3430
+D2
+~
+~
+AI 3440 3429
+M 0 H 100
+S
+#3429
+The Security Room~
+This room used to be the main security room for the Tremere Chantry, and
+by default, the prince as well.  A pair of flashing red lights is going off
+in the southeast corner of the room, apparently an alert of sometype.  A
+very large and sophisticated security console lines the south, west, and
+eastern wall.  A number of lights are flashing at the console.  
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+E
+console~
+The security console is flashing numerous lights, all which seem to
+indicate that the security system is in autonomous cycle mode.  Many
+of the defense systems are down and the fire supression system has
+been activated to put out numerous fires throughout the complex.
+Very few of the security cameras are still active.
+~
+D0
+~
+~
+AI 0 3428
+M 0 H 100
+S
+#3430
+A Dimly Lit Corridor~
+This corridor is carved out of the stone, as if by hand.  Unlike the rest
+of the Chantry, this corridor is lit with oil lamps that illuminate the
+corridor and give off a noxious, black, hazy fog.  
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 3431
+D3
+~
+~
+0 0 3428
+M 0 H 100
+S
+#3431
+A Dimly Lit Corridor~
+This corridor is carved out of the stone, as if by hand.  Unlike the rest
+of the Chantry, this corridor is lit with oil lamps that illuminate the
+corridor and give off a noxious, black, hazy fog.  
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+AB 0 3432
+D3
+~
+~
+0 0 3430
+M 0 H 100
+S
+#3432
+The Chamber of Many~
+This poorly lit chamber is lit by smoking braziers which help to obscure
+the room with heavy smoke.  The floor is very rough and the chamber seems to
+echo oddly.  A long hallway seems to lead off to the west, while smaller
+chambers go in every other direction.  
+~
+0 9 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+AB 0 3433
+D1
+~
+~
+ABC 0 3435
+D2
+~
+~
+AB 0 3434
+D3
+~
+~
+AB 0 3431
+M 0 H 100
+S
+#3433
+The Meditation Chamber~
+This small, rough stone chamber is lit by a lantern which is positioned
+so to illuminate the room softly.  A thickly padded rug is situated in the
+middle of the chamber.  No other adornments can be found in the room.  There
+is a archway that leads back to the south.  
+~
+0 4105 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D2
+~
+~
+AB 0 3432
+M 0 H 100
+S
+#3434
+The Chamber of Greater Summonings~
+This chamber, while made from the natural earth, has been carefully
+smoothed out and finished.  There is a shelf on the far south wall, which is
+lined with various items.  The chamber itself is domed and there are no
+forms of illumination in the chamber.  Apparently, in order to see in this
+chamber, you need to bring your own light.  
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+AB 0 3432
+M 0 H 100
+S
+#3435
+The Final Escape~
+This chamber is the final escape chamber for the Tremere chantry.  This
+secret tunnel is used to evacuate the chantry in case of an attack.  
+~
+0 9 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D3
+~
+~
+ABC 0 3432
+M 0 H 100
+S
+#3450
+Apartment Hallway~
+This is your pretty normal apartment hallway.  A worn green carpet covers
+the floor and is thin and stained with dirt and muck.  A door with the
+number "15" on it is to the north.  
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+The door is blackened to the north and smells of chlorine and blood.  
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+This door is painted white and has the number "15" stenciled on it.
+~
+door~
+ABCH 0 3451
+S
+#3451
+Entry Hallway~
+This hallway is tiled with a checkered white and black tile.  Recessed
+lighting gives the hallway a dim glow to the hallway.  To the north is
+apparently a living room, while to the south is the exit from the apartment.
+~
+0 8 0
+E
+XNUMB1~
+Smokey Hallway~
+E
+XDUMB1~
+The hallway is smokey and hazy.  The screams and echoes of both human and
+animal can be heard from the walls and indeed, it seems like their skulls
+push in and out of the wall...  
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+0 0 3452
+D2
+You see a door that has been painted white.
+~
+door~
+ABCH 0 3450
+S
+#3452
+The Living Room~
+This living room is pretty standard.  A blanc colored carpet is on the
+floor and the walls are painted an eggshell white as well.  The walls have
+sconces built into them that provide light in the room, casting few shadows
+in the room.  There is a slight smell of muskiness that comes from this room
+as well.  
+~
+0 8 0
+E
+XNUMB1~
+Charnel Pit~
+E
+XDUMB1~
+A pile of bones, most likely animal form a charnel pit in the center of
+the room.  The howls of dying canines seems its loudest here and smell of
+acid and blood overpower all over senses.  A trail of gore and entrails
+leads to the west while a burned and pitted trail leads to the east.  
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D1
+~
+~
+0 0 3456
+D2
+~
+~
+0 0 3451
+D3
+~
+~
+0 0 3453
+S
+#3453
+Smaller Hallway~
+This smaller hallway is carpeted with a shag red carpet.  A single light
+in the ceiling illuminates the hallway, which is not more than eight to ten
+feet long.  There are both doors to the north and the south.  
+~
+0 8 0
+E
+XNUMB1~
+Smaller, Bloody Hallway~
+E
+XDUMB1~
+This hallway is nothing more than a trail of blood leading to the north.  
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+door~
+A 0 3454
+D1
+~
+~
+0 0 3452
+D2
+~
+door~
+A 0 3455
+S
+#3454
+Master Bedroom~
+This room is lit with red and purple electric candles and is the largest
+room in the apartment.  The bedroom walls are a blue so deep it looks almost
+black and the carpet is a plush red.  There is one window in the northern
+wall, but look like it's been covered over with something and then heavily
+draped.  The heavy smell of incense lingers in the room and makes the room
+hazy.  
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+This room is a revolting and disgusting place.  Blood runs down from the
+walls and covers the floor in a slick and disgusting form of liquid carpet. 
+A altar, covered in entrails and blood lies where the bed in the penumbra
+was.  The smell of the coppery blood and rotted entrails reeks from the room
+and overpowers all other smells.  
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D2
+~
+~
+A 0 3453
+S
+#3455
+Bathroom~
+The bathroom here is a rather large bathroom, considering the apartment
+building.  New tile as obviously been put in as had a nice shower.  The
+lighting from the vanity illuminates the room quite well and it is generally
+very clean.  
+~
+0 8 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D0
+~
+~
+A 0 3453
+S
+#3456
+Apartment Kitchen~
+The kitchen is small, probably no more than eight by eight feet, and that
+is being generous.  There is barely enough room for one person to fit in
+here, let alone much else.  The counters are white marble and the floor is
+tiled in a criss-crossing line pattern.  
+~
+0 2056 0
+E
+XNUMB1~
+Pool of Acidic Balefire~
+E
+XDUMB1~
+A glowing pool of greenish liquid seems to swirl around here.  Small
+flames seem to leap and jump out from it and then die quickly.  It hurts to
+even be in this room, so powerful is the acidic smell in this room.  
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+D3
+~
+~
+0 0 3452
+S
+#3460
+Max's Play Room~
+This room is obviously dedicated to someone with a darker look on life. 
+The walls are painted a deep red and is carpeted with soft, deep blue
+carpet.  Two white stone colums rise up out of the floor, an even eight feet
+apart, and go into the ceiling.  The lighting in this room is completely
+recessed and is makes the room appear darker than it is.  
+~
+0 12 0
+E
+XNUMB1~
+~
+E
+XDUMB1~
+~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+~
+S
+#0
+
+
+
+#RESETS
+D 0 3401 0 3
+D 0 3402 2 5
+D 0 3403 0 7
+D 0 3404 2 7
+D 0 3414 0 3
+D 0 3417 0 3
+D 0 3418 2 3
+D 0 3418 3 3
+D 0 3420 1 3
+D 0 3421 2 3
+D 0 3431 1 3
+D 0 3432 0 3
+D 0 3432 1 7
+D 0 3432 2 3
+D 0 3432 3 3
+D 0 3433 2 3
+D 0 3434 0 3
+D 0 3435 3 7
+D 0 3450 0 135
+D 0 3451 2 135
+O 0 3401 0 3403
+O 0 3403 0 3406
+O 0 3404 0 3406
+O 0 3404 0 3406
+O 0 3404 0 3406
+O 0 3405 0 3411
+P 0 3406 1 3405 1
+O 0 3412 0 3419
+O 0 3413 0 3419
+O 0 3415 0 3423
+M 1 3451 1 3452 1
+O 0 3456 0 3452
+P 0 3457 1 3456 1
+O 0 3451 0 3454
+O 0 3452 0 3454
+M 1 3450 1 3454 1
+P 0 3453 1 3452 1
+O 0 3450 0 3455
+O 0 3454 0 3456
+P 0 3455 1 3454 1
+O 0 3460 0 3460
+O 0 3461 0 3460
+S
+
+
+
+#SHOPS
+0
+
+
+
+#$

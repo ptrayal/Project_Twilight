@@ -1,0 +1,10 @@
+#!/bin/csh
+
+# Change to area directory.
+cd ../area
+
+# Set limits.
+if ( -e shutdown.txt ) rm -f shutdown.txt
+
+# Run Project Twilight Debugging.
+gdb ../src/project

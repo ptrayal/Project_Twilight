@@ -1,0 +1,3270 @@
+#AREADATA
+Name Harbor Docks <not done>~
+Builders Rafkin Aeris~
+VNUMs 8383 8500
+Credits Rafkin~
+Security 1
+Flags H
+Price 1
+End
+
+
+
+#MOBILES
+#8383
+john newbie~
+John, a newbie~
+John, a newbie, stands here looking lost.~
+Try saying stuff, see what happens.  ~
+human~
+ABYc 0 25 0 0 0 none
+0 0 0 0
+10 10 1 0
+AHMV ABCDEFGHIJK huge flesh
+A 0
+I 0
+Tr 0 it look like~ emote begins to look confused, {Y'{CI am not sure I understand you.  What are you asking me?{Y'{x~
+Tr 0 **Base**~ **base**~
+Tr 0 are you stupid~ emote looks puzzled, {Y'{CI'm not sure I understand you.  Are you calling me stupid?{Y'{x~
+Tr 0 the reward~ emote smiles and says, {Y'{CYes, if you help me I will help you.  Why do you ask?{Y'{x~
+Tr 0 a reward~ emote smiles and says, {Y'{CYes, if you help me I will help you.  Why do you ask?{Y'{x~
+Tr 0 is it worth~ emote sighs, {Y'{CRight now the cost of my ship is more to me than anything.  If only there was someone here that could find my docking permit.{Y'{x~
+Tr 0 pay me for that~ emote smiles and says, {Y'{CDo not worry! If you help me I'll be sure to reward you nicely!{Y'{x~
+Tr 0 want me to do~ emote says, {Y'{CCan you help me find my docking permit?  It must be around here somewhere.{Y'{x~
+Tr 0 is a dock~ emote looks slightly confused, {Y'{CIf you do not know I will not tell you.{Y'{x~
+Tr 0 is a ship~ emote looks slightly confused, {Y'{CIf you do not know I will not tell you.{Y'{x~
+Tr 0 seen what~ emote looks confused, {Y'{CWhat? You confuse me.  Can you please explain that?{Y'{x~
+Tr 0 what is a docking permit~ emote says, {Y'{CWell, you see it's this form I need to dock or leave the dock with my ship.  Have you seen it?{Y'{x~
+Tr 0 good luck~ emote smiles and says, {Y'{COh thank you very much, I do hope I can find it soon ....{Y'{x~
+Tr 0 talking about~ emote sighs, {Y'{CYou see, I lost this docking permit and I can't leave port without it.  Can you help me find it?{Y'{x~
+Tr 0 I will help~ emote says, {Y'{CYes, thank goodness you are here! I lost something around here somewhere and I can not seem to find it.  Can you find it?{Y'{x~
+Tr 0 explain it~ emote says, {Y'{CI am not sure, why not find out what it is I am looking for?{Y'{x~
+Tr 0 looking for?~ emote says, {Y'{CI lost my docking permit! I can not leave port without it and I can not afford to stay here much longer.  Will you find it?{Y'{x~
+Tr 0 what did you lose?~ emote says, {Y'{CI lost my docking permit!  I can't leave port without it and I can't afford to stay here much longer.  Will you find it?{Y'{x~
+Tr 0 help yourself!~ emote says, {Y'{CBut but ... I'm new!{Y'{xwhine~
+Tr 0 smiles happily.~ emote says, {Y'{CWhat are you so happy about? I still haven't gotten any help!{Y'{x~
+Tr 0 smirks.~ emote smiles as if he is in on the joke.~
+Tr 0 How rude!~ emote looks down and says, {Y'{CYou are a very mean person.{Y'{x~
+Tr 0 points excitedly at John~ emote looks around as if confused.~
+Tr 0 can not help~ emote looks saddened and says, {Y'{COh, I see ... maybe someone else will come along that can help me.{Y'{x~
+Tr 0 the newbie~ emote looks confused and says, {Y'{CWhat's a newbie?{Y'{x~
+Tr 0 what?~ emote says, {Y'{CWhat? You confuse me.  Can you please explain that?{Y'{x~
+Tr 0 and thinks deeply.~ emote looks puzzled, {Y'{CWhat are you thinking about?{Y'{x~
+Tr 0 grins evilly.~ emote begins to generally look scared.scan~
+Tr 0 sure~ emote looks puzzled, {Y'{CSure what?{Y'{x~
+Tr 0 I can help~ emote says, {Y'{CYes, thank goodness you are here! I lost something around here somewhere and I can not seem to find it.  Can you find it?{Y'{x~
+Tr 0 you need help~ emote says, {Y'{CYes, thank goodness you are here.  I lost something around here somewhere and I can not seem to find it.  Can you find it?{Y'{x~
+Tr 0 has arrived.~ emote says, {Y'{COh my goodness I just don't know what to do! Can someone please help me?{Y'{x~
+Tr 0 gives you a docking permit.~ emote smiels and says, {Y'{CWow look at that! Thank you so very much! Please take this as my way of saying thanks.{Y'{xdrop permiteastwest~
+Tr 0 did you lose~ emote frowns, {Y'{CHaven't you been listening? I lost my docking permit ... if I knew where it was it wouldn't be lost would it?{Y'{x~
+Tr 0 your ship~ emote says, {Y'{CWell perhaps when I can get someone to help me find my permit I can take that person for a tour of my ship.{Y'{x~
+Tr 0 permit look~ emote says, {Y'{CWell, it's a single piece of legal sized paper with writing on the front of it.  I tell you what, when I find it I will show it to you.{Y'{x~
+#8384
+seagull~
+a seagull~
+A seagull walks around boldly.~
+A seagull boldly struts about, looking for food.
+~
+water fowl~
+AGW Tb 25 0 0 0 none
+H 0 R 0
+10 10 0 0
+AGHMVW ACDEFHJKPU medium flesh
+A FS
+I 0
+#8385
+Father Time [01]~
+Father Time~
+Father Time stands here keeping an eye on things.~
+Father time stands here, keeping an eye on things.
+~
+human~
+ABGYc DFJMTZ 125 0 0 0 none
+0 A BP 0
+10 10 1 0
+AHMV ABCDEFGHIJK huge flesh
+A HS
+I 0
+Tr 0 gogogo~ tell rafkin orders recieved~
+#8386
+spence~
+Spence~
+Spence sits on a stool in the corner next to an empty oil drum.~
+Spence sits here.
+~
+human~
+AB 0 50 0 0 0 none
+0 0 0 0
+10 10 1 0
+AHMV ABCDEFGHIJK huge flesh
+A 0
+I 0
+Tr 0 **base**~ **base**~
+#8387
+sam~
+Sam~
+Sam stands behind a counter keeping a close eye on Spence.~
+Sam stands here.
+~
+human~
+AB 0 50 0 0 0 none
+0 0 0 0
+10 10 1 0
+AHMV ABCDEFGHIJK huge flesh
+A 0
+I 0
+Tr 0 **base**~ **base**~
+#0
+
+
+
+#OBJECTS
+#8383
+semi trailer~
+a semi trailer doorway~
+This semi trailer rests on it's rear wheels and it's front standsgathering rust and salt deposits every passing minute.  At times the trailercan be heard groaning slightly louder than the docks.  ~
+This semi trailer rests on it's rear wheels and it's front standsgathering rust and salt deposits every passing minute.  At times thetrailer can be heard groaning slightly louder than the docks.~
+steel~
+29 0 0
+9999 A A 8412 0 0
+100 0 70
+E
+--USES~
+-2~
+Q 4
+#8384
+semi trailer~
+a semi trailer doorway~
+This semi trailer rests on it's rear wheels and it's front standsgathering rust and salt deposits every passing minute.  At times the trailercan be heard groaning slightly louder than the docks.  ~
+This semi trailer rests on it's rear wheels and it's front standsgathering rust and salt deposits every passing minute.  At times thetrailer can be heard groaning slightly louder than the docks.~
+steel~
+29 0 0
+9999 A A 8413 0 0
+100 0 70
+E
+--USES~
+-2~
+Q 4
+#8385
+semi trailer~
+a semi trailer doorway~
+(null)~
+(null)~
+steel~
+29 0 0
+9999 A A 8414 0 0
+100 0 70
+E
+--USES~
+-2~
+Q 4
+#8405
+silk panties~
+a pair of black silk panties~
+These black silk panties have a thin lace edging in the shape of hearts,and are cut narrow so more skin shows.  These were obviously only made towear when trying to show off and not to wear to work everyday.  ~
+These black silk panties have a thin lace edging in the shape of hearts,and are cut narrow so more skin shows.  These were obviously only madeto wear when trying to show off and not to wear to work everyday.~
+silk~
+11 0 AJ
+0 0 0 0 0
+0
+0 2500 70
+E
+--USES~
+-2~
+Q 0
+#0
+
+
+
+#ROOMS
+#8383
+Entrance to the Docks Parking Lot~
+Six foot tall fencing with razor coil wire guards the entrance to whatappears to be a parking lot just on the other side of the fence.  The fencefollows down southwards about another mile or two and appears as if it'sfull of rusted old half-ton trailers semi-trucks are often seen pullingaround on the highway.  A large {W{Csign{x{g just above the gated entranceto the east stares out at the world with a blank expression.  {x ~
+0 65536 11
+E
+XNUMB1~
+Entrance to the Docks Parking Lot~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+Entrance to the Docks Parking Lot~
+E
+XDDREAM~
+(null)~
+E
+sign~
+----------------------------------------------------------|                   {WSouthside City Docks{x                  ||                                                         ||             {WTrespassers will be prosecuted{x              |-----------------------------------------------------------~
+D1
+(null)~
+(null)~
+0 0 8384
+S
+#8384
+Inside a Parking Lot~
+Walking into the trash-littered parking lot feels like entering the dumpor walking onto the scene of the aftermath of some hurricane tail.  The mainentrance/exit is to the west from here while the parking lot continuesnorth, south, and east.  ~
+0 65536 11
+E
+XNUMB1~
+Inside a Parking Lot~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+Inside a Parking Lot~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8387
+D1
+(null)~
+(null)~
+0 0 8385
+D2
+(null)~
+(null)~
+0 0 8390
+D3
+(null)~
+(null)~
+0 0 8383
+S
+#8385
+Inside a Parking Lot~
+This trash littered parking lot is always empty for some reason, empty ofvehicles that is - trash it seems is of no limit here.  The entrance to thecity's southern docks is to the east while to the west the front of theparking lot can be seen.  ~
+0 65536 11
+E
+XNUMB1~
+Inside a Parking Lot~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+Inside a Parking Lot~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8388
+D1
+(null)~
+(null)~
+0 0 8389
+D2
+(null)~
+(null)~
+0 0 8391
+D3
+(null)~
+(null)~
+0 0 8384
+S
+#8386
+The Ocean~
+The ocean has often held the attention of humans in a way only somethingas great as the ocean is, can.  Once crystal clear and tinted blue like thesky, she now sits here bogged down with layers of oil and fuel from thepassing ships and illegal waste dumping.  Not a single creature can be seenliving in or around it's surface save for the seagulls which stick mainly tothe dock's surface anyways.  ~
+0 65540 6
+E
+XNUMB1~
+~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+(null)~
+S
+#8387
+Inside a Parking Lot~
+This corner of the parking lot appears to be rarely used and as a resultis buried in trash from who knows when and where.  The parking lot continueseast and south from here.  ~
+0 65536 11
+E
+XNUMB1~
+Inside a Parking Lot~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+Inside a Parking Lot~
+E
+XDDREAM~
+(null)~
+D1
+(null)~
+(null)~
+0 0 8388
+D2
+(null)~
+(null)~
+0 0 8384
+S
+#8388
+Inside a Parking Lot~
+Within the boundaries of the parking lot the old docks to the east andall they contain can be seen.  Littered with old beer cans, newsletters, andinvoices.  The entrance to the docks can be seen to the south while theparking lot continues to the west.  ~
+0 65536 11
+E
+XNUMB1~
+Inside a Parking Lot~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+Inside a Parking Lot~
+E
+XDDREAM~
+(null)~
+D2
+(null)~
+(null)~
+0 0 8385
+D3
+(null)~
+(null)~
+0 0 8387
+S
+#8389
+On the Docks~
+The thick, tar covered, wooden planks creak to the soft melody of theocean as it flows in and out from between the support beams that lie hiddennot to far below.  A parking lot can be seen to the west while the dockscontinue to the north.  ~
+0 65536 11
+E
+XNUMB1~
+On the Docks~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+On the Docks~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8392
+D3
+(null)~
+(null)~
+0 0 8385
+S
+#8390
+Inside a Parking Lot~
+This corner of the parking lot appears to be rarely used and as a resultis buried in trash from who knows when and where.  The parking lot continueseast and north from here.  ~
+0 0 11
+E
+XNUMB1~
+Inside a Parking Lot~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+Inside a Parking Lot~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8384
+D1
+(null)~
+(null)~
+0 0 8391
+S
+#8391
+Inside a Parking Lot~
+Within the boundaries of the parking lot the old docks to the east andall they contain can be seen.  Littered with old beer cans, newsletters, andinvoices.  The entrance to the docks can be seen to the north while theparking lot continues to the west.  ~
+0 0 11
+E
+XNUMB1~
+Inside a Parking Lot~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+Inside a Parking Lot~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8385
+D3
+(null)~
+(null)~
+0 0 8390
+S
+#8392
+On the Docks~
+The cold sea breeze and the strong salt smell flood the senses out hereon the docks.  The lapping waves on support beams below struggle in vain todrown out the ever present sound of seagulls screaming for their own littlepiece of the shore front property.  ~
+0 65536 11
+E
+XNUMB1~
+On the Docks~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+On the Docks~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8393
+D2
+(null)~
+(null)~
+0 0 8389
+S
+#8393
+On the Docks~
+Dried sunflower seed shells litter the area here and there as do thefeces of many a bird that's come by in search of those seeds.  The planksunderfoot seem to groan and sigh as if the weight of the world was beingplaced on their shoulders, maybe one of these years the docking authoritieswill come out here and either tear down this place and build somethingbetter or replace the extremely worn support beams.  ~
+0 65536 11
+E
+XNUMB1~
+On the Docks~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+On the Docks~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8394
+D2
+(null)~
+(null)~
+0 0 8392
+S
+#8394
+On the Docks~
+Old semi trailers line up to form a two-story wall to the west and to theeast which make for a very intimidating stroll.  Men in hard hats drivearound here and there in forklifts assisting the giant crane with it's armthat looks to be almost a mile overhead.  Very few people take notice ofstrangers walking around in this area, as so many of the ships crew membersare unknown to so many.  ~
+0 65536 11
+E
+XNUMB1~
+On the Docks~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+On the Docks~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8395
+D2
+(null)~
+(null)~
+0 0 8393
+S
+#8395
+On the Docks~
+The rows upon rows of semi trailers create a shadowy effect on the dockshere which make for an almost spooky aura for this place.  The eastern seawind blows the chilled salty wind over the docks like a misty cloud attimes.  The humidity of being a few hundred feet above the very ocean makesthe cool ocean breeze seem almost necessary.  ~
+0 65536 11
+E
+XNUMB1~
+On the Docks~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+On the Docks~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8396
+D2
+(null)~
+(null)~
+0 0 8394
+S
+#8396
+On the Docks~
+The thick, tar covered, wooden planks creak to the soft melody of theocean as it flows in and out from between the support beams that lie hiddennot to far below.  The semi trailers, now stacked a little further apart,seem a little less intimidating than in other spots on the docks, but stillseem as if at any moment the lightest breeze could come along and they'dcrush someone - hard helmet or not.  ~
+0 65536 11
+E
+XNUMB1~
+On the Docks~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+On the Docks~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8397
+D2
+(null)~
+(null)~
+0 0 8395
+S
+#8397
+On the Docks~
+The cold sea breeze and the strong salt smell flood the senses out hereon the docks.  The lapping waves on support beams below struggle in vain todrown out the ever present sound of seagulls screaming for their own littlepiece of the shore front property.  ~
+0 65536 11
+E
+XNUMB1~
+On the Docks~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+On the Docks~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8398
+D2
+(null)~
+(null)~
+0 0 8396
+S
+#8398
+On the Docks~
+The planks underfoot seem to groan and sigh as if the weight of the worldwas being placed on their shoulders, maybe one of these years the dockingauthorities will come out here and either tear down this place and buildsomething better or replace the extremely worn support beams.  ~
+0 65536 11
+E
+XNUMB1~
+On the Docks~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+On the Docks~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8399
+D2
+(null)~
+(null)~
+0 0 8397
+S
+#8399
+On the Docks~
+To the north a two story building can be seen looking out over the areaas if it were a tall watch tower.  Lots of water damaged planks and supportscan be seen all over this area, in fact it seems as if there is a bit of aswaying motion in this section of the docks.  ~
+0 65536 11
+E
+XNUMB1~
+On the Docks~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+On the Docks~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8400
+D2
+(null)~
+(null)~
+0 0 8398
+S
+#8400
+On the Docks~
+The two story building standing here seems to be in a current state ofdismay as it's owners seem to have left it's completely wooden structure toweather the elements the sea throws at it with no protection whatsoever. Planks that make up the outside walls seem as if they're barely being heldtogether by their old rusty nails.  There appears to be the entrance to thebuilding north a ways from here.  ~
+0 65536 11
+E
+XNUMB1~
+On the Docks~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+On the Docks~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8401
+D2
+(null)~
+(null)~
+0 0 8399
+S
+#8401
+On the Docks~
+The two story building standing here seems to be in a current state ofdismay as it's owners seem to have left it's completely wooden structure toweather the elements the sea throws at it with no protection whatsoever. Planks that make up the outside walls seem as if they're barely being heldtogether by their old rusty nails.  There appears to be the entrance to thebuilding to the north from here.  ~
+0 65536 11
+E
+XNUMB1~
+On the Docks~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+On the Docks~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8402
+D2
+(null)~
+(null)~
+0 0 8400
+S
+#8402
+On the Docks Outside the Main Office~
+Outside the main office for the city docks would seem like the place fora lot of commotion, but it doesn't seem as if there's anyone in.  Sunflowerseed shells litter the ground all over the place here and in most areas itseems as if they melted into the tar covering the wooden planks.  Ships canbe seen moving in and out of harbor to the east while to the south lies thefront gate.  ~
+0 65536 11
+E
+XNUMB1~
+On the Docks~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+On the Docks~
+E
+XDDREAM~
+(null)~
+D1
+(null)~
+(null)~
+0 0 8422
+D2
+(null)~
+(null)~
+0 0 8401
+D3
+(null)~
+(null)~
+AB 0 8403
+S
+#8403
+The Docking Office~
+This dark musty office smells of mold and looks piled to the gills withpaperwork.  Over in the corner stands an empty oil drum with an unfinishedcheckers game sitting atop it waiting to be played out.  The officecontinues south while the exit to the docks outside is to the east.  ~
+0 8 0
+E
+XNUMB1~
+The Docking Office~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+The Docking Office~
+E
+XDDREAM~
+(null)~
+D1
+(null)~
+(null)~
+AB 0 8402
+D2
+(null)~
+(null)~
+0 0 8404
+S
+#8404
+The Docking Office~
+The end of the front counter here is also piled high with paperwork fromwho knows when.  The sound of flies swarming around can be heard coming fromthe staircase just to the south of here, just on the other side of thepolice tape.  ~
+0 8 0
+E
+XNUMB1~
+The Docking Office~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+The Docking Office~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8403
+D2
+(null)~
+(null)~
+0 0 8405
+S
+#8405
+At the Bottom of the Stairs on the First Floor~
+Just on the other side of the now dull yellow police tape this area iscovered in small wood splinters and spots of dried blood.  A fly or twobuzzes in a circular motion over the blood only to land a few minutes laterto clean itself.  The stairs lead up to the second floor and what appears tobe a few broken stairs.  ~
+0 8 0
+E
+XNUMB1~
+At the Bottom of the Stairs on the First Floor~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+At the Bottom of the Stairs on the First Floor~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8404
+D4
+(null)~
+(null)~
+0 0 8408
+S
+#8406
+On the Private Docks~
+(null)~
+0 8 11
+E
+XNUMB1~
+On the Private Docks~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+On the Private Docks~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+exit~
+NS 0 8472
+D1
+(null)~
+(null)~
+0 0 8475
+D2
+(null)~
+exit~
+NS 0 8386
+D3
+(null)~
+(null)~
+0 0 8446
+S
+#8407
+The Lookout~
+The lookout is the spot where anyone could see for miles around if theywanted to.  Built as a bit of a gazebo on the top of the small weatheredshack that serves as the docking registration office, this mostly serves asa way for the registration office to keep an eye on things.  When not in usefor business, seagulls flock around the area putting it to their own use.  ~
+0 0 5
+E
+XNUMB1~
+The Lookout~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+The Lookout~
+E
+XDDREAM~
+(null)~
+D2
+(null)~
+(null)~
+0 0 8408
+S
+#8408
+At the Top of the Stairs on the Second Floor~
+The top of the stairs lies the home of three steps that were broken longago and never replaced.  The soft and ancient wood that holds this placetogether is slowly decaying into sawdust and no one's doing anything aboutit.  ~
+0 8 0
+E
+XNUMB1~
+At the Top of the Stairs on the Second Floor~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+At the Top of the Stairs on the Second Floor~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8407
+D5
+(null)~
+(null)~
+0 0 8405
+S
+#8409
+The Ocean~
+The ocean has often held the attention of humans in a way only somethingas great as the ocean is, can.  Once crystal clear and tinted blue like thesky, she now sits here bogged down with layers of oil and fuel from thepassing ships and illegal waste dumping.  Not a single creature can be seenliving in or around it's surface save for the seagulls which stick mainly tothe dock's surface anyways.  ~
+0 65536 6
+E
+XNUMB1~
+~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8498
+S
+#8410
+The Ocean~
+The ocean has often held the attention of humans in a way only somethingas great as the ocean is, can.  Once crystal clear and tinted blue like thesky, she now sits here bogged down with layers of oil and fuel from thepassing ships and illegal waste dumping.  Not a single creature can be seenliving in or around it's surface save for the seagulls which stick mainly tothe dock's surface anyways.  ~
+0 65536 6
+E
+XNUMB1~
+~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+(null)~
+D2
+(null)~
+(null)~
+0 0 8411
+S
+#8411
+The Ocean~
+The ocean has often held the attention of humans in a way only somethingas great as the ocean is, can.  Once crystal clear and tinted blue like thesky, she now sits here bogged down with layers of oil and fuel from thepassing ships and illegal waste dumping.  Not a single creature can be seenliving in or around it's surface save for the seagulls which stick mainly tothe dock's surface anyways.  ~
+0 65536 6
+E
+XNUMB1~
+~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8410
+D2
+(null)~
+the~
+0 0 8481
+S
+#8412
+Inside a Trailer~
+(null)~
+0 65544 0
+E
+XNUMB1~
+Inside a Trailer~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+Inside a Trailer~
+E
+XDDREAM~
+(null)~
+D1
+(null)~
+(null)~
+0 0 8418
+S
+#8413
+Inside a Trailer~
+(null)~
+0 65536 1
+E
+XNUMB1~
+Inside a Trailer~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+Inside a Trailer~
+E
+XDDREAM~
+(null)~
+D1
+(null)~
+(null)~
+0 0 8419
+S
+#8414
+Inside a Trailer~
+(null)~
+0 65536 1
+E
+XNUMB1~
+Inside a Trailer~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+Inside a Trailer~
+E
+XDDREAM~
+(null)~
+D1
+(null)~
+(null)~
+0 0 8420
+S
+#8415
+Aboard The Son of a Gun~
+(null)~
+0 0 0
+E
+XNUMB1~
+Aboard The Son of a Gun~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+Aboard The Son of a Gun~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8475
+D1
+(null)~
+exit~
+NS 0 8491
+D2
+(null)~
+exit~
+NS 0 8487
+D3
+(null)~
+exit~
+NS 0 8386
+S
+#8416
+The Ocean~
+The ocean has often held the attention of humans in a way only somethingas great as the ocean is, can.  Once crystal clear and tinted blue like thesky, she now sits here bogged down with layers of oil and fuel from thepassing ships and illegal waste dumping.  Not a single creature can be seenliving in or around it's surface save for the seagulls which stick mainly tothe dock's surface anyways.  ~
+0 65536 6
+E
+XNUMB1~
+~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+(null)~
+D2
+(null)~
+(null)~
+0 0 8417
+S
+#8417
+The Ocean~
+The ocean has often held the attention of humans in a way only somethingas great as the ocean is, can.  Once crystal clear and tinted blue like thesky, she now sits here bogged down with layers of oil and fuel from thepassing ships and illegal waste dumping.  Not a single creature can be seenliving in or around it's surface save for the seagulls which stick mainly tothe dock's surface anyways.  ~
+0 65536 6
+E
+XNUMB1~
+~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8416
+S
+#8418
+Trailer Parking~
+(null)~
+0 65536 1
+E
+XNUMB1~
+Trailer Parking~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+Trailer Parking~
+E
+XDDREAM~
+(null)~
+D2
+(null)~
+(null)~
+0 0 8419
+S
+#8419
+Trailer Parking~
+(null)~
+0 65536 1
+E
+XNUMB1~
+Trailer Parking~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+Trailer Parking~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8418
+D2
+(null)~
+(null)~
+0 0 8420
+S
+#8420
+Trailer Parking~
+(null)~
+0 65536 1
+E
+XNUMB1~
+Trailer Parking~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+Trailer Parking~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8419
+D1
+(null)~
+(null)~
+0 0 8446
+D2
+(null)~
+(null)~
+0 0 8421
+S
+#8421
+On the Docks~
+(null)~
+0 65536 1
+E
+XNUMB1~
+On the Docks~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+On the Docks~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8420
+D2
+(null)~
+exit~
+NS 0 8497
+S
+#8422
+On the Docks Near the Ships~
+The groaning of the ships to the east mixing with the sighing sound ofthe waves as they lap onto the support beams of the docks and off the sidesof the passing ships give the ocean an almost erotic sound.  The dockscontinue west and south from here.  ~
+0 65536 11
+E
+XNUMB1~
+On the Docks Near the Ships~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+On the Docks Near the Ships~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+exit~
+NS 0 8448
+D1
+(null)~
+exit~
+NS 0 8416
+D2
+(null)~
+(null)~
+0 0 8423
+D3
+(null)~
+(null)~
+0 0 8402
+S
+#8423
+On the Docks Near the Ships~
+The seagulls seem fairly crowded around here on the docks as well as inthe air ready to fight over any sign of free food on a moments notice.  Theold water damaged planks and support beams seem to sway ever so slightlywith the waters movement.  ~
+0 65536 11
+E
+XNUMB1~
+On the Docks Near the Ships~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+On the Docks Near the Ships~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8422
+D1
+(null)~
+exit~
+NS 0 8417
+D2
+(null)~
+(null)~
+0 0 8424
+S
+#8424
+On the Docks Near the Ships~
+The thick smell of salt fills the air and the cries of seagulls shoutingamongst themselves litter the airwaves like someone's dirty laundry.  Thehumidity is strongest out over the ocean here as ocean spray finds it's wayto your clothing.  ~
+0 65536 11
+E
+XNUMB1~
+On the Docks Near the Ships~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+On the Docks Near the Ships~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8423
+D2
+(null)~
+(null)~
+0 0 8425
+S
+#8425
+On the Docks Near the Ships~
+The cold sea breeze and the strong salt smell flood the senses out hereon the docks.  The lapping waves on support beams below struggle in vain todrown out the ever present sound of seagulls screaming for their own littlepiece of the shore front property.  ~
+0 65536 11
+E
+XNUMB1~
+On the Docks Near the Ships~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+On the Docks Near the Ships~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8424
+D2
+(null)~
+(null)~
+0 0 8426
+S
+#8426
+On the Docks Near the Ships~
+The rows upon rows of semi trailers create a shadowy effect on the dockshere which make for an almost spooky aura for this place.  The eastern seawind blows the chilled salty wind over the docks like a misty cloud attimes.  The humidity of being a few hundred feet above the very ocean makesthe cool ocean breeze seem almost necessary.  ~
+0 65536 11
+E
+XNUMB1~
+On the Docks Near the Ships~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+On the Docks Near the Ships~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8425
+D2
+(null)~
+(null)~
+0 0 8427
+S
+#8427
+On the Docks Near the Ships~
+Next to a large ship that looks to be a cargo ship of some type has somewriting along the front of it's hull: INSTIGATOR.  Much further down thereseems to be some smaller writing but from here it's barely a dark line alongthe ship's light gray hull.  The docks continue north and south from here.  ~
+0 65536 11
+E
+XNUMB1~
+On the Docks Near the Ships~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+On the Docks Near the Ships~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8426
+D2
+(null)~
+(null)~
+0 0 8428
+S
+#8428
+On the Docks Near the Ships~
+The rows upon rows of semi trailers create a shadowy effect on the dockshere which make for an almost spooky aura for this place.  The eastern seawind blows the chilled salty wind over the docks like a misty cloud attimes.  The humidity of being a few hundred feet above the very ocean makesthe cool ocean breeze seem almost necessary.  ~
+0 65536 11
+E
+XNUMB1~
+On the Docks Near the Ships~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+On the Docks Near the Ships~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8427
+D2
+(null)~
+(null)~
+0 0 8429
+S
+#8429
+On the Docks Near the Ships~
+Sunflower seeds litter the tar covered planks here and there, which mightbe what's holding the whole place together, driving the seagulls wild.  Awalkway to board a large ship parked next to the docks can be seen to thesouth of here.  ~
+0 65536 11
+E
+XNUMB1~
+On the Docks Near the Ships~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+On the Docks Near the Ships~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8428
+D2
+(null)~
+(null)~
+0 0 8430
+S
+#8430
+On the Docks Near the Ships~
+Old semi trailers line up to form a two-story wall to the to the eastwhich makes for a very intimidating stroll.  Men in hard hats drive aroundhere and there in forklifts assisting the giant crane with it's arm thatlooks to be almost a mile overhead.  Very few people take notice ofstrangers walking around in this area, as so many of the ships crew membersare unknown to so many.  A walkway to the east leads to a large cargo shipcalled The Instigator.  ~
+0 65536 11
+E
+XNUMB1~
+On the Docks Near the Ships~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+On the Docks Near the Ships~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8429
+D1
+(null)~
+(null)~
+0 0 8455
+D2
+(null)~
+(null)~
+0 0 8431
+S
+#8431
+On the Docks Near the Ships~
+Old semi trailers line up to form a two-story wall to the west which makefor a very intimidating stroll.  Men in hard hats drive around here andthere in forklifts assisting the giant crane with it's arm that looks to bealmost a mile overhead.  Very few people take notice of strangers walkingaround in this area, as so many of the ships crew members are unknown to somany.  ~
+0 65536 11
+E
+XNUMB1~
+On the Docks Near the Ships~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+On the Docks Near the Ships~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8430
+D1
+(null)~
+exit~
+NS 0 8498
+D2
+(null)~
+(null)~
+0 0 8432
+S
+#8432
+On the Docks Near the Ships~
+Next to a large ship that looks to be a cargo ship of some type has somewriting along the front of it's hull: MINNOW.  Much further down there seemsto be some smaller writing but from here it's barely a dark line along theship's light gray hull.  The docks continue north and south from here.  ~
+0 65536 11
+E
+XNUMB1~
+On the Docks Near the Ships~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+On the Docks Near the Ships~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8431
+D1
+(null)~
+exit~
+NS 0 8409
+D2
+(null)~
+(null)~
+0 0 8433
+S
+#8433
+On the Docks Near the Ships~
+The thick, tar covered, wooden planks creak to the soft melody of theocean as it flows in and out from between the support beams that lie hiddennot to far below and off the ships hulls to the east of here.  ~
+0 65536 11
+E
+XNUMB1~
+On the Docks Near the Ships~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+On the Docks Near the Ships~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8432
+D2
+(null)~
+(null)~
+0 0 8434
+S
+#8434
+On the Docks Near the Ships~
+Dried sunflower seed shells litter the area here and there as do thefeces of many a bird that's come by in search of those seeds.  The planksunderfoot seem to groan and sigh as if the weight of the world was beingplaced on their shoulders, maybe one of these years the docking authoritieswill come out here and either tear down this place and build somethingbetter or simply replace the extremely worn support beams.  ~
+0 65536 11
+E
+XNUMB1~
+On the Docks Near the Ships~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+On the Docks Near the Ships~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8433
+D2
+(null)~
+(null)~
+0 0 8435
+S
+#8435
+On the Docks Near the Ships~
+The old water damaged planks and support beams seem to sway ever soslightly with the waters movement, which adds to the ever present sounds ofthe waves being pushed around by the cool salty winds.  The docks continuenorth and south from here.  ~
+0 65536 11
+E
+XNUMB1~
+On the Docks Near the Ships~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+On the Docks Near the Ships~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8434
+D2
+(null)~
+(null)~
+0 0 8436
+S
+#8436
+On the Docks Near the Ships~
+(null)~
+0 65536 11
+E
+XNUMB1~
+On the Docks Near the Ships~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+On the Docks Near the Ships~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8435
+D2
+(null)~
+(null)~
+0 0 8437
+S
+#8437
+On the Docks Near the Ships~
+(null)~
+0 65536 11
+E
+XNUMB1~
+On the Docks Near the Ships~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+On the Docks Near the Ships~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8436
+D2
+(null)~
+(null)~
+0 0 8438
+S
+#8438
+On the Docks Near the Ships~
+(null)~
+0 65536 11
+E
+XNUMB1~
+On the Docks Near the Ships~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+On the Docks Near the Ships~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8437
+D2
+(null)~
+(null)~
+0 0 8439
+S
+#8439
+On the Docks Near the Ships~
+(null)~
+0 65536 11
+E
+XNUMB1~
+On the Docks Near the Ships~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+On the Docks Near the Ships~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8438
+D1
+(null)~
+(null)~
+0 0 8464
+D2
+(null)~
+(null)~
+0 0 8440
+S
+#8440
+On the Docks Near the Ships~
+(null)~
+0 65536 11
+E
+XNUMB1~
+On the Docks Near the Ships~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+On the Docks Near the Ships~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8439
+D1
+(null)~
+exit~
+NS 0 8493
+D2
+(null)~
+(null)~
+0 0 8441
+S
+#8441
+On the Docks Near the Ships~
+(null)~
+0 65536 11
+E
+XNUMB1~
+On the Docks Near the Ships~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+On the Docks Near the Ships~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8440
+D1
+(null)~
+exit~
+NS 0 8496
+D2
+(null)~
+(null)~
+0 0 8442
+S
+#8442
+On the Docks Near the Ships~
+(null)~
+0 65536 11
+E
+XNUMB1~
+On the Docks Near the Ships~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+On the Docks Near the Ships~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8441
+D1
+(null)~
+exit~
+NS 0 8499
+D2
+(null)~
+(null)~
+0 0 8443
+S
+#8443
+On the Docks Near the Ships~
+(null)~
+0 65536 11
+E
+XNUMB1~
+On the Docks Near the Ships~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+On the Docks Near the Ships~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8442
+D1
+(null)~
+exit~
+NS 0 8446
+D2
+(null)~
+(null)~
+0 0 8444
+S
+#8444
+On the Docks Near the Ships~
+(null)~
+0 65536 11
+E
+XNUMB1~
+On the Docks Near the Ships~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+On the Docks Near the Ships~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8443
+D1
+(null)~
+exit~
+NS 0 8467
+D2
+(null)~
+(null)~
+0 0 8445
+S
+#8445
+On the Docks Near the Ships~
+(null)~
+0 65536 11
+E
+XNUMB1~
+On the Docks Near the Ships~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+On the Docks Near the Ships~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8444
+D1
+(null)~
+exit~
+NS 0 8472
+D2
+(null)~
+(null)~
+0 0 8446
+S
+#8446
+On the Docks Near the Ships~
+(null)~
+0 65536 11
+E
+XNUMB1~
+On the Docks Near the Ships~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+On the Docks Near the Ships~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8445
+D1
+(null)~
+(null)~
+0 0 8406
+D2
+(null)~
+(null)~
+0 0 8476
+D3
+(null)~
+(null)~
+0 0 8420
+S
+#8447
+Aboard The Mosquito~
+(null)~
+0 0 0
+E
+XNUMB1~
+Aboard The Mosquito~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+Aboard The Mosquito~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+exit~
+NS 0 8386
+D1
+(null)~
+exit~
+NS 0 8487
+D2
+(null)~
+exit~
+NS 0 8490
+D3
+(null)~
+(null)~
+0 0 8456
+S
+#8448
+The Ocean~
+The ocean has often held the attention of humans in a way only somethingas great as the ocean is, can.  Once crystal clear and tinted blue like thesky, she now sits here bogged down with layers of oil and fuel from thepassing ships and illegal waste dumping.  Not a single creature can be seenliving in or around it's surface save for the seagulls which stick mainly tothe dock's surface anyways.  ~
+0 65540 6
+E
+XNUMB1~
+~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+(null)~
+S
+#8449
+Aboard The Instigator~
+(null)~
+0 0 0
+E
+XNUMB1~
+Aboard The Instigator~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+Aboard the Instigator~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+exit~
+NS 0 8417
+D1
+(null)~
+exit~
+NS 0 8474
+D2
+(null)~
+(null)~
+0 0 8450
+D3
+(null)~
+exit~
+NS 0 8424
+S
+#8450
+Aboard The Instigator~
+(null)~
+0 0 0
+E
+XNUMB1~
+Aboard The Instigator~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+Aboard the Instigator~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8449
+D1
+(null)~
+exit~
+NS 0 8465
+D2
+(null)~
+(null)~
+0 0 8451
+D3
+(null)~
+exit~
+NS 0 8425
+S
+#8451
+Aboard The Instigator~
+(null)~
+0 0 0
+E
+XNUMB1~
+Aboard The Instigator~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+Aboard the Instigator~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8450
+D1
+(null)~
+exit~
+NS 0 8483
+D2
+(null)~
+(null)~
+0 0 8452
+D3
+(null)~
+exit~
+NS 0 8426
+D5
+(null)~
+(null)~
+0 0 8469
+S
+#8452
+Aboard The Instigator~
+(null)~
+0 0 0
+E
+XNUMB1~
+Aboard The Instigator~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+Aboard the Instigator~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8451
+D1
+(null)~
+exit~
+NS 0 8485
+D2
+(null)~
+(null)~
+0 0 8453
+D3
+(null)~
+exit~
+NS 0 8427
+S
+#8453
+Aboard The Instigator~
+(null)~
+0 0 0
+E
+XNUMB1~
+Aboard The Instigator~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+Aboard the Instigator~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8452
+D1
+(null)~
+exit~
+NS 0 8488
+D2
+(null)~
+(null)~
+0 0 8454
+D3
+(null)~
+exit~
+NS 0 8428
+S
+#8454
+Aboard The Instigator~
+(null)~
+0 0 0
+E
+XNUMB1~
+Aboard The Instigator~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+Aboard the Instigator~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8453
+D1
+(null)~
+exit~
+NS 0 8492
+D2
+(null)~
+(null)~
+0 0 8455
+D3
+(null)~
+exit~
+NS 0 8429
+S
+#8455
+Aboard The Instigator~
+(null)~
+0 0 0
+E
+XNUMB1~
+Aboard The Instigator~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+Aboard the Instigator~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8454
+D1
+(null)~
+exit~
+NS 0 8495
+D2
+(null)~
+exit~
+NS 0 8498
+D3
+(null)~
+(null)~
+0 0 8430
+S
+#8456
+On the Private Docks~
+(null)~
+0 65536 11
+E
+XNUMB1~
+On the Private Docks~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+On the Private Docks~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8476
+D1
+(null)~
+(null)~
+0 0 8447
+D2
+(null)~
+exit~
+NS 0 8494
+D3
+(null)~
+exit~
+NS 0 8497
+S
+#8457
+The Ocean~
+The ocean has often held the attention of humans in a way only somethingas great as the ocean is, can.  Once crystal clear and tinted blue like thesky, she now sits here bogged down with layers of oil and fuel from thepassing ships and illegal waste dumping.  Not a single creature can be seenliving in or around it's surface save for the seagulls which stick mainly tothe dock's surface anyways.  ~
+0 65536 6
+E
+XNUMB1~
+~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+(null)~
+D2
+(null)~
+(null)~
+0 0 8491
+S
+#8458
+Aboard The Minnow~
+(null)~
+0 0 0
+E
+XNUMB1~
+Aboard The Minnow~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+Aboard The Minnow~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+exit~
+NS 0 8409
+D1
+(null)~
+exit~
+NS 0 8410
+D2
+(null)~
+(null)~
+0 0 8459
+D3
+(null)~
+exit~
+NS 0 8433
+S
+#8459
+Aboard The Minnow~
+(null)~
+0 0 0
+E
+XNUMB1~
+Aboard The Minnow~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+Aboard The Minnow~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8458
+D1
+(null)~
+exit~
+NS 0 8411
+D2
+(null)~
+(null)~
+0 0 8460
+D3
+(null)~
+exit~
+NS 0 8434
+S
+#8460
+Aboard The Minnow~
+(null)~
+0 0 0
+E
+XNUMB1~
+Aboard The Minnow~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+Aboard The Minnow~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8459
+D1
+(null)~
+exit~
+NS 0 8481
+D2
+(null)~
+(null)~
+0 0 8461
+D3
+(null)~
+exit~
+NS 0 8435
+D5
+(null)~
+(null)~
+0 0 8478
+S
+#8461
+Aboard The Minnow~
+(null)~
+0 0 0
+E
+XNUMB1~
+Aboard The Minnow~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+Aboard The Minnow~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8460
+D1
+(null)~
+exit~
+NS 0 8482
+D2
+(null)~
+(null)~
+0 0 8462
+D3
+(null)~
+exit~
+NS 0 8436
+S
+#8462
+Aboard The Minnow~
+(null)~
+0 0 0
+E
+XNUMB1~
+Aboard The Minnow~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+Aboard The Minnow~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8461
+D1
+(null)~
+exit~
+NS 0 8484
+D2
+(null)~
+(null)~
+0 0 8463
+D3
+(null)~
+exit~
+NS 0 8437
+S
+#8463
+Aboard The Minnow~
+(null)~
+0 0 0
+E
+XNUMB1~
+Aboard The Minnow~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+Aboard The Minnow~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8462
+D1
+(null)~
+exit~
+NS 0 8486
+D2
+(null)~
+(null)~
+0 0 8464
+D3
+(null)~
+exit~
+NS 0 8438
+S
+#8464
+Aboard The Minnow~
+(null)~
+0 0 0
+E
+XNUMB1~
+Aboard The Minnow~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+Aboard The Minnow~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8463
+D1
+(null)~
+exit~
+NS 0 8489
+D2
+(null)~
+exit~
+NS 0 8493
+D3
+(null)~
+(null)~
+0 0 8439
+S
+#8465
+The Ocean~
+The ocean has often held the attention of humans in a way only somethingas great as the ocean is, can.  Once crystal clear and tinted blue like thesky, she now sits here bogged down with layers of oil and fuel from thepassing ships and illegal waste dumping.  Not a single creature can be seenliving in or around it's surface save for the seagulls which stick mainly tothe dock's surface anyways.  ~
+0 65536 6
+E
+XNUMB1~
+~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8474
+D2
+(null)~
+(null)~
+0 0 8483
+S
+#8466
+The Ocean~
+The ocean has often held the attention of humans in a way only somethingas great as the ocean is, can.  Once crystal clear and tinted blue like thesky, she now sits here bogged down with layers of oil and fuel from thepassing ships and illegal waste dumping.  Not a single creature can be seenliving in or around it's surface save for the seagulls which stick mainly tothe dock's surface anyways.  ~
+0 65536 6
+E
+XNUMB1~
+~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8499
+D2
+(null)~
+(null)~
+0 0 8467
+S
+#8467
+The Ocean~
+The ocean has often held the attention of humans in a way only somethingas great as the ocean is, can.  Once crystal clear and tinted blue like thesky, she now sits here bogged down with layers of oil and fuel from thepassing ships and illegal waste dumping.  Not a single creature can be seenliving in or around it's surface save for the seagulls which stick mainly tothe dock's surface anyways.  ~
+0 65536 6
+E
+XNUMB1~
+~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8466
+D2
+(null)~
+(null)~
+0 0 8472
+S
+#8468
+Inside The Instigator~
+(null)~
+0 8 0
+E
+XNUMB1~
+Aboard The Instigator~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+Aboard the Instigator~
+E
+XDDREAM~
+(null)~
+D2
+(null)~
+(null)~
+0 0 8469
+S
+#8469
+Inside The Instigator~
+(null)~
+0 8 0
+E
+XNUMB1~
+Aboard The Instigator~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+Aboard the Instigator~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8468
+D2
+(null)~
+(null)~
+0 0 8470
+D4
+(null)~
+(null)~
+0 0 8451
+S
+#8470
+Inside the Instigator~
+(null)~
+0 8 0
+E
+XNUMB1~
+Aboard The Instigator~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+Aboard the Instigator~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8469
+D2
+(null)~
+(null)~
+0 0 8471
+S
+#8471
+Aboard The Instigator~
+(null)~
+0 8 0
+E
+XNUMB1~
+Aboard The Instigator~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+Aboard the Instigator~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8470
+S
+#8472
+The Ocean~
+The ocean has often held the attention of humans in a way only somethingas great as the ocean is, can.  Once crystal clear and tinted blue like thesky, she now sits here bogged down with layers of oil and fuel from thepassing ships and illegal waste dumping.  Not a single creature can be seenliving in or around it's surface save for the seagulls which stick mainly tothe dock's surface anyways.  ~
+0 65536 6
+E
+XNUMB1~
+~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8467
+D1
+(null)~
+(null)~
+0 0 8473
+S
+#8473
+The Ocean~
+The ocean has often held the attention of humans in a way only somethingas great as the ocean is, can.  Once crystal clear and tinted blue like thesky, she now sits here bogged down with layers of oil and fuel from thepassing ships and illegal waste dumping.  Not a single creature can be seenliving in or around it's surface save for the seagulls which stick mainly tothe dock's surface anyways.  ~
+0 65536 6
+E
+XNUMB1~
+~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+(null)~
+D3
+(null)~
+(null)~
+0 0 8472
+S
+#8474
+The Ocean~
+The ocean has often held the attention of humans in a way only somethingas great as the ocean is, can.  Once crystal clear and tinted blue like thesky, she now sits here bogged down with layers of oil and fuel from thepassing ships and illegal waste dumping.  Not a single creature can be seenliving in or around it's surface save for the seagulls which stick mainly tothe dock's surface anyways.  ~
+0 65536 6
+E
+XNUMB1~
+~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+(null)~
+D2
+(null)~
+(null)~
+0 0 8465
+S
+#8475
+On the Private Docks~
+(null)~
+0 0 11
+E
+XNUMB1~
+On the Private Docks~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+On the Private Docks~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+exit~
+NS 0 8473
+D1
+(null)~
+exit~
+NS 0 8457
+D2
+(null)~
+(null)~
+0 0 8415
+D3
+(null)~
+(null)~
+0 0 8406
+S
+#8476
+On the Private Docks~
+(null)~
+0 65536 11
+E
+XNUMB1~
+On the Private Docks~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+On the Private Docks~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8446
+D1
+(null)~
+exit~
+NS 0 8386
+D2
+(null)~
+(null)~
+0 0 8456
+S
+#8477
+Aboard The Minnow~
+(null)~
+0 8 0
+E
+XNUMB1~
+Aboard The Minnow~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+Aboard The Minnow~
+E
+XDDREAM~
+(null)~
+D2
+(null)~
+(null)~
+0 0 8478
+S
+#8478
+Aboard The Minnow~
+(null)~
+0 8 0
+E
+XNUMB1~
+Aboard The Minnow~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+Aboard The Minnow~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8477
+D2
+(null)~
+(null)~
+0 0 8479
+D4
+(null)~
+(null)~
+0 0 8460
+S
+#8479
+Aboard The Minnow~
+(null)~
+0 8 0
+E
+XNUMB1~
+Aboard The Minnow~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+Aboard The Minnow~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8478
+D2
+(null)~
+(null)~
+0 0 8480
+S
+#8480
+Aboard The Minnow~
+(null)~
+0 8 0
+E
+XNUMB1~
+Aboard The Minnow~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+Aboard The Minnow~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8479
+S
+#8481
+The Ocean~
+The ocean has often held the attention of humans in a way only somethingas great as the ocean is, can.  Once crystal clear and tinted blue like thesky, she now sits here bogged down with layers of oil and fuel from thepassing ships and illegal waste dumping.  Not a single creature can be seenliving in or around it's surface save for the seagulls which stick mainly tothe dock's surface anyways.  ~
+0 65536 6
+E
+XNUMB1~
+~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8411
+D2
+(null)~
+(null)~
+0 0 8482
+S
+#8482
+The Ocean~
+The ocean has often held the attention of humans in a way only somethingas great as the ocean is, can.  Once crystal clear and tinted blue like thesky, she now sits here bogged down with layers of oil and fuel from thepassing ships and illegal waste dumping.  Not a single creature can be seenliving in or around it's surface save for the seagulls which stick mainly tothe dock's surface anyways.  ~
+0 65536 6
+E
+XNUMB1~
+~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8481
+D2
+(null)~
+(null)~
+0 0 8484
+S
+#8483
+The Ocean~
+The ocean has often held the attention of humans in a way only somethingas great as the ocean is, can.  Once crystal clear and tinted blue like thesky, she now sits here bogged down with layers of oil and fuel from thepassing ships and illegal waste dumping.  Not a single creature can be seenliving in or around it's surface save for the seagulls which stick mainly tothe dock's surface anyways.  ~
+0 65536 6
+E
+XNUMB1~
+~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8465
+D2
+(null)~
+(null)~
+0 0 8485
+S
+#8484
+The Ocean~
+The ocean has often held the attention of humans in a way only somethingas great as the ocean is, can.  Once crystal clear and tinted blue like thesky, she now sits here bogged down with layers of oil and fuel from thepassing ships and illegal waste dumping.  Not a single creature can be seenliving in or around it's surface save for the seagulls which stick mainly tothe dock's surface anyways.  ~
+0 65536 6
+E
+XNUMB1~
+~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8482
+D2
+(null)~
+(null)~
+0 0 8486
+S
+#8485
+The Ocean~
+The ocean has often held the attention of humans in a way only somethingas great as the ocean is, can.  Once crystal clear and tinted blue like thesky, she now sits here bogged down with layers of oil and fuel from thepassing ships and illegal waste dumping.  Not a single creature can be seenliving in or around it's surface save for the seagulls which stick mainly tothe dock's surface anyways.  ~
+0 65536 6
+E
+XNUMB1~
+~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8483
+D2
+(null)~
+(null)~
+0 0 8488
+S
+#8486
+The Ocean~
+The ocean has often held the attention of humans in a way only somethingas great as the ocean is, can.  Once crystal clear and tinted blue like thesky, she now sits here bogged down with layers of oil and fuel from thepassing ships and illegal waste dumping.  Not a single creature can be seenliving in or around it's surface save for the seagulls which stick mainly tothe dock's surface anyways.  ~
+0 65536 6
+E
+XNUMB1~
+~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8484
+D2
+(null)~
+(null)~
+0 0 8489
+S
+#8487
+The Ocean~
+The ocean has often held the attention of humans in a way only somethingas great as the ocean is, can.  Once crystal clear and tinted blue like thesky, she now sits here bogged down with layers of oil and fuel from thepassing ships and illegal waste dumping.  Not a single creature can be seenliving in or around it's surface save for the seagulls which stick mainly tothe dock's surface anyways.  ~
+0 65540 6
+E
+XNUMB1~
+~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+(null)~
+S
+#8488
+The Ocean~
+The ocean has often held the attention of humans in a way only somethingas great as the ocean is, can.  Once crystal clear and tinted blue like thesky, she now sits here bogged down with layers of oil and fuel from thepassing ships and illegal waste dumping.  Not a single creature can be seenliving in or around it's surface save for the seagulls which stick mainly tothe dock's surface anyways.  ~
+0 65536 6
+E
+XNUMB1~
+~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8485
+D2
+(null)~
+(null)~
+0 0 8492
+S
+#8489
+The Ocean~
+The ocean has often held the attention of humans in a way only somethingas great as the ocean is, can.  Once crystal clear and tinted blue like thesky, she now sits here bogged down with layers of oil and fuel from thepassing ships and illegal waste dumping.  Not a single creature can be seenliving in or around it's surface save for the seagulls which stick mainly tothe dock's surface anyways.  ~
+0 65536 6
+E
+XNUMB1~
+~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8486
+S
+#8490
+The Ocean~
+The ocean has often held the attention of humans in a way only somethingas great as the ocean is, can.  Once crystal clear and tinted blue like thesky, she now sits here bogged down with layers of oil and fuel from thepassing ships and illegal waste dumping.  Not a single creature can be seenliving in or around it's surface save for the seagulls which stick mainly tothe dock's surface anyways.  ~
+0 65540 6
+E
+XNUMB1~
+~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+(null)~
+S
+#8491
+The Ocean~
+The ocean has often held the attention of humans in a way only somethingas great as the ocean is, can.  Once crystal clear and tinted blue like thesky, she now sits here bogged down with layers of oil and fuel from thepassing ships and illegal waste dumping.  Not a single creature can be seenliving in or around it's surface save for the seagulls which stick mainly tothe dock's surface anyways.  ~
+0 65536 6
+E
+XNUMB1~
+~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8457
+S
+#8492
+The Ocean~
+The ocean has often held the attention of humans in a way only somethingas great as the ocean is, can.  Once crystal clear and tinted blue like thesky, she now sits here bogged down with layers of oil and fuel from thepassing ships and illegal waste dumping.  Not a single creature can be seenliving in or around it's surface save for the seagulls which stick mainly tothe dock's surface anyways.  ~
+0 65536 6
+E
+XNUMB1~
+~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8488
+D2
+(null)~
+(null)~
+0 0 8495
+S
+#8493
+The Ocean~
+The ocean has often held the attention of humans in a way only somethingas great as the ocean is, can.  Once crystal clear and tinted blue like thesky, she now sits here bogged down with layers of oil and fuel from thepassing ships and illegal waste dumping.  Not a single creature can be seenliving in or around it's surface save for the seagulls which stick mainly tothe dock's surface anyways.  ~
+0 65536 6
+E
+XNUMB1~
+~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+(null)~
+D2
+(null)~
+(null)~
+0 0 8496
+S
+#8494
+The Ocean~
+The ocean has often held the attention of humans in a way only somethingas great as the ocean is, can.  Once crystal clear and tinted blue like thesky, she now sits here bogged down with layers of oil and fuel from thepassing ships and illegal waste dumping.  Not a single creature can be seenliving in or around it's surface save for the seagulls which stick mainly tothe dock's surface anyways.  ~
+0 65540 6
+E
+XNUMB1~
+~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+(null)~
+S
+#8495
+The Ocean~
+The ocean has often held the attention of humans in a way only somethingas great as the ocean is, can.  Once crystal clear and tinted blue like thesky, she now sits here bogged down with layers of oil and fuel from thepassing ships and illegal waste dumping.  Not a single creature can be seenliving in or around it's surface save for the seagulls which stick mainly tothe dock's surface anyways.  ~
+0 65536 6
+E
+XNUMB1~
+~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8492
+S
+#8496
+The Ocean~
+The ocean has often held the attention of humans in a way only somethingas great as the ocean is, can.  Once crystal clear and tinted blue like thesky, she now sits here bogged down with layers of oil and fuel from thepassing ships and illegal waste dumping.  Not a single creature can be seenliving in or around it's surface save for the seagulls which stick mainly tothe dock's surface anyways.  ~
+0 65536 6
+E
+XNUMB1~
+~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8493
+D2
+(null)~
+(null)~
+0 0 8499
+S
+#8497
+The Ocean~
+The ocean has often held the attention of humans in a way only somethingas great as the ocean is, can.  Once crystal clear and tinted blue like thesky, she now sits here bogged down with layers of oil and fuel from thepassing ships and illegal waste dumping.  Not a single creature can be seenliving in or around it's surface save for the seagulls which stick mainly tothe dock's surface anyways.  ~
+0 65540 6
+E
+XNUMB1~
+~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+(null)~
+S
+#8498
+The Ocean~
+The ocean has often held the attention of humans in a way only somethingas great as the ocean is, can.  Once crystal clear and tinted blue like thesky, she now sits here bogged down with layers of oil and fuel from thepassing ships and illegal waste dumping.  Not a single creature can be seenliving in or around it's surface save for the seagulls which stick mainly tothe dock's surface anyways.  ~
+0 65536 6
+E
+XNUMB1~
+~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+(null)~
+D2
+(null)~
+(null)~
+0 0 8409
+S
+#8499
+The Ocean~
+The ocean has often held the attention of humans in a way only somethingas great as the ocean is, can.  Once crystal clear and tinted blue like thesky, she now sits here bogged down with layers of oil and fuel from thepassing ships and illegal waste dumping.  Not a single creature can be seenliving in or around it's surface save for the seagulls which stick mainly tothe dock's surface anyways.  ~
+0 65536 6
+E
+XNUMB1~
+~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+~
+E
+XDDREAM~
+(null)~
+D0
+(null)~
+(null)~
+0 0 8496
+D2
+(null)~
+(null)~
+0 0 8466
+S
+#8500
+A Room With No Doors~
+(null)~
+0 44 0
+E
+XNUMB1~
+A Room With No Doors~
+E
+XDUMB1~
+(null)~
+E
+XNDREAM~
+A Room With No Doors~
+E
+XDDREAM~
+(null)~
+S
+#0
+
+
+
+#RESETS
+D 0 8402 3 3
+D 0 8403 1 3
+O 0 8383 0 8418
+O 0 8384 0 8419
+O 0 8385 0 8420
+M 1 8384 4 8422 2
+M 1 8384 4 8446 2
+M 1 8385 1 8500 1
+S
+
+
+
+#SHOPS
+0
+
+
+
+#MOBPROGS
+#0
+
+#$
