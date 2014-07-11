@@ -794,7 +794,7 @@ char *desc_pretty( char *string, int start, int lines, bool no_free )
 	return str_dup( buf );
 }
 
-char *getline( char *str, char *buf )
+char *get_line( char *str, char *buf )
 {
   int tmp = 0;
   bool found = FALSE;
@@ -833,7 +833,7 @@ char *numlineas( char *string )
 
   while ( *string )
   {
-    string = getline( string, tmpb );
+    string = get_line( string, tmpb );
     sprintf( buf2, "%2d. %s\n\r", cnt++, tmpb );
     strcat( buf, buf2 );
   }
