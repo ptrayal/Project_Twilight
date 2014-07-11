@@ -97,10 +97,10 @@ const	struct	cmd_type	cmd_table	[] =
 		{	"down",			do_down,		P_STAND,	0,	L_NEV,	0,	A|B|H,	0 },
 
 
-		{	"'",			do_say,			P_REST,		0,	L_COM,	0,	B|H,	0 },
-		{	"-",			do_dsay,		P_REST,		0,	L_COM,	0,	B|H,	0 },
-		{	",",			do_emote,		P_REST,		0,	L_COM,	0,	B,	0 },
-		{	".",			do_yell,		P_REST,		0,	L_COM,	0,	B|H,	0 },
+		{	"'",			do_say,			P_REST,		0,	L_NRM,	0,	B|H,	0 },
+		{	"-",			do_dsay,		P_REST,		0,	L_NRM,	0,	B|H,	0 },
+		{	",",			do_emote,		P_REST,		0,	L_NRM,	0,	B,	0 },
+		{	".",			do_yell,		P_REST,		0,	L_NRM,	0,	B|H,	0 },
 		{	"+",			do_buildertalk,	P_DEAD,		0,	L_SCOM,	0,	A|B|E,	0 },
 		{	"=",			do_oocsay,		P_REST,		0,	L_COM,	0,	B,	0 },
 		{	">",			do_oocchan,		P_DEAD,		0,	L_COM,	0,	A|B|E,	0 },
