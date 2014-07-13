@@ -13,49 +13,6 @@
 UNAME = $(shell uname -s)
 ####################################################################################################
 
-####################################################################################################
-#Here we list our colours for use within our makefile, note that if we want to use our colours that
-#we must define MK_COLOURS, else wise, we won't use our colours
-#if your system does not accept colour-codes, then change MK_COLOURS To 0.
-MK_COLOURS = 0
-
-ifeq ($(MK_COLOURS), 1)
-COLOUR_NORMAL = \e[0;00m
-COLOUR_DRED = \e[0;31m
-COLOUR_DGREEN = \e[0;32m
-COLOUR_DBROWN = \e[0;33m
-COLOUR_DBLUE = \e[0;34m
-COLOUR_DPURPLE = \e[0;35m
-COLOUR_DCYAN = \e[0;36m
-
-COLOUR_LRED = \e[1;31m
-    COLOUR_LGREEN = \e[1;32m
-    COLOUR_LYELLOW = \e[1;33m
-    COLOUR_LBLUE = \e[1;34m
-COLOUR_LMAGENTA = \e[1;35m
-    COLOUR_LGREY = \e[0;37m
-    COLOUR_LWHITE = \e[1;37m
-    COLOUR_LCYAN = \e[1;36m
-else
-COLOUR_NORMAL =
-COLOUR_DRED =
-	 COLOUR_DGREEN =
-	 COLOUR_DBROWN =
-	 COLOUR_DBLUE =
-	 COLOUR_DPURPLE =
-	 COLOUR_DCYAN =
-	
-	 COLOUR_LRED =
-	 COLOUR_LGREEN =
-	 COLOUR_LYELLOW =
-	 COLOUR_LBLUE =
-	 COLOUR_LMAGENTA =
-	 COLOUR_LGREY =
-	 COLOUR_LWHITE =
-	 COLOUR_LCYAN =
-endif
-####################################################################################################
-
 CC      = gcc
 PROF    = -ggdb3 #-Werror -pedantic -DASSERT
 NOCRYPT =
@@ -85,7 +42,7 @@ pt: $(O_FILES)
 	@echo "#define __Version_h" >> version.h
 	@echo '#define mudVersion "1.$(shell cat $(MJVERSION_FILE)).$(shell cat $(MVERSION_FILE)).$(shell cat $(BVERSION_FILE))"' >> version.h
 	@echo "#endif" >> version.h
-	@echo "$(COLOUR_LRED)Revision control completed!$(COLOUR_NORMAL)"
+	@echo "Revision control completed!"
 	
 
 ptdev: $(O_TESTFILES)
@@ -98,7 +55,7 @@ ptdev: $(O_TESTFILES)
 	@echo "#define __Version_h" >> version.h
 	@echo '#define mudVersion "1.$(shell cat $(MJVERSION_FILE)).$(shell cat $(MVERSION_FILE)).$(shell cat $(BVERSION_FILE))"' >> version.h
 	@echo "#endif" >> version.h
-	@echo "$(COLOUR_LRED)Revision control completed!$(COLOUR_NORMAL)"
+	@echo "Revision control completed!"
 
 .c.o: twilight.h
 	$(CC) -c $(C_FLAGS) $<
@@ -107,7 +64,7 @@ ptdev: $(O_TESTFILES)
 # clean out our folder of any/all un-necessary files allowing us to ensure our directory is clean.
 clean:
 	@rm -f *.o
-	@echo "$(COLOUR_LRED).o files removed from directory.$(COLOUR_NORMAL)"
+	@echo ".o files removed from directory."
 ####################################################################################################
 
 ####################################################################################################
@@ -117,7 +74,7 @@ wipe:
 	@rm -f project.exe
 	@rm -f projectdev
 	@rm -f projectdev.exe
-	@echo "$(COLOUR_LRED)Project Twilight is wiped.$(COLOUR_NORMAL)"
+	@echo "Project Twilight is wiped."
 ####################################################################################################
 
 ####################################################################################################
@@ -144,7 +101,7 @@ bversion:
 	@echo "#define __Version_h" >> version.h
 	@echo '#define mudVersion "1.$(shell cat $(MJVERSION_FILE)).$(shell cat $(MVERSION_FILE)).$(shell cat $(BVERSION_FILE))"' >> version.h
 	@echo "#endif" >> version.h
-	@echo "$(COLOUR_LRED)Revision control completed!$(COLOUR_NORMAL)"
+	@echo "Revision control completed!"
 
 #####################################################################################################
 
@@ -158,7 +115,7 @@ mversion:
 	@echo "#define __Version_h" >> version.h
 	@echo '#define mudVersion "1.$(shell cat $(MJVERSION_FILE)).$(shell cat $(MVERSION_FILE)).$(shell cat $(BVERSION_FILE))"' >> version.h
 	@echo "#endif" >> version.h
-	@echo "$(COLOUR_LRED)Revision control completed!$(COLOUR_NORMAL)"
+	@echo "Revision control completed!"
 
 #####################################################################################################
 
@@ -172,7 +129,7 @@ mjversion:
 	@echo "#define __Version_h" >> version.h
 	@echo '#define mudVersion "1.$(shell cat $(MJVERSION_FILE)).$(shell cat $(MVERSION_FILE)).$(shell cat $(BVERSION_FILE))"' >> version.h
 	@echo "#endif" >> version.h
-	@echo "$(COLOUR_LRED)Revision control completed!$(COLOUR_NORMAL)"
+	@echo "Revision control completed!"
 
 #####################################################################################################
 
