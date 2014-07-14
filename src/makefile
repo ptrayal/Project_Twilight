@@ -24,13 +24,13 @@ O_FILES = act_comm.o act_enter.o act_info.o act_move.o act_obj.o act_wiz.o \
 			alias.o comm.o const.o db.o fight.o fight_old.o handler.o interp.o \
 			lookup.o magic.o magic3.o mob_cmds.o mob_prog.o olc.o olc_act.o \
 			olc_mpcode.o olc_save.o protocol.o quest.o recycle.o save.o social-edit.o \
-			string.o subcmds.o tables.o update.o
+			string.o subcmds.o tables.o update.o grid.o
 
 O_TESTFILES = act_comm.o act_enter.o act_info.o act_move.o act_obj.o act_wiz.o \
 			alias.o comm.o const.o db.o fight.o fight_old.o handler.o interp.o \
 			lookup.o magic.o magic3.o mob_cmds.o mob_prog.o olc.o olc_act.o \
 			olc_mpcode.o olc_save.o protocol.o quest.o recycle.o save.o social-edit.o \
-			string.o subcmds.o tables.o update.o
+			string.o subcmds.o tables.o update.o grid.o
 
 pt: $(O_FILES)
 	rm -f project
