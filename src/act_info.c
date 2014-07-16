@@ -5987,7 +5987,14 @@ void do_charsheet( CHAR_DATA *ch, char *argument )
 		cell_append_contents(cell, "%-14s", capitalize(ch->demeanor));
 	cell_append_contents(cell, "Profession/Sire: %s", "test");
 
-	row_append_cell(row, 21, "Clan/Packname\nGeneration/Totem\nProfession: ", ch->profession);
+	cell = row_append_cell(row, 21, "%-5s: %s\n", IS_WEREWOLF(ch) ? "Tribe" : "Clan", capitalize(clan_table[ch->clan].name));
+	cell_append_contents(cell, "%-10s: ", IS_WEREWOLF(ch) ? "Totem" : "Generation");
+	 if(ch->race == race_lookup("werewolf"))
+        cell_append_contents(cell, "%s\n", "N/A");
+    else
+        cell_append_contents(cell, "%d\n", ch->gen);
+	
+	cell_append_contents(cell, "%-10s: %s", "Profession", ch->profession);
 
 	row = create_row(grid);
 	cell = row_append_cell(row,30, "--- Backgrounds ---\n");
@@ -6033,29 +6040,6 @@ void do_charsheet( CHAR_DATA *ch, char *argument )
 
 	grid_to_char(grid, ch, TRUE);
 
-   //  if(ch->race == race_lookup("werewolf"))
-   //      send_to_char( "Pack Name: ", ch);
-   //  else
-   //      send_to_char( Format("Clan: %-20s", capitalize(clan_table[ch->clan].name)), ch);
-
-   //  if(ch->race == race_lookup("werewolf"))
-   //      send_to_char( "Pack Totem: ", ch);
-   //  else
-   //      send_to_char( Format("Generation: %d", ch->gen), ch);
-
-   //  send_to_char("\r\n", ch);
-
-
-   //  if(ch->race == race_lookup("werewolf"))
-   //      send_to_char( Format("Tribe: %-15s  ",capitalize(clan_table[ch->clan].name)), ch);
-   //  else
-   //      send_to_char( Format("Profession: %-12s ", ch->profession), ch);
-
-   //  if(ch->race == race_lookup("werewolf"))
-   //      send_to_char( Format("Profession: %-16s  ", ch->profession), ch);
-   //  else
-   //      send_to_char( Format("Sire: %-16s  ", ch->sire), ch);
-   
    //  send_to_char("\tW--------------------------------<\tGAttributes\tW>----------------------------------\tn\n\r", ch);
 
    //  send_to_char ("Str: ", ch);
@@ -6379,47 +6363,6 @@ void do_charsheet( CHAR_DATA *ch, char *argument )
    //  if(IS_SET(ch->act2, ACT2_GHOUL))
    //  {
    //      send_to_char(Format("You are the devoted servant of %s.\r\n", ch->ghouled_by), ch);
-   //  }
-
-   //  send_to_char("\tW--------------------------------<\tGBackgrounds\tW>---------------------------------\tn\n\r", ch);
-
-   //  i = 0;
-   //  for(num=0; background_table[num].name; num++)
-   //  {
-   //      if(background_table[num].settable)
-   //      {
-   //          if(num < MAX_BG)
-   //          {
-   //              send_to_char(Format("\t<send href='help %s'>%-11s\t</send>:", background_table[num].name, background_table[num].name), ch);
-   //              if(ch->backgrounds[num]<=0)
-   //              {
-   //                  send_to_char("\t[U9675/O]", ch);
-   //                  statcount = 1;
-   //                  while (statcount < 5)
-   //                  {
-   //                      send_to_char("\t[U9675/O]", ch);
-   //                      statcount++;
-   //                  }
-   //              }
-   //              else
-   //              {
-   //                  while(statcount < ch->backgrounds[num])
-   //                  {
-   //                      send_to_char("\t[U9679/*]", ch);
-   //                      statcount++;
-   //                  }
-   //                  while (statcount < 5)
-   //                  {
-   //                      send_to_char("\t[U9675/O]", ch);
-   //                      statcount++;
-   //                  }
-
-   //              }
-   //              send_to_char("\r\n", ch);
-   //              statcount = 0;
-   //              i++;
-   //          }
-   //      }
    //  }
 
    //  send_to_char("\tW---------------------------------<\tGInfluences\tW>---------------------------------\tn\n\r", ch);
