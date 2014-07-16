@@ -208,17 +208,23 @@ void cell_set_linecount( GRID_CELL *cell )
 	if( cell->row->max_height < count )
 		cell->row->max_height = count;
 }
+
 //Counts colour codes to display offsets properly
-int count_colour( char *str )
-{	char c;
+int count_colour ( char *str )
+{
+	char c;
 	int count = 0;
-	while ( (c = *str++ ) != '\0'  )
+	while ( ( c = *str++ ) != '\0'  ) 
 	{
-		if(c == '{' )
-			count++;
+		if ( c == '\t' )
+			{ count += 6; }
+
+		if ( c == '^' )
+			{ count++; }
 	}
-	return count*2;
+	return count * 2;
 }
+
 //Displaying of the Grid
 void row_to_char( GRID_ROW *row, CHAR_DATA *ch )
 {	GRID_CELL *cell;

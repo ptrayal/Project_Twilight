@@ -2775,6 +2775,7 @@ struct	skill_type
 #define IS_BLOCKED(ch, vict)    (strstr(vict->pcdata->block_join, ch->name ) )
 
 #define IS_VAMPIRE(ch)		(ch->race == race_lookup("vampire"))
+#define IS_WEREWOLF(ch)     (ch->race == race_lookup("werewolf"))
 
 /* macro.c */
 bool IS_ATTRIB_AVAILABLE	args( (int race, int sn) );

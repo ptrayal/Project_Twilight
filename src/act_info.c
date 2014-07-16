@@ -5957,7 +5957,6 @@ void do_testceleb(CHAR_DATA *ch, char *argument)
 
 void do_charsheet( CHAR_DATA *ch, char *argument )
 {
-    char buf[MSL]={'\0'};
     int num = 0, i = 0;
     int statcount = 0;
     GRID_DATA *grid;
@@ -5965,17 +5964,74 @@ void do_charsheet( CHAR_DATA *ch, char *argument )
     GRID_CELL *cell;
     CheckCH(ch);
 
-    buf[0] = '\0';
-
-
-
-    grid = create_grid(79);
+   
+    grid = create_grid(75);
     row = create_row(grid);
-    row_append_cell(row, 31, "%-10s: %-15s\n\r%-10s: %s%-15s", "First Name",IS_NPC(ch) ? ch->short_descr : ch->name, "Last Name",!IS_NULLSTR(ch->surname)? " " : " ", !IS_NULLSTR(ch->surname)? ch->surname : "");
-    row_append_cell(row, 31, "Nature/Breed: <something>");
-    row_append_cell(row, 18, "0123456789012");
+    cell = row_append_cell(row, 27, "%-10s: %-15s\n%-10s: %s%-15s ", "First Name",IS_NPC(ch) ? ch->short_descr : ch->name, "Last Name",!IS_NULLSTR(ch->surname)? "" : "", !IS_NULLSTR(ch->surname)? ch->surname : "");
+    if(IS_ADMIN(ch))
+    {
+        if(ch->trust > MAX_LEVEL || ch->trust < 0)
+            ch->trust = 1;
+        cell_append_contents(cell, "Admin Level: %-14s\n", (staff_status[ch->trust].name));
+    }
+
+    cell = row_append_cell(row, 27, "%-8s: ", IS_WEREWOLF(ch) ? "Breed" : "Nature");
+    if (ch->race == race_lookup("werewolf"))
+        cell_append_contents(cell, "%-14s\n", (breed_table[ch->breed].name));
+    else
+        cell_append_contents(cell, "%-14s\n", (capitalize(ch->nature)));
+    cell_append_contents(cell, "%-8s: ", IS_WEREWOLF(ch) ? "Auspice" : "Demeanor");
+    if(ch->race == race_lookup("werewolf"))
+        cell_append_contents(cell, "%-14s",auspice_table[ch->auspice].name);
+    else
+        cell_append_contents(cell, "%-14s", capitalize(ch->demeanor));
+    cell_append_contents(cell, "Profession/Sire: %s", "test");
+
+    row_append_cell(row, 21, "Clan/Packname\nGeneration/Totem\nProfession: ", ch->profession);
+
+    row = create_row(grid);
+    cell = row_append_cell(row,30, "--- Backgrounds ---\n");
+    i = 0;
+    for(num=0; background_table[num].name; num++)
+    {
+        if(background_table[num].settable)
+        {
+            if(num < MAX_BG)
+            {
+                cell_append_contents(cell, "%-11s: ", background_table[num].name, background_table[num].name);
+                if(ch->backgrounds[num]<=0)
+                {
+                    cell_append_contents(cell, "\t[U9675/O]");
+                    statcount = 1;
+                    while (statcount < 5)
+                    {
+                        cell_append_contents(cell, "\t[U9675/O]");
+                        statcount++;
+                    }
+                }
+                else
+                {
+                    while(statcount < ch->backgrounds[num])
+                    {
+                        cell_append_contents(cell, "\t[U9679/*]");
+                        statcount++;
+                    }
+                    while (statcount < 5)
+                    {
+                        cell_append_contents(cell, "\t[U9675/O]");
+                        statcount++;
+                    }
+
+                }
+                cell_append_contents(cell, "\n");
+                statcount = 0;
+                i++;
+            }
+        }
+    }
+    row_append_cell(row, 40, "%10s", "Influences");
+
     grid_to_char(grid, ch, TRUE);
-    
 
    //  if(ch->race == race_lookup("human") && IS_SET(ch->act2, ACT2_GHOUL))
    //  {
