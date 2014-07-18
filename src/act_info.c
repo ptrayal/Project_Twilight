@@ -2342,29 +2342,28 @@ void do_whois (CHAR_DATA *ch, char *argument)
 	if(IS_ADMIN(ch))
 	{
 		send_to_char (Format("\tW######### [ \tC%s %s\tn \tW] #########\tn\n\r", wch->name, IS_NULLSTR(wch->surname) ? "" : wch->surname), ch);
-		send_to_char (Format("Position   : %s\n\r", staff_status[wch->trust].name), ch);
-		send_to_char (Format("Gender     : %s\n\r", gender_string(wch)), ch);
-		send_to_char (Format("Appearance : %s\n\r", appearance_string(wch)), ch);
+		send_to_char (Format("\tW%-10s\tn : \tG%s\tn\n\r", "Position", staff_status[wch->trust].name), ch);
+		send_to_char (Format("\tW%-10s\tn : \tG%s\tn\n\r", "Gender", gender_string(wch)), ch);
+		send_to_char (Format("\tW%-10s\tn : \tG%s\tn\n\r", "Appearance", appearance_string(wch)), ch);
 		send_to_char (Format("Famous?    : %s\n\r", fame_table[wch->backgrounds[FAME_STATUS]].name), ch);
 		send_to_char (Format("Available for RP : %s\n\r", wch->pcdata->rpok_string), ch);
-		send_to_char("\tW#############################\tn\n\r",ch);
-		send_to_char (Format("Race             : %s\n\r", wch->race < MAX_PC_RACE ? pc_race_table[wch->race].name:"     "), ch);
-		send_to_char (Format("Clan/Tribe       : %s\n\r", capitalize(clan_table[wch->clan].name)), ch);
+		send_to_char("\tW######################################\tn\n\r",ch);
+		send_to_char (Format("Race          : %s\n\r", wch->race < MAX_PC_RACE ? pc_race_table[wch->race].name:"     "), ch);
+		send_to_char (Format("Clan/Tribe    : %s\n\r", capitalize(clan_table[wch->clan].name)), ch);
 		send_to_char (Format("AFK: %s\n\r", IS_SET(wch->comm, COMM_AFK) ? "\tRA\tn": ""), ch);
 		if (wch->desc->pProtocol->pVariables[eMSDP_UTF_8]->ValueInt == 1)
-			send_to_char (Format("UTF-8 Enabled    : Yes\n\r"), ch);
+			send_to_char (Format("UTF-8 Enabled : Yes\n\r"), ch);
 		else
-			send_to_char (Format("UTF-8 Enabled    : No\n\r"), ch);
+			send_to_char (Format("UTF-8 Enabled : No\n\r"), ch);
 	}
 	else
 	{
 		send_to_char (Format("\tW##### [ \tC%s%s%s\tn \tW] #####\tn\n\r", wch->name, IS_NULLSTR(wch->surname) ? "" : wch->surname), ch);
-		send_to_char (Format("Position   : %s\n\r", staff_status[wch->trust].name), ch);
-		send_to_char("Online     : [PLACEHOLDER]\n\r",ch);
-		send_to_char (Format("Gender     : %s\n\r", gender_string(wch)), ch);
-		send_to_char (Format("Appearance : %s\n\r", appearance_string(wch)), ch);
+		send_to_char (Format("\tW%-10s\tn : \tG%s\tn\n\r", "Position", staff_status[wch->trust].name), ch);
+		send_to_char (Format("\tW%-10s\tn : \tG%s\tn\n\r", "Gender", gender_string(wch)), ch);
+		send_to_char (Format("\tW%-10s\tn : \tG%s\tn\n\r", "Appearance", appearance_string(wch)), ch);
 		send_to_char (Format("Available for RP : %s\n\r", wch->pcdata->rpok_string), ch);
-		send_to_char("\tW#############################\tn\n\r",ch);
+		send_to_char("\tW######################################\tn\n\r",ch);
 	}
 
 	if(!IS_NULLSTR(wch->married))
