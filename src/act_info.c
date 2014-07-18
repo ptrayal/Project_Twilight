@@ -2351,6 +2351,10 @@ void do_whois (CHAR_DATA *ch, char *argument)
 		send_to_char (Format("Race             : %s\n\r", wch->race < MAX_PC_RACE ? pc_race_table[wch->race].name:"     "), ch);
 		send_to_char (Format("Clan/Tribe       : %s\n\r", capitalize(clan_table[wch->clan].name)), ch);
 		send_to_char (Format("AFK: %s\n\r", IS_SET(wch->comm, COMM_AFK) ? "\tRA\tn": ""), ch);
+		if (wch->desc->pProtocol->pVariables[eMSDP_UTF_8]->ValueInt == 1)
+			send_to_char (Format("UTF-8 Enabled    : Yes\n\r"), ch);
+		else
+			send_to_char (Format("UTF-8 Enabled    : No\n\r"), ch);
 	}
 	else
 	{
@@ -5955,10 +5959,73 @@ void do_testceleb(CHAR_DATA *ch, char *argument)
 	// }
 }
 
+const char *styleBackgrounds(CHAR_DATA *ch, int num) 
+{
+
+    int statcount = 0;
+    static char            ostr  [ MSL ]={'\0'};
+
+    strncpy(ostr, "", MSL);
+
+    if(ch->desc && ch->desc->pProtocol && ch->desc->pProtocol->pVariables[eMSDP_UTF_8]->ValueInt == 1 ) 
+    {
+        if(ch->backgrounds[num]<=0)
+        {
+            snprintf(ostr, MSL, "\t[U9675/O]");
+            statcount = 1;
+            while (statcount < 5)
+            {
+                strncat(ostr, "\t[U9675/O]", MSL);
+                statcount++;
+            }
+        }
+        else
+        {
+            while(statcount < ch->backgrounds[num])
+            {
+                strncat(ostr, "\t[U9679/*]", MSL);
+                statcount++;
+            }
+            while (statcount < 5)
+            {
+                strncat(ostr, "\t[U9675/O]", MSL);
+                statcount++;
+            }
+        }
+    } 
+    else 
+    {
+        if(ch->backgrounds[num]<=0)
+        {
+            snprintf(ostr, MSL, "O");
+            statcount = 1;
+            while (statcount < 5)
+            {
+                strncat(ostr, "O", MSL);
+                statcount++;
+            }
+        }
+        else
+        {
+            while(statcount < ch->backgrounds[num])
+            {
+                strncat(ostr, "*", MSL);
+                statcount++;
+            }
+            while (statcount < 5)
+            {
+                strncat(ostr, "O", MSL);
+                statcount++;
+            }
+        }
+    }
+    statcount = 0;
+    return ostr;
+}
+
 void do_charsheet( CHAR_DATA *ch, char *argument )
 {
-	int num = 0, i = 0;
-	int statcount = 0;
+	int num = 0;
 	GRID_DATA *grid;
 	GRID_ROW *row;
 	GRID_CELL *cell;
@@ -5998,41 +6065,15 @@ void do_charsheet( CHAR_DATA *ch, char *argument )
 
 	row = create_row(grid);
 	cell = row_append_cell(row,30, "--- Backgrounds ---\n");
-	i = 0;
 	for(num=0; background_table[num].name; num++)
 	{
 		if(background_table[num].settable)
 		{
-			if(num < MAX_BG)
+			if(num < MAX_BACKGROUND)
 			{
-				cell_append_contents(cell, "%-11s: ", background_table[num].name, background_table[num].name);
-				if(ch->backgrounds[num]<=0)
-				{
-					cell_append_contents(cell, "\t[U9675/O]");
-					statcount = 1;
-					while (statcount < 5)
-					{
-						cell_append_contents(cell, "\t[U9675/O]");
-						statcount++;
-					}
-				}
-				else
-				{
-					while(statcount < ch->backgrounds[num])
-					{
-						cell_append_contents(cell, "\t[U9679/*]");
-						statcount++;
-					}
-					while (statcount < 5)
-					{
-						cell_append_contents(cell, "\t[U9675/O]");
-						statcount++;
-					}
-
-				}
+				cell_append_contents(cell, "%-11s: %-5s", background_table[num].name, styleBackgrounds(ch, ch->backgrounds[num]));
+				
 				cell_append_contents(cell, "\n");
-				statcount = 0;
-				i++;
 			}
 		}
 	}

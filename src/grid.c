@@ -217,7 +217,7 @@ int count_colour ( char *str )
 	while ( ( c = *str++ ) != '\0'  ) 
 	{
 		if ( c == '\t' )
-			{ count += 6; }
+			{ count += 2; }
 
 		if ( c == '^' )
 			{ count++; }
