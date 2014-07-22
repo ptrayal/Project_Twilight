@@ -5885,7 +5885,7 @@ void do_rituals( CHAR_DATA *ch, char *argument )
 	}
 
 
-	log_string("rite: 1");
+	log_string(LOG_GAME, "rite: 1");
 	if((rn = rite_lookup(ch)) < 0)
 	{
 		send_to_char("Nothing happens.\n\r", ch);
@@ -5893,7 +5893,7 @@ void do_rituals( CHAR_DATA *ch, char *argument )
 		return;
 	}
 
-	log_string("rite: 2");
+	log_string(LOG_GAME, "rite: 2");
 	if ((sn = find_spell(ch,ritual_table[rn].name)) < 1)
 	{
 		send_to_char( "Your actions seem to mean nothing... yet...\n\r", ch );
@@ -5912,7 +5912,7 @@ void do_rituals( CHAR_DATA *ch, char *argument )
 		return;
 	}
 
-	log_string("rite: 3");
+	log_string(LOG_GAME, "rite: 3");
 	/*
 	 * Locate targets.
 	 */
@@ -6042,16 +6042,16 @@ void do_rituals( CHAR_DATA *ch, char *argument )
 
 	/* FIX - Put in tests into spells (abil calls/skill calls) */
 
-	log_string("rite: 4");
+	log_string(LOG_GAME, "rite: 4");
 	WAIT_STATE( ch, ritual_table[rn].beats );	// use rn here, not sn (sn points to skill table) rn points to the ritual_table
 							// ritual table is what we need to find the beats for, not the skill_table
 							// they are not hte same location : thus causes lockup.
 	clear_rite(ch);
 
-	log_string("rite: 5");
+	log_string(LOG_GAME, "rite: 5");
 	(*skill_table[sn].spell_fun) ( sn, ch->trust, ch, vo,target);
 
-	log_string("rite: 6");
+	log_string(LOG_GAME, "rite: 6");
 	if ((skill_table[sn].target == TAR_CHAR_OFFENSIVE
 			||   (skill_table[sn].target == TAR_OBJ_CHAR_OFF && target == TARGET_CHAR))
 			&&   victim != ch)
@@ -6070,7 +6070,7 @@ void do_rituals( CHAR_DATA *ch, char *argument )
 		}
 	}
 
-	log_string("rite: 6");
+	log_string(LOG_GAME, "rite: 6");
 	return;
 }
 
@@ -6738,7 +6738,7 @@ void do_auspex3 ( CHAR_DATA * ch, char * argument )
 	if( (obj = get_obj_carry(ch, argument, ch)) == NULL )
 	{
 		send_to_char("You don't have that object.\n\r", ch);
-		log_string((char *)Format("Tried to spirittouch %s", argument));
+		log_string(LOG_GAME, (char *)Format("Tried to spirittouch %s", argument));
 		return;
 	}
 

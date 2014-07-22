@@ -836,7 +836,7 @@ void deaded_char (CHAR_DATA *ch)
 {
 
 	send_to_char("Character terminated.\n\r",ch);
-	log_string( Format("Death has marked the end for %s", ch->name) );
+	log_string( LOG_GAME, Format("Death has marked the end for %s", ch->name) );
 	wiznet("\tY[WIZNET]\tn Death has marked the end for $N.", ch,NULL,WIZ_DEATHS,0,get_trust(ch));
 	close_socket(ch->desc);
 	unlink( (char *)Format("%s%s", PLAYER_DIR, capitalize( ch->name )));

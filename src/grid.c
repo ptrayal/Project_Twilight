@@ -118,7 +118,7 @@ void grid_remove_row( GRID_ROW *row )
 
 void row_add_cell( GRID_ROW *row, GRID_CELL *cell)
 {	if( row->curr_width + cell->width > row->grid->width )
-		log_string("Warning: Added Cell Width Overflows Grid");
+		log_string(LOG_ERR, "Warning: Added Cell Width Overflows Grid");
 
 	if( !row->last_cell )
 	{	row->first_cell = cell;

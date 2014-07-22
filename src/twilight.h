@@ -1601,6 +1601,7 @@ struct	affect_data
 #define WIZ_SPAM		(T)
 #define WIZ_COMM		(U)
 #define WIZ_STAFF_COMM		(V)
+#define WIZ_LOG (W)
 
 /*
  * All the storytelling stuff
@@ -3049,8 +3050,18 @@ char *	crypt		args( ( const char *key, const char *salt ) );
 #define GLOBAL_XML_OUT	"../../public_html/global.xml" /* RSS output for globals */
 
 
-#define SMTP_SITE	"relay.genesishosting.com"
-#define SMTP_PORT	"25"
+// Log types
+#define LOG_CRIT 1
+#define LOG_ERR 2
+#define LOG_BUG 4
+#define LOG_SECURITY 8
+#define LOG_CONNECT 16
+#define LOG_GAME 32
+#define LOG_COMMAND 64
+#define LOG_ALL 127 // All the others added up
+
+#define SMTP_SITE	""
+#define SMTP_PORT	""
 
 #define UPDATE_FILE	"../../public_html/news/data/news.txt"
 
@@ -3175,7 +3186,7 @@ bool	str_suffix	args( ( const char *astr, const char *bstr ) );
 char *	capitalize	args( ( const char *str ) );
 void	append_file	args( ( CHAR_DATA *ch, char *file, char *str ) );
 void	bug		args( ( const char *str, int param ) );
-void	log_string	args( ( const char *str ) );
+void log_string args( (int type, const char *fmt, ... ) );
 void	tail_chain	args( ( void ) );
 char *	allcaps		args( ( const char *str ) );
 void	log_to_file	args( ( char *file, char *extension,
@@ -3597,7 +3608,7 @@ extern bool logFail;				// so we can set this to log our purge_data failure
 			} \
 			else { \
 				if(logFail) { \
-					log_string((char *)Format("clear_free_lists: unable to purge_data as it was NULL from: %s %s %d", __FILE__, __FUNCTION__, __LINE__)); \
+					log_string(LOG_ERR, (char *)Format("clear_free_lists: unable to purge_data as it was NULL from: %s %s %d", __FILE__, __FUNCTION__, __LINE__)); \
 				} \
 			} \
 			data = NULL; \
@@ -3714,7 +3725,7 @@ while(0)
 #define CheckCH(ch) \
 do { \
     if(!ch) { \
-        log_string(Format("%s: NULL character data supplied!", __PRETTY_FUNCTION__)); \
+        log_string(LOG_ERR, Format("%s: NULL character data supplied!", __PRETTY_FUNCTION__)); \
         return; \
     } \
 } \
@@ -3728,7 +3739,7 @@ while(0)
       CheckCH(ch); \
       if(IS_NPC(ch)) { \
         send_to_char("No!",ch); \
-        log_string(Format("(NPCBLOCK)%s attempted to use %s!", GetName(ch), __PRETTY_FUNCTION__ ) ); \
+        log_string(LOG_ERR, Format("(NPCBLOCK)%s attempted to use %s!", GetName(ch), __PRETTY_FUNCTION__ ) ); \
         return; \
     } \
 } \

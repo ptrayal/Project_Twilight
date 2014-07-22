@@ -367,11 +367,11 @@ void cleanup_mud(int control)
 	int iHash = 0;
 	int mob_count = 0, obj_count = 0, room_count = 0;
 
-	log_string("Project Twilight is shutting down and cleaning up its memory.");
+	log_string(LOG_ERR, "Project Twilight is shutting down and cleaning up its memory.");
 
 	close(control);
 	control = -1;
-	log_string("cleaning character list");
+	log_string(LOG_ERR, "cleaning character list");
 	for(ch = char_list; ch != NULL; ch = ch_next)
 	{
 		ch_next = ch->next;
@@ -379,7 +379,7 @@ void cleanup_mud(int control)
 		extract_char(ch, true);
 	}
 
-	log_string("cleaning objects");
+	log_string(LOG_ERR, "cleaning objects");
 	for(obj = object_list; obj != NULL; obj = obj_next)
 	{
 		obj_next = obj->next;
@@ -387,21 +387,21 @@ void cleanup_mud(int control)
 		extract_obj(obj);
 	}
 
-	log_string("cleaning helpfiles");
+	log_string(LOG_ERR, "cleaning helpfiles");
 	for(help = help_list; help; help = help_next) {
 		help_next = help->next;
 
 		free_help(help);
 	}
 
-	log_string("cleaning tips");
+	log_string(LOG_ERR, "cleaning tips");
 	for(help = tip_list; help; help = help_next) {
 		help_next = help->next;
 
 		free_help(help);
 	}
 
-	log_string("cleaning packs");
+	log_string(LOG_ERR, "cleaning packs");
 	for(pack = pack_list; pack != NULL; pack = pack_next)
 	{
 		pack_next = pack->next;
@@ -409,7 +409,7 @@ void cleanup_mud(int control)
 		free_pack(pack);
 	}
 
-	log_string("cleaning organizations");
+	log_string(LOG_ERR, "cleaning organizations");
 	for(org = org_list; org != NULL; org = org_next)
 	{
 		org_next = org->next;
@@ -417,7 +417,7 @@ void cleanup_mud(int control)
 		free_org(org);
 	}
 
-	log_string("cleaning stocks");
+	log_string(LOG_ERR, "cleaning stocks");
 	for(stock = stock_list; stock != NULL; stock = stock_next)
 	{
 		stock_next = stock->next;
@@ -425,7 +425,7 @@ void cleanup_mud(int control)
 		free_stock(stock);
 	}
 
-	log_string("cleaning news papers");
+	log_string(LOG_ERR, "cleaning news papers");
 	for(paper = paper_list; paper != NULL; paper = paper_next)
 	{
 		paper_next = paper->next;
@@ -433,7 +433,7 @@ void cleanup_mud(int control)
 		free_newspaper(paper);
 	}
 
-	log_string("cleaning active descriptors");
+	log_string(LOG_ERR, "cleaning active descriptors");
 	for(d = descriptor_list; d != NULL; d = d_next)
 	{
 		d_next = d->next;
@@ -441,7 +441,7 @@ void cleanup_mud(int control)
 		free_descriptor(d);
 	}
 
-	log_string("cleaning background list");
+	log_string(LOG_ERR, "cleaning background list");
 	for(pbg = bg_list; pbg != NULL; pbg = pbg_next)
 	{
 		pbg_next = pbg->next;
@@ -449,7 +449,7 @@ void cleanup_mud(int control)
 		free_note(pbg);
 	}
 
-	log_string("Cleaning knowledge list");
+	log_string(LOG_ERR, "Cleaning knowledge list");
 	for(pbg = know_list; pbg != NULL; pbg = pbg_next)
 	{
 		pbg_next = pbg->next;
@@ -457,7 +457,7 @@ void cleanup_mud(int control)
 		free_note(pbg);
 	}
 
-	log_string("Cleaning news list");
+	log_string(LOG_ERR, "Cleaning news list");
 	for(pnote = news_list; pnote != NULL; pnote = pnote_next)
 	{
 		pnote_next = pnote->next;
@@ -465,7 +465,7 @@ void cleanup_mud(int control)
 		free_note(pnote);
 	}
 
-	log_string("Cleaning out index hashes.");
+	log_string(LOG_ERR, "Cleaning out index hashes.");
 	for( iHash = 0; iHash < MAX_KEY_HASH; iHash++ )
 	{
 		MOB_INDEX_DATA *next_mob_index;
@@ -547,7 +547,7 @@ void cleanup_mud(int control)
 		}
 	}
 
-	log_string("Cleaning out area list");
+	log_string(LOG_ERR, "Cleaning out area list");
 	for ( pArea = area_first; pArea != NULL; pArea = pArea_next )
 	{
 		pArea_next = pArea->next;
@@ -555,7 +555,7 @@ void cleanup_mud(int control)
 		free_area(pArea);
 	}
 
-	log_string("cleaning out remaining shop data");
+	log_string(LOG_ERR, "cleaning out remaining shop data");
 	for(pShop = shop_list; pShop != NULL; pShop = pShop_next )
 	{
 		pShop_next = pShop->next;
@@ -563,17 +563,17 @@ void cleanup_mud(int control)
 		free_shop(pShop);
 	}
 
-	log_string("cleaning out social table.");
+	log_string(LOG_ERR, "cleaning out social table.");
 	purge_socials();
 
-	log_string("cleaning out plots");
+	log_string(LOG_ERR, "cleaning out plots");
 	for(pPlot = plot_list; pPlot; pPlot = pPlot_next) {
 		pPlot_next = pPlot->next;
 
 		free_plot(pPlot);
 	}
 
-	log_string("Cleaning out events / scripts / actors ");
+	log_string(LOG_ERR, "Cleaning out events / scripts / actors ");
 	for(pEvent = event_list; pEvent; pEvent = pEvent_next) {
 		pEvent_next = pEvent->next;
 
@@ -581,7 +581,7 @@ void cleanup_mud(int control)
 	}
 
     purgeExtractedWorldData();
-	log_string("Project Twilight has completed its cleanup procedure and may now shutdown.");
+	log_string(LOG_GAME, "Project Twilight has completed its cleanup procedure and may now shutdown.");
 	return;
 }
 
@@ -646,7 +646,7 @@ int main( int argc, char **argv )
 
 	boot_db( );
 	/* init_web(port+1); */
-	log_string( Format("Project Twilight loaded on port %d.", port) );
+	log_string( LOG_CONNECT, Format("Project Twilight loaded on port %d.", port) );
 	log_to_file(logfile, GLOBAL_XML_IN, "Project Twilight restarted.");
 /*
 	if(fCopyOver)
@@ -661,7 +661,7 @@ int main( int argc, char **argv )
 	/*
 	 * That's all, folks.
 	 */
-	log_string( "Normal termination of game." );
+	log_string( LOG_GAME, "Normal termination of game." );
 	if(fpReserve)
 	{
 		closeReserve();
@@ -1199,7 +1199,7 @@ void init_descriptor( int control )
                                 ( addr >>  8 ) & 0xFF, ( addr       ) & 0xFF)
 		);
 
-                log_string( Format("Sock.sinaddr:  %s", dnew->host) );
+                log_string( LOG_CONNECT, Format("Sock.sinaddr:  %s", dnew->host) );
 	}
 
 	/*
@@ -1268,7 +1268,7 @@ void close_socket( DESCRIPTOR_DATA *dclose )
 
 	if ( ( ch = dclose->character ) != NULL )
 	{
-		log_string( Format("Closing link to %s.", ch->name) );
+		log_string( LOG_CONNECT, Format("Closing link to %s.", ch->name) );
 		/* cut down on wiznet spam when rebooting */
 		if ( dclose->connected == CON_PLAYING && !merc_down)
 		{
@@ -1329,7 +1329,7 @@ bool read_from_descriptor( DESCRIPTOR_DATA *d )
 	iStart = 0;
 	if ( strlen(d->inbuf) >= sizeof(d->inbuf) - 10 )
 	{
-		log_string( Format("%s input overflow!", d->host) );
+		log_string( LOG_ERR, Format("%s input overflow!", d->host) );
 		write_to_descriptor( d->descriptor,
 				"\n\r*** PUT A LID ON IT!!! ***\n\r", 0 );
 		return FALSE;
@@ -1367,7 +1367,7 @@ bool read_from_descriptor( DESCRIPTOR_DATA *d )
 
 		else if ( nRead == 0 )
 		{
-			log_string( "EOF encountered on read." );
+			log_string( LOG_ERR, "EOF encountered on read." );
 			return FALSE;
 		}
 		else if ( errno == EWOULDBLOCK )
@@ -1461,7 +1461,7 @@ void read_from_buffer( DESCRIPTOR_DATA *d )
 	    if (++d->repeat >= 25 && d->character
 	    &&  d->connected == CON_PLAYING)
 	    {
-		log_string( Format("%s@%s input spamming!", d->character?d->character->name:"Unknown", d->host) );
+		log_string( LOG_ERR, Format("%s@%s input spamming!", d->character?d->character->name:"Unknown", d->host) );
 		wiznet("\tY[WIZNET]\tn Spam spam spam $N spam spam spam spam spam!",
 		       d->character,NULL,WIZ_SPAM,0,get_trust(d->character));
 		if (d->incomm[0] == '!')
@@ -1973,7 +1973,7 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 
 		if (IS_SET(ch->plr_flags, PLR_DENY))
 		{
-			log_string( Format("Denying access to %s@%s.", argument, d->host) );
+			log_string( LOG_CONNECT, Format("Denying access to %s@%s.", argument, d->host) );
 			write_to_buffer( d, "You are denied access.\n\r", 0 );
 			close_socket( d );
 			return;
@@ -1982,7 +1982,7 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 		if (check_ban(d->host,BAN_PERMIT)
 				&& !IS_SET(ch->plr_flags,PLR_PERMIT))
 		{
-			log_string( Format("Denying access to %s@%s. Host %s banned.", argument, d->host, d->host) );
+			log_string( LOG_CONNECT, Format("Denying access to %s@%s. Host %s banned.", argument, d->host, d->host) );
 			write_to_buffer(d,"Your site has been banned from this mud.\n\r",0);
 			close_socket(d);
 			return;
@@ -2071,7 +2071,7 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 			clear_character(ch);
 			SET_BIT(ch->act, ACT_REINCARNATE);
 			save_char_obj(ch);
-			log_string(Format("%s has reincarnated as %s", capitalize(ch->oldname), capitalize(ch->name)));
+			log_string( LOG_CONNECT, Format("%s has reincarnated as %s", capitalize(ch->oldname), capitalize(ch->name)));
 			wiznet((char*)Format("\tY[WIZNET]\tn %s has reincarnated as %s", capitalize(ch->oldname)),NULL,NULL,WIZ_NEWBIE,0,0);
 			PURGE_DATA(ch->oldname);
 			ch->trust = 0;
@@ -2104,7 +2104,7 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 						backup->pcdata->pwd ))
 				{
 					write_to_buffer( d, "Wrong password.\n\r", 0 );
-					log_string( Format("\tY[WIZNET]\tn Denying access to %s@%s (bad password).", ch->name, d->host) );
+					log_string( LOG_CONNECT, Format("\tY[WIZNET]\tn Denying access to %s@%s (bad password).", ch->name, d->host) );
 					wiznet(log_buf,NULL,NULL,WIZ_LOGINS,0,get_trust(ch));
 
 					if (d->character->pet) {
@@ -2158,7 +2158,7 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 			if ( check_reconnect( d, ch->name, TRUE ) )
 				return;
 
-			log_string( Format("\tY[WIZNET]\tn %s@%s has connected.", ch->name, d->host) );
+			log_string( LOG_CONNECT, Format("[WIZNET] %s@%s has connected.", ch->name, d->host) );
 			wiznet(log_buf,NULL,NULL,WIZ_SITES,0,get_trust(ch));
 
 			if ( IS_ADMIN(ch) )
@@ -2404,7 +2404,7 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 							ch->influences[INFL_CHURCH] = 3;
 						/* ----------------------------------------------------- */
 
-						log_string( Format("%s@%s new player.", ch->name, d->host) );
+						log_string( LOG_GAME, Format("%s@%s new player.", ch->name, d->host) );
 						wiznet("\tY[WIZNET]\tn Newbie alert!  $N sighted.",ch,NULL,WIZ_NEWBIE,0,0);
 						wiznet(log_buf,NULL,NULL,WIZ_SITES,0,get_trust(ch));
 
@@ -3327,7 +3327,7 @@ bool check_reconnect( DESCRIPTOR_DATA *d, char *name, bool fConn )
 				send_to_char("\tGReconnecting.\tn\n\r", ch );
 				act( "\tG$n has reconnected.\tn", ch, NULL, NULL, TO_ROOM, 0 );
 
-				log_string( Format("%s@%s reconnected.", ch->name, d->host) );
+				log_string( LOG_CONNECT, Format("%s@%s reconnected.", ch->name, d->host) );
 				wiznet("\tY[WIZNET]\tn $N groks the fullness of $S link.",	ch,NULL,WIZ_LINKS,0,0);
 				d->connected = CON_PLAYING;
 				MXPSendTag( d, "<VERSION>" );  /* <--- Add this line */
@@ -4004,7 +4004,7 @@ void logfmt (char * fmt, ...)
 	vsprintf (buf, fmt, args);
 	va_end (args);
 
-	log_string (buf);
+	log_string (LOG_ERR, buf);
 }
 
 /* this procedure handles the input parsing for the physical attribute generator */

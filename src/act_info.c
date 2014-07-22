@@ -3038,7 +3038,7 @@ void do_password( CHAR_DATA *ch, char *argument )
 		if ( *p == '~' )
 		{
 			send_to_char( "New password not acceptable, try again.\n\r", ch );
-			log_string( Format("%s tried to change their password unsuccessfully.", ch->name));
+			log_string( LOG_SECURITY, Format("%s tried to change their password unsuccessfully.", ch->name));
 			return;
 		}
 	}
@@ -3046,7 +3046,7 @@ void do_password( CHAR_DATA *ch, char *argument )
 	PURGE_DATA( ch->pcdata->pwd );
 	ch->pcdata->pwd = str_dup( pwdnew );
 	save_char_obj( ch );
-	log_string( Format("%s changed their password.", ch->name) );
+	log_string( LOG_SECURITY, Format("%s changed their password.", ch->name) );
 	send_to_char( "Ok.\n\r", ch );
 	return;
 }

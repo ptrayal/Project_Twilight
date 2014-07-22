@@ -969,7 +969,7 @@ void fread_char( CHAR_DATA *ch, FILE *fp, bool log_load )
 
 	if(log_load)
 	{
-		log_string(Format("Loading %s.",ch->name));
+		log_string(LOG_GAME, Format("Loading %s.",ch->name));
 	}
 
 	for ( ; ; )

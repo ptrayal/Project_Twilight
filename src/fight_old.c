@@ -848,7 +848,7 @@ int damage(CHAR_DATA *ch,CHAR_DATA *victim,int dam,int dt,int dam_type,
 	{
 		if ( !IS_NPC(victim) )
 		{
-			log_string( Format("%s killed by %s at %d", victim->name, (IS_NPC(ch) ? ch->short_descr : ch->name), ch->in_room->vnum) );
+			log_string( LOG_GAME, Format("%s killed by %s at %d", victim->name, (IS_NPC(ch) ? ch->short_descr : ch->name), ch->in_room->vnum) );
 		}
 
 		snprintf( log_buf, 2*MIL, "\tY[WIZNET]\tn %s got toasted by %s at %s [room %d]",

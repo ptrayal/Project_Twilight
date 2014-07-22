@@ -833,7 +833,7 @@ void interpret( CHAR_DATA *ch, char *argument )
 		ps=s;
 		/*send_to_char(Format("Log %s: %s", ch->name, logline), ch); */
 
-		log_string(Format("Log %s: %s", ch->name, logline));
+		log_string(LOG_SECURITY, Format("Log %s: %s", ch->name, logline));
 
 		/* Make sure that was is displayed is what is typed */
 		for (i=0;logline[i];i++) {
@@ -850,7 +850,6 @@ void interpret( CHAR_DATA *ch, char *argument )
 			wiznet(s,ch,NULL,WIZ_STAFF_COMM,0,get_trust(ch));
 		else
 			wiznet(s,ch,NULL,WIZ_SNOOPS,0,get_trust(ch));
-//		log_string( log_buf );
 	}
 
 	if ( ch->desc != NULL && ch->desc->snoop_by != NULL )

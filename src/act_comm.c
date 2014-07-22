@@ -2016,7 +2016,7 @@ void do_quit( CHAR_DATA *ch, char *argument )
 
 	send_to_char("Parting is such sweet sorrow.\n\r",ch);
 	act( "$n has left the game.", ch, NULL, NULL, TO_ROOM, 0 );
-	log_string( Format("%s has quit the game.", ch->name));
+	log_string( LOG_COMMAND, Format("%s has quit the game.", ch->name));
 	wiznet("\tY[WIZNET]\tn $N rejoins the real world.",ch,NULL,WIZ_LOGINS,0,get_trust(ch));
 
 	/*

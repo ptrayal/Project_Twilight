@@ -2718,13 +2718,13 @@ void do_log( CHAR_DATA *ch, char *argument )
 	if ( IS_SET(victim->plr_flags, PLR_LOG) )
 	{
 		REMOVE_BIT(victim->plr_flags, PLR_LOG);
-		log_string( Format("%s has had their LOG flag removed.", ch->name) );
+		log_string( LOG_SECURITY, Format("%s has had their LOG flag removed.", ch->name) );
 		send_to_char( "LOG removed.\n\r", ch );
 	}
 	else
 	{
 		SET_BIT(victim->plr_flags, PLR_LOG);
-		log_string( Format("%s has had their LOG flag set.", ch->name) );
+		log_string( LOG_SECURITY, Format("%s has had their LOG flag set.", ch->name) );
 		send_to_char( "LOG set.\n\r", ch );
 	}
 
@@ -5475,7 +5475,7 @@ void do_clear_timers(CHAR_DATA *ch, char *argument)
 
 	CheckCH(ch);
 
-	log_string(Format("Timer clear argument is %s.", argument));
+	log_string( LOG_COMMAND, Format("Timer clear argument is %s.", argument));
 
 	if(IS_NULLSTR(argument))
 	{
