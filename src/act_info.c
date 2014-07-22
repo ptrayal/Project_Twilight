@@ -1608,8 +1608,6 @@ void do_score( CHAR_DATA *ch, char *argument )
 		}
 	}
 
-	buf[0] = '\0';
-
 	if(ch->race == race_lookup("human") && IS_SET(ch->act2, ACT2_GHOUL))
 	{
 		send_to_char( Format("\r\n\tW---------------------------------<\tG   Ghoul\tW>-----------------------------------\tn\r\n"), user);
