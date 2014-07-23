@@ -231,8 +231,8 @@ void row_to_char( GRID_ROW *row, CHAR_DATA *ch )
 	char *** ptrs;
 	char *tok;
 	char buf[MSL], pad_buf[MSL];
-	int i = 0, n = 0, x = 0;
-	int bottom_fill = 0, filler = UMIN(0, row->grid->width - row->curr_width - 1 );
+	int i = 0, n = 0;
+	int filler = UMIN(0, row->grid->width - row->curr_width - 1 );
 	int actual_height = row->max_height + ( row->padding_top + row->padding_bottom );
 	int alloced = 0;
 	ptrs = calloc(row->columns, sizeof(*ptrs) );

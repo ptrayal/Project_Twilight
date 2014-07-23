@@ -3104,6 +3104,15 @@ void	do_hide		args( ( CHAR_DATA *ch, char * argument) );
 void walk_to_summonner	args( ( CHAR_DATA *ch ) );
 void	arrest_player	args( ( CHAR_DATA *cop ) );
 int	find_dir	args( ( CHAR_DATA *ch, char *arg ) );
+void free_help(HELP_DATA *pHelp);
+void free_mob_index( MOB_INDEX_DATA *pMob );
+void free_obj_index( OBJ_INDEX_DATA *pObj );
+void free_room_index( ROOM_INDEX_DATA *pRoom );
+void free_area( AREA_DATA *pArea );
+void free_shop( SHOP_DATA *pShop );
+void free_plot(PLOT_DATA *plot);
+void free_event(EVENT_DATA *event);
+
 
 /* act_obj.c */
 void    wear_obj        args( ( CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace,

@@ -1586,7 +1586,6 @@ void do_exits( CHAR_DATA *ch, char *argument )
 
 void do_score( CHAR_DATA *ch, char *argument )
 {
-	char buf[MSL]={'\0'};
 	int num = 0, i = 0;
 	int statcount = 0;
 	CHAR_DATA *user = ch;
