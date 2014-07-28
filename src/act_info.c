@@ -76,13 +76,13 @@ char *format_obj_to_char( OBJ_DATA *obj, CHAR_DATA *ch, bool fShort )
 	if IS_NULLSTR(obj->short_descr)
 		{
 			obj->short_descr = str_dup("This object needs a short description.");
-			bug(Format("Object VNUM %d has no short description.", obj->pIndexData->vnum), 0);
+			log_string(LOG_BUG, Format("Object VNUM %d has no short description.", obj->pIndexData->vnum));
 		}
 
 	if IS_NULLSTR(obj->description)
 	{
 		obj->description = str_dup("This object needs a description.");
-		bug(Format("Object VNUM %d has no description.", obj->pIndexData->vnum), 0);
+		log_string(LOG_BUG, Format("Object VNUM %d has no description.", obj->pIndexData->vnum));
 	}
 
 	if ( !IS_SET(obj->extra2, OBJ_PACKAGED) &&
@@ -2282,7 +2282,7 @@ void do_help( CHAR_DATA *ch, char *argument )
 	if (!found)
 	{
 		send_to_char( "\tWNo help on that word. Have you tried investigating or researching that?\tn\n\r", ch );
-		do_bug(NULL, (char *)Format("[*****] HELP: No help for: %s - %s", argall, ctime(&current_time)));
+		log_string(LOG_BUG, (char *)Format("[*****] HELP: No help for: %s - %s", argall, ctime(&current_time)));
 	}
 	else
 		page_to_char(buf_string(output),ch);
@@ -3086,7 +3086,7 @@ void do_research(CHAR_DATA *ch, char *argument)
 	if(pbg == NULL)
 	{
 		send_to_char(Format("Your research finds nothing about %s.", argument), ch);
-		do_bug(NULL, (char *)Format("BG MISSING | No BG for: %s - %s", argument, ctime(&current_time)));
+		log_string(LOG_BUG, (char *)Format("BG MISSING | No BG for: %s - %s", argument, ctime(&current_time)));
 		return;
 	}
 
@@ -3145,7 +3145,7 @@ void do_investigate(CHAR_DATA *ch, char *argument)
 	if(pbg == NULL && (vch = get_char_world(ch, argument)) == NULL)
 	{
 		send_to_char(Format("You can find out nothing about %s.", argument), ch);
-		do_bug(NULL, (char *)Format("FACT MISSING | No facts for: %s", argument));
+		log_string(LOG_BUG, (char *)Format("FACT MISSING | No facts for: %s", argument));
 		return;
 	}
 
@@ -5138,7 +5138,7 @@ void do_use(CHAR_DATA *ch, char *argument)
 	send_to_char("What are you trying to use?\n\r", ch);
 	if(!IS_NULLSTR(arg))
 	{
-		do_bug(NULL, (char *)Format("Request to use: %s (Argument: %s) by %s", arg, IS_NULLSTR(argument)?"None":argument, IS_NPC(ch)?"Mob":ch->name));
+		log_string(LOG_BUG, (char *)Format("Request to use: %s (Argument: %s) by %s", arg, IS_NULLSTR(argument)?"None":argument, IS_NPC(ch)?"Mob":ch->name));
 	}
 }
 

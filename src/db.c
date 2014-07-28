@@ -4878,21 +4878,6 @@ char *get_curdate( )
 	return buf;
 }
 
-/*
- * Writes a string to the log. Thanks Darien
- */
-// void log_string( const char *str )
-// {
-// 	FILE *fp = fopen("../log/mylog.log", "a");
-// 	if(fp)
-// 	{
-// 		fprintf(fp, "%s\n", str);
-// 	}
-
-// 	fprintf(stdout, "%s\n", str);
-// 	fclose(fp);
-// 	fp = NULL; return;
-// }
 
 void log_string(int type, const char *fmt, ... )
 {

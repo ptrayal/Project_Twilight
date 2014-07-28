@@ -578,7 +578,7 @@ void do_disconnect( CHAR_DATA *ch, char *argument )
 		}
 	}
 
-	bug( "Do_disconnect: desc not found.", 0 );
+	log_string(LOG_BUG, "Do_disconnect: desc not found.");
 	send_to_char( "Descriptor not found!\n\r", ch );
 	return;
 }
@@ -4743,19 +4743,19 @@ void room_pair (ROOM_INDEX_DATA* left, ROOM_INDEX_DATA* right, exit_status ex, c
 
 	switch (ex)
 	{
-	default:
+		default:
 		sExit = "??"; break; /* invalid usage */
-	case exit_from:
+		case exit_from:
 		sExit = "< "; break;
-	case exit_to:
+		case exit_to:
 		sExit = " >"; break;
-	case exit_both:
+		case exit_both:
 		sExit = "<>"; break;
 	}
 
-	snprintf (buffer, sizeof(buffer), "%d %-26.26s %s%d %-26.26s(%-8.8s)\n\r",
-			left->vnum, left->name, sExit, right->vnum, right->name, area_name(right->area)
-	);
+	// snprintf (buffer, sizeof(buffer), "%d %-26s %s%d %-26s(%-8.8s)\n\r",
+	// 		left->vnum, left->name, sExit, right->vnum, right->name, area_name(right->area)
+	snprintf (buffer, sizeof(buffer), "%d %s %d (%-8s)\n\r", left->vnum, sExit, right->vnum, area_name(right->area));
 }
 
 /* for every exit in 'room' which leads to or from pArea but NOT both, print it */
@@ -4818,9 +4818,9 @@ void do_exlist (CHAR_DATA *ch, char * argument)
 {
 	AREA_DATA* pArea;
 	ROOM_INDEX_DATA* room;
-	int i;
 	char buffer[MSL]={'\0'};
-
+	int i;
+	
 	CheckCH(ch);
 
 	pArea = ch->in_room->area;			/* this is the area we want info on */
