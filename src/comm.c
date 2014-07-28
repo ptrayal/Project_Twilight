@@ -1298,7 +1298,7 @@ void close_socket( DESCRIPTOR_DATA *dclose )
 		if ( d != NULL )
 			d->next = dclose->next;
 		else
-			bug( "Close_socket: dclose not found.", 0 );
+			log_string(LOG_BUG, "Close_socket: dclose not found.");
 	}
 
 	ProtocolDestroy( dclose->pProtocol );
@@ -1824,7 +1824,7 @@ void write_to_buffer( DESCRIPTOR_DATA *d, const char *txt, int length )
 
 		if (d->outsize >= 32000)
 		{
-			bug("Buffer overflow. Closing.\n\r",0);
+			log_string(LOG_BUG, "Buffer overflow. Closing.");
 			close_socket(d);
 			return;
 		}
@@ -1903,7 +1903,7 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 	{
 
 	default:
-		bug( "Nanny: bad d->connected %d.", d->connected );
+		log_string(LOG_BUG, Format("Nanny: bad d->connected %d.", d->connected ));
 		close_socket( d );
 		return;
 
@@ -3622,7 +3622,7 @@ void act_new( const char *format, CHAR_DATA *ch, const void *arg1,  const void *
     {
     	if(room == NULL)
     	{
-    		bug( "Act: null room with TO_OROOM.", 0 );
+    		log_string(LOG_BUG, "Act: null room with TO_OROOM.");
     		return;
     	}
 
@@ -3647,7 +3647,7 @@ void act_new( const char *format, CHAR_DATA *ch, const void *arg1,  const void *
     {
         if ( vch == NULL )
         {
-            bug( "Act: null vch with TO_VICT.", 0 );
+            log_string(LOG_BUG, "Act: null vch with TO_VICT.");
             return;
         }
 
@@ -3703,55 +3703,55 @@ void act_new( const char *format, CHAR_DATA *ch, const void *arg1,  const void *
  
             if ( arg2 == NULL && *str >= 'A' && *str <= 'Z' )
             {
-                bug( "Act: missing arg2 for code %d.", *str );
+                log_string(LOG_BUG, Format("Act: missing arg2 for code %d.", *str ));
                 i = " <@@@> ";
             }
             else
             {
                 switch ( *str )
                 {
-                default:  bug( "Act: bad code %d.", *str );
+                default:  log_string(LOG_BUG, Format("Act: bad code %d.", *str ));
                           i = " <@@@> ";                                break;
                 case '$': i = "$";
                             break;
                 /* Thx alex for 't' idea */
                 case 't': if (arg1) i = (char *) arg1;
-			  else bug("Act: bad code $t for 'arg1'",0);
+			  else log_string(LOG_BUG, "Act: bad code $t for 'arg1'");
                             break;
                 case 'T': if (arg2) i = (char *) arg2;
-			  else bug("Act: bad code $T for 'arg2'",0);
+			  else log_string(LOG_BUG, "Act: bad code $T for 'arg2'");
                             break;
                 case 'n': if (ch&&to) {
         		if(LOOKS_DIFFERENT(ch))
         		    i = ALT_PERS( ch, to );
         		else
         		    i = PERS( ch, to ); }
-			  else bug("Act: bad code $n for 'ch' or 'to'",0);
+			  else log_string(LOG_BUG, "Act: bad code $n for 'ch' or 'to'");
 			    break;
                 case 'N': if (vch&&to) {
         		if(LOOKS_DIFFERENT(vch))
         		    i = ALT_PERS( vch, to );
         		else
         		    i = PERS( vch, to ); }
-			  else bug("Act: bad code $N for 'vch' or 'to'",0);
+			  else log_string(LOG_BUG, "Act: bad code $N for 'vch' or 'to'");
 			    break;
                 case 'e': if (ch) i = he_she  [URANGE(0, ch  ->sex, 2)];
-			  else bug("Act: bad code $e for 'ch'",0);
+			  else log_string(LOG_BUG, "Act: bad code $e for 'ch'");
 		            break;
                 case 'E': if (vch) i = he_she  [URANGE(0, vch ->sex, 2)];
-			  else bug("Act: bad code $E for 'vch'",0);
+			  else log_string(LOG_BUG, "Act: bad code $E for 'vch'");
 		            break;
                 case 'm': if (ch) i = him_her [URANGE(0, ch  ->sex, 2)];
-			  else bug("Act: bad code $m for 'ch'",0);
+			  else log_string(LOG_BUG, "Act: bad code $m for 'ch'");
 		            break;
                 case 'M': if (vch) i = him_her [URANGE(0, vch ->sex, 2)];
-			  else bug("Act: bad code $M for 'vch'",0);
+			  else log_string(LOG_BUG, "Act: bad code $M for 'vch'");
 		            break;
                 case 's': if (ch) i = his_her [URANGE(0, ch  ->sex, 2)];
-			  else bug("Act: bad code $s for 'ch'",0);
+			  else log_string(LOG_BUG, "Act: bad code $s for 'ch'");
 		            break;
                 case 'S': if (vch) i = his_her [URANGE(0, vch ->sex, 2)];
-			  else bug("Act: bad code $S for 'vch'",0);
+			  else log_string(LOG_BUG, "Act: bad code $S for 'vch'");
 		            break;
 
                 case 'p':
@@ -3762,7 +3762,8 @@ void act_new( const char *format, CHAR_DATA *ch, const void *arg1,  const void *
                         else
 			    i = "something";
 		    }
-		    else bug("Act: bad code $p for 'obj1'",0);
+		    else 
+		    	log_string(LOG_BUG, "Act: bad code $p for 'obj1'");
                     break;
  
                 case 'P':
@@ -3773,7 +3774,7 @@ void act_new( const char *format, CHAR_DATA *ch, const void *arg1,  const void *
                         else
 			    i = "something";
 		    }
-		    else bug("Act: bad code $P for 'obj2'",0);
+		    else log_string(LOG_BUG, "Act: bad code $P for 'obj2'");
                     break;
  
                 case 'd':
@@ -3794,7 +3795,7 @@ void act_new( const char *format, CHAR_DATA *ch, const void *arg1,  const void *
 			snprintf(fname, sizeof(fname), "%d", atoi((char *)arg1));
 			i = fname;
 		    }
-		    else bug(Format("Act: bad code $i for 'arg1', which is %s", arg1),0);
+		    else log_string(LOG_BUG, Format("Act: bad code $i for 'arg1', which is %s", arg1));
 		    break;
                 }
             }
@@ -3849,21 +3850,21 @@ void act_new( const char *format, CHAR_DATA *ch, const void *arg1,  const void *
  
             if ( arg2 == NULL && *str >= 'A' && *str <= 'Z' )
             {
-                bug( "Act: missing arg2 for code %d.", *str );
+                log_string(LOG_BUG, Format("Act: missing arg2 for code %d.", *str ));
                 i = " <@@@> ";
             }
             else
             {
                 switch ( *str )
                 {
-                default:  bug( "Act: bad code %d.", *str );
+                default:  log_string(LOG_BUG, Format("Act: bad code %d.", *str ));
                           i = " <@@@> ";                                break;
                 /* Thx alex for 't' idea */
                 case 't': if (arg1) i = (char *) arg1;
-			  else bug("Act: bad code $t for 'arg1'",0);
+			  else log_string(LOG_BUG, "Act: bad code $t for 'arg1'");
                             break;
                 case 'T': if (arg2) i = (char *) arg2;
-			  else bug("Act: bad code $T for 'arg2'",0);
+			  else log_string(LOG_BUG, "Act: bad code $T for 'arg2'");
                             break;
                 case 'n': if (ch&&also_to) {
         		if(LOOKS_DIFFERENT(ch))
@@ -3875,7 +3876,7 @@ void act_new( const char *format, CHAR_DATA *ch, const void *arg1,  const void *
         		}
         		else
         		    i = PERS( ch, also_to ); }
-			  else bug("Act: bad code $n for 'ch' or 'also_to'",0);
+			  else log_string(LOG_BUG, "Act: bad code $n for 'ch' or 'also_to'");
 			    break;
                 case 'N': if (vch&&also_to) {
         		if(LOOKS_DIFFERENT(vch))
@@ -3887,39 +3888,39 @@ void act_new( const char *format, CHAR_DATA *ch, const void *arg1,  const void *
         		}
         		else
         		    i = PERS( vch, also_to ); }
-			  else bug("Act: bad code $N for 'vch' or 'also_to'",0);
+			  else log_string(LOG_BUG, "Act: bad code $N for 'vch' or 'also_to'");
 			    break;
                 case 'e': if (ch) i = he_she  [URANGE(0, ch  ->sex, 2)];
-			  else bug("Act: bad code $e for 'ch'",0);
+			  else log_string(LOG_BUG, "Act: bad code $e for 'ch'");
 		            break;
                 case 'E': if (vch) i = he_she  [URANGE(0, vch ->sex, 2)];
-			  else bug("Act: bad code $E for 'vch'",0);
+			  else log_string(LOG_BUG, "Act: bad code $E for 'vch'");
 		            break;
                 case 'm': if (ch) i = him_her [URANGE(0, ch  ->sex, 2)];
-			  else bug("Act: bad code $m for 'ch'",0);
+			  else log_string(LOG_BUG, "Act: bad code $m for 'ch'");
 		            break;
                 case 'M': if (vch) i = him_her [URANGE(0, vch ->sex, 2)];
-			  else bug("Act: bad code $M for 'vch'",0);
+			  else log_string(LOG_BUG, "Act: bad code $M for 'vch'");
 		            break;
                 case 's': if (ch) i = his_her [URANGE(0, ch  ->sex, 2)];
-			  else bug("Act: bad code $s for 'ch'",0);
+			  else log_string(LOG_BUG, "Act: bad code $s for 'ch'");
 		            break;
                 case 'S': if (vch) i = his_her [URANGE(0, vch ->sex, 2)];
-			  else bug("Act: bad code $S for 'vch'",0);
+			  else log_string(LOG_BUG, "Act: bad code $S for 'vch'");
 		            break;
  
                 case 'p':
                     if (obj1) i = can_see_obj( also_to, obj1 )
                             ? obj1->short_descr
                             : "something";
-		    else bug("Act: bad code $p for 'obj1'",0);
+		    else log_string(LOG_BUG, "Act: bad code $p for 'obj1'");
                     break;
  
                 case 'P':
                     if (obj2) i = can_see_obj( also_to, obj2 )
                             ? obj2->short_descr
                             : "something";
-		    else bug("Act: bad code $p for 'obj2'",0);
+		    else log_string(LOG_BUG, "Act: bad code $p for 'obj2'");
                     break;
  
                 case 'd':

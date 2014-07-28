@@ -3775,7 +3775,7 @@ void load_thread(char *name, NOTE_DATA **list, int type, time_t free_time)
 	else if(type == NOTE_ARTICLE)
 		strncpy( strArea, NEWS_FILE, sizeof(strArea) );
 	fpArea = fp;
-	bug( "Load_notes: bad key word.", 0 );
+	log_string(LOG_BUG, "Load_notes: bad key word.");
 	exit( 1 );
 	return;
 }
@@ -3990,7 +3990,7 @@ void note_remove( CHAR_DATA *ch, NOTE_DATA *pnote, bool bdelete)
 
 	if ( prev == NULL )
 	{
-	    bug( "Note_remove: pnote not found.", 0 );
+	    log_string(LOG_BUG, "Note_remove: pnote not found.");
 	    return;
 	}
 
@@ -4682,7 +4682,7 @@ void load_papers()
 	{
 		strncpy( strArea, PAPER_FILE, sizeof(strArea) );
 		fpArea = fp;
-		bug( "Load_papers: bad key word.", 0 );
+		log_string(LOG_BUG, "Load_papers: bad key word.");
 		exit( 1 );
 	}
 
@@ -4786,7 +4786,7 @@ void load_stocks()
 	{
 		strncpy( strArea, STOCK_FILE, sizeof(strArea) );
 		fpArea = fp;
-		bug( "Load_stocks: bad key word.", 0 );
+		log_string(LOG_BUG, "Load_stocks: bad key word.");
 		exit( 1 );
 	}
 

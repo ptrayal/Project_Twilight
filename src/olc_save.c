@@ -78,7 +78,7 @@ void save_area_list()
 
 	if ( ( fp = fopen( "area.lst", "w" ) ) == NULL )
 	{
-		bug( "Save_area_list: fopen", 0 );
+		log_string(LOG_BUG, "Save_area_list: fopen");
 		perror( "area.lst" );
 	}
 	else
@@ -111,7 +111,7 @@ void save_org_list()
 
 	if ( ( fp = fopen( (char *)Format("%s%s", ORG_DIR, ORG_LIST), "w" ) ) == NULL )
 	{
-		bug( "Save_org_list: fopen", 0 );
+		log_string(LOG_BUG, "Save_org_list: fopen");
 		perror( "org.lst" );
 	}
 	else
@@ -643,7 +643,7 @@ void save_resets( FILE *fp, AREA_DATA *pArea )
 					switch ( pReset->command )
 					{
 					default:
-						bug( "Save_resets: bad command %c.", pReset->command );
+						log_string(LOG_BUG, Format("Save_resets: bad command %c.", pReset->command ));
 						break;
 
 #if defined( VERBOSE )
@@ -685,7 +685,7 @@ void save_resets( FILE *fp, AREA_DATA *pArea )
 								pLastMob ? pLastMob->short_descr : "!NO_MOB!" );
 						if ( !pLastMob )
 						{
-							bug( Format("Save_resets: !NO_MOB! in [%s]", pArea->file_name), 0 );
+							log_string(LOG_BUG, Format("Save_resets: !NO_MOB! in [%s]", pArea->file_name));
 						}
 						break;
 
@@ -698,7 +698,7 @@ void save_resets( FILE *fp, AREA_DATA *pArea )
 								pLastMob ? pLastMob->short_descr : "!NO_MOB!" );
 						if ( !pLastMob )
 						{
-							bug( Format("Save_resets: !NO_MOB! in [%s]", pArea->file_name), 0 );
+							log_string(LOG_BUG, Format("Save_resets: !NO_MOB! in [%s]", pArea->file_name));
 						}
 						break;
 
@@ -745,7 +745,7 @@ void save_resets( FILE *fp, AREA_DATA *pArea )
 						fprintf( fp, "G 0 %d 0\n", pReset->arg1 );
 						if ( !pLastMob )
 						{
-							bug( Format("Save_resets: !NO_MOB! in [%s]", pArea->file_name), 0 );
+							log_string(LOG_BUG, Format("Save_resets: !NO_MOB! in [%s]", pArea->file_name));
 						}
 						break;
 
@@ -755,7 +755,7 @@ void save_resets( FILE *fp, AREA_DATA *pArea )
 								pReset->arg3 );
 						if ( !pLastMob )
 						{
-							bug( Format("Save_resets: !NO_MOB! in [%s]", pArea->file_name), 0 );
+							log_string(LOG_BUG, Format("Save_resets: !NO_MOB! in [%s]", pArea->file_name));
 						}
 						break;
 
@@ -840,7 +840,7 @@ void save_area( AREA_DATA *pArea )
 	closeReserve();
 	if ( !( fp = fopen( pArea->file_name, "w" ) ) )
 	{
-		bug( "Open_area: fopen", 0 );
+		log_string(LOG_BUG, "Open_area: fopen");
 		perror( pArea->file_name );
 	}
 
@@ -1135,7 +1135,7 @@ void do_save_plots (CHAR_DATA *ch, char *argument)
 	closeReserve();
 	if ( !( fp = fopen( "plots.are", "w" ) ) )
 	{
-		bug( "Save_plots: fopen", 0 );
+		log_string(LOG_BUG, "Save_plots: fopen");
 		perror( "plots.are" );
 	}
 
@@ -1206,7 +1206,7 @@ void do_save_ai (CHAR_DATA *ch, char *argument)
 	closeReserve();
 	if ( !( fp = fopen( "ai.are", "w" ) ) )
 	{
-		bug( "Save_AI: fopen", 0 );
+		log_string(LOG_BUG, "Save_AI: fopen");
 		perror( "ai.are" );
 	}
 
@@ -1229,7 +1229,7 @@ void do_hsave (CHAR_DATA *ch, char *argument)
 	closeReserve();
 	if ( !( fp = fopen( "help.are", "w" ) ) )
 	{
-		bug( "HSave: fopen", 0 );
+		log_string(LOG_BUG, "HSave: fopen");
 		perror( "help.are" );
 	}
 
@@ -1276,7 +1276,7 @@ void do_tsave (CHAR_DATA *ch, char *argument)
 	closeReserve();
 	if ( !( fp = fopen( "tips.are", "w" ) ) )
 	{
-		bug( "TSave: fopen", 0 );
+		log_string(LOG_BUG, "TSave: fopen");
 		perror( "tips.are" );
 	}
 
@@ -1322,7 +1322,7 @@ void fwrite_votes ()
 	closeReserve();
 	if ( !( fp = fopen( "votes.txt", "w" ) ) )
 	{
-		bug( "Write_votes: fopen", 0 );
+		log_string(LOG_BUG, "Write_votes: fopen");
 		perror( "votes.txt" );
 	}
 
@@ -1370,7 +1370,7 @@ void fwrite_org (ORG_DATA *org)
 	closeReserve();
 	if ( !( fp = fopen( (char *)Format("%s%s", ORG_DIR, org->file_name), "w" ) ) )
 	{
-		bug( "Write_org: fopen", 0 );
+		log_string(LOG_BUG, "Write_org: fopen");
 		perror( (char *)Format("%s%s", ORG_DIR, org->file_name) );
 	}
 
@@ -1418,7 +1418,7 @@ void do_hsave2 (CHAR_DATA *ch, char *argument)
 	closeReserve();
 	if ( !( fp = fopen( "help.xml", "w" ) ) )
 	{
-		bug( "HSave: fopen", 0 );
+		log_string(LOG_BUG, "HSave: fopen");
 		perror( "help.xml" );
 	}
 

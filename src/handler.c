@@ -358,7 +358,7 @@ int get_skill(CHAR_DATA *ch, int sn)
 
     else if (sn < -1 || sn > MAX_SKILL)
     {
-	bug("Bad sn %d in get_skill.",sn);
+	log_string(LOG_BUG, Format("Bad sn %d in get_skill.", sn));
 	skill = 0;
     }
 
@@ -1007,7 +1007,7 @@ void affect_modify( CHAR_DATA *ch, AFFECT_DATA *paf, bool fAdd )
     switch ( paf->location )
     {
     default:
-	bug( "Affect_modify: unknown location %d.", paf->location );
+	log_string(LOG_BUG, Format("Affect_modify: unknown location %d.", paf->location ));
 	return;
 
     case APPLY_NONE:						break;
@@ -1097,7 +1097,7 @@ void affect_modify_room( ROOM_INDEX_DATA *rm, AFFECT_DATA *paf, bool fAdd )
 	switch ( paf->location )
 	{
 	default:
-		bug( "Affect_modify_room: unknown location %d.", paf->location );
+		log_string(LOG_BUG, Format("Affect_modify_room: unknown location %d.", paf->location ));
 		return;
 
 	case APPLY_NONE:						break;
@@ -1290,7 +1290,7 @@ void affect_remove( CHAR_DATA *ch, AFFECT_DATA *paf )
 
 	if ( ch->affected == NULL )
 	{
-		bug( "Affect_remove: no affect.", 0 );
+		log_string(LOG_BUG, "Affect_remove: no affect.");
 		return;
 	}
 
@@ -1317,7 +1317,7 @@ void affect_remove( CHAR_DATA *ch, AFFECT_DATA *paf )
 
 		if ( prev == NULL )
 		{
-			bug( "Affect_remove: cannot find paf.", 0 );
+			log_string(LOG_BUG, "Affect_remove: cannot find paf.");
 			return;
 		}
 	}
@@ -1333,7 +1333,7 @@ void affect_remove_obj( OBJ_DATA *obj, AFFECT_DATA *paf)
     int where = 0, vector = 0;
     if ( obj->affected == NULL )
     {
-        bug( "Affect_remove_object: no affect.", 0 );
+        log_string(LOG_BUG, "Affect_remove_object: no affect.");
         return;
     }
 
@@ -1375,7 +1375,7 @@ void affect_remove_obj( OBJ_DATA *obj, AFFECT_DATA *paf)
 
         if ( prev == NULL )
         {
-            bug( "Affect_remove_object: cannot find paf.", 0 );
+            log_string(LOG_BUG, "Affect_remove_object: cannot find paf.");
             return;
         }
     }
@@ -1395,7 +1395,7 @@ void affect_remove_room( ROOM_INDEX_DATA *room, AFFECT_DATA *paf)
     int where = 0, vector = 0;
     if ( room->affects == NULL )
     {
-        bug( "Affect_remove_room: no affect.", 0 );
+        log_string(LOG_BUG, "Affect_remove_room: no affect.");
         return;
     }
 
@@ -1430,7 +1430,7 @@ void affect_remove_room( ROOM_INDEX_DATA *room, AFFECT_DATA *paf)
 
         if ( prev == NULL )
         {
-            bug( "Affect_remove_room: cannot find paf.", 0 );
+            log_string(LOG_BUG, "Affect_remove_room: cannot find paf.");
             return;
         }
     }
@@ -1556,7 +1556,7 @@ void char_from_listeners( CHAR_DATA *ch )
 
 	if ( ch->listening == NULL )
 	{
-		bug( "Char_from_listeners: NULL.", 0 );
+		log_string(LOG_BUG, "Char_from_listeners: NULL.");
 		return;
 	}
 
@@ -1578,7 +1578,7 @@ void char_from_listeners( CHAR_DATA *ch )
 		}
 
 		if ( prev == NULL )
-			bug( "Char_from_listeners: ch not found.", 0 );
+			log_string(LOG_BUG, "Char_from_listeners: ch not found.");
 	}
 
 	ch->listening     = NULL;
@@ -1597,7 +1597,7 @@ void char_to_listeners( CHAR_DATA *ch, ROOM_INDEX_DATA *pRoomIndex )
 	{
 		ROOM_INDEX_DATA *room;
 
-		bug( "Char_to_listeners: NULL.", 0 );
+		log_string(LOG_BUG, "Char_to_listeners: NULL.");
 
 		if ((room = get_room_index(ROOM_VNUM_START)) != NULL)
 			char_to_listeners(ch,room);
@@ -1622,7 +1622,7 @@ void char_from_room( CHAR_DATA *ch )
 
 	if ( ch->in_room == NULL )
 	{
-		bug( "Char_from_room: NULL.", 0 );
+		log_string(LOG_BUG, "Char_from_room: NULL.");
 		return;
 	}
 
@@ -1656,7 +1656,7 @@ void char_to_room( CHAR_DATA *ch, ROOM_INDEX_DATA *pRoomIndex )
     {
 	ROOM_INDEX_DATA *room;
 
-	bug( "Char_to_room: NULL.", 0 );
+	log_string(LOG_BUG, "Char_to_room: NULL.");
 
 	if ((room = get_room_index(ROOM_VNUM_START)) != NULL)
 	    char_to_room(ch,room);
@@ -1800,7 +1800,7 @@ void obj_from_char( OBJ_DATA *obj )
 
     if ( ( ch = obj->carried_by ) == NULL )
     {
-	bug( "Obj_from_char: null ch.", 0 );
+	log_string(LOG_BUG, "Obj_from_char: null ch.");
 	return;
     }
 
@@ -1825,7 +1825,7 @@ void obj_from_char( OBJ_DATA *obj )
 	}
 
 	if ( prev == NULL )
-	    bug( "Obj_from_char: obj not in list.", 0 );
+	    log_string(LOG_BUG, "Obj_from_char: obj not in list.");
     }
 
     if(!IS_SET(obj->extra2, OBJ_ATTUNED) && !IS_BUILDERMODE(obj))
@@ -1942,7 +1942,7 @@ void equip_char( CHAR_DATA *ch, OBJ_DATA *obj, int iWear )
 
     if ( get_eq_char( ch, iWear ) != NULL && iWear != WEAR_SKINFLAP )
     {
-	bug( "Equip_char: already equipped (%d).", iWear );
+	log_string(LOG_BUG, Format("Equip_char: already equipped (%d).", iWear ));
 	return;
     }
 
@@ -1983,7 +1983,7 @@ void unequip_char( CHAR_DATA *ch, OBJ_DATA *obj )
 
     if ( obj->wear_loc == WEAR_NONE )
     {
-	bug( "Unequip_char: already unequipped.", 0 );
+	log_string(LOG_BUG, "Unequip_char: already unequipped.");
 	return;
     }
 
@@ -2019,7 +2019,7 @@ void unequip_char( CHAR_DATA *ch, OBJ_DATA *obj )
     for ( paf = obj->affected; paf != NULL; paf = paf->next )
 	if ( paf->location == APPLY_SPELL_AFFECT )
 	{
-	    bug ( "Norm-Apply: %d", 0 );
+	    log_string(LOG_BUG, Format("Norm-Apply: %d", 0 ));
 	    for ( lpaf = ch->affected; lpaf != NULL; lpaf = lpaf_next )
 	    {
 		lpaf_next = lpaf->next;
@@ -2027,8 +2027,8 @@ void unequip_char( CHAR_DATA *ch, OBJ_DATA *obj )
 		    (lpaf->level == paf->level) &&
 		    (lpaf->location == APPLY_SPELL_AFFECT))
 		{
-		    bug ( "location = %d", lpaf->location );
-		    bug ( "type = %d", lpaf->type );
+		    log_string(LOG_BUG, Format("location = %d", lpaf->location ));
+		    log_string(LOG_BUG, Format("type = %d", lpaf->type ));
 		    affect_remove( ch, lpaf );
 		    lpaf_next = NULL;
 		}
@@ -2082,7 +2082,7 @@ void obj_from_room( OBJ_DATA *obj )
 
     if ( ( in_room = obj->in_room ) == NULL )
     {
-	bug( "obj_from_room: NULL.", 0 );
+	log_string(LOG_BUG, "obj_from_room: NULL.");
 	return;
     }
 
@@ -2109,7 +2109,7 @@ void obj_from_room( OBJ_DATA *obj )
 
 	if ( prev == NULL )
 	{
-	    bug( "Obj_from_room: obj not found.", 0 );
+	    log_string(LOG_BUG, "Obj_from_room: obj not found.");
 	    return;
 	}
     }
@@ -2178,7 +2178,7 @@ void obj_from_obj( OBJ_DATA *obj )
 
     if ( ( obj_from = obj->in_obj ) == NULL )
     {
-	bug( "Obj_from_obj: null obj_from.", 0 );
+	log_string(LOG_BUG, "Obj_from_obj: null obj_from.");
 	return;
     }
 
@@ -2201,7 +2201,7 @@ void obj_from_obj( OBJ_DATA *obj )
 
 	if ( prev == NULL )
 	{
-	    bug( "Obj_from_obj: obj not found.", 0 );
+	    log_string(LOG_BUG, "Obj_from_obj: obj not found.");
 	    return;
 	}
     }
@@ -2290,15 +2290,9 @@ void extract_char( CHAR_DATA *ch, bool fPull )
 
 	if ( ch->in_room == NULL )
 	{
-		bug( "Extract_char: NULL room.", 0 );
+		log_string(LOG_BUG, "Extract_char: NULL room.");
 		return;
 	}
-
-	// if (ch->master == NULL )
-	// {
-	// 	bug( "Extract_Char: NULL Master.", 0);
-	// 	return;
-	// }
 
 	if(ch->pet != NULL)
 	{
@@ -2319,7 +2313,7 @@ void extract_char( CHAR_DATA *ch, bool fPull )
 
 	if (ch->listening != NULL)
 	{
-		bug("It's this one.", 0);
+		log_string(LOG_BUG, "It's this one.");
 		char_from_listeners( ch );
 	}
 
@@ -2670,12 +2664,12 @@ void deduct_cost(CHAR_DATA *ch, int cost)
 
 	if (ch->dollars < 0)
 	{
-		bug("deduct costs: dollars %d < 0",ch->dollars);
+		log_string(LOG_BUG, Format("deduct costs: dollars %d < 0", ch->dollars));
 		ch->dollars = 0;
 	}
 	if (ch->cents < 0)
 	{
-		bug("deduct costs: cents %d < 0",ch->cents);
+		log_string(LOG_BUG, Format("deduct costs: cents %d < 0", ch->cents));
 		ch->cents = 0;
 	}
 }   
@@ -2689,7 +2683,7 @@ OBJ_DATA *create_money( int dollars, int cents )
 
 	if ( dollars < 0 || cents < 0 || (dollars == 0 && cents == 0) )
 	{
-		bug( "Create_money: zero or negative money.",UMIN(dollars,cents));
+		log_string(LOG_BUG, "Create_money: zero or negative money.");
 		dollars = UMAX(1,dollars);
 		cents = UMAX(1,cents);
 	}

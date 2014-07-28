@@ -235,7 +235,7 @@ int num_eval( int lval, int oper, int rval )
         case EVAL_LT:
              return ( lval < rval );
         default:
-             bug( "num_eval: invalid oper", 0 );
+             log_string(LOG_BUG, "num_eval: invalid oper");
              return 0;
     }
 }
@@ -435,7 +435,7 @@ int cmd_eval( sh_int vnum, char *line, int check,
     {
 	if ( (oper = keyword_lookup( fn_evals, buf )) < 0 )
 	{
-	    bug( Format("Cmd_eval: prog %d syntax error(2) '%s'", vnum, original), 0 );
+	    log_string(LOG_BUG, Format("Cmd_eval: prog %d syntax error(2) '%s'", vnum, original));
 	    return FALSE;
 	}
 	one_argument( line, buf );
@@ -449,7 +449,7 @@ int cmd_eval( sh_int vnum, char *line, int check,
      */
     if ( buf[0] != '$' || buf[1] == '\0' )
     {
-    	bug( Format("Cmd_eval: prog %d syntax error(3) '%s'", vnum, original), 0 );
+    	log_string(LOG_BUG, Format("Cmd_eval: prog %d syntax error(3) '%s'", vnum, original));
     	return FALSE;
     }
     else
@@ -471,7 +471,7 @@ int cmd_eval( sh_int vnum, char *line, int check,
 	case 'q':
 	    lval_char = mob->mprog_target; break;
 	default:
-	    bug( Format("Cmd_eval: prog %d syntax error(4) '%s'", vnum, original), 0 );
+	    log_string(LOG_BUG, Format("Cmd_eval: prog %d syntax error(4) '%s'", vnum, original));
 	    return FALSE;
     }
     /*
@@ -603,7 +603,7 @@ int cmd_eval( sh_int vnum, char *line, int check,
      */
      if ( (oper = keyword_lookup( fn_evals, buf )) < 0 )
      {
-    	 bug( Format("Cmd_eval: prog %d syntax error(5): '%s'", vnum, original), 0 );
+    	 log_string(LOG_BUG, Format("Cmd_eval: prog %d syntax error(5): '%s'", vnum, original));
     	 return FALSE;
      }
      one_argument( line, buf );
@@ -707,7 +707,7 @@ void expand_arg( char *buf,
 
         switch ( *str )
         {
-            default:  bug( "Expand_arg: bad code %d.", *str );
+            default:  log_string(LOG_BUG, Format("Expand_arg: bad code %d.", *str ));
                           i = " <@@@> ";                        break;
             case 'i':
 		one_argument( mob->name, fname );
@@ -887,7 +887,7 @@ void program_flow(
 
     if( ++call_level > MAX_CALL_LEVEL )
     {
-	bug( "MOBprogs: MAX_CALL_LEVEL exceeded, vnum %d", mob->pIndexData->vnum );
+	log_string(LOG_BUG, Format("MOBprogs: MAX_CALL_LEVEL exceeded, vnum %d", mob->pIndexData->vnum ));
 	return;
     }
 
@@ -949,13 +949,13 @@ void program_flow(
         {
         	if ( state[level] == BEGIN_BLOCK )
         	{
-        		bug( Format("Mobprog: misplaced if statement, mob %d prog %d", mvnum, pvnum), 0 );
+        		log_string(LOG_BUG, Format("Mobprog: misplaced if statement, mob %d prog %d", mvnum, pvnum));
         		return;
         	}
         	state[level] = BEGIN_BLOCK;
         	if ( ++level >= MAX_NESTED_LEVEL )
         	{
-        		bug( Format("Mobprog: Max nested level exceeded, mob %d prog %d", mvnum, pvnum), 0 );
+        		log_string(LOG_BUG, Format("Mobprog: Max nested level exceeded, mob %d prog %d", mvnum, pvnum));
         		return;
         	}
         	if ( level && cond[level-1] == FALSE )
@@ -970,7 +970,7 @@ void program_flow(
         	}
         	else
         	{
-        		bug( Format("Mobprog: invalid if_check (if), mob %d prog %d", mvnum, pvnum), 0 );
+        		log_string(LOG_BUG, Format("Mobprog: invalid if_check (if), mob %d prog %d", mvnum, pvnum));
         		return;
         	}
         	state[level] = END_BLOCK;
@@ -979,7 +979,7 @@ void program_flow(
         {
         	if ( !level || state[level-1] != BEGIN_BLOCK )
         	{
-        		bug( Format("Mobprog: or without if, mob %d prog %d", mvnum, pvnum), 0 );
+        		log_string(LOG_BUG, Format("Mobprog: or without if, mob %d prog %d", mvnum, pvnum));
         		return;
         	}
         	if ( level && cond[level-1] == FALSE ) continue;
@@ -990,7 +990,7 @@ void program_flow(
         	}
         	else
         	{
-        		bug( Format("Mobprog: invalid if_check (or), mob %d prog %d", mvnum, pvnum), 0 );
+        		log_string(LOG_BUG, Format("Mobprog: invalid if_check (or), mob %d prog %d", mvnum, pvnum));
         		return;
         	}
         	cond[level] = (eval == TRUE) ? TRUE : cond[level];
@@ -999,7 +999,7 @@ void program_flow(
         {
         	if ( !level || state[level-1] != BEGIN_BLOCK )
         	{
-        		bug( Format("Mobprog: and without if, mob %d prog %d", mvnum, pvnum), 0 );
+        		log_string(LOG_BUG, Format("Mobprog: and without if, mob %d prog %d", mvnum, pvnum));
         		return;
         	}
         	if ( level && cond[level-1] == FALSE ) continue;
@@ -1010,7 +1010,7 @@ void program_flow(
         	}
         	else
         	{
-        		bug( Format("Mobprog: invalid if_check (and), mob %d prog %d", mvnum, pvnum), 0 );
+        		log_string(LOG_BUG, Format("Mobprog: invalid if_check (and), mob %d prog %d", mvnum, pvnum));
         		return;
         	}
         	cond[level] = (cond[level] == TRUE) && (eval == TRUE) ? TRUE : FALSE;
@@ -1019,7 +1019,7 @@ void program_flow(
         {
         	if ( !level || state[level-1] != BEGIN_BLOCK )
         	{
-        		bug( Format("Mobprog: endif without if, mob %d prog %d", mvnum, pvnum), 0 );
+        		log_string(LOG_BUG, Format("Mobprog: endif without if, mob %d prog %d", mvnum, pvnum));
         		return;
         	}
         	cond[level] = TRUE;
@@ -1030,7 +1030,7 @@ void program_flow(
         {
         	if ( !level || state[level-1] != BEGIN_BLOCK )
         	{
-        		bug( Format("Mobprog: else without if, mob %d prog %d", mvnum, pvnum), 0 );
+        		log_string(LOG_BUG, Format("Mobprog: else without if, mob %d prog %d", mvnum, pvnum));
         		return;
         	}
         	if ( level && cond[level-1] == FALSE ) continue;

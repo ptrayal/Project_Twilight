@@ -86,7 +86,7 @@ void load_social_table ()
 	fp = fopen (SOCIAL_FILE, "r");
 	if (!fp)
 	{
-		bug ("Could not open " SOCIAL_FILE " for reading.",0);
+		log_string(LOG_BUG, Format("Could not open " SOCIAL_FILE " for reading."));
 		exit(1);
 	}
 	fscanf (fp, "%d\n", &maxSocial);
@@ -132,7 +132,7 @@ void save_social_table()
 	
 	if (!fp)
 	{
-		bug ("Could not open " SOCIAL_FILE " for writing.",0);
+		log_string(LOG_BUG, Format("Could not open " SOCIAL_FILE " for writing."));
 		return;
 	}
 

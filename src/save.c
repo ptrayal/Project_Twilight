@@ -92,7 +92,7 @@ void save_char_obj( CHAR_DATA *ch )
 
 	if ( ( fp = fopen( TEMP_FILE, "w" ) ) == NULL )
 	{
-		bug( "Save_char_obj: fopen", 0 );
+		log_string(LOG_BUG, "Save_char_obj: fopen");
 		perror( strsave );
 	}
 	else
@@ -877,7 +877,7 @@ bool load_char_obj( DESCRIPTOR_DATA *d, char *name, bool log_load, bool load_con
 
 			if ( letter != '#' )
 			{
-				bug( "Load_char_obj: # not found.", 0 );
+				log_string(LOG_BUG, "Load_char_obj: # not found.");
 				break;
 			}
 
@@ -889,7 +889,7 @@ bool load_char_obj( DESCRIPTOR_DATA *d, char *name, bool log_load, bool load_con
 			else if ( !str_cmp( word, "END"    ) ) break;
 			else
 			{
-                                bug(Format("Load_char_obj: bad section: %s", word), 0);
+                                log_string(LOG_BUG, Format("Load_char_obj: bad section: %s", word));
 				break;
 			}
 		}
@@ -1005,7 +1005,7 @@ void fread_char( CHAR_DATA *ch, FILE *fp, bool log_load )
 				if ( sn < 0 )
 				{
 					fprintf(stderr,"%s",temp);
-					bug( "Fread_char: unknown ability. ", 0 );
+					log_string(LOG_BUG, "Fread_char: unknown ability. ");
 				}
 				else
 					ch->ability[sn].value = value;
@@ -1040,7 +1040,7 @@ void fread_char( CHAR_DATA *ch, FILE *fp, bool log_load )
 
 				sn = skill_lookup(fread_word(fp));
 				if (sn < 0)
-					bug("Fread_char: unknown skill.",0);
+					log_string(LOG_BUG, "Fread_char: unknown skill.");
 				else
 					paf->type = sn;
 
@@ -1064,7 +1064,7 @@ void fread_char( CHAR_DATA *ch, FILE *fp, bool log_load )
 
 				sn = skill_lookup(fread_word(fp));
 				if (sn < 0)
-					bug("Fread_char: unknown skill.",0);
+					log_string(LOG_BUG, "Fread_char: unknown skill.");
 				else
 					paf->type = sn;
 
@@ -1439,7 +1439,7 @@ void fread_char( CHAR_DATA *ch, FILE *fp, bool log_load )
 				if ( sn < 0 )
 				{
 					fprintf(stderr,"%s",temp);
-					bug( "Fread_char: unknown skill. ", 0 );
+					log_string(LOG_BUG, "Fread_char: unknown skill. ");
 				}
 				else
 					ch->learned[sn] = value;
@@ -1546,7 +1546,7 @@ void fread_char( CHAR_DATA *ch, FILE *fp, bool log_load )
 
 		if ( !fMatch )
 		{
-			bug(Format("fread_char: no match for key '%s'", word), 0);
+			log_string(LOG_BUG, Format("fread_char: no match for key '%s'", word));
 			fread_to_eol( fp );
 		}
 	}
@@ -1570,14 +1570,14 @@ void fread_pet( CHAR_DATA *ch, FILE *fp )
 		vnum = fread_number(fp);
 		if (get_mob_index(vnum) == NULL)
 		{
-			bug("Fread_pet: bad vnum %d.",vnum);
+			log_string(LOG_BUG, Format("Fread_pet: bad vnum %d.",vnum));
 		}
 		else
 			pet = create_mobile(get_mob_index(vnum));
 	}
 	else
 	{
-		bug("Fread_pet: no vnum in file.",0);
+		log_string(LOG_BUG, "Fread_pet: no vnum in file.");
 	}
 
 	for ( ; ; )
@@ -1607,7 +1607,7 @@ void fread_pet( CHAR_DATA *ch, FILE *fp )
 
 				sn = skill_lookup(fread_word(fp));
 				if (sn < 0)
-					bug("Fread_char: unknown skill.",0);
+					log_string(LOG_BUG, "Fread_char: unknown skill.");
 				else
 					paf->type = sn;
 
@@ -1631,7 +1631,7 @@ void fread_pet( CHAR_DATA *ch, FILE *fp )
 
 				sn = skill_lookup(fread_word(fp));
 				if (sn < 0)
-					bug("Fread_char: unknown skill.",0);
+					log_string(LOG_BUG, "Fread_char: unknown skill.");
 				else
 					paf->type = sn;
 
@@ -1748,7 +1748,7 @@ void fread_pet( CHAR_DATA *ch, FILE *fp )
 
 			if ( !fMatch )
 			{
-				bug("Fread_pet: no match.",0);
+				log_string(LOG_BUG, "Fread_pet: no match.");
 				fread_to_eol(fp);
 			}
 			break;
@@ -1781,7 +1781,7 @@ void fread_obj( CHAR_DATA *ch, FILE *fp )
 		vnum = fread_number( fp );
 		if (  get_obj_index( vnum )  == NULL )
 		{
-			bug( "Fread_obj: bad vnum %d.", vnum );
+			log_string(LOG_BUG, Format("Fread_obj: bad vnum %d.", vnum ));
 		}
 		else
 		{
@@ -1832,7 +1832,7 @@ void fread_obj( CHAR_DATA *ch, FILE *fp )
 
 				sn = skill_lookup(fread_word(fp));
 				if (sn < 0)
-					bug("Fread_obj: unknown skill.",0);
+					log_string(LOG_BUG, "Fread_obj: unknown skill.");
 				else
 					paf->type = sn;
 
@@ -1855,7 +1855,7 @@ void fread_obj( CHAR_DATA *ch, FILE *fp )
 
 				sn = skill_lookup(fread_word(fp));
 				if (sn < 0)
-					bug("Fread_obj: unknown skill.",0);
+					log_string(LOG_BUG, "Fread_obj: unknown skill.");
 				else
 					paf->type = sn;
 
@@ -1912,7 +1912,7 @@ void fread_obj( CHAR_DATA *ch, FILE *fp )
 						&& obj->description == '\0')
 						|| !fNest || (fVnum && obj->pIndexData == NULL))
 				{
-					bug( "Fread_obj: incomplete object.", 0 );
+					log_string(LOG_BUG, "Fread_obj: incomplete object.");
 					extract_obj(obj);
 					return;
 				}
@@ -1950,7 +1950,7 @@ void fread_obj( CHAR_DATA *ch, FILE *fp )
 				iNest = fread_number( fp );
 				if ( iNest < 0 || iNest >= MAX_NEST )
 				{
-					bug( "Fread_obj: bad nest %d.", iNest );
+					log_string(LOG_BUG, Format("Fread_obj: bad nest %d.", iNest ));
 				}
 				else
 				{
@@ -1980,11 +1980,11 @@ void fread_obj( CHAR_DATA *ch, FILE *fp )
 				sn     = skill_lookup( fread_word( fp ) );
 				if ( iValue < 0 || iValue > 3 )
 				{
-					bug( "Fread_obj: bad iValue %d.", iValue );
+					log_string(LOG_BUG, Format("Fread_obj: bad iValue %d.", iValue ));
 				}
 				else if ( sn < 0 )
 				{
-					bug( "Fread_obj: unknown skill.", 0 );
+					log_string(LOG_BUG, "Fread_obj: unknown skill.");
 				}
 				else
 				{
@@ -2036,7 +2036,7 @@ void fread_obj( CHAR_DATA *ch, FILE *fp )
 
 				vnum = fread_number( fp );
 				if ( ( obj->pIndexData = get_obj_index( vnum ) ) == NULL )
-					bug( "Fread_obj: bad vnum %d.", vnum );
+					log_string(LOG_BUG, Format("Fread_obj: bad vnum %d.", vnum ));
 				else
 					fVnum = TRUE;
 				fMatch = TRUE;
@@ -2057,7 +2057,7 @@ void fread_obj( CHAR_DATA *ch, FILE *fp )
 
 		if ( !fMatch )
 		{
-			bug( "Fread_obj: no match.", 0 );
+			log_string(LOG_BUG, "Fread_obj: no match.");
 			fread_to_eol( fp );
 		}
 	}

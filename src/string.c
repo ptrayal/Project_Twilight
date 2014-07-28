@@ -524,7 +524,7 @@ char *format_string (char *oldstring /*, bool fSpace */ )
       }
       else
       {
-        bug ("`5Wrap_string: `@No spaces``", 0);
+        log_string(LOG_BUG, "`5Wrap_string: `@No spaces``");
         *(rdesc + (end_of_line - 2)) = 0;
         strncat (xbuf, rdesc, sizeof(xbuf));
         strncat (xbuf, "-\n\r", sizeof(xbuf));
