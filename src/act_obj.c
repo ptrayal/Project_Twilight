@@ -1437,7 +1437,7 @@ void do_drink( CHAR_DATA *ch, char *argument )
     case ITEM_FOUNTAIN:
         if ( ( liquid = obj->value[2] )  < 0 )
         {
-            bug( "Do_drink: bad liquid number %d.", liquid );
+            log_string(LOG_BUG, Format("Do_drink: bad liquid number %d.", liquid ));
             liquid = obj->value[2] = 0;
         }
     amount = liq_table[liquid].liq_affect[4] * 3;
@@ -1447,7 +1447,7 @@ void do_drink( CHAR_DATA *ch, char *argument )
     case ITEM_LIQUID:
         if ( ( liquid = liq_lookup(obj->material) )  < 0 )
         {
-            bug( "Do_drink: bad liquid number %d.", liquid );
+            log_string(LOG_BUG, Format("Do_drink: bad liquid number %d.", liquid));
             liquid = 0;
         }
     amount = liq_table[liquid].liq_affect[4];
@@ -1468,7 +1468,7 @@ void do_drink( CHAR_DATA *ch, char *argument )
         {
         if((liquid = liq_lookup(cont->material)) < 0)
         {
-            bug( "Do_drink: bad liquid number %d.", liquid );
+            log_string(LOG_BUG, Format("Do_drink: bad liquid number %d.", liquid ));
             liquid = 0;
         }
         amount = liq_table[liquid].liq_affect[4];
@@ -1757,7 +1757,7 @@ void wear_obj( CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace, char *wear_loc )
         return;
     }
 
-    bug( "Wear_obj: no free finger.", 0 );
+    log_string(LOG_BUG, "Wear_obj: no free finger.");
     send_to_char( "You already wear two rings.\n\r", ch );
     return;
     }
@@ -1776,7 +1776,7 @@ void wear_obj( CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace, char *wear_loc )
         return;
     }
 
-    bug( "Wear_obj: no free neck.", 0 );
+    log_string(LOG_BUG, "Wear_obj: no free neck.");
     send_to_char( "You've already got something around your neck.\n\r", ch );
     return;
     }
@@ -1895,7 +1895,7 @@ void wear_obj( CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace, char *wear_loc )
         return;
     }
 
-    bug( "Wear_obj: no free wrist.", 0 );
+    log_string(LOG_BUG, "Wear_obj: no free wrist.");
     send_to_char( "You already wear two wrist items.\n\r", ch );
     return;
     }
@@ -1924,7 +1924,7 @@ void wear_obj( CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace, char *wear_loc )
         return;
     }
 
-    bug( "Wear_obj: no free hip.", 0 );
+    log_string(LOG_BUG, "Wear_obj: no free hip.");
     send_to_char( "You already wear two hip items.\n\r", ch );
     return;
     }
@@ -1953,7 +1953,7 @@ void wear_obj( CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace, char *wear_loc )
         return;
     }
 
-    bug( "Wear_obj: no free armpit.", 0 );
+    log_string(LOG_BUG, "Wear_obj: no free armpit." );
     send_to_char( "You already wear two armpit items.\n\r", ch );
     return;
     }

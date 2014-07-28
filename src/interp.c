@@ -870,7 +870,7 @@ void interpret( CHAR_DATA *ch, char *argument )
 			send_to_char( "Huh?\n\r", ch );
 			if(!exists)
 			{
-				do_bug(NULL, (char *)Format("[%d] %s : Command failure: %s %s - %s", ch->in_room ? ch->in_room->vnum : 0, ch->name, command, argument, ctime(&current_time)));
+				log_string(LOG_BUG, (char *)Format("[%d] %s : Command failure: %s %s - %s", ch->in_room ? ch->in_room->vnum : 0, ch->name, command, argument, ctime(&current_time)));
 			}
 		}
 		return;

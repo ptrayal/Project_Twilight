@@ -92,7 +92,7 @@ void move_char( CHAR_DATA *ch, int door, bool follow )
 
     if ( door < 0 || door > 5 )
     {
-        bug( "Do_move: bad door %d.", door );
+        log_string(LOG_BUG, Format("Do_move: bad door %d.", door));
         return;
     }
 
@@ -4091,7 +4091,7 @@ void do_step(CHAR_DATA *ch, char *argument)
         send_to_char("\tOThere seems to have been a mistake.\tn\n\r", ch);
         send_to_char("\tOPlease report that target location as being unavailable.\tn\n\r", ch);
         send_to_char(Format("\tOIssue with Room Vnum: %d\tn", i), ch);
-        bug(Format("\tOTried to step to Room Vnum: %d\tn", i), 0);
+        log_string(LOG_BUG, Format("\tOTried to step to Room Vnum: %d\tn", i));
         return;
     }
 
@@ -4218,7 +4218,7 @@ void do_taxi(CHAR_DATA *ch, char *argument)
     {
         send_to_char("There seems to have been a mistake.\n\r", ch);
         send_to_char("Please report that target location as being unavailable.\n\r", ch);
-        bug(Format("\tOTried to step to Room Vnum: %d\tn", i), 0);
+        log_string(LOG_BUG, Format("\tOTried to step to Room Vnum: %d\tn", i));
         return;
     }
 
@@ -4609,7 +4609,7 @@ void jump_char( CHAR_DATA *ch, int door )
 
     if ( door < 0 || door > 5 )
     {
-        bug( "Jump_char: bad door %d.", door );
+        log_string(LOG_BUG, Format("Jump_char: bad door %d.", door));
         return;
     }
 

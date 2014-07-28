@@ -1052,7 +1052,7 @@ void set_fighting( CHAR_DATA *ch, CHAR_DATA *victim )
 {
 	if ( ch->fighting != NULL )
 	{
-		bug( "Set_fighting: already fighting", 0 );
+		log_string(LOG_BUG, "Set_fighting: already fighting");
 		return;
 	}
 
@@ -1461,7 +1461,7 @@ void dam_message( CHAR_DATA *ch, CHAR_DATA *victim,int dam,int dt,bool immune, i
     		attack	= attack_table[dt - TYPE_HIT - 1].noun;
     	else
     	{
-    		bug( "Dam_message: bad dt %d.", dt );
+    		log_string(LOG_BUG, Format("Dam_message: bad dt %d.", dt ));
     		dt  = TYPE_HIT;
     		attack  = attack_table[0].noun;
     	}

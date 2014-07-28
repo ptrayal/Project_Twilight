@@ -570,7 +570,7 @@ void weather_update( void )
 	switch ( weather_info.sky )
 	{
 	default:
-		bug( "Weather_update: bad sky %d.", weather_info.sky );
+		log_string(LOG_BUG, Format("Weather_update: bad sky %d.", weather_info.sky ));
 		weather_info.sky = SKY_CLOUDLESS;
 		break;
 
