@@ -2603,11 +2603,11 @@ void load_objects( FILE *fp )
 				}
 				else if(!str_cmp(ed->keyword, "--USES")) {
 					if(ed->description == NULL || ed->description[0] == '\0') {
-						logfmt("Description is empty for extra descr data received on uses for vnum: ", vnum);
+						log_string(LOG_ERR, Format("Description is empty for extra descr data received on uses for vnum: ", vnum));
 						exit(1);
 					}
 					if(!is_number(ed->description)) {
-						logfmt("Description is not a number for vnum: %d", vnum);
+						log_string(LOG_ERR, Format("Description is not a number for vnum: %d", vnum));
 						exit(1);
 					}
 					pObjIndex->uses = atoi(ed->description);
@@ -3215,12 +3215,12 @@ void new_reset( ROOM_INDEX_DATA *pR, RESET_DATA *pReset )
 	RESET_DATA *pr;
 
 	if(!pR) {
-	logfmt("new_reset called with NULL room!");
+	log_string(LOG_ERR, "new_reset called with NULL room!");
 	free_reset_data(pReset);
 		return;
 	}
 	if(!pReset) {
-	logfmt("new_reset called with NULL pReset");
+	log_string(LOG_ERR, "new_reset called with NULL pReset");
 	return;
 	}
 
@@ -4130,8 +4130,8 @@ char *_fread_word( FILE *fp, const char *file, const char *function, int line )
 	}
 
 
-	logfmt("fread_word: word too long: %s:%s:%d",file, function, line); 
-	log_string(LOG_BUG, "Fread_word: word too long.");
+	log_string(LOG_ERR, Format("fread_word: word too long: %s:%s:%d",file, function, line)); 
+	log_string(LOG_ERR, "Fread_word: word too long.");
 	exit( 1 );
 	return NULL;
 }

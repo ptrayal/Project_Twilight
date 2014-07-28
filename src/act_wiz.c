@@ -4514,7 +4514,7 @@ void do_copyover (CHAR_DATA *ch, char * argument)
 	if (!fp)
 	{
 		send_to_char ("Transition file not writeable, aborted.\n\r",ch);
-		logfmt("Could not write to transition file: %s", COPYOVER_FILE);
+		log_string(LOG_ERR, Format("Could not write to transition file: %s", COPYOVER_FILE));
 		perror ("do_copyover:fopen");
 		return;
 	}
@@ -4573,17 +4573,15 @@ void copyover_recover ()
 	int desc;
 	bool fOld;
 
-	logfmt("Warm reboot recovery initiated");
+	log_string(LOG_CONNECT,"Warm reboot recovery initiated");
 
 	fp = fopen (COPYOVER_FILE, "r");
 
 	if (!fp)  //there are some descriptors open which will hang forever then ?
 	{
 		perror ("copyover_recover:fopen");
-		logfmt("Unable to complete the hotreboot process, suspect not a hotreboot.  Will continue without looking for players.");
+		log_string(LOG_ERR, "Unable to complete the hotreboot process, suspect not a hotreboot.  Will continue without looking for players.");
 		return;
-//		logfmt("Trasition file not found. Exitting.\n\r");
-//		exit (1);
 	}
 
 	unlink (COPYOVER_FILE);  //In case something crashes - doesn't prevent reading

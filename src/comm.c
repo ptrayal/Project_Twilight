@@ -488,7 +488,7 @@ void cleanup_mud(int control)
 						break;
 				}
 				if( !tmid )
-					logfmt( "cleanup_mud: mid not in hash list %d", mob_index->vnum );
+					log_string(LOG_ERR, Format("cleanup_mud: mid not in hash list %d", mob_index->vnum ));
 				else
 					tmid->next = mob_index->next;
 			}
@@ -512,7 +512,7 @@ void cleanup_mud(int control)
 						break;
 				}
 				if( !toid )
-					logfmt( "cleanup_mud: oid not in hash list %d", obj_index->vnum );
+					log_string(LOG_ERR, Format("cleanup_mud: oid not in hash list %d", obj_index->vnum ));
 				else
 					toid->next = obj_index->next;
 			}
@@ -537,7 +537,7 @@ void cleanup_mud(int control)
 				}
 
 				if( !trid )
-					logfmt( "cleanup_mud: rid not in hash list %d", room_index->vnum );
+					log_string(LOG_ERR, Format("cleanup_mud: rid not in hash list %d", room_index->vnum ));
 				else
 					trid->next = room_index->next;
 			}
