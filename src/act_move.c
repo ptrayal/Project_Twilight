@@ -1742,7 +1742,6 @@ void destroy_hash_table(struct hash_header *ht,void (*gman)())
         for(scan=ht->buckets[i];scan;)
         {
             temp = scan->next;
-            //(*gman)(scan->data);
             free(scan);
             scan = temp;
         }
@@ -1900,7 +1899,6 @@ void room_iterate(ROOM_INDEX_DATA *rb[],void (*func)(),void *cdata)
       ROOM_INDEX_DATA *temp;
   
       temp = room_find(rb,i);
-      //if(temp) (*func)(i,temp,cdata);
     }
 }
 
@@ -1915,8 +1913,7 @@ void hash_iterate(struct hash_header *ht,void (*func)(),void *cdata)
 
       key = ht->keylist[i];
       temp = hash_find(ht,key);
- //     (*func)(key,temp,cdata);
-
+ 
       if(ht->keylist[i]!=key) /* They must have deleted this room */
     i--;              /* Hit this slot again. */
 
@@ -3469,7 +3466,6 @@ void scan_char           args((CHAR_DATA *victim, CHAR_DATA *ch,
                                sh_int depth, sh_int door));
 void do_scan(CHAR_DATA *ch, char *argument)
 {
-    //   extern char *const dir_name[];
     char arg1[MAX_INPUT_LENGTH]={'\0'};
     ROOM_INDEX_DATA *scan_room;
     EXIT_DATA *pExit;
@@ -3558,7 +3554,6 @@ void scan_list(ROOM_INDEX_DATA *scan_room, CHAR_DATA *ch, sh_int depth, sh_int d
 
 void scan_char(CHAR_DATA *victim, CHAR_DATA *ch, sh_int depth, sh_int door)
 {
-    //   extern char *const dir_name[];
     extern char *const distance[];
     char buf[MSL]={'\0'};
     char buf2[MAX_INPUT_LENGTH]={'\0'};
