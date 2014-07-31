@@ -152,9 +152,9 @@ int slot_lookup( int slot )
  */
 void say_spell( CHAR_DATA *ch, int sn )
 {
+    CHAR_DATA *rch;
     char buf  [MSL]={'\0'};
     char buf2 [MSL]={'\0'};
-    CHAR_DATA *rch;
     char *pName;
     int iSyl;
     int length;
@@ -200,7 +200,6 @@ void say_spell( CHAR_DATA *ch, int sn )
 	{ "", "" }
     };
 
-    buf[0]	= '\0';
     for ( pName = skill_table[sn].name; *pName != '\0'; pName += length )
     {
     	for ( iSyl = 0; (length = strlen(syl_table[iSyl].old)) != 0; iSyl++ )
@@ -309,10 +308,10 @@ char *target_name;
 
 void do_cast( CHAR_DATA *ch, char *argument )
 {
-    char arg1[MAX_INPUT_LENGTH]={'\0'};
-    char arg2[MAX_INPUT_LENGTH]={'\0'};
     CHAR_DATA *victim;
     OBJ_DATA *obj;
+    char arg1[MAX_INPUT_LENGTH]={'\0'};
+    char arg2[MAX_INPUT_LENGTH]={'\0'};
     void *vo;
     int sn = -1;
     int target = TARGET_NONE;
@@ -1246,14 +1245,14 @@ void spell_invis( int sn, int level, CHAR_DATA *ch, void *vo,int target )
 
 void spell_locate_object( int sn, int level, CHAR_DATA *ch, void *vo,int target)
 {
-	char buf[MSL]={'\0'};
 	BUFFER *buffer;
 	OBJ_DATA *obj;
 	OBJ_DATA *in_obj;
-	bool found = FALSE;
+	char buf[MSL]={'\0'};
 	int number = 0;
 	int max_found = IS_ADMIN(ch) ? 200 : 2 * level;
-
+	bool found = FALSE;
+	
 	buffer = new_buf();
 
 	for ( obj = object_list; obj != NULL; obj = obj->next )
@@ -1341,7 +1340,6 @@ void spell_poison( int sn, int level, CHAR_DATA *ch, void *vo, int target )
     CHAR_DATA *victim;
     OBJ_DATA *obj;
     AFFECT_DATA af;
-
 
     if (target == TARGET_OBJ)
     {
@@ -1619,9 +1617,9 @@ void do_melpominee1 (CHAR_DATA *ch, char *argument)
 
 void do_melpominee3 (CHAR_DATA *ch, char *argument)
 {
+	CHAR_DATA *vch, *vch_next;
 	char arg[MSL]={'\0'};
 	int fail = 0, door = 0;
-	CHAR_DATA *vch, *vch_next;
 
 	if(ch->race != race_lookup("vampire")
 			|| ch->disc[DISC_MELPOMINEE] < 3)
@@ -1715,12 +1713,12 @@ void do_melpominee3 (CHAR_DATA *ch, char *argument)
 
 void do_melpominee4 (CHAR_DATA *ch, char *argument)
 {
-	char arg[MSL]={'\0'};
-	int fail = 0, door = 0;
 	CHAR_DATA *vch;
 	AFFECT_DATA af;
 	AFFECT_DATA *paf;
 	TRAIT_DATA *trait;
+	char arg[MSL]={'\0'};
+	int fail = 0, door = 0;
 
 	if(ch->race != race_lookup("vampire")
 			|| ch->disc[DISC_MELPOMINEE] < 4)
@@ -1849,12 +1847,12 @@ void do_melpominee4 (CHAR_DATA *ch, char *argument)
 
 void do_melpominee5 (CHAR_DATA *ch, char *argument)
 {
+	AFFECT_DATA af;
 	char arg[MSL]={'\0'};
 	char arg2[MSL]={'\0'};
 	char target[MSL]={'\0'};
 	char *targetlist;
 	int i = 0, targetcount = 0;
-	AFFECT_DATA af;
 
 	if(ch->race != race_lookup("vampire")
 			|| ch->disc[DISC_MELPOMINEE] < 5)
@@ -1959,9 +1957,9 @@ void do_thanatosis1 (CHAR_DATA *ch, char *argument)
 
 void do_thanatosis2 (CHAR_DATA *ch, char *argument)
 {
-	int fail = 0, person = 0;
 	AFFECT_DATA af;
 	CHAR_DATA *vch;
+	int fail = 0, person = 0;
 
 	if(ch->race != race_lookup("vampire") || ch->disc[DISC_THANATOSIS] < 2)
 	{
@@ -2084,8 +2082,8 @@ void do_thanatosis3 (CHAR_DATA *ch, char * string)
 
 bool player_switch( CHAR_DATA *ch, char *argument, bool Animals )
 {
-	char arg[MAX_INPUT_LENGTH]={'\0'};
 	CHAR_DATA *victim;
+	char arg[MAX_INPUT_LENGTH]={'\0'};
 	int fail = 0;
 
 	one_argument( argument, arg );
@@ -2313,12 +2311,12 @@ void do_dream_walk(CHAR_DATA *ch, char * argument)
 
 void do_scry(CHAR_DATA *ch, char *argument)
 {
-	char arg[MSL]={'\0'};
 	CHAR_DATA *vch;
-	int fail = 0;
 	ROOM_INDEX_DATA *location;
 	ROOM_INDEX_DATA *original;
 	OBJ_DATA *on;
+	char arg[MSL]={'\0'};
+	int fail = 0;
 
 	if (ch->race != race_lookup("faerie") || ch->disc[DISC_ACTOR] >= 3
 			|| ch->disc[DISC_REALM] >= 2)
@@ -2760,8 +2758,8 @@ void do_enchant (CHAR_DATA *ch, char *argument)
 
 void do_charm (CHAR_DATA *ch, char* argument)
 {
-	char arg[MAX_INPUT_LENGTH]={'\0'};
 	CHAR_DATA *victim;
+	char arg[MAX_INPUT_LENGTH]={'\0'};
 
 	one_argument(argument, arg);
 
@@ -2961,7 +2959,7 @@ void do_embrace (CHAR_DATA *ch, char *argument)
 
 void do_ffog (CHAR_DATA *ch, char *string)
 {
-CHAR_DATA *pch;
+	CHAR_DATA *pch;
 
     if(ch->race != race_lookup("faerie")
 	|| (ch->race == race_lookup("faerie")
@@ -3026,8 +3024,8 @@ void heat_metal(CHAR_DATA *ch, int fail)
 /* do_wwgift3_3: Heat metal - Formerly cockroach3 */
 void do_wwgift3_3(CHAR_DATA *ch, char *argument)
 {
-	char arg[MSL]={'\0'};
 	CHAR_DATA *victim;
+	char arg[MSL]={'\0'};
 	int fail = 0;
 
 	/* Affect objects as AFF_HEAT_METAL
@@ -3073,8 +3071,8 @@ void do_wwgift3_3(CHAR_DATA *ch, char *argument)
 /* do_wwgift2_3: Siphon - Formerly cockroach2 */
 void do_wwgift2_3(CHAR_DATA *ch, char *string)
 {
-	char arg[MSL]={'\0'};
 	CHAR_DATA *victim;
+	char arg[MSL]={'\0'};
 	int siphon = 0;
 	int diff = 0;
 	int fail = 0;
@@ -3141,8 +3139,8 @@ void do_wwgift2_3(CHAR_DATA *ch, char *string)
 /* do_wwgift5_3: Phone Travel (ptravel) - Formerly cockroach5 */
 void do_wwgift5_3(CHAR_DATA *ch, char *argument)
 {
-	char arg[MAX_INPUT_LENGTH]={'\0'};
 	CHAR_DATA *victim = NULL;
+	char arg[MAX_INPUT_LENGTH]={'\0'};
 
 	if((ch->clan != clan_lookup("glass walker"))
 			|| (ch->clan == clan_lookup("glass walker") && ch->disc[DISC_TRIBE] < 5))
@@ -4203,8 +4201,7 @@ void do_wwgift2_2(CHAR_DATA *ch, char *argument)
 void do_wwgift2_3(CHAR_DATA *ch, char *argument) */
 void do_falcon3(CHAR_DATA *ch, char *argument)
 {
-	if(ch->race != race_lookup("werewolf")
-			|| (!IS_SET(ch->powers[2], B) && !IS_SET(ch->powers[3], K)))
+	if(ch->race != race_lookup("werewolf") || (!IS_SET(ch->powers[2], B) && !IS_SET(ch->powers[3], K)))
 	{
 		send_to_char("Huh?\n\r", ch);
 		return;
@@ -4230,8 +4227,8 @@ void do_falcon3(CHAR_DATA *ch, char *argument)
 /* do_wwgift4_2: Wrath of Gaia - Formerly falcon4 */
 void do_wwgift4_2(CHAR_DATA *ch, char *argument)
 {
-	int fail = 0;
 	CHAR_DATA *vch;
+	int fail = 0;
 
 	if(ch->race != race_lookup("werewolf") || !IS_SET(ch->powers[3], B))
 	{
@@ -4264,8 +4261,8 @@ void do_wwgift4_2(CHAR_DATA *ch, char *argument)
 /* do_wwgift1_ahr: Falling Touch - Formerly ahroun1 */
 void do_wwgift1_ahr(CHAR_DATA *ch, char *argument)
 {
-	int fail = 0;
 	CHAR_DATA *vch;
+	int fail = 0;
 
 	if(ch->auspice != auspice_lookup("ahroun") || !ch->disc[DISC_AUSPICE])
 	{
@@ -4323,10 +4320,10 @@ void do_wwgift1_ahr(CHAR_DATA *ch, char *argument)
 /* do_wwgift3_the: Command Spirit - Formerly theurge3 */
 void do_wwgift3_the(CHAR_DATA *ch, char *string)
 {
-	int a;
+	CHAR_DATA *victim;
 	char arg[MAX_INPUT_LENGTH]={'\0'};
 	char buf[MSL]={'\0'};
-	CHAR_DATA *victim;
+	int a;
 
 	string = one_argument(string,arg);
 

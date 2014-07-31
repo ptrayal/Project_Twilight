@@ -225,17 +225,15 @@ void gain_condition( CHAR_DATA *ch, int iCond, int value )
 CHAR_DATA *find_shop(int type)
 {
 	CHAR_DATA *ch = NULL;
-	int i = 0, j = 0, k = 0, l = 0;
 	DESCRIPTOR_DATA *d;
+	int i = 0, j = 0, k = 0, l = 0;
 
 	for(d = descriptor_list; d; d = d->next) j++;
 	i = number_range(1, j);
 
 	l = i;
-	j = 0;
 	for(ch = char_list; ch != NULL; ch = ch->next) j++;
 
-	k = 0;
 	switch (type) {
 	case 0:
 		while (i) {
@@ -473,11 +471,9 @@ void mobile_update( void )
  */
 void weather_update( void )
 {
-	char buf[MSL]={'\0'};
 	DESCRIPTOR_DATA *d;
+	char buf[MSL]={'\0'};
 	int diff = 0;
-
-	buf[0] = '\0';
 
 	if(++time_info.min >= 30)
 	{
@@ -676,11 +672,11 @@ void room_update( void )
 	ROOM_INDEX_DATA *rm;
 	ROOM_INDEX_DATA *rm_next;
 	ROOM_INDEX_DATA *at_stop;
-	int i = 0;
 	EXTRA_DESCR_DATA *ed;
 	EXTRA_DESCR_DATA *back;
 	EXTRA_DESCR_DATA *ed_next = NULL;
-
+	int i = 0;
+	
 	for ( i = 0; i < MAX_KEY_HASH; i++)
 		for ( rm = room_index_hash[i]; rm != NULL; rm = rm_next )
 		{
@@ -1737,11 +1733,11 @@ OBJ_DATA *make_newspapers ()
 	OBJ_DATA *papers = NULL;
 	OBJ_DATA *obj;
 	NEWSPAPER *pnews;
-	int i = 0;
+	EXTRA_DESCR_DATA *ed;
 	char buf[MSL]={'\0'};
 	char tmp[MSL]={'\0'};
-	EXTRA_DESCR_DATA *ed;
-
+	int i = 0;
+	
 	for(pnews = paper_list; pnews; pnews = pnews->next)
 	{
 		obj = create_object(get_obj_index(OBJ_VNUM_NEWSPAPER));

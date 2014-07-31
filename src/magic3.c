@@ -85,8 +85,7 @@ void do_castspell (CHAR_DATA *ch, char *arg)
 }
 
 /* Power Messages */
-void power_messages(CHAR_DATA *ch, CHAR_DATA *vict, OBJ_DATA *obj, POW *pow,
-			int success)
+void power_messages(CHAR_DATA *ch, CHAR_DATA *vict, OBJ_DATA *obj, POW *pow, int success)
 {
     /* Messages to groups need a slightly different handler. */
     if(pow->range == 2)
