@@ -1723,7 +1723,7 @@ void stock_update()
 			stock->cost += igain;
 			break;
 		case 2:
-			igain = ((stock->upordown * stock->cost) * ((idays + istock_flux)*32/100)/1050); //(sqrt(idays + istock_flux) *(32/100))) / 1000;
+			igain = ((stock->upordown * stock->cost) * ((idays + istock_flux)*32/100)/1050);
 			stock->cost += igain;
 			break;
 		default: break;
@@ -1788,9 +1788,6 @@ OBJ_DATA *make_newspapers ()
 		obj->full_desc = str_dup(Format("%s\n\n%s", obj->full_desc, tmp));
 		obj->wear_loc = -1;
 
-//		papers = obj;
-//		SUSPECT NEWSPAPERS MAY HAVE A BUG IN THEM
-//		LINK_SINGLE(obj, next, object_list);
 		object_list = obj->next;
 		obj->next = papers;
 		papers = obj;

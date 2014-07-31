@@ -69,9 +69,6 @@ void string_append( CHAR_DATA *ch, char **pString )
 	}
 	send_to_char( *pString, ch );
 
-	// if ( *(*pString + strlen( *pString ) - 1) != '\r' )
-	// 	send_to_char( "\n\r", ch );
-
 	ch->desc->pString = pString;
 
 	return;
@@ -205,13 +202,6 @@ void string_add( CHAR_DATA *ch, char *argument )
             return;
         }
         
-        // if ( !str_cmp( arg1, ".w" ) )
-        // {
-        //     *ch->desc->pString = desc_pretty( *ch->desc->pString, 1, 100, 0 );
-        //     send_to_char( "Lines wrapped.\n\r", ch );
-        //     return;
-        // }
-        
         if ( !str_cmp( arg1, ".h" ) )
         {
             send_to_char( "Sedit help (commands on blank line):   \n\r", ch );
@@ -223,7 +213,6 @@ void string_add( CHAR_DATA *ch, char *argument )
             send_to_char( ".s               - show string so far  \n\r", ch );
             send_to_char( ".l               - show string so far with line numbers  \n\r", ch );
             send_to_char( ".f               - (word wrap) string  \n\r", ch );
-            // send_to_char( ".w               - (word wrap without reducing blank lines) string  \n\r", ch );
             send_to_char( ".c               - clear string so far \n\r", ch );
             send_to_char( "@                - end string          \n\r", ch );
             return;
@@ -240,7 +229,6 @@ void string_add( CHAR_DATA *ch, char *argument )
         return;
     }
 
-    // strncpy( buf, *ch->desc->pString, sizeof(buf) );
 	if(IS_NULLSTR(ch->desc->pString))
 		strcpy( buf, "");
 	else	
