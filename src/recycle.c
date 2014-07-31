@@ -1788,15 +1788,15 @@ bool check_ban(char *site,int type)
 
 void ban_site(CHAR_DATA *ch, char *argument, bool fPerm)
 {
+	BUFFER *buffer;
+	BAN_DATA *pban, *prev;
 	char buf2[MSL]={'\0'};
 	char arg1[MAX_INPUT_LENGTH]={'\0'};
 	char arg2[MAX_INPUT_LENGTH]={'\0'};
 	char *name;
-	BUFFER *buffer;
-	BAN_DATA *pban, *prev;
-	bool prefix = FALSE,suffix = FALSE;
 	int type = 0;
-
+	bool prefix = FALSE,suffix = FALSE;
+	
 	argument = one_argument(argument,arg1);
 	argument = one_argument(argument,arg2);
 
@@ -1914,9 +1914,9 @@ void do_permban(CHAR_DATA *ch, char *argument)
 
 void do_allow( CHAR_DATA *ch, char *argument )                        
 {
-	char arg[MAX_INPUT_LENGTH]={'\0'};
 	BAN_DATA *prev;
 	BAN_DATA *curr;
+	char arg[MAX_INPUT_LENGTH]={'\0'};
 
 	one_argument( argument, arg );
 

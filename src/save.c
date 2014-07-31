@@ -20,9 +20,8 @@ int rename(const char *oldfname, const char *newfname);
 
 char *print_flags(int flag)
 {
-    int count = 0, pos = 0;
     static char buf[52]={'\0'};
-
+    int count = 0, pos = 0;
 
     for (count = 0; count < 32;  count++)
     {
@@ -77,8 +76,8 @@ void	fread_obj	args( ( CHAR_DATA *ch,  FILE *fp ) );
  */
 void save_char_obj( CHAR_DATA *ch )
 {
-	char strsave[MAX_INPUT_LENGTH]={'\0'};
 	FILE *fp;
+	char strsave[MAX_INPUT_LENGTH]={'\0'};
 	int i = 0;
 
 	if ( ch->desc != NULL && ch->desc->original != NULL )
@@ -961,11 +960,11 @@ bool load_char_obj( DESCRIPTOR_DATA *d, char *name, bool log_load, bool load_con
 void fread_char( CHAR_DATA *ch, FILE *fp, bool log_load )
 {
 	const char *word;
-	bool fMatch;
 	int count = 0;
 	int lastlogoff = current_time;
 	int percent = 0;
 	int i = 0;
+	bool fMatch;
 
 	if(log_load)
 	{
@@ -1557,9 +1556,9 @@ void fread_pet( CHAR_DATA *ch, FILE *fp )
 {
 	const char *word;
 	CHAR_DATA *pet = NULL;
-	bool fMatch = FALSE;
 	int lastlogoff = current_time;
 	int percent = 0;
+	bool fMatch = FALSE;
 
 	/* first entry had BETTER be the vnum or we barf */
 	word = feof(fp) ? "END" : fread_word(fp);
@@ -1768,10 +1767,8 @@ void fread_obj( CHAR_DATA *ch, FILE *fp )
 	bool first = TRUE;
 	bool make_new = FALSE;    /* update object */
 
-	fVnum = FALSE;
 	obj = NULL;
-	make_new = FALSE;
-
+	
 	word   = feof( fp ) ? "End" : fread_word( fp );
 	if (!str_cmp(word,"Vnum" ))
 	{
