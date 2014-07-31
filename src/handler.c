@@ -478,10 +478,9 @@ int get_weapon_skill(CHAR_DATA *ch, int sn)
 /* used to de-screw characters */
 void reset_char(CHAR_DATA *ch)
 {
-     int loc = 0,mod,stat = 0;
      OBJ_DATA *obj;
      AFFECT_DATA *af;
-     /*int i;*/
+     int loc = 0,mod,stat = 0;
 
      if (IS_NPC(ch))
 	return;
