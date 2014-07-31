@@ -145,10 +145,10 @@ char *format_obj_to_char( OBJ_DATA *obj, CHAR_DATA *ch, bool fShort )
 void show_list_to_char( OBJ_DATA *list, CHAR_DATA *ch, bool fShort, bool fShowNothing )
 {
 	BUFFER *output;
-	char **prgpstrShow;
-	int *prgnShow = 0;
-	char *pstrShow;
 	OBJ_DATA *obj;
+	char **prgpstrShow;
+	char *pstrShow;
+	int *prgnShow = 0;
 	int nShow = 0;
 	int iShow = 0;
 	int count = 0;
@@ -517,12 +517,12 @@ void show_char_to_char_0( CHAR_DATA *victim, CHAR_DATA *ch )
 
 void show_char_to_char_1( CHAR_DATA *victim, CHAR_DATA *ch )
 {
-	char buf[MSL]={'\0'};
 	OBJ_DATA *obj;
+	char buf[MSL]={'\0'};
+	char *msg;
 	int iWear = 0;
 	int diff = 0;
-	char *msg;
-	bool found;
+	bool found = FALSE;
 
 	if ( victim->description[0] == '\0' )
 	{
@@ -576,7 +576,6 @@ void show_char_to_char_1( CHAR_DATA *victim, CHAR_DATA *ch )
 	act( msg, ch, NULL, victim, TO_CHAR, 1 );
 	odd_parts_to_char(ch, victim);
 
-	found = FALSE;
 	for ( iWear = 0; iWear < MAX_WEAR; iWear++ )
 	{
 		if ( ( obj = get_eq_char( victim, iWear ) ) != NULL
@@ -964,8 +963,8 @@ void state_obj_cond(OBJ_DATA *obj, CHAR_DATA *ch)
 
 int get_door(CHAR_DATA *ch, char *argument)
 {
-	int door = 0;
 	ROOM_INDEX_DATA *looking;
+	int door = 0;
 
 	if(IS_SET(ch->act2, ACT2_ASTRAL))
 		looking = ch->listening;
@@ -983,18 +982,18 @@ int get_door(CHAR_DATA *ch, char *argument)
 
 void do_look( CHAR_DATA *ch, char *argument )
 {
-	char arg1 [MAX_INPUT_LENGTH]={'\0'};
-	char arg2 [MAX_INPUT_LENGTH]={'\0'};
-	char arg3 [MAX_INPUT_LENGTH]={'\0'};
 	EXIT_DATA *pexit;
 	CHAR_DATA *victim;
 	OBJ_DATA *obj;
+	ROOM_INDEX_DATA *original;
+	ROOM_INDEX_DATA *looking;
+	char arg1 [MAX_INPUT_LENGTH]={'\0'};
+	char arg2 [MAX_INPUT_LENGTH]={'\0'};
+	char arg3 [MAX_INPUT_LENGTH]={'\0'};
 	char *pdesc;
 	int door = 0;
 	int number = 0,count = 0;
-	ROOM_INDEX_DATA *original;
-	ROOM_INDEX_DATA *looking;
-
+	
 	CheckCH(ch);
 
 	if ( ch->desc == NULL )
@@ -1435,13 +1434,13 @@ void do_examine( CHAR_DATA *ch, char *argument )
  */
 void do_exits( CHAR_DATA *ch, char *argument )
 {
+	ROOM_INDEX_DATA *looking;
+	EXIT_DATA *pexit;
 	extern char * const dir_name[];
 	char buf[MSL]={'\0'}, buf2[MSL]={'\0'};
-	EXIT_DATA *pexit;
+	int door = 0;
 	bool found = FALSE;
 	bool fAuto;
-	int door = 0;
-	ROOM_INDEX_DATA *looking;
 
 	CheckCH(ch);
 
@@ -1586,9 +1585,9 @@ void do_exits( CHAR_DATA *ch, char *argument )
 
 void do_score( CHAR_DATA *ch, char *argument )
 {
+	CHAR_DATA *user = ch;
 	int num = 0, i = 0;
 	int statcount = 0;
-	CHAR_DATA *user = ch;
 
 	CheckCH(ch);
 
@@ -2167,9 +2166,9 @@ void do_help( CHAR_DATA *ch, char *argument )
 {
 	HELP_DATA *pHelp;
 	BUFFER *output;
-	int level = 0;
 	char argall[MAX_INPUT_LENGTH]={'\0'};
 	char argone[MAX_INPUT_LENGTH]={'\0'};
+	int level = 0;
 	bool found = FALSE;
 
 	CheckCH(ch);
@@ -2295,10 +2294,9 @@ void do_whois (CHAR_DATA *ch, char *argument)
 {
 	CHAR_DATA *wch;
 	BUFFER *output;
-	int app = 0;
 	char arg[MAX_INPUT_LENGTH]={'\0'};
 	char const *clan;
-
+	int app = 0;
 	bool online = FALSE;
 	bool in_char_list = FALSE;
 	bool fRPOK = FALSE;
@@ -2376,9 +2374,9 @@ void do_whois (CHAR_DATA *ch, char *argument)
 void do_profession(CHAR_DATA *ch, char *argument)
 {
 	CHAR_DATA *wch;
+	int fail = 0;
 	bool online = FALSE;
 	bool in_char_list = FALSE;
-	int fail = 0;
 
 	CheckCH(ch);
 
@@ -2452,9 +2450,10 @@ void do_profession(CHAR_DATA *ch, char *argument)
  */
 void do_who( CHAR_DATA *ch, char *argument )
 {
-	char buf[MSL]={'\0'};
 	BUFFER *output;
 	DESCRIPTOR_DATA *d;
+	PACK_DATA *pack = NULL;
+	char buf[MSL]={'\0'};
 	int iRace = 0;
 	int iClan = 0;
 	int nNumber = 0;
@@ -2468,8 +2467,7 @@ void do_who( CHAR_DATA *ch, char *argument )
 	bool fImmortalOnly = FALSE;
 	bool fRPOK = FALSE;
 	bool fPack = FALSE;
-	PACK_DATA *pack = NULL;
-
+	
 	CheckCH(ch);
  
 	/*
@@ -2676,8 +2674,8 @@ void do_who( CHAR_DATA *ch, char *argument )
 
 void do_count ( CHAR_DATA *ch, char *argument )
 {
-	int count = 0;
 	DESCRIPTOR_DATA *d;
+	int count = 0;
 
 	CheckCH(ch);
 
@@ -2824,8 +2822,8 @@ void do_where( CHAR_DATA *ch, char *argument )
 
 void do_consider( CHAR_DATA *ch, char *argument )
 {
-	char arg[MAX_INPUT_LENGTH]={'\0'};
 	CHAR_DATA *victim;
+	char arg[MAX_INPUT_LENGTH]={'\0'};
 	char *msg;
 	int diff = 0;
 
@@ -3068,10 +3066,10 @@ void do_coin_toss(CHAR_DATA *ch, char *arg)
 
 void do_research(CHAR_DATA *ch, char *argument)
 {
-	int diff = 0, fail = 0;
 	NOTE_DATA *pbg;
-	bool found = FALSE;
 	BUFFER *output;
+	int diff = 0, fail = 0;
+	bool found = FALSE;
 
 	CheckCH(ch);
 
@@ -3118,14 +3116,14 @@ void do_research(CHAR_DATA *ch, char *argument)
 
 void do_investigate(CHAR_DATA *ch, char *argument)
 {
-	int diff = 0, fail = 0;
-	char buf[MSL]={'\0'};
 	NOTE_DATA *pbg;
 	CHAR_DATA *vch = NULL;
+	BUFFER *output;
+	char buf[MSL]={'\0'};
+	int diff = 0, fail = 0;
 	bool IsChar = FALSE;
 	bool found = FALSE;
-	BUFFER *output;
-
+	
 	CheckCH(ch);
 
 	if(IS_NULLSTR(argument))
@@ -3575,16 +3573,16 @@ void do_gifts(CHAR_DATA *ch, char *argument)
 
 void do_diceroll(CHAR_DATA *ch, char *argument)
 {
-	int dice = 0;
-	int successcheck = FALSE, difficulty = -1, successes = 0;
+	CHAR_DATA *vch, *to;
 	char buf[MSL]={'\0'};
 	char result[MSL]={'\0'};
 	char arg1[MAX_INPUT_LENGTH]={'\0'};
 	char arg2[MAX_INPUT_LENGTH]={'\0'};
 	char arg3[MAX_INPUT_LENGTH]={'\0'};
+	int dice = 0;
+	int successcheck = FALSE, difficulty = -1, successes = 0;
 	int a = -1, b = -1, c = -1, d = -1, e = -1, f = -1, g = -1, h = -1;
-	int health, whom;
-	CHAR_DATA *vch, *to;
+	int health = ch->health + ch->agghealth - 7, whom;
 
 	CheckCH(ch);
 
@@ -3766,7 +3764,7 @@ void do_diceroll(CHAR_DATA *ch, char *argument)
 		if(whom!=TO_CHAR) send_to_char(buf, ch);
 	}
 
-	health = ch->health + ch->agghealth - 7;
+	
 
 	if(!IS_AFFECTED(ch, AFF_RESIST_PAIN))
 	{
@@ -4026,9 +4024,9 @@ void do_vote(CHAR_DATA *ch, char *argument)
 {
 	CHAR_DATA *nominee;
 	char arg[MAX_INPUT_LENGTH]={'\0'};
+	int i = 0;
 	bool online = FALSE;
 	bool in_char_list = FALSE;
-	int i = 0;
 
 	CheckCH(ch);
 
@@ -4381,10 +4379,10 @@ void do_archetypes(CHAR_DATA *ch, char *argument)
 
 void do_trainingcost(CHAR_DATA *ch, char *argument)
 {
-	int dice = 0;
 	char result[MSL]={'\0'};
 	char arg1[MAX_INPUT_LENGTH]={'\0'};
 	char arg2[MAX_INPUT_LENGTH]={'\0'};
+	int dice = 0;
 	int a = -1, b = -1, c = -1, d = -1;
 
 	CheckCH(ch);
@@ -4902,10 +4900,10 @@ void do_stocks(CHAR_DATA *ch, char *argument)
 
 void do_use(CHAR_DATA *ch, char *argument)
 {
-	char arg[MAX_INPUT_LENGTH]={'\0'};
-	char buf[MSL]={'\0'};
 	OBJ_DATA *obj;
 	CHAR_DATA *vch;
+	char arg[MAX_INPUT_LENGTH]={'\0'};
+	char buf[MSL]={'\0'};
 	int sn = 0, cmd = 0;
 
 	CheckCH(ch);
@@ -5235,8 +5233,8 @@ void do_lala(CHAR_DATA *ch, char *argument)
 
 void do_totems(CHAR_DATA *ch, char *argument)
 {
-	int i = 0, count = 0;
 	PACK_DATA *pack;
+	int i = 0, count = 0;
 
 	CheckCH(ch);
 
@@ -5465,10 +5463,10 @@ void do_addy (CHAR_DATA *ch, char *argument)
 
 void do_score_revised( CHAR_DATA *ch, char *argument )
 {
+	CHAR_DATA *user = ch;
 	char buf[MSL]={'\0'};
 	int num = 0, i = 0;
 	int statcount = 0;
-	CHAR_DATA *user = ch;
 
 	CheckCH(ch);
 
@@ -6021,10 +6019,10 @@ const char *styleBackgrounds(CHAR_DATA *ch, int num)
 
 void do_charsheet( CHAR_DATA *ch, char *argument )
 {
-	int num = 0;
 	GRID_DATA *grid;
 	GRID_ROW *row;
 	GRID_CELL *cell;
+	int num = 0;
 	CheckCH(ch);
 
 	if(IS_ADMIN(ch))

@@ -2060,8 +2060,8 @@ int find_path( int in_room_vnum, int out_room_vnum, CHAR_DATA *ch, int depth, in
 
 void do_hunt( CHAR_DATA *ch, char *argument )
 {
-    char arg[MSL]={'\0'};
     CHAR_DATA *victim;
+    char arg[MSL]={'\0'};
     int direction;
     bool fArea = TRUE;
 
