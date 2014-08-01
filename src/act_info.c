@@ -71,8 +71,6 @@ char *format_obj_to_char( OBJ_DATA *obj, CHAR_DATA *ch, bool fShort )
 {
 	static char buf[MSL]={'\0'};
 
-	buf[0] = '\0';
-
 	if IS_NULLSTR(obj->short_descr)
 		{
 			obj->short_descr = str_dup("This object needs a short description.");
@@ -265,8 +263,6 @@ void show_char_to_char_0( CHAR_DATA *victim, CHAR_DATA *ch )
 {
 	char buf[MSL]={'\0'};
 	char buf2[MSL]={'\0'};
-
-	buf[0] = '\0';
 
 	if ( IS_ADMIN(ch) )
 	{
@@ -5464,7 +5460,6 @@ void do_addy (CHAR_DATA *ch, char *argument)
 void do_score_revised( CHAR_DATA *ch, char *argument )
 {
 	CHAR_DATA *user = ch;
-	char buf[MSL]={'\0'};
 	int num = 0, i = 0;
 	int statcount = 0;
 
@@ -5484,8 +5479,6 @@ void do_score_revised( CHAR_DATA *ch, char *argument )
 			return;
 		}
 	}
-
-	buf[0] = '\0';
 
 	if(ch->race == race_lookup("human") && IS_SET(ch->act2, ACT2_GHOUL))
 	{

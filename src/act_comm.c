@@ -150,7 +150,6 @@ void translate( CHAR_DATA *ch, char * oldwords, char * newwords )
 	{ "", "", "", "" }
 	};
 
-	buf[0]      = '\0';
 	for ( pName = oldwords; *pName != '\0'; pName += length )
 	{
 	for ( iSyl = 0; (length = strlen(syl_table[iSyl].old)) != 0; iSyl++ )
@@ -2729,7 +2728,6 @@ void do_ignore(CHAR_DATA *ch, char *argument)
 	{
 		char buf[MSL]={'\0'};
 		
-		buf[0] = '\0';
 		if ( strstr(ch->ignore, "None") != '\0' )
 		{
 			ch->ignore = string_replace( ch->ignore, "None", "\0" );

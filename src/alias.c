@@ -77,7 +77,6 @@ void substitute_alias(DESCRIPTOR_DATA *d, char *argument)
 			point = one_argument(argument,name);
 			if (!str_cmp(ch->pcdata->alias[alias],name))
 			{
-				buf[0] = '\0';
 				strncat(buf,ch->pcdata->alias_sub[alias], sizeof(buf));
 				strncat(buf," ", sizeof(buf));
 				strncat(buf,point, sizeof(buf));

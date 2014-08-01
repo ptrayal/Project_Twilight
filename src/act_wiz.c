@@ -57,7 +57,7 @@ ROOM_INDEX_DATA *	find_location	args( ( CHAR_DATA *ch, char *arg ) );
 
 void do_wiznet( CHAR_DATA *ch, char *argument )
 {
-	int flag;
+	int flag = 0;
 	char buf[MSL]={'\0'};
 
 	CheckCH(ch);
@@ -94,8 +94,6 @@ void do_wiznet( CHAR_DATA *ch, char *argument )
 	/* show wiznet status */
 	if (!str_prefix(argument,"status"))
 	{
-		buf[0] = '\0';
-
 		if (!IS_SET(ch->wiznet,WIZ_ON))
 			strncat(buf,"off ", sizeof(buf));
 
@@ -116,8 +114,6 @@ void do_wiznet( CHAR_DATA *ch, char *argument )
 	if (!str_prefix(argument,"show"))
 		/* list of all wiznet options */
 	{
-		buf[0] = '\0';
-
 		for (flag = 0; wiznet_table[flag].name != NULL; flag++)
 		{
 			if (wiznet_table[flag].level <= get_trust(ch))
@@ -6105,7 +6101,6 @@ void do_org(CHAR_DATA *ch, char *argument)
 		}
 		else
 		{
-			buf[0] = '\0';
 			if ( strstr( org->races, "None" ) != '\0' )
 			{
 				org->races = string_replace( org->races, "None", "\0" );
@@ -6186,7 +6181,6 @@ void do_org(CHAR_DATA *ch, char *argument)
 		}
 		else
 		{
-			buf[0] = '\0';
 			if ( strstr( org->races, "None" ) != '\0' )
 			{
 				org->races = string_replace( org->races, "None", "\0" );
