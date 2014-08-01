@@ -1765,7 +1765,6 @@ void fread_obj( CHAR_DATA *ch, FILE *fp )
 	bool fNest = FALSE;
 	bool fVnum = FALSE;
 	bool first = TRUE;
-	bool make_new = FALSE;    /* update object */
 
 	obj = NULL;
 	
