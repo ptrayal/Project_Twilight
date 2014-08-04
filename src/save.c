@@ -77,7 +77,7 @@ void	fread_obj	args( ( CHAR_DATA *ch,  FILE *fp ) );
 void save_char_obj( CHAR_DATA *ch )
 {
 	FILE *fp;
-	char strsave[MAX_INPUT_LENGTH]={'\0'};
+	char strsave[MIL]={'\0'};
 	int i = 0;
 
 	if ( ch->desc != NULL && ch->desc->original != NULL )
@@ -745,10 +745,10 @@ bool load_char_obj( DESCRIPTOR_DATA *d, char *name, bool log_load, bool load_con
 {
 	CHAR_DATA *ch;
 	FILE *fp;
-	char *directory;
-	char strsave[MAX_INPUT_LENGTH]={'\0'};
 	int stat = 0;
 	bool found = FALSE;
+	char *directory;
+	char strsave[MAX_INPUT_LENGTH]={'\0'};
 
 	if(load_concept)
 		directory = PLAYER_DIR;

@@ -48,8 +48,8 @@ void do_shoot (CHAR_DATA *ch, char *argument)
 {
 	CHAR_DATA *victim;
 	bool not_in_room = FALSE;
-	char arg[MAX_INPUT_LENGTH]={'\0'};
-	int dir;
+	char arg[MIL]={'\0'};
+	int dir = 0;
 	OBJ_DATA *obj = get_eq_char(ch, WEAR_WIELD);
 	OBJ_INDEX_DATA *ammo;
 
@@ -207,7 +207,7 @@ void shooting (CHAR_DATA *ch, CHAR_DATA *victim, BODY_DATA *target)
 	OBJ_INDEX_DATA *ammo;
 	int diff = 0, fail = 0, dam = 0, agg = 0;
 	int dist = range(ch,victim);
-	int dt, dt1;
+	int dt = 0, dt1 = 0;
 
 	if((ammo = get_obj_index(obj->value[2])) == NULL)
 	{
@@ -317,7 +317,7 @@ void close_combat (CHAR_DATA *ch, CHAR_DATA *victim, int combo)
 	int diff = 0, fail = ch->combo_success, dam = 0, agg = 0;
 	int dist = range(ch,victim);
 	int pos = -1;
-	int dt, dt1;
+	int dt = 0, dt1 = 0;
 	if(obj != NULL) {
 		if(victim->race == race_lookup("faerie") && !str_cmp(obj->material, "iron"))
 		{
@@ -499,7 +499,7 @@ void close_combat (CHAR_DATA *ch, CHAR_DATA *victim, int combo)
 
 int mob_combo(CHAR_DATA *ch)
 {
-	int i = 5, k;
+	int i = 5, k = 0;
 
 	if(get_eq_char(ch, WEAR_WIELD))
 		switch(ch->ability[MELEE].value)
@@ -742,7 +742,7 @@ void do_botch (CHAR_DATA *ch, int combo)
 
 int dice_rolls ( CHAR_DATA *ch, int dice, int difficulty )
 {
-	int i, k = 0, a, health, max = 500;
+	int i, k = 0, a, health = 0, max = 500;
 
 	dice += ch->dice_mod;
 	difficulty += ch->diff_mod;

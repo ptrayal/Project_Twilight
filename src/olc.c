@@ -46,54 +46,54 @@ void save_notes			args( (int type) );
 /* Executed from comm.c.  Minimizes compiling when changes are made. */
 bool run_olc_editor( DESCRIPTOR_DATA *d )
 {
-    switch ( d->editor )
-    {
-    case ED_AREA:
+	switch ( d->editor )
+	{
+	case ED_AREA:
 	aedit( d->character, d->incomm );
 	break;
-    case ED_ROOM:
+	case ED_ROOM:
 	redit( d->character, d->incomm );
 	break;
-    case ED_OBJECT:
+	case ED_OBJECT:
 	oedit( d->character, d->incomm );
 	break;
-    case ED_MOBILE:
+	case ED_MOBILE:
 	medit( d->character, d->incomm );
 	break;
-    case ED_PLOT:
+	case ED_PLOT:
 	pedit( d->character, d->incomm );
 	break;
-    case ED_EVENT:
+	case ED_EVENT:
 	eedit( d->character, d->incomm );
 	break;
-    case ED_SCRIPT:
+	case ED_SCRIPT:
 	sedit( d->character, d->incomm );
 	break;
-    case ED_PERSONA:
+	case ED_PERSONA:
 	aiedit( d->character, d->incomm );
 	break;
-    case ED_REACT:
+	case ED_REACT:
 	rsedit( d->character, d->incomm );
 	break;
-    case ED_HELP:
+	case ED_HELP:
 	hedit( d->character, d->incomm, 0 );
 	break;
-    case ED_KNOW:
+	case ED_KNOW:
 	kbedit( d->character, d->incomm, NOTE_KNOWLEDGE );
 	break;
-    case ED_BG:
+	case ED_BG:
 	kbedit( d->character, d->incomm, NOTE_BACKGROUND );
 	break;
-    case ED_TIP:
+	case ED_TIP:
 	hedit( d->character, d->incomm, 1 );
 	break;
-    case ED_MPCODE:
+	case ED_MPCODE:
 	mpedit( d->character, d->incomm );
 	break;
-    default:
+	default:
 	return FALSE;
-    }
-    return TRUE;
+	}
+	return TRUE;
 }
 
 
@@ -331,26 +331,26 @@ const struct olc_cmd_type aedit_table[] =
 {
 /*  {   command		function	}, */
 
-    {   "age",		aedit_age	},
-    {   "builder",	aedit_builder	}, /* s removed -- Hugin */
-    {   "commands",	show_commands	},
-    {   "create",	aedit_create	},
-    {   "filename",	aedit_file	},
-    {   "name",		aedit_name	},
+	{   "age",		aedit_age	},
+	{   "builder",	aedit_builder	}, /* s removed -- Hugin */
+	{   "commands",	show_commands	},
+	{   "create",	aedit_create	},
+	{   "filename",	aedit_file	},
+	{   "name",		aedit_name	},
 /*  {   "recall",	aedit_recall	},   ROM OLC */
-    {	"reset",	aedit_reset	},
-    {   "security",	aedit_security	},
-    {	"show",		aedit_show	},
-    {   "vnum",		aedit_vnum	},
-    {   "lvnum",	aedit_lvnum	},
-    {   "uvnum",	aedit_uvnum	},
-    {   "credits",	aedit_credits	},
-    {	"flags",	aedit_flags	},
+	{	"reset",	aedit_reset	},
+	{   "security",	aedit_security	},
+	{	"show",		aedit_show	},
+	{   "vnum",		aedit_vnum	},
+	{   "lvnum",	aedit_lvnum	},
+	{   "uvnum",	aedit_uvnum	},
+	{   "credits",	aedit_credits	},
+	{	"flags",	aedit_flags	},
 
-    {   "?",		show_help	},
-    {   "version",	show_version	},
+	{   "?",		show_help	},
+	{   "version",	show_version	},
 
-    {	NULL,		0,		}
+	{	NULL,		0,		}
 };
 
 
@@ -359,51 +359,51 @@ const struct olc_cmd_type redit_table[] =
 {
 /*  {   command		function	}, */
 
-    {   "commands",	show_commands	},
-    {   "create",	redit_create	},
-    {   "desc",		redit_desc	},
-    {   "udesc",	redit_udesc	},
-    {   "ddesc",	redit_ddesc	},
-    {   "ed",		redit_ed	},
-    {   "flags",	redit_flags	},
-    {   "format",	redit_format	},
-    {   "name",		redit_name	},
-    {   "uname",	redit_uname	},
-    {   "dname",	redit_dname	},
-    {	"show",		redit_show	},
-    {   "heal",		redit_heal	},
-    {	"mana",		redit_mana	},
-    {   "clan",		redit_clan	},
-    {   "sector",	redit_sector	},
-    {   "stops",	redit_stop	},
+	{   "commands",	show_commands	},
+	{   "create",	redit_create	},
+	{   "desc",		redit_desc	},
+	{   "udesc",	redit_udesc	},
+	{   "ddesc",	redit_ddesc	},
+	{   "ed",		redit_ed	},
+	{   "flags",	redit_flags	},
+	{   "format",	redit_format	},
+	{   "name",		redit_name	},
+	{   "uname",	redit_uname	},
+	{   "dname",	redit_dname	},
+	{	"show",		redit_show	},
+	{   "heal",		redit_heal	},
+	{	"mana",		redit_mana	},
+	{   "clan",		redit_clan	},
+	{   "sector",	redit_sector	},
+	{   "stops",	redit_stop	},
 
-    {   "north",	redit_north	},
-    {   "south",	redit_south	},
-    {   "east",		redit_east	},
-    {   "west",		redit_west	},
-    {   "up",		redit_up	},
-    {   "down",		redit_down	},
+	{   "north",	redit_north	},
+	{   "south",	redit_south	},
+	{   "east",		redit_east	},
+	{   "west",		redit_west	},
+	{   "up",		redit_up	},
+	{   "down",		redit_down	},
 
-    {   "nearnorth",	redit_nearnorth	},
-    {   "nearsouth",	redit_nearsouth	},
-    {   "neareast",	redit_neareast	},
-    {   "nearwest",	redit_nearwest	},
-    {   "nearup",	redit_nearup	},
-    {   "neardown",	redit_neardown	},
+	{   "nearnorth",	redit_nearnorth	},
+	{   "nearsouth",	redit_nearsouth	},
+	{   "neareast",	redit_neareast	},
+	{   "nearwest",	redit_nearwest	},
+	{   "nearup",	redit_nearup	},
+	{   "neardown",	redit_neardown	},
 
-    /* New reset commands. */
-    {	"mreset",	redit_mreset	},
-    {	"oreset",	redit_oreset	},
-    {	"mlist",	redit_mlist	},
-    {	"rlist",	redit_rlist	},
-    {	"olist",	redit_olist	},
-    {	"mshow",	redit_mshow	},
-    {	"oshow",	redit_oshow	},
+	/* New reset commands. */
+	{	"mreset",	redit_mreset	},
+	{	"oreset",	redit_oreset	},
+	{	"mlist",	redit_mlist	},
+	{	"rlist",	redit_rlist	},
+	{	"olist",	redit_olist	},
+	{	"mshow",	redit_mshow	},
+	{	"oshow",	redit_oshow	},
 
-    {   "?",		show_help	},
-    {   "version",	show_version	},
+	{   "?",		show_help	},
+	{   "version",	show_version	},
 
-    {	NULL,		0,		}
+	{	NULL,		0,		}
 };
 
 
@@ -412,41 +412,41 @@ const struct olc_cmd_type oedit_table[] =
 {
 /*  {   command		function	}, */
 
-    {   "addaffect",	oedit_addaffect	},
-    {   "commands",	show_commands	},
-    {   "cost",		oedit_cost	},
-    {   "create",	oedit_create	},
-    {   "delaffect",	oedit_delaffect	},
-    {   "ed",		oedit_ed	},
-    {   "long",		oedit_long	},
-    {   "name",		oedit_name	},
-    {   "short",	oedit_short	},
-    {   "desc",		oedit_desc	},
-    {	"show",		oedit_show	},
-    {   "v0",		oedit_value0	},
-    {   "v1",		oedit_value1	},
-    {   "v2",		oedit_value2	},
-    {   "v3",		oedit_value3	},
-    {   "v4",		oedit_value4	},  /* ROM */
-    {   "weight",	oedit_weight	},
-    {	"fetish",	oedit_fetish	},  /* PT */
-    {	"fetishlevel",	oedit_fetlevel	},  /* PT */
-    {	"quality",	oedit_quality	},  /* PT */
+	{   "addaffect",	oedit_addaffect	},
+	{   "commands",	show_commands	},
+	{   "cost",		oedit_cost	},
+	{   "create",	oedit_create	},
+	{   "delaffect",	oedit_delaffect	},
+	{   "ed",		oedit_ed	},
+	{   "long",		oedit_long	},
+	{   "name",		oedit_name	},
+	{   "short",	oedit_short	},
+	{   "desc",		oedit_desc	},
+	{	"show",		oedit_show	},
+	{   "v0",		oedit_value0	},
+	{   "v1",		oedit_value1	},
+	{   "v2",		oedit_value2	},
+	{   "v3",		oedit_value3	},
+	{   "v4",		oedit_value4	},  /* ROM */
+	{   "weight",	oedit_weight	},
+	{	"fetish",	oedit_fetish	},  /* PT */
+	{	"fetishlevel",	oedit_fetlevel	},  /* PT */
+	{	"quality",	oedit_quality	},  /* PT */
 
-    {   "extra",        oedit_extra     },  /* ROM */
-    {   "extra2",       oedit_extra2    },  /* PT */
-    {   "wear",         oedit_wear      },  /* ROM */
-    {   "type",         oedit_type      },  /* ROM */
-    {   "material",     oedit_material  },  /* ROM */
-    {   "condition",    oedit_condition },  /* ROM */
-    {	"liqlist",	oedit_liqlist	},  /* ROM */
-    {	"use",		oedit_use_strings },
-    {	"company",	oedit_company	},
+	{   "extra",        oedit_extra     },  /* ROM */
+	{   "extra2",       oedit_extra2    },  /* PT */
+	{   "wear",         oedit_wear      },  /* ROM */
+	{   "type",         oedit_type      },  /* ROM */
+	{   "material",     oedit_material  },  /* ROM */
+	{   "condition",    oedit_condition },  /* ROM */
+	{	"liqlist",	oedit_liqlist	},  /* ROM */
+	{	"use",		oedit_use_strings },
+	{	"company",	oedit_company	},
 
-    {   "?",		show_help	},
-    {   "version",	show_version	},
+	{   "?",		show_help	},
+	{   "version",	show_version	},
 
-    {	NULL,		0,		}
+	{	NULL,		0,		}
 };
 
 
@@ -455,199 +455,199 @@ const struct olc_cmd_type medit_table[] =
 {
 /*  {   command		function	}, */
 
-    {   "act",		medit_act	},
-    {   "act2",		medit_act2	},
-    {   "commands",	show_commands	},
-    {   "create",	medit_create	},
-    {   "desc",		medit_desc	},
-    {   "level",	medit_level	},
-    {   "long",		medit_long	},
-    {   "name",		medit_name	},
-    {   "shop",		medit_shop	},
-    {   "short",	medit_short	},
-    {	"show",		medit_show	},
-    {   "spec",		medit_spec	},
-    {   "triggers",	medit_triggers	},
+	{   "act",		medit_act	},
+	{   "act2",		medit_act2	},
+	{   "commands",	show_commands	},
+	{   "create",	medit_create	},
+	{   "desc",		medit_desc	},
+	{   "level",	medit_level	},
+	{   "long",		medit_long	},
+	{   "name",		medit_name	},
+	{   "shop",		medit_shop	},
+	{   "short",	medit_short	},
+	{	"show",		medit_show	},
+	{   "spec",		medit_spec	},
+	{   "triggers",	medit_triggers	},
 
-    {   "sex",          medit_sex       },  /* ROM */
-    {   "affect",       medit_affect    },  /* ROM */
-    {   "form",         medit_form      },  /* ROM */
-    {   "part",         medit_part      },  /* ROM */
-    {   "imm",          medit_imm       },  /* ROM */
-    {   "res",          medit_res       },  /* ROM */
-    {   "vuln",         medit_vuln      },  /* ROM */
-    {   "material",     medit_material  },  /* ROM */
-    {   "off",          medit_off       },  /* ROM */
-    {   "size",         medit_size      },  /* ROM */
-    {   "hitdice",      medit_hitdice   },  /* ROM */
-    {   "race",         medit_race      },  /* ROM */
-    {   "position",     medit_position  },  /* ROM */
-    {   "wealth",       medit_gold      },  /* ROM */
-    {	"damtype",	medit_damtype	},
-    {	"stats",	medit_stat	},  /* PT */
-    {	"addmprog",	medit_addmprog	},  /* mprogs */
-    {	"delmprog",	medit_delmprog	},  /* mprogs */
+	{   "sex",          medit_sex       },  /* ROM */
+	{   "affect",       medit_affect    },  /* ROM */
+	{   "form",         medit_form      },  /* ROM */
+	{   "part",         medit_part      },  /* ROM */
+	{   "imm",          medit_imm       },  /* ROM */
+	{   "res",          medit_res       },  /* ROM */
+	{   "vuln",         medit_vuln      },  /* ROM */
+	{   "material",     medit_material  },  /* ROM */
+	{   "off",          medit_off       },  /* ROM */
+	{   "size",         medit_size      },  /* ROM */
+	{   "hitdice",      medit_hitdice   },  /* ROM */
+	{   "race",         medit_race      },  /* ROM */
+	{   "position",     medit_position  },  /* ROM */
+	{   "wealth",       medit_gold      },  /* ROM */
+	{	"damtype",	medit_damtype	},
+	{	"stats",	medit_stat	},  /* PT */
+	{	"addmprog",	medit_addmprog	},  /* mprogs */
+	{	"delmprog",	medit_delmprog	},  /* mprogs */
 
-    {   "?",		show_help	},
-    {   "version",	show_version	},
+	{   "?",		show_help	},
+	{   "version",	show_version	},
 
-    {	NULL,		0,		}
+	{	NULL,		0,		}
 };
 
 const struct olc_cmd_type pedit_table [] =
 {
 /*  {   command		function		}, */
 
-    {	"create",	pedit_create		},
-    {	"remove",	pedit_remove		},
-    {	"addevent",	pedit_addevent		},
-    {	"delevent",	pedit_delevent		},
-    {	"assignevent",	pedit_assignevent	},
-    {	"races",	pedit_races		},
-    {	"title",	pedit_title		},
-    {	"show",		pedit_show		},
+	{	"create",	pedit_create		},
+	{	"remove",	pedit_remove		},
+	{	"addevent",	pedit_addevent		},
+	{	"delevent",	pedit_delevent		},
+	{	"assignevent",	pedit_assignevent	},
+	{	"races",	pedit_races		},
+	{	"title",	pedit_title		},
+	{	"show",		pedit_show		},
 
-    {   "?",		show_help		},
-    {   "version",	show_version		},
+	{   "?",		show_help		},
+	{   "version",	show_version		},
 
-    {	NULL,		0,			}
+	{	NULL,		0,			}
 };
 
 const struct olc_cmd_type eedit_table [] =
 {
 /*  {   command		function	},
 
-    {	"create",	eedit_create		}, */
-    {	"remove",	eedit_remove		},
-    {	"races",	eedit_races		},
-    {	"title",	eedit_title		},
-    {	"actors",	eedit_actors		},
-    {	"scripts",	eedit_scripts		},
-    {	"delscript",	eedit_delscript		},
-    {	"location",	eedit_location		},
-    {	"show",		eedit_show		},
+	{	"create",	eedit_create		}, */
+	{	"remove",	eedit_remove		},
+	{	"races",	eedit_races		},
+	{	"title",	eedit_title		},
+	{	"actors",	eedit_actors		},
+	{	"scripts",	eedit_scripts		},
+	{	"delscript",	eedit_delscript		},
+	{	"location",	eedit_location		},
+	{	"show",		eedit_show		},
 
-    {   "?",		show_help		},
-    {   "version",	show_version		},
+	{   "?",		show_help		},
+	{   "version",	show_version		},
 
-    {	NULL,		0,			}
+	{	NULL,		0,			}
 };
 
 const struct olc_cmd_type sedit_table [] =
 {
 /*  {   command		function		}, */
 
-    {	"create",	sedit_create		},
-    {	"remove",	sedit_remove		},
-    {	"trigger",	sedit_trigger		},
-    {	"reaction",	sedit_reaction		},
-    {	"actor",	sedit_actor		},
-    {	"event",	sedit_event		},
-    {   "delay",	sedit_delay		},
-    {   "eventfirst",	sedit_eventfirst	},
-    {	"show",		sedit_show		},
+	{	"create",	sedit_create		},
+	{	"remove",	sedit_remove		},
+	{	"trigger",	sedit_trigger		},
+	{	"reaction",	sedit_reaction		},
+	{	"actor",	sedit_actor		},
+	{	"event",	sedit_event		},
+	{   "delay",	sedit_delay		},
+	{   "eventfirst",	sedit_eventfirst	},
+	{	"show",		sedit_show		},
 
-    {   "?",		show_help		},
-    {   "version",	show_version		},
+	{   "?",		show_help		},
+	{   "version",	show_version		},
 
-    {	NULL,		0,			}
+	{	NULL,		0,			}
 };
 
 const struct olc_cmd_type aiedit_table [] =
 {
 /*  {   command		function		}, */
 
-    {	"create",	aiedit_create		},
-    {	"remove",	aiedit_remove		},
-    {	"show",		aiedit_show		},
-    {	"name",		aiedit_name		},
-    {	"triggeradd",	aiedit_trigger		},
+	{	"create",	aiedit_create		},
+	{	"remove",	aiedit_remove		},
+	{	"show",		aiedit_show		},
+	{	"name",		aiedit_name		},
+	{	"triggeradd",	aiedit_trigger		},
 
-    {   "?",		show_help		},
-    {   "version",	show_version		},
+	{   "?",		show_help		},
+	{   "version",	show_version		},
 
-    {	NULL,		0,			}
+	{	NULL,		0,			}
 };
 
 const struct olc_cmd_type rsedit_table [] =
 {
 /*  {   command		function		}, */
 
-    {	"create",	rsedit_create		},
-    {	"remove",	rsedit_remove		},
-    {	"trigger",	rsedit_trigger		},
-    {	"reaction",	rsedit_reaction		},
-    {	"show",		rsedit_show		},
-    {	"attitude",	rsedit_attitude		},
-    {	"attitude",	rsedit_persona		},
+	{	"create",	rsedit_create		},
+	{	"remove",	rsedit_remove		},
+	{	"trigger",	rsedit_trigger		},
+	{	"reaction",	rsedit_reaction		},
+	{	"show",		rsedit_show		},
+	{	"attitude",	rsedit_attitude		},
+	{	"attitude",	rsedit_persona		},
 
-    {   "?",		show_help		},
-    {   "version",	show_version		},
+	{   "?",		show_help		},
+	{   "version",	show_version		},
 
-    {	NULL,		0,			}
+	{	NULL,		0,			}
 };
 
 const struct olc_cmd_type hedit_table [] =
 {
 /*  {   command		function		}, */
 
-    {	"create",	hedit_create		},
-    {	"keyword",	hedit_keyword		},
-    {	"trust",	hedit_trust		},
-    {	"races",	hedit_races		},
-    {	"clans",	hedit_clans		},
-    {	"topic",	hedit_topic		},
-    {	"quote",	hedit_quote		},
-    {	"syntax",	hedit_syntax		},
-    {	"website",	hedit_website		},
-    {	"see",		hedit_see_also		},
-    {	"unformatted",	hedit_no_format		},
-    {	"body",		hedit_body		},
+	{	"create",	hedit_create		},
+	{	"keyword",	hedit_keyword		},
+	{	"trust",	hedit_trust		},
+	{	"races",	hedit_races		},
+	{	"clans",	hedit_clans		},
+	{	"topic",	hedit_topic		},
+	{	"quote",	hedit_quote		},
+	{	"syntax",	hedit_syntax		},
+	{	"website",	hedit_website		},
+	{	"see",		hedit_see_also		},
+	{	"unformatted",	hedit_no_format		},
+	{	"body",		hedit_body		},
 
-    {   "?",		show_help		},
-    {   "version",	show_version		},
+	{   "?",		show_help		},
+	{   "version",	show_version		},
 
-    {	NULL,		0,			}
+	{	NULL,		0,			}
 };
 
 const struct olc_cmd_type tipedit_table [] =
 {
 /*  {   command		function		}, */
 
-    {	"create",	tipedit_create		},
-    {	"keyword",	hedit_keyword		},
-    {	"trust",	hedit_trust		},
+	{	"create",	tipedit_create		},
+	{	"keyword",	hedit_keyword		},
+	{	"trust",	hedit_trust		},
 /*  {	"races",	hedit_races		},
-    {	"clans",	hedit_clans		},
-    {	"topic",	hedit_topic		},
-    {	"quote",	hedit_quote		},
-    {	"syntax",	hedit_syntax		},
-    {	"website",	hedit_website		},
-    {	"see",		hedit_see_also		},
-    {	"unformatted",	hedit_no_formatted	}, */
-    {	"body",		hedit_body		},
+	{	"clans",	hedit_clans		},
+	{	"topic",	hedit_topic		},
+	{	"quote",	hedit_quote		},
+	{	"syntax",	hedit_syntax		},
+	{	"website",	hedit_website		},
+	{	"see",		hedit_see_also		},
+	{	"unformatted",	hedit_no_formatted	}, */
+	{	"body",		hedit_body		},
 
-    {   "?",		show_help		},
-    {   "version",	show_version		},
+	{   "?",		show_help		},
+	{   "version",	show_version		},
 
-    {	NULL,		0,			}
+	{	NULL,		0,			}
 };
 
 const struct olc_cmd_type kbedit_table [] =
 {
 /*  {   command		function		}, */
 
-    {	"create",	kbedit_create		},
-    {	"keyword",	kbedit_keyword		},
-    {	"difficulty",	kbedit_diff		},
-    {	"text",		kbedit_body		},
-    {	"success",	kbedit_successes	},
-    {	"race",		kbedit_races		},
+	{	"create",	kbedit_create		},
+	{	"keyword",	kbedit_keyword		},
+	{	"difficulty",	kbedit_diff		},
+	{	"text",		kbedit_body		},
+	{	"success",	kbedit_successes	},
+	{	"race",		kbedit_races		},
 
-    {   "?",		show_help		},
-    {   "version",	show_version		},
+	{   "?",		show_help		},
+	{   "version",	show_version		},
 
-    {	NULL,		0,			}
+	{	NULL,		0,			}
 };
 
 
@@ -665,15 +665,15 @@ const struct olc_cmd_type kbedit_table [] =
  ****************************************************************************/
 AREA_DATA *get_area_data( int vnum )
 {
-    AREA_DATA *pArea;
+	AREA_DATA *pArea;
 
-    for (pArea = area_first; pArea; pArea = pArea->next )
-    {
-        if (pArea->vnum == vnum)
-            return pArea;
-    }
+	for (pArea = area_first; pArea; pArea = pArea->next )
+	{
+		if (pArea->vnum == vnum)
+			return pArea;
+	}
 
-    return 0;
+	return 0;
 }
 
 
@@ -685,15 +685,15 @@ AREA_DATA *get_area_data( int vnum )
  ****************************************************************************/
 PLOT_DATA *get_plot_index( int vnum )
 {
-    PLOT_DATA *pPlot;
+	PLOT_DATA *pPlot;
 
-    for (pPlot = plot_list; pPlot; pPlot = pPlot->next )
-    {
-        if (pPlot->vnum == vnum)
-            return pPlot;
-    }
+	for (pPlot = plot_list; pPlot; pPlot = pPlot->next )
+	{
+		if (pPlot->vnum == vnum)
+			return pPlot;
+	}
 
-    return 0;
+	return 0;
 }
 
 
@@ -705,15 +705,15 @@ PLOT_DATA *get_plot_index( int vnum )
  ****************************************************************************/
 EVENT_DATA *get_event_index( int vnum )
 {
-    EVENT_DATA *pEvent;
+	EVENT_DATA *pEvent;
 
-    for (pEvent = event_list; pEvent; pEvent = pEvent->next )
-    {
-        if (pEvent->vnum == vnum)
-            return pEvent;
-    }
+	for (pEvent = event_list; pEvent; pEvent = pEvent->next )
+	{
+		if (pEvent->vnum == vnum)
+			return pEvent;
+	}
 
-    return 0;
+	return 0;
 }
 
 
@@ -725,15 +725,15 @@ EVENT_DATA *get_event_index( int vnum )
  ****************************************************************************/
 SCRIPT_DATA *get_script_index( int vnum )
 {
-    SCRIPT_DATA *pScript;
+	SCRIPT_DATA *pScript;
 
-    for (pScript = script_first; pScript; pScript = pScript->next )
-    {
-        if (pScript->vnum == vnum)
-            return pScript;
-    }
+	for (pScript = script_first; pScript; pScript = pScript->next )
+	{
+		if (pScript->vnum == vnum)
+			return pScript;
+	}
 
-    return 0;
+	return 0;
 }
 
 
@@ -744,15 +744,15 @@ SCRIPT_DATA *get_script_index( int vnum )
  ****************************************************************************/
 PERSONA *get_persona_index( int vnum )
 {
-    PERSONA *pPersona;
+	PERSONA *pPersona;
 
-    for (pPersona = persona_first; pPersona; pPersona = pPersona->next )
-    {
-        if (pPersona->vnum == vnum)
-            return pPersona;
-    }
+	for (pPersona = persona_first; pPersona; pPersona = pPersona->next )
+	{
+		if (pPersona->vnum == vnum)
+			return pPersona;
+	}
 
-    return 0;
+	return 0;
 }
 
 
@@ -763,22 +763,22 @@ PERSONA *get_persona_index( int vnum )
  ****************************************************************************/
 REACT *get_react_index( int x, int vnum )
 {
-    REACT *pScript;
-    int i = 0;
+	REACT *pScript;
+	int i = 0;
 
-    for (pScript = react_first; pScript; pScript = pScript->next )
-    {
-        if (pScript->attitude == x)
+	for (pScript = react_first; pScript; pScript = pScript->next )
 	{
-            i++;
-	    if(i == vnum)
-	    {
+		if (pScript->attitude == x)
+	{
+			i++;
+		if(i == vnum)
+		{
 		return pScript;
-	    }
+		}
 	}
-    }
+	}
 
-    return 0;
+	return 0;
 }
 
 
@@ -789,29 +789,29 @@ REACT *get_react_index( int x, int vnum )
  ****************************************************************************/
 HELP_DATA * get_help(char *argument)
 {
-    HELP_DATA *pHelp;
-    char argall[MAX_INPUT_LENGTH]={'\0'};
-    char argone[MAX_INPUT_LENGTH]={'\0'};
+	HELP_DATA *pHelp;
+	char argall[MIL]={'\0'};
+	char argone[MIL]={'\0'};
 
-    /* this parts handles help a b so that it returns help 'a b' */
-    argall[0] = '\0';
-    while (!IS_NULLSTR(argument) )
-    {
-        argument = one_argument(argument,argone);
-        if (!IS_NULLSTR(argall))
-            strncat(argall," ", sizeof(argall));
-        strncat(argall,argone, sizeof(argall));
-    }
-
-    for ( pHelp = help_list; pHelp != NULL; pHelp = pHelp->next )
-    {
-        if ( is_exact_name( argall, pHelp->keyword ) )
-        {
-	    return pHelp;
+	/* this parts handles help a b so that it returns help 'a b' */
+	argall[0] = '\0';
+	while (!IS_NULLSTR(argument) )
+	{
+		argument = one_argument(argument,argone);
+		if (!IS_NULLSTR(argall))
+			strncat(argall," ", sizeof(argall));
+		strncat(argall,argone, sizeof(argall));
 	}
-    }
 
-    return NULL;
+	for ( pHelp = help_list; pHelp != NULL; pHelp = pHelp->next )
+	{
+		if ( is_exact_name( argall, pHelp->keyword ) )
+		{
+		return pHelp;
+	}
+	}
+
+	return NULL;
 }
 
 
@@ -822,19 +822,19 @@ HELP_DATA * get_help(char *argument)
  ****************************************************************************/
 HELP_DATA * get_tip(char *argument)
 {
-    HELP_DATA *pHelp;
+	HELP_DATA *pHelp;
 
-    if(!is_number(argument)) return NULL;
+	if(!is_number(argument)) return NULL;
 
-    for ( pHelp = tip_list; pHelp != NULL; pHelp = pHelp->next )
-    {
-        if ( is_exact_name( argument, pHelp->keyword ) )
-        {
-	    return pHelp;
+	for ( pHelp = tip_list; pHelp != NULL; pHelp = pHelp->next )
+	{
+		if ( is_exact_name( argument, pHelp->keyword ) )
+		{
+		return pHelp;
 	}
-    }
+	}
 
-    return NULL;
+	return NULL;
 }
 
 
@@ -847,8 +847,8 @@ NOTE_DATA * get_kbg(char *argument, int type)
 {
 	NOTE_DATA *pNote;
 	NOTE_DATA *thread;
-	char argall[MAX_INPUT_LENGTH]={'\0'};
-	char argone[MAX_INPUT_LENGTH]={'\0'};
+	char argall[MIL]={'\0'};
+	char argone[MIL]={'\0'};
 
 	/* this parts handles note a b so that it returns note 'a b' */
 	argall[0] = '\0';
@@ -887,19 +887,19 @@ bool edit_done( CHAR_DATA *ch )
 {
 SCRIPT_DATA *pscript = NULL;
 
-    if(ch->desc->editor == ED_SCRIPT)
-    {
+	if(ch->desc->editor == ED_SCRIPT)
+	{
 	pscript = (SCRIPT_DATA *)ch->desc->pEdit;
 	if(!pscript->event)
 	{
-	    send_to_char("You must associate the script with an event.\n\r",ch);
-	    return TRUE;
+		send_to_char("You must associate the script with an event.\n\r",ch);
+		return TRUE;
 	}
-    }
+	}
 
-    ch->desc->pEdit = NULL;
-    ch->desc->editor = 0;
-    return FALSE;
+	ch->desc->pEdit = NULL;
+	ch->desc->editor = 0;
+	return FALSE;
 }
 
 
@@ -913,10 +913,10 @@ SCRIPT_DATA *pscript = NULL;
 void aedit( CHAR_DATA *ch, char *argument )
 {
 	AREA_DATA *pArea;
-	char command[MAX_INPUT_LENGTH]={'\0'};
-	char arg[MAX_INPUT_LENGTH]={'\0'};
-	int  cmd;
-	int  value;
+	char command[MIL]={'\0'};
+	char arg[MIL]={'\0'};
+	int  cmd = 0;
+	int  value = 0;
 
 	EDIT_AREA(ch, pArea);
 	smash_tilde( argument );
@@ -972,91 +972,91 @@ void aedit( CHAR_DATA *ch, char *argument )
 		}
 	}
 
-    /* Default to Standard Interpreter. */
-    interpret( ch, arg );
-    return;
+	/* Default to Standard Interpreter. */
+	interpret( ch, arg );
+	return;
 }
 
 
 /* Room Interpreter, called by do_redit. */
 void redit( CHAR_DATA *ch, char *argument )
 {
-    ROOM_INDEX_DATA *pRoom;
-    AREA_DATA *pArea;
-    char arg[MSL]={'\0'};
-    char command[MAX_INPUT_LENGTH]={'\0'};
-    int  cmd;
-    int  value;
+	ROOM_INDEX_DATA *pRoom;
+	AREA_DATA *pArea;
+	char arg[MSL]={'\0'};
+	char command[MIL]={'\0'};
+	int  cmd = 0;
+	int  value = 0;
 
-    EDIT_ROOM(ch, pRoom);
-    pArea = pRoom->area;
+	EDIT_ROOM(ch, pRoom);
+	pArea = pRoom->area;
 
-    smash_tilde( argument );
-    strncpy( arg, argument, sizeof(arg) );
-    argument = one_argument( argument, command );
+	smash_tilde( argument );
+	strncpy( arg, argument, sizeof(arg) );
+	argument = one_argument( argument, command );
 
-    if ( !IS_BUILDER( ch, pArea ) )
-    {
-        send_to_char( "REdit:  Insufficient security to modify room.\n\r", ch );
+	if ( !IS_BUILDER( ch, pArea ) )
+	{
+		send_to_char( "REdit:  Insufficient security to modify room.\n\r", ch );
 	edit_done( ch );
 	return;
-    }
+	}
 
-    if ( !str_cmp(command, "done") )
-    {
+	if ( !str_cmp(command, "done") )
+	{
 	edit_done( ch );
 	return;
-    }
+	}
 
-    if ( !IS_BUILDER( ch, pArea ) )
-    {
-        interpret( ch, arg );
-        return;
-    }
+	if ( !IS_BUILDER( ch, pArea ) )
+	{
+		interpret( ch, arg );
+		return;
+	}
 
-    if ( IS_NULLSTR(command) )
-    {
+	if ( IS_NULLSTR(command) )
+	{
 	redit_show( ch, argument );
 	send_to_char("\tOType 'done' to exit the editor.\tn\n\r", ch);
 	return;
-    }
+	}
 
-    if ( ( value = flag_value( room_flags, command ) ) != NO_FLAG )
-    {
-        TOGGLE_BIT(pRoom->room_flags, value);
-
-        SET_BIT( pArea->area_flags, AREA_CHANGED );
-        send_to_char( "Room flag toggled.\n\r", ch );
-        return;
-    }
-
-    if ( ( value = flag_value( sector_flags, command ) ) != NO_FLAG)
-    {
-        pRoom->sector_type  = value;
-
-        SET_BIT( pArea->area_flags, AREA_CHANGED );
-        send_to_char( "Sector type set.\n\r", ch );
-        return;
-    }
-
-    /* Search Table and Dispatch Command. */
-    for ( cmd = 0; redit_table[cmd].name != NULL; cmd++ )
-    {
-	if ( !str_prefix( command, redit_table[cmd].name ) )
+	if ( ( value = flag_value( room_flags, command ) ) != NO_FLAG )
 	{
-	    if ( (*redit_table[cmd].olc_fun) ( ch, argument ) )
-	    {
+		TOGGLE_BIT(pRoom->room_flags, value);
+
 		SET_BIT( pArea->area_flags, AREA_CHANGED );
-		return;
-	    }
-	    else
+		send_to_char( "Room flag toggled.\n\r", ch );
 		return;
 	}
-    }
 
-    /* Default to Standard Interpreter. */
-    interpret( ch, arg );
-    return;
+	if ( ( value = flag_value( sector_flags, command ) ) != NO_FLAG)
+	{
+		pRoom->sector_type  = value;
+
+		SET_BIT( pArea->area_flags, AREA_CHANGED );
+		send_to_char( "Sector type set.\n\r", ch );
+		return;
+	}
+
+	/* Search Table and Dispatch Command. */
+	for ( cmd = 0; redit_table[cmd].name != NULL; cmd++ )
+	{
+	if ( !str_prefix( command, redit_table[cmd].name ) )
+	{
+		if ( (*redit_table[cmd].olc_fun) ( ch, argument ) )
+		{
+		SET_BIT( pArea->area_flags, AREA_CHANGED );
+		return;
+		}
+		else
+		return;
+	}
+	}
+
+	/* Default to Standard Interpreter. */
+	interpret( ch, arg );
+	return;
 }
 
 
@@ -1064,64 +1064,64 @@ void redit( CHAR_DATA *ch, char *argument )
 /* Object Interpreter, called by do_oedit. */
 void oedit( CHAR_DATA *ch, char *argument )
 {
-    AREA_DATA *pArea;
-    OBJ_INDEX_DATA *pObj;
-    char arg[MSL]={'\0'};
-    char command[MAX_INPUT_LENGTH]={'\0'};
-    int  cmd;
+	AREA_DATA *pArea;
+	OBJ_INDEX_DATA *pObj;
+	char arg[MSL]={'\0'};
+	char command[MIL]={'\0'};
+	int  cmd = 0;
 /*  int  value;   ROM */
 
-    smash_tilde( argument );
-    strncpy( arg, argument, sizeof(arg) );
-    argument = one_argument( argument, command );
+	smash_tilde( argument );
+	strncpy( arg, argument, sizeof(arg) );
+	argument = one_argument( argument, command );
 
-    EDIT_OBJ(ch, pObj);
-    pArea = pObj->area;
+	EDIT_OBJ(ch, pObj);
+	pArea = pObj->area;
 
-    if ( !IS_BUILDER( ch, pArea ) )
-      {
+	if ( !IS_BUILDER( ch, pArea ) )
+	  {
 	send_to_char( "OEdit: Insufficient security to modify area.\n\r", ch );
 	edit_done( ch );
 	return;
-      }
+	  }
 
-    if ( !str_cmp(command, "done") )
-    {
+	if ( !str_cmp(command, "done") )
+	{
 	edit_done( ch );
 	return;
-    }
+	}
 
-    if ( !IS_BUILDER( ch, pArea ) )
-    {
+	if ( !IS_BUILDER( ch, pArea ) )
+	{
 	interpret( ch, arg );
 	return;
-    }
+	}
 
-    if ( IS_NULLSTR(command) )
-    {
+	if ( IS_NULLSTR(command) )
+	{
 	oedit_show( ch, argument );
 	send_to_char("\tOType 'done' to exit the editor.\tn\n\r", ch);
 	return;
-    }
+	}
 
-    /* Search Table and Dispatch Command. */
-    for ( cmd = 0; oedit_table[cmd].name != NULL; cmd++ )
-    {
+	/* Search Table and Dispatch Command. */
+	for ( cmd = 0; oedit_table[cmd].name != NULL; cmd++ )
+	{
 	if ( !str_prefix( command, oedit_table[cmd].name ) )
 	{
-	    if ( (*oedit_table[cmd].olc_fun) ( ch, argument ) )
-	    {
+		if ( (*oedit_table[cmd].olc_fun) ( ch, argument ) )
+		{
 		SET_BIT( pArea->area_flags, AREA_CHANGED );
 		return;
-	    }
-	    else
+		}
+		else
 		return;
 	}
-    }
+	}
 
-    /* Default to Standard Interpreter. */
-    interpret( ch, arg );
-    return;
+	/* Default to Standard Interpreter. */
+	interpret( ch, arg );
+	return;
 }
 
 
@@ -1129,430 +1129,430 @@ void oedit( CHAR_DATA *ch, char *argument )
 /* Mobile Interpreter, called by do_medit. */
 void medit( CHAR_DATA *ch, char *argument )
 {
-    AREA_DATA *pArea;
-    MOB_INDEX_DATA *pMob;
-    char command[MAX_INPUT_LENGTH]={'\0'};
-    char arg[MSL]={'\0'};
-    int  cmd;
+	AREA_DATA *pArea;
+	MOB_INDEX_DATA *pMob;
+	char command[MIL]={'\0'};
+	char arg[MSL]={'\0'};
+	int  cmd = 0;
 /*  int  value;    ROM */
 
-    smash_tilde( argument );
-    strncpy( arg, argument, sizeof(arg) );
-    argument = one_argument( argument, command );
+	smash_tilde( argument );
+	strncpy( arg, argument, sizeof(arg) );
+	argument = one_argument( argument, command );
 
-    EDIT_MOB(ch, pMob);
-    pArea = pMob->area;
+	EDIT_MOB(ch, pMob);
+	pArea = pMob->area;
 
-    if ( !IS_BUILDER( ch, pArea ) )
-      {
+	if ( !IS_BUILDER( ch, pArea ) )
+	  {
 	send_to_char( "MEdit: Insufficient security to modify area.\n\r", ch );
 	edit_done( ch );
 	return;
-      }
+	  }
 
-    if ( !str_cmp(command, "done") )
-    {
+	if ( !str_cmp(command, "done") )
+	{
 	edit_done( ch );
 	return;
-    }
+	}
 
-    if ( !IS_BUILDER( ch, pArea ) )
-    {
+	if ( !IS_BUILDER( ch, pArea ) )
+	{
 	interpret( ch, arg );
 	return;
-    }
+	}
 
-    if ( IS_NULLSTR(command) )
-    {
-        medit_show( ch, argument );
-	send_to_char("\tOType 'done' to exit the editor.\tn\n\r", ch);
-        return;
-    }
-
-    /* Search Table and Dispatch Command. */
-    for ( cmd = 0; medit_table[cmd].name != NULL; cmd++ )
-    {
-	if ( !str_prefix( command, medit_table[cmd].name ) )
+	if ( IS_NULLSTR(command) )
 	{
-	    if ( (*medit_table[cmd].olc_fun) ( ch, argument ) )
-	    {
-		SET_BIT( pArea->area_flags, AREA_CHANGED );
-		return;
-	    }
-	    else
+		medit_show( ch, argument );
+	send_to_char("\tOType 'done' to exit the editor.\tn\n\r", ch);
 		return;
 	}
-    }
 
-    /* Default to Standard Interpreter. */
-    interpret( ch, arg );
-    return;
+	/* Search Table and Dispatch Command. */
+	for ( cmd = 0; medit_table[cmd].name != NULL; cmd++ )
+	{
+	if ( !str_prefix( command, medit_table[cmd].name ) )
+	{
+		if ( (*medit_table[cmd].olc_fun) ( ch, argument ) )
+		{
+		SET_BIT( pArea->area_flags, AREA_CHANGED );
+		return;
+		}
+		else
+		return;
+	}
+	}
+
+	/* Default to Standard Interpreter. */
+	interpret( ch, arg );
+	return;
 }
 
 
 /* Plot Interpreter, called by do_pedit. */
 void pedit( CHAR_DATA *ch, char *argument )
 {
-    PLOT_DATA *pPlot;
-    char command[MAX_INPUT_LENGTH]={'\0'};
-    char arg[MAX_INPUT_LENGTH]={'\0'};
-    int  cmd;
-    int  value;
+	PLOT_DATA *pPlot;
+	char command[MIL]={'\0'};
+	char arg[MIL]={'\0'};
+	int  cmd = 0;
+	int  value = 0;
 
-    EDIT_PLOT(ch, pPlot);
-    smash_tilde( argument );
-    strncpy( arg, argument, sizeof(arg) );
-    argument = one_argument( argument, command );
+	EDIT_PLOT(ch, pPlot);
+	smash_tilde( argument );
+	strncpy( arg, argument, sizeof(arg) );
+	argument = one_argument( argument, command );
 
-    if ( !IS_STORYTELLER( ch, pPlot ) )
-      {
+	if ( !IS_STORYTELLER( ch, pPlot ) )
+	  {
 	send_to_char( "PEdit:  Insufficient security to modify plot.\n\r", ch );
 	edit_done( ch );
 	return;
-      }
+	  }
 
-    if ( !str_cmp(command, "done") )
-    {
+	if ( !str_cmp(command, "done") )
+	{
 	edit_done( ch );
 	return;
-    }
+	}
 
-    if ( !IS_STORYTELLER( ch, pPlot ) )
-    {
+	if ( !IS_STORYTELLER( ch, pPlot ) )
+	{
 	interpret( ch, arg );
 	return;
-    }
+	}
 
-    if ( IS_NULLSTR(command) )
-    {
+	if ( IS_NULLSTR(command) )
+	{
 	pedit_show( ch, argument );
 	send_to_char("\tOType 'done' to exit the editor.\tn\n\r", ch);
 	return;
-    }
+	}
 
-    if ( ( value = flag_value( plot_races, command ) ) != NO_FLAG )
-    {
+	if ( ( value = flag_value( plot_races, command ) ) != NO_FLAG )
+	{
 	TOGGLE_BIT(pPlot->races, value);
 
 	send_to_char( "Race toggled.\n\r", ch );
 	return;
-    }
+	}
 
-    /* Search Table and Dispatch Command. */
-    for ( cmd = 0; pedit_table[cmd].name != NULL; cmd++ )
-    {
+	/* Search Table and Dispatch Command. */
+	for ( cmd = 0; pedit_table[cmd].name != NULL; cmd++ )
+	{
 	if ( !str_prefix( command, pedit_table[cmd].name ) )
 	{
-	    if ( (*pedit_table[cmd].olc_fun) ( ch, argument ) )
+		if ( (*pedit_table[cmd].olc_fun) ( ch, argument ) )
 		return;
 	}
-    }
+	}
 
-    /* Default to Standard Interpreter. */
-    interpret( ch, arg );
-    return;
+	/* Default to Standard Interpreter. */
+	interpret( ch, arg );
+	return;
 }
 
 
 /* Event Interpreter, called by do_eedit. */
 void eedit( CHAR_DATA *ch, char *argument )
 {
-    EVENT_DATA *pEvent;
-    char command[MAX_INPUT_LENGTH]={'\0'};
-    char arg[MAX_INPUT_LENGTH]={'\0'};
-    int  cmd;
-    int  value;
+	EVENT_DATA *pEvent;
+	char command[MIL]={'\0'};
+	char arg[MIL]={'\0'};
+	int  cmd = 0;
+	int  value = 0;
 
-    EDIT_EVENT(ch, pEvent);
-    smash_tilde( argument );
-    strncpy( arg, argument, sizeof(arg) );
-    argument = one_argument( argument, command );
+	EDIT_EVENT(ch, pEvent);
+	smash_tilde( argument );
+	strncpy( arg, argument, sizeof(arg) );
+	argument = one_argument( argument, command );
 
-    if ( !IS_STORYTELLER( ch, pEvent ) )
-      {
+	if ( !IS_STORYTELLER( ch, pEvent ) )
+	  {
 	send_to_char( "EEdit:  Insufficient security to modify event.\n\r", ch );
 	edit_done( ch );
 	return;
-      }
+	  }
 
-    if ( !str_cmp(command, "done") )
-    {
+	if ( !str_cmp(command, "done") )
+	{
 	edit_done( ch );
 	return;
-    }
+	}
 
-    if ( !IS_STORYTELLER( ch, pEvent ) )
-    {
+	if ( !IS_STORYTELLER( ch, pEvent ) )
+	{
 	interpret( ch, arg );
 	return;
-    }
+	}
 
-    if ( IS_NULLSTR(command) )
-    {
+	if ( IS_NULLSTR(command) )
+	{
 	eedit_show( ch, argument );
 	send_to_char("\tOType 'done' to exit the editor.\tn\n\r", ch);
 	return;
-    }
+	}
 
-    if ( ( value = flag_value( plot_races, command ) ) != NO_FLAG )
-    {
+	if ( ( value = flag_value( plot_races, command ) ) != NO_FLAG )
+	{
 	TOGGLE_BIT(pEvent->races, value);
 
 	send_to_char( "Race toggled.\n\r", ch );
 	return;
-    }
+	}
 
-    /* Search Table and Dispatch Command. */
-    for ( cmd = 0; eedit_table[cmd].name != NULL; cmd++ )
-    {
+	/* Search Table and Dispatch Command. */
+	for ( cmd = 0; eedit_table[cmd].name != NULL; cmd++ )
+	{
 	if ( !str_prefix( command, eedit_table[cmd].name ) )
 	{
-	    if ( (*eedit_table[cmd].olc_fun) ( ch, argument ) )
+		if ( (*eedit_table[cmd].olc_fun) ( ch, argument ) )
 		return;
 	}
-    }
+	}
 
-    /* Default to Standard Interpreter. */
-    interpret( ch, arg );
-    return;
+	/* Default to Standard Interpreter. */
+	interpret( ch, arg );
+	return;
 }
 
 
 /* Script Unit Interpreter, called by do_sedit. */
 void sedit( CHAR_DATA *ch, char *argument )
 {
-    SCRIPT_DATA *pScript;
-    char command[MAX_INPUT_LENGTH]={'\0'};
-    char arg[MAX_INPUT_LENGTH]={'\0'};
-    int  cmd;
+	SCRIPT_DATA *pScript;
+	char command[MIL]={'\0'};
+	char arg[MIL]={'\0'};
+	int  cmd = 0;
 
-    EDIT_SCRIPT(ch, pScript);
-    smash_tilde( argument );
-    strncpy( arg, argument, sizeof(arg) );
-    argument = one_argument( argument, command );
+	EDIT_SCRIPT(ch, pScript);
+	smash_tilde( argument );
+	strncpy( arg, argument, sizeof(arg) );
+	argument = one_argument( argument, command );
 
-    if ( !IS_STORYTELLER( ch, pScript ) )
-      {
+	if ( !IS_STORYTELLER( ch, pScript ) )
+	  {
 	send_to_char( "SEdit:  Insufficient security to modify script.\n\r", ch );
 	edit_done( ch );
 	return;
-      }
+	  }
 
-    if ( !str_cmp(command, "done") )
-    {
+	if ( !str_cmp(command, "done") )
+	{
 	edit_done( ch );
 	return;
-    }
+	}
 
-    if ( !IS_STORYTELLER( ch, pScript ) )
-    {
+	if ( !IS_STORYTELLER( ch, pScript ) )
+	{
 	interpret( ch, arg );
 	return;
-    }
+	}
 
-    if ( IS_NULLSTR(command) )
-    {
+	if ( IS_NULLSTR(command) )
+	{
 	sedit_show( ch, argument );
 	send_to_char("\tOType 'done' to exit the editor.\tn\n\r", ch);
 	return;
-    }
+	}
 
-    /* Search Table and Dispatch Command. */
-    for ( cmd = 0; sedit_table[cmd].name != NULL; cmd++ )
-    {
+	/* Search Table and Dispatch Command. */
+	for ( cmd = 0; sedit_table[cmd].name != NULL; cmd++ )
+	{
 	if ( !str_prefix( command, sedit_table[cmd].name ) )
 	{
-	    if ( (*sedit_table[cmd].olc_fun) ( ch, argument ) )
+		if ( (*sedit_table[cmd].olc_fun) ( ch, argument ) )
 		return;
 	}
-    }
+	}
 
-    /* Default to Standard Interpreter. */
-    interpret( ch, arg );
-    return;
+	/* Default to Standard Interpreter. */
+	interpret( ch, arg );
+	return;
 }
 
 
 /* Persona Unit Interpreter, called by do_aiedit. */
 void aiedit( CHAR_DATA *ch, char *argument )
 {
-    PERSONA *pPersona;
-    char command[MAX_INPUT_LENGTH]={'\0'};
-    char arg[MAX_INPUT_LENGTH]={'\0'};
-    int  cmd;
+	PERSONA *pPersona;
+	char command[MIL]={'\0'};
+	char arg[MIL]={'\0'};
+	int  cmd = 0;
 
-    EDIT_PERSONA(ch, pPersona);
-    smash_tilde( argument );
-    strncpy( arg, argument, sizeof(arg) );
-    argument = one_argument( argument, command );
+	EDIT_PERSONA(ch, pPersona);
+	smash_tilde( argument );
+	strncpy( arg, argument, sizeof(arg) );
+	argument = one_argument( argument, command );
 
-    if ( !str_cmp(command, "done") )
-    {
+	if ( !str_cmp(command, "done") )
+	{
 	edit_done( ch );
 	return;
-    }
+	}
 
-    if ( IS_NULLSTR(command) )
-    {
+	if ( IS_NULLSTR(command) )
+	{
 	aiedit_show( ch, argument );
 	send_to_char("\tOType 'done' to exit the editor.\tn\n\r", ch);
 	return;
-    }
+	}
 
-    /* Search Table and Dispatch Command. */
-    for ( cmd = 0; aiedit_table[cmd].name != NULL; cmd++ )
-    {
+	/* Search Table and Dispatch Command. */
+	for ( cmd = 0; aiedit_table[cmd].name != NULL; cmd++ )
+	{
 	if ( !str_prefix( command, aiedit_table[cmd].name ) )
 	{
-	    if ( (*aiedit_table[cmd].olc_fun) ( ch, argument ) )
+		if ( (*aiedit_table[cmd].olc_fun) ( ch, argument ) )
 		return;
 	}
-    }
+	}
 
-    /* Default to Standard Interpreter. */
-    interpret( ch, arg );
-    return;
+	/* Default to Standard Interpreter. */
+	interpret( ch, arg );
+	return;
 }
 
 
 /* AI Reaction Unit Interpreter, called by do_rsedit. */
 void rsedit( CHAR_DATA *ch, char *argument )
 {
-    REACT *pScript;
-    char command[MAX_INPUT_LENGTH]={'\0'};
-    char arg[MAX_INPUT_LENGTH]={'\0'};
-    int  cmd;
+	REACT *pScript;
+	char command[MIL]={'\0'};
+	char arg[MIL]={'\0'};
+	int  cmd = 0;
 
-    EDIT_REACT(ch, pScript);
-    smash_tilde( argument );
-    strncpy( arg, argument, sizeof(arg) );
-    argument = one_argument( argument, command );
+	EDIT_REACT(ch, pScript);
+	smash_tilde( argument );
+	strncpy( arg, argument, sizeof(arg) );
+	argument = one_argument( argument, command );
 
-    if ( !str_cmp(command, "done") )
-    {
+	if ( !str_cmp(command, "done") )
+	{
 	edit_done( ch );
 	return;
-    }
+	}
 
-    if ( IS_NULLSTR(command) )
-    {
+	if ( IS_NULLSTR(command) )
+	{
 	rsedit_show( ch, argument );
 	send_to_char("\tOType 'done' to exit the editor.\tn\n\r", ch);
 	return;
-    }
+	}
 
-    /* Search Table and Dispatch Command. */
-    for ( cmd = 0; rsedit_table[cmd].name != NULL; cmd++ )
-    {
+	/* Search Table and Dispatch Command. */
+	for ( cmd = 0; rsedit_table[cmd].name != NULL; cmd++ )
+	{
 	if ( !str_prefix( command, rsedit_table[cmd].name ) )
 	{
-	    if ( (*rsedit_table[cmd].olc_fun) ( ch, argument ) )
+		if ( (*rsedit_table[cmd].olc_fun) ( ch, argument ) )
 		return;
 	}
-    }
+	}
 
-    /* Default to Standard Interpreter. */
-    interpret( ch, arg );
-    return;
+	/* Default to Standard Interpreter. */
+	interpret( ch, arg );
+	return;
 }
 
 
 /* Help Interpreter, called by do_hedit. */
 void hedit( CHAR_DATA *ch, char *argument, int type )
 {
-    HELP_DATA *pHelp;
-    char command[MAX_INPUT_LENGTH]={'\0'};
-    char arg[MAX_INPUT_LENGTH]={'\0'};
-    int  cmd;
+	HELP_DATA *pHelp;
+	int  cmd = 0;
+	char command[MIL]={'\0'};
+	char arg[MIL]={'\0'};
 
-    EDIT_HELP(ch, pHelp);
-    smash_tilde( argument );
-    strncpy( arg, argument, sizeof(arg) );
-    argument = one_argument( argument, command );
+	EDIT_HELP(ch, pHelp);
+	smash_tilde( argument );
+	strncpy( arg, argument, sizeof(arg) );
+	argument = one_argument( argument, command );
 
-    if ( !str_cmp(command, "done") )
-    {
+	if ( !str_cmp(command, "done") )
+	{
 	edit_done( ch );
 	return;
-    }
+	}
 
-    if ( IS_NULLSTR(command) )
-    {
+	if ( IS_NULLSTR(command) )
+	{
 	hedit_show( ch, argument );
 	send_to_char("\tOType 'done' to exit the editor.\tn\n\r", ch);
 	return;
-    }
+	}
 
-    /* Search Table and Dispatch Command. */
-    if(!type)
-    {
-      for ( cmd = 0; hedit_table[cmd].name != NULL; cmd++ )
-      {
+	/* Search Table and Dispatch Command. */
+	if(!type)
+	{
+	  for ( cmd = 0; hedit_table[cmd].name != NULL; cmd++ )
+	  {
 	if ( !str_prefix( command, hedit_table[cmd].name ) )
 	{
-	    if ( (*hedit_table[cmd].olc_fun) ( ch, argument ) )
+		if ( (*hedit_table[cmd].olc_fun) ( ch, argument ) )
 		return;
 	}
-      }
-    }
-    else
-    {
-      for ( cmd = 0; tipedit_table[cmd].name != NULL; cmd++ )
-      {
+	  }
+	}
+	else
+	{
+	  for ( cmd = 0; tipedit_table[cmd].name != NULL; cmd++ )
+	  {
 	if ( !str_prefix( command, tipedit_table[cmd].name ) )
 	{
-	    if ( (*tipedit_table[cmd].olc_fun) ( ch, argument ) )
+		if ( (*tipedit_table[cmd].olc_fun) ( ch, argument ) )
 		return;
 	}
-      }
-    }
+	  }
+	}
 
-    /* Default to Standard Interpreter. */
-    interpret( ch, arg );
-    return;
+	/* Default to Standard Interpreter. */
+	interpret( ch, arg );
+	return;
 }
 
 
 /* Background and Knowledge Interpreter, called by bg and know. */
 void kbedit( CHAR_DATA *ch, char *argument, int type )
 {
-    NOTE_DATA *pNote;
-    char command[MAX_INPUT_LENGTH]={'\0'};
-    char arg[MAX_INPUT_LENGTH]={'\0'};
-    int  cmd;
+	NOTE_DATA *pNote;
+	int  cmd = 0;
+	char command[MIL]={'\0'};
+	char arg[MIL]={'\0'};
 
-    EDIT_NOTE(ch, pNote);
-    smash_tilde( argument );
-    strncpy( arg, argument, sizeof(arg) );
-    argument = one_argument( argument, command );
+	EDIT_NOTE(ch, pNote);
+	smash_tilde( argument );
+	strncpy( arg, argument, sizeof(arg) );
+	argument = one_argument( argument, command );
 
-    if ( !str_cmp(command, "done") )
-    {
+	if ( !str_cmp(command, "done") )
+	{
 	edit_done( ch );
 	save_notes(type);
 	return;
-    }
+	}
 
-    if ( IS_NULLSTR(command) )
-    {
+	if ( IS_NULLSTR(command) )
+	{
 	kbedit_show( ch, argument );
 	send_to_char("\tOType 'done' to exit the editor.\tn\n\r", ch);
 	return;
-    }
+	}
 
-    /* Search Table and Dispatch Command. */
-    for ( cmd = 0; kbedit_table[cmd].name != NULL; cmd++ )
-    {
+	/* Search Table and Dispatch Command. */
+	for ( cmd = 0; kbedit_table[cmd].name != NULL; cmd++ )
+	{
 	if ( !str_prefix( command, kbedit_table[cmd].name ) )
 	{
-	    if ( (*kbedit_table[cmd].olc_fun) ( ch, argument ) )
+		if ( (*kbedit_table[cmd].olc_fun) ( ch, argument ) )
 		return;
 	}
-    }
+	}
 
-    /* Default to Standard Interpreter. */
-    interpret( ch, arg );
-    return;
+	/* Default to Standard Interpreter. */
+	interpret( ch, arg );
+	return;
 }
 
 
@@ -1560,52 +1560,52 @@ const struct editor_cmd_type editor_table[] =
 {
 /*  {   command		function	}, */
 
-    {   "area",		do_aedit	},
-    {   "room",		do_redit	},
-    {   "object",	do_oedit	},
-    {   "mobile",	do_medit	},
-    {   "plot",		do_pedit	},
-    {   "event",	do_eedit	},
-    {   "script",	do_sedit	},
-    {   "persona",	do_aiedit	},
-    {   "react",	do_rsedit	},
-    {   "help",		do_hedit	},
-    {   "tip",		do_tipedit	},
-    {   "bg",		do_bg		},
-    {   "know",		do_know		},
-    {   "mprog",	do_mpedit	},
+	{   "area",		do_aedit	},
+	{   "room",		do_redit	},
+	{   "object",	do_oedit	},
+	{   "mobile",	do_medit	},
+	{   "plot",		do_pedit	},
+	{   "event",	do_eedit	},
+	{   "script",	do_sedit	},
+	{   "persona",	do_aiedit	},
+	{   "react",	do_rsedit	},
+	{   "help",		do_hedit	},
+	{   "tip",		do_tipedit	},
+	{   "bg",		do_bg		},
+	{   "know",		do_know		},
+	{   "mprog",	do_mpedit	},
 
-    {	NULL,		0,		}
+	{	NULL,		0,		}
 };
 
 
 /* Entry point for all editors. */
 void do_olc( CHAR_DATA *ch, char *argument )
 {
-    char command[MAX_INPUT_LENGTH]={'\0'};
-    int  cmd;
+	int  cmd = 0;
+	char command[MIL]={'\0'};
 
-    argument = one_argument( argument, command );
+	argument = one_argument( argument, command );
 
-    if ( IS_NULLSTR(command) )
-    {
-        do_help( ch, "olc" );
-        return;
-    }
+	if ( IS_NULLSTR(command) )
+	{
+		do_help( ch, "olc" );
+		return;
+	}
  
-    /* Search Table and Dispatch Command. */
-    for ( cmd = 0; editor_table[cmd].name != NULL; cmd++ )
-    {
+	/* Search Table and Dispatch Command. */
+	for ( cmd = 0; editor_table[cmd].name != NULL; cmd++ )
+	{
 	if ( !str_prefix( command, editor_table[cmd].name ) )
 	{
-	    (*editor_table[cmd].do_fun) ( ch, argument );
-	    return;
+		(*editor_table[cmd].do_fun) ( ch, argument );
+		return;
 	}
-    }
+	}
 
-    /* Invalid command, send help. */
-    do_help( ch, "olc" );
-    return;
+	/* Invalid command, send help. */
+	do_help( ch, "olc" );
+	return;
 }
 
 
@@ -1613,58 +1613,58 @@ void do_olc( CHAR_DATA *ch, char *argument )
 /* Entry point for editing area_data. */
 void do_aedit( CHAR_DATA *ch, char *argument )
 {
-    AREA_DATA *pArea;
-    int value;
-    char value2[MSL]={'\0'};
-    char arg[MSL]={'\0'};
+	AREA_DATA *pArea;
+	int value = 0;
+	char value2[MSL]={'\0'};
+	char arg[MSL]={'\0'};
 
-    CheckChNPC(ch);
+	CheckChNPC(ch);
 
-    pArea = ch->in_room->area;
+	pArea = ch->in_room->area;
 
-    argument = one_argument(argument,arg);
-    if ( is_number( arg ) )
-    {
+	argument = one_argument(argument,arg);
+	if ( is_number( arg ) )
+	{
 	value = atoi( arg );
 	if ( !( pArea = get_area_data( value ) ) )
 	{
-	    send_to_char( "That area vnum does not exist.\n\r", ch );
-	    return;
+		send_to_char( "That area vnum does not exist.\n\r", ch );
+		return;
 	}
-    }
-    else
-    {
+	}
+	else
+	{
 	if ( !str_cmp( arg, "create" ) )
 	{
-	    if (!IS_NPC(ch) && (ch->pcdata->security < 9) )
+		if (!IS_NPC(ch) && (ch->pcdata->security < 9) )
 		{
 		   send_to_char("Insufficient security to create areas.\n\r",ch);
 		   return;
 		}
-	    argument    	=   one_argument(argument,value2);
-	    value = atoi (value2);
-	    if (get_area_data(value) != NULL)
-	       {
-	        	send_to_char("That area exists!",ch);
-	        	return;
-	       }
-	    pArea               =   new_area();
-	    area_last->next     =   pArea;
-	    area_last		=   pArea;	/* Thanks, Walker. */
-	    SET_BIT( pArea->area_flags, AREA_ADDED );
-	    send_to_char("Area created.\n\r",ch);
+		argument    	=   one_argument(argument,value2);
+		value = atoi (value2);
+		if (get_area_data(value) != NULL)
+		   {
+				send_to_char("That area exists!",ch);
+				return;
+		   }
+		pArea               =   new_area();
+		area_last->next     =   pArea;
+		area_last		=   pArea;	/* Thanks, Walker. */
+		SET_BIT( pArea->area_flags, AREA_ADDED );
+		send_to_char("Area created.\n\r",ch);
 	}
-    }
+	}
 
-    if (!IS_BUILDER(ch,pArea))
-    {
-    	send_to_char("Insuficiente seguridad para editar areas.\n\r",ch);
-    	return;
-    }
+	if (!IS_BUILDER(ch,pArea))
+	{
+		send_to_char("Insuficiente seguridad para editar areas.\n\r",ch);
+		return;
+	}
 
-    ch->desc->pEdit = (void *)pArea;
-    ch->desc->editor = ED_AREA;
-    return;
+	ch->desc->pEdit = (void *)pArea;
+	ch->desc->editor = ED_AREA;
+	return;
 }
 
 
@@ -1672,70 +1672,70 @@ void do_aedit( CHAR_DATA *ch, char *argument )
 /* Entry point for editing room_index_data. */
 void do_redit( CHAR_DATA *ch, char *argument )
 {
-    ROOM_INDEX_DATA *pRoom, *pRoom2;
-    char arg1[MSL]={'\0'};
+	ROOM_INDEX_DATA *pRoom, *pRoom2;
+	char arg1[MSL]={'\0'};
 
-    CheckChNPC(ch);
+	CheckChNPC(ch);
 
-    argument = one_argument( argument, arg1 );
+	argument = one_argument( argument, arg1 );
 
-    pRoom = ch->in_room;
+	pRoom = ch->in_room;
 
-    if ( !str_cmp( arg1, "reset" ) )
-    {
+	if ( !str_cmp( arg1, "reset" ) )
+	{
 	if ( !IS_BUILDER( ch, pRoom->area ) )
 	{
 		send_to_char( "You do not have access to edit this area.\n\r" , ch );
-        	return;
+			return;
 	}
 
 	forced_reset_room( pRoom );
 	send_to_char( "Room reset.\n\r", ch );
 	return;
-    }
-    else
-    if ( !str_cmp( arg1, "create" ) )
-    {
+	}
+	else
+	if ( !str_cmp( arg1, "create" ) )
+	{
 	if ( IS_NULLSTR(argument) || atoi( argument ) == 0 )
 	{
-	    send_to_char( "Syntax:  edit room create [vnum]\n\r", ch );
-	    return;
+		send_to_char( "Syntax:  edit room create [vnum]\n\r", ch );
+		return;
 	}
 
 	if ( redit_create( ch, argument ) )
 	{
-	    char_from_room( ch );
-	    char_to_room( ch, (ROOM_INDEX_DATA *)ch->desc->pEdit );
-	    SET_BIT( pRoom->area->area_flags, AREA_CHANGED );
-	    pRoom = ch->in_room;
+		char_from_room( ch );
+		char_to_room( ch, (ROOM_INDEX_DATA *)ch->desc->pEdit );
+		SET_BIT( pRoom->area->area_flags, AREA_CHANGED );
+		pRoom = ch->in_room;
 	}
-    }
-    else
-    {
-	    pRoom2 = get_room_index(atoi(arg1));
-    
-	    if ( (pRoom2 != NULL) && IS_BUILDER(ch,pRoom2->area) )
-	    {
-	       char_from_room( ch );
-	       char_to_room( ch, pRoom2 );
-	       pRoom = ch->in_room;
-	    }
-	    else
-	    if (atoi(arg1) != 0)
-	    {
-	       send_to_char("Either you do not have authority to edit that room, or it does not exist..\n\r",ch);
-	       return;
-	    }   
-    }
+	}
+	else
+	{
+		pRoom2 = get_room_index(atoi(arg1));
+	
+		if ( (pRoom2 != NULL) && IS_BUILDER(ch,pRoom2->area) )
+		{
+		   char_from_room( ch );
+		   char_to_room( ch, pRoom2 );
+		   pRoom = ch->in_room;
+		}
+		else
+		if (atoi(arg1) != 0)
+		{
+		   send_to_char("Either you do not have authority to edit that room, or it does not exist..\n\r",ch);
+		   return;
+		}   
+	}
 
-    if ( !IS_BUILDER( ch, pRoom->area ) )
-    {
+	if ( !IS_BUILDER( ch, pRoom->area ) )
+	{
 	send_to_char( "You do not have authority to edit that room.\n\r" , ch );
-       	return;
-    }
+		return;
+	}
 
-    ch->desc->editor = ED_ROOM;
-    return;
+	ch->desc->editor = ED_ROOM;
+	return;
 }
 
 
@@ -1743,70 +1743,70 @@ void do_redit( CHAR_DATA *ch, char *argument )
 /* Entry point for editing obj_index_data. */
 void do_oedit( CHAR_DATA *ch, char *argument )
 {
-    OBJ_INDEX_DATA *pObj;
-    AREA_DATA *pArea;
-    char arg1[MSL]={'\0'};
-    int value;
+	OBJ_INDEX_DATA *pObj;
+	AREA_DATA *pArea;
+	char arg1[MSL]={'\0'};
+	int value = 0;
 
-    CheckChNPC(ch);
+	CheckChNPC(ch);
 
-    argument = one_argument( argument, arg1 );
+	argument = one_argument( argument, arg1 );
 
-    if ( is_number( arg1 ) )
-    {
+	if ( is_number( arg1 ) )
+	{
 	value = atoi( arg1 );
 	if ( !( pObj = get_obj_index( value ) ) )
 	{
-	    send_to_char( "OEdit:  That vnum does not exist.\n\r", ch );
-	    return;
+		send_to_char( "OEdit:  That vnum does not exist.\n\r", ch );
+		return;
 	}
 
 	if ( !IS_BUILDER( ch, pObj->area ) )
-	    {
+		{
 		send_to_char( "You do not have the authority to edit that object.\n\r" , ch );
-	        return;
-	    }
+			return;
+		}
 
 	ch->desc->pEdit = (void *)pObj;
 	ch->desc->editor = ED_OBJECT;
 	return;
-    }
-    else
-    {
+	}
+	else
+	{
 	if ( !str_cmp( arg1, "create" ) )
 	{
-	    value = atoi( argument );
-	    if ( IS_NULLSTR(argument) || value == 0 )
-	    {
+		value = atoi( argument );
+		if ( IS_NULLSTR(argument) || value == 0 )
+		{
 		send_to_char( "Syntax:  edit object create [vnum]\n\r", ch );
 		return;
-	    }
+		}
 
-	    pArea = get_vnum_area( value );
+		pArea = get_vnum_area( value );
 
-	    if ( !pArea )
-	    {
+		if ( !pArea )
+		{
 		send_to_char( "OEdit:  That vnum is not assigned an area.\n\r", ch );
 		return;
-	    }
+		}
 
-	    if ( !IS_BUILDER( ch, pArea ) )
-	    {
+		if ( !IS_BUILDER( ch, pArea ) )
+		{
 		send_to_char( "You do not have the authority to edit objects.\n\r" , ch );
-	        return;
-	    }
+			return;
+		}
 
-	    if ( oedit_create( ch, argument ) )
-	    {
+		if ( oedit_create( ch, argument ) )
+		{
 		SET_BIT( pArea->area_flags, AREA_CHANGED );
 		ch->desc->editor = ED_OBJECT;
-	    }
-	    return;
+		}
+		return;
 	}
-    }
+	}
 
-    send_to_char( "OEdit:  There is no default object to edit.\n\r(Use oedit create <vnum> to create a new object.)\n\r", ch );
-    return;
+	send_to_char( "OEdit:  There is no default object to edit.\n\r(Use oedit create <vnum> to create a new object.)\n\r", ch );
+	return;
 }
 
 
@@ -1814,518 +1814,517 @@ void do_oedit( CHAR_DATA *ch, char *argument )
 /* Entry point for editing mob_index_data. */
 void do_medit( CHAR_DATA *ch, char *argument )
 {
-    MOB_INDEX_DATA *pMob;
-    AREA_DATA *pArea;
-    int value;
-    char arg1[MSL]={'\0'};
+	MOB_INDEX_DATA *pMob;
+	AREA_DATA *pArea;
+	int value = 0;
+	char arg1[MSL]={'\0'};
 
-    CheckChNPC(ch);
+	CheckChNPC(ch);
 
-    argument = one_argument( argument, arg1 );
+	argument = one_argument( argument, arg1 );
 
-    if ( is_number( arg1 ) )
-    {
+	if ( is_number( arg1 ) )
+	{
 	value = atoi( arg1 );
 	if ( !( pMob = get_mob_index( value ) ))
 	{
-	    send_to_char( "MEdit:  That vnum does not exist.\n\r", ch );
-	    return;
+		send_to_char( "MEdit:  That vnum does not exist.\n\r", ch );
+		return;
 	}
 
 	if ( !IS_BUILDER( ch, pMob->area ) )
 	{
 		send_to_char( "Insufficient security to edit mobs.\n\r" , ch );
-	        return;
+			return;
 	}
 
 	ch->desc->pEdit = (void *)pMob;
 	ch->desc->editor = ED_MOBILE;
 	return;
-    }
-    else
-    {
+	}
+	else
+	{
 	if ( !str_cmp( arg1, "create" ) )
 	{
-	    value = atoi( argument );
-	    if ( IS_NULLSTR(arg1) || value == 0 )
-	    {
+		value = atoi( argument );
+		if ( IS_NULLSTR(arg1) || value == 0 )
+		{
 		send_to_char( "Syntax:  edit mobile create [vnum]\n\r", ch );
 		return;
-	    }
+		}
 
-	    pArea = get_vnum_area( value );
+		pArea = get_vnum_area( value );
 
-	    if ( !pArea )
-	    {
+		if ( !pArea )
+		{
 		send_to_char( "MEdit:  That vnum is not assigned an area.\n\r", ch );
 		return;
-	    }
+		}
 
-	    if ( !IS_BUILDER( ch, pArea ) )
-	    {
+		if ( !IS_BUILDER( ch, pArea ) )
+		{
 		send_to_char( "Insuficiente seguridad para modificar mobs.\n\r" , ch );
-	        return;
-	    }
+			return;
+		}
 
-	    if ( medit_create( ch, argument ) )
-	    {
+		if ( medit_create( ch, argument ) )
+		{
 		SET_BIT( pArea->area_flags, AREA_CHANGED );
 		ch->desc->editor = ED_MOBILE;
-	    }
-	    return;
+		}
+		return;
 	}
-    }
+	}
 
-    send_to_char( "MEdit:  There is no default mobile to edit.\n\r(Use medit create <vnum> to create a new mobile.)\n\r", ch );
-    return;
+	send_to_char( "MEdit:  There is no default mobile to edit.\n\r(Use medit create <vnum> to create a new mobile.)\n\r", ch );
+	return;
 }
 
 /* Entry point for editing plot_data. */
 void do_pedit( CHAR_DATA *ch, char *argument )
 {
-    PLOT_DATA *pPlot = NULL;
-    int value;
-    char arg1[MSL]={'\0'};
+	PLOT_DATA *pPlot = NULL;
+	int value = 0;
+	char arg1[MSL]={'\0'};
 
-    CheckChNPC(ch);
+	CheckChNPC(ch);
 
-    argument = one_argument( argument, arg1 );
+	argument = one_argument( argument, arg1 );
 
-    if ( is_number( arg1 ) )
-    {
+	if ( is_number( arg1 ) )
+	{
 	value = atoi( arg1 );
 	if ( !( pPlot = get_plot_index( value ) ))
 	{
-	    send_to_char( "PEdit:  That vnum does not exist.\n\r", ch );
-	    return;
+		send_to_char( "PEdit:  That vnum does not exist.\n\r", ch );
+		return;
 	}
 
 	if ( !IS_STORYTELLER( ch, pPlot ) )
 	{
 		send_to_char( "Insufficient security to edit plot.\n\r" , ch );
-	        return;
+			return;
 	}
 
 	ch->desc->pEdit = (void *)pPlot;
 	ch->desc->editor = ED_PLOT;
 	return;
-    }
-    else
-    {
+	}
+	else
+	{
 	if ( !str_cmp( arg1, "create" ) )
 	{
-	    if ( IS_NULLSTR(arg1) )
-	    {
+		if ( IS_NULLSTR(arg1) )
+		{
 		send_to_char( "Syntax:  edit plot create\n\r", ch );
 		return;
-	    }
+		}
 
-	    if ( !IS_STORYTELLER( ch, pPlot ) )
-	    {
+		if ( !IS_STORYTELLER( ch, pPlot ) )
+		{
 		send_to_char( "Insuficiente seguridad para modificar plots.\n\r" , ch );
-	        return;
-	    }
+			return;
+		}
 
-	    if ( pedit_create( ch, "" ) )
-	    {
+		if ( pedit_create( ch, "" ) )
+		{
 		ch->desc->editor = ED_PLOT;
-	    }
-	    return;
+		}
+		return;
 	}
-    }
+	}
 
-    send_to_char( "PEdit:  There is no default plot to edit.\n\r(Use pedit create to create a new plot.)\n\r", ch );
-    return;
+	send_to_char( "PEdit:  There is no default plot to edit.\n\r(Use pedit create to create a new plot.)\n\r", ch );
+	return;
 }
 
 
 /* Entry point for editing event_data. */
 void do_eedit( CHAR_DATA *ch, char *argument )
 {
-    EVENT_DATA *pEvent = NULL;
-    int value;
-    char arg1[MSL]={'\0'};
+	EVENT_DATA *pEvent = NULL;
+	int value;
+	char arg1[MSL]={'\0'};
 
-    CheckChNPC(ch);
+	CheckChNPC(ch);
 
-    argument = one_argument( argument, arg1 );
+	argument = one_argument( argument, arg1 );
 
-    if ( is_number( arg1 ) )
-    {
+	if ( is_number( arg1 ) )
+	{
 	value = atoi( arg1 );
 	if ( !( pEvent = get_event_index( value ) ))
 	{
-	    send_to_char( "EEdit:  That vnum does not exist.\n\r", ch );
-	    return;
+		send_to_char( "EEdit:  That vnum does not exist.\n\r", ch );
+		return;
 	}
 
 	if ( !IS_STORYTELLER( ch, pEvent ) )
 	{
 		send_to_char( "Insufficient security to edit events.\n\r" , ch );
-	        return;
+			return;
 	}
 
 	ch->desc->pEdit = (void *)pEvent;
 	ch->desc->editor = ED_EVENT;
 	return;
-    }
-    else
-    {
+	}
+	else
+	{
 /*
 	if ( !str_cmp( arg1, "create" ) )
 	{
-	    value = atoi( argument );
-	    if ( IS_NULLSTR(arg1) )
-	    {
+		value = atoi( argument );
+		if ( IS_NULLSTR(arg1) )
+		{
 		send_to_char( "Syntax:  edit event create\n\r", ch );
 		return;
-	    }
+		}
 
-	    if ( !IS_STORYTELLER( ch, pEvent ) )
-	    {
+		if ( !IS_STORYTELLER( ch, pEvent ) )
+		{
 		send_to_char( "Insuficiente seguridad para modificar events.\n\r" , ch );
-	        return;
-	    }
+			return;
+		}
 
-	    if ( eedit_create( ch, "" ) )
-	    {
+		if ( eedit_create( ch, "" ) )
+		{
 		ch->desc->editor = ED_EVENT;
-	    }
-	    return;
+		}
+		return;
 	}
 */
 	send_to_char("edit event <event vnum>\n\r", ch);
-    send_to_char("(To create a new event, please create it from within the appropriate plot.)\n\r", ch);
-    }
+	send_to_char("(To create a new event, please create it from within the appropriate plot.)\n\r", ch);
+	}
 
-    send_to_char( "EEdit:  There is no default event to edit.\n\r", ch );
-    send_to_char( "(Use event_edit create to create a new event.)\n\r", ch);
-    return;
+	send_to_char( "EEdit:  There is no default event to edit.\n\r", ch );
+	send_to_char( "(Use event_edit create to create a new event.)\n\r", ch);
+	return;
 }
 
 
 /* Entry point for editing script_data. */
 void do_sedit( CHAR_DATA *ch, char *argument )
 {
-    SCRIPT_DATA *pScript = NULL;
-    int value;
-    char arg1[MSL]={'\0'};
+	SCRIPT_DATA *pScript = NULL;
+	int value;
+	char arg1[MSL]={'\0'};
 
-    CheckChNPC(ch);
+	CheckChNPC(ch);
 
-    argument = one_argument( argument, arg1 );
+	argument = one_argument( argument, arg1 );
 
-    if ( is_number( arg1 ) )
-    {
+	if ( is_number( arg1 ) )
+	{
 	value = atoi( arg1 );
 	if ( !( pScript = get_script_index( value ) ))
 	{
-	    send_to_char( "SEdit:  That vnum does not exist.\n\r", ch );
-	    return;
+		send_to_char( "SEdit:  That vnum does not exist.\n\r", ch );
+		return;
 	}
 
 	if ( !IS_STORYTELLER( ch, pScript ) )
 	{
 		send_to_char( "Insufficient security to edit scripts.\n\r" , ch );
-	        return;
+			return;
 	}
 
 	ch->desc->pEdit = (void *)pScript;
 	ch->desc->editor = ED_SCRIPT;
 	return;
-    }
-    else
-    {
+	}
+	else
+	{
 	if ( !str_cmp( arg1, "create" ) )
 	{
-	    value = atoi( argument );
-	    if ( IS_NULLSTR(arg1) )
-	    {
+		value = atoi( argument );
+		if ( IS_NULLSTR(arg1) )
+		{
 		send_to_char( "Syntax:  edit script create\n\r", ch );
 		return;
-	    }
+		}
 
-	    if ( !IS_STORYTELLER( ch, pScript ) )
-	    {
+		if ( !IS_STORYTELLER( ch, pScript ) )
+		{
 		send_to_char( "Insuficiente seguridad para modificar scripts.\n\r" , ch );
-	        return;
-	    }
+			return;
+		}
 
-	    if ( sedit_create( ch, "" ) )
-	    {
+		if ( sedit_create( ch, "" ) )
+		{
 		ch->desc->editor = ED_SCRIPT;
-	    }
-	    return;
+		}
+		return;
 	}
-    }
+	}
 
-    send_to_char( "SEdit:  There is no default script to edit.\n\r(Use sedit create to create a new script.)\n\r", ch );
-    return;
+	send_to_char( "SEdit:  There is no default script to edit.\n\r(Use sedit create to create a new script.)\n\r", ch );
+	return;
 }
 
 
 /* Entry point for editing personas. */
 void do_aiedit( CHAR_DATA *ch, char *argument )
 {
-    PERSONA *pPersona = NULL;
-    int value;
-    char arg1[MSL]={'\0'};
+	PERSONA *pPersona = NULL;
+	int value;
+	char arg1[MSL]={'\0'};
 
-    CheckChNPC(ch);
+	CheckChNPC(ch);
 
-    argument = one_argument( argument, arg1 );
+	argument = one_argument( argument, arg1 );
 
-    if ( is_number( arg1 ) )
-    {
+	if ( is_number( arg1 ) )
+	{
 	value = atoi( arg1 );
 	if ( !( pPersona = get_persona_index( value ) ))
 	{
-	    send_to_char( "AIEdit:  That vnum does not exist.\n\r", ch );
-	    return;
+		send_to_char( "AIEdit:  That vnum does not exist.\n\r", ch );
+		return;
 	}
 
 	ch->desc->pEdit = (void *)pPersona;
 	ch->desc->editor = ED_PERSONA;
 	return;
-    }
-    else
-    {
+	}
+	else
+	{
 	if ( !str_cmp( arg1, "create" ) )
 	{
-	    if ( IS_NULLSTR(arg1) )
-	    {
+		if ( IS_NULLSTR(arg1) )
+		{
 		send_to_char( "Syntax:  edit persona create\n\r", ch );
 		return;
-	    }
+		}
 
-	    if ( aiedit_create( ch, "" ) )
-	    {
+		if ( aiedit_create( ch, "" ) )
+		{
 		ch->desc->editor = ED_PERSONA;
-	    }
-	    return;
+		}
+		return;
 	}
-    }
+	}
 
-    send_to_char( "AIEdit:  There is no default persona to edit.\n\r(Use aiedit create to create a new persona.)\n\r", ch );
-    return;
+	send_to_char( "AIEdit:  There is no default persona to edit.\n\r(Use aiedit create to create a new persona.)\n\r", ch );
+	return;
 }
 
 
 /* Entry point for editing reacts. */
 void do_rsedit( CHAR_DATA *ch, char *argument )
 {
-    REACT *pScript = NULL;
-    int value, vnum;
-    char arg1[MSL]={'\0'};
+	REACT *pScript = NULL;
+	int value, vnum;
+	char arg1[MSL]={'\0'};
 
-    CheckChNPC(ch);
+	CheckChNPC(ch);
 
-    argument = one_argument( argument, arg1 );
+	argument = one_argument( argument, arg1 );
 
-    if ( is_number( arg1 ) && is_number( argument ) )
-    {
+	if ( is_number( arg1 ) && is_number( argument ) )
+	{
 	value = atoi( arg1 );
 	vnum = atoi( argument );
 	if ( !( pScript = get_react_index( value, vnum ) ))
 	{
-	    send_to_char( "RSEdit:  That location or vnum does not exist.\n\r", ch );
-	    return;
+		send_to_char( "RSEdit:  That location or vnum does not exist.\n\r", ch );
+		return;
 	}
 
 	ch->desc->pEdit = (void *)pScript;
 	ch->desc->editor = ED_REACT;
 	return;
-    }
-    else
-    {
+	}
+	else
+	{
 	if ( !str_cmp( arg1, "create" ) )
 	{
-	    value = atoi( argument );
-	    if ( IS_NULLSTR(arg1) || value < 0 )
-	    {
+		value = atoi( argument );
+		if ( IS_NULLSTR(arg1) || value < 0 )
+		{
 		send_to_char( "Syntax:  edit react create [attitude num]\n\r", ch );
 		return;
-	    }
+		}
 
-	    if ( rsedit_create( ch, argument ) )
-	    {
+		if ( rsedit_create( ch, argument ) )
+		{
 		ch->desc->editor = ED_REACT;
-	    }
-	    return;
+		}
+		return;
 	}
-    }
+	}
 
-    send_to_char( "RSEdit:  There is no default reaction to edit.\n\r(Use rsedit create to create a new reaction set.)\n\r", ch );
-    return;
+	send_to_char( "RSEdit:  There is no default reaction to edit.\n\r(Use rsedit create to create a new reaction set.)\n\r", ch );
+	return;
 }
 
 
 /* Entry point for editing helps. */
 void do_hedit( CHAR_DATA *ch, char *argument )
 {
-    HELP_DATA *pHelp = NULL;
-    char arg1[MSL]={'\0'};
-    char *fullarg;
+	HELP_DATA *pHelp = NULL;
+	char arg1[MSL]={'\0'};
+	char *fullarg;
 
-    CheckChNPC(ch);
+	CheckChNPC(ch);
 
-    fullarg = str_dup(argument);
-    argument = one_argument( argument, arg1 );
+	fullarg = str_dup(argument);
+	argument = one_argument( argument, arg1 );
 
-    if ( !str_cmp( arg1, "create" ) )
-    {
+	if ( !str_cmp( arg1, "create" ) )
+	{
 	if ( IS_NULLSTR(arg1) )
 	{
-	    send_to_char( "Syntax:  edit help create [keywords]\n\r", ch );
-	    return;
+		send_to_char( "Syntax:  edit help create [keywords]\n\r", ch );
+		return;
 	}
 
 	if ( hedit_create( ch, argument ) )
 	{
-	    ch->desc->editor = ED_HELP;
+		ch->desc->editor = ED_HELP;
 	}
 	return;
-    }
-    else if(arg1[0] !='\0')
-    {
+	}
+	else if(arg1[0] !='\0')
+	{
 	
 	if ( (pHelp = get_help( arg1 )) == NULL )
 	{
-	    send_to_char( "HEdit:  That help does not exist.\n\r", ch );
-	    return;
+		send_to_char( "HEdit:  That help does not exist.\n\r", ch );
+		return;
 	}
 
 	ch->desc->pEdit = (void *)pHelp;
 	ch->desc->editor = ED_HELP;
 	return;
-    }
+	}
 
-    send_to_char( "HEdit:  There is no default help to edit.\n\r(Use hedit create to create a new help.)\n\r", ch );
-    return;
+	send_to_char( "HEdit:  There is no default help to edit.\n\r(Use hedit create to create a new help.)\n\r", ch );
+	return;
 }
 
 
 /* Entry point for editing tips. */
 void do_tipedit( CHAR_DATA *ch, char *argument )
 {
-    HELP_DATA *pHelp = NULL;
-    char arg1[MSL]={'\0'};
-    char *fullarg;
+	HELP_DATA *pHelp = NULL;
+	char arg1[MSL]={'\0'};
+	char *fullarg;
 
-    CheckChNPC(ch);
+	CheckChNPC(ch);
 
-    fullarg = str_dup(argument);
-    argument = one_argument( argument, arg1 );
+	fullarg = str_dup(argument);
+	argument = one_argument( argument, arg1 );
 
-    if ( !str_cmp( arg1, "create" ) )
-    {
-    	if ( IS_NULLSTR(arg1) )
-    	{
-    		send_to_char( "Syntax:  edit tip create\n\r", ch );
-    		return;
-    	}
+	if ( !str_cmp( arg1, "create" ) )
+	{
+		if ( IS_NULLSTR(arg1) )
+		{
+			send_to_char( "Syntax:  edit tip create\n\r", ch );
+			return;
+		}
 
-    	if ( tipedit_create( ch, (char *)Format("%d", top_tip) ) )
-    	{
-    		ch->desc->editor = ED_TIP;
-    	}
-    	return;
-    }
-    else if(arg1[0] !='\0')
-    {
+		if ( tipedit_create( ch, (char *)Format("%d", top_tip) ) )
+		{
+			ch->desc->editor = ED_TIP;
+		}
+		return;
+	}
+	else if(arg1[0] !='\0')
+	{
 
-    	if ( (pHelp = get_tip( arg1 )) == NULL )
-    	{
-    		send_to_char( "TipEdit:  That tip does not exist.\n\r", ch );
-    		return;
-    	}
+		if ( (pHelp = get_tip( arg1 )) == NULL )
+		{
+			send_to_char( "TipEdit:  That tip does not exist.\n\r", ch );
+			return;
+		}
 
-    	ch->desc->pEdit = (void *)pHelp;
-    	ch->desc->editor = ED_TIP;
-    	return;
-    }
+		ch->desc->pEdit = (void *)pHelp;
+		ch->desc->editor = ED_TIP;
+		return;
+	}
 
-    send_to_char( "TipEdit:  There is no default tip to edit.\n\r(Use tipedit create to create a new tip.)\n\r", ch );
-    return;
+	send_to_char( "TipEdit:  There is no default tip to edit.\n\r(Use tipedit create to create a new tip.)\n\r", ch );
+	return;
 }
 
 /* Entry point for editing knowledge and background entries. */
 void do_kbedit( CHAR_DATA *ch, char *argument, int type )
 {
-    NOTE_DATA *pNote = NULL;
-    char arg1[MSL]={'\0'};
-    char *fullarg;
+	NOTE_DATA *pNote = NULL;
+	char arg1[MSL]={'\0'};
+	char *fullarg;
 
-    CheckChNPC(ch);
+	CheckChNPC(ch);
 
-    fullarg = str_dup(argument);
-    argument = one_argument( argument, arg1 );
+	fullarg = str_dup(argument);
+	argument = one_argument( argument, arg1 );
 
-    if ( !str_cmp( arg1, "create" ) )
-    {
+	if ( !str_cmp( arg1, "create" ) )
+	{
 	if ( IS_NULLSTR(arg1) )
 	{
-	    send_to_char( "Syntax:  edit know create [keywords]\n\r", ch );
-	    send_to_char( "     OR  edit bg create [keywords]\n\r", ch );
-	    return;
+		send_to_char( "Syntax:  edit know create [keywords]\n\r", ch );
+		send_to_char( "     OR  edit bg create [keywords]\n\r", ch );
+		return;
 	}
 
-	    if(type == NOTE_KNOWLEDGE)
-	    {
+		if(type == NOTE_KNOWLEDGE)
+		{
 		if ( kedit_create( ch, argument ) )
-		    ch->desc->editor = ED_KNOW;
-	    }
-	    else if(type == NOTE_BACKGROUND)
-	    {
+			ch->desc->editor = ED_KNOW;
+		}
+		else if(type == NOTE_BACKGROUND)
+		{
 		if ( bedit_create( ch, argument ) )
-		    ch->desc->editor = ED_BG;
-	    }
+			ch->desc->editor = ED_BG;
+		}
 	return;
-    }
-    else if(arg1[0] !='\0')
-    {
+	}
+	else if(arg1[0] !='\0')
+	{
 	
 	if ( (pNote = get_kbg( arg1, type )) == NULL )
 	{
-	    if(type == NOTE_KNOWLEDGE)
-	    send_to_char( "Knowledge:  That knowledge does not exist.\n\r", ch );
-	    else if(type == NOTE_BACKGROUND)
-	    send_to_char( "Background: That background does not exist.\n\r", ch );
-	    return;
+		if(type == NOTE_KNOWLEDGE)
+		send_to_char( "Knowledge:  That knowledge does not exist.\n\r", ch );
+		else if(type == NOTE_BACKGROUND)
+		send_to_char( "Background: That background does not exist.\n\r", ch );
+		return;
 	}
 
 	ch->desc->pEdit = (void *)pNote;
 	if(type == NOTE_KNOWLEDGE)
-	    ch->desc->editor = ED_KNOW;
+		ch->desc->editor = ED_KNOW;
 	else if(type == NOTE_BACKGROUND)
-	    ch->desc->editor = ED_BG;
+		ch->desc->editor = ED_BG;
 	return;
-    }
+	}
 
-    if(type == NOTE_KNOWLEDGE)
+	if(type == NOTE_KNOWLEDGE)
 	send_to_char( "Knowledge:  There is no default knowledge to edit.\n\r(Use know create to create a new knowledge.)\n\r", ch );
-    else if(type == NOTE_BACKGROUND)
+	else if(type == NOTE_BACKGROUND)
 	send_to_char( "Background: There is no default background to edit.\n\r(Use bg create to create a new background.)\n\r", ch );
-    return;
+	return;
 }
 
 
 void display_resets( CHAR_DATA *ch )
 {
-    ROOM_INDEX_DATA	*pRoom;
-    RESET_DATA		*pReset;
-    MOB_INDEX_DATA	*pMob = NULL;
-    char 		final [ MSL ]={'\0'};
-    int 		iReset = 0;
+	ROOM_INDEX_DATA	*pRoom;
+	RESET_DATA		*pReset;
+	MOB_INDEX_DATA	*pMob = NULL;
+	char 		final [ MSL ]={'\0'};
+	int 		iReset = 0;
 
-    EDIT_ROOM(ch, pRoom);
-    final[0]  = '\0';
-    
-    send_to_char(" No.   Loads   Description       Location         Vnum   Mx Mn Description\n\r", ch);
-    send_to_char("==== ======== ============= =================== ======== ===== ===========\n\r", ch);
+	EDIT_ROOM(ch, pRoom);
+	
+	send_to_char(" No.   Loads   Description       Location         Vnum   Mx Mn Description\n\r", ch);
+	send_to_char("==== ======== ============= =================== ======== ===== ===========\n\r", ch);
 
-    for ( pReset = pRoom->reset_first; pReset; pReset = pReset->next )
-    {
+	for ( pReset = pRoom->reset_first; pReset; pReset = pReset->next )
+	{
 	OBJ_INDEX_DATA  *pObj;
 	MOB_INDEX_DATA  *pMobIndex;
 	OBJ_INDEX_DATA  *pObjIndex;
@@ -2338,95 +2337,95 @@ void display_resets( CHAR_DATA *ch )
 	switch ( pReset->command )
 	{
 	default:
-	    strncat( final, Format("Bad reset command: %c.", pReset->command), sizeof(final) );
-	    break;
+		strncat( final, Format("Bad reset command: %c.", pReset->command), sizeof(final) );
+		break;
 
 	case 'M':
-	    if ( !( pMobIndex = get_mob_index( pReset->arg1 ) ) )
-	    {
-                strncat( final, Format("Load Mobile - Bad Mob %d\n\r", pReset->arg1), sizeof(final) );
-                continue;
-	    }
+		if ( !( pMobIndex = get_mob_index( pReset->arg1 ) ) )
+		{
+				strncat( final, Format("Load Mobile - Bad Mob %d\n\r", pReset->arg1), sizeof(final) );
+				continue;
+		}
 
-	    if ( !( pRoomIndex = get_room_index( pReset->arg3 ) ) )
-	    {
-                strncat( final, Format("Load Mobile - Bad Room %d\n\r", pReset->arg3), sizeof(final) );
-                continue;
-	    }
+		if ( !( pRoomIndex = get_room_index( pReset->arg3 ) ) )
+		{
+				strncat( final, Format("Load Mobile - Bad Room %d\n\r", pReset->arg3), sizeof(final) );
+				continue;
+		}
 
-            pMob = pMobIndex;
-            strncat( final, Format("M[%5d] %-13.13s in room             R[%5d] %2d-%2d %-15.15s\n\r",
-                       pReset->arg1, pMob->short_descr, pReset->arg3, pReset->arg2, pReset->arg4, pRoomIndex->name), sizeof(final) );
+			pMob = pMobIndex;
+			strncat( final, Format("M[%5d] %-13.13s in room             R[%5d] %2d-%2d %-15.15s\n\r",
+					   pReset->arg1, pMob->short_descr, pReset->arg3, pReset->arg2, pReset->arg4, pRoomIndex->name), sizeof(final) );
 
-	    break;
+		break;
 
 	case 'O':
-	    if ( !( pObjIndex = get_obj_index( pReset->arg1 ) ) )
-	    {
-                strncat( final, Format("Load Object - Bad Object %d\n\r", pReset->arg1), sizeof(final) );
-                continue;
-	    }
+		if ( !( pObjIndex = get_obj_index( pReset->arg1 ) ) )
+		{
+				strncat( final, Format("Load Object - Bad Object %d\n\r", pReset->arg1), sizeof(final) );
+				continue;
+		}
 
-            pObj       = pObjIndex;
+			pObj       = pObjIndex;
 
-	    if ( !( pRoomIndex = get_room_index( pReset->arg3 ) ) )
-	    {
-                strncat( final, Format("Load Object - Bad Room %d\n\r", pReset->arg3), sizeof(final) );
-                continue;
-	    }
+		if ( !( pRoomIndex = get_room_index( pReset->arg3 ) ) )
+		{
+				strncat( final, Format("Load Object - Bad Room %d\n\r", pReset->arg3), sizeof(final) );
+				continue;
+		}
 
-            strncat( final, Format("O[%5d] %-13.13s in room             R[%5d]       %-15.15s\n\r",
-                          pReset->arg1, pObj->short_descr, pReset->arg3, pRoomIndex->name), sizeof(final) );
+			strncat( final, Format("O[%5d] %-13.13s in room             R[%5d]       %-15.15s\n\r",
+						  pReset->arg1, pObj->short_descr, pReset->arg3, pRoomIndex->name), sizeof(final) );
 
-	    break;
+		break;
 
 	case 'P':
-	    if ( !( pObjIndex = get_obj_index( pReset->arg1 ) ) )
-	    {
-                strncat( final, Format("Put Object - Bad Object %d\n\r", pReset->arg1), sizeof(final) );
-                continue;
-	    }
+		if ( !( pObjIndex = get_obj_index( pReset->arg1 ) ) )
+		{
+				strncat( final, Format("Put Object - Bad Object %d\n\r", pReset->arg1), sizeof(final) );
+				continue;
+		}
 
-            pObj       = pObjIndex;
+			pObj       = pObjIndex;
 
-	    if ( !( pObjToIndex = get_obj_index( pReset->arg3 ) ) )
-	    {
-                strncat( final, Format("Put Object - Bad To Object %d\n\r", pReset->arg3), sizeof(final) );
-                continue;
-	    }
+		if ( !( pObjToIndex = get_obj_index( pReset->arg3 ) ) )
+		{
+				strncat( final, Format("Put Object - Bad To Object %d\n\r", pReset->arg3), sizeof(final) );
+				continue;
+		}
 
-	    strncat( final, Format("O[%5d] %-13.13s inside              O[%5d] %2d-%2d %-15.15s\n\r",
-	    		pReset->arg1, pObj->short_descr, pReset->arg3, pReset->arg2, pReset->arg4, pObjToIndex->short_descr), sizeof(final) );
+		strncat( final, Format("O[%5d] %-13.13s inside              O[%5d] %2d-%2d %-15.15s\n\r",
+				pReset->arg1, pObj->short_descr, pReset->arg3, pReset->arg2, pReset->arg4, pObjToIndex->short_descr), sizeof(final) );
 
-	    break;
+		break;
 
 	case 'G':
 	case 'E':
-	    if ( !( pObjIndex = get_obj_index( pReset->arg1 ) ) )
-	    {
-                strncat( final, Format("Give/Equip Object - Bad Object %d\n\r", pReset->arg1), sizeof(final) );
-                continue;
-	    }
+		if ( !( pObjIndex = get_obj_index( pReset->arg1 ) ) )
+		{
+				strncat( final, Format("Give/Equip Object - Bad Object %d\n\r", pReset->arg1), sizeof(final) );
+				continue;
+		}
 
-            pObj       = pObjIndex;
+			pObj       = pObjIndex;
 
-	    if ( !pMob )
-	    {
-                strncat( final, Format("Give/Equip Object - No Previous Mobile\n\r"), sizeof(final) );
-                break;
-	    }
+		if ( !pMob )
+		{
+				strncat( final, Format("Give/Equip Object - No Previous Mobile\n\r"), sizeof(final) );
+				break;
+		}
 
-	    if ( pMob->pShop )
-	    {
-	    	send_to_char(Format("O[%5d] %-13.13s in the inventory of S[%5d]       %-15.15s\n\r",
-	    			pReset->arg1, pObj->short_descr, pMob->vnum, pMob->short_descr), ch);
-	    }
-	    else
-	    strncat( final, Format("O[%5d] %-13.13s %-19.19s M[%5d]       %-15.15s\n\r",
-	    			pReset->arg1, pObj->short_descr, (pReset->command == 'G') ? flag_string( wear_loc_strings, WEAR_NONE ) : flag_string( wear_loc_strings, pReset->arg3 ),
-	    					pMob->vnum, pMob->short_descr), sizeof(final) );
+		if ( pMob->pShop )
+		{
+			send_to_char(Format("O[%5d] %-13.13s in the inventory of S[%5d]       %-15.15s\n\r",
+					pReset->arg1, pObj->short_descr, pMob->vnum, pMob->short_descr), ch);
+		}
+		else
+		strncat( final, Format("O[%5d] %-13.13s %-19.19s M[%5d]       %-15.15s\n\r",
+					pReset->arg1, pObj->short_descr, (pReset->command == 'G') ? flag_string( wear_loc_strings, WEAR_NONE ) : flag_string( wear_loc_strings, pReset->arg3 ),
+							pMob->vnum, pMob->short_descr), sizeof(final) );
 
-	    break;
+		break;
 
 	/*
 	 * Doors are set in rs_flags don't need to be displayed.
@@ -2454,9 +2453,9 @@ void display_resets( CHAR_DATA *ch )
 		break;
 	}
 	send_to_char( final, ch );
-    }
+	}
 
-    return;
+	return;
 }
 
 
@@ -2468,40 +2467,40 @@ void display_resets( CHAR_DATA *ch )
  ****************************************************************************/
 void add_reset( ROOM_INDEX_DATA *room, RESET_DATA *pReset, int index )
 {
-    RESET_DATA *reset;
-    int iReset = 0;
+	RESET_DATA *reset;
+	int iReset = 0;
 
-    if ( !room->reset_first )
-    {
+	if ( !room->reset_first )
+	{
 	room->reset_first	= pReset;
 	room->reset_last	= pReset;
 	pReset->next		= NULL;
 	return;
-    }
+	}
 
-    index--;
+	index--;
 
-    if ( index == 0 )	/* First slot (1) selected. */
-    {
+	if ( index == 0 )	/* First slot (1) selected. */
+	{
 	pReset->next = room->reset_first;
 	room->reset_first = pReset;
 	return;
-    }
+	}
 
-    /*
-     * If negative slot( <= 0 selected) then this will find the last.
-     */
-    for ( reset = room->reset_first; reset->next; reset = reset->next )
-    {
+	/*
+	 * If negative slot( <= 0 selected) then this will find the last.
+	 */
+	for ( reset = room->reset_first; reset->next; reset = reset->next )
+	{
 	if ( ++iReset == index )
-	    break;
-    }
+		break;
+	}
 
-    pReset->next	= reset->next;
-    reset->next		= pReset;
-    if ( !pReset->next )
+	pReset->next	= reset->next;
+	reset->next		= pReset;
+	if ( !pReset->next )
 	room->reset_last = pReset;
-    return;
+	return;
 }
 
 /*
@@ -2510,68 +2509,68 @@ void add_reset( ROOM_INDEX_DATA *room, RESET_DATA *pReset, int index )
  */
 bool mob_reset_before( ROOM_INDEX_DATA *room, int num )
 {
-RESET_DATA *pr;
-int tag = 1;
+	RESET_DATA *pr;
+	int tag = 1;
 
-    for(pr = room->reset_first;tag < num;pr = pr->next)
-    {
-	if(pr->command == 'M')
-	    return TRUE;
-	tag++;
-    }
+	for(pr = room->reset_first;tag < num;pr = pr->next)
+	{
+		if(pr->command == 'M')
+			return TRUE;
+		tag++;
+	}
 
-    return FALSE;
+	return FALSE;
 }
 
 
 void do_resets( CHAR_DATA *ch, char *argument )
 {
-    char arg1[MAX_INPUT_LENGTH]={'\0'};
-    char arg2[MAX_INPUT_LENGTH]={'\0'};
-    char arg3[MAX_INPUT_LENGTH]={'\0'};
-    char arg4[MAX_INPUT_LENGTH]={'\0'};
-    char arg5[MAX_INPUT_LENGTH]={'\0'};
-    char arg6[MAX_INPUT_LENGTH]={'\0'};
-    char arg7[MAX_INPUT_LENGTH]={'\0'};
-    RESET_DATA *pReset = NULL;
+	char arg1[MIL]={'\0'};
+	char arg2[MIL]={'\0'};
+	char arg3[MIL]={'\0'};
+	char arg4[MIL]={'\0'};
+	char arg5[MIL]={'\0'};
+	char arg6[MIL]={'\0'};
+	char arg7[MIL]={'\0'};
+	RESET_DATA *pReset = NULL;
 
-    argument = one_argument( argument, arg1 );
-    argument = one_argument( argument, arg2 );
-    argument = one_argument( argument, arg3 );
-    argument = one_argument( argument, arg4 );
-    argument = one_argument( argument, arg5 );
-    argument = one_argument( argument, arg6 );
-    argument = one_argument( argument, arg7 );
+	argument = one_argument( argument, arg1 );
+	argument = one_argument( argument, arg2 );
+	argument = one_argument( argument, arg3 );
+	argument = one_argument( argument, arg4 );
+	argument = one_argument( argument, arg5 );
+	argument = one_argument( argument, arg6 );
+	argument = one_argument( argument, arg7 );
 
-    if ( !IS_BUILDER( ch, ch->in_room->area ) )
-    {
+	if ( !IS_BUILDER( ch, ch->in_room->area ) )
+	{
 	send_to_char( "Resets: Invalid security for editing this area.\n\r", ch );
 	return;
-    }
+	}
 
-    /*
-     * Display resets in current room.
-     * -------------------------------
-     */
-    if ( IS_NULLSTR(arg1) )
-    {
+	/*
+	 * Display resets in current room.
+	 * -------------------------------
+	 */
+	if ( IS_NULLSTR(arg1) )
+	{
 	if ( ch->in_room->reset_first )
 	{
-	    send_to_char( "Resets: M = mobile, R = room, O = object, "
+		send_to_char( "Resets: M = mobile, R = room, O = object, "
 		"P = pet, S = shopkeeper\n\r", ch );
-	    display_resets( ch );
+		display_resets( ch );
 	}
 	else
-	    send_to_char( "No resets in this room.\n\r", ch );
-    }
+		send_to_char( "No resets in this room.\n\r", ch );
+	}
 
 
-    /*
-     * Take index number and search for commands.
-     * ------------------------------------------
-     */
-    if ( is_number( arg1 ) )
-    {
+	/*
+	 * Take index number and search for commands.
+	 * ------------------------------------------
+	 */
+	if ( is_number( arg1 ) )
+	{
 	ROOM_INDEX_DATA *pRoom = ch->in_room;
 
 	/*
@@ -2580,23 +2579,23 @@ void do_resets( CHAR_DATA *ch, char *argument )
 	 */
 	if ( !str_cmp( arg2, "delete" ) )
 	{
-	    int insert_loc = atoi( arg1 );
+		int insert_loc = atoi( arg1 );
 
-	    if ( !ch->in_room->reset_first )
-	    {
+		if ( !ch->in_room->reset_first )
+		{
 		send_to_char( "No resets in this area.\n\r", ch );
 		return;
-	    }
+		}
 
-	    if ( insert_loc-1 <= 0 )
-	    {
+		if ( insert_loc-1 <= 0 )
+		{
 		pReset = pRoom->reset_first;
 		pRoom->reset_first = pRoom->reset_first->next;
 		if ( !pRoom->reset_first )
-		    pRoom->reset_last = NULL;
-	    }
-	    else
-	    {
+			pRoom->reset_last = NULL;
+		}
+		else
+		{
 		int iReset = 0;
 		RESET_DATA *prev = NULL;
 
@@ -2604,29 +2603,29 @@ void do_resets( CHAR_DATA *ch, char *argument )
 		  pReset;
 		  pReset = pReset->next )
 		{
-		    if ( ++iReset == insert_loc )
+			if ( ++iReset == insert_loc )
 			break;
-		    prev = pReset;
+			prev = pReset;
 		}
 
 		if ( !pReset )
 		{
-		    send_to_char( "Reset not found.\n\r", ch );
-		    return;
+			send_to_char( "Reset not found.\n\r", ch );
+			return;
 		}
 
 		if ( prev )
-		    prev->next = prev->next->next;
+			prev->next = prev->next->next;
 		else
-		    pRoom->reset_first = pRoom->reset_first->next;
+			pRoom->reset_first = pRoom->reset_first->next;
 
 		for ( pRoom->reset_last = pRoom->reset_first;
 		  pRoom->reset_last->next;
 		  pRoom->reset_last = pRoom->reset_last->next );
-	    }
+		}
 
-	    free_reset_data( pReset );
-	    send_to_char( "Reset deleted.\n\r", ch );
+		free_reset_data( pReset );
+		send_to_char( "Reset deleted.\n\r", ch );
 	}
 	else
 	/*
@@ -2636,31 +2635,31 @@ void do_resets( CHAR_DATA *ch, char *argument )
 	if ( (!str_cmp( arg2, "mob" ) && is_number( arg3 ))
 	  || (!str_cmp( arg2, "obj" ) && is_number( arg3 )) )
 	{
-	    /*
-	     * Check for Mobile reset.
-	     * -----------------------
-	     */
-	    if ( !str_cmp( arg2, "mob" ) )
-	    {
+		/*
+		 * Check for Mobile reset.
+		 * -----------------------
+		 */
+		if ( !str_cmp( arg2, "mob" ) )
+		{
 		pReset = new_reset_data();
 		pReset->command = 'M';
 		if (get_mob_index( is_number(arg3) ? atoi( arg3 ) : 1 ) == NULL)
 		  {
-		    send_to_char("That mob does not exist.\n\r",ch);
-		    return;
+			send_to_char("That mob does not exist.\n\r",ch);
+			return;
 		  }
 		pReset->arg1    = atoi( arg3 );
 		pReset->arg2    = is_number( arg4 ) ? atoi( arg4 ) : 1; /* Max # */
 		pReset->arg3    = ch->in_room->vnum;
 		pReset->arg4	= is_number( arg5 ) ? atoi( arg5 ) : 1; /* Min # */
-	    }
-	    else
-	    /*
-	     * Check for Object reset.
-	     * -----------------------
-	     */
-	    if ( !str_cmp( arg2, "obj" ) )
-	    {
+		}
+		else
+		/*
+		 * Check for Object reset.
+		 * -----------------------
+		 */
+		if ( !str_cmp( arg2, "obj" ) )
+		{
 		pReset = new_reset_data();
 		pReset->arg1    = atoi( arg3 );
 		/*
@@ -2669,23 +2668,23 @@ void do_resets( CHAR_DATA *ch, char *argument )
 		 */
 		if ( !str_prefix( arg4, "inside" ) )
 		{
-		    OBJ_INDEX_DATA *temp;
-		    pReset->command = 'P';
-		    pReset->arg2    = 0;
-		    temp = get_obj_index(is_number(arg5)? atoi(arg5) : 1 );
-		    if (temp == NULL)
-		    {
+			OBJ_INDEX_DATA *temp;
+			pReset->command = 'P';
+			pReset->arg2    = 0;
+			temp = get_obj_index(is_number(arg5)? atoi(arg5) : 1 );
+			if (temp == NULL)
+			{
 			send_to_char("Unable to locate object 2.\n\r", ch);
 			return;
-		    }
-		    if (temp->item_type != ITEM_CONTAINER)
-		    {
+			}
+			if (temp->item_type != ITEM_CONTAINER)
+			{
 			send_to_char( "Object 2 is not a container\n\r", ch);
 			return;
-		    }
-		    pReset->arg2    = is_number( arg6 ) ? atoi( arg6 ) : 1;
-		    pReset->arg3    = is_number( arg5 ) ? atoi( arg5 ) : 1;
-		    pReset->arg4    = is_number( arg7 ) ? atoi( arg7 ) : 1;
+			}
+			pReset->arg2    = is_number( arg6 ) ? atoi( arg6 ) : 1;
+			pReset->arg3    = is_number( arg5 ) ? atoi( arg5 ) : 1;
+			pReset->arg4    = is_number( arg7 ) ? atoi( arg7 ) : 1;
 		}
 		else
 		/*
@@ -2694,17 +2693,17 @@ void do_resets( CHAR_DATA *ch, char *argument )
 		 */
 		if ( !str_cmp( arg4, "room" ) )
 		{
-		    pReset           = new_reset_data();
-		    pReset->command  = 'O';
-		    if (get_obj_index(atoi(arg3)) == NULL)
-		      {
-		         send_to_char( "That vnum does not exist.\n\r",ch);
-		         return;
-		      }
-		    pReset->arg1     = atoi ( arg3 );
-		    pReset->arg2    = is_number( arg5 ) ? atoi( arg6 ) : 1;
-		    pReset->arg3     = ch->in_room->vnum;
-		    pReset->arg4    = is_number( arg6 ) ? atoi( arg6 ) : 1;
+			pReset           = new_reset_data();
+			pReset->command  = 'O';
+			if (get_obj_index(atoi(arg3)) == NULL)
+			  {
+				 send_to_char( "That vnum does not exist.\n\r",ch);
+				 return;
+			  }
+			pReset->arg1     = atoi ( arg3 );
+			pReset->arg2    = is_number( arg5 ) ? atoi( arg6 ) : 1;
+			pReset->arg3     = ch->in_room->vnum;
+			pReset->arg4    = is_number( arg6 ) ? atoi( arg6 ) : 1;
 		}
 		else
 		/*
@@ -2714,19 +2713,19 @@ void do_resets( CHAR_DATA *ch, char *argument )
 		{
 		  if ( flag_value( wear_loc_flags, arg4 ) == NO_FLAG )
 		  {
-		    send_to_char( "Resets: '? wear-loc'\n\r", ch );
-		    return;
+			send_to_char( "Resets: '? wear-loc'\n\r", ch );
+			return;
 		  }
 		  if( !mob_reset_before(ch->in_room, atoi(arg1)) )
 		  {
-		    send_to_char("You must have a mob reset BEFORE an object can be given to one.\n\r", ch);
-		    return;
+			send_to_char("You must have a mob reset BEFORE an object can be given to one.\n\r", ch);
+			return;
 		  }
 		  pReset = new_reset_data();
 		  if (get_obj_index(atoi(arg3)) == NULL)
 		  {
-		    send_to_char( "That vnum does not exist.\n\r",ch);
-		    return;
+			send_to_char( "That vnum does not exist.\n\r",ch);
+			return;
 		  }
 		  pReset->arg1 = atoi(arg3);
 		  pReset->arg3 = flag_value( wear_loc_flags, arg4 );
@@ -2735,11 +2734,11 @@ void do_resets( CHAR_DATA *ch, char *argument )
 		  else
 			pReset->command = 'E';
 		}
-	    }
+		}
 
-	    add_reset( ch->in_room, pReset, atoi( arg1 ) );
-	    SET_BIT( ch->in_room->area->area_flags, AREA_CHANGED );
-	    send_to_char( "Reset added.\n\r", ch );
+		add_reset( ch->in_room, pReset, atoi( arg1 ) );
+		SET_BIT( ch->in_room->area->area_flags, AREA_CHANGED );
+		send_to_char( "Reset added.\n\r", ch );
 	}
 	else
 	{
@@ -2749,9 +2748,9 @@ void do_resets( CHAR_DATA *ch, char *argument )
 		send_to_char( "        RESET <number> MOB <vnum> [max # area] [max # room]\n\r", ch );
 		send_to_char( "        RESET <number> DELETE\n\r", ch );
 	}
-    }
+	}
 
-    return;
+	return;
 }
 
 
@@ -2760,79 +2759,79 @@ void do_resets( CHAR_DATA *ch, char *argument )
  */
 void do_gotoarea( CHAR_DATA *ch, char *argument )
 {
-    ROOM_INDEX_DATA *location;
-    AREA_DATA *pArea;
-    CHAR_DATA *rch;
-    int count = 0;
-    int value;
+	ROOM_INDEX_DATA *location;
+	AREA_DATA *pArea;
+	CHAR_DATA *rch;
+	int count = 0;
+	int value = 0;
 
-    if ( IS_NULLSTR(argument) ||  !is_number( argument ) )
-    {
-        send_to_char( "agoto which area?\n\r", ch );
-        return;
-    }
+	if ( IS_NULLSTR(argument) ||  !is_number( argument ) )
+	{
+		send_to_char( "agoto which area?\n\r", ch );
+		return;
+	}
 
-    value = atoi( argument );
-    if ( !( pArea = get_area_data( value ) ) )
-    {
-        send_to_char( "That area vnum does not exist.\n\r", ch );
-        return;
-    }
+	value = atoi( argument );
+	if ( !( pArea = get_area_data( value ) ) )
+	{
+		send_to_char( "That area vnum does not exist.\n\r", ch );
+		return;
+	}
 
-    if(!IS_BUILDER(ch, pArea))
-    {
+	if(!IS_BUILDER(ch, pArea))
+	{
 	send_to_char("That is not your area.\n\r", ch);
 	return;
-    }
+	}
 
-    value = pArea->min_vnum;
-    if ( ( location = get_room_index( value ) ) == NULL )
-    {
-        send_to_char( "No such location.\n\r", ch );
-        return;
-    }
+	value = pArea->min_vnum;
+	if ( ( location = get_room_index( value ) ) == NULL )
+	{
+		send_to_char( "No such location.\n\r", ch );
+		return;
+	}
 
-    count = 0;
-    for(rch = location->people; rch != NULL; rch = rch->next_in_room)
-        count++;
+	count = 0;
+	for(rch = location->people; rch != NULL; rch = rch->next_in_room)
+		count++;
 
-    if (!is_room_owner(ch,location) && room_is_private(location)
-    &&  (count > 1 || get_trust(ch) < MAX_LEVEL))
-    {
-        send_to_char( "That room is private right now.\n\r", ch );
-        return;
-    }
+	if (!is_room_owner(ch,location) && room_is_private(location)
+	&&  (count > 1 || get_trust(ch) < MAX_LEVEL))
+	{
+		send_to_char( "That room is private right now.\n\r", ch );
+		return;
+	}
 
-    if ( ch->fighting != NULL )
-        stop_fighting( ch, TRUE );
+	if ( ch->fighting != NULL )
+		stop_fighting( ch, TRUE );
 
-    for(rch = ch->in_room->people; rch != NULL; rch=rch->next_in_room)
-    {
-        if (get_trust(rch) >= ch->invis_level)
-        {
-            if (ch->pcdata != NULL && !IS_NULLSTR(ch->pcdata->bamfout))
-                act("$t",ch,ch->pcdata->bamfout,rch,TO_VICT, 0);
-            else
-                act("$n leaves in a swirling mist.", ch,NULL,rch,TO_VICT,0);
-        }
-    }
+	for(rch = ch->in_room->people; rch != NULL; rch=rch->next_in_room)
+	{
+		if (get_trust(rch) >= ch->invis_level)
+		{
+			if (ch->pcdata != NULL && !IS_NULLSTR(ch->pcdata->bamfout))
+				act("$t",ch,ch->pcdata->bamfout,rch,TO_VICT, 0);
+			else
+				act("$n leaves in a swirling mist.", ch,NULL,rch,TO_VICT,0);
+		}
+	}
 
-    char_from_room( ch );
-    char_to_room( ch, location );
+	char_from_room( ch );
+	char_to_room( ch, location );
 
-    for(rch = ch->in_room->people; rch != NULL; rch=rch->next_in_room)
-    {
-        if (get_trust(rch) >= ch->invis_level)
-        {
-            if (ch->pcdata != NULL && !IS_NULLSTR(ch->pcdata->bamfin))
-                act("$t",ch,ch->pcdata->bamfin,rch,TO_VICT,0);
-            else
-                act("$n appears in a swirling mist.", ch,NULL,rch,TO_VICT,0);
-        }
-    }
+	for(rch = ch->in_room->people; rch != NULL; rch=rch->next_in_room)
+	{
+		if (get_trust(rch) >= ch->invis_level)
+		{
+			if (ch->pcdata != NULL && !IS_NULLSTR(ch->pcdata->bamfin))
+				act("$t",ch,ch->pcdata->bamfin,rch,TO_VICT,0);
+			else
+				act("$n appears in a swirling mist.", ch,NULL,rch,TO_VICT,0);
+		}
+	}
 
-    do_look( ch, "auto" );
-    return;
+	do_look( ch, "auto" );
+	return;
 }
 
 
@@ -2843,8 +2842,8 @@ void do_gotoarea( CHAR_DATA *ch, char *argument )
  ****************************************************************************/
 void do_myalist( CHAR_DATA *ch, char *argument )
 {
-	char result [ MSL*2 ]={'\0'};	/* May need tweaking. */
 	AREA_DATA *pArea;
+	char result [ MSL*2 ]={'\0'};	/* May need tweaking. */
 
 	if(IS_NPC(ch))
 		return;
@@ -3005,8 +3004,8 @@ int count_reactions(REACT_DATA *r1)
  ****************************************************************************/
 void do_rslist( CHAR_DATA *ch, char *argument )
 {
-	char result [ MSL*2 ]={'\0'};	/* May need tweaking. */
 	REACT *pScript;
+	char result [ MSL*2 ]={'\0'};	/* May need tweaking. */
 	int i = 0;
 
 	send_to_char(Format("\n\r[%-27s] [%3s] (%3s) [%-27s] [%-7s]\n\r", "Persona", "Num", "Att", "Trigger", "Reacts"), ch);
@@ -3027,7 +3026,7 @@ void format_descriptions (AREA_DATA *pArea)
 	ROOM_INDEX_DATA *rm;
 	OBJ_INDEX_DATA *obj;
 	MOB_INDEX_DATA *mob;
-	int i;
+	int i = 0;
 
 	for(i = pArea->min_vnum; i <= pArea->max_vnum; i++)
 	{
@@ -3057,9 +3056,9 @@ void check_area(AREA_DATA *pArea, CHAR_DATA *ch)
 	OBJ_INDEX_DATA *obj;
 	MOB_INDEX_DATA *mob;
 	 */
-	int i,j;
+	int i = 0, j = 0;
 	char buf[MSL]={'\0'};
-	int Found;
+	int Found = FALSE;
 
 	for(i = pArea->min_vnum; i <= pArea->max_vnum; i++)
 	{
@@ -3187,7 +3186,7 @@ void do_area_checkup (CHAR_DATA *ch, char *argument)
 void available_room_vnums(CHAR_DATA *ch, AREA_DATA *pArea)
 {
 	ROOM_INDEX_DATA *rm;
-	int i, last_vnum, place = 0;
+	int i = 0, last_vnum = 0, place = 0;
 
 	last_vnum = pArea->min_vnum;
 	send_to_char("Room vnums available:\n\r", ch);
@@ -3234,7 +3233,7 @@ void available_room_vnums(CHAR_DATA *ch, AREA_DATA *pArea)
 void available_obj_vnums(CHAR_DATA *ch, AREA_DATA *pArea)
 {
 	OBJ_INDEX_DATA *obj;
-	int i, last_vnum, place = 0;
+	int i = 0, last_vnum = 0, place = 0;
 
 	last_vnum = pArea->min_vnum;
 	send_to_char("Object vnums available:\n\r", ch);
@@ -3280,7 +3279,7 @@ void available_obj_vnums(CHAR_DATA *ch, AREA_DATA *pArea)
 void available_mob_vnums(CHAR_DATA *ch, AREA_DATA *pArea)
 {
 	MOB_INDEX_DATA *mob;
-	int i, last_vnum, place = 0;
+	int i = 0, last_vnum = 0, place = 0;
 
 	last_vnum = pArea->min_vnum;
 	send_to_char("Mobile vnums available:\n\r", ch);
@@ -3326,7 +3325,7 @@ void available_mob_vnums(CHAR_DATA *ch, AREA_DATA *pArea)
 void do_area_vnums (CHAR_DATA *ch, char *argument)
 {
 	AREA_DATA *pArea;
-	int j;
+	int j = 0;
 
 	if(ch->pcdata->security <= 0)
 	{
@@ -3401,7 +3400,7 @@ void do_area_vnums (CHAR_DATA *ch, char *argument)
 
 void do_myavnum (CHAR_DATA *ch, char *argument)
 {
-    do_function(ch, do_area_vnums, "my");
+	do_function(ch, do_area_vnums, "my");
 }
 
 
@@ -3439,7 +3438,7 @@ int count_spool(CHAR_DATA *ch, NOTE_DATA *spool)
 
 void do_unread(CHAR_DATA *ch)
 {
-	int count;
+	int count = 0;
 	bool found = FALSE;
 
 	if (IS_NPC(ch))
@@ -3457,14 +3456,14 @@ void do_unread(CHAR_DATA *ch)
 
 void do_note(CHAR_DATA *ch,char *argument)
 {
-    parse_note(ch,argument,NOTE_NOTE);
+	parse_note(ch,argument,NOTE_NOTE);
 }
 
 void do_bg(CHAR_DATA *ch,char *argument)
 {
-	char arg1[MAX_INPUT_LENGTH]={'\0'};
-	char *fullarg;
 	NOTE_DATA *pNote;
+	char arg1[MIL]={'\0'};
+	char *fullarg;
 
 	fullarg = str_dup(argument);
 	argument = one_argument( argument, arg1 );
@@ -3520,9 +3519,9 @@ void do_bg(CHAR_DATA *ch,char *argument)
 
 void do_know(CHAR_DATA *ch,char *argument)
 {
-	char arg1[MAX_INPUT_LENGTH]={'\0'};
-	char *fullarg;
 	NOTE_DATA *pNote;
+	char arg1[MIL]={'\0'};
+	char *fullarg;
 
 	fullarg = str_dup(argument);
 	argument = one_argument( argument, arg1 );
@@ -3584,8 +3583,8 @@ void do_know(CHAR_DATA *ch,char *argument)
 void save_notes(int type)
 {
 	FILE *fp;
-	char *name;
 	NOTE_DATA *pnote;
+	char *name;
 
 	switch (type)
 	{
@@ -3701,36 +3700,36 @@ void load_thread(char *name, NOTE_DATA **list, int type, time_t free_time)
 		pnote->sender   = fread_string( fp );
 
 		if ( str_cmp( fread_word( fp ), "date" ) )
-                {
-                        free_note(pnote);
-                        break;
-                }
+				{
+						free_note(pnote);
+						break;
+				}
 		pnote->date     = fread_string( fp );
 
 		if ( str_cmp( fread_word( fp ), "stamp" ) )
-                {
-                        free_note(pnote);
-                        break;
-                }
+				{
+						free_note(pnote);
+						break;
+				}
 		pnote->date_stamp = fread_number(fp);
 
 		tmp = fread_word(fp);
 		if ( str_cmp( tmp, "to" )
 				&& str_cmp( tmp, "keyword" )
 				&& str_cmp( tmp, "categ" ) )
-                {
-                        free_note(pnote);
-                        break;
-                }
+				{
+						free_note(pnote);
+						break;
+				}
 		pnote->to_list  = fread_string( fp );
 
 		tmp = fread_word(fp);
 		if ( str_cmp( tmp, "subject" )
 				&& str_cmp( tmp, "diff" ) )
-                {
-                        free_note(pnote);
-                        break;
-                }
+				{
+						free_note(pnote);
+						break;
+				}
 		pnote->subject  = fread_string( fp );
 
 		if ( str_cmp( fread_word( fp ), "success" ) )
@@ -3741,10 +3740,10 @@ void load_thread(char *name, NOTE_DATA **list, int type, time_t free_time)
 			PURGE_DATA(s);
 		}
 		if ( str_cmp( fread_word( fp ), "text" ) )
-                {
-                        free_note(pnote);
-                        break;
-                }
+				{
+						free_note(pnote);
+						break;
+				}
 		pnote->text     = fread_string( fp );
 
 		if (type == NOTE_NOTE && free_time
@@ -3781,9 +3780,9 @@ void load_thread(char *name, NOTE_DATA **list, int type, time_t free_time)
 void append_note(NOTE_DATA *pnote)
 {
 	FILE *fp;
-	char *name;
 	NOTE_DATA **list;
 	NOTE_DATA *last;
+	char *name;
 
 	switch(pnote->type)
 	{
@@ -3894,174 +3893,174 @@ bool is_note_to( CHAR_DATA *ch, NOTE_DATA *pnote )
 
 void note_attach( CHAR_DATA *ch, int type )
 {
-    NOTE_DATA *pnote;
+	NOTE_DATA *pnote;
 
-    if ( ch->pnote != NULL )
+	if ( ch->pnote != NULL )
 	return;
 
-    pnote = new_note();
+	pnote = new_note();
 
-    pnote->next		= NULL;
-    PURGE_DATA( pnote->sender );
-    PURGE_DATA( pnote->date );
-    PURGE_DATA( pnote->to_list );
-    PURGE_DATA( pnote->subject );
-    PURGE_DATA( pnote->text );
-    pnote->sender	= str_dup( ch->name );
-    pnote->date		= NULL;
-    pnote->to_list	= NULL;
-    pnote->subject	= NULL;
-    pnote->text		= NULL;
-    pnote->type		= type;
-    if(type == NOTE_ARTICLE)
+	pnote->next		= NULL;
+	PURGE_DATA( pnote->sender );
+	PURGE_DATA( pnote->date );
+	PURGE_DATA( pnote->to_list );
+	PURGE_DATA( pnote->subject );
+	PURGE_DATA( pnote->text );
+	pnote->sender	= str_dup( ch->name );
+	pnote->date		= NULL;
+	pnote->to_list	= NULL;
+	pnote->subject	= NULL;
+	pnote->text		= NULL;
+	pnote->type		= type;
+	if(type == NOTE_ARTICLE)
 	pnote->successes = 0;
-    ch->pnote		= pnote;
-    return;
+	ch->pnote		= pnote;
+	return;
 }
 
 
 
 void note_remove( CHAR_DATA *ch, NOTE_DATA *pnote, bool bdelete)
 {
-    char to_new[MAX_INPUT_LENGTH]={'\0'};
-    char to_one[MAX_INPUT_LENGTH]={'\0'};
-    NOTE_DATA *prev;
-    NOTE_DATA **list;
-    char *to_list;
+	NOTE_DATA *prev;
+	NOTE_DATA **list;
+	char to_new[MIL]={'\0'};
+	char to_one[MIL]={'\0'};
+	char *to_list;
 
-    if (!bdelete)
-    {
+	if (!bdelete)
+	{
 	/* make a new list */
-        to_new[0]	= '\0';
-        to_list	= pnote->to_list;
-        while ( *to_list != '\0' )
-        {
-    	    to_list	= one_argument( to_list, to_one );
-    	    if ( !IS_NULLSTR(to_one) && str_cmp( ch->name, to_one ) )
-	    {
-	        strncat( to_new, " ", sizeof(to_new) );
-	        strncat( to_new, to_one, sizeof(to_new) );
-	    }
-        }
-        /* Just a simple recipient removal? */
-       if ( str_cmp( ch->name, pnote->sender ) && !IS_NULLSTR(to_new) )
-       {
-    	   PURGE_DATA( pnote->to_list );
+		to_new[0]	= '\0';
+		to_list	= pnote->to_list;
+		while ( *to_list != '\0' )
+		{
+			to_list	= one_argument( to_list, to_one );
+			if ( !IS_NULLSTR(to_one) && str_cmp( ch->name, to_one ) )
+		{
+			strncat( to_new, " ", sizeof(to_new) );
+			strncat( to_new, to_one, sizeof(to_new) );
+		}
+		}
+		/* Just a simple recipient removal? */
+	   if ( str_cmp( ch->name, pnote->sender ) && !IS_NULLSTR(to_new) )
+	   {
+		   PURGE_DATA( pnote->to_list );
 	   pnote->to_list = str_dup( to_new + 1 );
 	   return;
-       }
-    }
-    /* nuke the whole note */
+	   }
+	}
+	/* nuke the whole note */
 
-    switch(pnote->type)
-    {
+	switch(pnote->type)
+	{
 	default:
-	    return;
+		return;
 	case NOTE_NOTE:
-	    list = &note_list;
-	    break;
+		list = &note_list;
+		break;
 	case NOTE_BACKGROUND:
-	    list = &bg_list;
-	    break;
+		list = &bg_list;
+		break;
 	case NOTE_KNOWLEDGE:
-	    list = &know_list;
-	    break;
+		list = &know_list;
+		break;
 	case NOTE_ARTICLE:
-	    list = &news_list;
-	    break;
-    }
+		list = &news_list;
+		break;
+	}
 
-    /*
-     * Remove note from linked list.
-     */
-    if ( pnote == *list )
-    {
+	/*
+	 * Remove note from linked list.
+	 */
+	if ( pnote == *list )
+	{
 	*list = pnote->next;
-    }
-    else
-    {
+	}
+	else
+	{
 	for ( prev = *list; prev != NULL; prev = prev->next )
 	{
-	    if ( prev->next == pnote )
+		if ( prev->next == pnote )
 		break;
 	}
 
 	if ( prev == NULL )
 	{
-	    log_string(LOG_BUG, "Note_remove: pnote not found.");
-	    return;
+		log_string(LOG_BUG, "Note_remove: pnote not found.");
+		return;
 	}
 
 	prev->next = pnote->next;
-    }
+	}
 
-    save_notes(pnote->type);
-    free_note(pnote);
-    return;
+	save_notes(pnote->type);
+	free_note(pnote);
+	return;
 }
 
 bool hide_note (CHAR_DATA *ch, NOTE_DATA *pnote)
 {
-    time_t last_read;
+	time_t last_read;
 
-    if (IS_NPC(ch))
+	if (IS_NPC(ch))
 	return TRUE;
 
-    switch (pnote->type)
-    {
+	switch (pnote->type)
+	{
 	default:
-	    return TRUE;
+		return TRUE;
 	case NOTE_NOTE:
-	    last_read = ch->pcdata->last_note;
-	    break;
+		last_read = ch->pcdata->last_note;
+		break;
 	case NOTE_BACKGROUND:
 	case NOTE_KNOWLEDGE:
-	    if(IS_ADMIN(ch))
-	    return FALSE;
-	    else
-	    return TRUE;
-    }
-    
-    if (pnote->date_stamp <= last_read)
+		if(IS_ADMIN(ch))
+		return FALSE;
+		else
+		return TRUE;
+	}
+	
+	if (pnote->date_stamp <= last_read)
 	return TRUE;
 
-    if (!str_cmp(ch->name,pnote->sender))
+	if (!str_cmp(ch->name,pnote->sender))
 	return TRUE;
 
-    if (!is_note_to(ch,pnote))
+	if (!is_note_to(ch,pnote))
 	return TRUE;
 
-    return FALSE;
+	return FALSE;
 }
 
 void update_read(CHAR_DATA *ch, NOTE_DATA *pnote)
 {
-    time_t stamp;
+	time_t stamp;
 
-    CheckChNPC(ch);
+	CheckChNPC(ch);
 
-    stamp = pnote->date_stamp;
+	stamp = pnote->date_stamp;
 
-    switch (pnote->type)
-    {
-        default:
-            return;
-        case NOTE_NOTE:
-	    ch->pcdata->last_note = UMAX(ch->pcdata->last_note,stamp);
-            break;
-    }
+	switch (pnote->type)
+	{
+		default:
+			return;
+		case NOTE_NOTE:
+		ch->pcdata->last_note = UMAX(ch->pcdata->last_note,stamp);
+			break;
+	}
 }
 
 void parse_note( CHAR_DATA *ch, char *argument, int type )
 {
-	char arg[MAX_INPUT_LENGTH]={'\0'};
-	char arg2[MAX_INPUT_LENGTH]={'\0'};
 	NOTE_DATA *pnote;
 	NOTE_DATA **list;
-	char *list_name;
+	DESCRIPTOR_DATA *d;
 	int vnum = 0;
 	int anum = 0;
-	DESCRIPTOR_DATA *d;
+	char arg[MIL]={'\0'};
+	char arg2[MIL]={'\0'};
+	char *list_name;
 
 	CheckChNPC(ch);
 
@@ -4170,28 +4169,28 @@ void parse_note( CHAR_DATA *ch, char *argument, int type )
 		return;
 	}
 
-    if ( !str_prefix( arg, "list" ) )
-    {
-    	vnum = 0;
+	if ( !str_prefix( arg, "list" ) )
+	{
+		vnum = 0;
 
-    	if(type ==NOTE_NOTE)
-    	{
-    		send_to_char( "\tWMessage | From            | To          | Subject Line\tn\n\r", ch );
-    		send_to_char( "\tW------------------------------------------------------\tn\n\r", ch );
-    	}
+		if(type ==NOTE_NOTE)
+		{
+			send_to_char( "\tWMessage | From            | To          | Subject Line\tn\n\r", ch );
+			send_to_char( "\tW------------------------------------------------------\tn\n\r", ch );
+		}
 
-    	if(type == NOTE_BACKGROUND || type == NOTE_KNOWLEDGE)
-    	{
-    		send_to_char( "\tW ID #   | Keywords\tn\n\r", ch);
-    		send_to_char( "\tW------------------------------------------------------\tn\n\r", ch );
-    	}
+		if(type == NOTE_BACKGROUND || type == NOTE_KNOWLEDGE)
+		{
+			send_to_char( "\tW ID #   | Keywords\tn\n\r", ch);
+			send_to_char( "\tW------------------------------------------------------\tn\n\r", ch );
+		}
 
-    	if(type == NOTE_ARTICLE)
-    	{
-    		send_to_char("\tWArticle | Author | Category | Subject\tn\n\r", ch);
-    		send_to_char( "\tW------------------------------------------------------\tn\n\r", ch );
+		if(type == NOTE_ARTICLE)
+		{
+			send_to_char("\tWArticle | Author | Category | Subject\tn\n\r", ch);
+			send_to_char( "\tW------------------------------------------------------\tn\n\r", ch );
 
-    	}
+		}
 
 	for ( pnote = *list; pnote != NULL; pnote = pnote->next )
 	{
@@ -4240,263 +4239,259 @@ void parse_note( CHAR_DATA *ch, char *argument, int type )
 		}
 	}
 	return;
-    }
+	}
 
-    if ( !str_prefix( arg, "suppression" ))
-    {
-    	if(type == NOTE_ARTICLE)
-    	{
-    		argument = one_argument(argument, arg2);
-    		if ( !is_number( argument ) || !is_number( arg2 )  )
-    		{
-    			send_to_char(
-    					"Which article's suppression are you trying to affect?\n\r",
-    					ch );
-    			send_to_char(
-    					"And what number of successes are you setting it to?\n\r", ch);
-    			send_to_char(
-    					"(Use 0 for unsuppressed)\n\r", ch);
-    			return;
-    		}
+	if ( !str_prefix( arg, "suppression" ))
+	{
+		if(type == NOTE_ARTICLE)
+		{
+			argument = one_argument(argument, arg2);
+			if ( !is_number( argument ) || !is_number( arg2 )  )
+			{
+				send_to_char(
+						"Which article's suppression are you trying to affect?\n\r",
+						ch );
+				send_to_char(
+						"And what number of successes are you setting it to?\n\r", ch);
+				send_to_char(
+						"(Use 0 for unsuppressed)\n\r", ch);
+				return;
+			}
 
-    		anum = atoi( arg2 );
+			anum = atoi( arg2 );
 
-    		vnum = 0;
-    		for ( pnote = *list; pnote != NULL; pnote = pnote->next )
-    		{
-    			if ( is_note_to( ch, pnote ) && ( vnum++ == anum ) )
-    			{
-    				pnote->successes = atoi(argument);
-    				save_notes(pnote->type);
-    				send_to_char("Suppression level set.\n\r", ch);
-    				return;
-    			}
-    		}
+			vnum = 0;
+			for ( pnote = *list; pnote != NULL; pnote = pnote->next )
+			{
+				if ( is_note_to( ch, pnote ) && ( vnum++ == anum ) )
+				{
+					pnote->successes = atoi(argument);
+					save_notes(pnote->type);
+					send_to_char("Suppression level set.\n\r", ch);
+					return;
+				}
+			}
 
-    		send_to_char("There aren't that many articles.\n\r",ch);
-    		return;
-    	}
-    }
+			send_to_char("There aren't that many articles.\n\r",ch);
+			return;
+		}
+	}
 
-    if ( !str_prefix( arg, "search" ) )
-    {
+	if ( !str_prefix( arg, "search" ) )
+	{
 	argument = one_argument(argument, arg2);
 	vnum = 0;
 	for ( pnote = *list; pnote != NULL; pnote = pnote->next )
 	{
-	    if ( is_note_to( ch, pnote ) )
-	    {
-	      if(((!str_cmp(arg2, "to")
+		if ( is_note_to( ch, pnote ) )
+		{
+		  if(((!str_cmp(arg2, "to")
 		|| !str_cmp(arg2, "keywords")
 		|| !str_cmp(arg2, "category"))
 		&& strstr(pnote->to_list, argument))
-	      || ((!str_cmp(arg2, "subject")
+		  || ((!str_cmp(arg2, "subject")
 		|| !str_cmp(arg2, "difficulty"))
 		&& strstr(pnote->subject, argument))
-	      || ((!str_cmp(arg2, "text")
+		  || ((!str_cmp(arg2, "text")
 		|| !str_cmp(arg2, "body")
 		|| !str_cmp(arg2, "contents"))
 		&& strstr(pnote->text, argument))
-	      || ((!str_cmp(arg2, "from")
+		  || ((!str_cmp(arg2, "from")
 		|| !str_cmp(arg2, "by")
 		|| !str_cmp(arg2, "sender")
 		|| !str_cmp(arg2, "author"))
 		&& !str_cmp(pnote->sender, argument))
-	      || (!str_cmp(arg2, "suppressed")
+		  || (!str_cmp(arg2, "suppressed")
 		&& type == NOTE_ARTICLE
 		&& pnote->successes))
-	      {
-	    	  if(type == NOTE_NOTE)
-	    	  {
-	    		  send_to_char( Format("[%3d%s] %s: %s\n\r", vnum, hide_note(ch,pnote) ? " " : "N", pnote->sender, pnote->subject), ch );
-	    	  }
-	    	  else if(type == NOTE_BACKGROUND || type == NOTE_KNOWLEDGE)
-	    	  {
-	    		  send_to_char( Format("[%3d%s] %s: %s\n\r", vnum, hide_note(ch,pnote) ? " " : "N", pnote->sender, pnote->to_list), ch );
-	    	  }
-	    	  else if(type == NOTE_ARTICLE)
-	    	  {
-	    		  send_to_char( Format("[%3d %s] %s: %s%s\n\r", vnum, pnote->sender, pnote->to_list, pnote->subject, pnote->successes ? " (\tYSuppressed\tn)" : ""), ch );
-	    	  }
-	      }
-	      vnum++;
-	    }
+		  {
+			  if(type == NOTE_NOTE)
+			  {
+				  send_to_char( Format("[%3d%s] %s: %s\n\r", vnum, hide_note(ch,pnote) ? " " : "N", pnote->sender, pnote->subject), ch );
+			  }
+			  else if(type == NOTE_BACKGROUND || type == NOTE_KNOWLEDGE)
+			  {
+				  send_to_char( Format("[%3d%s] %s: %s\n\r", vnum, hide_note(ch,pnote) ? " " : "N", pnote->sender, pnote->to_list), ch );
+			  }
+			  else if(type == NOTE_ARTICLE)
+			  {
+				  send_to_char( Format("[%3d %s] %s: %s%s\n\r", vnum, pnote->sender, pnote->to_list, pnote->subject, pnote->successes ? " (\tYSuppressed\tn)" : ""), ch );
+			  }
+		  }
+		  vnum++;
+		}
 	}
 	if (!vnum)
 	{
-	    switch(type)
-	    {
+		switch(type)
+		{
 		case NOTE_NOTE:	
-		    send_to_char("Search found no notes.\n\r",ch);
-		    break;
+			send_to_char("Search found no notes.\n\r",ch);
+			break;
 		case NOTE_BACKGROUND:
-		    if(IS_ADMIN(ch))
-		    send_to_char("Search found no background entries.\n\r",ch);
-		    else
-		    send_to_char("Huh?\n\r",ch);
-		    break;
+			if(IS_ADMIN(ch))
+			send_to_char("Search found no background entries.\n\r",ch);
+			else
+			send_to_char("Huh?\n\r",ch);
+			break;
 		case NOTE_KNOWLEDGE:
-		    if(IS_ADMIN(ch))
-		    send_to_char("Search found no knowledge entries.\n\r",ch);
-		    else
-		    send_to_char("Huh?\n\r",ch);
-		    break;
+			if(IS_ADMIN(ch))
+			send_to_char("Search found no knowledge entries.\n\r",ch);
+			else
+			send_to_char("Huh?\n\r",ch);
+			break;
 		case NOTE_ARTICLE:
-		    if(IS_ADMIN(ch))
-		    send_to_char("Search found no newspaper articles.\n\r",ch);
-		    else
-		    send_to_char("Huh?\n\r",ch);
-		    break;
-	    }
+			if(IS_ADMIN(ch))
+			send_to_char("Search found no newspaper articles.\n\r",ch);
+			else
+			send_to_char("Huh?\n\r",ch);
+			break;
+		}
 	}
 	return;
-    }
+	}
 
-    if ( !str_prefix( arg, "remove" ) )
-    {
-        if ( !is_number( argument ) )
-        {
-            send_to_char( "Remove which number?\n\r", ch );
-            return;
-        }
+	if ( !str_prefix( arg, "remove" ) )
+	{
+		if ( !is_number( argument ) )
+		{
+			send_to_char( "Remove which number?\n\r", ch );
+			return;
+		}
  
-        anum = atoi( argument );
-        vnum = 0;
-        for ( pnote = *list; pnote != NULL; pnote = pnote->next )
-        {
-            if ( is_note_to( ch, pnote ) && vnum++ == anum )
-            {
-                note_remove( ch, pnote, FALSE );
-                send_to_char( "Ok.\n\r", ch );
-                return;
-            }
-        }
+		anum = atoi( argument );
+		vnum = 0;
+		for ( pnote = *list; pnote != NULL; pnote = pnote->next )
+		{
+			if ( is_note_to( ch, pnote ) && vnum++ == anum )
+			{
+				note_remove( ch, pnote, FALSE );
+				send_to_char( "Ok.\n\r", ch );
+				return;
+			}
+		}
  
 	send_to_char(Format("There aren't that many %s.",list_name),ch);
-        return;
-    }
+		return;
+	}
  
-    if ( !str_prefix( arg, "delete" ) && get_trust(ch) >= MAX_LEVEL - 1)
-    {
-        if ( !is_number( argument ) )
-        {
-            send_to_char( "Note delete which number?\n\r", ch );
-            return;
-        }
+	if ( !str_prefix( arg, "delete" ) && get_trust(ch) >= MAX_LEVEL - 1)
+	{
+		if ( !is_number( argument ) )
+		{
+			send_to_char( "Note delete which number?\n\r", ch );
+			return;
+		}
  
-        anum = atoi( argument );
-        vnum = 0;
-        for ( pnote = *list; pnote != NULL; pnote = pnote->next )
-        {
-            if ( is_note_to( ch, pnote ) && vnum++ == anum )
-            {
-                note_remove( ch, pnote,TRUE );
-                send_to_char( "Ok.\n\r", ch );
-                return;
-            }
-        }
+		anum = atoi( argument );
+		vnum = 0;
+		for ( pnote = *list; pnote != NULL; pnote = pnote->next )
+		{
+			if ( is_note_to( ch, pnote ) && vnum++ == anum )
+			{
+				note_remove( ch, pnote,TRUE );
+				send_to_char( "Ok.\n\r", ch );
+				return;
+			}
+		}
 
- 	send_to_char(Format("There aren't that many %s.",list_name), ch);
-        return;
-    }
+	send_to_char(Format("There aren't that many %s.",list_name), ch);
+		return;
+	}
 
-    if ( !str_prefix( arg, "body" ) )
-    {
+	if ( !str_prefix( arg, "body" ) )
+	{
 	note_attach( ch,type );
 	if (ch->pnote->type != type)
 	{
-	    send_to_char(
-		"You already have a note, background, knowledge, or newspaper\n\r",ch);
-	    send_to_char("article in progress.\n\r",ch);
-	    return;
+		send_to_char("You already have a note, background, knowledge, or newspaper\n\r",ch);
+		send_to_char("article in progress.\n\r",ch);
+		return;
 	}
 
 	if(IS_NULLSTR(argument))
 	{
-	    string_append( ch, &ch->pnote->text );
-	    return;
+		string_append( ch, &ch->pnote->text );
+		return;
 	}
 
 	send_to_char("Syntax: note body\n\rThis will load the string editor.\n\r", ch);
 	return;
-    }
-
-    if ( !str_prefix( arg, "subject" ) || !str_prefix(arg, "difficulty") )
-    {
-	note_attach( ch,type );
-        if (ch->pnote->type != type)
-        {
-	    send_to_char(
-		"You already have a note, background, knowledge, or newspaper\n\r",ch);
-	    send_to_char("article in progress.\n\r",ch);
-            return;
-        }
-
-        if (!is_number(argument) && (ch->pnote->type == NOTE_BACKGROUND
-	    || ch->pnote->type == NOTE_KNOWLEDGE))
-	{
-	    send_to_char("Difficulty must be a number from 1 to 10.\n\r",ch);
-	    return;
 	}
-	else if(is_number(argument) && (ch->pnote->type == NOTE_BACKGROUND
-	    || ch->pnote->type == NOTE_KNOWLEDGE))
+
+	if ( !str_prefix( arg, "subject" ) || !str_prefix(arg, "difficulty") )
 	{
-	    if( 1 > atoi(argument) || atoi(argument) > 10 )
-	    {
+	note_attach( ch,type );
+		if (ch->pnote->type != type)
+		{
+		send_to_char("You already have a note, background, knowledge, or newspaper\n\r",ch);
+		send_to_char("article in progress.\n\r",ch);
+			return;
+		}
+
+		if (!is_number(argument) && (ch->pnote->type == NOTE_BACKGROUND
+		|| ch->pnote->type == NOTE_KNOWLEDGE))
+	{
 		send_to_char("Difficulty must be a number from 1 to 10.\n\r",ch);
 		return;
-	    }
+	}
+	else if(is_number(argument) && (ch->pnote->type == NOTE_BACKGROUND
+		|| ch->pnote->type == NOTE_KNOWLEDGE))
+	{
+		if( 1 > atoi(argument) || atoi(argument) > 10 )
+		{
+		send_to_char("Difficulty must be a number from 1 to 10.\n\r",ch);
+		return;
+		}
 	}
 
-        PURGE_DATA( ch->pnote->subject );
+		PURGE_DATA( ch->pnote->subject );
 	ch->pnote->subject = str_dup( argument );
 	send_to_char( "Ok.\n\r", ch );
 	return;
-    }
+	}
 
-    if ( !str_prefix( arg, "to" ) || !str_prefix( arg, "keywords" )
-    || !str_prefix( arg, "category" ) )
-    {
+	if ( !str_prefix( arg, "to" ) || !str_prefix( arg, "keywords" )
+	|| !str_prefix( arg, "category" ) )
+	{
 	note_attach( ch,type );
-        if (ch->pnote->type != type)
-        {
-	    send_to_char(
-		"You already have a note, background, knowledge, or newspaper\n\r",ch);
-	    send_to_char("article in progress.\n\r",ch);
-            return;
-        }
-        PURGE_DATA( ch->pnote->to_list );
+		if (ch->pnote->type != type)
+		{
+		send_to_char("You already have a note, background, knowledge, or newspaper\n\r",ch);
+		send_to_char("article in progress.\n\r",ch);
+			return;
+		}
+		PURGE_DATA( ch->pnote->to_list );
 	ch->pnote->to_list = str_dup( argument );
 	send_to_char( "Ok.\n\r", ch );
 	return;
-    }
+	}
 
-    if ( !str_prefix( arg, "clear" ) )
-    {
+	if ( !str_prefix( arg, "clear" ) )
+	{
 	if ( ch->pnote != NULL )
 	{
-	    free_note(ch->pnote);
-	    ch->pnote = NULL;
+		free_note(ch->pnote);
+		ch->pnote = NULL;
 	}
 
 	send_to_char( "Ok.\n\r", ch );
 	return;
-    }
+	}
 
-    if ( !str_prefix( arg, "show" ) )
-    {
+	if ( !str_prefix( arg, "show" ) )
+	{
 	if ( ch->pnote == NULL )
 	{
-	    send_to_char(
-		"You have no note, background, knowledge, or newspaper\n\r",ch);
-	    send_to_char("article in progress.\n\r",ch);
-	    return;
+		send_to_char( "You have no note, background, knowledge, or newspaper\n\r",ch);
+		send_to_char("article in progress.\n\r",ch);
+		return;
 	}
 
 	if (ch->pnote->type != type)
 	{
-	    send_to_char("You aren't working on that kind of text.\n\r",ch);
-	    return;
+		send_to_char("You aren't working on that kind of text.\n\r",ch);
+		return;
 	}
 
 	if(type == NOTE_NOTE)
@@ -4513,49 +4508,49 @@ void parse_note( CHAR_DATA *ch, char *argument, int type )
 	}
 	send_to_char( ch->pnote->text, ch );
 	return;
-    }
+	}
 
-    if ( !str_prefix( arg, "post" ) || !str_prefix(arg, "send"))
-    {
+	if ( !str_prefix( arg, "post" ) || !str_prefix(arg, "send"))
+	{
 	char *strtime;
 
 	if ( ch->pnote == NULL )
 	{
-	    send_to_char( "You have no note in progress.\n\r", ch );
-	    return;
+		send_to_char( "You have no note in progress.\n\r", ch );
+		return;
 	}
 
-        if (ch->pnote->type != type)
-        {
-            send_to_char("You aren't working on that kind of note.\n\r",ch);
-            return;
-        }
+		if (ch->pnote->type != type)
+		{
+			send_to_char("You aren't working on that kind of note.\n\r",ch);
+			return;
+		}
 
 	if (!str_cmp(ch->pnote->to_list,""))
 	{
-	    if(type == NOTE_NOTE)
-	    send_to_char(
+		if(type == NOTE_NOTE)
+		send_to_char(
 		"You need to provide a recipient (name, all, or admin).\n\r",
 		ch);
-	    else if(type == NOTE_BACKGROUND)
-	    send_to_char("You need to provide at least one keyword or room vnum.\n\r", ch);
-	    else if(type == NOTE_KNOWLEDGE)
-	    send_to_char("You need to provide at least one keyword.\n\r", ch);
-	    else if(type == NOTE_ARTICLE) {
+		else if(type == NOTE_BACKGROUND)
+		send_to_char("You need to provide at least one keyword or room vnum.\n\r", ch);
+		else if(type == NOTE_KNOWLEDGE)
+		send_to_char("You need to provide at least one keyword.\n\r", ch);
+		else if(type == NOTE_ARTICLE) {
 		send_to_char("Article placed in general news stream.\n\r", ch);
 		PURGE_DATA(ch->pnote->to_list);
 		ch->pnote->to_list = str_dup("General");
-	    }
-	    return;
+		}
+		return;
 	}
 
 	if (!str_cmp(ch->pnote->subject,""))
 	{
-	    if(type == NOTE_NOTE || type == NOTE_ARTICLE)
-	    send_to_char("You need to provide a subject.\n\r",ch);
-	    else if(type == NOTE_BACKGROUND || type == NOTE_KNOWLEDGE)
-	    send_to_char("You need to provide a difficulty.\n\r", ch);
-	    return;
+		if(type == NOTE_NOTE || type == NOTE_ARTICLE)
+		send_to_char("You need to provide a subject.\n\r",ch);
+		else if(type == NOTE_BACKGROUND || type == NOTE_KNOWLEDGE)
+		send_to_char("You need to provide a difficulty.\n\r", ch);
+		return;
 	}
 
 	ch->pnote->next			= NULL;
@@ -4566,31 +4561,31 @@ void parse_note( CHAR_DATA *ch, char *argument, int type )
 	ch->pnote->date_stamp		= current_time;
 
 	if(type == NOTE_NOTE || type == NOTE_ARTICLE)
-	    send_to_char("Posted.\n\r",ch);
+		send_to_char("Posted.\n\r",ch);
 	else if(type == NOTE_BACKGROUND || type == NOTE_KNOWLEDGE)
-	    send_to_char("Added.\n\r", ch);
+		send_to_char("Added.\n\r", ch);
 
-        for(d = descriptor_list; d != NULL; d = d->next) {
-	    if((type == NOTE_ARTICLE || type == NOTE_BACKGROUND
-	    || type == NOTE_KNOWLEDGE)
-	    && (IS_ADMIN(d->character)
-	      || (d->original != NULL && IS_ADMIN(d->original)))) {
+		for(d = descriptor_list; d != NULL; d = d->next) {
+		if((type == NOTE_ARTICLE || type == NOTE_BACKGROUND
+		|| type == NOTE_KNOWLEDGE)
+		&& (IS_ADMIN(d->character)
+		  || (d->original != NULL && IS_ADMIN(d->original)))) {
 		send_to_char(Format("A new item has been added to %s by %s\n\r", list_name, ch->name), d->character);
-	    }
-	    else
-	    {
+		}
+		else
+		{
 		if(d->character && is_note_to(d->character, ch->pnote))
-		    send_to_char("A new note has been delivered.\n\r", d->character);
-	    }
+			send_to_char("A new note has been delivered.\n\r", d->character);
+		}
 	}
 
-        append_note(ch->pnote);
-        ch->pnote = NULL;
-        return;
-    }
+		append_note(ch->pnote);
+		ch->pnote = NULL;
+		return;
+	}
 
-    send_to_char( "You can't do that.\n\r", ch );
-    return;
+	send_to_char( "You can't do that.\n\r", ch );
+	return;
 }
 
 NOTE_DATA * find_bg_keyword(char *arg)

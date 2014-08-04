@@ -1677,7 +1677,6 @@ void do_dpmote( CHAR_DATA *ch, char *argument )
 
 		strncpy(temp,argument, sizeof(temp));
 		temp[strlen(argument) - strlen(letter)] = '\0';
-		last[0] = '\0';
 		name = vch->name;
 
 		for (; *letter != '\0'; letter++)

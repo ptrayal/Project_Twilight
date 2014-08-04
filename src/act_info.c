@@ -2332,7 +2332,7 @@ void do_whois (CHAR_DATA *ch, char *argument)
 	 */
 	if(IS_ADMIN(ch))
 	{
-		send_to_char (Format("\tW######### [ \tC%s %s\tn \tW] #########\tn\n\r", wch->name, IS_NULLSTR(wch->surname) ? "" : wch->surname), ch);
+		send_to_char (Format("\tW######### [ \tC%12s %s\tn \tW] #########\tn\n\r", wch->name, IS_NULLSTR(wch->surname) ? "" : wch->surname), ch);
 		send_to_char (Format("\tW%-10s\tn : \tG%s\tn\n\r", "Position", staff_status[wch->trust].name), ch);
 		send_to_char (Format("\tW%-10s\tn : \tG%s\tn\n\r", "Gender", gender_string(wch)), ch);
 		send_to_char (Format("\tW%-10s\tn : \tG%s\tn\n\r", "Appearance", appearance_string(wch)), ch);

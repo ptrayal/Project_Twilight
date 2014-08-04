@@ -4313,7 +4313,7 @@ bool parse_gen_mental(CHAR_DATA *ch,char *argument)
 /* this procedure handles the input parsing for the talent abilities generator */
 bool parse_gen_talents(CHAR_DATA *ch,char *argument)
 {
-    char arg[MAX_INPUT_LENGTH]={'\0'};
+    char arg[MIL]={'\0'};
     int sn = 0,i = 0;
  
     if (IS_NULLSTR(argument))
@@ -4416,7 +4416,7 @@ bool parse_gen_talents(CHAR_DATA *ch,char *argument)
 /* this procedure handles the input parsing for the skill abilities generator */
 bool parse_gen_skills(CHAR_DATA *ch,char *argument)
 {
-	char arg[MAX_INPUT_LENGTH]={'\0'};
+	char arg[MIL]={'\0'};
 	int sn = 0,i = 0;
 	
 	if (IS_NULLSTR(argument))
@@ -4520,7 +4520,7 @@ bool parse_gen_skills(CHAR_DATA *ch,char *argument)
 /* this procedure handles the input parsing for the knowledges abilities generator */
 bool parse_gen_knowledges(CHAR_DATA *ch,char *argument)
 {
-    char arg[MAX_INPUT_LENGTH]={'\0'};
+    char arg[MIL]={'\0'};
     int sn = 0,i = 0;
  
     if (IS_NULLSTR(argument))
@@ -4625,7 +4625,7 @@ bool parse_gen_knowledges(CHAR_DATA *ch,char *argument)
 /* this procedure handles the input parsing for the virtues generator */
 bool parse_gen_virtues(CHAR_DATA *ch,char *argument)
 {
-	char arg[MAX_INPUT_LENGTH]={'\0'};
+	char arg[MIL]={'\0'};
 	int sn = 0,i = 0;
 
 	if (IS_NULLSTR(argument))

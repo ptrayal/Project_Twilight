@@ -1791,8 +1791,8 @@ void ban_site(CHAR_DATA *ch, char *argument, bool fPerm)
 	BUFFER *buffer;
 	BAN_DATA *pban, *prev;
 	char buf2[MSL]={'\0'};
-	char arg1[MAX_INPUT_LENGTH]={'\0'};
-	char arg2[MAX_INPUT_LENGTH]={'\0'};
+	char arg1[MIL]={'\0'};
+	char arg2[MIL]={'\0'};
 	char *name;
 	int type = 0;
 	bool prefix = FALSE,suffix = FALSE;

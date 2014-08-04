@@ -4755,8 +4755,8 @@ void room_pair (ROOM_INDEX_DATA* left, ROOM_INDEX_DATA* right, exit_status ex, c
 /* for every exit in 'room' which leads to or from pArea but NOT both, print it */
 void checkexits (ROOM_INDEX_DATA *room, AREA_DATA *pArea, char* buffer)
 {
+	int i = 0;
 	char buf[MSL]={'\0'};
-	int i;
 	EXIT_DATA *exit;
 	ROOM_INDEX_DATA *to_room;
 
@@ -4812,8 +4812,8 @@ void do_exlist (CHAR_DATA *ch, char * argument)
 {
 	AREA_DATA* pArea;
 	ROOM_INDEX_DATA* room;
+	int i = 0;
 	char buffer[MSL]={'\0'};
-	int i;
 	
 	CheckCH(ch);
 
@@ -4900,8 +4900,8 @@ target in them. Private rooms are not violated.
 */   
 const char * name_expand (CHAR_DATA *ch)
 {
-	int count = 1;
 	CHAR_DATA *rch;
+	int count = 1;
 	char name[MAX_INPUT_LENGTH]={'\0'}; /*  HOPEFULLY no mob has a name longer than THAT */
 
 	static char outbuf[MAX_INPUT_LENGTH]={'\0'};
@@ -4929,12 +4929,12 @@ const char * name_expand (CHAR_DATA *ch)
 
 void do_for (CHAR_DATA *ch, char *argument)
 {
-	char range[MAX_INPUT_LENGTH]={'\0'};
-	char buf[MSL]={'\0'};
-	bool fGods = FALSE, fMortals = FALSE, fMobs = FALSE, fEverywhere = FALSE, found;
 	ROOM_INDEX_DATA *room, *old_room;
 	CHAR_DATA *p, *p_next;
-	int i;
+	bool fGods = FALSE, fMortals = FALSE, fMobs = FALSE, fEverywhere = FALSE, found = FALSE;
+	int i = 0;
+	char range[MIL]={'\0'};
+	char buf[MSL]={'\0'};
 
 	CheckCH(ch);
 
@@ -5117,7 +5117,7 @@ EVENT_DATA *get_event_index args( (int vnum) );
 
 void do_run_event (CHAR_DATA *ch, char *argument)
 {
-	int value;
+	int value = 0;
 	EVENT_DATA *event;
 	SCRIPT_DATA *script;
 
@@ -5177,12 +5177,12 @@ void do_run_script (CHAR_DATA *ch, char *argument)
 
 void do_flag(CHAR_DATA *ch, char *argument)
 {
-	char arg1[MAX_INPUT_LENGTH]={'\0'};
-	char arg2[MAX_INPUT_LENGTH]={'\0'};
-	char arg3[MAX_INPUT_LENGTH]={'\0'};
-	char word[MAX_INPUT_LENGTH]={'\0'};
 	CHAR_DATA *victim;
 	long *flag, old = 0, bnew = 0, marked = 0, pos;
+	char arg1[MIL]={'\0'};
+	char arg2[MIL]={'\0'};
+	char arg3[MIL]={'\0'};
+	char word[MIL]={'\0'};
 	char type;
 	const struct flag_type *flag_table;
 
@@ -5553,8 +5553,8 @@ void do_election (CHAR_DATA *ch, char *argument)
 
 void do_newspaper (CHAR_DATA *ch, char *argument)
 {
-	int cmd;
-	char arg[MAX_INPUT_LENGTH]={'\0'};
+	int cmd = 0;
+	char arg[MIL]={'\0'};
 
 	CheckCH(ch);
 
@@ -5661,8 +5661,8 @@ void do_unpak(CHAR_DATA *ch, char *argument)
 
 void do_stockmarket (CHAR_DATA *ch, char *argument)
 {
-	int cmd;
-	char arg[MAX_INPUT_LENGTH]={'\0'};
+	int cmd = 0;
+	char arg[MIL]={'\0'};
 
 	CheckCH(ch);
 
@@ -5690,9 +5690,9 @@ void do_stockmarket (CHAR_DATA *ch, char *argument)
 void do_sayat( CHAR_DATA *ch, char *argument )
 {
 	CHAR_DATA *rch;
-	char arg[MAX_INPUT_LENGTH]={'\0'};
 	ROOM_INDEX_DATA *location;
-
+	char arg[MIL]={'\0'};
+	
 	CheckCH(ch);
 
 	if ( IS_NULLSTR(argument) )
@@ -5767,10 +5767,10 @@ void do_org(CHAR_DATA *ch, char *argument)
 {
 	ORG_DATA *org;
 	ORGMEM_DATA *mem;
-	char arg[MAX_INPUT_LENGTH]={'\0'};
-	int online;
-	int in_char_list;
 	CHAR_DATA *vch;
+	int online = FALSE;
+	int in_char_list;
+	char arg[MIL]={'\0'};
 
 	CheckCH(ch);
 
@@ -6216,8 +6216,8 @@ void do_org(CHAR_DATA *ch, char *argument)
 void do_bonus(CHAR_DATA *ch, char *argument)
 {
 	CHAR_DATA *vch;
-	int bonus;
-	char arg[MAX_INPUT_LENGTH]={'\0'};
+	int bonus = 0;
+	char arg[MIL]={'\0'};
 
 	CheckCH(ch);
 
@@ -6421,8 +6421,8 @@ void do_saveconcept(CHAR_DATA *ch, char *argument)
 
 void do_ritemoves(CHAR_DATA *ch, char *argument)
 {
-	int i, j;
-	int race;
+	int i = 0, j = 0;
+	int race = 0;
 	bool found = FALSE;
 
 	CheckCH(ch);
@@ -6474,8 +6474,8 @@ void do_ritemoves(CHAR_DATA *ch, char *argument)
 
 void do_timeset(CHAR_DATA *ch, char *argument)
 {
-	char arg[MAX_INPUT_LENGTH]={'\0'};
-	int i;
+	char arg[MIL]={'\0'};
+	int i = 0;
 
 	CheckCH(ch);
 
@@ -6564,7 +6564,6 @@ MUDCMD(do_trackbuffer)
 	BUFFER *output = new_buf();
 	BUFFER *count, *count_next;
 	int counter =0;
-
 
 	for(count = buffer_list; count; count = count_next)
 	{
