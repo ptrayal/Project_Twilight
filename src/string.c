@@ -86,6 +86,7 @@ char * string_insert_return( char * orig, char * old )
 		char xbuf[MSL]={'\0'};
 		int i = 0;
 
+		xbuf[0] = '\0';
 		strncpy( xbuf, orig, sizeof(xbuf) );
 		if ( strstr( orig, old ) != NULL )
 		{

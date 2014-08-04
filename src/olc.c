@@ -108,6 +108,7 @@ char *olc_ed_name( CHAR_DATA *ch )
 		return buf;
 	}
 
+	buf[0] = '\0';
 	switch (ch->desc->editor)
 	{
 	case ED_AREA:
@@ -174,6 +175,7 @@ char *olc_ed_vnum( CHAR_DATA *ch )
 	MPROG_CODE *pMprog;
 	static char buf[10]={'\0'};
 
+	buf[0] = '\0';
 	switch ( ch->desc->editor )
 	{
 	case ED_AREA:

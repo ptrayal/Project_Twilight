@@ -2738,6 +2738,8 @@ char *flag_string( const struct flag_type *flag_table, int bits )
     static char buf[512]={'\0'};
     int  flag;
 
+    buf[0] = '\0';
+
     for (flag = 0; flag_table[flag].name != NULL; flag++)
     {
 	if ( !is_stat( flag_table ) && IS_SET(bits, flag_table[flag].bit) )
@@ -2765,6 +2767,8 @@ char *power_string( const struct gift_type *power_table, int bits, int level )
 {
     static char buf[512]={'\0'};
     int  flag;
+
+    buf[0] = '\0';
 
     for (flag = 0; power_table[flag].name != NULL; flag++)
     {

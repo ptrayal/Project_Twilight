@@ -4883,11 +4883,12 @@ void log_string(int type, const char *fmt, ... )
 	DESCRIPTOR_DATA *d;
 	va_list args;
 	char *strtime;
-	char buf[45]={'\0'};
+	char buf[45];
 	char bufew[2 * MSL];
 	char bufee[2 * MSL];
 	FILE *log_file;
-	
+	buf[0] = '\0';
+
 	log_file = NULL;
 
 // Get the wanted text

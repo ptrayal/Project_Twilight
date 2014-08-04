@@ -3558,6 +3558,8 @@ void scan_char(CHAR_DATA *victim, CHAR_DATA *ch, sh_int depth, sh_int door)
     char buf[MSL]={'\0'};
     char buf2[MAX_INPUT_LENGTH]={'\0'};
 
+    buf[0] = '\0';
+
     strncat(buf, PERS(victim, ch), sizeof(buf));
     strncat(buf, ", ", sizeof(buf));
     snprintf(buf2, sizeof(buf2), distance[depth], dir_name[door]);

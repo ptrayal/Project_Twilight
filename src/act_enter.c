@@ -565,6 +565,7 @@ void do_reject( CHAR_DATA *ch, char *argument )
     }
     else
     {
+        buf[0] = '\0';
         if ( strstr( ch->pcdata->ignore_reject, "None" ) != '\0' )
         {
             ch->pcdata->ignore_reject = string_replace(
@@ -626,6 +627,7 @@ void do_block( CHAR_DATA *ch, char *argument )
     }
     else
     {
+        buf[0] = '\0';
         if ( strstr( ch->pcdata->block_join, "None" ) != '\0' )
         {
             ch->pcdata->block_join = string_replace(
@@ -729,6 +731,7 @@ void do_apply(CHAR_DATA *ch, char *argument)
 	}
 	else
 	{
+		buf[0] = '\0';
 		if ( strstr(org->applicants, "None") != '\0' )
 		{
 			org->applicants = string_replace( org->applicants, "None", "\0" );

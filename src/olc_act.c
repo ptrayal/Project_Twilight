@@ -885,6 +885,7 @@ AEDIT( aedit_builder )
     }
     else
     {
+	buf[0] = '\0';
 	if ( strstr( pArea->builders, "None" ) != '\0' )
 	{
 	    pArea->builders = string_replace( pArea->builders, "None", "\0" );
@@ -5664,6 +5665,7 @@ PEDIT( pedit_assignevent )
 	}
 	else
 	{
+		buf[0] = '\0';
 		if ( strstr( pEvent->author, "None" ) != '\0' )
 		{
 			pEvent->author = string_replace( pEvent->author, "None", "\0" );
@@ -6736,6 +6738,7 @@ HEDIT( hedit_clans )
 	}
 	else
 	{
+		buf[0] = '\0';
 		if ( strstr( help->clans, "None" ) != '\0' )
 		{
 			help->clans = string_replace( help->clans, "None", "\0" );
@@ -6794,6 +6797,7 @@ HEDIT( hedit_races )
 	}
 	else
 	{
+		buf[0] = '\0';
 		if ( strstr( help->races, "None" ) != '\0' )
 		{
 			help->races = string_replace( help->races, "None", "\0" );
