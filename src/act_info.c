@@ -2346,7 +2346,7 @@ void do_whois (CHAR_DATA *ch, char *argument)
 		send_to_char (Format("Race          : %s\n\r", wch->race < MAX_PC_RACE ? pc_race_table[wch->race].name:"     "), ch);
 		send_to_char (Format("Clan/Tribe    : %s\n\r", capitalize(clan_table[wch->clan].name)), ch);
 		send_to_char (Format("AFK: %s\n\r", IS_SET(wch->comm, COMM_AFK) ? "\tRA\tn": ""), ch);
-		if (wch->desc->pProtocol->pVariables[eMSDP_UTF_8]->ValueInt == 1)
+		if (wch->desc && wch->desc->pProtocol && wch->desc->pProtocol->pVariables[eMSDP_UTF_8]->ValueInt == 1)
 			send_to_char (Format("UTF-8 Enabled : Yes\n\r"), ch);
 		else
 			send_to_char (Format("UTF-8 Enabled : No\n\r"), ch);

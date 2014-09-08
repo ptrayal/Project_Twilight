@@ -447,7 +447,7 @@ void do_tips( CHAR_DATA *ch, char *argument)
 	CheckCH(ch);
 
 	if(ch->bg_count < 5)
-		send_to_char( Format("You could spend some of your free backgrounds.  You have %d you could spend.\n\r", (5 - ch->bg_count)), ch );
+		send_to_char( Format("You should spend some of your free backgrounds.  You have %d you could spend.\n\r", (5 - ch->bg_count)), ch );
 
 	if (IS_SET(ch->comm,COMM_TIPS))
 	{
