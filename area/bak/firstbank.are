@@ -16,7 +16,7 @@ Danielle Silvani~
 {name} appears to be rifling through papers on a clipboard.~
 (no long description)
 ~
-~
+(null)~
 human~
 A 0 25 0 0 0 none
 0 0 0 0
@@ -29,7 +29,7 @@ Alissa Reone~
 Appearing to pay more attention to a book in front of her than anything else, she holds a bright smile... perhaps something is amusing?~
 Alissa Reone stands here.
 ~
-~
+(null)~
 human~
 ABG 0 25 0 0 0 none
 0 0 0 0
@@ -42,7 +42,7 @@ Frank Bellard~
 Shuffling a stack of papers, the young man behind the counter peers around, waiting for the next customer.~
 Frank Bellard stands here.
 ~
-~
+(null)~
 human~
 ABG 0 25 0 0 0 none
 0 0 0 0
@@ -55,7 +55,7 @@ Kiani Rae~
 A young woman seems to wait patiently for a customer as she reads through some papers in front of her, chewing lighly on a pen.~
 Kiani Rae stands here.
 ~
-~
+(null)~
 human~
 ABG 0 25 0 0 0 none
 0 0 0 0
@@ -68,7 +68,7 @@ Gene Gonol~
 Using a cloth to polish a rather old trinket, the man seems to be turning it in various ways, occasionally checking the level of current specularity under the bright lights. On rare occasions, he glances over toward the ropes to see if anyone is waiting in line.~
 Gene Gonol stands here.
 ~
-~
+(null)~
 human~
 ABG 0 25 0 0 0 none
 0 0 0 0
@@ -83,12 +83,11 @@ I 0
 #OBJECTS
 #10899
 The First Bank of America: Master Key~
-(no short description)~
-(no description)
+master key for the bank~
+A key lies here.~
+A simple brass key lies here.  Engraved in it are the words "Bank".  
 ~
-(no full description)
-~
-Sapphire~
+brass~
 18 JKLTe 0
 0 0 0 0 0
 0
@@ -96,21 +95,7 @@ Sapphire~
 E
 --USES~
 -2~
-#10900
-Undefined~
-elegantly lies in a temptatious manner.~
-(no description)
-~
-(no full description)
-~
-Sapphire~
-18 JKLTe 0
-0 0 0 0 0
-0
-0 0 100
-E
---USES~
--2~
+Q 2
 #0
 
 
@@ -128,25 +113,25 @@ attempted to bust through.
 0 0 11
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
 (null) 
 ~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
 (null) 
 ~
 D0
-~
-~
+(none)~
+(null)~
 0 0 10047
 D2
-~
-~
+(none)~
+(null)~
 A 10899 10801
 M 0 H 100
 S
@@ -162,33 +147,33 @@ directly to a long counter full of papers, pens and clipboards.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
 (null) 
 ~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
 (null) 
 ~
 D0
-~
-~
+(none)~
+(null)~
 A 0 10800
 D1
-~
-~
+(none)~
+(null)~
 BCN 10899 10802
 D2
-~
-~
+(none)~
+(null)~
 0 0 10804
 D3
-~
-~
+(none)~
+(null)~
 BCN 10899 10803
 M 0 H 100
 S
@@ -203,52 +188,55 @@ elaborate: "Defining Savings and Success for Over 300 Years."
 0 10 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
 (null) 
 ~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
 (null) 
 ~
 D2
-~
-~
+(none)~
+(null)~
 AB 0 10805
 D3
-~
-~
+(none)~
+(null)~
 BCN 10899 10801
 M 0 H 100
 S
 #10803
 Home Loan Office~
-Various posters of houses, apartment complexes and even mansions are scattered and layered on the eastern wall, accompanied by spreadsheet forms, pie charts and graphs. An enourmous stack of papers are piled up on the floor beside the desk, barely reaching the flat surface in height.
+Various posters of houses, apartment complexes and even mansions are
+scattered and layered on the eastern wall, accompanied by spreadsheet forms,
+pie charts and graphs.  An enourmous stack of papers are piled up on the
+floor beside the desk, barely reaching the flat surface in height.  
 ~
 0 10 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 BCN 10899 10801
 D2
-~
-~
+(none)~
+(null)~
 AB 0 10806
 S
 #10804
@@ -262,31 +250,31 @@ designed for.
 0 0 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 10801
 D1
-~
-~
+(none)~
+(null)~
 0 0 10805
 D2
-~
-~
+(none)~
+(null)~
 0 0 10809
 D3
-~
-~
+(none)~
+(null)~
 0 0 10806
 S
 #10805
@@ -300,27 +288,27 @@ beside the doorway, embedding the same words.
 0 0 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 AB 10899 10802
 D2
-~
-~
+(none)~
+(null)~
 AB 10899 10807
 D3
-~
-~
+(none)~
+(null)~
 0 0 10804
 S
 #10806
@@ -334,27 +322,27 @@ doors.
 0 0 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 AB 10899 10803
 D1
-~
-~
+(none)~
+(null)~
 0 0 10804
 D2
-~
-~
+(none)~
+(null)~
 AB 10899 10808
 S
 #10807
@@ -366,23 +354,23 @@ the edge of the desk, the top marked 'Approved'.
 0 2 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 AB 0 10805
 D3
-~
-~
+(none)~
+(null)~
 BCN 10899 10809
 S
 #10808
@@ -396,23 +384,23 @@ easy-to-read layout.
 0 2 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 AB 0 10806
 D1
-~
-~
+(none)~
+(null)~
 BCN 10899 10809
 S
 #10809
@@ -427,31 +415,31 @@ any indication.
 0 0 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 10804
 D1
-~
-~
+(none)~
+(null)~
 BCN 10899 10807
 D2
-~
-~
+(none)~
+(null)~
 0 0 10810
 D3
-~
-~
+(none)~
+(null)~
 CN 10899 10808
 S
 #10810
@@ -461,30 +449,30 @@ very child-friendly.  A silver bowl filled with various types of candy is
 decorated with a clash of flowers and dinosaurs.  Across the front, a gold
 plate covered with seemingly thick glass presents the name 'Alissa Reone'.  
 ~
-0 2 0
+0 10 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 10809
 D1
-~
-~
+(none)~
+(null)~
 0 0 10813
 D3
-~
-~
+(none)~
+(null)~
 0 0 10811
 S
 #10811
@@ -496,23 +484,23 @@ about on the back shelf, posters of several sports hanging behind them.
 0 2 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 10810
 D3
-~
-~
+(none)~
+(null)~
 0 0 10812
 S
 #10812
@@ -528,19 +516,19 @@ of the counter.
 0 2 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 10811
 S
 #10813
@@ -556,244 +544,244 @@ opposed to laser-printed, into a golden plate locked in with thick glass.
 0 0 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 ABCM 0 10814
 D3
-~
-~
+(none)~
+(null)~
 0 0 10810
 S
 #10814
 Transit Hallway~
-~
+(null)~
 0 0 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 10815
 D3
-~
-~
+(none)~
+(null)~
 ABCM 0 10813
 S
 #10815
 Transit Entry~
-~
+(null)~
 0 0 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 10818
 D1
-~
-~
+(none)~
+(null)~
 ABC 10899 10816
 D2
-~
-~
+(none)~
+(null)~
 0 0 10814
 D3
-~
-~
+(none)~
+(null)~
 ABC 10899 10817
 S
 #10816
 Elevator~
-~
+(null)~
 0 0 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D3
-~
-~
+(none)~
+(null)~
 ABC 0 10815
 S
 #10817
 Elevator~
-~
+(null)~
 0 0 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 ABC 0 10815
 S
 #10818
 Staircase~
-~
+(null)~
 0 0 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D2
-~
-~
+(none)~
+(null)~
 0 0 10815
 D4
-~
-~
+(none)~
+(null)~
 0 0 10819
 S
 #10819
 Staircase~
-~
+(null)~
 0 0 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D2
-~
-~
+(none)~
+(null)~
 0 0 10820
 D5
-~
-~
+(none)~
+(null)~
 0 0 10818
 S
 #10820
 Transit Entry~
-~
+(null)~
 0 0 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 10819
 D1
-~
-~
+(none)~
+(null)~
 ABC 10899 10821
 D3
-~
-~
+(none)~
+(null)~
 ABC 10899 10822
 S
 #10821
 Elevator~
-~
+(null)~
 0 0 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D3
-~
-~
+(none)~
+(null)~
 ABC 0 10820
 S
 #10822
 Elevator~
-~
+(null)~
 0 0 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 ABC 0 10820
 S
 #0

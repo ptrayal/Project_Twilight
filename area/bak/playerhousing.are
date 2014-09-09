@@ -34,16 +34,16 @@ XNUMB1~
 Along a Quiet Hall~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
 Along a Quiet Hall~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 12703
 S
 #12702
@@ -55,16 +55,16 @@ V
 12705 2
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 S
 #12703
 KEEP~
@@ -80,20 +80,20 @@ XNUMB1~
 Along a Quiet Hall~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
 Along a Quiet Hall~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 12704
 D2
-~
-~
+(none)~
+(null)~
 0 0 12701
 S
 #12704
@@ -111,16 +111,16 @@ XNUMB1~
 The End of a Quiet Hall~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
 The End of a Quiet Hall~
 E
 XDDREAM~
-~
+None~
 D2
-~
-~
+(none)~
+(null)~
 0 0 12703
 M 0 H 100
 S
@@ -133,16 +133,16 @@ V
 12704 -1
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 S
 #0
 

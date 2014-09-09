@@ -1,5 +1,5 @@
 #AREADATA
-Name Tenement Area~
+Name Tenement Housing~
 Builders Rayal~
 VNUMs 5001 5020
 Credits Rayal~
@@ -119,23 +119,23 @@ the north.
 0 4 1
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 5002
 D2
-~
-~
+(none)~
+(null)~
 0 0 10103
 M 0 H 100
 S
@@ -148,23 +148,23 @@ several of the windows and there is a sign hanging above the doorway.
 0 0 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 5003
 D2
-~
-~
+(none)~
+(null)~
 0 0 5001
 M 0 H 100
 S
@@ -178,31 +178,31 @@ surround you.  Gang-related graffiti cover the walls and entrance way.
 0 0 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 5004
 D1
-~
-~
+(none)~
+(null)~
 AB 0 5005
 D2
-~
-~
+(none)~
+(null)~
 0 0 5002
 D3
-~
-~
+(none)~
+(null)~
 A 0 5006
 M 0 H 100
 S
@@ -215,27 +215,27 @@ things litter the floor.  The hallway continues to the north and south.
 0 0 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 5007
 D1
-~
-~
+(none)~
+(null)~
 0 0 5008
 D2
-~
-~
+(none)~
+(null)~
 0 0 5003
 M 0 H 100
 S
@@ -248,19 +248,19 @@ the eastern wall.
 0 0 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D3
-~
-~
+(none)~
+(null)~
 AB 0 5003
 M 0 H 100
 S
@@ -273,19 +273,19 @@ knows what else hovers around the ceiling.
 0 0 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 A 0 5003
 M 0 H 100
 S
@@ -299,23 +299,23 @@ mildew.
 0 0 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D2
-~
-~
+(none)~
+(null)~
 0 0 5004
 D3
-~
-~
+(none)~
+(null)~
 0 0 5009
 M 0 H 100
 S
@@ -328,19 +328,19 @@ stains of cigarettes.
 0 0 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D3
-~
-~
+(none)~
+(null)~
 0 0 5004
 M 0 H 100
 S
@@ -353,23 +353,23 @@ from all around.
 0 0 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 5007
 D2
-~
-~
+(none)~
+(null)~
 A 0 5010
 M 0 H 100
 S
@@ -382,19 +382,19 @@ hug on the wall.  Rats and other vermin scurry about.
 0 0 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 A 0 5009
 M 0 H 100
 S

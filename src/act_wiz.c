@@ -38,6 +38,7 @@
 #include "subcmds.h"
 #include "olc.h"
 #include "interp.h"
+#include "grid.h"
 
 bool timestop;
 int close	args( ( int fd ) );

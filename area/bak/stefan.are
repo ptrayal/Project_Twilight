@@ -1,0 +1,298 @@
+#AREADATA
+Name The Reception Area~
+Builders Stefan~
+VNUMs 12201 12220
+Credits Stefan~
+Security 1
+Flags I
+Price 0
+End
+
+
+
+#MOBILES
+#0
+
+
+
+#OBJECTS
+#0
+
+
+
+#ROOMS
+#12201
+Outside the Rodon~
+You are now standing in front of a two floor neoclassical building, that
+seems to have been made sometime in the twentieth century and closer to its
+beginning.  It is well preserved though, stone and wood blending to create
+an impression of regality and status, and a number of well placed tall,
+narrow windows can shed ample light to the inner areas during the day.  The
+entrance to the Rodon - marked as such only by a discreet, finely forged
+bronze sign painted in red hanging over it - is attended at all times by
+formally dressed men in butler's suits and wide-brimmed hats.  The pavements
+are cleaned regularly to preserve the immaculate overall image of the
+building, and cars are not allowed to park directly outside it, kept away by
+posts and silvery chains.  
+~
+0 0 1
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+None~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+None~
+D0
+(none)~
+(null)~
+0 0 12202
+D2
+(none)~
+(null)~
+0 0 10070
+M 0 H 100
+S
+#12202
+The Reception Area~
+First impressions being what they are, the Rodon wastes little time or
+space to that effect; first a red strip of thick persian carpet ushering
+visitors in towards the inner chambers of the building, while on both sides,
+there are two artificial rose gardens, each arranged with great care for
+detail and lighting, a reflection of the other but very much different. 
+Each of the flowers in the garden's left side are made of metal, each a
+different one; bronze and silver, iron and steel, lead and platinum and
+copper, they all seem to be in different shades of dark colours, all turning
+away instead of turning towards a small sun-like orb made of gold which
+casts a pale, steady fluorescent illumination from above.  It is the
+impression of sunlight that sends the flowers into an ash shaded,
+metallically rigid desolation that this setting brings to mind.  On the
+right side, a reflection of the last rose garden exists; but this time only
+a series of internal, carefully concealed and expertly placed tiny sources
+glow to shed colorful rays into a multitude of crystalline flowers that have
+been hand-crafted in even the most miniscule details of their petals,
+participating in a joyous celebration of bright, fitting combination of
+colours unlike their image across the hallway.  Under the nocturnal
+celebration the roses are flourishing into a prosperous bloom of vivid
+colouration.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+(null) 
+~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+(null) 
+~
+D0
+(none)~
+(null)~
+0 0 12203
+D2
+(none)~
+(null)~
+0 0 12201
+M 0 H 100
+S
+#12203
+The Rodon's Main Hall~
+Very rare are the times, in all hours of the day or night, that the main
+chamber that serves as the Rodon's central hall is anywhere near empty;
+there are well-dressed uniformed servants and maids constantly moving about
+to offer refreshments, pick up leftover glasses or attend to the various
+visitors that frequent the building.  It is hard to not notice the
+highly-placed narrow windows that during the day will provide plentiful
+light on the inside; each of them is fit with coloured glass that provides
+different shades as the daylight's direction changes, a matter which must
+have taken some planning by an experienced designer in the process.  Several
+stalls, coffee tables and leather armchairs offer positions of rest and
+opportunities to bask in the surroundings and hold conversations.  It is
+hard to not notice the highly-placed narrow windows that during the day will
+provide plentiful light on the inside; each of them is fit with coloured
+glass that provides different shades as the daylight's direction changes, a
+matter which must have taken some planning by an experienced designer in the
+process.  Several stalls, coffee tables and leather armchairs offer
+positions of rest and opportunities to bask in the surroundings and hold
+conversations.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+(null) 
+~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+(null) 
+~
+D0
+(none)~
+(null)~
+AB 0 12204
+D1
+(none)~
+(null)~
+AB 0 12205
+D2
+(none)~
+(null)~
+0 0 12202
+D3
+(none)~
+(null)~
+A 0 12206
+M 0 H 100
+S
+#12204
+A Wide Balcony~
+From here, some small part of the city and its harbor can be seen, the
+waters stirred only by the occasional ship that comes to deliver a cargo or
+is sent out for one; there are a very few smaller boats, sometimes yachts
+and private vessels enjoying the reverse view that you are, at this moment. 
+The street below, central enough to be frequented at all times of the day
+and night, is a living thing.  You can see men and women from high above -
+each floor of the Rodon's neoclassic building is taller than modern
+architecture seems to want them - and they come from all paths of life; from
+the hurried walk of an expensive suit rushing for an appointment, to the
+slow stroll of couples out for some shopping, to the uncertain gait of drug
+addicts and homeless folks looking for a place to spend the night.  It all
+seems to be so far from here.  The balcony sports three long tables and
+bamboo armchairs with comfortable pillows to allow for some time to be spent
+in leisure and relaxation, and there are soft lights above that can be
+dimmed to allow for more private sessions.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+(null) 
+~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+(null) 
+~
+D2
+(none)~
+(null)~
+AB 0 12203
+M 0 H 100
+S
+#12205
+The ball room of the Rodon~
+Perhaps so that no one will sit alone in a corner, the Rodon's ball room
+has none; shaped to be full circular, with several white and inobtrusive
+lights on its high-ceiling casting plentiful illumination and speakers built
+into the wooden walls in strategic positions in order to provide the best
+results, there is nothing else in the hall that can stand in the way of
+dancers.  The floor to the room is perhaps its most distrinctive feature;
+old dark wood oak that will squeek softly when stepped upon, made of long
+tiles that have been painted and polished until they are literally
+reflecting back the images of things and people above them.  The walls
+themselves are much different, and yet they blend with the room as a whole
+and are evidence of the degree of attention to the detail that has been put
+in; made of stripes of painted wood that together depict the scenery of an
+ancient, lively forest, there are eyes hidden among those bushes and
+creatures blending in with the green, providing dancers with the illusion
+that they are celebrating under an old star-lit sky in the kind of woods
+that once were, and never will be again.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+(null) 
+~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+(null) 
+~
+D3
+(none)~
+(null)~
+AB 0 12203
+M 0 H 100
+S
+#12206
+A conference room~
+The way this amphitheatrical room's acoustics are designed, a word spoken
+from the raised podium will carry well even to the furthest seats or someone
+standing by the door without great need for technological enhancements; but
+those do exist, as the eye for detail will notice the long series of small
+speakers placed up at somewhat elevated positions on each wall to lend those
+who employ them an impression of authority.  Except for the podium itself,
+the rest of the hall is less brightly lit as to focus the audience's
+attention on to the speakers more than each other.  There are tiny red
+lights built into the wide, comfortable corridors between each row of seats
+to allow for easy passage, and provisions have for brand-new looking leather
+chairs that must have quite pricely only by themselves.  
+~
+0 8 0
+E
+XNUMB1~
+Unnamed Room~
+E
+XDUMB1~
+(null) 
+~
+E
+XNDREAM~
+Unnamed Room~
+E
+XDDREAM~
+(null) 
+~
+D1
+(none)~
+(null)~
+A 0 12203
+M 0 H 100
+S
+#0
+
+
+
+#RESETS
+D 0 12203 0 3
+D 0 12203 1 3
+D 0 12204 2 3
+D 0 12205 3 3
+S
+
+
+
+#SHOPS
+0
+
+
+
+#MOBPROGS
+#0
+
+#$

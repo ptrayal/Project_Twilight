@@ -15,7 +15,10 @@ End
 shop clerk maria~
 Maria~
 Maria stands here behind a counter trying to sell room keys.~
-Maria stands here in a black three piece suit while trying to lookprofessional.  It seems it has been a long time since she has seen daylight,as her skin is almost bleach-white.  ~
+Maria stands here in a black three piece suit while trying to look
+professional.  It seems it has been a long time since she has seen daylight,
+as her skin is almost bleach-white.  
+~
 vampire~
 ABCGKc DF 75 0 0 0 punch
 0 ILPQR FG EHKNSXY
@@ -23,13 +26,17 @@ ABCGKc DF 75 0 0 0 punch
 ADHIMVc ABCDEFGHIJK medium flesh
 A G
 I 0
-Tr 0 **base**~ **do not delete~
 Tr 0 has arrived~ emote smiles and asks, {Y'{CCan I interest you in a room today or are you just here for the restaraunt?{Y'{x~
+Tr 0 **base**~ **do not delete~
 #8002
 maid~
 a maid~
-A maid passes by.~
-A maid stands here wearing a silly grin on his face.  Something aboutthose glazed eyes and his sluggish actions makes it look like he's stillasleep.  He appears to be doing - nothing ~
+A maid is here.
+~
+A maid stands here wearing a silly grin on his face.  Something about
+those glazed eyes and his sluggish actions makes it look like he's still
+asleep.  He appears to be doing - nothing 
+~
 human~
 ACHS SY 25 0 0 0 whip
 0 P 0 AB
@@ -160,8 +167,6 @@ R ILPQR FG EHJKNXY
 ADHIMVc ABCDEFGHIJK large flesh
 A FH
 I 0
-Tr 0 open north~ ~
-Tr 0 opennorth~ ~
 #8013
 DJ frost disc jockey discjockey~
 DJ Frost~
@@ -270,8 +275,12 @@ I 0
 #8021
 police officer $f man~
 $f~
-$f sits here on a bed watching television.~
-$f sits here on a bed watching the local news on television.  Havingalready taken his uniform off, he sits here in a pair of white boxers withred hearts, and his uniform cap with the classic shiny shield on the front. ~
+$f sits here on a bed watching television.
+~
+$f sits here on a bed watching the local news on television.  Having
+already taken his uniform off, he sits here in a pair of white boxers with
+red hearts, and his uniform cap with the classic shiny shield on the front. 
+~
 human~
 ABCH 0 50 0 0 0 punch
 E 0 A 0
@@ -313,7 +322,7 @@ I 0
 large jewelry box~
 a large oak jewelry box~
 A large oak jewelry box sits here.~
-~
+(null)~
 human~
 ABY 0 25 0 0 0 none
 0 0 0 0
@@ -321,9 +330,9 @@ ABY 0 25 0 0 0 none
 AHMV ABCDEFGHIJK medium wood
 A 0
 I 0
-Tr 0 leaves~ emote slowly closes it's lid.~
-Tr 0 has arrived.~ emote slowly opens it's lid.~
 Tr 0 **base**~ **base**~
+Tr 0 has arrived.~ emote slowly opens it's lid.~
+Tr 0 leaves~ emote slowly closes it's lid.~
 #8025
 $f~
 $f~
@@ -345,8 +354,10 @@ Tr 0 has arrived.~ emote says, {Y'{CBuy a paper?{Y'{x~
 #8001
 counter~
 a large wooden counter~
-A large wooden counter sits here, perhaps it is used as a receptionistsdesk.  It looks as if it is waiting to be torn down.  ~
-A large wooden counter sits here, perhaps it is used as a receptionistsdesk.  It looks as if it is waiting to be torn down.  ~
+A large wooden counter is here.~
+A large wooden counter sits here, perhaps it is used as a receptionists
+desk.  It looks as if it is waiting to be torn down.  
+~
 wood~
 12 0 0
 2 350 BEHKN 0 0 0
@@ -358,8 +369,11 @@ Q 15
 #8002
 toilet porcelain~
 a porcelain toilet~
-Clean, functional, and currently unoccupied - there is little left said. The wooden seat provides a bit of comfort from the cold porcelain, but inthe end it is what it is.  ~
-Clean, functional, and currently unoccupied - there is little left said. The wooden seat provides a bit of comfort from the cold porcelain, but inthe end it is what it is.  ~
+A clean toilet is here.~
+Clean, functional, and currently unoccupied - there is little left said. 
+The wooden seat provides a bit of comfort from the cold porcelain, but in
+the end it is what it is.  
+~
 porcelain~
 12 0 0
 1 200 BEHK 1 0 0
@@ -384,8 +398,11 @@ Q 15
 #8004
 bench metal~
 a metal bench~
-This drab metal bench seems older than even this ragedy looking building,yet still they both stand.  Stickers, and gum litter its' surfaceeverywhere.  ~
-This drab metal bench seems older than even this ragedy looking building,yet still they both stand.  Stickers, and gum litter its' surfaceeverywhere.  ~
+A drab metal bench is here.~
+This drab metal bench seems older than even this ragedy looking building,
+yet still they both stand.  Stickers, and gum litter its' surface
+everywhere.  
+~
 steel~
 12 0 0
 2 500 BEHK 0 0 0
@@ -421,26 +438,26 @@ E
 --USES~
 -2~
 E
-Level1~
-[The Haven] lvl: 1 AAAAAAAAWARRHRRPPWARRHRRPPWARRHHHPPPACCRRHLLWFCSRRHBBWAHHHHHVSWAAAAAAAAW~
-E
-Level2~
-[The Haven] lvl: 2 XXXXXXXXXXHHHHHXXXXHRRRRXXXXHRRRRXXXXHVRRRBCXFHSRRRBCXFHHHHHHHXXXXXXXXXX ~
-E
-Level3~
-[The Haven] lvl: 3 XXXXXXXXXXEEEEEXXXXERRRRXXXXERRRRXXXXHHHHHHHXFHSRRRRCXFHVRRRRCXXXXXXXXXX ~
-E
-Level4~
-[The Haven] lvl: 4 XXXXXXXXXXEEEKYXXXXERRRRXXXXERRRRXXXXHHHHHHHXFHSRRRRCXFHVRRRRCXXXXXXXXXX ~
-E
-Level5~
-[The Haven] lvl: 5 XXXXXXXXXXTTTTTXXXXTTTTTXXXXTTTTTXXXXTTTTTTTXXTSTTTTTXFTTTTTTTXXXXXXXXXX~
+key~
+[The Haven] Key  A=alley  B=bathroom  C=laundry  E=restaurant  F=fire escapeH=hallway  L=lobby  O=office  P=parking lot  R=roomS=stairs  T=rooftop  W=sidewalk  X=spacer  Y=separating room  Z=freezers~
 E
 Levelb-1~
 [The Haven]  lvl: b-1 XXXXXXXXXXOYYYYZHXXOYYYYZHXXOYYYYZHXSHYYYYZHXXHYYYYZHXXHHHHHHSXXXXXXXXXX ~
 E
-key~
-[The Haven] Key  A=alley  B=bathroom  C=laundry  E=restaurant  F=fire escapeH=hallway  L=lobby  O=office  P=parking lot  R=roomS=stairs  T=rooftop  W=sidewalk  X=spacer  Y=separating room  Z=freezers~
+Level5~
+[The Haven] lvl: 5 XXXXXXXXXXTTTTTXXXXTTTTTXXXXTTTTTXXXXTTTTTTTXXTSTTTTTXFTTTTTTTXXXXXXXXXX~
+E
+Level4~
+[The Haven] lvl: 4 XXXXXXXXXXEEEKYXXXXERRRRXXXXERRRRXXXXHHHHHHHXFHSRRRRCXFHVRRRRCXXXXXXXXXX ~
+E
+Level3~
+[The Haven] lvl: 3 XXXXXXXXXXEEEEEXXXXERRRRXXXXERRRRXXXXHHHHHHHXFHSRRRRCXFHVRRRRCXXXXXXXXXX ~
+E
+Level2~
+[The Haven] lvl: 2 XXXXXXXXXXHHHHHXXXXHRRRRXXXXHRRRRXXXXHVRRRBCXFHSRRRBCXFHHHHHHHXXXXXXXXXX ~
+E
+Level1~
+[The Haven] lvl: 1 AAAAAAAAWARRHRRPPWARRHRRPPWARRHHHPPPACCRRHLLWFCSRRHBBWAHHHHHVSWAAAAAAAAW~
 Q 15
 #8007
 stun gun stungun small~
@@ -631,8 +648,8 @@ Q 15
 #8021
 a pair of blue jeans~
 a pair of blue jeans~
-~
-~
+(null)~
+(null)~
 cotton~
 11 N AF
 0 0 0 0 0
@@ -775,8 +792,8 @@ Q 15
 #8032
 shower~
 a small shower~
-~
-~
+(null)~
+(null)~
 tile~
 12 0 0
 2 350 CFIL 0 0 0
@@ -973,8 +990,8 @@ Q 0
 #8047
 gun handgun 45mm .45 .45mm glock red 30~
 a glock 30 with a red band~
-~
-~
+(null)~
+(null)~
 aluminium~
 5 N AN
 1 7 8054 bite BD 0
@@ -1035,20 +1052,20 @@ E
 --USES~
 -2~
 E
-candle~
-A long candlestick sits on a glass candleholder trying to illuminate thetable.  ~
-E
-white~
-A long candlestick sits on a glass candleholder trying to illuminate thetable.  ~
-E
-red~
-A small, unopened rose sits here in a small glass vase just waiting forthe right time.  It appears to be freshly placed.  ~
+bench~
+A long, curved, wooden bench sits here next to a dining table.  It hassoft, white leather cushions, and fancy designs carved into the wood hereand there.  ~
 E
 rose~
 A small, unopened rose sits here in a small glass vase just waiting forthe right time.  It appears to be freshly placed.  ~
 E
-bench~
-A long, curved, wooden bench sits here next to a dining table.  It hassoft, white leather cushions, and fancy designs carved into the wood hereand there.  ~
+red~
+A small, unopened rose sits here in a small glass vase just waiting forthe right time.  It appears to be freshly placed.  ~
+E
+white~
+A long candlestick sits on a glass candleholder trying to illuminate thetable.  ~
+E
+candle~
+A long candlestick sits on a glass candleholder trying to illuminate thetable.  ~
 Q 0
 #8052
 black bag body bodybag~
@@ -1305,8 +1322,10 @@ Q 0
 #8071
 pill anit venom~
 an anti-venom pill~
-This small, clear capsule holds some type of white powder that movesaround as the capsule is turned.  In blue letters it says: 'anti-venom'.  ~
-This small, clear capsule holds some type of white powder that movesaround as the capsule is turned.  In blue letters it says: 'anti-venom'.~
+A small, clear capsule is here.~
+This small, clear capsule holds some type of white powder that moves
+around as the capsule is turned.  In blue letters it says: 'anti-venom'.  
+~
 bread~
 26 N AO
 10 'cure poison' 'cure disease' 'reserved' 'reserved' 0
@@ -1328,10 +1347,10 @@ E
 --USES~
 -2~
 E
-alabaster~
+ashtrays~
 Ashtrays that look almost unused due to the populace that uses this club.Made of alabaster, and in the shape of small skulls with their gaping,fanged mouths waiting for cigarette butts to be inserted.  ~
 E
-ashtrays~
+alabaster~
 Ashtrays that look almost unused due to the populace that uses this club.Made of alabaster, and in the shape of small skulls with their gaping,fanged mouths waiting for cigarette butts to be inserted.  ~
 Q 0
 #8073
@@ -1497,8 +1516,11 @@ Q 0
 #8079
 shot glass blood B~
 a shot of type B blood~
-This shot glass has the picture of The Haven Hotel on it, and the words'The Haven' written at the bottom of the glass.  It looks as if it isregularly used.  ~
-This shot glass has the picture of The Haven Hotel on it, and the words'The Haven' written at the bottom of the glass.  It looks as if it isregularly used.  ~
+A shot glass is here.~
+This shot glass has the picture of The Haven Hotel on it, and the words
+'The Haven' written at the bottom of the glass.  It looks as if it is
+regularly used.  
+~
 glass~
 17 NU AO
 2 2 'blood' 0 0 0
@@ -1578,8 +1600,8 @@ Q 0
 #8081
 naked inflatable llama rubber~
 a rubber inflatable naked llama~
-~
-~
+(null)~
+(null)~
 rubber~
 12 0 AOR
 2 500 EH 0 0 0
@@ -1679,6 +1701,7 @@ cotton~
 E
 --USES~
 -2~
+Q 2
 #0
 
 
@@ -1690,23 +1713,23 @@ This shabby little room seems to be just a shack to keep rain out of themain bui
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D3
-~
-~
+(none)~
+(null)~
 A 0 8200
 D5
 Looking over the railing, a tall winding staircase going down for whatseems to be infinity can be seen from here.  ~
-~
+(null)~
 0 0 8153
 M 0 H 100
 S
@@ -1716,27 +1739,27 @@ The roof here seems freshly tarred and there are small bits of gravel allover th
 0 0 1
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 8195
 D2
-~
+(none)~
 exit~
 KNS 0 8060
 D3
-~
-~
+(none)~
+(null)~
 0 0 8194
 M 0 H 100
 S
@@ -1746,31 +1769,31 @@ The roof here seems freshly tarred and there are small bits of gravel allover th
 0 0 1
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8200
 D1
-~
-~
+(none)~
+(null)~
 0 0 8193
 D2
-~
+(none)~
 exit~
 KNS 0 8061
 D3
-~
-~
+(none)~
+(null)~
 0 0 8159
 M 0 H 100
 S
@@ -1780,31 +1803,31 @@ The roof here seems freshly tarred and there are small bits of gravel allover th
 0 0 1
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8201
 D1
-~
-~
+(none)~
+(null)~
 0 0 8196
 D2
-~
+(none)~
 exit~
 KNS 0 8059
 D3
-~
-~
+(none)~
+(null)~
 0 0 8193
 M 0 H 100
 S
@@ -1814,31 +1837,31 @@ The roof here seems freshly tarred and there are small bits of gravel allover th
 0 0 1
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8202
 D1
-~
-~
+(none)~
+(null)~
 0 0 8197
 D2
-~
+(none)~
 exit~
 KNS 0 8058
 D3
-~
-~
+(none)~
+(null)~
 0 0 8195
 M 0 H 100
 S
@@ -1848,31 +1871,31 @@ The roof here seems freshly tarred and there are small bits of gravel allover th
 0 0 1
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8203
 D1
-~
-~
+(none)~
+(null)~
 0 0 8198
 D2
-~
+(none)~
 exit~
 KNS 0 8057
 D3
-~
-~
+(none)~
+(null)~
 0 0 8196
 M 0 H 100
 S
@@ -1882,31 +1905,31 @@ The roof here seems freshly tarred and there are small bits of gravel allover th
 0 0 1
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8204
 D1
-~
-~
+(none)~
+(null)~
 0 0 8199
 D2
-~
+(none)~
 exit~
 KNS 0 8056
 D3
-~
-~
+(none)~
+(null)~
 0 0 8197
 M 0 H 100
 S
@@ -1916,31 +1939,31 @@ The roof here seems freshly tarred and there are small bits of gravel allover th
 0 0 1
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8205
 D1
-~
+(none)~
 exit~
 KNS 0 8053
 D2
-~
+(none)~
 exit~
 KNS 0 8055
 D3
-~
-~
+(none)~
+(null)~
 0 0 8198
 M 0 H 100
 S
@@ -1950,30 +1973,30 @@ The roof here seems freshly tarred and there is small bits of gravel allover the
 0 0 1
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8206
 D1
-~
-~
+(none)~
+(null)~
 A 0 8192
 D2
-~
-~
+(none)~
+(null)~
 0 0 8194
 D3
-~
+(none)~
 exit~
 KNS 0 8064
 M 0 H 100
@@ -1984,27 +2007,27 @@ The roof here seems freshly tarred and there are small bits of gravel allover th
 0 0 1
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8208
 D1
-~
-~
+(none)~
+(null)~
 0 0 8202
 D2
-~
-~
+(none)~
+(null)~
 0 0 8195
 M 0 H 100
 S
@@ -2014,31 +2037,31 @@ The roof here seems freshly tarred and there are small bits of gravel allover th
 0 0 1
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8209
 D1
-~
-~
+(none)~
+(null)~
 0 0 8203
 D2
-~
-~
+(none)~
+(null)~
 0 0 8196
 D3
-~
-~
+(none)~
+(null)~
 0 0 8201
 M 0 H 100
 S
@@ -2048,31 +2071,31 @@ The roof here seems freshly tarred and there are small bits of gravel allover th
 0 0 1
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8210
 D1
-~
-~
+(none)~
+(null)~
 0 0 8204
 D2
-~
-~
+(none)~
+(null)~
 0 0 8197
 D3
-~
-~
+(none)~
+(null)~
 0 0 8202
 M 0 H 100
 S
@@ -2082,31 +2105,31 @@ The roof here seems freshly tarred and there are small bits of gravel allover th
 0 0 1
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8211
 D1
-~
-~
+(none)~
+(null)~
 0 0 8205
 D2
-~
-~
+(none)~
+(null)~
 0 0 8198
 D3
-~
-~
+(none)~
+(null)~
 0 0 8203
 M 0 H 100
 S
@@ -2116,31 +2139,31 @@ The roof here seems freshly tarred and there are small bits of gravel allover th
 0 0 1
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8212
 D1
-~
+(none)~
 exit~
 KNS 0 8001
 D2
-~
-~
+(none)~
+(null)~
 0 0 8199
 D3
-~
-~
+(none)~
+(null)~
 0 0 8204
 M 0 H 100
 S
@@ -2150,30 +2173,30 @@ The roof here seems freshly tarred and there are small bits of gravel allover th
 0 0 1
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8213
 D1
-~
-~
+(none)~
+(null)~
 0 0 8207
 D2
-~
-~
+(none)~
+(null)~
 0 0 8200
 D3
-~
+(none)~
 exit~
 KNS 0 8068
 M 0 H 100
@@ -2184,27 +2207,27 @@ The roof here seems freshly tarred and there is small bits of gravel allover the
 0 0 1
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8214
 D1
-~
-~
+(none)~
+(null)~
 0 0 8208
 D3
-~
-~
+(none)~
+(null)~
 0 0 8206
 M 0 H 100
 S
@@ -2214,31 +2237,31 @@ The roof here seems freshly tarred and there are small bits of gravel allover th
 0 0 1
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8215
 D1
-~
-~
+(none)~
+(null)~
 0 0 8209
 D2
-~
-~
+(none)~
+(null)~
 0 0 8201
 D3
-~
-~
+(none)~
+(null)~
 0 0 8207
 M 0 H 100
 S
@@ -2248,31 +2271,31 @@ The roof here seems freshly tarred and there are small bits of gravel allover th
 0 0 1
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8216
 D1
-~
-~
+(none)~
+(null)~
 0 0 8210
 D2
-~
-~
+(none)~
+(null)~
 0 0 8202
 D3
-~
-~
+(none)~
+(null)~
 0 0 8208
 M 0 H 100
 S
@@ -2282,31 +2305,31 @@ The roof here seems freshly tarred and there are small bits of gravel allover th
 0 0 1
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8217
 D1
-~
-~
+(none)~
+(null)~
 0 0 8211
 D2
-~
-~
+(none)~
+(null)~
 0 0 8203
 D3
-~
-~
+(none)~
+(null)~
 0 0 8209
 M 0 H 100
 S
@@ -2316,31 +2339,31 @@ The roof here seems freshly tarred and there are small bits of gravel allover th
 0 0 1
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
+(none)~
 exit~
 KNS 0 8011
 D1
-~
-~
+(none)~
+(null)~
 0 0 8212
 D2
-~
-~
+(none)~
+(null)~
 0 0 8204
 D3
-~
-~
+(none)~
+(null)~
 0 0 8210
 M 0 H 100
 S
@@ -2350,31 +2373,31 @@ The roof here seems freshly tarred and there are small bits of gravel allover th
 0 0 1
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
+(none)~
 exit~
 KNS 0 8004
 D1
-~
+(none)~
 exit~
 KNS 0 8001
 D2
-~
-~
+(none)~
+(null)~
 0 0 8205
 D3
-~
-~
+(none)~
+(null)~
 0 0 8211
 M 0 H 100
 S
@@ -2384,30 +2407,30 @@ The roof here seems freshly tarred and there are small bits of gravel allover th
 0 0 1
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8218
 D1
-~
-~
+(none)~
+(null)~
 0 0 8214
 D2
-~
-~
+(none)~
+(null)~
 0 0 8206
 D3
-~
+(none)~
 exit~
 KNS 0 8069
 M 0 H 100
@@ -2418,31 +2441,31 @@ The roof here seems freshly tarred and there are small bits of gravel allover th
 0 0 1
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8219
 D1
-~
-~
+(none)~
+(null)~
 0 0 8215
 D2
-~
-~
+(none)~
+(null)~
 0 0 8207
 D3
-~
-~
+(none)~
+(null)~
 0 0 8213
 M 0 H 100
 S
@@ -2452,31 +2475,31 @@ The roof here seems freshly tarred and there are small bits of gravel allover th
 0 0 1
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8220
 D1
-~
-~
+(none)~
+(null)~
 0 0 8216
 D2
-~
-~
+(none)~
+(null)~
 0 0 8208
 D3
-~
-~
+(none)~
+(null)~
 0 0 8214
 M 0 H 100
 S
@@ -2486,31 +2509,31 @@ The roof here seems freshly tarred and there are small bits of gravel allover th
 0 0 1
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8221
 D1
-~
-~
+(none)~
+(null)~
 0 0 8217
 D2
-~
-~
+(none)~
+(null)~
 0 0 8209
 D3
-~
-~
+(none)~
+(null)~
 0 0 8215
 M 0 H 100
 S
@@ -2520,31 +2543,31 @@ The roof here seems freshly tarred and there are small bits of gravel allover th
 0 0 1
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8222
 D1
-~
+(none)~
 exit~
 KNS 0 8011
 D2
-~
-~
+(none)~
+(null)~
 0 0 8210
 D3
-~
-~
+(none)~
+(null)~
 0 0 8216
 M 0 H 100
 S
@@ -2554,30 +2577,30 @@ The roof here seems freshly tarred and there are small bits of gravel allover th
 0 0 1
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8223
 D1
-~
-~
+(none)~
+(null)~
 0 0 8219
 D2
-~
-~
+(none)~
+(null)~
 0 0 8213
 D3
-~
+(none)~
 exit~
 KNS 0 8070
 M 0 H 100
@@ -2588,31 +2611,31 @@ The roof here seems freshly tarred and there are small bits of gravel allover th
 0 0 1
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8224
 D1
-~
-~
+(none)~
+(null)~
 0 0 8220
 D2
-~
-~
+(none)~
+(null)~
 0 0 8214
 D3
-~
-~
+(none)~
+(null)~
 0 0 8218
 M 0 H 100
 S
@@ -2622,31 +2645,31 @@ The roof here seems freshly tarred and there are small bits of gravel allover th
 0 0 1
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8225
 D1
-~
-~
+(none)~
+(null)~
 0 0 8221
 D2
-~
-~
+(none)~
+(null)~
 0 0 8215
 D3
-~
-~
+(none)~
+(null)~
 0 0 8219
 M 0 H 100
 S
@@ -2656,31 +2679,31 @@ The roof here seems freshly tarred and there are small bits of gravel allover th
 0 0 1
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8226
 D1
-~
-~
+(none)~
+(null)~
 0 0 8222
 D2
-~
-~
+(none)~
+(null)~
 0 0 8216
 D3
-~
-~
+(none)~
+(null)~
 0 0 8220
 M 0 H 100
 S
@@ -2690,31 +2713,31 @@ The roof here seems freshly tarred and there are small bits of gravel allover th
 0 0 1
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8227
 D1
-~
+(none)~
 exit~
 KNS 0 8011
 D2
-~
-~
+(none)~
+(null)~
 0 0 8217
 D3
-~
-~
+(none)~
+(null)~
 0 0 8221
 M 0 H 100
 S
@@ -2724,30 +2747,30 @@ The roof here seems freshly tarred and there are small bits of gravel allover th
 0 0 1
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
+(none)~
 exit~
 KNS 0 8073
 D1
-~
-~
+(none)~
+(null)~
 0 0 8224
 D2
-~
-~
+(none)~
+(null)~
 0 0 8218
 D3
-~
+(none)~
 exit~
 KNS 0 8071
 M 0 H 100
@@ -2758,31 +2781,31 @@ The roof here seems freshly tarred and there are small bits of gravel allover th
 0 0 1
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
+(none)~
 exit~
 KNS 0 8074
 D1
-~
-~
+(none)~
+(null)~
 0 0 8225
 D2
-~
-~
+(none)~
+(null)~
 0 0 8219
 D3
-~
-~
+(none)~
+(null)~
 0 0 8223
 M 0 H 100
 S
@@ -2792,31 +2815,31 @@ The roof here seems freshly tarred and there are small bits of gravel allover th
 0 0 1
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
+(none)~
 exit~
 KNS 0 8075
 D1
-~
-~
+(none)~
+(null)~
 0 0 8226
 D2
-~
-~
+(none)~
+(null)~
 0 0 8220
 D3
-~
-~
+(none)~
+(null)~
 0 0 8224
 M 0 H 100
 S
@@ -2826,31 +2849,31 @@ The roof here seems freshly tarred and there are small bits of gravel allover th
 0 0 1
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
+(none)~
 exit~
 KNS 0 8076
 D1
-~
-~
+(none)~
+(null)~
 0 0 8227
 D2
-~
-~
+(none)~
+(null)~
 0 0 8221
 D3
-~
-~
+(none)~
+(null)~
 0 0 8225
 M 0 H 100
 S
@@ -2860,31 +2883,31 @@ The roof here seems freshly tarred and there are small bits of gravel allover th
 0 0 1
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
+(none)~
 exit~
 KNS 0 8077
 D1
-~
+(none)~
 exit~
 KNS 0 8051
 D2
-~
-~
+(none)~
+(null)~
 0 0 8222
 D3
-~
-~
+(none)~
+(null)~
 0 0 8226
 M 0 H 100
 S
@@ -2894,27 +2917,27 @@ This room is pitch black.  The nondescript cement floor is covered with afaintly
 0 9 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8260
 D3
-~
-~
+(none)~
+(null)~
 0 0 8250
 D4
-~
-~
+(none)~
+(null)~
 0 0 8273
 M 0 H 100
 S
@@ -2924,23 +2947,23 @@ This room is pitch black.  The nondescript cement floor is covered withpuddles o
 0 9 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 M 0 8230
 D4
-~
-~
+(none)~
+(null)~
 0 0 8274
 M 0 H 100
 S
@@ -2950,27 +2973,27 @@ The eerie black lights continue east making it hard to make things outclearly, a
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 A 0 8231
 D2
-~
-~
+(none)~
+(null)~
 0 0 8234
 D3
-~
-~
+(none)~
+(null)~
 M 0 8229
 M 0 H 100
 S
@@ -2980,23 +3003,23 @@ This small office holds just enough room for a desk and a small walkway. The old
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 ABCH 8069 8232
 D2
-~
-~
+(none)~
+(null)~
 A 0 8230
 M 0 H 100
 S
@@ -3006,23 +3029,23 @@ Stepping into what was once a DJ's booth, there now lies all the old andexcess w
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8233
 D2
-~
-~
+(none)~
+(null)~
 ABCH 0 8231
 M 0 H 100
 S
@@ -3032,23 +3055,23 @@ This is the second part of the DJ booth; there are two turntables here. There is
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
+(none)~
 window~
 BGNR 0 8241
 D2
-~
-~
+(none)~
+(null)~
 0 0 8232
 M 0 H 100
 S
@@ -3058,27 +3081,27 @@ Heavy bass music can clearly be heard at this point in the hallway whichappears 
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8230
 D1
 A plain wooden door sits here in its' hinges waiting to be used.~
-~
+(null)~
 A 0 8238
 D2
-~
-~
+(none)~
+(null)~
 0 0 8235
 M 0 H 100
 S
@@ -3088,23 +3111,23 @@ Heavy bass music can clearly be heard at this point in the hallway whichappears 
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8234
 D1
-~
-~
+(none)~
+(null)~
 0 0 8236
 M 0 H 100
 S
@@ -3114,23 +3137,23 @@ Heavy bass music can clearly be heard in this area of the hallway, whilethose ee
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 8247
 D3
-~
-~
+(none)~
+(null)~
 0 0 8235
 M 0 H 100
 S
@@ -3140,23 +3163,23 @@ Climbing up the small metal ladder built into the wall leads up to asmall securi
 0 12 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 8272
 D5
-~
-~
+(none)~
+(null)~
 0 0 8238
 M 0 H 100
 S
@@ -3166,27 +3189,27 @@ Loud bass music, black lights, strobe and laser lights dominate thisclub, a larg
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D3
-~
-~
+(none)~
+(null)~
 A 0 8234
 D4
-~
-~
+(none)~
+(null)~
 0 0 8237
 D5
-~
-~
+(none)~
+(null)~
 0 0 8246
 M 0 H 100
 S
@@ -3196,23 +3219,23 @@ Loud bass music thumps hard against the walls, and it seems they actuallybegin t
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8240
 D1
-~
-~
+(none)~
+(null)~
 0 0 8244
 M 0 H 100
 S
@@ -3222,27 +3245,27 @@ Loud bass music thumps hard against the walls, and it seems they actuallybegin t
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8241
 D1
-~
-~
+(none)~
+(null)~
 0 0 8243
 D2
-~
-~
+(none)~
+(null)~
 0 0 8239
 M 0 H 100
 S
@@ -3252,27 +3275,27 @@ Loud bass music thumps hard against the walls, and it seems they actuallybegin t
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 8242
 D2
-~
-~
+(none)~
+(null)~
 0 0 8240
 D3
-~
-~
+(none)~
+(null)~
 BGNR 0 8233
 M 0 H 100
 S
@@ -3282,23 +3305,23 @@ Loud bass music thumps hard against the walls, and it seems they actuallybegin t
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D2
-~
-~
+(none)~
+(null)~
 0 0 8243
 D3
-~
-~
+(none)~
+(null)~
 0 0 8241
 M 0 H 100
 S
@@ -3308,27 +3331,27 @@ Loud bass music thumps hard against the walls, and it seems they actuallybegin t
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8242
 D2
-~
-~
+(none)~
+(null)~
 0 0 8244
 D3
-~
-~
+(none)~
+(null)~
 0 0 8240
 M 0 H 100
 S
@@ -3338,27 +3361,27 @@ Loud bass music thumps hard against the walls, and it seems they actuallybegin t
 0 12 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8243
 D2
-~
-~
+(none)~
+(null)~
 0 0 8245
 D3
-~
-~
+(none)~
+(null)~
 0 0 8239
 M 0 H 100
 S
@@ -3368,27 +3391,27 @@ This wide hallway has a white tile floor, which seems to glow from thelarge amou
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8244
 D1
-~
-~
+(none)~
+(null)~
 0 0 8262
 D2
-~
-~
+(none)~
+(null)~
 0 0 8246
 M 0 H 100
 S
@@ -3398,23 +3421,23 @@ This wide hallway has a white tile floor, which seems to glow from thelarge amou
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8245
 D4
-~
-~
+(none)~
+(null)~
 0 0 8238
 M 0 H 100
 S
@@ -3424,23 +3447,23 @@ Heavy bass music can clearly be heard at this point in the hallway whichappears 
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 8248
 D3
-~
-~
+(none)~
+(null)~
 0 0 8236
 M 0 H 100
 S
@@ -3450,27 +3473,27 @@ Heavy bass music can clearly be heard at this point in the hallway whichappears 
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
 A plain wooden door sits here in its' hinges waiting to be used.~
-~
+(null)~
 A 0 8261
 D1
-~
-~
+(none)~
+(null)~
 0 0 8249
 D3
-~
-~
+(none)~
+(null)~
 0 0 8247
 M 0 H 100
 S
@@ -3480,23 +3503,23 @@ Heavy bass music can clearly be heard at this point in the hallway whichappears 
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 8250
 D3
-~
-~
+(none)~
+(null)~
 0 0 8248
 M 0 H 100
 S
@@ -3506,27 +3529,27 @@ This room is faintly lit by the light filtering through the hangingplastic sheet
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
 Several, almost clear, strips of plastic hang from the top of the doorwayallowing light and freezing cold air to filter out.  It's hard to tellwhat's beyond this point.  ~
-~
+(null)~
 0 0 8251
 D1
-~
-~
+(none)~
+(null)~
 0 0 8228
 D3
-~
-~
+(none)~
+(null)~
 0 0 8249
 M 0 H 100
 S
@@ -3536,23 +3559,23 @@ This small metallic room is lined with large, computerized machineshooked up to 
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 ABCIR 8069 8252
 D2
 Several, almost clear, strips of plastic hang from the top of the doorwayallowing light and freezing cold air to filter out.  It's hard to tellwhat's beyond this point.  ~
-~
+(null)~
 0 0 8250
 M 0 H 100
 S
@@ -3562,31 +3585,31 @@ This small metallic room is lined with aisles and aisles of small metalshelves w
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 E
-bags~
+aisle~
+These small metal shelves have frost buildup on them so thick it looksas if it is actually a living organism growing on it.  The large,clear, plastic bags hold some type of red liquid, and they appear tohave different types of tags on each bag on each aisle.  One, forexample, says: 'O+ Jan1994'.~
+E
+aisles~
 These small metal shelves have frost buildup on them so thick it looksas if it is actually a living organism growing on it.  The large, clear,plastic bags hold some type of red liquid, and they appear to havedifferent types of tags on each bag on each aisle.  One, for example,says: 'O+ Jan1994'.~
 E
 shelves~
 These small metal shelves have frost buildup on them so thick it looksas if it is actually a living organism growing on it.  The large, clear,plastic bags hold some type of red liquid, and they appear to havedifferent types of tags on each bag on each aisle.  One, for example,says: 'O+ Jan1994'.~
 E
-aisles~
+bags~
 These small metal shelves have frost buildup on them so thick it looksas if it is actually a living organism growing on it.  The large, clear,plastic bags hold some type of red liquid, and they appear to havedifferent types of tags on each bag on each aisle.  One, for example,says: 'O+ Jan1994'.~
-E
-aisle~
-These small metal shelves have frost buildup on them so thick it looksas if it is actually a living organism growing on it.  The large,clear, plastic bags hold some type of red liquid, and they appear tohave different types of tags on each bag on each aisle.  One, forexample, says: 'O+ Jan1994'.~
 D2
-~
-~
+(none)~
+(null)~
 ABCIR 8069 8251
 M 0 H 100
 S
@@ -3596,19 +3619,19 @@ The stench of death permeates this cavern, as well as being pitch blackin here. 
 0 9 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8254
 M 0 H 100
 S
@@ -3618,23 +3641,23 @@ The stench of death permeates this cavern, as well as being pitch blackin here. 
 0 13 7
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8255
 D2
-~
-~
+(none)~
+(null)~
 0 0 8253
 M 0 H 100
 S
@@ -3644,23 +3667,23 @@ The stench of death permeates this cavern, as well as being pitch blackin here. 
 0 9 6
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 8256
 D2
 A deep pool of thick reddish liquid sits here blocking the path.  It istoo dark to see any farther south than that.  ~
-~
+(null)~
 0 0 8254
 M 0 H 100
 S
@@ -3670,23 +3693,23 @@ The stench of death permeates this cavern.  Large pipes run through hereon the f
 0 9 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D2
-~
-~
+(none)~
+(null)~
 MT 0 8257
 D3
-~
-~
+(none)~
+(null)~
 0 0 8255
 M 0 H 100
 S
@@ -3696,23 +3719,23 @@ This room is pitch black.  The plain red brick walls are covered with amyriad of
 0 9 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
+(none)~
 wall~
 MT 0 8256
 D2
-~
-~
+(none)~
+(null)~
 0 0 8258
 D4
 Small beams of light filter down from above through the cracks in themanhole cover.  ~
@@ -3726,23 +3749,23 @@ This room is pitch black.  The plain red brick walls are covered with amyriad of
 0 9 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8257
 D2
-~
-~
+(none)~
+(null)~
 0 0 8259
 M 0 H 100
 S
@@ -3752,23 +3775,23 @@ This room is pitch black.  The plain red brick walls are covered with amyriad of
 0 9 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8258
 D2
-~
-~
+(none)~
+(null)~
 0 0 8260
 M 0 H 100
 S
@@ -3778,23 +3801,23 @@ This room is pitch black.  The nondescript cement floor is covered withsome kind
 0 9 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8259
 D2
-~
-~
+(none)~
+(null)~
 0 0 8228
 M 0 H 100
 S
@@ -3804,27 +3827,27 @@ Loud bass music, black lights, strobe and laser lights dominate thisclub, a larg
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 8270
 D2
-~
-~
+(none)~
+(null)~
 A 0 8248
 D5
-~
-~
+(none)~
+(null)~
 0 0 8262
 M 0 H 100
 S
@@ -3834,27 +3857,27 @@ This wide hallway has a white tile floor, which seems to glow from thelarge amou
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8263
 D3
-~
-~
+(none)~
+(null)~
 0 0 8245
 D4
-~
-~
+(none)~
+(null)~
 0 0 8261
 M 0 H 100
 S
@@ -3864,27 +3887,27 @@ The multitude of strobe lights, black lights, laser lights and coloredlights see
 0 12 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8264
 D1
-~
-~
+(none)~
+(null)~
 0 0 8268
 D2
-~
-~
+(none)~
+(null)~
 0 0 8262
 M 0 H 100
 S
@@ -3894,27 +3917,27 @@ The multitude of strobe lights, black lights, laser lights and coloredlights see
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8265
 D1
-~
-~
+(none)~
+(null)~
 0 0 8267
 D2
-~
-~
+(none)~
+(null)~
 0 0 8263
 M 0 H 100
 S
@@ -3924,23 +3947,23 @@ The multitude of strobe lights, black lights, laser lights and coloredlights see
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 8266
 D2
-~
-~
+(none)~
+(null)~
 0 0 8264
 M 0 H 100
 S
@@ -3950,23 +3973,23 @@ The multitude of strobe lights, black lights, laser lights and coloredlights see
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D2
-~
-~
+(none)~
+(null)~
 0 0 8267
 D3
-~
-~
+(none)~
+(null)~
 0 0 8265
 M 0 H 100
 S
@@ -3976,27 +3999,27 @@ The multitude of strobe lights, black lights, laser lights and coloredlights see
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8266
 D2
-~
-~
+(none)~
+(null)~
 0 0 8268
 D3
-~
-~
+(none)~
+(null)~
 0 0 8264
 M 0 H 100
 S
@@ -4006,23 +4029,23 @@ The multitude of strobe lights, black lights, laser lights and coloredlights see
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8267
 D3
-~
-~
+(none)~
+(null)~
 0 0 8263
 M 0 H 100
 S
@@ -4032,23 +4055,23 @@ Climbing up the small metal ladder built into the wall leads up to asmall securi
 0 12 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D3
-~
-~
+(none)~
+(null)~
 0 0 8271
 D5
-~
-~
+(none)~
+(null)~
 0 0 8270
 M 0 H 100
 S
@@ -4058,23 +4081,23 @@ The one place in the club that is using actual light, although not a lotof it.  
 0 24 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D3
-~
-~
+(none)~
+(null)~
 0 0 8261
 D4
-~
-~
+(none)~
+(null)~
 0 0 8269
 M 0 H 100
 S
@@ -4084,23 +4107,23 @@ This walkway is just as narrow as the platform east of here, but lacksthe suppor
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 8269
 D3
-~
-~
+(none)~
+(null)~
 0 0 8272
 M 0 H 100
 S
@@ -4110,23 +4133,23 @@ This walkway is just as narrow as the platform west of here, but lacksthe suppor
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 8271
 D3
-~
-~
+(none)~
+(null)~
 0 0 8237
 M 0 H 100
 S
@@ -4136,23 +4159,23 @@ This room is pitch black.  The plain brick walls with pipes coming in orout of t
 0 9 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D4
-~
-~
+(none)~
+(null)~
 0 0 8026
 D5
-~
-~
+(none)~
+(null)~
 0 0 8228
 M 0 H 100
 S
@@ -4162,23 +4185,23 @@ This room is pitch black.  The plain brick walls with pipes coming in orout of t
 0 9 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D4
-~
-~
+(none)~
+(null)~
 ABCJMR 8069 8064
 D5
-~
-~
+(none)~
+(null)~
 0 0 8229
 M 0 H 100
 S
@@ -4190,16 +4213,16 @@ V
 8181 -1
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 M 0 H 100
 S
 #8276
@@ -4208,115 +4231,131 @@ Looking around the sheer elegance and beauty that makes up this roommakes one wo
 0 12 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 AB 0 8005
 M 0 H 100
 S
 #8001
 Along Second in Front of a Hotel~
-The shadow under the hotel canopy seems ominous compared to the gloomaround the rest of the street.  The canopy itself seems harmless, as it ismade of plain green vinyl that has been worn over the years from the weatherand the passing traffic.  A small red rose sits above the white boldlettering on the canopy, which spell out: {WTHE HAVEN.  {gTo the west is theentrance to the hotel, and to the north there seems to be a parking lot forthose brave enough to stay the night.  {x ~
+The shadow under the hotel canopy seems ominous compared to the gloom
+around the rest of the street.  The canopy itself seems harmless, as it is
+made of plain green vinyl that has been worn over the years from the weather
+and the passing traffic.  A small red rose sits above the white bold
+lettering on the canopy, which spell out: THE HAVEN.  To the west is the
+entrance to the hotel, and to the north there seems to be a parking lot for
+those brave enough to stay the night.  
+~
 0 4 11
 E
 XNUMB1~
 Along Second in Front of a Hotel~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8003
 D2
-~
-~
+(none)~
+(null)~
 0 0 8052
 D3
-~
-~
+(none)~
+(null)~
 0 0 8002
 M 0 H 100
 S
 #8002
 The Hotel Lobby~
-An ancient looking chandelier hangs from the high ceiling here, allowingthe light to drift down slowly and reflect back up from the well polishedyet weathered black and white checkered tile floors.  The egg whitewallpaper seems as old as time itself.  There seems to be some kind of ranksmell coming from the south, and the lobby continues west towards the soundsof elevators humming quietly.  A small sign is on the counter.  ~
+An ancient looking chandelier hangs from the high ceiling here, allowing
+the light to drift down slowly and reflect back up from the well polished
+yet weathered black and white checkered tile floors.  The egg white
+wallpaper seems as old as time itself.  There seems to be some kind of rank
+smell coming from the south, and the lobby continues west towards the sounds
+of elevators humming quietly.  A small sign is on the counter.  
+~
 0 8 0
 E
 XNUMB1~
 The Hotel Lobby~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
 The Hotel Lobby~
 E
 XDDREAM~
-~
-E
-small~
-Free instructions provided by the hotel management: buy _ shop - allows you to buy something from the shopkeeper.list shop  - the shopkeeper will tell you the price and sort of items available.~
+None~
 E
 sign~
 Free instructions provided by the hotel management: buy _ shop - allows you to buy something from the shopkeeper.list shop  - the shopkeeper will tell you the price and sort of items available.~
+E
+small~
+Free instructions provided by the hotel management: buy _ shop - allows you to buy something from the shopkeeper.list shop  - the shopkeeper will tell you the price and sort of items available.~
 D1
-~
-~
+(none)~
+(null)~
 0 0 8001
 D2
-~
-~
+(none)~
+(null)~
 AB 0 8008
 D3
-~
-~
+(none)~
+(null)~
 0 0 8012
 M 0 H 100
 S
 #8003
 Along Second Near a Parking Lot~
-The traffic around here seems sparse, and the parking lot to the westseems overly large as it is barely used at all.  Oil stains litter theground everywhere here.  ~
+The traffic around here seems sparse, and the parking lot to the west
+seems overly large as it is barely used at all.  Oil stains litter the
+ground everywhere here.  
+~
 0 0 1
 E
 XNUMB1~
 Along Second Near a Parking Lot~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8080
 D2
-~
-~
+(none)~
+(null)~
 0 0 8001
 D3
-~
-~
+(none)~
+(null)~
 0 0 8004
 M 0 H 100
 S
@@ -4326,45 +4365,45 @@ The old asphault here has faint images of arrows pointing in differentdirections
 0 0 1
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8010
 D1
-~
-~
+(none)~
+(null)~
 0 0 8003
 M 0 H 100
 S
 #8005
 A Bath and Spa~
-~
+(null)~
 0 12 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D2
-~
-~
+(none)~
+(null)~
 AB 0 8276
 M 0 H 100
 S
@@ -4374,26 +4413,26 @@ The gray carpet here has been worn down to threads, and the padding seemsto be t
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 E
 110~
 A faded blue door rests here with a white sign on it that says: 110~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8013
 D2
-~
-~
+(none)~
+(null)~
 0 0 8020
 D3
 A faded blue door rests here with a white sign on it that says: 110 ~
@@ -4407,72 +4446,82 @@ The lighting in this room comes from a cylindrical tower that rises upbeyond the
 0 12 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D3
 A Quiet Hallway can be seen from here.  ~
-~
+(null)~
 0 0 8120
 D4
 A tall winding staircase going up for what seems to be infinity can beseen from here.  ~
-~
+(null)~
 0 0 8153
 D5
 Looking over the railing, a tall winding staircase going down for whatseems to be infinity can be seen from here.  ~
-~
+(null)~
 0 0 8032
 M 0 H 100
 S
 #8008
 Male Bathroom~
-This small room has just enough space in it to be uncomfortable.  A smalllight bulb illuminates the room while hanging from the ceiling from a singleblack cord.  The once egg white walls are splattered with dried blood; driedurine and faeces litter the grey tile floor making the stench of this placejust awful.  There is of course no toilet paper in sight.  ~
+This small room has just enough space in it to be uncomfortable.  A small
+light bulb illuminates the room while hanging from the ceiling from a single
+black cord.  The once egg white walls are splattered with dried blood; dried
+urine and faeces litter the grey tile floor making the stench of this place
+just awful.  There is of course no toilet paper in sight.  
+~
 0 8 0
 E
 XNUMB1~
 Male Bathroom~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
 Male Bathroom~
 E
 XDDREAM~
-~
+None~
 D0
 A pale blue door rests here, with a white sign that says: Male Bathroom.  ~
-~
+(null)~
 AB 0 8002
 M 0 H 100
 S
 #8009
 Female Bathroom~
-This small room has just enough space in it to be uncomfortable.  A smalllight bulb illuminates the room while hanging from the ceiling from a singleblack cord.  The once egg white walls are splattered with dried blood; driedurine and faeces litter the grey tile floor making the stench of this placejust awful.  There is of course no toilet paper in sight.  ~
+This small room has just enough space in it to be uncomfortable.  A small
+light bulb illuminates the room while hanging from the ceiling from a single
+black cord.  The once egg white walls are splattered with dried blood; dried
+urine and faeces litter the grey tile floor making the stench of this place
+just awful.  There is of course no toilet paper in sight.  
+~
 0 0 0
 E
 XNUMB1~
 Female Bathroom~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
 Female Bathroom~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
-ABH 0 8012
+(none)~
+(null)~
+AH 0 8012
 M 0 H 100
 S
 #8010
@@ -4481,27 +4530,27 @@ Oil stains litter the ground everywhere here, that along with the fadedyellow pa
 0 0 1
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8050
 D2
-~
-~
+(none)~
+(null)~
 0 0 8004
 D3
-~
-~
+(none)~
+(null)~
 0 0 8011
 M 0 H 100
 S
@@ -4511,29 +4560,36 @@ The old and cracked asphault here has faint lines for no parkingoverlapped by ot
 0 0 1
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8051
 D1
-~
-~
+(none)~
+(null)~
 0 0 8010
 M 0 H 100
 S
 #8012
 The Hotel Lobby~
-An ancient looking chandelier hangs from the high ceiling here, allowingthe light to drift down slowly and reflect up from the well polished yetweathered black and white checkered tile floors.  The egg white wallpaperseems as old as time itself.  There seems to be some kind of rank smellcoming from the south, and a quiet hallway begins to the west.  To the northsits a pair of elevator doors.  <ooc> 'press button' to call the elevator,and 'enter elevator' to go inside.  ~
+An ancient looking chandelier hangs from the high ceiling here, allowing
+the light to drift down slowly and reflect up from the well polished yet
+weathered black and white checkered tile floors.  The egg white wallpaper
+seems as old as time itself.  There seems to be some kind of rank smell
+coming from the south, and a quiet hallway begins to the west.  To the north
+sits a pair of elevator doors.  <ooc> 'press button' to call the elevator,
+and 'enter elevator' to go inside.  
+~
 0 1032 0
 V
 8275 0
@@ -4542,24 +4598,24 @@ XNUMB1~
 The Hotel Lobby~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
 The Hotel Lobby~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 8002
 D2
 A pale blue door rests here, with a white sign that says: Female Bathroom.  ~
-~
-ABH 0 8009
+(null)~
+AH 0 8009
 D3
-~
-~
+(none)~
+(null)~
 0 0 8013
 M 0 H 100
 S
@@ -4572,23 +4628,23 @@ XNUMB1~
 Intersection in a Quiet Hallway~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
 Intersection in a Quiet Hallway~
 E
 XDDREAM~
-~
+None~
 E
 108~
 A faded blue door rests here with a white sign on it that says: 108~
 D1
-~
+(none)~
 east~
 0 0 8012
 D2
-~
-~
+(none)~
+(null)~
 0 0 8006
 D3
 A faded blue door rests here with a white sign on it that says: 108 ~
@@ -4598,97 +4654,97 @@ M 0 H 100
 S
 #8014
 A Quiet Hallway~
-~
+(null)~
 0 0 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8015
 D3
-~
-~
+(none)~
+(null)~
 0 0 8017
 M 0 H 100
 S
 #8015
 A Quiet Hallway~
-~
+(null)~
 0 0 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D2
-~
-~
+(none)~
+(null)~
 0 0 8014
 D3
-~
-~
+(none)~
+(null)~
 0 0 8016
 M 0 H 100
 S
 #8016
 lvl 1 hotel room - cheap~
-~
+(null)~
 0 0 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 8015
 M 0 H 100
 S
 #8017
 lvl 1 hotel room - cheap~
-~
+(null)~
 0 0 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 8014
 M 0 H 100
 S
@@ -4701,29 +4757,29 @@ XNUMB1~
 A Small Hall~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
 A Small Hall~
 E
 XDDREAM~
-~
+None~
 E
-light~
-A small white light switch sits here in the wall waiting to be used.It is in excellent condition.~
+doorstop~
+A small rubber doorstop sits here on the gray carpet trying to keep the door from making a hole into the wall.It is in excellent condition.~
 E
 switch~
 A small white light switch sits here in the wall waiting to be used.It is in excellent condition.~
 E
-doorstop~
-A small rubber doorstop sits here on the gray carpet trying to keep the door from making a hole into the wall.It is in excellent condition.~
+light~
+A small white light switch sits here in the wall waiting to be used.It is in excellent condition.~
 D1
-~
-~
+(none)~
+(null)~
 ABH 8016 8013
 D3
-~
-~
+(none)~
+(null)~
 0 0 8033
 M 0 H 100
 S
@@ -4733,32 +4789,32 @@ This small hallway is adorned only with a light switch, and a doorstopscrewed in
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 E
-light~
-A small white light switch sits here in the wall waiting to be used.It is in excellent condition.~
+doorstop~
+A small rubber doorstop sits here on the gray carpet trying to keep the door from making a hole into the wall.It is in excellent condition.~
 E
 switch~
 A small white light switch sits here in the wall waiting to be used.It is in excellent condition.~
 E
-doorstop~
-A small rubber doorstop sits here on the gray carpet trying to keep the door from making a hole into the wall.It is in excellent condition.~
+light~
+A small white light switch sits here in the wall waiting to be used.It is in excellent condition.~
 D1
-~
-~
+(none)~
+(null)~
 ABH 8016 8006
 D3
-~
-~
+(none)~
+(null)~
 0 0 8024
 M 0 H 100
 S
@@ -4768,27 +4824,27 @@ In the intersection here it seems as if the mildew has just stoppedgrowing, and 
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8006
 D1
-~
-~
+(none)~
+(null)~
 0 0 8025
 D3
-~
-~
+(none)~
+(null)~
 0 0 8021
 M 0 H 100
 S
@@ -4798,23 +4854,23 @@ The lights overhead flicker irritatingly, leaving many shadows all aroundthe hal
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 8020
 D3
-~
-~
+(none)~
+(null)~
 0 0 8022
 M 0 H 100
 S
@@ -4824,23 +4880,23 @@ The lighting here is mostly nonexistent, and the flickering lights to theeast of
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 8021
 D3
-~
-~
+(none)~
+(null)~
 0 0 8023
 M 0 H 100
 S
@@ -4850,27 +4906,27 @@ The lighting here comes from the north, as most of the lights in thissection of 
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8027
 D1
-~
-~
+(none)~
+(null)~
 0 0 8022
 D3
-~
-~
+(none)~
+(null)~
 0 0 8028
 M 0 H 100
 S
@@ -4880,19 +4936,19 @@ This little cubby of a bedroom simply has an old mattress thrown on thefloor and
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 8019
 M 0 H 100
 S
@@ -4902,38 +4958,38 @@ This little cubby seems to have an atmosphere of it's own.  The walls arecovered
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 E
-sign~
-This fountain is out of order, sorry for the inconvenience!!   MNGT~
-E
-small~
-This fountain is out of order, sorry for the inconvenience!!   MNGT~
-E
-dried~
+drops~
 Several spots on the floor look to be what used to be blood spots thatnever got cleaned up and stained the tile.  Whatever happened here to spillblood looks to have happened some time ago.  They seem to originate from thefountain on the eastern wall, but it looks almost like one is under thewall.  ~
 E
 blood~
 Several spots on the floor look to be what used to be blood spots thatnever got cleaned up and stained the tile.  Whatever happened here to spillblood looks to have happened some time ago.  They seem to originate from thefountain on the eastern wall, but it looks almost like one is under thewall.  ~
 E
-drops~
+dried~
 Several spots on the floor look to be what used to be blood spots thatnever got cleaned up and stained the tile.  Whatever happened here to spillblood looks to have happened some time ago.  They seem to originate from thefountain on the eastern wall, but it looks almost like one is under thewall.  ~
+E
+small~
+This fountain is out of order, sorry for the inconvenience!!   MNGT~
+E
+sign~
+This fountain is out of order, sorry for the inconvenience!!   MNGT~
 D1
 The slight outline of a door can be seen here.  ~
 wall~
 ABM 0 8026
 D3
-~
-~
+(none)~
+(null)~
 0 0 8020
 M 0 H 100
 S
@@ -4943,23 +4999,23 @@ This room is pitch black.  The plain brick walls with pipes coming in orout of t
 0 13 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D3
-~
-~
+(none)~
+(null)~
 ABM 0 8025
 D5
-~
-~
+(none)~
+(null)~
 0 0 8273
 M 0 H 100
 S
@@ -4969,23 +5025,23 @@ The lighting in this room comes from a cylindrilical tower that rises upbeyond t
 0 12 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D2
 A Quiet Hallway can be seen from here.  ~
-~
+(null)~
 0 0 8023
 D4
 A tall winding staircase going up for what seems to be infinity can beseen from here.  ~
-~
+(null)~
 0 0 8032
 M 0 H 100
 S
@@ -4995,27 +5051,27 @@ The floorboards here seem to have fallen down to the foundation of thebuilding. 
 0 12 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8029
 D1
-~
-~
+(none)~
+(null)~
 0 0 8023
 D3
 A faded blue door rests here with long scratch marks up and down theentire surface of it.  ~
-~
+(null)~
 A 8016 8063
 M 0 H 100
 S
@@ -5025,23 +5081,23 @@ This room is a little more lit than the hall just south of here due tothe window
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8030
 D2
-~
-~
+(none)~
+(null)~
 0 0 8028
 M 0 H 100
 S
@@ -5051,27 +5107,27 @@ This room is well lit due to the window in the west wall.  The smell oflaundry d
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 8031
 D2
-~
-~
+(none)~
+(null)~
 0 0 8029
 D3
-~
-~
+(none)~
+(null)~
 BGN 0 8068
 M 0 H 100
 S
@@ -5081,19 +5137,19 @@ This little corner is the home of a large dryer spewing lint and smokeall over t
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D3
-~
-~
+(none)~
+(null)~
 0 0 8030
 M 0 H 100
 S
@@ -5103,27 +5159,27 @@ The lighting in this room comes from a cylindrical tower that rises upbeyond the
 0 12 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D3
 A Quiet Hallway can be seen from here.  ~
-~
+(null)~
 0 0 8085
 D4
 A tall winding staircase going up for what seems to be infinity can beseen from here.  ~
-~
+(null)~
 0 0 8007
 D5
 Looking over the railing, the bottom of the staircase on the first floorcan be seen.  ~
-~
+(null)~
 0 0 8027
 M 0 H 100
 S
@@ -5136,16 +5192,16 @@ XNUMB1~
 A Filthy Bedroom~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
 A Filthy Bedroom~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 8018
 M 0 H 100
 S
@@ -5158,20 +5214,20 @@ XNUMB1~
 A Turn in a Quiet Hallway~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
 A Turn in a Quiet Hallway~
 E
 XDDREAM~
-~
+None~
 D2
-~
-~
+(none)~
+(null)~
 0 0 8013
 D3
-~
-~
+(none)~
+(null)~
 0 0 8035
 M 0 H 100
 S
@@ -5184,20 +5240,20 @@ XNUMB1~
 A Quiet Hallway~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
 A Quiet Hallway~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 8034
 D3
-~
-~
+(none)~
+(null)~
 0 0 8036
 M 0 H 100
 S
@@ -5210,26 +5266,26 @@ XNUMB1~
 A Turn in a Quiet Hallway~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
 A Turn in a Quiet Hallway~
 E
 XDDREAM~
-~
+None~
 E
 106~
 A faded blue door rests here with a sign on it that says: 106~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8039
 D1
-~
-~
+(none)~
+(null)~
 0 0 8035
 D3
-~
+(none)~
 106~
 ABHW 8016 8037
 M 0 H 100
@@ -5243,29 +5299,29 @@ XNUMB1~
 A Small Hall~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
 A Small Hall~
 E
 XDDREAM~
-~
+None~
 E
-light~
-A small white light switch sits here in the wall waiting to be used.It is in excellent condition.~
+doorstop~
+A small rubber doorstop sits here on the gray carpet trying to keep the door from making a hole into the wall.It is in excellent condition.~
 E
 switch~
 A small white light switch sits here in the wall waiting to be used.It is in excellent condition.~
 E
-doorstop~
-A small rubber doorstop sits here on the gray carpet trying to keep the door from making a hole into the wall.It is in excellent condition.~
+light~
+A small white light switch sits here in the wall waiting to be used.It is in excellent condition.~
 D1
-~
-~
+(none)~
+(null)~
 ABHW 8016 8036
 D3
-~
-~
+(none)~
+(null)~
 0 0 8038
 M 0 H 100
 S
@@ -5278,16 +5334,16 @@ XNUMB1~
 A Filthy Bedroom~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
 A Filthy Bedroom~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 8037
 M 0 H 100
 S
@@ -5300,30 +5356,30 @@ XNUMB1~
 A Turn in a Quiet Hallway~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
 A Turn in a Quiet Hallway~
 E
 XDDREAM~
-~
-E
-103~
-A faded blue door rests here with a white sign on it that says: 103~
+None~
 E
 104~
 A faded blue door rests here with a white sign on it that says: 104~
+E
+103~
+A faded blue door rests here with a white sign on it that says: 103~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8044
 D1
 A faded blue door rests here with a white sign on it that says: 103 ~
 103~
 A 0 8042
 D2
-~
-~
+(none)~
+(null)~
 0 0 8036
 D3
 A faded blue door rests here with a white sign on it that says: 104 ~
@@ -5340,20 +5396,20 @@ XNUMB1~
 A Small Hall~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
 A Small Hall~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 A 0 8039
 D3
-~
-~
+(none)~
+(null)~
 0 0 8041
 M 0 H 100
 S
@@ -5366,16 +5422,16 @@ XNUMB1~
 A Bedroom~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
 A Bedroom~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 8040
 M 0 H 100
 S
@@ -5388,20 +5444,20 @@ XNUMB1~
 A Small Hall~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
 A Small Hall~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 8043
 D3
-~
-~
+(none)~
+(null)~
 A 0 8039
 M 0 H 100
 S
@@ -5414,16 +5470,16 @@ XNUMB1~
 A Bedroom~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
 A Bedroom~
 E
 XDDREAM~
-~
+None~
 D3
-~
-~
+(none)~
+(null)~
 0 0 8042
 M 0 H 100
 S
@@ -5436,26 +5492,26 @@ XNUMB1~
 End of a Quiet Hallway~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
 End of a Quiet Hallway~
 E
 XDDREAM~
-~
-E
-101~
-A blue door rests here with a white sign on it that says: 101~
+None~
 E
 key report~
 A blue door rests here with a white sign on it that says: 102~
+E
+101~
+A blue door rests here with a white sign on it that says: 101~
 D1
 A blue door rests here with a white sign on it that says: 101 ~
 101~
 A 0 8047
 D2
-~
-~
+(none)~
+(null)~
 0 0 8039
 D3
 A blue door rests here with a white sign on it that says: 102 ~
@@ -5472,20 +5528,20 @@ XNUMB1~
 A Small Hall~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
 A Small Hall~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 A 0 8044
 D3
-~
-~
+(none)~
+(null)~
 0 0 8046
 M 0 H 100
 S
@@ -5498,16 +5554,16 @@ XNUMB1~
 A Bedroom~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
 A Bedroom~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 8045
 M 0 H 100
 S
@@ -5520,20 +5576,20 @@ XNUMB1~
 A Small Hall~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
 A Small Hall~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 8048
 D3
-~
-~
+(none)~
+(null)~
 A 0 8044
 M 0 H 100
 S
@@ -5546,16 +5602,16 @@ XNUMB1~
 A Bedroom~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
 A Bedroom~
 E
 XDDREAM~
-~
+None~
 D3
-~
-~
+(none)~
+(null)~
 0 0 8047
 M 0 H 100
 S
@@ -5565,27 +5621,27 @@ Another blue door appears just south of here with a white numbered signon the fr
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 8129
 D2
 A blue door rests here with a white sign on it that says: 304 ~
 304~
 ABCFRW 8018 8122
 D3
-~
-~
+(none)~
+(null)~
 0 0 8126
 M 0 H 100
 S
@@ -5595,29 +5651,29 @@ The asphault here is cracked and worn, in fact the grass has started tosprout up
 0 4 1
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
-E
-traces~
-Small streaks of blood fill in some of the cracks near the solid ironmanhole cover here.  It seems not even the rain can wash away the crime thatmust have taken place here.  ~
+None~
 E
 blood~
 Small streaks of blood fill in some of the cracks near the solid ironmanhole cover here.  It seems not even the rain can wash away the crime thatmust have taken place here.  ~
+E
+traces~
+Small streaks of blood fill in some of the cracks near the solid ironmanhole cover here.  It seems not even the rain can wash away the crime thatmust have taken place here.  ~
 D2
-~
-~
+(none)~
+(null)~
 0 0 8010
 D3
-~
-~
+(none)~
+(null)~
 0 0 8051
 D5
 A trail of dried blood seems to lead to a manhole cover here.  ~
@@ -5631,23 +5687,23 @@ The asphault here is cracked and worn, in fact the grass has started tosprout up
 0 0 1
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 8050
 D2
-~
-~
+(none)~
+(null)~
 0 0 8011
 M 0 H 100
 S
@@ -5657,23 +5713,23 @@ The road begins to dip down towards the north into a dark alley whichruns down p
 0 0 1
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8001
 D2
-~
-~
+(none)~
+(null)~
 0 0 8053
 M 0 H 100
 S
@@ -5686,20 +5742,20 @@ XNUMB1~
 Along Second Near a Hotel~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8052
 D2
-~
-~
+(none)~
+(null)~
 0 0 10016
 M 0 H 100
 S
@@ -5712,20 +5768,20 @@ XNUMB1~
 Along Second Avenue~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 12578
 D2
-~
-~
+(none)~
+(null)~
 0 0 8082
 M 0 H 100
 S
@@ -5738,20 +5794,20 @@ XNUMB1~
 Along Patterson Street~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 10016
 D3
-~
-~
+(none)~
+(null)~
 0 0 8056
 M 0 H 100
 S
@@ -5764,20 +5820,20 @@ XNUMB1~
 Along Patterson Street~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 8055
 D3
-~
-~
+(none)~
+(null)~
 0 0 8057
 M 0 H 100
 S
@@ -5790,20 +5846,20 @@ XNUMB1~
 Along Patterson Street~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 8056
 D3
-~
-~
+(none)~
+(null)~
 0 0 8058
 M 0 H 100
 S
@@ -5816,20 +5872,20 @@ XNUMB1~
 Along Patterson Street~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 8057
 D3
-~
-~
+(none)~
+(null)~
 0 0 8059
 M 0 H 100
 S
@@ -5842,20 +5898,20 @@ XNUMB1~
 Along Patterson Street~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 8058
 D3
-~
-~
+(none)~
+(null)~
 0 0 8060
 M 0 H 100
 S
@@ -5868,20 +5924,20 @@ XNUMB1~
 Along Patterson Street~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 8059
 D3
-~
-~
+(none)~
+(null)~
 0 0 8061
 M 0 H 100
 S
@@ -5894,20 +5950,20 @@ XNUMB1~
 Along Patterson Street~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 8060
 D3
-~
-~
+(none)~
+(null)~
 0 0 8062
 M 0 H 100
 S
@@ -5920,20 +5976,20 @@ XNUMB1~
 Along Patterson Street~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8063
 D1
-~
-~
+(none)~
+(null)~
 0 0 8061
 M 0 H 100
 S
@@ -5946,24 +6002,24 @@ XNUMB1~
 Down a Back Alley~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8064
 D1
 A faded blue door rests here with long scratch marks up and down theentire surface of it.  ~
-~
+(null)~
 A 0 8028
 D2
-~
-~
+(none)~
+(null)~
 0 0 8062
 M 0 H 100
 S
@@ -5976,31 +6032,31 @@ XNUMB1~
 Below a Fire Escape~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 E
 manhole~
 A trail of dried blood seems to lead to a manhole cover here.~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8068
 D2
-~
-~
+(none)~
+(null)~
 0 0 8063
 D4
-~
-~
+(none)~
+(null)~
 0 0 8065
 D5
-~
-~
+(none)~
+(null)~
 ABCJMR 0 8274
 M 0 H 100
 S
@@ -6010,23 +6066,23 @@ This ancient, rusted iron ladder sits here in a state of almost disuse. It defin
 0 4 1
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D2
-~
-~
+(none)~
+(null)~
 0 0 8066
 D5
-~
-~
+(none)~
+(null)~
 0 0 8064
 M 0 H 100
 S
@@ -6036,27 +6092,27 @@ This ancient, rusted iron ladder sits here in a state of almost disuse. It defin
 0 4 1
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8065
 D1
 A faded blue door rests here with long scratch marks up and down theentire surface of it.  ~
-~
+(null)~
 AH 0 8084
 D4
-~
-~
+(none)~
+(null)~
 0 0 8067
 M 0 H 100
 S
@@ -6066,23 +6122,23 @@ This ancient, rusted iron ladder sits here in a state of almost disuse. It defin
 0 4 1
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8144
 D5
-~
-~
+(none)~
+(null)~
 0 0 8066
 M 0 H 100
 S
@@ -6095,24 +6151,24 @@ XNUMB1~
 Down a Back Alley~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8069
 D1
-~
-~
+(none)~
+(null)~
 BGN 0 8030
 D2
-~
-~
+(none)~
+(null)~
 0 0 8064
 M 0 H 100
 S
@@ -6125,20 +6181,20 @@ XNUMB1~
 Down a Back Alley~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8070
 D2
-~
-~
+(none)~
+(null)~
 0 0 8068
 M 0 H 100
 S
@@ -6151,20 +6207,20 @@ XNUMB1~
 Down a Back Alley~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8071
 D2
-~
-~
+(none)~
+(null)~
 0 0 8069
 M 0 H 100
 S
@@ -6177,20 +6233,20 @@ XNUMB1~
 Down a Back Alley~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8072
 D2
-~
-~
+(none)~
+(null)~
 0 0 8070
 M 0 H 100
 S
@@ -6203,20 +6259,20 @@ XNUMB1~
 Down a Back Alley~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 8073
 D2
-~
-~
+(none)~
+(null)~
 0 0 8071
 M 0 H 100
 S
@@ -6229,20 +6285,20 @@ XNUMB1~
 Down a Back Alley~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 8074
 D3
-~
-~
+(none)~
+(null)~
 0 0 8072
 M 0 H 100
 S
@@ -6255,20 +6311,20 @@ XNUMB1~
 Down a Back Alley~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 8075
 D3
-~
-~
+(none)~
+(null)~
 0 0 8073
 M 0 H 100
 S
@@ -6281,20 +6337,20 @@ XNUMB1~
 Down a Back Alley~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 8076
 D3
-~
-~
+(none)~
+(null)~
 0 0 8074
 M 0 H 100
 S
@@ -6307,20 +6363,20 @@ XNUMB1~
 Down a Back Alley~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 8077
 D3
-~
-~
+(none)~
+(null)~
 0 0 8075
 M 0 H 100
 S
@@ -6333,20 +6389,20 @@ XNUMB1~
 Down a Back Alley~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 8078
 D3
-~
-~
+(none)~
+(null)~
 0 0 8076
 M 0 H 100
 S
@@ -6359,20 +6415,20 @@ XNUMB1~
 Down a Back Alley~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 8079
 D3
-~
-~
+(none)~
+(null)~
 0 0 8077
 M 0 H 100
 S
@@ -6385,20 +6441,20 @@ XNUMB1~
 Down a Back Alley~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 8082
 D3
-~
-~
+(none)~
+(null)~
 0 0 8078
 M 0 H 100
 S
@@ -6411,20 +6467,20 @@ XNUMB1~
 Along Second Near a Parking Lot~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8081
 D2
-~
-~
+(none)~
+(null)~
 0 0 8003
 M 0 H 100
 S
@@ -6437,20 +6493,20 @@ XNUMB1~
 Along Second Near a Parking Lot~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8082
 D2
-~
-~
+(none)~
+(null)~
 0 0 8080
 M 0 H 100
 S
@@ -6463,24 +6519,24 @@ XNUMB1~
 Along Second Near a Parking Lot~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8054
 D2
-~
-~
+(none)~
+(null)~
 0 0 8081
 D3
-~
-~
+(none)~
+(null)~
 0 0 8079
 M 0 H 100
 S
@@ -6490,23 +6546,23 @@ The halogen bulbs overhead bounce off the highly reflective surface ofthe black 
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 8095
 D3
-~
-~
+(none)~
+(null)~
 0 0 8084
 M 0 H 100
 S
@@ -6516,27 +6572,27 @@ The silence in the hallway seems almost unbearable.  The plain egg whitewalls re
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8085
 D1
-~
-~
+(none)~
+(null)~
 0 0 8083
 D3
 A faded blue door rests here with long scratch marks up and down theentire surface of it.  ~
-~
+(null)~
 AH 0 8066
 M 0 H 100
 S
@@ -6546,27 +6602,27 @@ The black and white checkered tile floor reflects the light cast from thehalogen
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8086
 D1
-~
-~
+(none)~
+(null)~
 0 0 8032
 D2
-~
-~
+(none)~
+(null)~
 0 0 8084
 M 0 H 100
 S
@@ -6576,27 +6632,27 @@ Scenic pictures line the hall here, all sporting golden frames.  Theyseem to all
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8088
 D1
-~
-~
+(none)~
+(null)~
 0 0 8087
 D2
-~
-~
+(none)~
+(null)~
 0 0 8085
 M 0 H 100
 S
@@ -6606,25 +6662,25 @@ The bright blue walls seem to stare back in a haunted fashion here,perhaps it is
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
-E
-sign~
-This fountain is out of order, sorry for the inconvenience!!   MNGT~
+None~
 E
 small~
 This fountain is out of order, sorry for the inconvenience!!   MNGT~
+E
+sign~
+This fountain is out of order, sorry for the inconvenience!!   MNGT~
 D3
-~
-~
+(none)~
+(null)~
 0 0 8086
 M 0 H 100
 S
@@ -6634,23 +6690,23 @@ The egg white walls seem to reflect off of the highly waxed black andwhite check
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8089
 D2
-~
-~
+(none)~
+(null)~
 0 0 8086
 M 0 H 100
 S
@@ -6660,23 +6716,23 @@ The eery quietness of the hallway seems to create an atmophere from ahaunted hou
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8090
 D2
-~
-~
+(none)~
+(null)~
 0 0 8088
 M 0 H 100
 S
@@ -6686,23 +6742,23 @@ The halogen bulbs overhead bounce off the highly reflective surface ofthe black 
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 8091
 D2
-~
-~
+(none)~
+(null)~
 0 0 8089
 M 0 H 100
 S
@@ -6712,27 +6768,27 @@ The black and white checkered tile reflects the light from the halogenbulbs atta
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 8092
 D2
 A faded blue door rests here with a white sign on it that says: 207 ~
 207~
 ABCIW 8017 8106
 D3
-~
-~
+(none)~
+(null)~
 0 0 8090
 M 0 H 100
 S
@@ -6742,27 +6798,27 @@ The black and white checkered tile floor reflects the light cast from thehalogen
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 8093
 D2
 A faded blue door rests here with a white sign on it that says: 205 ~
 205~
 ABCIW 8017 8104
 D3
-~
-~
+(none)~
+(null)~
 0 0 8091
 M 0 H 100
 S
@@ -6772,27 +6828,27 @@ The black and white checkered tile seems to come to an end just east ofhere, whe
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 8094
 D2
 A faded blue door rests here with a white sign on it that says: 203 ~
 203~
 ABCIW 8017 8102
 D3
-~
-~
+(none)~
+(null)~
 0 0 8092
 M 0 H 100
 S
@@ -6802,23 +6858,23 @@ The black and white checkered tile comes to an end here, and a paintinglarger th
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D2
 A faded blue door rests here with a blue sign on it that says: 201 ~
 201~
 ABCIW 8017 8100
 D3
-~
-~
+(none)~
+(null)~
 0 0 8093
 M 0 H 100
 S
@@ -6828,27 +6884,27 @@ Paintings of outdoor scenery line the walls here and there all along thehall her
 0 0 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
 A faded blue door rests here with a white sign on it that says: 206 ~
 206~
 ABCI 8017 8108
 D1
-~
-~
+(none)~
+(null)~
 0 0 8096
 D3
-~
-~
+(none)~
+(null)~
 0 0 8083
 M 0 H 100
 S
@@ -6858,27 +6914,27 @@ Scenic pictures line the hall here, all sporting golden frames.  Theyseem to all
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
 A faded blue door rests here with a white sign on it that says: 204 ~
 204~
 ABCI 8017 8110
 D1
-~
-~
+(none)~
+(null)~
 0 0 8097
 D3
-~
-~
+(none)~
+(null)~
 0 0 8095
 M 0 H 100
 S
@@ -6888,27 +6944,27 @@ Scenic pictures line the hall here, all sporting golden frames.  Theyseem to all
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
 A faded blue door rests here with a white sign on it that says: 202 ~
 202~
 ABCI 8017 8112
 D1
-~
-~
+(none)~
+(null)~
 0 0 8098
 D3
-~
-~
+(none)~
+(null)~
 0 0 8096
 M 0 H 100
 S
@@ -6918,27 +6974,27 @@ The black and white checkered tile seems to come to an end just east ofhere, whe
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
 A faded blue door rests here with a white sign on it that says: UnisexBathroom.  ~
-~
+(null)~
 ABCI 0 8115
 D1
-~
-~
+(none)~
+(null)~
 0 0 8099
 D3
-~
-~
+(none)~
+(null)~
 0 0 8097
 M 0 H 100
 S
@@ -6948,23 +7004,23 @@ The black and white checkered tile comes to an end here, and a cleanwhite linole
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8114
 D3
-~
-~
+(none)~
+(null)~
 0 0 8098
 M 0 H 100
 S
@@ -6974,35 +7030,35 @@ This small hallway leads to the main just south of here.  It seems justbig enoug
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 E
-mirror~
-A small rubber doorstop sits here on the gray carpet trying to keep the door from making a hole into the wall.It is in excellent condition.~
-E
-doorstop~
-A small rubber doorstop sits here on the gray carpet trying to keep the door from making a hole into the wall.It is in excellent condition.~
+light~
+A small white light switch sits here in the wall waiting to be used.It is in excellent condition.~
 E
 switch~
 A small white light switch sits here in the wall waiting to be used.It is in excellent condition.~
 E
-light~
-A small white light switch sits here in the wall waiting to be used.It is in excellent condition.~
+doorstop~
+A small rubber doorstop sits here on the gray carpet trying to keep the door from making a hole into the wall.It is in excellent condition.~
+E
+mirror~
+A small rubber doorstop sits here on the gray carpet trying to keep the door from making a hole into the wall.It is in excellent condition.~
 D0
-~
-~
+(none)~
+(null)~
 ABCIW 8017 8094
 D2
-~
-~
+(none)~
+(null)~
 0 0 8101
 M 0 H 100
 S
@@ -7012,19 +7068,19 @@ The egg white walls, and the plush gray carpeting box in this crampedlittle room
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8100
 M 0 H 100
 S
@@ -7034,35 +7090,35 @@ This small hallway leads to the main just south of here.  It seems justbig enoug
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 E
-switch~
-A small white light switch sits here in the wall waiting to be used.It is in excellent condition.~
-E
-light~
-A small white light switch sits here in the wall waiting to be used.It is in excellent condition.~
+mirror~
+A long mirror, with a wooden frame hangs from the wall here.It is in excellent condition.~
 E
 doorstop~
 A small rubber doorstop sits here on the gray carpet trying to keep the door from making a hole into the wall.It is in excellent condition.~
 E
-mirror~
-A long mirror, with a wooden frame hangs from the wall here.It is in excellent condition.~
+light~
+A small white light switch sits here in the wall waiting to be used.It is in excellent condition.~
+E
+switch~
+A small white light switch sits here in the wall waiting to be used.It is in excellent condition.~
 D0
-~
-~
+(none)~
+(null)~
 ABCIW 8017 8093
 D2
-~
-~
+(none)~
+(null)~
 0 0 8103
 M 0 H 100
 S
@@ -7072,19 +7128,19 @@ The halogen lights in this room flicker every now and again, but for themost par
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8102
 M 0 H 100
 S
@@ -7094,35 +7150,35 @@ The plush gray carpeting is a great change from the empty halls justoutside this
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 E
-mirror~
-A long mirror, with a wooden frame hangs from the wall here.It is in excellent condition.~
-E
-doorstop~
-A small rubber doorstop sits here on the gray carpet trying to keep the door from making a hole into the wall.It is in excellent condition.~
+light~
+A small white light switch sits here in the wall waiting to be used.It is in excellent condition.~
 E
 switch~
 A small white light switch sits here in the wall waiting to be used.It is in excellent condition.~
 E
-light~
-A small white light switch sits here in the wall waiting to be used.It is in excellent condition.~
+doorstop~
+A small rubber doorstop sits here on the gray carpet trying to keep the door from making a hole into the wall.It is in excellent condition.~
+E
+mirror~
+A long mirror, with a wooden frame hangs from the wall here.It is in excellent condition.~
 D0
-~
-~
+(none)~
+(null)~
 ABCIW 8017 8092
 D2
-~
-~
+(none)~
+(null)~
 0 0 8105
 M 0 H 100
 S
@@ -7132,19 +7188,19 @@ This little cubby of a bedroom has a bunch of furniture packed into onesmall are
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8104
 M 0 H 100
 S
@@ -7154,35 +7210,35 @@ This tiny little hallway is barely big enough to squeeze through to getto the ro
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 E
-mirror~
-A long mirror, with a wooden frame hangs from the wall here.It is in excellent condition.~
-E
-doorstop~
-A small rubber doorstop sits here on the gray carpet trying to keep the door from making a hole into the wall.It is in excellent condition.~
+light~
+A small white light switch sits here in the wall waiting to be used.It is in excellent condition.~
 E
 switch~
 A small white light switch sits here in the wall waiting to be used.It is in excellent condition.~
 E
-light~
-A small white light switch sits here in the wall waiting to be used.It is in excellent condition.~
+doorstop~
+A small rubber doorstop sits here on the gray carpet trying to keep the door from making a hole into the wall.It is in excellent condition.~
+E
+mirror~
+A long mirror, with a wooden frame hangs from the wall here.It is in excellent condition.~
 D0
-~
-~
+(none)~
+(null)~
 ABCIW 8017 8091
 D2
-~
-~
+(none)~
+(null)~
 0 0 8107
 M 0 H 100
 S
@@ -7192,19 +7248,19 @@ This little cubby of a bedroom has a bunch of furniture packed into onesmall are
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8106
 M 0 H 100
 S
@@ -7214,35 +7270,35 @@ The plush gray carpeting seems to shock the eyes momentarily.  It byitself is a 
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 E
-light~
-A small white light switch sits here in the wall waiting to be used.It is in excellent condition ~
+mirror~
+A long mirror, with a wooden frame hangs from the wall here.It is in excellent condition.~
+E
+doorstop~
+(null)~
 E
 switch~
 A small white light switch sits here in the wall waiting to be used.It is in excellent condition ~
 E
-doorstop~
-~
-E
-mirror~
-A long mirror, with a wooden frame hangs from the wall here.It is in excellent condition.~
+light~
+A small white light switch sits here in the wall waiting to be used.It is in excellent condition ~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8109
 D2
-~
-~
+(none)~
+(null)~
 ABCI 8017 8095
 M 0 H 100
 S
@@ -7252,19 +7308,19 @@ This little cubby of a bedroom has a bunch of furniture packed into onesmall are
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D2
-~
-~
+(none)~
+(null)~
 0 0 8108
 M 0 H 100
 S
@@ -7274,35 +7330,35 @@ The plush gray carpeting seems to shock the eyes momentarily.  It byitself is a 
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 E
-mirror~
-A long mirror, with a wooden frame hangs from the wall here.It is in excellent condition.~
-E
-light~
-A small white light switch sits here in the wall waiting to be used.It is in excellent condition.~
+doorstop~
+A small rubber doorstop sits here on the gray carpet trying to keep the door from making a hole into the wall.It is in excellent condition.~
 E
 switch~
 A small white light switch sits here in the wall waiting to be used.It is in excellent condition.~
 E
-doorstop~
-A small rubber doorstop sits here on the gray carpet trying to keep the door from making a hole into the wall.It is in excellent condition.~
+light~
+A small white light switch sits here in the wall waiting to be used.It is in excellent condition.~
+E
+mirror~
+A long mirror, with a wooden frame hangs from the wall here.It is in excellent condition.~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8111
 D2
-~
-~
+(none)~
+(null)~
 ABCI 8017 8096
 M 0 H 100
 S
@@ -7312,19 +7368,19 @@ The halogen lights in this room flicker every now and again, but for themost par
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D2
-~
-~
+(none)~
+(null)~
 0 0 8110
 M 0 H 100
 S
@@ -7334,26 +7390,26 @@ This tiny little hallway is barely big enough to squeeze through to getto the ro
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 E
 mirror~
 A long mirror, with a wooden frame hangs from the wall here.It is in excellent condition.~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8113
 D2
-~
-~
+(none)~
+(null)~
 ABCI 8017 8097
 M 0 H 100
 S
@@ -7363,19 +7419,19 @@ The egg white walls, and the plush gray carpeting box in this crampedlittle room
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D2
-~
-~
+(none)~
+(null)~
 0 0 8112
 M 0 H 100
 S
@@ -7385,23 +7441,23 @@ This room is barely lit due to the flickering halogen bulbs that resideon the pl
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8117
 D2
-~
-~
+(none)~
+(null)~
 0 0 8099
 M 0 H 100
 S
@@ -7411,19 +7467,19 @@ The floor here is covered by an inch of water.  It seems the toilet hadoverflown
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D2
-~
-~
+(none)~
+(null)~
 ABCI 0 8098
 M 0 H 100
 S
@@ -7433,19 +7489,19 @@ The interior of this stall is much like the exterior, with four importantdiffere
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D2
-~
-~
+(none)~
+(null)~
 AB 0 8115
 M 0 H 100
 S
@@ -7455,19 +7511,19 @@ This little corner is home to a large dryer spewing lint and smoke allover the p
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D2
-~
-~
+(none)~
+(null)~
 0 0 8114
 M 0 H 100
 S
@@ -7477,22 +7533,22 @@ This small cubby of a room surprisingly has two of the round holes thathouses th
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 E
 sign~
 This fountain is out of order, sorry for the inconvenience!!   MNGT~
 D3
-~
-~
+(none)~
+(null)~
 0 0 8119
 M 0 H 100
 S
@@ -7502,23 +7558,23 @@ The all black hall ends here abruptly, while a small room can still beseen to th
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8120
 D1
-~
-~
+(none)~
+(null)~
 0 0 8118
 M 0 H 100
 S
@@ -7528,31 +7584,31 @@ This all black hallway is simply designed with no eye pleasers.  Thereare the si
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8121
 D1
-~
-~
+(none)~
+(null)~
 0 0 8007
 D2
-~
-~
+(none)~
+(null)~
 0 0 8119
 D3
 A faded blue door rests here with long scratch marks up and down theentire length of it.  ~
-~
+(null)~
 AH 0 8144
 M 0 H 100
 S
@@ -7562,27 +7618,27 @@ The black marble tile reflects the small amount of light given off by thehalogen
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
 A blue door rests here with a white sign on it that says: The HavenRestraunt ~
-~
+(null)~
 ABH 0 8146
 D1
-~
-~
+(none)~
+(null)~
 0 0 8126
 D2
-~
-~
+(none)~
+(null)~
 0 0 8120
 M 0 H 100
 S
@@ -7592,23 +7648,23 @@ Bright halogen bulbs light this room from two long stemmed floor lamps,each plac
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 ABCFRW 8018 8049
 D2
-~
-~
+(none)~
+(null)~
 0 0 8123
 M 0 H 100
 S
@@ -7618,23 +7674,23 @@ A ceiling fan hangs high up in the room from the ceiling.  It illuminatesthis we
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8122
 D1
-~
-~
+(none)~
+(null)~
 AB 0 8124
 M 0 H 100
 S
@@ -7644,23 +7700,23 @@ Privacy and simplicity seem to be two key factors to this room.  Thegray, plush 
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 AB 0 8125
 D3
-~
-~
+(none)~
+(null)~
 AB 0 8123
 M 0 H 100
 S
@@ -7670,19 +7726,19 @@ White tile picks up in this room where the gray carpet left off in thebedroom ju
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D2
-~
-~
+(none)~
+(null)~
 AB 0 8124
 M 0 H 100
 S
@@ -7692,27 +7748,27 @@ Blue doors begin to appear in the hallway here and there.  They each havesmall w
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
 A blue door rests here with a white sign on it that says: 303 ~
 303~
 ABCFRW 8018 8127
 D1
-~
-~
+(none)~
+(null)~
 0 0 8049
 D3
-~
-~
+(none)~
+(null)~
 0 0 8121
 M 0 H 100
 S
@@ -7722,23 +7778,23 @@ Bright halogen bulbs light this room from two long stemmed floor lamps,each plac
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8128
 D2
-~
-~
+(none)~
+(null)~
 ABCFRW 8018 8126
 M 0 H 100
 S
@@ -7748,23 +7804,23 @@ A ceiling fan hangs high up in the room from the ceiling.  It illuminatesthis we
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 AB 0 8130
 D2
-~
-~
+(none)~
+(null)~
 0 0 8127
 M 0 H 100
 S
@@ -7774,27 +7830,27 @@ This all black hallway is simply designed with no eye pleasers.  Thereare the si
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
 A blue door rests here with a white sign on it that says: 301 ~
 301~
 ABCFRW 8018 8141
 D1
-~
-~
+(none)~
+(null)~
 0 0 8133
 D3
-~
-~
+(none)~
+(null)~
 0 0 8049
 M 0 H 100
 S
@@ -7804,23 +7860,23 @@ Privacy and simplicity seem to be two key factors to this room.  Thegray, plush 
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D2
-~
-~
+(none)~
+(null)~
 AB 0 8131
 D3
-~
-~
+(none)~
+(null)~
 AB 0 8128
 M 0 H 100
 S
@@ -7830,19 +7886,19 @@ White tile picks up in this room where the gray carpet left off in thebedroom ju
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 AB 0 8130
 M 0 H 100
 S
@@ -7852,23 +7908,23 @@ Bright halogen bulbs light this room from two long stemmed floor lamps,each plac
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 ABCFRW 8018 8133
 D2
-~
-~
+(none)~
+(null)~
 0 0 8134
 M 0 H 100
 S
@@ -7878,27 +7934,27 @@ The black marble tile reflects the small amount of light given off by thehalogen
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 8137
 D2
 A blue door rests here with a white sign that says: 302 ~
 302~
 ABCFRW 8018 8132
 D3
-~
-~
+(none)~
+(null)~
 0 0 8129
 M 0 H 100
 S
@@ -7908,23 +7964,23 @@ A ceiling fan hangs high up in the room from the ceiling.  It illuminatesthis we
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8132
 D1
-~
-~
+(none)~
+(null)~
 AB 0 8135
 M 0 H 100
 S
@@ -7934,23 +7990,23 @@ Privacy and simplicity seem to be two key factors to this room.  Thegray, plush 
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 AB 0 8136
 D3
-~
-~
+(none)~
+(null)~
 AB 0 8134
 M 0 H 100
 S
@@ -7960,19 +8016,19 @@ White tile picks up in this room where the gray carpet left off in thebedroom ju
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D2
-~
-~
+(none)~
+(null)~
 AB 0 8135
 M 0 H 100
 S
@@ -7984,23 +8040,23 @@ V
 8275 1
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 8138
 D3
-~
-~
+(none)~
+(null)~
 0 0 8133
 M 0 H 100
 S
@@ -8010,23 +8066,23 @@ The all black hall ends here abruptly, while a small room can still beseen to th
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D2
-~
-~
+(none)~
+(null)~
 0 0 8139
 D3
-~
-~
+(none)~
+(null)~
 0 0 8137
 M 0 H 100
 S
@@ -8036,23 +8092,23 @@ This room is barely lit due to the flickering halogen bulbs that resideon the pl
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8138
 D2
-~
-~
+(none)~
+(null)~
 0 0 8140
 M 0 H 100
 S
@@ -8062,19 +8118,19 @@ This little corner is home to a large dryer spewing lint and smoke allover the p
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8139
 M 0 H 100
 S
@@ -8084,23 +8140,23 @@ Bright halogen bulbs light this room from two long stemmed floor lamps,each plac
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8142
 D2
-~
-~
+(none)~
+(null)~
 ABCFRW 8018 8129
 M 0 H 100
 S
@@ -8110,23 +8166,23 @@ A ceiling fan hangs high up in the room from the ceiling.  It illuminatesthis we
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 AB 0 8143
 D2
-~
-~
+(none)~
+(null)~
 0 0 8141
 M 0 H 100
 S
@@ -8136,23 +8192,23 @@ Privacy and simplicity seem to be two key factors to this room.  Thegray, plush 
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D2
-~
-~
+(none)~
+(null)~
 AB 0 8145
 D3
-~
-~
+(none)~
+(null)~
 AB 0 8142
 M 0 H 100
 S
@@ -8162,27 +8218,27 @@ This ancient, rusted iron ladder sits here in a state of almost disuse. It defin
 0 4 1
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
 A faded blue door rests here with long scratch marks up and down theentire length of it.  ~
-~
+(null)~
 AH 0 8120
 D2
-~
-~
+(none)~
+(null)~
 0 0 8067
 D4
-~
-~
+(none)~
+(null)~
 0 0 8157
 M 0 H 100
 S
@@ -8192,19 +8248,19 @@ White tile picks up in this room where the gray carpet left off in thebedroom ju
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 AB 0 8143
 M 0 H 100
 S
@@ -8214,23 +8270,23 @@ Plush gray carpeting covers the floor here instead of black marble tile. Egg whi
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8147
 D2
-~
-~
+(none)~
+(null)~
 ABH 0 8121
 M 0 H 100
 S
@@ -8240,23 +8296,23 @@ The egg white walls end just north of here in favor for large windows tolook out
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8148
 D2
-~
-~
+(none)~
+(null)~
 0 0 8146
 M 0 H 100
 S
@@ -8266,30 +8322,30 @@ This room is known as the window seat, due to the large wall sizedwindows facing
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
+(none)~
 window~
 BGN 0 8073
 D1
-~
-~
+(none)~
+(null)~
 0 0 8149
 D2
-~
-~
+(none)~
+(null)~
 0 0 8147
 D3
-~
+(none)~
 window~
 BGN 0 8071
 M 0 H 100
@@ -8300,27 +8356,27 @@ This room is known as the window seat, due to the large wall sizedwindows facing
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
+(none)~
 window~
 BGN 0 8074
 D1
-~
-~
+(none)~
+(null)~
 0 0 8150
 D3
-~
-~
+(none)~
+(null)~
 0 0 8148
 M 0 H 100
 S
@@ -8330,27 +8386,27 @@ This room is known as the window seat, due to the large wall sizedwindows facing
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
+(none)~
 window~
 BGN 0 8075
 D1
-~
-~
+(none)~
+(null)~
 ABH 0 8151
 D3
-~
-~
+(none)~
+(null)~
 0 0 8149
 M 0 H 100
 S
@@ -8360,23 +8416,23 @@ This kitchen is spotless.  The small, squared white tile that lines thewalls and
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 AH 0 8152
 D3
-~
-~
+(none)~
+(null)~
 ABH 0 8150
 M 0 H 100
 S
@@ -8386,19 +8442,19 @@ This small room reeks of decaying, or decomposing flesh.  A singlefilament bulb 
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D3
-~
-~
+(none)~
+(null)~
 AH 0 8151
 M 0 H 100
 S
@@ -8408,27 +8464,27 @@ The lighting in this room comes from a cylindrical tower that rises up tothe cei
 0 12 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D3
 A Quiet Hallway can be seen from here.  ~
-~
+(null)~
 0 0 8154
 D4
 A tall winding staircase going up and ending above here on the next floorcan be seen from here.  ~
-~
+(null)~
 0 0 8192
 D5
 Looking over the railing, a tall winding staircase going down for whatseems to be infinity can be seen from here.  ~
-~
+(null)~
 0 0 8007
 M 0 H 100
 S
@@ -8438,27 +8494,27 @@ This all black hallway is simply designed with no eye pleasers.  Thereare the si
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8160
 D1
-~
-~
+(none)~
+(null)~
 0 0 8153
 D2
-~
-~
+(none)~
+(null)~
 0 0 8155
 M 0 H 100
 S
@@ -8468,27 +8524,27 @@ The all black hall ends here abruptly, while a small room can still beseen to th
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8154
 D1
-~
-~
+(none)~
+(null)~
 0 0 8156
 D3
 A faded blue door rests here with long scratch marks up and down theentire surface of it ~
-~
+(null)~
 AH 0 8158
 M 0 H 100
 S
@@ -8498,25 +8554,25 @@ This small cubby of a room surprisingly has two of the round holes thathouses th
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
-E
-sign~
-This fountain is out of order, sorry for the inconvenience!!  MNGT ~
+None~
 E
 small~
 This fountain is out of order, sorry for the inconvenience!!  MNGT ~
+E
+sign~
+This fountain is out of order, sorry for the inconvenience!!  MNGT ~
 D3
-~
-~
+(none)~
+(null)~
 0 0 8155
 M 0 H 100
 S
@@ -8526,23 +8582,23 @@ This ancient, rusted iron ladder sits here in a state of almost disuse. It defin
 0 4 1
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D2
-~
-~
+(none)~
+(null)~
 0 0 8158
 D5
-~
-~
+(none)~
+(null)~
 0 0 8144
 M 0 H 100
 S
@@ -8552,27 +8608,27 @@ This ancient, rusted iron ladder sits here in a state of almost disuse. It defin
 0 4 1
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8157
 D1
 A faded blue door rests here with long scratch marks up and down theentire length of it ~
-~
+(null)~
 AH 0 8155
 D4
-~
-~
+(none)~
+(null)~
 0 0 8159
 M 0 H 100
 S
@@ -8582,23 +8638,23 @@ This ancient, rusted iron ladder sits here in a state of almost disuse. It defin
 0 4 1
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 8194
 D5
-~
-~
+(none)~
+(null)~
 0 0 8158
 M 0 H 100
 S
@@ -8608,27 +8664,27 @@ The black marble tile reflects the small amount of light given off by thehalogen
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
 A blue door rests here with a white sign on it that says: The HavenRestraunt ~
-~
+(null)~
 ABH 0 8185
 D1
-~
-~
+(none)~
+(null)~
 0 0 8161
 D2
-~
-~
+(none)~
+(null)~
 0 0 8154
 M 0 H 100
 S
@@ -8638,27 +8694,27 @@ Blue doors begin to appear in the hallway here and there.  They each havesmall w
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
 A blue door rests here with a white sign on it that says: 403 ~
 403~
 ABCFRW 8018 8162
 D1
-~
-~
+(none)~
+(null)~
 0 0 8166
 D3
-~
-~
+(none)~
+(null)~
 0 0 8160
 M 0 H 100
 S
@@ -8668,23 +8724,23 @@ Bright halogen bulbs light this room from two long stemmed floor lamps,each plac
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8163
 D2
-~
-~
+(none)~
+(null)~
 ABFRW 8018 8161
 M 0 H 100
 S
@@ -8694,23 +8750,23 @@ A ceiling fan hangs high up in the room from the ceiling.  It illuminatesthis we
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 AB 0 8164
 D2
-~
-~
+(none)~
+(null)~
 0 0 8162
 M 0 H 100
 S
@@ -8720,23 +8776,23 @@ Privacy and simplicity seem to be two key factors to this room.  Thegray, plush 
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D2
-~
-~
+(none)~
+(null)~
 AB 0 8165
 D3
-~
-~
+(none)~
+(null)~
 AB 0 8163
 M 0 H 100
 S
@@ -8746,19 +8802,19 @@ White tile picks up in this room where the gray carpet left off in thebedroom ju
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 AB 0 8164
 M 0 H 100
 S
@@ -8768,27 +8824,27 @@ Another blue door appears just south of here with a white numbered signon the fr
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 8171
 D2
 A blue door rests here with a white sign on it that says: 404 ~
 404~
 ABCFRW 8018 8167
 D3
-~
-~
+(none)~
+(null)~
 0 0 8161
 M 0 H 100
 S
@@ -8798,23 +8854,23 @@ Bright halogen bulbs light this room from two long stemmed floor lamps,each plac
 0 24 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 ABCFRW 8018 8166
 D2
-~
-~
+(none)~
+(null)~
 0 0 8168
 M 0 H 100
 S
@@ -8824,23 +8880,23 @@ A ceiling fan hangs high up in the room from the ceiling.  It illuminatesthis we
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8167
 D1
-~
-~
+(none)~
+(null)~
 A 0 8169
 M 0 H 100
 S
@@ -8850,23 +8906,23 @@ Privacy and simplicity seem to be two key factors to this room.  Thegray, plush 
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 AB 0 8170
 D3
-~
-~
+(none)~
+(null)~
 A 0 8168
 M 0 H 100
 S
@@ -8876,19 +8932,19 @@ White tile picks up in this room where the gray carpet left off in thebedroom ju
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D2
-~
-~
+(none)~
+(null)~
 AB 0 8169
 M 0 H 100
 S
@@ -8898,27 +8954,27 @@ This all black hallway is simply designed with no eye pleasers.  Thereare the si
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
 A blue door rests here with a white sign on it that says: 401 ~
 401~
 ABCFRW 8018 8172
 D1
-~
-~
+(none)~
+(null)~
 0 0 8176
 D3
-~
-~
+(none)~
+(null)~
 0 0 8166
 M 0 H 100
 S
@@ -8928,23 +8984,23 @@ Bright halogen bulbs light this room from two long stemmed floor lamps,each plac
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8173
 D2
-~
-~
+(none)~
+(null)~
 ABCFRW 8018 8171
 M 0 H 100
 S
@@ -8954,23 +9010,23 @@ A ceiling fan hangs high up in the room from the ceiling.  It illuminatesthis we
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 AB 0 8174
 D2
-~
-~
+(none)~
+(null)~
 0 0 8172
 M 0 H 100
 S
@@ -8980,23 +9036,23 @@ Privacy and simplicity seem to be two key factors to this room.  Thegray, plush 
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D2
-~
-~
+(none)~
+(null)~
 AB 0 8175
 D3
-~
-~
+(none)~
+(null)~
 AB 0 8173
 M 0 H 100
 S
@@ -9006,19 +9062,19 @@ White tile picks up in this room where the gray carpet left off in thebedroom ju
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 AB 0 8174
 M 0 H 100
 S
@@ -9028,27 +9084,27 @@ The black marble tile reflects the small amount of light given off by thehalogen
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 8181
 D2
 A blue door rests here with a white sign on it that says: 402 ~
 402~
 AFRW 8018 8177
 D3
-~
-~
+(none)~
+(null)~
 0 0 8171
 M 0 H 100
 S
@@ -9058,23 +9114,23 @@ Bright halogen bulbs light this room from two long stemmed floor lamps,each plac
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 AFORW 8018 8176
 D2
-~
-~
+(none)~
+(null)~
 0 0 8178
 M 0 H 100
 S
@@ -9084,23 +9140,23 @@ A ceiling fan hangs high up in the room from the ceiling.  It illuminatesthis we
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8177
 D1
-~
-~
+(none)~
+(null)~
 A 0 8179
 M 0 H 100
 S
@@ -9110,23 +9166,23 @@ Privacy and simplicity seem to be two key factors to this room.  Thegray, plush 
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 A 0 8180
 D3
-~
-~
+(none)~
+(null)~
 A 0 8178
 M 0 H 100
 S
@@ -9136,19 +9192,19 @@ White tile picks up in this room where the gray carpet left off in thebedroom ju
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D2
-~
-~
+(none)~
+(null)~
 A 0 8179
 M 0 H 100
 S
@@ -9160,23 +9216,23 @@ V
 8275 2
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 8182
 D3
-~
-~
+(none)~
+(null)~
 0 0 8176
 M 0 H 100
 S
@@ -9186,23 +9242,23 @@ The all black hall ends here abruptly, while a small room can still beseen to th
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D2
-~
-~
+(none)~
+(null)~
 0 0 8183
 D3
-~
-~
+(none)~
+(null)~
 0 0 8181
 M 0 H 100
 S
@@ -9212,23 +9268,23 @@ This room is barely lit due to the flickering halogen bulbs that resideon the pl
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8182
 D2
-~
-~
+(none)~
+(null)~
 0 0 8184
 M 0 H 100
 S
@@ -9238,19 +9294,19 @@ This little corner is home to a large dryer spewing lint and smoke allover the p
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8183
 M 0 H 100
 S
@@ -9260,23 +9316,23 @@ Plush gray carpeting covers the floor here instead of black marble tile. Egg whi
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8186
 D2
-~
-~
+(none)~
+(null)~
 AH 0 8160
 M 0 H 100
 S
@@ -9286,23 +9342,23 @@ The egg white walls end just north of here in favor for large windows tolook out
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 8187
 D2
-~
-~
+(none)~
+(null)~
 0 0 8185
 M 0 H 100
 S
@@ -9312,30 +9368,30 @@ This room is known as the window seat, due to the large wall sizedwindows facing
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
+(none)~
 window~
 BGN 0 8073
 D1
-~
-~
+(none)~
+(null)~
 0 0 8188
 D2
-~
-~
+(none)~
+(null)~
 0 0 8186
 D3
-~
+(none)~
 window~
 BGNS 0 8071
 M 0 H 100
@@ -9346,27 +9402,27 @@ This room is known as the window seat, due to the large wall sizedwindows facing
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
+(none)~
 window~
 BGN 0 8074
 D1
-~
-~
+(none)~
+(null)~
 0 0 8189
 D3
-~
-~
+(none)~
+(null)~
 0 0 8187
 M 0 H 100
 S
@@ -9376,27 +9432,27 @@ This room is known as the window seat, due to the large wall sizedwindows facing
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
+(none)~
 window~
 BGN 0 8075
 D1
-~
-~
+(none)~
+(null)~
 AH 0 8190
 D3
-~
-~
+(none)~
+(null)~
 0 0 8188
 M 0 H 100
 S
@@ -9406,23 +9462,23 @@ This kitchen is spotless.  The small, squared white tile that lines thewalls and
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 AH 0 8191
 D3
-~
-~
+(none)~
+(null)~
 AH 0 8189
 M 0 H 100
 S
@@ -9432,19 +9488,19 @@ This small room reeks of decaying, or decomposing flesh.  A singlefilament bulb 
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D3
-~
-~
+(none)~
+(null)~
 AH 0 8190
 M 0 H 100
 S
@@ -9466,8 +9522,6 @@ D 0 8002 2 3
 D 0 8005 2 3
 D 0 8006 3 131
 D 0 8008 0 3
-D 0 8009 0 131
-D 0 8012 2 131
 D 0 8013 3 131
 D 0 8018 1 131
 D 0 8019 1 131

@@ -67,7 +67,8 @@ I 0
 #5501
 key 101~
 the key to apartment 101~
-~
+A key is here.~
+A key is here with the numbers '101' engraved on it.  
 ~
 silver~
 18 0 A
@@ -81,7 +82,8 @@ Q 0
 #5502
 bottle water~
 a bottle of water~
-~
+A bottle of water is here.~
+This is a bottle of generic water.
 ~
 plastic~
 17 0 A
@@ -92,9 +94,11 @@ E
 -2~
 Q 0
 #5503
-glowing yellow potion~
-a *glowing* yellow potion~
-~
+bottle glowing yellow~
+a bottle of glowing yellow liquid~
+A bottle of glowing yellow liquid is here.~
+A bottle has filled with glowing yellow liquid.  A label on it reads
+"Anti-Venom".  
 ~
 none~
 10 0 A
@@ -105,9 +109,10 @@ E
 -2~
 Q 0
 #5504
-blood cup~
+blood red cup~
 a cup of fresh blood~
-~
+A cup of warm red liquid is here.~
+A cup is here, filled with warm red liquid.  
 ~
 plastic~
 17 0 A
@@ -147,8 +152,8 @@ Q 0
 #5505
 claw rat~
 the claw of a rat~
-~
-~
+(null)~
+(null)~
 flesh~
 5 0 AN
 0 4 0 none 0 0
@@ -173,24 +178,24 @@ right away.
 0 4 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
 (null) 
 ~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 5503
 D3
-~
-~
+(none)~
+(null)~
 0 0 5502
 M 0 H 100
 S
@@ -204,19 +209,19 @@ isn't pitch dark...
 0 12 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 5501
 M 0 H 100
 S
@@ -229,27 +234,27 @@ side of the wall...  All leading to different apartment rooms.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D2
-~
-~
+(none)~
+(null)~
 0 0 5501
 D4
-~
-~
+(none)~
+(null)~
 0 0 5504
 D5
-~
-~
+(none)~
+(null)~
 0 0 5505
 M 0 H 100
 S
@@ -263,19 +268,19 @@ all you need for bedtime.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D5
-~
-~
+(none)~
+(null)~
 0 0 5503
 M 0 H 100
 S
@@ -289,19 +294,19 @@ ceiling.  This room is nice and refreshing.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D4
-~
-~
+(none)~
+(null)~
 0 0 5503
 M 0 H 100
 S

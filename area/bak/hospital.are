@@ -37,10 +37,7 @@ I 0
 #7501
 Lobby Desk~
 a Lobby Desk~
-A white L-shaped desk positioned next to the entrance.  A computer
-terminal competes for space with documents and a few knick-knacks.  A white
-plaque reads: "Welcome to Bal Harbour Medical Center" 
-~
+The hospital lobby desk is near the entrance.~
 A white L-shaped desk positioned next to the entrance.  A computer
 terminal competes for space with documents and a few knick-knacks.  A white
 plaque reads: "Welcome to Bal Harbour Medical Center" 
@@ -56,26 +53,22 @@ Q 0
 #7502
 chairs~
 a row of plastic chairs~
+A row of plastic chairs.~
 Ten simple chairs made of orange plastic fixed to a metal frame.  Nothing
 to write home about.  
 ~
-Ten simple chairs made of orange plastic fixed to a metal frame.  Nothing
-to write home about.  
-~
-unknown~
+plastic~
 12 0 0
 10 0 E 0 0 0
 0 0 100
 E
 --USES~
 -2~
+Q 2
 #7503
 tv~
 an old color tv~
-A color television set that's at least five years out of date.  It sits
-in a black metal frame hung from the ceiling.  It seems to get network
-programming only.  
-~
+An old color TV is hanging from the ceiling.~
 A color television set that's at least five years out of date.  It sits
 in a black metal frame hung from the ceiling.  It seems to get network
 programming only.  
@@ -88,11 +81,11 @@ plastic~
 E
 --USES~
 -2~
+Q 2
 #7504
 shelves~
 rows of shelves~
-A grey metal frame holding six shelves placed one atop the next.  
-~
+A row of gray metal shelves~
 A grey metal frame holding six shelves placed one atop the next.
 ~
 steel~
@@ -102,14 +95,11 @@ steel~
 E
 --USES~
 -2~
+Q 2
 #7505
 file cabinet~
 a file cabinet~
-A basic steel filing cabinet painted light grey.  It's five feet in
-height and width, with three drawers with locks.  On the drawers are square
-labels set above the handles.  From top to bottom they read: "A-J", "K-S",
-and "T-Z & MISC".  
-~
+A light-grey, steel filing cabinet is here.~
 A basic steel filing cabinet painted light grey.  It's five feet in
 height and width, with three drawers with locks.  On the drawers are square
 labels set above the handles.  From top to bottom they read: "A-J", "K-S",
@@ -122,14 +112,11 @@ steel~
 E
 --USES~
 -2~
+Q 2
 #7506
 bed~
 a hospital bed~
-An ajustable bed used by the hospital patients.  The controls are
-attached by a cord that runs under the right side of the bed.  There are
-also rails that can be raised along the side to keep patients from rolling
-out of bed.  
-~
+A hopsital bed is here~
 An ajustable bed used by the hospital patients. The controls are attached by a cord that runs under the right side of the bed.
 There are also rails that can be raised along the side to keep patients from rolling out of bed.
 ~
@@ -140,16 +127,11 @@ steel~
 E
 --USES~
 -2~
+Q 2
 #7507
 bag saline~
 an i.v. bag of saline~
-A plastic bag in the half-gallon capacity range.  Two short tubes
-protrude from one end.  One of these was clearly meant to be attached to
-something.  Small writing in red has been printed on the side in a same
-color frame.  {R0.  9% SODIUM CHLORIDE.  WARNING!  Do not use if seal is
-broken.  {xThe rest is a set of instructions on the bag use and some list of
-chemicals.  
-~
+A saline bag is here.~
 A plastic bag in the half-gallon capacity range. Two short tubes protrude from one end. One of these was clearly meant to be attached to something. Small writing in red has been printed on the side in a same color frame. {R0.9% SODIUM CHLORIDE. WARNING! Do not use if seal is broken. {xThe rest is a set of instructions on the bag use and some list of chemicals.
 ~
 plastic~
@@ -163,13 +145,7 @@ Q 5
 #7508
 bag anticoagulant~
 an i.v. bag of anticoagulant~
-A plastic bag in the quarter-gallon capacity range.  Two short, think
-tubes protrude from one end.  From between them runs a clear, narrow tube
-about two feet in length.  Small writing in red has been printed on the side
-on a white colored label.  {RANTICOAGULANT.  WARNING!  Do not use if seal is
-broken.  Do NOT injest.  {xThe rest is a set of instructions on the bag use
-and some list of chemicals.  
-~
+A plastic bag of anti-coagulant is here.~
 A plastic bag in the quarter-gallon capacity range.  Two short, think
 tubes protrude from one end.  From between them runs a clear, narrow tube
 about two feet in length.  Small writing in red has been printed on the side
@@ -188,13 +164,7 @@ Q 6
 #7509
 bag blood~
 a blood bag~
-A plastic bag made to hold a pint of blood.  Two stubby thick tubes
-protrude from one end.  From between them runs a clear, narrow tube about
-two feet in length.  An attachment on the is a y-shaped affair to join with
-a second tube.  A white label on the side identifies the contents as blood
-with the type scribbled on a blank line.  A warning calls for imediate
-disposal if the bag's integrity has been compromised.  
-~
+A bag of chilled blood is here.~
 A plastic bag made to hold a pint of blood. Two stubby thick tubes protrude from one end.  From between them runs a clear, narrow tube about two feet in length. An attachment on the is a y-shaped affair to join with a second tube. A white label on the side identifies the contents as blood with the type scribbled on a blank line. A warning calls for imediate disposal if the bag's integrity has been compromised.
 ~
 plastic~
@@ -208,9 +178,7 @@ Q 6
 #7510
 teal top scrubs~
 a teal scrub top~
-A simple unisex garment with short sleeves and a v-neck collar.  A pocket
-is sewn onto the left breast.  
-~
+A teal-colored scrub top is here.~
 A simple unisex garment with short sleeves and a v-neck collar. A pocket
 is sewn onto the left breast.
 ~
@@ -222,11 +190,11 @@ cotton~
 E
 --USES~
 -2~
+Q 2
 #7511
 teal scrub pants~
 a pair of teal scrub pants~
-A pair of teal pants with a drawstring elastic waistband.  
-~
+A pair of teal-colored scrub pants is here.~
 A pair of teal pants with a drawstring elastic waistband.
 ~
 cotton~
@@ -237,13 +205,11 @@ cotton~
 E
 --USES~
 -2~
+Q 2
 #7512
 white shoes~
-white medical clogs~
-A pair of durable white, laceless shoes for those in the medical
-profession.  The insides are padded for comfort and the soles have large
-cleats to provide a strong grip on smooth and sometimes wet floors.  
-~
+white, laceless shoes~
+A pair of white, laceless shoes is here.~
 A pair of durable white, laceless shoes for those in the medical
 profession. The insides are padded for comfort and the soles have large
 cleats to provide a strong grip on smooth and sometimes wet floors.
@@ -256,19 +222,15 @@ unknown~
 E
 --USES~
 -2~
+Q 2
 #7513
 white lab coat~
 a white lab coat~
-(no full description)The trademark of the scientific profession, this lab
-coat is singlebreasted and, of course, white.  A pen pocket sits atop the
-left breast, while two larger pockets are set towards the front at hip
-level.  The garment goes down to mid thigh on those of average height.  
-~
-(no full description)The trademark of the scientific profession, this
-lab coat is singlebreasted and, of course, white. A pen pocket sits atop
-the left breast, while two larger pockets are set towards the front at
-hip level. The garment goes down to mid thigh on those of average
-height.
+A white lab coat is here.~
+The trademark of the scientific profession, this lab coat is
+singlebreasted and, of course, white.  A pen pocket sits atop the left
+breast, while two larger pockets are set towards the front at hip level. 
+The garment goes down to mid thigh on those of average height.  
 ~
 wool~
 11 0 AK
@@ -278,14 +240,13 @@ wool~
 E
 --USES~
 -2~
+Q 2
 #7514
 hospital gown~
 a hospital gown~
-(no full description)The notorious hospital gown.  It ties in back and
-displays your assets to the world.  
-~
-(no full description)The notorious hospital gown. It ties in back and
-displays your assets to the world.
+A hospital gown is here.~
+The notorious hospital gown.  It ties in back and displays your assets to
+the world.  
 ~
 cotton~
 11 0 AK
@@ -295,14 +256,13 @@ cotton~
 E
 --USES~
 -2~
+Q 2
 #7515
 hospital slippers~
 a pair of hospital slippers~
-(no full description)Looks like wooly blue ankle high socks with elastic
-bands around the ankles and rubber criss-crosses attached to the soles.  
-~
-(no full description)Looks like wooly blue ankle high socks with elastic
-bands around the ankles and rubber criss-crosses attached to the soles.
+A pair of hospital slippers is here.~
+Looks like wooly blue ankle high socks with elastic bands around the
+ankles and rubber criss-crosses attached to the soles.  
 ~
 wool~
 11 0 AG
@@ -312,16 +272,14 @@ wool~
 E
 --USES~
 -2~
+Q 2
 #7516
 latex gloves~
 a pair of latex gloves~
+A pair of latex gloves is here.~
 These thin, tight-fitting gloves provide the wearer with protection from
 bodily fluids and hazardous materials of a non-corrosive and non-radioactive
 nature.  
-~
-These thin, tight-fitting gloves provide the wearer with protection from
-bodily fluids and hazardous materials of a non-corrosive and
-non-radioactive nature.
 ~
 vinyl~
 11 0 AH
@@ -331,17 +289,11 @@ vinyl~
 E
 --USES~
 -2~
+Q 2
 #7517
 box gloves~
 a box of medical gloves~
-A 7" x 5" x 3" white box with the label "KEN-MED Latex Examination
-Gloves" in large black print on the top and long sides.  Twin 1 1/2"
-diagonal aqua blue bands run parallel across the top.  Their smaller clones
-run along the centers of the sides.  On one of the short sides is another
-label reading: "Kendall Medical Industries.  Dubuque, Iowa" When KMI started
-out, it was named "Tall Corn Medical Surplus" in honor of the state it began
-in, but for obvious reasons, the name was quickly changed.  
-~
+A box of medical gloves is here.~
 A 7" x 5" x 3" white box with the label "KEN-MED Latex Examination
 Gloves" in large black print on the top and long sides. Twin 1 1/2"
 diagonal aqua blue bands run parallel across the top. Their smaller
@@ -358,22 +310,17 @@ cardboard~
 E
 --USES~
 -2~
+Q 2
 #7518
 id badge~
 a {GBHMC{x ID badge~
-A small white plastic rectangle with {GBal Harbour Medical Center{x laser
+A hopsital ID bad is here.~
+A small white plastic rectangle with Bal Harbour Medical Center laser
 printed along the top.  Below on the right side is a picture of the employee
 it belongs to.  Next to the photo from top to bottom is the badge owners
 name, profession title, part of the hospital they are assigned to, the job
 they perform there, and a bar code.  On tha back, a metal alligator clamp
 secures the badge to the wearer's garment.  
-~
-A small white plastic rectangle with {GBal Harbour Medical Center{x
-laser printed along the top. Below on the right side is a picture of the
-employee it belongs to. Next to the photo from top to bottom is the
-badge owners name, profession title, part of the hospital they are
-assigned to, the job they perform there, and a bar code. On tha back, a
-metal alligator clamp secures the badge to the wearer's garment.
 ~
 plastic~
 13 0 AO
@@ -383,6 +330,7 @@ plastic~
 E
 --USES~
 -2~
+Q 2
 #7519
 hazmat helmet~
 a HazMat helmet~
@@ -408,12 +356,7 @@ Q 10
 #7520
 hazmat suit~
 a white Level A HazMat suit~
-White in color, this outfit is designed to be airtight to protect the
-wearer from airborne infection from viruses, bacteria, and other hazardous
-airborne elements.  Seals are provided for other accessories such as the
-helmet, gloves, etc.  Additional attachments are provided for a portable
-respirator or hoses that connect to outlets in a quarantine chamber.  
-~
+A white HazMat suit is here.~
 White in color, this outfit is designed to be airtight to protect the
 wearer from airborne infection from viruses, bacteria, and other
 hazardous airborne elements. Seals are provided for other accessories
@@ -421,7 +364,7 @@ such as the helmet, gloves, etc. Additional attachments are provided for
 a portable respirator or hoses that connect to outlets in a quarantine
 chamber.
 ~
-plast~
+plastic~
 13 0 AD
 0 0 0 0 0
 0
@@ -532,6 +475,7 @@ vinyl~
 E
 --USES~
 -2~
+Q 2
 #7526
 hazmat locker~
 a HazMat suit locker~
@@ -554,6 +498,7 @@ steel~
 E
 --USES~
 -2~
+Q 2
 #7527
 None~
 a {Dgrey{x TSSI shirt~
@@ -575,6 +520,7 @@ cotton~
 E
 --USES~
 -2~
+Q 2
 #7528
 black pants~
 black TSSI pants~
@@ -592,6 +538,7 @@ None~
 E
 --USES~
 -2~
+Q 2
 #7529
 leather holster~
 a black duty rig holster~
@@ -610,6 +557,7 @@ leather~
 E
 --USES~
 -2~
+Q 2
 #7530
 leather belt~
 a black duty rig belt~
@@ -630,6 +578,7 @@ leather~
 E
 --USES~
 -2~
+Q 2
 #7531
 airlock 1~
 a contact lens case~
@@ -676,6 +625,7 @@ plastic~
 E
 --USES~
 -2~
+Q 2
 #7989
 contact lens case~
 a contact lens case~
@@ -694,6 +644,7 @@ plastic~
 E
 --USES~
 -2~
+Q 2
 #7990
 black contact lenses~
 a pair of black contact lenses~
@@ -751,6 +702,7 @@ It's just a shard of soap now. Time for a new bar.~
 E
 --USES~
 100~
+Q 2
 #7992
 soap~
 a small bar of soap~
@@ -793,6 +745,7 @@ It's just a shard of soap now. Time for a new bar.~
 E
 --USES~
 10~
+Q 2
 #7993
 blue bottle shampoo~
 a bottle of AquaXtacy Shampoo~
@@ -813,6 +766,7 @@ plastic~
 E
 --USES~
 -2~
+Q 2
 #7994
 light blue condistioner bottle~
 a bottle of AquaXtacy Conditioner~
@@ -833,6 +787,7 @@ plastic~
 E
 --USES~
 -2~
+Q 2
 #7995
 bath towel~
 a bath towel~
@@ -850,6 +805,7 @@ wool~
 E
 --USES~
 -2~
+Q 2
 #0
 
 
@@ -872,16 +828,16 @@ designating different departments of BHMC.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 E
 sign~
 NORTH: ER (Staff Only)
@@ -892,19 +848,19 @@ SOUTH: Exit
 D0
 A pair of metal doors leading into the ER.
 ~
-~
+(null)~
 AB 0 7510
 D1
-~
-~
+(none)~
+(null)~
 0 0 7502
 D2
-~
+(none)~
 door~
 N 0 7539
 D3
-~
-~
+(none)~
+(null)~
 0 0 7506
 M 0 H 100
 S
@@ -917,31 +873,31 @@ while admissions are handled south.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 A 0 7511
 D1
-~
-~
+(none)~
+(null)~
 0 0 7503
 D2
-~
-~
+(none)~
+(null)~
 A 0 7514
 D3
-~
-~
+(none)~
+(null)~
 0 0 7501
 M 0 H 100
 S
@@ -953,23 +909,23 @@ north, and offices concerned with admissions and such south.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 7504
 D3
-~
-~
+(none)~
+(null)~
 0 0 7502
 M 0 H 100
 S
@@ -982,31 +938,31 @@ offices.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
+(none)~
 door~
-AB 0 7512
+A 0 7512
 D1
-~
-~
+(none)~
+(null)~
 0 0 7505
 D2
-~
+(none)~
 door~
 A 0 7513
 D3
-~
-~
+(none)~
+(null)~
 0 0 7503
 M 0 H 100
 S
@@ -1018,23 +974,23 @@ floor.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D3
-~
-~
+(none)~
+(null)~
 0 0 7504
 D4
-~
-~
+(none)~
+(null)~
 0 0 7528
 M 0 H 100
 S
@@ -1048,31 +1004,31 @@ west, where it eventually ends at the administrator's office.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 A 0 7515
 D1
-~
-~
+(none)~
+(null)~
 0 0 7501
 D2
-~
-~
+(none)~
+(null)~
 0 0 7517
 D3
-~
-~
+(none)~
+(null)~
 0 0 7507
 M 0 H 100
 S
@@ -1084,28 +1040,28 @@ janitorial closet north.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
 A narrow white door.
 ~
 door~
 AB 0 7536
 D1
-~
-~
+(none)~
+(null)~
 0 0 7506
 D3
-~
-~
+(none)~
+(null)~
 0 0 7508
 M 0 H 100
 S
@@ -1118,16 +1074,16 @@ leads to Reception.  There is a door to the south with a sign next to it.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 E
 sign~
 HEALTH RECORDS
@@ -1135,16 +1091,16 @@ HEALTH RECORDS
                 Staff Only
 ~
 D1
-~
-~
+(none)~
+(null)~
 0 0 7507
 D2
-~
+(none)~
 door~
 ABC 0 7534
 D3
-~
-~
+(none)~
+(null)~
 0 0 7509
 M 0 H 100
 S
@@ -1157,29 +1113,29 @@ Administrator's office west.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
+(none)~
 door~
 A 0 7585
 D1
-~
-~
+(none)~
+(null)~
 0 0 7508
 D3
 A wooden door with a frosted glass pane in it.  The words "Dr.  Cohill
 Hospital Administrator" sit in black in the center of the pane.  
 ~
-~
+(null)~
 AB 0 7537
 M 0 H 100
 S
@@ -1196,19 +1152,19 @@ V
 7544 1
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 7541
 D2
 A pair of double doors leading to the lobby.
@@ -1228,18 +1184,18 @@ ailments.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D2
-~
+(none)~
 door~
 AB 0 7502
 M 0 H 100
@@ -1255,20 +1211,20 @@ ailments.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D2
-~
+(none)~
 door~
-AB 0 7504
+A 0 7504
 M 0 H 100
 S
 #7513
@@ -1282,18 +1238,18 @@ pamphlets from a table in the southeast corner, or ask the insurance worker.
 0 0 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
+(none)~
 door~
 A 0 7504
 M 0 H 100
@@ -1309,19 +1265,19 @@ lies north.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 A 0 7502
 M 0 H 100
 S
@@ -1334,22 +1290,22 @@ door leading to the storage area can be seen west.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D2
-~
-~
+(none)~
+(null)~
 A 0 7506
 D3
-~
+(none)~
 door~
 ABC 0 7516
 M 0 H 100
@@ -1363,19 +1319,19 @@ The only exit is west.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 ABC 0 7515
 M 0 H 100
 S
@@ -1389,23 +1345,23 @@ Resident's office is to the west, while the hallway is north.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 7506
 D3
-~
-~
+(none)~
+(null)~
 AB 0 7518
 M 0 H 100
 S
@@ -1420,38 +1376,38 @@ door.
 0 0 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
+(none)~
 door~
 AB 0 7517
 M 0 H 100
 S
 #7519
 WRECKED~
-~
+(null)~
 0 4 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 S
 #7520
 Second Floor Intersection~
@@ -1466,16 +1422,16 @@ V
 7580 -1
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 E
 sign~
 NORTH: Recovery Rooms, Elevator (Staff Only)
@@ -1484,20 +1440,20 @@ EAST: CT Scanning, Blood Testing, EEG, EKG, Radiology
 WEST: OR, Maternity Ward, Delivery Room, ICU, NRCU
 ~
 D0
-~
-~
+(none)~
+(null)~
 0 0 7573
 D1
-~
-~
+(none)~
+(null)~
 0 0 7525
 D2
-~
-~
+(none)~
+(null)~
 0 0 7529
 D3
-~
-~
+(none)~
+(null)~
 0 0 7521
 M 0 H 100
 S
@@ -1509,23 +1465,23 @@ Maternity Ward.  AN intersection to other wings is just east of here.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 7520
 D3
-~
-~
+(none)~
+(null)~
 0 0 7522
 M 0 H 100
 S
@@ -1539,31 +1495,31 @@ goes on to the observation rooms and delivery.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 AB 0 7530
 D1
-~
-~
+(none)~
+(null)~
 0 0 7521
 D2
-~
-~
+(none)~
+(null)~
 AB 0 7531
 D3
-~
-~
+(none)~
+(null)~
 0 0 7523
 M 0 H 100
 S
@@ -1575,23 +1531,23 @@ an intersection connecting to two other wings.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 7522
 D3
-~
-~
+(none)~
+(null)~
 0 0 7524
 M 0 H 100
 S
@@ -1605,31 +1561,31 @@ maternity ward.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 AB 0 7564
 D1
-~
-~
+(none)~
+(null)~
 0 0 7523
 D2
-~
-~
+(none)~
+(null)~
 AB 0 7563
 D3
-~
-~
+(none)~
+(null)~
 AB 0 7565
 M 0 H 100
 S
@@ -1644,31 +1600,31 @@ distance east.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
+(none)~
 door~
 AB 0 7556
 D1
-~
-~
+(none)~
+(null)~
 0 0 7526
 D2
-~
+(none)~
 door~
 ABC 0 7557
 D3
-~
-~
+(none)~
+(null)~
 0 0 7520
 M 0 H 100
 S
@@ -1682,23 +1638,23 @@ ends at an intersection.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 7527
 D3
-~
-~
+(none)~
+(null)~
 0 0 7525
 M 0 H 100
 S
@@ -1712,31 +1668,31 @@ labs and then an intersection.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
-AB 0 7554
+(none)~
+(null)~
+A 0 7554
 D1
-~
-~
+(none)~
+(null)~
 0 0 7528
 D2
-~
-~
-AB 0 7555
+(none)~
+(null)~
+A 0 7555
 D3
-~
-~
+(none)~
+(null)~
 0 0 7526
 M 0 H 100
 S
@@ -1749,23 +1705,23 @@ done.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D3
-~
-~
+(none)~
+(null)~
 0 0 7527
 D5
-~
-~
+(none)~
+(null)~
 0 0 7505
 M 0 H 100
 S
@@ -1780,19 +1736,19 @@ lot.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 7520
 M 0 H 100
 S
@@ -1808,23 +1764,23 @@ through a glass door in the west wall.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D2
-~
+(none)~
 door~
 AB 0 7522
 D3
-~
-~
+(none)~
+(null)~
 ABN 0 7560
 M 0 H 100
 S
@@ -1838,27 +1794,27 @@ identifying each infant.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 AB 0 7522
 D1
-~
-~
+(none)~
+(null)~
 ABN 0 7532
 D3
-~
-~
+(none)~
+(null)~
 ABN 0 7533
 M 0 H 100
 S
@@ -1873,19 +1829,19 @@ staff are permitted in here.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D3
-~
-~
+(none)~
+(null)~
 ABN 0 7531
 M 0 H 100
 S
@@ -1899,18 +1855,18 @@ only.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
+(none)~
 door~
 ABN 0 7531
 M 0 H 100
@@ -1924,24 +1880,24 @@ the north leads to the hallway.  More records can be found west.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
 A plain white door leading to the hallway.
 ~
 door~
 ABC 0 7508
 D3
-~
-~
+(none)~
+(null)~
 0 0 7535
 S
 #7535
@@ -1955,19 +1911,19 @@ here.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 7534
 S
 #7536
@@ -1978,16 +1934,16 @@ cleaning substance and implement known to man.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D2
 A narrow door leading to the hallway.
 ~
@@ -2007,16 +1963,16 @@ door to the north.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
 A wooden door.
 ~
@@ -2037,16 +1993,16 @@ across the center of the west wall, displaying more awards and trophies.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D2
 A wooden door.
 ~
@@ -2064,16 +2020,16 @@ access to which is gain through a set of sliding glass doors.
 0 0 1
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 E
 sign~
 A horizontal rectangle made of granite five feet long and three high.  In
@@ -2083,13 +2039,13 @@ read at night.
 D0
 A walkway leading up to a pair of glass doors.
 ~
-~
+(null)~
 N 0 7501
 D1
 Staff parking.  Even from here, many of the cars in it look like they
 cost an arm and a leg.  
 ~
-~
+(null)~
 0 0 7540
 S
 #7540
@@ -2102,21 +2058,21 @@ edge of the lot is a sign reading "Hospital Staff Only".
 0 0 1
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D3
 The visitor's parking lot can be seen, with a walkway leading to the
 hospital.  
 ~
-~
+(null)~
 0 0 7539
 S
 #7541
@@ -2128,23 +2084,23 @@ Emergency Admissions, and south to the lobby.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 7542
 D2
-~
-~
+(none)~
+(null)~
 0 0 7510
 D3
 A door with a sign reading: "Emergency Operating Room 2"
@@ -2161,19 +2117,19 @@ room.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 7543
 D1
 A door with a sign reading: "Emergency Operating Room 1"
@@ -2181,8 +2137,8 @@ A door with a sign reading: "Emergency Operating Room 1"
 door~
 AB 0 7547
 D2
-~
-~
+(none)~
+(null)~
 0 0 7541
 S
 #7543
@@ -2195,27 +2151,27 @@ lobby.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 7549
 D1
-~
-~
+(none)~
+(null)~
 AB 0 7550
 D2
-~
-~
+(none)~
+(null)~
 0 0 7542
 S
 #7544
@@ -2227,17 +2183,17 @@ of stops along with their respective buttons.
 0 396 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
 Link link 
 ~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 E
 panel~
 [3] @ Roof
@@ -2267,16 +2223,16 @@ through a glass door in the north wall.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
 A large glass door.
 ~
@@ -2299,20 +2255,20 @@ sterilize them.
 0 0 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D2
 A large glass door.
 ~
-~
+(null)~
 ABN 0 7545
 S
 #7547
@@ -2327,22 +2283,22 @@ through a glass door in the north wall.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 ABN 0 7548
 D3
-~
+(none)~
 door~
 AB 0 7542
 S
@@ -2357,20 +2313,20 @@ sterilize them.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D2
 A glass door.
 ~
-~
+(null)~
 ABN 0 7547
 S
 #7549
@@ -2383,22 +2339,22 @@ wall lead outside.
 0 0 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D2
-~
-~
+(none)~
+(null)~
 0 0 7543
 D3
-~
+(none)~
 door~
 ABN 0 7551
 S
@@ -2412,18 +2368,18 @@ vending machines are at the north wall.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D3
-~
+(none)~
 door~
 AB 0 7543
 S
@@ -2438,23 +2394,23 @@ street continues west.
 0 0 1
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 ABN 0 7549
 D3
-~
-~
+(none)~
+(null)~
 0 0 7552
 S
 #7552
@@ -2466,23 +2422,23 @@ sign declares this area for ambulances only.
 0 0 1
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 7551
 D2
-~
-~
+(none)~
+(null)~
 0 0 7553
 S
 #7553
@@ -2499,23 +2455,23 @@ stored.  The emergency route is north past the garage doors.
 0 8 1
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 7552
 D2
-~
-~
+(none)~
+(null)~
 0 0 7604
 S
 #7554
@@ -2530,20 +2486,20 @@ aprons are to be worn by the technicians.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D2
-~
-~
-AB 0 7527
+(none)~
+(null)~
+A 0 7527
 S
 #7555
 CT Scanning~
@@ -2554,20 +2510,20 @@ platform, while the ope rating panel is located near the east wall.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
-AB 0 7527
+(none)~
+(null)~
+A 0 7527
 S
 #7556
 Vital Analisys~
@@ -2579,19 +2535,19 @@ these tounge twisting procedures is a strobe light and set of headphones.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D2
-~
-~
+(none)~
+(null)~
 AB 0 7525
 S
 #7557
@@ -2606,19 +2562,19 @@ L-shaped counter top affair holds all the equipment used in this lab.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 ABC 0 7525
 S
 #7558
@@ -2632,30 +2588,30 @@ that someone has painted a mural of a couple of bears dressed as doctors.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 7559
 D1
-~
-~
+(none)~
+(null)~
 0 0 7587
 D2
-~
-~
+(none)~
+(null)~
 0 0 7573
 D3
-~
+(none)~
 door~
 AB 0 7588
 S
@@ -2673,30 +2629,30 @@ Booboo...  Barely.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 7561
 D1
-~
-~
+(none)~
+(null)~
 A 0 7583
 D2
-~
-~
+(none)~
+(null)~
 0 0 7558
 D3
-~
+(none)~
 201~
 A 0 7584
 S
@@ -2711,18 +2667,18 @@ sterilize them.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
+(none)~
 door~
 ABN 0 7530
 S
@@ -2736,30 +2692,30 @@ Yogi and Booboo dressed as hospital staff.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 7562
 D1
-~
+(none)~
 204~
 A 0 7590
 D2
-~
-~
+(none)~
+(null)~
 0 0 7559
 D3
-~
+(none)~
 205~
 A 0 7589
 S
@@ -2783,48 +2739,48 @@ away from this abomination.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
+(none)~
 206~
 A 0 7581
 D2
-~
-~
+(none)~
+(null)~
 0 0 7561
 D3
-~
+(none)~
 207~
 A 0 7582
 S
 #7563
 Delivery Room~
-~
+(null)~
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 AB 0 7524
 S
 #7564
@@ -2837,18 +2793,18 @@ located by the north wall, where they are checked periodically.  Named the
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D2
-~
+(none)~
 door~
 AB 0 7524
 S
@@ -2861,27 +2817,27 @@ This is not a place for those with just an overnight stay.
 0 0 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
+(none)~
 door~
 AB 0 7524
 S
 #7566
-Sublevel {RRed {CCorridor~
-The {Rred{g line coninues west along the length of the hall.  To the
-east, a heavy door with a keycard lock leads to other areas on this level. 
-To the south is a similar door with a biohazard symbol.  A sign posted above
-the symbol reads "Level 1 Viral Pathology Lab.  No admittance without proper
+Sublevel Red Corridor~
+The red line coninues west along the length of the hall.  To the east, a
+heavy door with a keycard lock leads to other areas on this level.  To the
+south is a similar door with a biohazard symbol.  A sign posted above the
+symbol reads "Level 1 Viral Pathology Lab.  No admittance without proper
 clearance.  Protective gear MUST be worn before entry.  NO exceptions!"  The
 door to the north seems to be much heavier and more secured than the other
 two.  It also displays a biohazard symbol.  A sign with the same warning
@@ -2891,162 +2847,165 @@ looks, forced access is almost impossible.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 ABR 0 7608
 D1
-~
-~
+(none)~
+(null)~
 ABR 0 7568
 D2
-~
-~
+(none)~
+(null)~
 ABR 0 7603
 D3
-~
-~
+(none)~
+(null)~
 0 0 7572
 S
 #7567
-Sublevel{G Green{C Corridor~
-The {Ggreen {gand {Yyellow {glines continue on the floor here, looking
-alot like a miscolored no-passing lane.  Doors to the north and south
-display signs that they grant acess to Blood Storage and Pharmaceutical
-Storage in that order.  The hall continues east until it bends south a
-little further on.  
+Sublevel Green Corridor~
+The green and yellow lines continue on the floor here, looking alot like
+a miscolored no-passing lane.  Doors to the north and south display signs
+that they grant acess to Blood Storage and Pharmaceutical Storage in that
+order.  The hall continues east until it bends south a little further on.  
 ~
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 AB 0 7651
 D1
-~
-~
+(none)~
+(null)~
 0 0 7571
 D2
-~
-~
+(none)~
+(null)~
 AB 0 7597
 D3
-~
-~
+(none)~
+(null)~
 0 0 7568
 S
 #7568
 Sublevel Main Corridor~
-The different colored lines split up here.  {GGreen {gand {Yyellow
-{gcontinue east, while {Rred {gends west at a Heavy door with a card-key
-lock.  To the north is what appears to be a security post.  
+The different colored lines split up here.  Green and yellow continue
+east, while red ends west at a Heavy door with a card-key lock.  To the
+north is what appears to be a security post.  
 ~
 0 8 0
+V
+7572 -1
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 7602
 D1
-~
-~
+(none)~
+(null)~
 0 0 7567
 D2
-~
-~
+(none)~
+(null)~
 0 0 7570
 D3
-~
-~
+(none)~
+(null)~
 ABR 0 7566
 S
 #7569
-Main {wGrey {CCorridor~
-~
+Main Grey Corridor~
+(null)~
 0 1152 0
 V
 7570 -1
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 A 0 7644
 D1
-~
-~
+(none)~
+(null)~
 0 0 7616
 D2
-~
-~
+(none)~
+(null)~
 A 0 7643
 D3
-~
-~
+(none)~
+(null)~
 0 0 7611
 S
 #7570
 Sublevel Main Corridor~
-A well-lit hallway of white.  {RRed{g, {Yyellow{g, {gand {Ggreen {glines
-run along the floor from the card-key door south to an intersection to the
-north, where they can be seen to branch off in different directions.  A sign
-is the only break in an otherwise featureless west wall.  
+A well-lit hallway of white.  Red, yellow, and green lines run along the
+floor from the card-key door south to an intersection to the north, where
+they can be seen to branch off in different directions.  A sign is the only
+break in an otherwise featureless west wall.  
 ~
 0 136 0
+V
+7569 -1
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 E
 sign~
 {RViral Pathology, Quaranitine Section
@@ -3054,16 +3013,16 @@ sign~
 {GPharmacuticals, Blood Stores
 ~
 D0
-~
-~
+(none)~
+(null)~
 0 0 7568
 D2
-~
-~
+(none)~
+(null)~
 A 0 7614
 S
 #7571
-Sublevel{G Green{C Corridor~
+Sublevel Green Corridor~
 The bi-colored lines on the floor continue both east, where the corridor
 turns south, and west where it passes by a pair of doors before ending at
 the sublevel intersection.  
@@ -3071,62 +3030,62 @@ the sublevel intersection.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 7576
 D3
-~
-~
+(none)~
+(null)~
 0 0 7567
 S
 #7572
-Sublevel {RRed {CCorridor~
-The {Rred{g line continues along the floor east where the corridor ends
-and west to a set of heavy looking doors.  Signs posted state that
-protective clothing can be obtained north, and that a quarantine monitoring
-room lies south.  
+Sublevel Red Corridor~
+The red line continues along the floor east where the corridor ends and
+west to a set of heavy looking doors.  Signs posted state that protective
+clothing can be obtained north, and that a quarantine monitoring room lies
+south.  
 ~
 0 1032 0
 V
 7568 -1
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 ABR 0 7650
 D1
-~
-~
+(none)~
+(null)~
 0 0 7566
 D2
-~
-~
+(none)~
+(null)~
 ABR 0 7600
 D3
-~
-~
+(none)~
+(null)~
 0 0 7575
 S
 #7573
@@ -3144,27 +3103,27 @@ V
 7544 2
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 7558
 D2
-~
-~
+(none)~
+(null)~
 0 0 7520
 D3
-~
-~
+(none)~
+(null)~
 AB 0 7586
 S
 #7574
@@ -3178,23 +3137,23 @@ V
 7544 3
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D2
-~
-~
+(none)~
+(null)~
 0 0 7577
 S
 #7575
-Sublevel {RRed {CCorridor~
+Sublevel Red Corridor~
 The corridor comes to an end here.  It's only features are an airlock
 built into the south wall, and a sign warning that protective gear must be
 worn beyond the lock.  
@@ -3202,47 +3161,47 @@ worn beyond the lock.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 7572
 S
 #7576
-Sublevel{G Green{C/{YYellow{C Intersection~
-The {Ggreen {gline comes to an abrupt halt, but the {Yyellow {gcontinues,
-making a right-angle bend with the corridor as it heads south past several
-doors.  The {Ggreen {gline continues west, past more doorways.  
+Sublevel Green/Yellow Intersection~
+The green line comes to an abrupt halt, but the yellow continues, making
+a right-angle bend with the corridor as it heads south past several doors. 
+The green line continues west, past more doorways.  
 ~
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D2
-~
-~
+(none)~
+(null)~
 0 0 7591
 D3
-~
-~
+(none)~
+(null)~
 0 0 7571
 S
 #7577
@@ -3254,27 +3213,27 @@ the control room above.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 7574
 D2
-~
-~
+(none)~
+(null)~
 0 0 7578
 D4
-~
-~
+(none)~
+(null)~
 0 0 7579
 S
 #7578
@@ -3288,19 +3247,19 @@ direction.
 0 0 11
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 7577
 S
 #7579
@@ -3315,19 +3274,19 @@ leading to the corridor below.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D5
-~
-~
+(none)~
+(null)~
 0 0 7577
 S
 #7580
@@ -3343,16 +3302,16 @@ V
 7520 -1
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 E
 panel~
 [2] @ Second Floor
@@ -3377,18 +3336,18 @@ the hall.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D3
-~
+(none)~
 door~
 A 0 7562
 S
@@ -3402,18 +3361,18 @@ the hall.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
+(none)~
 door~
 A 0 7562
 S
@@ -3427,18 +3386,18 @@ the hall.
 0 0 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D3
-~
+(none)~
 door~
 A 0 7559
 S
@@ -3452,18 +3411,18 @@ the hall.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
+(none)~
 door~
 A 0 7559
 S
@@ -3477,18 +3436,18 @@ center of the room, where a slideshow projector sits.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D2
-~
+(none)~
 door~
 A 0 7509
 S
@@ -3501,19 +3460,19 @@ back to the imagination.
 0 0 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 AB 0 7573
 S
 #7587
@@ -3527,19 +3486,19 @@ seen in front of the room's only entrance.
 0 0 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D3
-~
-~
+(none)~
+(null)~
 0 0 7558
 S
 #7588
@@ -3552,18 +3511,18 @@ the hall.
 0 0 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
+(none)~
 door~
 AB 0 7558
 S
@@ -3577,18 +3536,18 @@ the hall.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
+(none)~
 door~
 A 0 7561
 S
@@ -3602,112 +3561,112 @@ the hall.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D3
-~
+(none)~
 door~
 A 0 7561
 S
 #7591
-Sublevel {YYellow {CCorridor~
-The {Yyellow {gline follows the hallway north where the corridor turns
-west and south where it passes a couple of westward doors before coming to
-an end.  To the west, one can see a door marked "Autopsy Lab".  
+Sublevel Yellow Corridor~
+The yellow line follows the hallway north where the corridor turns west
+and south where it passes a couple of westward doors before coming to an
+end.  To the west, one can see a door marked "Autopsy Lab".  
 ~
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 7576
 D2
-~
-~
+(none)~
+(null)~
 0 0 7592
 D3
-~
-~
+(none)~
+(null)~
 AB 0 7596
 S
 #7592
-Sublevel {YYellow {CCorridor~
-The {Yyellow {gline follows the hallway north where the corridor
-eventually turns west after passing a door in the west wall and south where
-it passes another westward door before coming to an end.  To the west is a
-door marked "Mourge".  
+Sublevel Yellow Corridor~
+The yellow line follows the hallway north where the corridor eventually
+turns west after passing a door in the west wall and south where it passes
+another westward door before coming to an end.  To the west is a door marked
+"Morgue".  
 ~
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 7591
 D2
-~
-~
+(none)~
+(null)~
 0 0 7593
 D3
-~
-~
+(none)~
+(null)~
 AB 0 7595
 S
 #7593
-Sublevel {YYellow {CCorridor~
-The {Yyellow {gcorridor end here.  West is a door marked "Postmortem
+Sublevel Yellow Corridor~
+The yellow corridor end here.  West is a door marked "Postmortem
 Chemicals".  The only other way lies north past more doors.  Even from here,
 it's clear that the hall turns west after a distance.  
 ~
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 7592
 D3
-~
-~
+(none)~
+(null)~
 A 0 7594
 S
 #7594
@@ -3721,19 +3680,19 @@ way out is east.
 0 9 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 A 0 7593
 S
 #7595
@@ -3746,23 +3705,23 @@ East leads back to the hallway.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 7596
 D1
-~
-~
+(none)~
+(null)~
 AB 0 7592
 S
 #7596
@@ -3780,23 +3739,23 @@ well as those of weak stomachs can find passage back to the hallway east.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 AB 0 7591
 D2
-~
-~
+(none)~
+(null)~
 0 0 7595
 S
 #7597
@@ -3810,44 +3769,44 @@ degree and an alphabet after their name, are stored here awaiting use.
 0 0 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 AB 0 7567
 S
 #7598
 Viral Pathology~
-~
+(null)~
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 7603
 D2
-~
-~
+(none)~
+(null)~
 AB 0 7599
 S
 #7599
@@ -3860,19 +3819,19 @@ and bacterium.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 AB 0 7598
 S
 #7600
@@ -3887,23 +3846,23 @@ people to come and go freely.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 ABR 0 7572
 D3
-~
-~
+(none)~
+(null)~
 BCFGNRU 0 7601
 S
 #7601
@@ -3917,19 +3876,19 @@ north wall.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 BCFGNRU 0 7600
 S
 #7602
@@ -3943,44 +3902,44 @@ break table.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D2
-~
-~
+(none)~
+(null)~
 0 0 7568
 S
 #7603
 Sterilization Chamber~
-~
+(null)~
 0 0 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 ABR 0 7566
 D2
-~
-~
+(none)~
+(null)~
 0 0 7598
 S
 #7604
@@ -3992,19 +3951,19 @@ A duty chart has been posted on the east wall next to a bulletin board.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 7553
 S
 #7607
@@ -4023,16 +3982,16 @@ V
 7649 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 S
 #7608
 Brief Corridor~
@@ -4045,19 +4004,19 @@ V
 7649 1
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D2
-~
-~
+(none)~
+(null)~
 ABR 0 7566
 S
 #7609
@@ -4070,31 +4029,31 @@ paired with a panel possesing a cardkey slot.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 ABCF 0 7607
 D1
-~
-~
+(none)~
+(null)~
 A 0 7611
 D2
-~
-~
+(none)~
+(null)~
 A 0 7612
 D3
-~
-~
+(none)~
+(null)~
 ABF 0 7610
 S
 #7610
@@ -4108,60 +4067,60 @@ card.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 AB 0 7640
 D1
-~
-~
+(none)~
+(null)~
 ABF 0 7609
 D3
-~
-~
+(none)~
+(null)~
 0 0 7613
 S
 #7611
 Main {wGrey {CCorridor~
-~
+(null)~
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 A 0 7641
 D1
-~
-~
+(none)~
+(null)~
 0 0 7569
 D2
-~
-~
+(none)~
+(null)~
 0 0 7645
 D3
-~
-~
+(none)~
+(null)~
 A 0 7609
 S
 #7612
@@ -4175,27 +4134,27 @@ bares a large "{R1{g" centered in the upper half of it.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 A 0 7609
 D2
-~
-~
+(none)~
+(null)~
 0 0 7617
 D3
-~
-~
+(none)~
+(null)~
 ACJ 0 7626
 S
 #7613
@@ -4206,23 +4165,23 @@ and turns south after a ways west.  It's very well lit here.
 0 12 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 7610
 D3
-~
-~
+(none)~
+(null)~
 0 0 7615
 S
 #7614
@@ -4238,19 +4197,19 @@ V
 7544 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 A 0 7570
 S
 #7615
@@ -4262,52 +4221,52 @@ Another door marked "PREP ROOM" lies north.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 AB 0 7638
 D1
-~
-~
+(none)~
+(null)~
 0 0 7613
 D2
-~
-~
+(none)~
+(null)~
 AB 0 7620
 S
 #7616
 Main {wGrey {CCorridor~
-~
+(null)~
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 A 0 7646
 D3
-~
-~
+(none)~
+(null)~
 0 0 7569
 S
 #7617
@@ -4319,27 +4278,27 @@ this is some type of holding facility.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 7612
 D2
-~
-~
+(none)~
+(null)~
 0 0 7618
 D3
-~
-~
+(none)~
+(null)~
 A 0 7628
 S
 #7618
@@ -4351,27 +4310,27 @@ doors along the west wall continues.  The one here is marked as "{R3{g".
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 7617
 D2
-~
-~
+(none)~
+(null)~
 0 0 7619
 D3
-~
-~
+(none)~
+(null)~
 ACJ 0 7627
 S
 #7619
@@ -4385,27 +4344,27 @@ passes even more doors like it as it heads east.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 7580 7618
 D1
-~
-~
+(none)~
+(null)~
 0 0 7629
 D3
-~
-~
+(none)~
+(null)~
 ACJ 0 7625
 S
 #7620
@@ -4417,23 +4376,23 @@ out from here, and a bend in the corridor as it continues east.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 AB 0 7615
 D3
-~
-~
+(none)~
+(null)~
 0 0 7621
 S
 #7621
@@ -4449,19 +4408,19 @@ V
 7622 1
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 7620
 S
 #7622
@@ -4475,23 +4434,23 @@ of the train.
 0 904 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 AB 0 7623
 D2
-~
-~
+(none)~
+(null)~
 AB 0 7624
 S
 #7623
@@ -4504,19 +4463,19 @@ wheelchairs on public transit systems.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D2
-~
-~
+(none)~
+(null)~
 AB 0 7622
 S
 #7624
@@ -4529,19 +4488,19 @@ below a window that looks out onto a dark empty tunnel.
 0 2056 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 AB 0 7622
 S
 #7625
@@ -4555,16 +4514,16 @@ writing, most of it made by scratching.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 E
 writing~
 Most of whats here was done by scratching, probably by fingerhnails... 
@@ -4573,8 +4532,8 @@ Lawrence Holden" "James Louis Catz" "Mark, I never told you I loved you...
 Janice" Other things are scratched here, but they seem incomprehensible.  
 ~
 D1
-~
-~
+(none)~
+(null)~
 ACJ 0 7619
 S
 #7626
@@ -4588,16 +4547,16 @@ writing, most of it made by scratching.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 E
 writing~
 Some of what's here was done by scratching, probably by fingerhnails... 
@@ -4612,8 +4571,8 @@ ookookookookookookookookookookookookookookookookookook{W" Other things are
 scratched here, but they seem incomprehensible.  
 ~
 D1
-~
-~
+(none)~
+(null)~
 ACJ 0 7612
 S
 #7627
@@ -4627,16 +4586,16 @@ writing, most of it made by scratching.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 E
 writing~
 Most of whats here was done by scratching, probably by fingerhnails... 
@@ -4647,8 +4606,8 @@ this.  Robert Ross" "God will help us through this time of trial" Other
 things are scratched here, but they seem incomprehensible.  
 ~
 D1
-~
-~
+(none)~
+(null)~
 ACJ 0 7618
 S
 #7628
@@ -4662,16 +4621,16 @@ writing, most of it made by scratching.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 E
 writing~
 Most of whats here was done by scrathing, probably by fingerhnails... 
@@ -4683,8 +4642,8 @@ out that no one else has to read this.  Cassandra Selene, born of Mary and
 Clark" Other things are scratched here, but they seem incomprehensible.  
 ~
 D1
-~
-~
+(none)~
+(null)~
 A 0 7617
 S
 #7629
@@ -4698,37 +4657,37 @@ installed in the south wall.  Above it is a lit panel.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
+None~
+E
+sign~
+{YLab A Control Room
+{yResearch Staff Only
 ~
 E
 panel~
 {rOperation In progress
 {GLab Not In Use
 ~
-E
-sign~
-{YLab A Control Room
-{yResearch Staff Only
-~
 D0
-~
-~
+(none)~
+(null)~
 AB 0 7630
 D1
-~
-~
+(none)~
+(null)~
 0 0 7631
 D3
-~
-~
+(none)~
+(null)~
 0 0 7619
 S
 #7630
@@ -4742,23 +4701,23 @@ south.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 BCFNR 0 7634
 D2
-~
-~
+(none)~
+(null)~
 AB 0 7629
 S
 #7631
@@ -4771,37 +4730,37 @@ north wall above an airlock.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
+None~
+E
+sign~
+{YLab B Control Room
+{yResearch Staff Only
 ~
 E
 panel~
 {ROperation In Progress
 {gLab Not In Use
 ~
-E
-sign~
-{YLab B Control Room
-{yResearch Staff Only
-~
 D1
-~
-~
+(none)~
+(null)~
 A 0 7635
 D2
-~
-~
+(none)~
+(null)~
 B 0 7632
 D3
-~
-~
+(none)~
+(null)~
 0 0 7629
 S
 #7632
@@ -4815,23 +4774,23 @@ north.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 B 0 7631
 D3
-~
-~
+(none)~
+(null)~
 BCFNR 0 7633
 S
 #7633
@@ -4845,19 +4804,19 @@ airlock has been built into the north wall.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 BCFNR 0 7632
 S
 #7634
@@ -4871,90 +4830,90 @@ airlock has been built into the south wall.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D3
-~
-~
+(none)~
+(null)~
 BCFNR 0 7630
 S
 #7635
 Sanitation Section~
-~
+(null)~
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 A 0 7636
 D2
-~
-~
+(none)~
+(null)~
 A 0 7637
 D3
-~
-~
+(none)~
+(null)~
 A 0 7631
 S
 #7636
 Organic Disposal Facility~
-~
+(null)~
 0 196616 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D2
-~
-~
+(none)~
+(null)~
 A 0 7635
 S
 #7637
 Incinerator~
-~
+(null)~
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 A 0 7635
 S
 #7638
@@ -4968,242 +4927,242 @@ dispense who knows what kind of drugs.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D2
-~
-~
+(none)~
+(null)~
 AB 0 7615
 S
 #7639
 Security Equipment Depot~
-~
+(null)~
 0 0 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 A 0 7640
 S
 #7640
 {wGrey {CSecurity Control~
-~
+(null)~
 0 0 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 7642
 D2
-~
-~
+(none)~
+(null)~
 AB 0 7610
 D3
-~
-~
+(none)~
+(null)~
 A 0 7639
 S
 #7641
 Analysis Floor~
-~
+(null)~
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 7644
 D2
-~
-~
+(none)~
+(null)~
 A 0 7611
 S
 #7642
 Security Chief's Office~
-~
+(null)~
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D2
-~
-~
+(none)~
+(null)~
 0 0 7640
 S
 #7643
 Organic Storage~
-~
+(null)~
 0 0 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 A 0 7569
 S
 #7644
 Analysis Floor~
-~
+(null)~
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D2
-~
-~
+(none)~
+(null)~
 A 0 7569
 D3
-~
-~
+(none)~
+(null)~
 0 0 7641
 S
 #7645
 Test Subject Autopsy~
-~
+(null)~
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 7611
 S
 #7646
 Supervisor's Office~
-~
+(null)~
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D3
-~
-~
+(none)~
+(null)~
 A 0 7616
 S
 #7647
-~
-~
+(null)~
+(null)~
 0 1028 0
 V
 7622 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 S
 #7648
-~
-~
+(null)~
+(null)~
 0 1028 0
 V
 7622 2
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 S
 #7649
 Reinforced Elevator~
@@ -5217,16 +5176,16 @@ a black plastic dome.
 0 396 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 S
 #7650
 Suit Stores~
@@ -5238,19 +5197,19 @@ the north wall hold the rest of the protective gear.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D2
-~
-~
+(none)~
+(null)~
 ABR 0 7572
 S
 #7651
@@ -5265,19 +5224,19 @@ Needless to say, it's cold in here.
 0 12 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
 Cold Place~
 E
 XDDREAM~
-~
+None~
 D2
-~
-~
+(none)~
+(null)~
 AB 0 7567
 S
 #0
@@ -5286,13 +5245,11 @@ S
 
 #RESETS
 D 0 7501 0 3
-D 0 7504 0 3
 D 0 7507 0 3
 D 0 7508 2 7
 D 0 7509 3 3
 D 0 7510 2 3
 D 0 7511 2 3
-D 0 7512 2 3
 D 0 7515 3 7
 D 0 7516 1 7
 D 0 7517 3 3
@@ -5304,8 +5261,6 @@ D 0 7524 2 3
 D 0 7524 3 3
 D 0 7525 0 3
 D 0 7525 2 7
-D 0 7527 0 3
-D 0 7527 2 3
 D 0 7530 2 3
 D 0 7530 3 8195
 D 0 7531 0 3
@@ -5330,8 +5285,6 @@ D 0 7548 2 8195
 D 0 7549 3 8195
 D 0 7550 3 3
 D 0 7551 1 8195
-D 0 7554 2 3
-D 0 7555 0 3
 D 0 7556 2 3
 D 0 7557 0 7
 D 0 7558 3 3

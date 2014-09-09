@@ -237,12 +237,9 @@ I 0
 #6506
 A Sewer Outlet Pipe~
 a Sewer Outlet Pipe~
+A rusty sewer pipe pumping into the pond.~
 This pipe is old, rusted and still very much in use.  You can tell by the
 amount of warm liquid (and some solids) pumping into the pond.  
-~
-This pipe is old, rusted and still very much in use. You can tell
-by the amount of warm liquid (and some solids) pumping into the
-pond.
 ~
 steel~
 25 BE 0
@@ -255,12 +252,9 @@ Q 0
 #6511
 boat~
 an old boat~
+An old, rotting boat.~
 This boat is old, it's rotting and it smells like old socks and mildew. 
 Who knows how it's survived the years stuck in the damp environment.  
-~
-This boat is old, it's rotting and it smells like old socks
-and mildew.  Who knows how it's survived the years stuck in
-the damp environment.
 ~
 wood~
 22 N AO
@@ -274,15 +268,11 @@ Q 0
 #6512
 hut wreckage~
 the wreckage of an old storage hut~
+A wrecked storage hut of some kind.~
 This is the wreckage of an old storage hut of some kind.  Most of the
 wooden supports and struts have rotted in this damp environment, leaving
 only the rusted, corrugate iron shell.  You notice something beneath the
 wreckage.  
-~
-This is the wreckage of an old storage hut of some kind.  Most of the
-wooden supports and struts have rotted in this damp environment, leaving
-only the rusted, corrugate iron shell.  You notice something beneath the
-wreckage.
 ~
 corrugated iron~
 15 0 0
@@ -295,11 +285,9 @@ Q 0
 #6514
 rock~
 a glowing green rock~
+A rock giving off an eerie green light.~
 This rock glows with an eerie green light.  It looks like it might come
 in handy.  
-~
-This rock glows with an eerie green light.  It looks
-like it might come in handy.
 ~
 rock~
 1 ANe AO
@@ -312,18 +300,12 @@ Q 0
 #6518
 fountain~
 an elaborate fountain~
+A giant serpent shaped fountain spewing green liquid.~
 This elaborate marble fountain has been crafted to look like a giant
 serpent of some kind spraying a strange green liquid over what looks like a
 large spider and a chained up and defiled female.  The detail is so great
 that you can even see the horror on the womans face and the tears in her
 eyes.  
-~
-This elaborate marble fountain has been crafted to look
-like a giant serpent of some kind spraying a strange
-green liquid over what looks like a large spider and a
-chained up and defiled female.  The detail is so great
-that you can even see the horror on the womans face and
-the tears in her eyes.
 ~
 marble~
 25 0 0
@@ -336,14 +318,10 @@ Q 0
 #6525
 television tv~
 a portable television~
+A television set.~
 The television sits here, amidst the squalor, showing a re-run of The
 Lone Ranger (in black and white) to the empty room.  The volume has been
 turned down to just above a murmur.  
-~
-The television sits here, amidst the squalor, showing
-a re-run of The Lone Ranger (in black and white) to
-the empty room.  The volume has been turned down to
-just above a murmur.
 ~
 plastic~
 12 A 0
@@ -356,12 +334,9 @@ Q 0
 #6526
 couch~
 a couch~
+A battered couch.~
 A battered couch sits here.  Most of it's stuffing is gone, the fabric
 cover is torn and tattered and there are some bizarre stains over it.  
-~
-A battered couch sits here.  Most of it's stuffing
-is gone, the fabric cover is torn and tattered and
-there are some bizarre stains over it.
 ~
 polyester~
 12 0 0
@@ -374,11 +349,9 @@ Q 0
 #6527
 fridge~
 a fridge~
+A quietly humming fridge.~
 The fridge sits here, humming quietly.  The door is covered in stains of
 all kinds and shows signs of general abuse.  
-~
-The fridge sits here, humming quietly.  The door is covered in
-stains of all kinds and shows signs of general abuse.
 ~
 plastic~
 15 Y 0
@@ -424,13 +397,10 @@ Q 0
 #6530
 sink~
 the kitchen sink~
+A smelly, filthy kitchen sink.~
 The kitchen sink manages to stay consistent with the rest of this dive. 
 It's filthy, smelly and general not the best place to go for a glass of
 water.  
-~
-The kitchen sink manages to stay consistent with the
-rest of this dive.  It's filthy, smelly and general not
-the best place to go for a glass of water.
 ~
 unknown~
 25 0 0
@@ -443,16 +413,11 @@ Q 0
 #6532
 distillery~
 an illegal distillery~
+A distillery that rattles and groans.~
 The distellery rattles and groans as the pressures inside shift
 dramatically.  Huge jugs sit in a heap around it, awaiting refilling. 
 Copper pipes gleam in the light as they twist in and out and around this
 bizarre science experiment gone haywire.  
-~
-The distellery rattles and groans as the pressures inside
-shift dramatically.  Huge jugs sit in a heap around it, 
-awaiting refilling.  Copper pipes gleam in the light as
-they twist in and out and around this bizarre science
-experiment gone haywire.
 ~
 copper~
 25 0 0
@@ -465,10 +430,8 @@ Q 0
 #6533
 human corpse~
 a human corpse~
+A skinless, headless, human corpse~
 A Human corpse, skinless, headless and sticky to the touch.  
-~
-A Human corpse, skinless, headless and sticky to the
-touch.
 ~
 meat~
 19 N A
@@ -481,12 +444,9 @@ Q 0
 #6534
 locker~
 a foot locker~
+A dark green, battered and abused foot locker.~
 The foot locker is battered and abused.  The dark green paint has seen
 better days.  There even seems to be some blood stains on it.  
-~
-The foot locker is battered and abused.  The
-dark green paint has seen better days.  There
-even seems to be some blood stains on it.
 ~
 steel~
 15 0 0
@@ -499,11 +459,9 @@ Q 0
 #6535
 knife~
 a hunting knife~
+A hunting knife~
 This knife gleams with a sullen menace.  It's just like the one Rambo
 had, with all the extra toys inside.  
-~
-This knife gleams with a sullen menace.  It's just like
-the one Rambo had, with all the extra toys inside.
 ~
 steel~
 5 N AN
@@ -516,13 +474,10 @@ Q 0
 #6540
 key necklace bone~
 a bizarre necklace~
+A bizarre, bone necklace covered in runes.~
 The bizarre necklace is made from a slither of bone, etched with tiny,
 intricate runes and has several notches in one end ......  Almost like a
 key.  
-~
-The bizarre necklace is made from a slither of bone, etched
-with tiny, intricate runes and has several notches in one
-end ...... almost like a key.
 ~
 bone~
 18 N AC
@@ -537,9 +492,9 @@ Q 0
 Shotgun~
 a double-barrelled shotgun~
 A double-barrelled, 12 gauge shotgun is here.~
-A double-barrelled, 12-Gauge shotgun glints with sullen menace
-and destructive purpose.  Its long barrels show signs of plenty of wear
-and tear.  You're awfully glad that you're not facing the business end.
+A double-barrelled, 12-Gauge shotgun glints with sullen menace and
+destructive purpose.  Its long barrels show signs of plenty of wear and
+tear.  You're awfully glad that you're not facing the business end.  
 ~
 poly-carbide steel~
 5 N ANR
@@ -548,14 +503,13 @@ poly-carbide steel~
 E
 --USES~
 -2~
+Q 2
 #6563
 ammo shell~
 a single 12-Gauge shotgun shell~
+A single 12-gauge shotgun shell.~
 A single 12-Gauge shotgun shell, complete with red casing and brass
 coloured end.  
-~
-A single 12-Gauge shotgun shell, complete with red casing
-and brass coloured end.
 ~
 lead~
 31 N AO
@@ -567,11 +521,9 @@ E
 -2~
 Q 15
 #6564
-belt ammobelt~
-an ammobelt~
-This is a well worn, functional belt specifically designed to hold up to
-twelve 12-Gauge shotgun shells.  It's also quite stylish.  
-~
+belt ammobelt ammo belt~
+an ammo belt~
+A well-worn ammo belt.~
 This is a well worn, functional belt specifically designed
 to hold up to twelve 12-Gauge shotgun shells.  It's also
 quite stylish.
@@ -754,16 +706,16 @@ XNUMB1~
 A Strange Funnel~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D3
-~
-~
+(none)~
+(null)~
 0 0 6503
 M 0 H 100
 S
@@ -791,10 +743,10 @@ tunnel that bodes of something highly unpleasant.
 ~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 M 0 H 100
 S
 #6503
@@ -807,23 +759,23 @@ could swim through.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 6501
 D3
-~
-~
+(none)~
+(null)~
 0 0 6504
 M 0 H 100
 S
@@ -839,23 +791,23 @@ area ....  You are even sure that you can see some light filtering through.
 0 0 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 6503
 D4
-~
-~
+(none)~
+(null)~
 0 0 6505
 M 0 H 100
 S
@@ -869,27 +821,27 @@ water, inviting you to rest your tired legs.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 6509
 D3
-~
-~
+(none)~
+(null)~
 0 0 6507
 D5
-~
-~
+(none)~
+(null)~
 0 0 6504
 M 0 H 100
 S
@@ -902,23 +854,23 @@ almost fresh, cool air closes around you.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 6505
 D3
-~
-~
+(none)~
+(null)~
 0 0 6508
 M 0 H 100
 S
@@ -932,19 +884,19 @@ long time ago.  In the distance you can hear water dripping.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 6507
 M 0 H 100
 S
@@ -959,16 +911,16 @@ coming from a crack in the northern wall.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
 The crack is actually slightly larger than you
 first realised, making it more of a fissure.  The
@@ -981,8 +933,8 @@ It looks barely big enough to squeeze into it.
 crack~
 HM 0 6513
 D2
-~
-~
+(none)~
+(null)~
 0 0 6505
 M 0 H 100
 S
@@ -996,23 +948,23 @@ rocks.  The passage continues south to the lake and north into darkness.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 6515
 D2
-~
-~
+(none)~
+(null)~
 HM 0 6509
 M 0 H 100
 S
@@ -1028,27 +980,27 @@ light flooding from within.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 6517
 D2
-~
-~
+(none)~
+(null)~
 0 0 6513
 D3
-~
-~
+(none)~
+(null)~
 0 0 6516
 M 0 H 100
 S
@@ -1062,23 +1014,23 @@ passageway winds round from east to south.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 6515
 D2
-~
-~
+(none)~
+(null)~
 0 0 6519
 M 0 H 100
 S
@@ -1091,16 +1043,16 @@ blocks your way south, barring progress with overbearing efficiency.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D2
 The portcullis is huge, heavy and most definately
 in the way.
@@ -1108,8 +1060,8 @@ in the way.
 portcullis~
 ABCFR 6540 6541
 D3
-~
-~
+(none)~
+(null)~
 0 0 6515
 M 0 H 100
 S
@@ -1124,26 +1076,26 @@ gothic in appearence.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 6516
 D3
 This huge wooden door is old, worn and mostly massive.
 Strange noises can be heard on the other side.
  
 ~
-~
+(null)~
 AHL 0 6520
 M 0 H 100
 S
@@ -1157,31 +1109,31 @@ come from the west.  An ungodly and rancid smell wafts from the north.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 AH 0 6523
 D1
-~
-~
+(none)~
+(null)~
 AHL 0 6519
 D2
-~
-~
+(none)~
+(null)~
 AH 0 6521
 D3
-~
-~
+(none)~
+(null)~
 AH 0 6522
 M 0 H 100
 S
@@ -1195,23 +1147,23 @@ squeeking noises.  You hope to everything holy that they're only rats.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 AH 0 6520
 D3
-~
-~
+(none)~
+(null)~
 AH 0 6524
 M 0 H 100
 S
@@ -1227,24 +1179,24 @@ just standing here.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 AH 0 6520
 D3
-~
-~
-ABH 0 6531
+(none)~
+(null)~
+AH 0 6531
 M 0 H 100
 S
 #6523
@@ -1258,19 +1210,19 @@ Who on earth could live in such squalor.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D2
-~
-~
+(none)~
+(null)~
 AH 0 6520
 M 0 H 100
 S
@@ -1285,19 +1237,19 @@ here as there are easily ten beds cramped into this room.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 AH 0 6521
 M 0 H 100
 S
@@ -1315,20 +1267,20 @@ on the overdone side of decency.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
-ABH 0 6522
+(none)~
+(null)~
+AH 0 6522
 M 0 H 100
 S
 #6541
@@ -1342,23 +1294,23 @@ can feel something slimy brush against your leg.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 ABCFR 6540 6517
 D1
-~
-~
+(none)~
+(null)~
 0 0 6542
 M 0 H 100
 S
@@ -1374,27 +1326,27 @@ comparison.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 6543
 D3
-~
-~
+(none)~
+(null)~
 0 0 6541
 D5
-~
-~
+(none)~
+(null)~
 0 0 6544
 M 0 H 100
 S
@@ -1407,23 +1359,23 @@ down the walls and drips off the ceiling.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 6545
 D2
-~
-~
+(none)~
+(null)~
 0 0 6542
 M 0 H 100
 S
@@ -1439,23 +1391,23 @@ seen in the east wall and a rope can be seen leading up into darkness.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 6546
 D4
-~
-~
+(none)~
+(null)~
 0 0 6542
 M 0 H 100
 S
@@ -1467,19 +1419,19 @@ smell and a solitary lightbulb swinging forlornly from its cable.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D2
-~
-~
+(none)~
+(null)~
 0 0 6543
 M 0 H 100
 S
@@ -1495,27 +1447,27 @@ And joy upon joy, something long thin and slimey just bit you on the ear.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 6549
 D1
-~
-~
+(none)~
+(null)~
 0 0 6547
 D3
-~
-~
+(none)~
+(null)~
 0 0 6544
 M 0 H 100
 S
@@ -1532,31 +1484,31 @@ runs from the opening.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 6552
 D1
-~
-~
+(none)~
+(null)~
 0 0 6548
 D2
-~
-~
+(none)~
+(null)~
 0 0 6551
 D3
-~
-~
+(none)~
+(null)~
 0 0 6546
 M 0 H 100
 S
@@ -1571,19 +1523,19 @@ too.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D3
-~
-~
+(none)~
+(null)~
 0 0 6547
 M 0 H 100
 S
@@ -1599,23 +1551,23 @@ enjoy sliding around in the wet and cold slime.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 6550
 D2
-~
-~
+(none)~
+(null)~
 0 0 6546
 M 0 H 100
 S
@@ -1635,19 +1587,19 @@ everything holy you notice the only exit.  South.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D2
-~
-~
+(none)~
+(null)~
 0 0 6549
 M 0 H 100
 S
@@ -1665,23 +1617,23 @@ past you and out.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 6547
 D5
-~
-~
+(none)~
+(null)~
 IJM 0 6565
 M 0 H 100
 S
@@ -1697,27 +1649,27 @@ noises and the occasional cooler breeze.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 6553
 D1
-~
-~
+(none)~
+(null)~
 0 0 6554
 D2
-~
-~
+(none)~
+(null)~
 0 0 6547
 M 0 H 100
 S
@@ -1736,19 +1688,19 @@ uncomfortable.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D2
-~
-~
+(none)~
+(null)~
 0 0 6552
 M 0 H 100
 S
@@ -1764,23 +1716,23 @@ the distance you can hear what sounds like moaning.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 6555
 D3
-~
-~
+(none)~
+(null)~
 0 0 6552
 M 0 H 100
 S
@@ -1797,23 +1749,23 @@ decomposition of the various subterrainian flora.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 6556
 D3
-~
-~
+(none)~
+(null)~
 0 0 6554
 M 0 H 100
 S
@@ -1828,23 +1780,23 @@ haunting echo.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 6557
 D3
-~
-~
+(none)~
+(null)~
 0 0 6555
 M 0 H 100
 S
@@ -1860,23 +1812,23 @@ more foreboding, to the West it's lighter.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 6558
 D3
-~
-~
+(none)~
+(null)~
 0 0 6556
 M 0 H 100
 S
@@ -1892,23 +1844,23 @@ and probable source of that haunting noise.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D3
-~
-~
+(none)~
+(null)~
 0 0 6557
 D4
-~
-~
+(none)~
+(null)~
 0 0 6559
 M 0 H 100
 S
@@ -1923,23 +1875,23 @@ below.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 6560
 D5
-~
-~
+(none)~
+(null)~
 0 0 6558
 M 0 H 100
 S
@@ -1955,23 +1907,23 @@ scent of rust.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D3
-~
-~
+(none)~
+(null)~
 0 0 6559
 D4
-~
-~
+(none)~
+(null)~
 AB 0 6561
 M 0 H 100
 S
@@ -1986,19 +1938,19 @@ the fountain as you can barely hear the splashing of the water above you.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D5
-~
-~
+(none)~
+(null)~
 AB 0 6560
 M 0 H 100
 S
@@ -2015,27 +1967,27 @@ place of safety in the dismal lighting.  You'd better be quick.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 6568
 D3
-~
-~
+(none)~
+(null)~
 0 0 6567
 D4
-~
-~
+(none)~
+(null)~
 IJM 0 6551
 M 0 H 100
 S
@@ -2052,19 +2004,19 @@ rail, and the mess people make when they get hit by a train.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 6567
 M 0 H 100
 S
@@ -2081,23 +2033,23 @@ cautiously continue your journey.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 6565
 D3
-~
-~
+(none)~
+(null)~
 0 0 6566
 M 0 H 100
 S
@@ -2117,23 +2069,23 @@ your ears ring and your heart thunders in your chest.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 6569
 D3
-~
-~
+(none)~
+(null)~
 0 0 6565
 M 0 H 100
 S
@@ -2150,27 +2102,27 @@ almost dance and undulate under your gaze.  How very strange.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 6597
 D2
-~
-~
+(none)~
+(null)~
 ABJM 0 6570
 D3
-~
-~
+(none)~
+(null)~
 0 0 6568
 M 0 H 100
 S
@@ -2186,23 +2138,23 @@ another train on the other side of the wall.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 ABJM 0 6569
 D5
-~
-~
+(none)~
+(null)~
 0 0 6571
 M 0 H 100
 S
@@ -2218,23 +2170,23 @@ You also notice that the hand rails are smeared in it.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 6572
 D4
-~
-~
+(none)~
+(null)~
 0 0 6570
 M 0 H 100
 S
@@ -2248,23 +2200,23 @@ and the steps descend into the gloom below.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D3
-~
-~
+(none)~
+(null)~
 0 0 6571
 D5
-~
-~
+(none)~
+(null)~
 0 0 6573
 M 0 H 100
 S
@@ -2276,23 +2228,23 @@ slippery, rusted, moldering, smelly faeces covered stairs.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D4
-~
-~
+(none)~
+(null)~
 0 0 6572
 D5
-~
-~
+(none)~
+(null)~
 0 0 6574
 M 0 H 100
 S
@@ -2309,23 +2261,23 @@ regular, if not constant use.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D2
-~
-~
+(none)~
+(null)~
 ABM 0 6575
 D4
-~
-~
+(none)~
+(null)~
 0 0 6573
 M 0 H 100
 S
@@ -2339,23 +2291,23 @@ fear to stir within you, making you sweat, making adrenaline start to pump.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 ABM 0 6574
 D3
-~
-~
+(none)~
+(null)~
 AB 0 6576
 M 0 H 100
 S
@@ -2372,23 +2324,23 @@ right into your belly and threatens to remove your breakfast.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 AB 0 6575
 D3
-~
-~
+(none)~
+(null)~
 0 0 6577
 M 0 H 100
 S
@@ -2402,27 +2354,27 @@ stripped.  In contrast the south and east are quite, warm and dark.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 6578
 D1
-~
-~
+(none)~
+(null)~
 0 0 6576
 D2
-~
-~
+(none)~
+(null)~
 0 0 6579
 M 0 H 100
 S
@@ -2443,19 +2395,19 @@ time ago.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D2
-~
-~
+(none)~
+(null)~
 0 0 6577
 M 0 H 100
 S
@@ -2469,27 +2421,27 @@ the sound comes the smell of antisceptic and disinfectant.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 6577
 D1
-~
-~
+(none)~
+(null)~
 0 0 6581
 D3
-~
-~
+(none)~
+(null)~
 0 0 6580
 M 0 H 100
 S
@@ -2506,19 +2458,19 @@ by incestuous inbreeding of mutated Garou.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 6579
 M 0 H 100
 S
@@ -2531,23 +2483,23 @@ almost pleasant enough for you to forget where you are.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D2
-~
-~
+(none)~
+(null)~
 0 0 6582
 D3
-~
-~
+(none)~
+(null)~
 0 0 6579
 M 0 H 100
 S
@@ -2561,27 +2513,27 @@ on repulsive.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 6581
 D1
-~
-~
+(none)~
+(null)~
 0 0 6584
 D3
-~
-~
+(none)~
+(null)~
 0 0 6583
 M 0 H 100
 S
@@ -2598,19 +2550,19 @@ possibly used nappies.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 6582
 M 0 H 100
 S
@@ -2626,23 +2578,23 @@ the open stair well.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D3
-~
-~
+(none)~
+(null)~
 0 0 6582
 D5
-~
-~
+(none)~
+(null)~
 0 0 6585
 M 0 H 100
 S
@@ -2657,23 +2609,23 @@ be comming from all around you.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D3
-~
-~
+(none)~
+(null)~
 0 0 6586
 D4
-~
-~
+(none)~
+(null)~
 0 0 6584
 M 0 H 100
 S
@@ -2690,23 +2642,23 @@ ball.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 6585
 D3
-~
-~
+(none)~
+(null)~
 0 0 6587
 M 0 H 100
 S
@@ -2723,23 +2675,23 @@ ball.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 6586
 D3
-~
-~
+(none)~
+(null)~
 0 0 6588
 M 0 H 100
 S
@@ -2755,23 +2707,23 @@ beautiful once you get over the feeling that you're falling into an abyss.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 6587
 D3
-~
-~
+(none)~
+(null)~
 0 0 6589
 M 0 H 100
 S
@@ -2789,23 +2741,23 @@ familiar yet unrecognisable.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 6588
 D3
-~
-~
+(none)~
+(null)~
 0 0 6590
 M 0 H 100
 S
@@ -2823,23 +2775,23 @@ its near recognition maddening you.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 6589
 D3
-~
-~
+(none)~
+(null)~
 0 0 6591
 M 0 H 100
 S
@@ -2857,23 +2809,23 @@ yourself up off the ground carefully and wonder what the hell just happened.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 6590
 D3
-~
-~
+(none)~
+(null)~
 0 0 6592
 M 0 H 100
 S
@@ -2894,23 +2846,23 @@ over yourself, enough to stand and find a way out.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 6591
 D3
-~
-~
+(none)~
+(null)~
 0 0 6593
 M 0 H 100
 S
@@ -2938,31 +2890,31 @@ you can feel the effects start to work their way back across your senses
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 A 0 6594
 D1
-~
-~
+(none)~
+(null)~
 0 0 6592
 D2
-~
-~
+(none)~
+(null)~
 0 0 6595
 D3
-~
-~
+(none)~
+(null)~
 0 0 6596
 M 0 H 100
 S
@@ -2979,19 +2931,19 @@ beings have been strapped to benches and 'explored' thoroughly.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D2
-~
-~
+(none)~
+(null)~
 A 0 6593
 M 0 H 100
 S
@@ -3010,19 +2962,19 @@ Wyrms conquest over the triat and the unholy glory that is Malfeas.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D0
-~
-~
+(none)~
+(null)~
 0 0 6593
 M 0 H 100
 S
@@ -3038,19 +2990,19 @@ eminate from it in waves, more felt than seen.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D1
-~
-~
+(none)~
+(null)~
 0 0 6593
 M 0 H 100
 S
@@ -3068,19 +3020,19 @@ another way out back the way you came.
 0 8 0
 E
 XNUMB1~
-~
+Unnamed Room~
 E
 XDUMB1~
-~
+None~
 E
 XNDREAM~
-~
+Unnamed Room~
 E
 XDDREAM~
-~
+None~
 D3
-~
-~
+(none)~
+(null)~
 0 0 6569
 M 0 H 100
 S
@@ -3090,8 +3042,6 @@ S
 
 #RESETS
 D 0 6517 2 131111
-D 0 6522 3 131
-D 0 6531 1 131
 D 0 6541 0 131111
 D 0 6560 4 3
 D 0 6561 5 3

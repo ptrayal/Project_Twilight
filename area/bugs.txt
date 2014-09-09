@@ -1,0 +1,54 @@
+[10000] Rayal : Command failure: hint  - Thu Jul 10 12:40:53 2014
+
+[10000] Rayal : Command failure: version  - Fri Jul 11 15:22:40 2014
+
+[10000] Rayal : Command failure: wizcom  - Fri Jul 11 15:23:12 2014
+
+[10000] Rayal : Command failure: mud_stat  - Fri Jul 11 15:23:37 2014
+
+[10000] Rayal : Command failure: mud  - Fri Jul 11 15:23:38 2014
+
+[1] Rayal : Command failure: version  - Fri Jul 11 16:31:19 2014
+
+[1] Rayal : Command failure: ls  - Fri Jul 11 16:40:46 2014
+
+[10048] Rayal : Command failure: done  - Fri Jul 11 19:32:03 2014
+
+[10048] Rayal : Command failure: vlist  - Sun Jul 13 06:56:46 2014
+
+[10406] Rayal : Command failure: updates  - Sun Jul 13 07:04:26 2014
+
+[10048] Rayal : Command failure: room_pair  - Sun Jul 13 17:57:12 2014
+
+[3006] Rayal : Command failure: done  - Sun Jul 13 17:58:13 2014
+
+[12201] Rayal : Command failure: done  - Sun Jul 13 17:59:30 2014
+
+[7064] Nathan Hill : Command failure: nathan backs up against the wall of Twice-Sold Tales, munching his hoagie all the while. - Sun Jul 13 18:04:09 2014
+
+[10050] Rayal : Command failure: done  - Sun Jul 13 18:07:18 2014
+
+[6524] Rayal : Command failure: @  - Sun Jul 13 21:04:08 2014
+
+[9001] Rayal : Command failure: testchar  - Sun Jul 13 21:36:17 2014
+
+[9001] Rayal : Command failure: testchar  - Sun Jul 13 21:36:20 2014
+
+[9001] Rayal : Command failure: advane background herd - Sun Jul 13 21:36:33 2014
+
+[9001] Rayal : Command failure: testchar  - Mon Jul 14 08:40:02 2014
+
+[9001] Rayal : Command failure: testchar  - Mon Jul 14 08:57:31 2014
+
+[9001] Rayal : Command failure: testchar  - Mon Jul 14 09:42:25 2014
+
+[9001] Rayal : Command failure: set char rayal race werewolf - Mon Jul 14 15:55:23 2014
+
+[9001] Rayal : Command failure: set rayal race werewolf - Mon Jul 14 15:55:29 2014
+
+[9001] Rayal : Command failure: surname Test - Mon Jul 14 16:07:24 2014
+
+[1] Rayal : Command failure: whoise rayal - Fri Jul 18 12:08:21 2014
+
+[10200] Rayal : Command failure: vlist  - Thu Jul 24 09:20:44 2014
+
