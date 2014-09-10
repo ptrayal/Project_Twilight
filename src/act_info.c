@@ -5225,12 +5225,6 @@ void do_map(CHAR_DATA *ch, char *argument)
 	do_help(ch, "map");
 }
 
-void do_lala(CHAR_DATA *ch, char *argument)
-{
-	CheckCH(ch);
-	send_to_char("Prevent spam: Use a command to idle. (This now counts.)\n\r", ch);
-}
-
 void do_totems(CHAR_DATA *ch, char *argument)
 {
 	PACK_DATA *pack;

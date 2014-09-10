@@ -252,7 +252,6 @@ DECLARE_DO_FUN(	do_know		);
 DECLARE_DO_FUN(	do_knowstats	);
 DECLARE_DO_FUN(	do_laston	);
 DECLARE_DO_FUN(	do_lastboot	);
-DECLARE_DO_FUN(	do_lala		);
 DECLARE_DO_FUN(	do_learn	);
 DECLARE_DO_FUN(	do_level	);
 DECLARE_DO_FUN(	do_lines	);

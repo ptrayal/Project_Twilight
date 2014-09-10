@@ -229,7 +229,6 @@ const	struct	cmd_type	cmd_table	[] =
 		{	"knock",		do_knock,		P_STAND,	0,	L_NRM,	1,	B|H,	0 },
 		{	"knowledges",	do_knowstats,	P_DEAD,		0,	L_NRM,	1,	A|B|E,	0 },
 		{	"look",			do_look,		P_REST,		0,	L_NRM,	1,	A|B|E,	0 },
-		{	"lalalalala",	do_lala,		P_DEAD,		0,	L_NRM,	0,	A|B|E,	0 },
 		{	"lastboot",		do_lastboot,	P_DEAD,		0,	L_NRM,	1,	A|B|E,	0 },
 		{	"lastname",		do_surname,		P_DEAD,		0,	L_NRM,	1,	A|B|E,	0 },
 		{	"laston",		do_laston,		P_DEAD,		0,	L_NRM,	1,	A|B|E,	0 },
