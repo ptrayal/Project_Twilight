@@ -129,7 +129,6 @@ DECLARE_DO_FUN(	do_close	);
 DECLARE_DO_FUN(	do_wwgift2_3	);
 DECLARE_DO_FUN(	do_wwgift3_3	);
 DECLARE_DO_FUN(	do_wwgift5_3	);
-DECLARE_DO_FUN(	do_coin_toss	);
 DECLARE_DO_FUN(	do_concede	);
 DECLARE_DO_FUN(	do_commands	);
 DECLARE_DO_FUN( do_combine	);

@@ -3048,22 +3048,6 @@ void do_password( CHAR_DATA *ch, char *argument )
 	return;
 }
 
-void do_coin_toss(CHAR_DATA *ch, char *arg)
-{
-	CheckCH(ch);
-
-	int num = number_range(1,2);
-
-	act("$n flips a coin.", ch, NULL, NULL, TO_ROOM, 0);
-	act("You flip a coin.", ch, NULL, NULL, TO_CHAR, 0);
-
-	switch(num)
-	{
-		case 1: send_to_char("The coin lands on heads.\n\r",ch); break;
-		case 2: send_to_char("The coin lands on tails.\n\r",ch); break;
-	}
-}
-
 void do_research(CHAR_DATA *ch, char *argument)
 {
 	NOTE_DATA *pbg;
