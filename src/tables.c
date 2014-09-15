@@ -3428,25 +3428,6 @@ const struct smarket_cmd_type smarket_cmd_table [] =
     { NULL,		0,	NULL			}
 };
 
-const struct flag_type bored_table [] =
-{
-    { "You're really bored?",			0,	FALSE	},
-    { "Why not try getting a job? (HELP JOB)",	0,	FALSE	},
-    { "You are getting sleeepy!",		0,	FALSE	},
-    { "Tried shaking an 8ball?",		0,	FALSE	},
-    { "I know I know... 'quests' are coming soon.",0,	FALSE	},
-    { "Try investigating something. (HELP INVESTIGATE)",0,FALSE	},
-    { "Try researching something. (HELP RESEARCH)",0,	FALSE	},
-    { "Have you checked out the website? (WEBSITE)",0,	FALSE	},
-    { "Let us know what you'd like to do!",	0,	FALSE	},
-    { "Boing!",					0,	FALSE	},
-    { "Heads you lose, tails I win. (HELP TOSS)",0,	FALSE	},
-    { "Leave a note to tell Rayal what you'd like to be able to do.",0,FALSE },
-    { "Have you checked out the PT tutorial? (STEP SCHOOL)",0,FALSE },
-    { "Have you explored all of the mud? (STEP)",0,	FALSE	},
-    { NULL,					0,	FALSE	}
-};
-
 const struct flag_type spirit_table [] =
 {
     {	"None",		0,		FALSE	},

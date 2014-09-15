@@ -96,7 +96,6 @@ DECLARE_DO_FUN( do_block	);
 DECLARE_DO_FUN( do_blood	);
 DECLARE_DO_FUN( do_bonus	);
 DECLARE_DO_FUN( do_boot		);
-DECLARE_DO_FUN( do_bored	);
 DECLARE_DO_FUN(	do_breed	);
 DECLARE_DO_FUN( do_bribe	);
 DECLARE_DO_FUN( do_wwgift5_gal	);

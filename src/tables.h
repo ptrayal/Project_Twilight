@@ -390,7 +390,6 @@ extern	const	struct	flag_type	background_table[];
 extern	const	struct	flag_type	influence_table[];
 extern	const	struct	flag_type	rp_area_table[];
 extern	const	struct	flag_type	taxi_area_table[];
-extern	const	struct	flag_type	bored_table[];
 extern	const	struct	flag_type	spirit_table[];
 extern	const	struct	flag_type	totem_attitudes[];
 extern	const	struct	flag_type	org_type[];

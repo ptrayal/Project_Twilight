@@ -5140,22 +5140,6 @@ void do_use(CHAR_DATA *ch, char *argument)
 	}
 }
 
-void do_bored(CHAR_DATA *ch, char *argument)
-{
-	int i = 0, j = 0;
-
-	CheckCH(ch);
-
-	while(bored_table[i].name != NULL)
-	{
-		i++;
-	}
-
-	j = number_range(0, i-1);
-	act("$t", ch, bored_table[j].name, NULL, TO_CHAR, 0);
-	act("$n is bored. Any ideas for something fun to do?", ch, NULL, NULL, TO_ROOM, 0);
-}
-
 void do_level(CHAR_DATA *ch, char *argument)
 {
 	CheckCH(ch);

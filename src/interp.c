@@ -131,7 +131,6 @@ const	struct	cmd_type	cmd_table	[] =
 		{	"bite",			do_move_bite,	P_FIGHT,	0,	L_NRM,	1,	H,	0 },
 		{	"block",		do_block,		P_DEAD,		0,	L_NRM,	1,	A|B|H,	0 },
 		{	"boot",			do_boot,		P_SLEEP,	0,	L_NRM,	1,	A|B|E,	0 },
-		{	"bored",		do_bored,		P_REST,		0,	L_NRM,	1,	A|B|E,	0 },
 		{	"brawl",		do_fight,		P_STAND,	0,	L_NRM,	0,	A|B,	0 },
 		{	"bribe",		do_bribe,		P_REST,		0,	L_NRM,	1,	B|H,	0 },
 		{	"brief",		do_brief,		P_DEAD,		0,	L_NRM,	1,	A|B|E,	0 },
