@@ -3728,7 +3728,7 @@ void mob_shopping(CHAR_DATA *ch)
 
 void walk_to_summonner( CHAR_DATA *ch )
 {
-    int direction;
+    int direction = 0;
     bool fArea = TRUE;
     char buf[MSL]={'\0'};
 
@@ -3873,7 +3873,6 @@ void do_rp_join( CHAR_DATA *ch, char *argument )
         return;
     }
 
-    count = 0;
     for ( rch = location->people; rch != NULL; rch = rch->next_in_room )
     {
     if(IS_SET(rch->plr_flags, PLR_RP_OK))
