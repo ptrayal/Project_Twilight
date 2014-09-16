@@ -4012,7 +4012,7 @@ void do_concede(CHAR_DATA *ch, char *argument)
 
 void do_step(CHAR_DATA *ch, char *argument)
 {
-    int i;
+    int i = 0;
     int count = 0;
     CHAR_DATA *rch;
     ROOM_INDEX_DATA *location;
