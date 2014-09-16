@@ -450,17 +450,16 @@ void do_tips( CHAR_DATA *ch, char *argument)
 	send_to_char("\tWSo, you need a tip?  Ok, why don't you try these\tn.\n\r\n\r", ch);
 
 	if(ch->bg_count < 5)
-		send_to_char( Format("\tOYou should spend some of your free backgrounds.  You have %d you could spend\tn.\n\r", (5 - ch->bg_count)), ch );
+		send_to_char( Format("\t[U10148/*] \tOYou should spend some of your free backgrounds.  You have %d you could spend\tn.\n\r", (5 - ch->bg_count)), ch );
 
 	if(ch->exp < 5)
 		{
-			send_to_char ("\n\r", ch);
-			send_to_char( Format ("You should try \t<send href='help %s'>%-11s\t</send>.  Investigating uses your skills and thus may not always be successful.  I would start by \t(investigate %s\t).  Then try investigating other topics.\n\r", "investigate", "investigating", clan_table[ch->clan].name), ch);
+			send_to_char( Format ("\t[U10148/*] You should try \t<send href='help %s'>%-11s\t</send>.  Investigating uses your skills and thus may not always be successful.  I would start by \t(investigate %s\t).  Then try investigating other topics.\n\r", "investigate", "investigating", clan_table[ch->clan].name), ch);
 		}
 
 	if(ch->exp < 5)
 	{
-		send_to_char( "Have you tried going to the school?\n\r", ch);
+		send_to_char( "\t[U10148/*] Lost?  Try \t(step newbie school\t) to get back to the newbie school.\n\r", ch);
 	}
 
 	// Brandon - This is the old tips command.

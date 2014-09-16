@@ -937,9 +937,9 @@ void state_obj_cond(OBJ_DATA *obj, CHAR_DATA *ch)
 {
 
 	if(obj->condition > 90)
-		send_to_char("It is in excellent condition.\n\r", ch);
+		send_to_char("It is in \tGexcellent condition\tn.\n\r", ch);
 	else if(obj->condition > 80)
-		send_to_char("It is in good condition.\n\r", ch);
+		send_to_char("It is in \tGgood condition\tn.\n\r", ch);
 	else if(obj->condition > 70)
 		send_to_char("It has begun to show signs of wear.\n\r", ch);
 	else if(obj->condition > 60)
@@ -949,11 +949,11 @@ void state_obj_cond(OBJ_DATA *obj, CHAR_DATA *ch)
 	else if(obj->condition > 40)
 		send_to_char("It is not looking so good.\n\r", ch);
 	else if(obj->condition > 30)
-		send_to_char("It is in poor condition.\n\r", ch);
+		send_to_char("It is in \tOpoor condition\tn.\n\r", ch);
 	else if(obj->condition > 20)
-		send_to_char("It is in very bad condition.\n\r", ch);
+		send_to_char("It is in \tRvery bad condition\tn.\n\r", ch);
 	else
-		send_to_char("It is falling apart.\n\r", ch);
+		send_to_char("It is \tRfalling apart\tn.\n\r", ch);
 
 	send_to_char(Format("It is of %s quality.\n\r", quality_flags[obj->quality].name), ch);
 
@@ -1048,7 +1048,7 @@ void do_look( CHAR_DATA *ch, char *argument )
 						|| IS_SET(ch->plr_flags,PLR_HOLYLIGHT)))
 						|| ch->pcdata->security > 0)
 		{
-			send_to_char(Format(" [\tcRoom %d\tn]",looking->vnum),ch);
+			send_to_char(Format(" [\tcRoom %d\tn] ",looking->vnum),ch);
 		}
 
 		if(IS_SET(ch->act,ACT_UMBRA))
@@ -1057,7 +1057,8 @@ void do_look( CHAR_DATA *ch, char *argument )
 
 			send_to_char( "\n\r", ch );
 
-			if(!IS_NPC(ch) && !IS_SET(ch->comm, COMM_BRIEF)) {
+			if(!IS_NPC(ch) && !IS_SET(ch->comm, COMM_BRIEF)) 
+			{
 				send_to_char( "\tB", ch);
 				send_to_char( "  ",ch);
 				send_to_char( looking->udescription, ch );
@@ -1084,22 +1085,32 @@ void do_look( CHAR_DATA *ch, char *argument )
 
 			send_to_char( "\n\r", ch );
 
-			if(!IS_NPC(ch) && !IS_SET(ch->comm, COMM_BRIEF)) {
-				send_to_char( "\tg", ch);
+			// Show the room description. Make the description text white.
+			if(!IS_NPC(ch) && !IS_SET(ch->comm, COMM_BRIEF)) 
+			{
+				send_to_char( "\tW", ch);
 				send_to_char( "  ",ch);
 				send_to_char( looking->description, ch );
 				send_to_char( "\tn", ch);
 			}
 		}
 
+		// Show the exits. Need to colorize.
 		if ( IS_SET(ch->plr_flags, PLR_AUTOEXIT) )
 		{
 			send_to_char("\n\r",ch);
 			do_function(ch, &do_exits, "auto");
 		}
 
+		// Show objects in the room.
+		send_to_char("\tW---\tYObjects\tW---\tn\n\r", ch);
 		show_list_to_char( looking->contents, ch, FALSE, FALSE );
-		show_char_to_char( looking->people,   ch );
+		send_to_char("\n\r", ch);
+
+		// Show people and mobs in the room.
+		send_to_char("\tW---\tYPeople\tW---\tn\n\r", ch);
+		show_char_to_char( ch->in_room->people, ch );
+
 		/*  if(IS_SET(ch->act, ACT_UMBRA))
 		show_char_to_char( looking->people,   ch ); */
 		return;
@@ -1218,6 +1229,7 @@ void do_look( CHAR_DATA *ch, char *argument )
 				if (++count == number)
 				{
 					send_to_char( "An unobtrusively wrapped package sits here.", ch );
+					send_to_char( "\n\r", ch);
 					state_obj_cond(obj,ch);
 					return;
 				}
@@ -1226,6 +1238,7 @@ void do_look( CHAR_DATA *ch, char *argument )
 				if (++count == number)
 				{
 					send_to_char( obj->full_desc, ch );
+					send_to_char( "\n\r", ch);
 					state_obj_cond(obj,ch);
 					return;
 				}
@@ -1257,6 +1270,7 @@ void do_look( CHAR_DATA *ch, char *argument )
 				if (++count == number)
 				{
 					send_to_char( "An unobtrusively wrapped package sits here.", ch );
+					send_to_char( "\n\r", ch);
 					state_obj_cond(obj,ch);
 					return;
 				}
@@ -1265,6 +1279,7 @@ void do_look( CHAR_DATA *ch, char *argument )
 				if (++count == number)
 				{
 					send_to_char( obj->full_desc, ch );
+					send_to_char( "\n\r", ch);
 					state_obj_cond(obj,ch);
 					return;
 				}
