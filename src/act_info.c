@@ -90,8 +90,7 @@ char *format_obj_to_char( OBJ_DATA *obj, CHAR_DATA *ch, bool fShort )
 					||  (obj->description == NULL || obj->description[0] == '\0')))
 		return buf;
 
-	if (fShort && obj->in_obj != NULL
-			&& obj->in_obj->item_type == ITEM_FURNITURE)
+	if (fShort && obj->in_obj != NULL && obj->in_obj->item_type == ITEM_FURNITURE)
 		strncat( buf, "    " , sizeof(buf));
 
 	if ( IS_OBJ_STAT(obj, ITEM_INVIS)       )   strncat( buf, "(Invis) ", sizeof(buf)     );
@@ -132,6 +131,7 @@ char *format_obj_to_char( OBJ_DATA *obj, CHAR_DATA *ch, bool fShort )
 
 	if(strlen(buf) <= 0)
 		strncat(buf, "This object has no description.\n\r", sizeof(buf));
+		log_string(LOG_BUG, Format("Object VNUM %d has no description.", obj->pIndexData->vnum));
 
 	return buf;
 }
@@ -1104,7 +1104,7 @@ void do_look( CHAR_DATA *ch, char *argument )
 
 		// Show objects in the room.
 		send_to_char("\tW---\tYObjects\tW---\tn\n\r", ch);
-		show_list_to_char( looking->contents, ch, FALSE, FALSE );
+		show_list_to_char( ch->in_room->contents, ch, FALSE, FALSE );
 		send_to_char("\n\r", ch);
 
 		// Show people and mobs in the room.
