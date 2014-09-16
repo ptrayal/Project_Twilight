@@ -1912,7 +1912,7 @@ void do_score( CHAR_DATA *ch, char *argument )
 	statcount=0;
 	send_to_char("\n\r", user);
 
-	send_to_char("\tW--------------------------------<          >----------------------------------\tn\n\r", user);
+	send_to_char("\tW--------------------------------<\tGAdvantages\tW>----------------------------------\tn\n\r", user);
 
 /*    send_to_char( "Virtues:\n\r", user );*/
 	if(ch->race != race_lookup("werewolf"))

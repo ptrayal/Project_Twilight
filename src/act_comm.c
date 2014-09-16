@@ -446,19 +446,34 @@ void do_tips( CHAR_DATA *ch, char *argument)
 {
 	CheckCH(ch);
 
-	if(ch->bg_count < 5)
-		send_to_char( Format("You should spend some of your free backgrounds.  You have %d you could spend.\n\r", (5 - ch->bg_count)), ch );
+	send_to_char("\n\r", ch);
+	send_to_char("\tWSo, you need a tip?  Ok, why don't you try these\tn.\n\r\n\r", ch);
 
-	if (IS_SET(ch->comm,COMM_TIPS))
+	if(ch->bg_count < 5)
+		send_to_char( Format("\tOYou should spend some of your free backgrounds.  You have %d you could spend\tn.\n\r", (5 - ch->bg_count)), ch );
+
+	if(ch->exp < 5)
+		{
+			send_to_char ("\n\r", ch);
+			send_to_char( Format ("You should try \t<send href='help %s'>%-11s\t</send>.  Investigating uses your skills and thus may not always be successful.  I would start by \t(investigate %s\t).  Then try investigating other topics.\n\r", "investigate", "investigating", clan_table[ch->clan].name), ch);
+		}
+
+	if(ch->exp < 5)
 	{
-		send_to_char("You turn off the tip feed.\n\r",ch);
-		REMOVE_BIT(ch->comm,COMM_TIPS);
+		send_to_char( "Have you tried going to the school?\n\r", ch);
 	}
-	else 
-	{
-		send_to_char("You turn on the tip feed.\n\r",ch);
-		SET_BIT(ch->comm,COMM_TIPS);
-	}
+
+	// Brandon - This is the old tips command.
+	// if (IS_SET(ch->comm,COMM_TIPS))
+	// {
+	// 	send_to_char("You turn off the tip feed.\n\r",ch);
+	// 	REMOVE_BIT(ch->comm,COMM_TIPS);
+	// }
+	// else 
+	// {
+	// 	send_to_char("You turn on the tip feed.\n\r",ch);
+	// 	SET_BIT(ch->comm,COMM_TIPS);
+	// }
 }
 
 /* No gossiping in PT, just yelling. */
