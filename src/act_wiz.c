@@ -3057,11 +3057,11 @@ void do_sset( CHAR_DATA *ch, char *argument )
 
 void do_mset( CHAR_DATA *ch, char *argument )
 {
-	char arg1 [MAX_INPUT_LENGTH]={'\0'};
-	char arg2 [MAX_INPUT_LENGTH]={'\0'};
-	char arg3 [MAX_INPUT_LENGTH]={'\0'};
+	char arg1 [MIL]={'\0'};
+	char arg2 [MIL]={'\0'};
+	char arg3 [MIL]={'\0'};
 	CHAR_DATA *victim;
-	int value, rbpg;
+	int value = 0, rbpg = 0;
 
 	CheckCH(ch);
 
@@ -3768,10 +3768,10 @@ void do_mset( CHAR_DATA *ch, char *argument )
 
 void do_string( CHAR_DATA *ch, char *argument )
 {
-	char type [MAX_INPUT_LENGTH]={'\0'};
-	char arg1 [MAX_INPUT_LENGTH]={'\0'};
-	char arg2 [MAX_INPUT_LENGTH]={'\0'};
-	char arg3 [MAX_INPUT_LENGTH]={'\0'};
+	char type [MIL]={'\0'};
+	char arg1 [MIL]={'\0'};
+	char arg2 [MIL]={'\0'};
+	char arg3 [MIL]={'\0'};
 	CHAR_DATA *victim;
 	OBJ_DATA *obj;
 
@@ -3924,7 +3924,7 @@ void do_oset( CHAR_DATA *ch, char *argument )
     char arg2 [MAX_INPUT_LENGTH]={'\0'};
     char arg3 [MAX_INPUT_LENGTH]={'\0'};
     OBJ_DATA *obj;
-    int value;
+    int value = 0;
 
     CheckCH(ch);
 
@@ -4102,9 +4102,7 @@ void do_rset( CHAR_DATA *ch, char *argument )
 	 */
     	PURGE_DATA(location->owner);
 	location->owner		= str_dup(arg3);
-	send_to_char(
-	  "In order for this update to stick, the area needs to be saved.\n\r",
-	    ch);
+	send_to_char("In order for this update to stick, the area needs to be saved.\n\r", ch);
 	return;
     }
 
@@ -4120,19 +4118,13 @@ void do_sockets( CHAR_DATA *ch, char *argument )
 {
 	CHAR_DATA       *vch;
 	DESCRIPTOR_DATA *d;
-	char            buf  [ MSL ]={'\0'};
 	char            buf2 [ MSL ]={'\0'};
-	int             count;
+	int             count = 0;
 	char *          st;
 	char            s[100]={'\0'};
 	char            idle[10]={'\0'};
 
 	CheckCH(ch);
-
-
-	count       = 0;
-	buf[0]      = '\0';
-	buf2[0]     = '\0';
 
 	strncat( buf2, "\n\r\tW[Num Connected_State Login@ Idl] Player Name Host\tn\n\r", sizeof(buf2) );
 	strncat( buf2, "\tW--------------------------------------------------------------------------\tn\n\r", sizeof(buf2));
@@ -4201,8 +4193,8 @@ void do_protocol( CHAR_DATA *ch, char *argument )
 void do_force( CHAR_DATA *ch, char *argument )
 {
 	char buf[MSL]={'\0'};
-	char arg[MAX_INPUT_LENGTH]={'\0'};
-	char arg2[MAX_INPUT_LENGTH]={'\0'};
+	char arg[MIL]={'\0'};
+	char arg2[MIL]={'\0'};
 
 	CheckCH(ch);
 
