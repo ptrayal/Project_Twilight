@@ -4473,6 +4473,8 @@ void do_wwgift4_ahr(CHAR_DATA *ch, char *argument)
 		}
 	}
 
+	ch->willpower--;
+
 	ch->power_timer = 4;
 }
 

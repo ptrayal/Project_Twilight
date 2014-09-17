@@ -3547,8 +3547,6 @@ int newspaper_list(CHAR_DATA *ch, char *argument)
 	int on_stands = -1;
 	int count = 0;
 
-	
-
 	if(!str_cmp(argument, "out now") || !str_cmp(argument, "on stands"))
 		on_stands = 1;
 	else if(!str_cmp(argument, "off stands"))
@@ -3571,8 +3569,6 @@ int newspaper_clear (CHAR_DATA *ch, char *arg)
 {
 	int i = 0;
 	NEWSPAPER *paper = NULL;
-
-	
 
 	if(IS_NULLSTR(arg))
 	{
@@ -3619,8 +3615,6 @@ int newspaper_show (CHAR_DATA *ch, char *arg)
 	NEWSPAPER *paper = NULL;
 	NEWSPAPER *tmp;
 	NOTE_DATA *article = NULL;
-
-	
 
 	if(IS_NULLSTR(arg))
 	{
@@ -3702,8 +3696,6 @@ int newspaper_delete (CHAR_DATA *ch, char *arg)
 	int i = 0;
 	NEWSPAPER *paper = NULL;
 	NEWSPAPER *tmp;
-
-	
 
 	if(IS_NULLSTR(arg))
 	{

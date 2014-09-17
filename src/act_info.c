@@ -3254,7 +3254,8 @@ void do_powers(CHAR_DATA *ch, char *argument)
 	{
 		for(sn = 0; disc_table[sn].vname != NULL; sn++)
 		{
-			if(sn != DISC_OBEAH) {
+			if(sn != DISC_OBEAH) 
+			{
 				snprintf(name, sizeof(name), "%s", disc_table[sn].vname);
 				send_to_char(Format("\t<send href='help %s'>%-15s\t</send> %-2d ", capitalize(name),capitalize(name), ch->disc[sn]), ch);
 				count++;if(!(count%3)) send_to_char("\n\r", ch);
@@ -5767,18 +5768,6 @@ void do_score_revised( CHAR_DATA *ch, char *argument )
 
 	send_to_char("\tW--------------------------------<Dice Pools>----------------------------------\tn\n\r", user);
 
-	if(ch->race != race_lookup("werewolf"))
-	{
-		send_to_char(Format("%s:  %-20d Conscience: %d\n\r",
-				race_table[ch->race].pc_race?pc_race_table[ch->race].GHB:"Humanity", ch->GHB, ch->virtues[0]), user);
-	}
-	else
-	{
-		send_to_char(Format("%s:  %2d/%-20d Conscience: %d\n\r",
-				race_table[ch->race].pc_race?pc_race_table[ch->race].GHB:"Humanity", ch->GHB, ch->max_GHB, ch->virtues[0]), user);
-	}
-
-
 	send_to_char( Format("%s:  %2d/%-20d Self-Control: %d\n\r", race_table[ch->race].pc_race?pc_race_table[ch->race].RBPG:"Faith",
 			ch->RBPG, ch->max_RBPG, ch->virtues[1]), user);
 
@@ -5787,70 +5776,185 @@ void do_score_revised( CHAR_DATA *ch, char *argument )
 	send_to_char( Format("Melee Pool: %-19d Dodge Pool: %d\n\r", get_curr_stat(ch,STAT_DEX)+ch->ability[MELEE].value, get_curr_stat(ch,STAT_DEX)+ch->ability[DODGE].value), user);
 	send_to_char( Format("Soak Pool:  %-19d Damage Pool: %d\n\r", get_curr_stat(ch, STAT_STA)+ch->disc[DISC_FORTITUDE], get_curr_stat(ch, STAT_STR)+ ch->disc[DISC_POTENCE]), user);
 
-   send_to_char("\tW------------------------------------------------------------------------------\tn\n\r", user);
-
 	send_to_char(Format("Experience/OOC Experience: %d / %d\n\r", ch->exp, ch->oocxp), user);
 	send_to_char(Format("Experience to Gift: %d\n\r", ch->xpgift), user);
-
-	send_to_char( "You are: ", user );
-	if ( !IS_NPC(ch) && IS_DRUNK(ch) )
-		send_to_char( "drunk ",   user );
-	if ( !IS_NPC(ch) && IS_HIGH(ch) )
-		send_to_char( "high ",   user );
-	if ( !IS_NPC(ch) && IS_TRIPPING(ch) )
-		send_to_char( "tripping ",   user );
-	if ( !IS_NPC(ch) && NEAR_FRENZY(ch) && !IS_SET(ch->act2, ACT2_FRENZY) )
-		send_to_char( "near frenzy ", user );
-	else if(IS_SET(ch->act2, ACT2_FRENZY))
-		send_to_char( "frenzied ", user );
-	if ( !IS_NPC(ch) && ch->condition[COND_THIRST] ==  0 )
-		send_to_char( "thirsty ", user );
-	if ( !IS_NPC(ch) && ch->condition[COND_HUNGER]   ==  0 )
-		send_to_char( "hungry ",  user );
-	if ( !IS_NPC(ch) && ch->condition[COND_ANGER]   >  10 )
-		send_to_char( "angry ",  user );
-	if ( !IS_NPC(ch) && ch->condition[COND_PAIN]   >  10 )
-		send_to_char( "in pain ",  user );
-
-	switch ( ch->position )
-	{
-	case P_DEAD:
-		send_to_char( "-=<DEAD>=-\n\r",     user );
-		break;
-	case P_MORT:
-		send_to_char( "mortally wounded.\n\r",  user );
-		break;
-	case P_INCAP:
-		send_to_char( "incapacitated.\n\r", user );
-		break;
-	case P_TORPOR:
-		send_to_char( "in torpor.\n\r",     user );
-		break;
-	case P_STUN:
-		send_to_char( "stunned.\n\r",       user );
-		break;
-	case P_SLEEP:
-		send_to_char( "sleeping.\n\r",      user );
-		break;
-	case P_REST:
-		send_to_char( "resting.\n\r",       user );
-		break;
-	case P_SIT:
-		send_to_char( "sitting.\n\r",       user );
-		break;
-	case P_STAND:
-		send_to_char( "standing.\n\r",      user );
-		break;
-	case P_FIGHT:
-		send_to_char( "fighting.\n\r",      user );
-		break;
-	}
 
 	if(IS_SET(ch->act2, ACT2_GHOUL))
 	{
 		send_to_char(Format("You are the devoted servant of %s.\r\n", ch->ghouled_by), user);
 	}
 
+	send_to_char("\tW------------------------------------------------------------------------------\tn\n\r", user);
+
+	send_to_char( Format("%8s (%2d)", race_table[ch->race].pc_race?pc_race_table[ch->race].GHB:"Humanity", ch->GHB), ch);
+	send_to_char( Format("%15sConscience   ", " ", ch->virtues[0]), ch);
+	
+	if (ch->virtues[0]<=0)
+	{
+		send_to_char( "\t[U9675/O]", user);
+		statcount=1;
+				while (statcount < 5)
+		{
+			send_to_char( "\t[U9675/O]", user);
+			statcount++;
+		}
+	}
+	else
+	{
+		while (statcount < ch->virtues[0])
+		{
+			send_to_char( "\t[U9679/*]", user);
+			statcount++;
+		}
+		while (statcount < 5)
+		{
+			send_to_char( "\t[U9675/O]", user);
+			statcount++;
+		}
+	}
+	statcount=0;
+	send_to_char("\n\r", ch);
+
+	if (ch->GHB<=0)
+	{
+		send_to_char( "\t[U9675/O]", user);
+		statcount=1;
+				while (statcount < 10)
+		{
+			send_to_char( "\t[U9675/O]", user);
+			statcount++;
+		}
+	}
+	else
+	{
+		while (statcount < ch->GHB)
+		{
+			send_to_char( "\t[U9679/*]", user);
+			statcount++;
+		}
+		while (statcount < 10)
+		{
+			send_to_char( "\t[U9675/O]", user);
+			statcount++;
+		}
+	}
+	statcount=0;
+
+	// Spacing for proper formatting
+	send_to_char( Format("%18s", " "), ch);
+
+	send_to_char( "Self-Control ", ch);
+	if (ch->virtues[1]<=0)
+	{
+		send_to_char( "\t[U9675/O]", user);
+		statcount=1;
+				while (statcount < 5)
+		{
+			send_to_char( "\t[U9675/O]", user);
+			statcount++;
+		}
+	}
+	else
+	{
+		while (statcount < ch->virtues[1])
+		{
+			send_to_char( "\t[U9679/*]", user);
+			statcount++;
+		}
+		while (statcount < 5)
+		{
+			send_to_char( "\t[U9675/O]", user);
+			statcount++;
+		}
+	}
+	statcount=0;
+	send_to_char("\n\r", ch);
+
+	send_to_char("Willpower", ch);
+
+	send_to_char( Format("%19s", " "), ch);
+	send_to_char( "Courage      ", ch);
+	if (ch->virtues[2]<=0)
+	{
+		send_to_char( "\t[U9675/O]", user);
+		statcount=1;
+				while (statcount < 5)
+		{
+			send_to_char( "\t[U9675/O]", user);
+			statcount++;
+		}
+	}
+	else
+	{
+		while (statcount < ch->virtues[2])
+		{
+			send_to_char( "\t[U9679/*]", user);
+			statcount++;
+		}
+		while (statcount < 5)
+		{
+			send_to_char( "\t[U9675/O]", user);
+			statcount++;
+		}
+	}
+	statcount=0;
+	send_to_char("\n\r", ch);
+
+	// Max willpower first
+	if (ch->max_willpower<=0)	
+	{
+		send_to_char( "\t[U9675/O]", user);
+		statcount=1;
+				while (statcount < 10)
+		{
+			send_to_char( "\t[U9675/O]", user);
+			statcount++;
+		}
+	}
+	else
+	{
+		while (statcount < ch->max_willpower)
+		{
+			send_to_char( "\t[U9679/*]", user);
+			statcount++;
+		}
+		while (statcount < 10)
+		{
+			send_to_char( "\t[U9675/O]", user);
+			statcount++;
+		}
+	}
+	statcount=0;
+	send_to_char("\n\r", ch);
+
+	// Available willpower
+	if (ch->willpower<=0)	
+	{
+		send_to_char( "\t[U9746/O]", user);
+		statcount=1;
+		while (statcount < ch->max_willpower)
+		{
+			send_to_char( "\t[U9746/O]", user);
+			statcount++;
+		}
+	}
+	else
+	{
+		while (statcount < ch->willpower)
+		{
+			send_to_char( "\t[U9744/*]", user);
+			statcount++;
+		}
+		while (statcount < ch->max_willpower)
+		{
+			send_to_char( "\t[U9746/O]", user);
+			statcount++;
+		}
+	}
+	statcount=0;
+
+	
+	send_to_char("\n\r", ch);
 	send_to_char("\tW--------------------------------<\tGBackgrounds\tW>---------------------------------\tn\n\r", user);
 
 	i = 0;
