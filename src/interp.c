@@ -600,6 +600,7 @@ const	struct	cmd_type	cmd_table	[] =
 	{	"plotsave",			do_save_plots,		P_DEAD,	ST,	L_NRM,	1,	A|B|E,	0 },
 	{	"poofin",			do_bamfin,			P_DEAD,	WA,	L_NRM,	1,	A|B|E,	0 },
 	{	"poofout",			do_bamfout,			P_DEAD,	WA,	L_NRM,	1,	A|B|E,	0 },
+	{	"protocol",			do_protocol,		P_DEAD,	WA,	L_NRM,	1,	A|B|E,	0 },
 	{	"purge",			do_purge,			P_DEAD,	WA,	L_ALL,	1,	A|B|E|F,	0 },
 	{	"randat",			do_random_at,		P_DEAD,	WA,	L_COM,	1,	A|B,	0 },
 	{	"reboot",			do_reboot,			P_DEAD,	MA,	L_ALL,	1,	A|B|E,	0 },

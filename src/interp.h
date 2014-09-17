@@ -376,6 +376,7 @@ DECLARE_DO_FUN( do_presence4	);
 DECLARE_DO_FUN( do_presence5	);
 DECLARE_DO_FUN( do_prompt	);
 DECLARE_DO_FUN( do_protect	);
+DECLARE_DO_FUN( do_protocol );
 DECLARE_DO_FUN(	do_pullpin	);
 DECLARE_DO_FUN(	do_pump		);
 DECLARE_DO_FUN(	do_purge	);

@@ -4165,6 +4165,32 @@ void do_sockets( CHAR_DATA *ch, char *argument )
 	return;
 }
 
+
+void do_protocol( CHAR_DATA *ch, char *argument )
+{
+	DESCRIPTOR_DATA *d;
+
+	CheckCH(ch);
+
+	send_to_char( Format("%-15s | %-15s | %-15s | %-15s\n\r", "User", "Client", "MXP", "MSDP"), ch);
+	send_to_char("---------------------------------------------------------------------\n\r", ch);
+
+	for ( d = descriptor_list; d != NULL; d = d->next )
+	{
+		send_to_char( Format("%-15s | ", ( d->original ) ? d->original->name : ( d->character )  ? d->character->name : "(None!)"), ch);
+		send_to_char( Format("%-15s | ", d->pProtocol->pVariables[eMSDP_CLIENT_ID]->pValueString), ch);
+
+		if (d !=NULL && d->pProtocol && d->pProtocol->pVariables[eMSDP_MXP]->ValueInt == 1)
+			send_to_char( Format("%-15s | ", "Yes"), ch);
+		else
+			send_to_char( Format("%-15s | ", "No"), ch);
+
+		send_to_char( Format("%-15s\n\r", "Something"), ch);
+	}
+
+	return;
+}
+
 /*
  * Thanks to Grodyn for pointing out bugs in this function.
  */
