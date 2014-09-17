@@ -3240,7 +3240,7 @@ void do_abilities(CHAR_DATA *ch, char *argument)
 
 void do_powers(CHAR_DATA *ch, char *argument)
 {
-	int sn = 0, count = 0;
+	int sn = 0;
 	char name[MSL]={'\0'};
 
 	CheckCH(ch);
@@ -3256,9 +3256,18 @@ void do_powers(CHAR_DATA *ch, char *argument)
 		{
 			if(sn != DISC_OBEAH) 
 			{
+				if(!IS_ADMIN(ch) && ch->disc[sn] != 0)
+				{
 				snprintf(name, sizeof(name), "%s", disc_table[sn].vname);
 				send_to_char(Format("\t<send href='help %s'>%-15s\t</send> %-2d ", capitalize(name),capitalize(name), ch->disc[sn]), ch);
-				count++;if(!(count%3)) send_to_char("\n\r", ch);
+				send_to_char("\n\r", ch);
+				}	
+				else
+				{
+				snprintf(name, sizeof(name), "%s", disc_table[sn].vname);
+				send_to_char(Format("\t<send href='help %s'>%-15s\t</send> %-2d ", capitalize(name),capitalize(name), ch->disc[sn]), ch);
+				send_to_char("\n\r", ch);
+				}
 			}
 		}
 		send_to_char("\n\r", ch);
