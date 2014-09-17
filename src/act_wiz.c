@@ -4185,7 +4185,11 @@ void do_protocol( CHAR_DATA *ch, char *argument )
 		else
 			send_to_char( Format("%-15s | ", "No"), ch);
 
-		send_to_char( Format("%-15s\n\r", "Something"), ch);
+		if (d !=NULL && d->pProtocol && d->pProtocol->bMSDP == 1)
+			send_to_char( Format("%-15s\n\r", "Yes"), ch);
+		else
+			send_to_char( Format("%-15s\n\r", "No"), ch);
+
 	}
 
 	return;
