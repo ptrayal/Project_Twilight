@@ -767,7 +767,7 @@ bool load_char_obj( DESCRIPTOR_DATA *d, char *name, bool log_load, bool load_con
 	ch->id					= get_pc_id();
 	ch->race				= race_lookup("human");
 	ch->plr_flags			= PLR_AUTOEXIT;
-	ch->comm				= COMM_COMBINE|COMM_PROMPT|COMM_TIPS;
+	ch->comm				= COMM_COMBINE|COMM_PROMPT;
 	PURGE_DATA( ch->prompt );
 	ch->description = str_dup("An impossibly descriptive individual");
 	ch->prompt 				= str_dup("<%h> ");
