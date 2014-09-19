@@ -3075,18 +3075,18 @@ void do_list( CHAR_DATA *ch, char *argument )
             {
                 if ( obj->wear_loc == WEAR_NONE
                         &&   can_see_obj( ch, obj )
-                &&   ( cost = get_cost( keeper, obj, TRUE ) ) > 0
-                &&   ( IS_NULLSTR(argument) ||  is_name(argument,obj->name) ))
+                        &&   ( cost = get_cost( keeper, obj, TRUE ) ) > 0
+                        &&   ( IS_NULLSTR(argument) ||  is_name(argument,obj->name) ))
                 {
                     if ( !found )
                     {
                         found = TRUE;
-                        send_to_char( "[Price     Qty] Item\n\r", ch );
+                        send_to_char( "[Price       Location ] Item\n\r", ch );
                     }
 
                     if (IS_OBJ_STAT(obj,ITEM_INVENTORY))
                     {
-                        send_to_char( Format("[$%5d.%.2d -- ] %s\n\r", cost/100,cost - (cost/100)*100,obj->short_descr), ch );
+                        send_to_char( Format("[$%5d.%.2d   %s] %s\n\r", cost/100,cost - (cost/100)*100, flag_string( wear_flags, obj->wear_flags ), obj->short_descr), ch );
                     }
                     else if(IS_NPC(keeper))
                     {
