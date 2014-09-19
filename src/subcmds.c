@@ -2006,13 +2006,14 @@ int muso_play(CHAR_DATA *ch, char *argument)
 void do_influences (CHAR_DATA *ch, char *argument)
 {
 	int in = 0, cmd = -1;
-	char arg[MAX_INPUT_LENGTH]={'\0'};
+	char arg[MIL]={'\0'};
 
 	CheckCH(ch);
 
 	if(IS_NULLSTR(argument))
 	{
 		send_to_char("How do you wish to use your influence?\n\r", ch);
+		send_to_char("If you wish to see what you can do with influence, use \t(influence commands\t).\n\r", ch);
 		return;
 	}
 
@@ -2054,8 +2055,6 @@ int influence_commands(CHAR_DATA *ch, char *argument)
 	int col = 0;
 	int i = 0, j = NO_FLAG;
 
-	
-
 	if(!IS_NULLSTR(argument) && (j = flag_value(influence_table, argument)) == NO_FLAG)
 	{
 		send_to_char("No such influence type.\n\r", ch);
@@ -2070,7 +2069,7 @@ int influence_commands(CHAR_DATA *ch, char *argument)
 		{
 			if(j == NO_FLAG || i == j)
 			{
-				send_to_char(Format("%-12s | ", influence_cmd_table[cmd].name), ch);
+				send_to_char(Format("\t<send href='influence %s'>%-12s\t</send> | ", influence_cmd_table[cmd].name, influence_cmd_table[cmd].name), ch);
 				if(++col % 4 == 0)
 					send_to_char("\n\r", ch);
 			}
@@ -2092,8 +2091,6 @@ int influence_advance(CHAR_DATA *ch, char *argument)
 {
 	int max_stat = 5;
 	int in = 0, cost = 0;
-
-	
 
 	if(IS_NPC(ch))
 		return FALSE;
@@ -3322,6 +3319,7 @@ void do_backgrounds (CHAR_DATA *ch, char *argument)
 	if(IS_NULLSTR(argument))
 	{
 		send_to_char("What are you trying to do with your background?\n\r", ch);
+		send_to_char("If you want to see the commands for backgrounds, use \t(background commands\t).\n\r", ch);
 		return;
 	}
 
@@ -3348,15 +3346,13 @@ int background_commands(CHAR_DATA *ch, char *argument)
 	int col = 0;
 	int i = 0;
 
-	
-
 	col = 0;
 	for( cmd = 0; bg_cmd_table[cmd].name != NULL; cmd++ )
 	{
 		i = bg_cmd_table[cmd].type;
 		if(ch->backgrounds[i] <= bg_cmd_table[cmd].level)
 		{
-			send_to_char(Format("%-12s | ", bg_cmd_table[cmd].name), ch);
+			send_to_char(Format("\t<send href='background %s'>%-11s\t</send> | ", bg_cmd_table[cmd].name, bg_cmd_table[cmd].name), ch);
 			if(++col % 4 == 0)
 				send_to_char("\n\r", ch);
 		}
@@ -3371,8 +3367,6 @@ int background_advance(CHAR_DATA *ch, char *argument)
 {
 	int max_stat = 5;
 	int in = 0, cost = 0;
-
-	
 
 	if(IS_NPC(ch))
 		return FALSE;
@@ -3447,8 +3441,6 @@ int background_herd(CHAR_DATA *ch, char *argument)
 	int successes = 0;
 	int difficulty = 6;
 
-	
-
 	if(IS_NULLSTR(argument) || !is_number(argument))
 	{
 		send_to_char("Syntax: \tCbackground herd [amount of blood to draw upon]\tn\n\r", ch);
@@ -3495,8 +3487,6 @@ int newspaper_commands(CHAR_DATA *ch, char *argument)
 	int cmd = 0;
 	int col = 0;
 
-	
-
 	send_to_char("Newspaper Commands.\n\rSyntax:newspaper <command> <arguments>\n\r", ch);
 	for( cmd = 0; news_cmd_table[cmd].name != NULL; cmd++ )
 	{
@@ -3517,8 +3507,6 @@ int newspaper_new(CHAR_DATA *ch, char *argument)
 {
 	NEWSPAPER *news = new_newspaper();
 	char arg[MAX_INPUT_LENGTH]={'\0'};
-
-	
 
 	if(IS_NULLSTR(argument))
 	{
@@ -3684,7 +3672,6 @@ int newspaper_show (CHAR_DATA *ch, char *arg)
 
 int newspaper_articles(CHAR_DATA *ch, char *arg)
 {
-	
 
 	parse_note(ch,arg,NOTE_ARTICLE);
 
