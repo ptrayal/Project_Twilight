@@ -1345,10 +1345,9 @@ char *one_line( char *argument, char *arg_first )
 */
 void do_commands( CHAR_DATA *ch, char *argument )
 {
-	int cmd;
-	int col;
+	int cmd = 0;
+	int col = 0;
 
-	col = 0;
 	for ( cmd = 0; !IS_NULLSTR(cmd_table[cmd].name); cmd++ )
 	{
 		if ( cmd_table[cmd].level <  LEVEL_IMMORTAL
@@ -1370,17 +1369,16 @@ void do_commands( CHAR_DATA *ch, char *argument )
 
 void do_wizhelp( CHAR_DATA *ch, char *argument )
 {
-	int cmd;
-	int col;
+	int cmd = 0;
+	int col = 0;
 
-	col = 0;
 	for ( cmd = 0; !IS_NULLSTR(cmd_table[cmd].name); cmd++ )
 	{
 		if ( cmd_table[cmd].level >= LEVEL_IMMORTAL
 				&&   cmd_table[cmd].level <= get_trust( ch )
 				&&   cmd_table[cmd].show)
 		{
-			send_to_char( Format("\t(%-17s\t) |", cmd_table[cmd].name), ch );
+			send_to_char( Format("\t<send href='%s'>%-17s\t</send> |", cmd_table[cmd].name, cmd_table[cmd].name), ch );
 			if ( ++col % 4 == 0 )
 				send_to_char( "\n\r", ch );
 		}
@@ -1393,8 +1391,8 @@ void do_wizhelp( CHAR_DATA *ch, char *argument )
 
 void do_buildhelp( CHAR_DATA *ch, char *argument )
 {
-	int cmd;
-	int col;
+	int cmd = 0;
+	int col = 0;
 
 	if(IS_NPC(ch)) return;
 	if(ch->pcdata->security <= 0)
@@ -1403,7 +1401,6 @@ void do_buildhelp( CHAR_DATA *ch, char *argument )
 		return;
 	}
 
-	col = 0;
 	for ( cmd = 0; !IS_NULLSTR(cmd_table[cmd].name); cmd++ )
 	{
 		if ( cmd_table[cmd].level <= get_trust( ch )
@@ -1422,10 +1419,9 @@ void do_buildhelp( CHAR_DATA *ch, char *argument )
 
 void do_racecmds( CHAR_DATA *ch, char *argument )
 {
-	int cmd;
-	int col;
+	int cmd = 0;
+	int col = 0;
 
-	col = 0;
 	for ( cmd = 0; !IS_NULLSTR(cmd_table[cmd].name); cmd++ )
 	{
 		if ( cmd_table[cmd].level <  LEVEL_IMMORTAL
@@ -1433,7 +1429,7 @@ void do_racecmds( CHAR_DATA *ch, char *argument )
 				&&   cmd_table[cmd].show == 1
 				&&   MY_RACE_CMD(ch, cmd))
 		{
-			send_to_char( Format("\t(%-15s\t) |", cmd_table[cmd].name), ch );
+			send_to_char( Format("\t<send href='%s'>%-15s\t</send> |", cmd_table[cmd].name, cmd_table[cmd].name), ch );
 			if ( ++col % 4 == 0 )
 				send_to_char( "\n\r", ch );
 		}

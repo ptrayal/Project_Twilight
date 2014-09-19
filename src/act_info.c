@@ -5785,13 +5785,8 @@ void do_score_revised( CHAR_DATA *ch, char *argument )
 
 	send_to_char("\tW--------------------------------<Dice Pools>----------------------------------\tn\n\r", user);
 
-	send_to_char( Format("%s:  %2d/%-20d Self-Control: %d\n\r", race_table[ch->race].pc_race?pc_race_table[ch->race].RBPG:"Faith",
-			ch->RBPG, ch->max_RBPG, ch->virtues[1]), user);
-
-	send_to_char( Format("Willpower: %2d/%-17d Courage: %d\n\r", ch->willpower, ch->max_willpower, ch->virtues[2]), user);
-
-	send_to_char( Format("Melee Pool: %-19d Dodge Pool: %d\n\r", get_curr_stat(ch,STAT_DEX)+ch->ability[MELEE].value, get_curr_stat(ch,STAT_DEX)+ch->ability[DODGE].value), user);
-	send_to_char( Format("Soak Pool:  %-19d Damage Pool: %d\n\r", get_curr_stat(ch, STAT_STA)+ch->disc[DISC_FORTITUDE], get_curr_stat(ch, STAT_STR)+ ch->disc[DISC_POTENCE]), user);
+	send_to_char( Format("%s:  %2d/%-20d\n\r", race_table[ch->race].pc_race?pc_race_table[ch->race].RBPG:"Faith",
+			ch->RBPG, ch->max_RBPG), user);
 
 	send_to_char(Format("Experience/OOC Experience: %d / %d\n\r", ch->exp, ch->oocxp), user);
 	send_to_char(Format("Experience to Gift: %d\n\r", ch->xpgift), user);
@@ -5800,6 +5795,36 @@ void do_score_revised( CHAR_DATA *ch, char *argument )
 	{
 		send_to_char(Format("You are the devoted servant of %s.\r\n", ch->ghouled_by), user);
 	}
+
+	send_to_char("\tW------------------------------------------------------------------------------\tn\n\r", user);
+
+	send_to_char( Format("%s\n\r", race_table[ch->race].pc_race?pc_race_table[ch->race].RBPG:"Faith"), ch);
+	// Available RBPG pool
+	if (ch->willpower<=0)	
+	{
+		while (statcount < ch->max_RBPG)
+		{
+			send_to_char( "\t[U9746/O]", user);
+			statcount++;
+		}
+	}
+	else
+	{
+		while (statcount < ch->RBPG)
+		{
+			send_to_char( "\t[U9744/*]", user);
+			statcount++;
+		}
+		while (statcount < ch->max_RBPG)
+		{
+			send_to_char( "\t[U9746/O]", user);
+			statcount++;
+		}
+	}
+	statcount=0;
+	send_to_char("\n\r", ch);
+
+
 
 	send_to_char("\tW------------------------------------------------------------------------------\tn\n\r", user);
 
@@ -5887,13 +5912,21 @@ void do_score_revised( CHAR_DATA *ch, char *argument )
 	statcount=0;
 	send_to_char("\n\r", ch);
 
-	send_to_char("Willpower", ch);
+	send_to_char("Willpower ", ch);
+	send_to_char( "(Resist ", ch);
+	if (IS_SET(ch->act2, ACT2_RESIST))
+	{
+		send_to_char( Format("%3s)", "on"), ch);
+	}
+	else
+	{
+		send_to_char( Format("\t<send href='resist'>%3s\t</send>)", "off"), ch);
+	}
 
-	send_to_char( Format("%19s", " "), ch);
+	send_to_char( Format("%6s", " "), ch);
 	send_to_char( "Courage      ", ch);
 	if (ch->virtues[2]<=0)
 	{
-		send_to_char( "\t[U9675/O]", user);
 		statcount=1;
 				while (statcount < 5)
 		{

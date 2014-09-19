@@ -3041,8 +3041,8 @@ void do_list( CHAR_DATA *ch, char *argument )
         CHAR_DATA *keeper;
         OBJ_DATA *obj;
         int cost = 0,count = 0;
+        char arg[MIL]={'\0'};
         bool found = FALSE;
-        char arg[MAX_INPUT_LENGTH]={'\0'};
         bool fRaw = FALSE;
 
         argument = one_argument(argument,arg);

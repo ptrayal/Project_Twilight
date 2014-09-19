@@ -4268,7 +4268,7 @@ void do_newbie (CHAR_DATA *ch, char *argument)
 void do_pump(CHAR_DATA *ch, char *argument)
 {
     int fail = 0;
-    int stat;
+    int stat = 0;
     AFFECT_DATA af;
 
     CheckCH(ch);
@@ -5276,7 +5276,7 @@ void do_meditate(CHAR_DATA *ch, char *argument)
 
 void do_ooctogift( CHAR_DATA *ch, char *argument)
 {
-    int i;
+    int i = 0;
 
     CheckCH(ch);
 
