@@ -6153,7 +6153,11 @@ void do_charsheet( CHAR_DATA *ch, char *argument )
 	GRID_DATA *grid;
 	GRID_ROW *row;
 	GRID_CELL *cell;
+	char name[MSL]={'\0'};
 	int num = 0;
+	int sn = 0;
+	int i = 0;
+	int statcount = 0;
 	CheckCH(ch);
 
 	if(IS_ADMIN(ch))
@@ -6188,356 +6192,73 @@ void do_charsheet( CHAR_DATA *ch, char *argument )
 	
 	cell_append_contents(cell, "%-10s: %s", "Profession", ch->profession);
 
-	row = create_row(grid);
-	cell = row_append_cell(row,30, "--- Backgrounds ---\n");
-	for(num=0; background_table[num].name; num++)
-	{
-		if(background_table[num].settable)
-		{
-			if(num < MAX_BACKGROUND)
-			{
-				cell_append_contents(cell, "%-11s: %-5s", background_table[num].name, styleBackgrounds(ch, ch->backgrounds[num]));
+	// row = create_row(grid);
+	// cell = row_append_cell(row,30, "--- Backgrounds ---\n");
+	// for(num=0; background_table[num].name; num++)
+	// {
+	// 	if(background_table[num].settable)
+	// 	{
+	// 		if(num < MAX_BACKGROUND)
+	// 		{
+	// 			cell_append_contents(cell, "%-11s: %-5s", background_table[num].name, styleBackgrounds(ch, ch->backgrounds[num]));
 				
-				cell_append_contents(cell, "\n");
-			}
-		}
-	}
-	row_append_cell(row, 40, "%10s", "Influences");
+	// 			cell_append_contents(cell, "\n");
+	// 		}
+	// 	}
+	// }
+	// row_append_cell(row, 40, "%10s", "Influences");
 
 	grid_to_char(grid, ch, TRUE);
 
-   //  send_to_char("\tW--------------------------------<\tGAttributes\tW>----------------------------------\tn\n\r", ch);
+	for(sn = 0; disc_table[sn].vname != NULL; sn++)
+	{
+		if(sn != DISC_OBEAH) 
+		{
+			if(ch->disc[sn] != 0)
+			{
+				snprintf(name, sizeof(name), "%s", disc_table[sn].vname);
+				send_to_char(Format("\t<send href='help %s'>%-15s\t</send> %-2d     ", capitalize(name),capitalize(name), ch->disc[sn]), ch);
 
-   //  send_to_char ("Str: ", ch);
-   //  if (get_curr_stat(ch,STAT_STR)<=0)
-   //  {
-   //      send_to_char( "\t[U9675/O]", ch);
-   //      statcount=1;
-   //      while (statcount < 10)
-   //      {
-   //          send_to_char( "\t[U9675/O]", ch);
-   //          statcount++;
-   //      }
-   //  }
-   //  else
-   //  {
-   //      while (statcount < get_curr_stat(ch,STAT_STR))
-   //      {
-   //          send_to_char( "\t[U9679/*]", ch);
-   //          statcount++;
-   //      }
-   //      while (statcount < 10)
-   //      {
-   //          send_to_char( "\t[U9675/O]", ch);
-   //          statcount++;
-   //      }
-   //  }
+				i = 0;
+				for(num=0; background_table[num].name; num++)
+				{
+					if(background_table[num].settable)
+					{
+						if(ch->backgrounds[num] != 0)
+						{
+							send_to_char(Format("\t<send href='help %s'>%-11s\t</send>:", background_table[num].name, background_table[num].name), ch);
+							if(ch->backgrounds[num]<=0)
+							{
+								send_to_char("\t[U9675/O]", ch);
+								statcount = 1;
+								while (statcount < 5)
+								{
+									send_to_char("\t[U9675/O]", ch);
+									statcount++;
+								}
+							}
+							else
+							{
+								while(statcount < ch->backgrounds[num])
+								{
+									send_to_char("\t[U9679/*]", ch);
+									statcount++;
+								}
+								while (statcount < 5)
+								{
+									send_to_char("\t[U9675/O]", ch);
+									statcount++;
+								}
 
-   //  send_to_char (Format("%14sCHA: ", " "), ch);
-   //  statcount = 0;
-   //  if (get_curr_stat(ch,STAT_CHA)<=0)
-   //  {
-   //      send_to_char( "\t[U9675/O]", ch);
-   //      statcount=1;
-   //      while (statcount < 10)
-   //      {
-   //          send_to_char( "\t[U9675/O]", ch);
-   //          statcount++;
-   //      }
-   //  }
-   //  else
-   //  {
-   //      while (statcount < get_curr_stat(ch,STAT_CHA))
-   //      {
-   //          send_to_char( "\t[U9679/*]", ch);
-   //          statcount++;
-   //      }
-   //      while (statcount < 10)
-   //      {
-   //          send_to_char( "\t[U9675/O]", ch);
-   //          statcount++;
-   //      }
-   //  }
+							}
+							send_to_char("\r\n", ch);
+							statcount = 0;
+							i++;
+						}
+					}
+				}
+			}
 
-   //  send_to_char (Format("%10sPER: ", " "), ch);
-   //  statcount = 0;
-   //  if (get_curr_stat(ch,STAT_PER)<=0)
-   //  {
-   //      send_to_char( "\t[U9675/O]", ch);
-   //      statcount=1;
-   //      while (statcount < 10)
-   //      {
-   //          send_to_char( "\t[U9675/O]", ch);
-   //          statcount++;
-   //      }
-   // }
-   //  else
-   //  {
-   //      while (statcount < get_curr_stat(ch,STAT_PER))
-   //      {
-   //          send_to_char( "\t[U9679/*]", ch);
-   //          statcount++;
-   //      }
-   //      while (statcount < 10)
-   //      {
-   //          send_to_char( "\t[U9675/O]", ch);
-   //          statcount++;
-   //      }
-   //  }
-   //  send_to_char("\n\r", ch);
-
-   //  send_to_char ("DEX: ", ch);
-   //  statcount = 0;
-   //  if (get_curr_stat(ch,STAT_DEX)<=0)
-   //  {
-   //      send_to_char( "\t[U9675/O]", ch);
-   //      statcount=1;
-   //      while (statcount < 10)
-   //      {
-   //          send_to_char( "\t[U9675/O]", ch);
-   //          statcount++;
-   //      }
-   //  }
-   //  else
-   //  {
-   //      while (statcount < get_curr_stat(ch,STAT_DEX))
-   //      {
-   //          send_to_char( "\t[U9679/*]", ch);
-   //          statcount++;
-   //      }
-   //      while (statcount < 10)
-   //      {
-   //          send_to_char( "\t[U9675/O]", ch);
-   //          statcount++;
-   //      }
-   //  }
-
-   //  send_to_char (Format("%14sMAN: ", " "), ch);
-   //  statcount = 0;
-   //  if (get_curr_stat(ch,STAT_MAN)<=0)
-   //  {
-   //      send_to_char( "\t[U9675/O]", ch);
-   //      statcount=1;
-   //      while (statcount < 10)
-   //      {
-   //          send_to_char( "\t[U9675/O]", ch);
-   //          statcount++;
-   //      }
-   //  }
-   //  else
-   //  {
-   //      while (statcount < get_curr_stat(ch,STAT_MAN))
-   //      {
-   //          send_to_char( "\t[U9679/*]", ch);
-   //          statcount++;
-   //      }
-   //      while (statcount < 10)
-   //      {
-   //          send_to_char( "\t[U9675/O]", ch);
-   //          statcount++;
-   //      }
-   //  }
-
-   //  send_to_char (Format("%10sINT: ", " "), ch);
-   //  statcount = 0;
-   //  if (get_curr_stat(ch,STAT_INT)<=0)
-   //  {
-   //      send_to_char( "\t[U9675/O]", ch);
-   //      statcount=1;
-   //      while (statcount < 10)
-   //      {
-   //          send_to_char( "\t[U9675/O]", ch);
-   //          statcount++;
-   //      }
-   //  }
-   //  else
-   //  {
-   //      while (statcount < get_curr_stat(ch,STAT_INT))
-   //      {
-   //          send_to_char( "\t[U9679/*]", ch);
-   //          statcount++;
-   //      }
-   //      while (statcount < 10)
-   //      {
-   //          send_to_char( "\t[U9675/O]", ch);
-   //          statcount++;
-   //      }
-   //  }
-   //  send_to_char("\n\r", ch);
-
-   //  send_to_char ("STA: ", ch);
-   //  statcount = 0;
-   //  if (get_curr_stat(ch,STAT_STA)<=0)
-   //  {
-   //      send_to_char( "\t[U9675/O]", ch);
-   //      statcount=1;
-   //      while (statcount < 10)
-   //      {
-   //          send_to_char( "\t[U9675/O]", ch);
-   //          statcount++;
-   //      }
-   //  }
-   //  else
-   //  {
-   //      while (statcount < get_curr_stat(ch,STAT_STA))
-   //      {
-   //          send_to_char( "\t[U9679/*]", ch);
-   //          statcount++;
-   //      }
-   //      while (statcount < 10)
-   //      {
-   //          send_to_char( "\t[U9675/O]", ch);
-   //          statcount++;
-   //      }
-   //  }
-
-   //  send_to_char (Format("%14sAPP: ", " "), ch);
-   //  statcount = 0;
-   //  if (get_curr_stat(ch,STAT_APP)<=0)
-   //  {
-   //      send_to_char( "\t[U9675/O]", ch);
-   //      statcount=1;
-   //      while (statcount < 10)
-   //      {
-   //          send_to_char( "\t[U9675/O]", ch);
-   //          statcount++;
-   //      }
-   //  }
-   //  else
-   //  {
-   //      while (statcount < get_curr_stat(ch,STAT_APP))
-   //      {
-   //          send_to_char( "\t[U9679/*]", ch);
-   //          statcount++;
-   //      }
-   //      while (statcount < 10)
-   //      {
-   //          send_to_char( "\t[U9675/O]", ch);
-   //          statcount++;
-   //      }
-   //  }
-
-   //  send_to_char (Format("%10sWIT: ", " "), ch);
-   //  statcount = 0;
-   //  if (get_curr_stat(ch,STAT_WIT)<=0)
-   //  {
-   //      send_to_char( "\t[U9675/O]", ch);
-   //      statcount=1;
-   //              while (statcount < 10)
-   //      {
-   //          send_to_char( "\t[U9675/O]", ch);
-   //          statcount++;
-   //      }
-   //  }
-   //  else
-   //  {
-   //      while (statcount < get_curr_stat(ch,STAT_WIT))
-   //      {
-   //          send_to_char( "\t[U9679/*]", ch);
-   //          statcount++;
-   //      }
-   //      while (statcount < 10)
-   //      {
-   //          send_to_char( "\t[U9675/O]", ch);
-   //          statcount++;
-   //      }
-   //  }
-   //  statcount=0;
-   //  send_to_char("\n\r", ch);
-
-   //  send_to_char("\tW--------------------------------<Dice Pools>----------------------------------\tn\n\r", ch);
-
-   //  if(ch->race != race_lookup("werewolf"))
-   //  {
-   //      send_to_char(Format("%s:  %-20d Conscience: %d\n\r",
-   //              race_table[ch->race].pc_race?pc_race_table[ch->race].GHB:"Humanity", ch->GHB, ch->virtues[0]), ch);
-   //  }
-   //  else
-   //  {
-   //      send_to_char(Format("%s:  %2d/%-20d Conscience: %d\n\r",
-   //              race_table[ch->race].pc_race?pc_race_table[ch->race].GHB:"Humanity", ch->GHB, ch->max_GHB, ch->virtues[0]), ch);
-   //  }
-
-
-   //  send_to_char( Format("%s:  %2d/%-20d Self-Control: %d\n\r", race_table[ch->race].pc_race?pc_race_table[ch->race].RBPG:"Faith",
-   //          ch->RBPG, ch->max_RBPG, ch->virtues[1]), ch);
-
-   //  send_to_char( Format("Willpower: %2d/%-17d Courage: %d\n\r", ch->willpower, ch->max_willpower, ch->virtues[2]), ch);
-
-   //  send_to_char( Format("Melee Pool: %-19d Dodge Pool: %d\n\r", get_curr_stat(ch,STAT_DEX)+ch->ability[MELEE].value, get_curr_stat(ch,STAT_DEX)+ch->ability[DODGE].value), ch);
-   //  send_to_char( Format("Soak Pool:  %-19d Damage Pool: %d\n\r", get_curr_stat(ch, STAT_STA)+ch->disc[DISC_FORTITUDE], get_curr_stat(ch, STAT_STR)+ ch->disc[DISC_POTENCE]), ch);
-
-   // send_to_char("\tW------------------------------------------------------------------------------\tn\n\r", ch);
-
-   //  send_to_char(Format("Experience/OOC Experience: %d / %d\n\r", ch->exp, ch->oocxp), ch);
-   //  send_to_char(Format("Experience to Gift: %d\n\r", ch->xpgift), ch);
-
-   //  send_to_char( "You are: ", ch );
-   //  if ( !IS_NPC(ch) && IS_DRUNK(ch) )
-   //      send_to_char( "drunk ",   ch );
-   //  if ( !IS_NPC(ch) && IS_HIGH(ch) )
-   //      send_to_char( "high ",   ch );
-   //  if ( !IS_NPC(ch) && IS_TRIPPING(ch) )
-   //      send_to_char( "tripping ",   ch );
-   //  if ( !IS_NPC(ch) && NEAR_FRENZY(ch) && !IS_SET(ch->act2, ACT2_FRENZY) )
-   //      send_to_char( "near frenzy ", ch );
-   //  else if(IS_SET(ch->act2, ACT2_FRENZY))
-   //      send_to_char( "frenzied ", ch );
-   //  if ( !IS_NPC(ch) && ch->condition[COND_THIRST] ==  0 )
-   //      send_to_char( "thirsty ", ch );
-   //  if ( !IS_NPC(ch) && ch->condition[COND_HUNGER]   ==  0 )
-   //      send_to_char( "hungry ",  ch );
-   //  if ( !IS_NPC(ch) && ch->condition[COND_ANGER]   >  10 )
-   //      send_to_char( "angry ",  ch );
-   //  if ( !IS_NPC(ch) && ch->condition[COND_PAIN]   >  10 )
-   //      send_to_char( "in pain ",  ch );
-
-   //  switch ( ch->position )
-   //  {
-   //  case P_DEAD:
-   //      send_to_char( "-=<DEAD>=-\n\r",     ch );
-   //      break;
-   //  case P_MORT:
-   //      send_to_char( "mortally wounded.\n\r",  ch );
-   //      break;
-   //  case P_INCAP:
-   //      send_to_char( "incapacitated.\n\r", ch );
-   //      break;
-   //  case P_TORPOR:
-   //      send_to_char( "in torpor.\n\r",     ch );
-   //      break;
-   //  case P_STUN:
-   //      send_to_char( "stunned.\n\r",       ch );
-   //      break;
-   //  case P_SLEEP:
-   //      send_to_char( "sleeping.\n\r",      ch );
-   //      break;
-   //  case P_REST:
-   //      send_to_char( "resting.\n\r",       ch );
-   //      break;
-   //  case P_SIT:
-   //      send_to_char( "sitting.\n\r",       ch );
-   //      break;
-   //  case P_STAND:
-   //      send_to_char( "standing.\n\r",      ch );
-   //      break;
-   //  case P_FIGHT:
-   //      send_to_char( "fighting.\n\r",      ch );
-   //      break;
-   //  }
-
-   //  if(IS_SET(ch->act2, ACT2_GHOUL))
-   //  {
-   //      send_to_char(Format("You are the devoted servant of %s.\r\n", ch->ghouled_by), ch);
-   //  }
-
-   //  send_to_char("\tW---------------------------------<\tGInfluences\tW>---------------------------------\tn\n\r", ch);
-
-   //  for(num=0;influence_table[num].name;num++)
-   //  {
-   //      send_to_char(Format("%11s:%4d ", influence_table[num].name, ch->influences[num]), ch);
-   //      if((num+1)%4 == 0)
-   //          send_to_char("\n\r", ch);
-   //  }
-   //  send_to_char("\n\r", ch);
+		}
+	}
 }
