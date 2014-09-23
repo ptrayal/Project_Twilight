@@ -2230,7 +2230,7 @@ void do_move_tongue (CHAR_DATA *ch, char *string)
 void do_challenge(CHAR_DATA *ch, char *argument)
 {
 	CHAR_DATA *vch;
-	char arg[MAX_INPUT_LENGTH]={'\0'};
+	char arg[MIL]={'\0'};
 
 	if(IS_NULLSTR(argument))
 	{

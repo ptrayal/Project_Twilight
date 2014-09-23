@@ -1565,7 +1565,7 @@ void disarm( CHAR_DATA *ch, CHAR_DATA *victim )
 
 void do_bash( CHAR_DATA *ch, char *argument )
 {
-    char arg[MAX_INPUT_LENGTH]={'\0'};
+    char arg[MIL]={'\0'};
     CHAR_DATA *victim;
     int chance = 0;
 
@@ -1657,7 +1657,7 @@ void do_bash( CHAR_DATA *ch, char *argument )
 
 void do_dirt( CHAR_DATA *ch, char *argument )
 {
-    char arg[MAX_INPUT_LENGTH]={'\0'};
+    char arg[MIL]={'\0'};
     CHAR_DATA *victim;
     int chance;
 
@@ -1765,7 +1765,7 @@ void do_dirt( CHAR_DATA *ch, char *argument )
 
 void do_trip( CHAR_DATA *ch, char *argument )
 {
-    char arg[MAX_INPUT_LENGTH]={'\0'};
+    char arg[MIL]={'\0'};
     CHAR_DATA *victim;
     int chance;
 
@@ -1860,7 +1860,7 @@ send_to_char("Project Twilight uses a combo-based combat system.\n\rPlease read 
 /*
 void do_kill( CHAR_DATA *ch, char *argument )
 {
-    char arg[MAX_INPUT_LENGTH]={'\0'};
+    char arg[MIL]={'\0'};
     CHAR_DATA *victim;
 
     one_argument( argument, arg );
@@ -1904,7 +1904,7 @@ void do_kill( CHAR_DATA *ch, char *argument )
 
 void do_backstab( CHAR_DATA *ch, char *argument )
 {
-	char arg[MAX_INPUT_LENGTH]={'\0'};
+	char arg[MIL]={'\0'};
 	CHAR_DATA *victim;
 	/*OBJ_DATA *obj;*/
 
@@ -2060,7 +2060,7 @@ void do_sla( CHAR_DATA *ch, char *argument )
 void do_slay( CHAR_DATA *ch, char *argument )
 {
 	CHAR_DATA *victim;
-	char arg[MAX_INPUT_LENGTH]={'\0'};
+	char arg[MIL]={'\0'};
 
 	one_argument( argument, arg );
 	if ( IS_NULLSTR(arg) )

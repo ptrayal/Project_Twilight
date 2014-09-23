@@ -79,10 +79,10 @@ bool CAN_BE(CHAR_DATA *ch, int cmd)
  */
 int maker_creation(CHAR_DATA *ch, char *argument)
 {
-	char arg[MAX_INPUT_LENGTH]={'\0'};
-	char arg1[MAX_INPUT_LENGTH]={'\0'};
-	char arg2[MAX_INPUT_LENGTH]={'\0'};
-	char arg3[MAX_INPUT_LENGTH]={'\0'};
+	char arg[MIL]={'\0'};
+	char arg1[MIL]={'\0'};
+	char arg2[MIL]={'\0'};
+	char arg3[MIL]={'\0'};
 	OBJ_DATA *pObj;
 	int material = 0, wear = 0, size = 0;
 	int jn = 0;
@@ -214,10 +214,8 @@ int maker_creation(CHAR_DATA *ch, char *argument)
 int maker_desc(CHAR_DATA *ch, char *argument)
 {
 	OBJ_DATA *pObj;
-	char arg[MAX_INPUT_LENGTH]={'\0'};
-	char arg2[MAX_INPUT_LENGTH]={'\0'};
-
-	
+	char arg[MIL]={'\0'};
+	char arg2[MIL]={'\0'};
 
 	smash_tilde( argument );
 	one_argument( argument, arg );
@@ -242,10 +240,8 @@ int maker_desc(CHAR_DATA *ch, char *argument)
 int maker_long_desc(CHAR_DATA *ch, char *argument)
 {
 	OBJ_DATA *pObj;
-	char arg[MAX_INPUT_LENGTH]={'\0'};
-	char arg2[MAX_INPUT_LENGTH]={'\0'};
-
-	
+	char arg[MIL]={'\0'};
+	char arg2[MIL]={'\0'};
 
 	smash_tilde( argument );
 	argument = one_argument( argument, arg );
@@ -277,10 +273,8 @@ int maker_long_desc(CHAR_DATA *ch, char *argument)
 int maker_name(CHAR_DATA *ch, char *argument)
 {
 	OBJ_DATA *pObj;
-	char arg[MAX_INPUT_LENGTH]={'\0'};
-	char arg2[MAX_INPUT_LENGTH]={'\0'};
-
-	
+	char arg[MIL]={'\0'};
+	char arg2[MIL]={'\0'};
 
 	smash_tilde( argument );
 	argument = one_argument( argument, arg );
@@ -312,10 +306,8 @@ int maker_name(CHAR_DATA *ch, char *argument)
 int maker_short_desc(CHAR_DATA *ch, char *argument)
 {
 	OBJ_DATA *pObj;
-	char arg[MAX_INPUT_LENGTH]={'\0'};
-	char arg2[MAX_INPUT_LENGTH]={'\0'};
-
-	
+	char arg[MIL]={'\0'};
+	char arg2[MIL]={'\0'};
 
 	smash_tilde( argument );
 	argument = one_argument( argument, arg );
@@ -368,10 +360,8 @@ int maker_type(CHAR_DATA *ch, char *argument)
 
 int maker_sell(CHAR_DATA *ch, char *argument)
 {
-	char arg1[MAX_INPUT_LENGTH]={'\0'};
+	char arg1[MIL]={'\0'};
 	OBJ_DATA *pObj;
-
-	
 
 	argument = one_argument(argument, arg1);
 
@@ -435,10 +425,8 @@ int maker_typehelp(CHAR_DATA *ch, char *argument)
  */
 int janitor_clean(CHAR_DATA *ch, char *argument)
 {
-	char arg1[MAX_INPUT_LENGTH]={'\0'};
+	char arg1[MIL]={'\0'};
 	OBJ_DATA *pObj;
-
-	
 
 	argument = one_argument(argument, arg1);
 
@@ -470,12 +458,10 @@ int janitor_clean(CHAR_DATA *ch, char *argument)
 
 int janitor_empty(CHAR_DATA *ch, char *argument)
 {
-	char arg1[MAX_INPUT_LENGTH]={'\0'};
+	char arg1[MIL]={'\0'};
 	OBJ_DATA *pObj;
 	OBJ_DATA *content;
 	OBJ_DATA *next;
-
-	
 
 	argument = one_argument(argument, arg1);
 
@@ -520,10 +506,8 @@ int janitor_empty(CHAR_DATA *ch, char *argument)
  */
 int sales_sell(CHAR_DATA *ch, char *argument)
 {
-	char arg1[MAX_INPUT_LENGTH]={'\0'};
+	char arg1[MIL]={'\0'};
 	OBJ_DATA *pObj;
-
-	
 
 	argument = one_argument(argument, arg1);
 
@@ -550,11 +534,9 @@ int sales_buy(CHAR_DATA *ch, char *argument)
 	int cost = 0,roll = 0;
 	CHAR_DATA *keeper;
 	OBJ_DATA *obj,*t_obj;
-	char arg[MAX_INPUT_LENGTH]={'\0'};
-	char arg2[MAX_INPUT_LENGTH]={'\0'};
+	char arg[MIL]={'\0'};
+	char arg2[MIL]={'\0'};
 	int number = 0, count = 1;
-
-	
 
 	if ( IS_NULLSTR(argument) )
 	{
@@ -675,9 +657,7 @@ int sales_buy(CHAR_DATA *ch, char *argument)
 
 int sales_markup(CHAR_DATA *ch, char *argument)
 {
-	char arg1[MAX_INPUT_LENGTH]={'\0'};
-
-	
+	char arg1[MIL]={'\0'};
 
 	argument = one_argument(argument, arg1);
 
@@ -726,12 +706,10 @@ int mayor_tax(CHAR_DATA *ch, char *argument)
 int mayor_appoint(CHAR_DATA *ch, char *argument)
 {
 	CHAR_DATA *vch;
-	char arg[MAX_INPUT_LENGTH]={'\0'};
+	char arg[MIL]={'\0'};
 	char buf[MSL]={'\0'};
 	int o = 0, online = 0, in_char_list = 0;
 	char *position;
-
-	
 
 	argument = one_argument(argument, arg);
 
@@ -827,12 +805,10 @@ int mayor_appoint(CHAR_DATA *ch, char *argument)
 /* Judge commands */
 int judge_marry(CHAR_DATA *ch, char *argument)
 {
-	char arg[MAX_INPUT_LENGTH]={'\0'};
-	char arg2[MAX_INPUT_LENGTH]={'\0'};
+	char arg[MIL]={'\0'};
+	char arg2[MIL]={'\0'};
 	CHAR_DATA *s1;
 	CHAR_DATA *s2;
-
-	
 
 	if(IS_NULLSTR(argument))
 	{
@@ -873,9 +849,7 @@ int judge_marry(CHAR_DATA *ch, char *argument)
 void do_job(CHAR_DATA *ch, char *argument)
 {
 	int jn = 0, cmd = 0;
-	char arg[MAX_INPUT_LENGTH]={'\0'};
-
-	
+	char arg[MIL]={'\0'};
 
 	if(IS_NULLSTR(argument))
 	{
@@ -982,8 +956,8 @@ int job_advance(CHAR_DATA *ch, char *argument)
 int job_apply(CHAR_DATA *ch, char *argument)
 {
 	int job = 0, fail, whatever = 0;
-	char arg1[MAX_INPUT_LENGTH]={'\0'};
-	char arg2[MAX_INPUT_LENGTH]={'\0'};
+	char arg1[MIL]={'\0'};
+	char arg2[MIL]={'\0'};
 	CHAR_DATA *vch;
 
 	argument = one_argument(argument, arg1);
@@ -1335,13 +1309,11 @@ int police_background (CHAR_DATA *ch, char *argument)
  */
 int crim_pick (CHAR_DATA *ch, char *argument)
 {
-	char arg[MAX_INPUT_LENGTH]={'\0'};
+	char arg[MIL]={'\0'};
 	CHAR_DATA *gch;
 	OBJ_DATA *obj;
 	int door = 0;
 	int diff = 0;
-
-	
 
 	one_argument( argument, arg );
 
@@ -1689,10 +1661,8 @@ int crim_case(CHAR_DATA *ch, char *argument)
 void do_instruct(CHAR_DATA *ch, char *argument)
 {
 	int gift = 0;
-	char arg[MAX_INPUT_LENGTH]={'\0'};
+	char arg[MIL]={'\0'};
 	CHAR_DATA *vch;
-
-	
 
 	argument = one_argument(argument, arg);
 
@@ -1735,10 +1705,8 @@ void do_instruct(CHAR_DATA *ch, char *argument)
 void do_teach(CHAR_DATA *ch, char *argument)
 {
 	int abil = 0;
-	char arg[MAX_INPUT_LENGTH]={'\0'};
+	char arg[MIL]={'\0'};
 	CHAR_DATA *vch;
-
-	
 
 	argument = one_argument(argument, arg);
 
@@ -2476,7 +2444,7 @@ int political_raise(CHAR_DATA *ch, char *argument)
 int political_campaign(CHAR_DATA *ch, char *argument)
 {
 	CHAR_DATA *nominee;
-	char arg[MAX_INPUT_LENGTH]={'\0'};
+	char arg[MIL]={'\0'};
 	bool online = FALSE;
 	bool in_char_list = FALSE;
 	int i = 0,j = 0;
@@ -2593,13 +2561,11 @@ int political_campaign(CHAR_DATA *ch, char *argument)
 int political_negcampaign(CHAR_DATA *ch, char *argument)
 {
 	CHAR_DATA *nominee;
-	char arg[MAX_INPUT_LENGTH]={'\0'};
+	char arg[MIL]={'\0'};
 	bool online = FALSE;
 	bool in_char_list = FALSE;
 	int i = 0,j = 0;
 	int fail = dice_rolls(ch, get_curr_stat(ch, STAT_MAN) + ch->ability[POLITICS].value, 7);
-
-	
 
 	argument = one_argument(argument, arg);
 
@@ -3175,11 +3141,9 @@ int economic_trade(CHAR_DATA *ch, char *argument)
 int scientific_materials(CHAR_DATA *ch, char *argument)
 {
 	int fail = dice_rolls(ch, get_curr_stat(ch, STAT_CHA) + ch->ability[SCIENCE].value, 7);
-	char arg[MAX_INPUT_LENGTH]={'\0'};
+	char arg[MIL]={'\0'};
 	int material = 0, size = 0;
 	OBJ_DATA *obj;
-
-	
 
 	if(IS_NULLSTR(argument))
 	{
@@ -3312,9 +3276,7 @@ int scientific_tipoff(CHAR_DATA *ch, char *argument)
 void do_backgrounds (CHAR_DATA *ch, char *argument)
 {
 	int bg = 0, cmd = -1;
-	char arg[MAX_INPUT_LENGTH]={'\0'};
-
-	
+	char arg[MIL]={'\0'};
 
 	if(IS_NULLSTR(argument))
 	{
@@ -3506,7 +3468,7 @@ int newspaper_commands(CHAR_DATA *ch, char *argument)
 int newspaper_new(CHAR_DATA *ch, char *argument)
 {
 	NEWSPAPER *news = new_newspaper();
-	char arg[MAX_INPUT_LENGTH]={'\0'};
+	char arg[MIL]={'\0'};
 
 	if(IS_NULLSTR(argument))
 	{
@@ -3738,9 +3700,7 @@ int newspaper_rename(CHAR_DATA *ch, char *argument)
 {
 	int i = 0;
 	NEWSPAPER *paper = NULL;
-	char arg[MAX_INPUT_LENGTH]={'\0'};
-
-	
+	char arg[MIL]={'\0'};
 
 	if(IS_NULLSTR(argument))
 	{
@@ -3789,9 +3749,7 @@ int newspaper_price(CHAR_DATA *ch, char *argument)
 {
 	int i = 0;
 	NEWSPAPER *paper = NULL;
-	char arg[MAX_INPUT_LENGTH]={'\0'};
-
-	
+	char arg[MIL]={'\0'};
 
 	if(IS_NULLSTR(argument))
 	{
@@ -3848,15 +3806,13 @@ int newspaper_price(CHAR_DATA *ch, char *argument)
 
 int newspaper_place(CHAR_DATA *ch, char *argument)
 {
-	int i = 0;
-	NEWSPAPER *paper = NULL;
-	char arg[MAX_INPUT_LENGTH]={'\0'};
-	char position[MAX_INPUT_LENGTH]={'\0'};
-	char article[MAX_INPUT_LENGTH]={'\0'};
-	int anum = 0, vnum = 0;
 	NOTE_DATA *pnote;
-
-	
+	NEWSPAPER *paper = NULL;
+	char arg[MIL]={'\0'};
+	char position[MIL]={'\0'};
+	char article[MIL]={'\0'};
+	int anum = 0, vnum = 0;
+	int i = 0;
 
 	if(IS_NULLSTR(argument))
 	{
@@ -3938,9 +3894,7 @@ int newspaper_start_stop(CHAR_DATA *ch, char *argument, int on_stands)
 {
 	int i = 0;
 	NEWSPAPER *paper = NULL;
-	char arg[MAX_INPUT_LENGTH]={'\0'};
-
-	
+	char arg[MIL]={'\0'};
 
 	if(IS_NULLSTR(argument))
 	{
@@ -4033,10 +3987,8 @@ int smarket_commands(CHAR_DATA *ch, char *argument)
 int smarket_create(CHAR_DATA *ch, char *argument)
 {
 	STOCKS *stock = new_stock();
-	char arg[MAX_INPUT_LENGTH]={'\0'};
-	char arg2[MAX_INPUT_LENGTH]={'\0'};
-
-	
+	char arg[MIL]={'\0'};
+	char arg2[MIL]={'\0'};
 
 	if(IS_NULLSTR(argument))
 	{
@@ -4191,9 +4143,7 @@ int smarket_rename(CHAR_DATA *ch, char *argument)
 {
 	int i = 0;
 	STOCKS *stock = NULL;
-	char arg[MAX_INPUT_LENGTH]={'\0'};
-
-	
+	char arg[MIL]={'\0'};
 
 	if(IS_NULLSTR(argument))
 	{
@@ -4242,9 +4192,7 @@ int smarket_ticker(CHAR_DATA *ch, char *argument)
 {
 	int i = 0;
 	STOCKS *stock = NULL;
-	char arg[MAX_INPUT_LENGTH]={'\0'};
-
-	
+	char arg[MIL]={'\0'};
 
 	if(IS_NULLSTR(argument))
 	{
@@ -4299,9 +4247,7 @@ int smarket_price(CHAR_DATA *ch, char *argument)
 {
 	int i = 0;
 	STOCKS *stock = NULL;
-	char arg[MAX_INPUT_LENGTH]={'\0'};
-
-	
+	char arg[MIL]={'\0'};
 
 	if(IS_NULLSTR(argument))
 	{
@@ -4365,8 +4311,7 @@ int smarket_save(CHAR_DATA *ch, char *arg)
 void do_home (CHAR_DATA *ch, char *argument)
 {
 	int cmd = -1;
-	char arg[MAX_INPUT_LENGTH]={'\0'};
-	
+	char arg[MIL]={'\0'};
 
 	if(IS_NULLSTR(argument))
 	{
@@ -4397,8 +4342,7 @@ void do_orgbuild (CHAR_DATA *ch, char *argument)
 	ORG_DATA *org;
 	ORGMEM_DATA *mem;
 	int cmd = -1;
-	char arg[MAX_INPUT_LENGTH]={'\0'};
-	
+	char arg[MIL]={'\0'};
 
 	if(IS_NULLSTR(argument))
 	{
@@ -4486,10 +4430,8 @@ int home_prices(CHAR_DATA *ch, char *argument, int type, ORG_DATA *org)
 
 int home_buy(CHAR_DATA *ch, char *argument, int type, ORG_DATA *org)
 {
-	char arg[MAX_INPUT_LENGTH]={'\0'};
+	char arg[MIL]={'\0'};
 	int door = 0, vnum = 0, cost = 0, cash = 0;
-
-	
 
 	argument = one_argument(argument, arg);
 
@@ -4618,12 +4560,10 @@ int home_buy(CHAR_DATA *ch, char *argument, int type, ORG_DATA *org)
 
 int home_sell(CHAR_DATA *ch, char *argument, int type, ORG_DATA *org)
 {
-	char arg[MAX_INPUT_LENGTH]={'\0'};
+	char arg[MIL]={'\0'};
 	int i = 0, j = 0, cost = 0, pricemod = 0;
 	int found = 0;
 	CHAR_DATA *vch, *vch_next;
-
-	
 
 	if(IS_NULLSTR(argument))
 	{
