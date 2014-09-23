@@ -3134,7 +3134,7 @@ void do_xpgift (CHAR_DATA *ch, char *argument)
     CHAR_DATA *vict;
     char arg1[MSL]={'\0'};
     char arg2[MSL]={'\0'};
-    int gift;
+    int gift = 0;
 
     CheckCH(ch);
 
@@ -3221,7 +3221,7 @@ void do_bribe (CHAR_DATA *ch, char *argument)
     char arg1[MSL]={'\0'};
     char arg2[MSL]={'\0'};
     char arg3[MSL]={'\0'};
-    int charge, fail;
+    int charge = 0, fail = 0;
 
     CheckCH(ch);
 
@@ -3377,8 +3377,7 @@ void do_chase(CHAR_DATA *ch, char *argument)
 
     for(;dist >= 0; dist--)
     {
-        dir = find_path( ch->in_room->vnum, vch->in_room->vnum,
-                ch, (-1 * dist), fArea );
+        dir = find_path( ch->in_room->vnum, vch->in_room->vnum, ch, (-1 * dist), fArea );
         if(dir == -1)
         {
             send_to_char("You run around but can't find any trace of your quarry.\n\r", ch);

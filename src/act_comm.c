@@ -967,7 +967,7 @@ void do_dsay( CHAR_DATA *ch, char *argument )
 	char buf[4*MSL]={'\0'};
 	CHAR_DATA *rch, *rch_next;
 	CHAR_DATA *victim;
-	char arg[MAX_INPUT_LENGTH]={'\0'};
+	char arg[MIL]={'\0'};
 	char string[MSL]={'\0'};
 	char *name;
 
@@ -1056,7 +1056,7 @@ void do_whisper( CHAR_DATA *ch, char *argument )
 	char buf[4*MSL]={'\0'};
 	CHAR_DATA *rch;
 	CHAR_DATA *victim;
-	char arg[MAX_INPUT_LENGTH]={'\0'};
+	char arg[MIL]={'\0'};
 	char string[MSL]={'\0'};
 	char *name;
 
@@ -1163,7 +1163,7 @@ bool OWNS_PHONE (CHAR_DATA *ch)
 
 void do_tell( CHAR_DATA *ch, char *argument )
 {
-	char arg[MAX_INPUT_LENGTH]={'\0'};
+	char arg[MIL]={'\0'};
 	CHAR_DATA *victim = NULL;
 
 	CheckCH(ch);
@@ -1247,7 +1247,7 @@ void do_tell( CHAR_DATA *ch, char *argument )
 
 void do_call( CHAR_DATA *ch, char *argument )
 {
-	char arg[MAX_INPUT_LENGTH]={'\0'};
+	char arg[MIL]={'\0'};
 	CHAR_DATA *victim = NULL;
 
 	CheckCH(ch);
@@ -1417,7 +1417,7 @@ void do_call( CHAR_DATA *ch, char *argument )
 /* Speaking to sleeping characters anywhere in the mud. */
 void do_dreamspeak( CHAR_DATA *ch, char *argument )
 {
-	char arg[MAX_INPUT_LENGTH]={'\0'};
+	char arg[MIL]={'\0'};
 	CHAR_DATA *victim = NULL;
 
 	CheckCH(ch);
@@ -1487,7 +1487,7 @@ void do_dreamspeak( CHAR_DATA *ch, char *argument )
 /* Speaking to characters anywhere in the mud. */
 void do_mentalspeech( CHAR_DATA *ch, char *argument )
 {
-	char arg[MAX_INPUT_LENGTH]={'\0'};
+	char arg[MIL]={'\0'};
 	CHAR_DATA *victim = NULL;
 
 	CheckCH(ch);
@@ -1661,7 +1661,7 @@ void do_dpmote( CHAR_DATA *ch, char *argument )
 {
 	CHAR_DATA *vch;
 	char *letter,*name;
-	char last[MAX_INPUT_LENGTH]={'\0'};
+	char last[MIL]={'\0'};
 	char temp[MSL]={'\0'};
 	int matches = 0;
 
@@ -1826,9 +1826,9 @@ void do_pmote( CHAR_DATA *ch, char *argument )
 {
 	CHAR_DATA *vch;
 	char *name,*letter;
-	char last[MAX_INPUT_LENGTH]={'\0'};
+	char last[MIL]={'\0'};
 	char temp[MSL]={'\0'};
-	char discreet[4*MAX_INPUT_LENGTH]={'\0'};
+	char discreet[4*MIL]={'\0'};
 	char release[4*MSL]={'\0'};
 	char string[MSL]={'\0'};
 	int matches = 0;
@@ -2092,7 +2092,7 @@ void do_save( CHAR_DATA *ch, char *argument )
 
 void do_shadow( CHAR_DATA *ch, char *argument )
 {
-	char arg[MAX_INPUT_LENGTH]={'\0'};
+	char arg[MIL]={'\0'};
 	CHAR_DATA *victim;
 	int fail = 0, k = 0;
 	int diff = 0;
@@ -2166,7 +2166,7 @@ void do_shadow( CHAR_DATA *ch, char *argument )
 
 void do_follow( CHAR_DATA *ch, char *argument )
 {
-	char arg[MAX_INPUT_LENGTH]={'\0'};
+	char arg[MIL]={'\0'};
 	CHAR_DATA *victim;
 
 	CheckCH(ch);
@@ -2297,8 +2297,8 @@ void die_follower( CHAR_DATA *ch )
 void do_order( CHAR_DATA *ch, char *argument )
 {
 	char buf[MSL]={'\0'};
-	char arg[MAX_INPUT_LENGTH]={'\0'};
-	char arg2[MAX_INPUT_LENGTH]={'\0'};
+	char arg[MIL]={'\0'};
+	char arg2[MIL]={'\0'};
 	CHAR_DATA *victim;
 	CHAR_DATA *och;
 	CHAR_DATA *och_next;
@@ -2390,7 +2390,7 @@ void do_order( CHAR_DATA *ch, char *argument )
 
 void do_group( CHAR_DATA *ch, char *argument )
 {
-	char arg[MAX_INPUT_LENGTH]={'\0'};
+	char arg[MIL]={'\0'};
 	CHAR_DATA *victim;
 
 	CheckCH(ch);
@@ -2650,7 +2650,7 @@ void set_email( CHAR_DATA *ch, char *email )
 
 void do_email(CHAR_DATA *ch, char *argument)
 {
-	char arg[MAX_INPUT_LENGTH]={'\0'};
+	char arg[MIL]={'\0'};
 
 	CheckCH(ch);
 
