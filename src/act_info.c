@@ -6192,22 +6192,6 @@ void do_charsheet( CHAR_DATA *ch, char *argument )
 	
 	cell_append_contents(cell, "%-10s: %s", "Profession", ch->profession);
 
-	// row = create_row(grid);
-	// cell = row_append_cell(row,30, "--- Backgrounds ---\n");
-	// for(num=0; background_table[num].name; num++)
-	// {
-	// 	if(background_table[num].settable)
-	// 	{
-	// 		if(num < MAX_BACKGROUND)
-	// 		{
-	// 			cell_append_contents(cell, "%-11s: %-5s", background_table[num].name, styleBackgrounds(ch, ch->backgrounds[num]));
-				
-	// 			cell_append_contents(cell, "\n");
-	// 		}
-	// 	}
-	// }
-	// row_append_cell(row, 40, "%10s", "Influences");
-
 	grid_to_char(grid, ch, TRUE);
 
 	for(sn = 0; disc_table[sn].vname != NULL; sn++)

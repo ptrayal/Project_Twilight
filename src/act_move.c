@@ -3556,7 +3556,7 @@ void scan_char(CHAR_DATA *victim, CHAR_DATA *ch, sh_int depth, sh_int door)
 {
     extern char *const distance[];
     char buf[MSL]={'\0'};
-    char buf2[MAX_INPUT_LENGTH]={'\0'};
+    char buf2[MIL]={'\0'};
 
     buf[0] = '\0';
 
@@ -3572,7 +3572,7 @@ void scan_char(CHAR_DATA *victim, CHAR_DATA *ch, sh_int depth, sh_int door)
 
 int on_path(ROOM_INDEX_DATA *r, int path[10])
 {
-    int i;
+    int i = 0;
 
     for(i = 0; i < 10; i++)
     {
@@ -3586,7 +3586,7 @@ int on_path(ROOM_INDEX_DATA *r, int path[10])
 void do_flee(CHAR_DATA *ch, char *argument)
 {
     int path[10];
-    int i,k;
+    int i = 0,k = 0;
 
     CheckCH(ch);
 
@@ -3944,7 +3944,7 @@ void do_bail(CHAR_DATA *ch, char *argument)
 
         if(victim->in_room->vnum != ROOM_VNUM_JAIL)
         {
-            send_to_char("They aren't gaoled!\n\r", ch);
+            send_to_char("They aren't jailed!\n\r", ch);
             return;
         }
     }
@@ -3966,7 +3966,7 @@ void do_concede(CHAR_DATA *ch, char *argument)
 {
     int i = -1;
     CHAR_DATA *vch;
-    char arg[MAX_INPUT_LENGTH]={'\0'};
+    char arg[MIL]={'\0'};
 
     CheckCH(ch);
 
