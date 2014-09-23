@@ -756,7 +756,7 @@ void do_refuse(CHAR_DATA *ch, char *argument)
 {
 	ORG_DATA *org;
 	ORGMEM_DATA *mem;
-	char arg[MAX_INPUT_LENGTH]={'\0'};
+	char arg[MIL]={'\0'};
 	CHAR_DATA *vch;
 	DESCRIPTOR_DATA *d;
 
@@ -881,7 +881,7 @@ void do_induct(CHAR_DATA *ch, char *argument)
 	ORG_DATA *org;
 	ORGMEM_DATA *mem;
 	bool online;
-	char arg[MAX_INPUT_LENGTH]={'\0'};
+	char arg[MIL]={'\0'};
 
 	CheckCH(ch);
 
@@ -993,7 +993,7 @@ void do_induct(CHAR_DATA *ch, char *argument)
 
 void do_authflag(CHAR_DATA *ch, char *argument)
 {
-	char arg[MAX_INPUT_LENGTH]={'\0'};
+	char arg[MIL]={'\0'};
 	ORGMEM_DATA *mem, *chmem;
 	ORG_DATA *org;
 	int value = 0;
@@ -1068,7 +1068,7 @@ void do_authflag(CHAR_DATA *ch, char *argument)
 
 void do_status(CHAR_DATA *ch, char *argument)
 {
-	char arg[MAX_INPUT_LENGTH]={'\0'};
+	char arg[MIL]={'\0'};
 	ORGMEM_DATA *mem, *chmem;
 	ORG_DATA *org;
 	int value = 0;
@@ -1157,7 +1157,7 @@ void do_status(CHAR_DATA *ch, char *argument)
 
 void do_boot(CHAR_DATA *ch, char *argument)
 {
-	char arg[MAX_INPUT_LENGTH]={'\0'};
+	char arg[MIL]={'\0'};
 	ORGMEM_DATA *mem, *chmem;
 	ORG_DATA *org;
 
@@ -1217,7 +1217,7 @@ void do_boot(CHAR_DATA *ch, char *argument)
 
 void do_resign(CHAR_DATA *ch, char *argument)
 {
-	char arg[MAX_INPUT_LENGTH]={'\0'};
+	char arg[MIL]={'\0'};
 	ORGMEM_DATA *mem;
 	ORG_DATA *org;
 
@@ -1315,7 +1315,7 @@ void do_donate(CHAR_DATA *ch, char *argument)
 {
 	ORG_DATA *org;
 	ORGMEM_DATA *mem;
-	char arg[MAX_INPUT_LENGTH]={'\0'};
+	char arg[MIL]={'\0'};
 	int amount = 0;
 
 	CheckCH(ch);

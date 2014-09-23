@@ -146,8 +146,8 @@ void get_obj( CHAR_DATA *ch, OBJ_DATA *obj, OBJ_DATA *container )
 
 void do_get( CHAR_DATA *ch, char *argument )
 {
-    char arg1[MAX_INPUT_LENGTH]={'\0'};
-    char arg2[MAX_INPUT_LENGTH]={'\0'};
+    char arg1[MIL]={'\0'};
+    char arg2[MIL]={'\0'};
     OBJ_DATA *obj;
     OBJ_DATA *obj_next;
     OBJ_DATA *container;
@@ -299,8 +299,8 @@ void do_get( CHAR_DATA *ch, char *argument )
 
 void do_put( CHAR_DATA *ch, char *argument )
 {
-    char arg1[MAX_INPUT_LENGTH]={'\0'};
-    char arg2[MAX_INPUT_LENGTH]={'\0'};
+    char arg1[MIL]={'\0'};
+    char arg2[MIL]={'\0'};
     OBJ_DATA *container;
     OBJ_DATA *obj;
     OBJ_DATA *obj_next;
@@ -549,7 +549,7 @@ void do_put( CHAR_DATA *ch, char *argument )
 
 void do_drop( CHAR_DATA *ch, char *argument )
 {
-    char arg[MAX_INPUT_LENGTH]={'\0'};
+    char arg[MIL]={'\0'};
     OBJ_DATA *obj;
     OBJ_DATA *obj_next;
     bool found;
@@ -713,8 +713,8 @@ void do_drop( CHAR_DATA *ch, char *argument )
 
 void do_give( CHAR_DATA *ch, char *argument )
 {
-    char arg1 [MAX_INPUT_LENGTH]={'\0'};
-    char arg2 [MAX_INPUT_LENGTH]={'\0'};
+    char arg1 [MIL]={'\0'};
+    char arg2 [MIL]={'\0'};
     CHAR_DATA *victim;
     OBJ_DATA  *obj, *t_obj;
     EXTRA_DESCR_DATA *ed, *objed;
@@ -1071,7 +1071,7 @@ void do_envenom(CHAR_DATA *ch, char *argument)
 
 void do_fill( CHAR_DATA *ch, char *argument )
 {
-    char arg[MAX_INPUT_LENGTH]={'\0'};
+    char arg[MIL]={'\0'};
     OBJ_DATA *obj;
     OBJ_DATA *fountain;
     bool found = FALSE;
@@ -1373,7 +1373,7 @@ void do_pour (CHAR_DATA *ch, char *argument)
 
 void do_drink( CHAR_DATA *ch, char *argument )
 {
-    char arg[MAX_INPUT_LENGTH]={'\0'};
+    char arg[MIL]={'\0'};
     OBJ_DATA *obj, *cont = NULL, *cont_next;
     int amount = 0;
     int liquid = 0;
@@ -1556,7 +1556,7 @@ void do_drink( CHAR_DATA *ch, char *argument )
 
 void do_eat( CHAR_DATA *ch, char *argument )
 {
-    char arg[MAX_INPUT_LENGTH]={'\0'};
+    char arg[MIL]={'\0'};
     OBJ_DATA *obj;
     int a = 0, b = 0;
 
@@ -2066,7 +2066,7 @@ void wear_obj( CHAR_DATA *ch, OBJ_DATA *obj, bool fReplace, char *wear_loc )
 
 void do_wear( CHAR_DATA *ch, char *argument )
 {
-    char arg[MAX_INPUT_LENGTH]={'\0'};
+    char arg[MIL]={'\0'};
     OBJ_DATA *obj;
 
     CheckCH(ch);
@@ -2123,7 +2123,7 @@ void do_wear( CHAR_DATA *ch, char *argument )
 
 void do_remove( CHAR_DATA *ch, char *argument )
 {
-    char arg[MAX_INPUT_LENGTH]={'\0'};
+    char arg[MIL]={'\0'};
     OBJ_DATA *obj;
 
     CheckCH(ch);
@@ -2165,7 +2165,7 @@ void do_remove( CHAR_DATA *ch, char *argument )
 
 void do_quaff( CHAR_DATA *ch, char *argument )
 {
-    char arg[MAX_INPUT_LENGTH]={'\0'};
+    char arg[MIL]={'\0'};
     OBJ_DATA *obj;
 
     CheckCH(ch);
@@ -2205,8 +2205,8 @@ void do_quaff( CHAR_DATA *ch, char *argument )
 
 void do_recite( CHAR_DATA *ch, char *argument )
 {
-    char arg1[MAX_INPUT_LENGTH]={'\0'};
-    char arg2[MAX_INPUT_LENGTH]={'\0'};
+    char arg1[MIL]={'\0'};
+    char arg2[MIL]={'\0'};
     CHAR_DATA *victim;
     OBJ_DATA *scroll;
     OBJ_DATA *obj;
@@ -2270,8 +2270,8 @@ void do_recite( CHAR_DATA *ch, char *argument )
 void do_steal( CHAR_DATA *ch, char *argument )
 {
     char buf  [MSL]={'\0'};
-    char arg1 [MAX_INPUT_LENGTH]={'\0'};
-    char arg2 [MAX_INPUT_LENGTH]={'\0'};
+    char arg1 [MIL]={'\0'};
+    char arg2 [MIL]={'\0'};
     CHAR_DATA *victim;
     OBJ_DATA *obj;
     int percent = 0, fail = 0;
@@ -2425,8 +2425,8 @@ void do_steal( CHAR_DATA *ch, char *argument )
 
 void do_takeforgot( CHAR_DATA *ch, char *argument )
 {
-    char arg1 [MAX_INPUT_LENGTH]={'\0'};
-    char arg2 [MAX_INPUT_LENGTH]={'\0'};
+    char arg1 [MIL]={'\0'};
+    char arg2 [MIL]={'\0'};
     CHAR_DATA *victim;
     OBJ_DATA *obj;
     int percent = 0, fail = 0;
@@ -2683,7 +2683,7 @@ void obj_to_keeper( OBJ_DATA *obj, CHAR_DATA *ch )
 /* get an object from a shopkeeper's list */
 OBJ_DATA *get_obj_keeper( CHAR_DATA *ch, CHAR_DATA *keeper, char *argument )
 {
-    char arg[MAX_INPUT_LENGTH]={'\0'};
+    char arg[MIL]={'\0'};
     OBJ_DATA *obj;
     int number = 0;
     int count = 0;
@@ -2800,7 +2800,7 @@ void buy_raw_material(CHAR_DATA *ch, char *argument)
     CHAR_DATA *keeper;
     int amount = 0, cost = 0;
     OBJ_DATA *obj;
-    char arg[MAX_INPUT_LENGTH]={'\0'};
+    char arg[MIL]={'\0'};
     int material = 0;
 
     argument = one_argument(argument, arg);
@@ -2880,8 +2880,8 @@ void do_buy( CHAR_DATA *ch, char *argument )
     int cost = 0;
     CHAR_DATA *keeper;
     OBJ_DATA *obj,*t_obj;
-    char arg[MAX_INPUT_LENGTH]={'\0'};
-    char arg2[MAX_INPUT_LENGTH]={'\0'};
+    char arg[MIL]={'\0'};
+    char arg2[MIL]={'\0'};
     int number = 0, count = 1;
     EXTRA_DESCR_DATA *ed, *objed;
 
@@ -3115,7 +3115,7 @@ void do_list( CHAR_DATA *ch, char *argument )
 
 void do_sell( CHAR_DATA *ch, char *argument )
 {
-    char arg[MAX_INPUT_LENGTH]={'\0'};
+    char arg[MIL]={'\0'};
     CHAR_DATA *keeper;
     OBJ_DATA *obj;
     int cost = 0,roll = 0;
@@ -3210,7 +3210,7 @@ void do_sell( CHAR_DATA *ch, char *argument )
 
 void do_value( CHAR_DATA *ch, char *argument )
 {
-    char arg[MAX_INPUT_LENGTH]={'\0'};
+    char arg[MIL]={'\0'};
     CHAR_DATA *keeper;
     OBJ_DATA *obj;
     int cost = 0;
@@ -3318,8 +3318,8 @@ void do_shoplift( CHAR_DATA *ch, char *argument )
     OBJ_DATA *t_obj;
     EXTRA_DESCR_DATA *ed, *objed;
     int percent = 0, fail = 0;
-    char arg1 [MAX_INPUT_LENGTH]={'\0'};
-    char arg2 [MAX_INPUT_LENGTH]={'\0'};
+    char arg1 [MIL]={'\0'};
+    char arg2 [MIL]={'\0'};
 
     CheckCH(ch);
 
@@ -3533,7 +3533,7 @@ void do_search (CHAR_DATA *ch, char *argument)
 
 void do_reload(CHAR_DATA *ch, char *argument)
 {
-    char arg[MAX_INPUT_LENGTH]={'\0'};
+    char arg[MIL]={'\0'};
     OBJ_DATA *weapon, *ammo;
 
     CheckCH(ch);
@@ -3580,7 +3580,7 @@ void do_reload(CHAR_DATA *ch, char *argument)
 
 void do_unload(CHAR_DATA *ch, char *argument)
 {
-    char arg[MAX_INPUT_LENGTH]={'\0'};
+    char arg[MIL]={'\0'};
     OBJ_DATA *weapon, *ammo;
 
     CheckCH(ch);
@@ -3658,7 +3658,7 @@ void do_repair(CHAR_DATA *ch, char *argument)
 void do_activate(CHAR_DATA *ch, char *argument)
 {
     OBJ_DATA *obj;
-    char arg[MAX_INPUT_LENGTH]={'\0'};
+    char arg[MIL]={'\0'};
     int spirit = 0;
     bool n_r = FALSE;
 
@@ -3882,7 +3882,7 @@ void do_balance(CHAR_DATA *ch, char *argument)
 
 void do_wrap(CHAR_DATA *ch, char *argument)
 {
-    char arg[MAX_INPUT_LENGTH]={'\0'};
+    char arg[MIL]={'\0'};
     OBJ_DATA *obj;
 
     CheckCH(ch);
@@ -3914,7 +3914,7 @@ void do_wrap(CHAR_DATA *ch, char *argument)
 
 void do_unwrap(CHAR_DATA *ch, char *argument)
 {
-    char arg[MAX_INPUT_LENGTH]={'\0'};
+    char arg[MIL]={'\0'};
     OBJ_DATA *obj;
 
     CheckCH(ch);
@@ -3946,7 +3946,7 @@ void do_unwrap(CHAR_DATA *ch, char *argument)
 
 void do_pullpin(CHAR_DATA *ch, char *argument)
 {
-    char arg[MAX_INPUT_LENGTH]={'\0'};
+    char arg[MIL]={'\0'};
     OBJ_DATA *obj;
 
     CheckCH(ch);
@@ -3984,7 +3984,7 @@ void do_pullpin(CHAR_DATA *ch, char *argument)
 
 void do_defuse(CHAR_DATA *ch, char *argument)
 {
-    char arg[MAX_INPUT_LENGTH]={'\0'};
+    char arg[MIL]={'\0'};
     OBJ_DATA *obj;
     int fail = 0;
 

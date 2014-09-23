@@ -513,9 +513,9 @@ int find_dir( CHAR_DATA *ch, char *arg )
 
 void do_open( CHAR_DATA *ch, char *argument )
 {
-    char arg[MAX_INPUT_LENGTH]={'\0'};
+    char arg[MIL]={'\0'};
     OBJ_DATA *obj;
-    int door;
+    int door = 0;
 
     CheckCH(ch);
 
@@ -611,9 +611,9 @@ void do_open( CHAR_DATA *ch, char *argument )
 
 void do_close( CHAR_DATA *ch, char *argument )
 {
-    char arg[MAX_INPUT_LENGTH]={'\0'};
+    char arg[MIL]={'\0'};
     OBJ_DATA *obj;
-    int door;
+    int door = 0;
 
     CheckCH(ch);
 
@@ -730,9 +730,9 @@ void key_chomp( CHAR_DATA *ch, int key )
 
 void do_lock( CHAR_DATA *ch, char *argument )
 {
-    char arg[MAX_INPUT_LENGTH]={'\0'};
+    char arg[MIL]={'\0'};
     OBJ_DATA *obj;
-    int door;
+    int door = 0;
 
     CheckCH(ch);
 
@@ -840,9 +840,9 @@ void do_lock( CHAR_DATA *ch, char *argument )
 
 void do_unlock( CHAR_DATA *ch, char *argument )
 {
-    char arg[MAX_INPUT_LENGTH]={'\0'};
+    char arg[MIL]={'\0'};
     OBJ_DATA *obj;
-    int door;
+    int door = 0;
 
     CheckCH(ch);
 
@@ -954,7 +954,7 @@ void do_unlock( CHAR_DATA *ch, char *argument )
 
 void do_pick( CHAR_DATA *ch, char *argument )
 {
-    char arg[MAX_INPUT_LENGTH]={'\0'};
+    char arg[MIL]={'\0'};
     CHAR_DATA *gch;
     OBJ_DATA *obj;
     int door;
@@ -1114,8 +1114,8 @@ void do_pick( CHAR_DATA *ch, char *argument )
 void do_stand( CHAR_DATA *ch, char *argument )
 {
     OBJ_DATA *obj = NULL;
-    char arg1[MAX_INPUT_LENGTH]={'\0'};
-    char arg2[MAX_INPUT_LENGTH]={'\0'};
+    char arg1[MIL]={'\0'};
+    char arg2[MIL]={'\0'};
 
     CheckCH(ch);
 
@@ -1567,7 +1567,7 @@ void do_sleep( CHAR_DATA *ch, char *argument )
 
 void do_wake( CHAR_DATA *ch, char *argument )
 {
-    char arg[MAX_INPUT_LENGTH]={'\0'};
+    char arg[MIL]={'\0'};
     CHAR_DATA *victim;
 
     CheckCH(ch);
@@ -3465,7 +3465,7 @@ void scan_char           args((CHAR_DATA *victim, CHAR_DATA *ch,
                                sh_int depth, sh_int door));
 void do_scan(CHAR_DATA *ch, char *argument)
 {
-    char arg1[MAX_INPUT_LENGTH]={'\0'};
+    char arg1[MIL]={'\0'};
     ROOM_INDEX_DATA *scan_room;
     EXIT_DATA *pExit;
     sh_int door, depth, tag = 1;
@@ -4407,7 +4407,7 @@ void do_fangs(CHAR_DATA *ch, char *argument)
 
 void do_mark(CHAR_DATA *ch, char *argument)
 {
-    char arg[MAX_INPUT_LENGTH]={'\0'};
+    char arg[MIL]={'\0'};
     int door;
     EXTRA_DESCR_DATA *ed;
 
@@ -4892,7 +4892,7 @@ void do_jump(CHAR_DATA *ch, char *argument)
 
 void do_traits(CHAR_DATA *ch, char *argument)
 {
-    char arg[MAX_INPUT_LENGTH]={'\0'};
+    char arg[MIL]={'\0'};
     int i, type = -1, sel, subfl;
     TRAIT_DATA *trait;
     AFFECT_DATA *paf;

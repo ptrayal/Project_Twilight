@@ -228,7 +228,7 @@ void do_outfit ( CHAR_DATA *ch, char *argument )
 /* RT nochannels command, for those spammers */
 void do_nochannels( CHAR_DATA *ch, char *argument )
 {
-	char arg[MAX_INPUT_LENGTH]={'\0'};
+	char arg[MIL]={'\0'};
 	CHAR_DATA *victim;
 
 	CheckCH(ch);
@@ -275,7 +275,7 @@ void do_nochannels( CHAR_DATA *ch, char *argument )
 /* RT dice loading command, for those times when you just need an edge */
 void do_loaddice( CHAR_DATA *ch, char *argument )
 {
-	char arg[MAX_INPUT_LENGTH]={'\0'};
+	char arg[MIL]={'\0'};
 	CHAR_DATA *victim;
 	int pos = 0;
 
@@ -365,7 +365,7 @@ void do_loaddice( CHAR_DATA *ch, char *argument )
 /* RT nogiftxp command, for those cheating up their xp */
 void do_nogiftxp( CHAR_DATA *ch, char *argument )
 {
-	char arg[MAX_INPUT_LENGTH]={'\0'};
+	char arg[MIL]={'\0'};
 	CHAR_DATA *victim;
 
 	CheckCH(ch);
@@ -469,7 +469,7 @@ void do_bamfout( CHAR_DATA *ch, char *argument )
 
 void do_deny( CHAR_DATA *ch, char *argument )
 {
-	char arg[MAX_INPUT_LENGTH]={'\0'};
+	char arg[MIL]={'\0'};
 	CHAR_DATA *victim;
 
 	CheckCH(ch);
@@ -514,7 +514,7 @@ void do_deny( CHAR_DATA *ch, char *argument )
 
 void do_disconnect( CHAR_DATA *ch, char *argument )
 {
-	char arg[MAX_INPUT_LENGTH]={'\0'};
+	char arg[MIL]={'\0'};
 	DESCRIPTOR_DATA *d;
 	CHAR_DATA *victim;
 
@@ -646,7 +646,7 @@ void do_recho( CHAR_DATA *ch, char *argument )
 
 void do_pecho( CHAR_DATA *ch, char *argument )
 {
-	char arg[MAX_INPUT_LENGTH]={'\0'};
+	char arg[MIL]={'\0'};
 	CHAR_DATA *victim;
 
 	CheckCH(ch);
@@ -700,8 +700,8 @@ ROOM_INDEX_DATA *find_location( CHAR_DATA *ch, char *arg )
 
 void do_transfer( CHAR_DATA *ch, char *argument )
 {
-	char arg1[MAX_INPUT_LENGTH]={'\0'};
-	char arg2[MAX_INPUT_LENGTH]={'\0'};
+	char arg1[MIL]={'\0'};
+	char arg2[MIL]={'\0'};
 	ROOM_INDEX_DATA *location;
 	DESCRIPTOR_DATA *d;
 	CHAR_DATA *victim;
@@ -783,7 +783,7 @@ void do_transfer( CHAR_DATA *ch, char *argument )
 
 void do_at( CHAR_DATA *ch, char *argument )
 {
-    char arg[MAX_INPUT_LENGTH]={'\0'};
+    char arg[MIL]={'\0'};
     ROOM_INDEX_DATA *location;
     ROOM_INDEX_DATA *original;
     OBJ_DATA *on;
@@ -904,7 +904,7 @@ void do_goto( CHAR_DATA *ch, char *argument )
 void do_rstat( CHAR_DATA *ch, char *argument )
 {
 	char buf[MSL]={'\0'};
-	char arg[MAX_INPUT_LENGTH]={'\0'};
+	char arg[MIL]={'\0'};
 	ROOM_INDEX_DATA *location;
 	OBJ_DATA *obj;
 	CHAR_DATA *rch;
@@ -986,7 +986,7 @@ void do_rstat( CHAR_DATA *ch, char *argument )
 
 void do_ostat( CHAR_DATA *ch, char *argument )
 {
-	char arg[MAX_INPUT_LENGTH]={'\0'};
+	char arg[MIL]={'\0'};
 	AFFECT_DATA *paf;
 	OBJ_DATA *obj;
 
@@ -1220,7 +1220,7 @@ void do_ostat( CHAR_DATA *ch, char *argument )
 
 void do_mstat( CHAR_DATA *ch, char *argument )
 {
-	char arg[MAX_INPUT_LENGTH]={'\0'};
+	char arg[MIL]={'\0'};
 	AFFECT_DATA *paf;
 	CHAR_DATA *victim;
 
@@ -1367,7 +1367,7 @@ void do_mstat( CHAR_DATA *ch, char *argument )
 
 void do_vnum(CHAR_DATA *ch, char *argument)
 {
-	char arg[MAX_INPUT_LENGTH]={'\0'};
+	char arg[MIL]={'\0'};
 	char *string;
 
 	CheckCH(ch);
@@ -1413,7 +1413,7 @@ void do_mfind(CHAR_DATA *ch, char *argument)
     extern int top_mob_index;
     MOB_INDEX_DATA      *pMobIndex;
     BUFFER              *buf1;
-    char                arg  [ MAX_INPUT_LENGTH    ]={'\0'};
+    char                arg  [ MIL ]={'\0'};
     bool fAll, found;
     int vnum;
     int col = 0;
@@ -1476,7 +1476,7 @@ void do_ofind(CHAR_DATA *ch, char *argument)
 	extern int top_obj_index;
 	OBJ_INDEX_DATA      *pObjIndex;
 	BUFFER              *buf1;
-	char                arg  [ MAX_INPUT_LENGTH    ]={'\0'};
+	char                arg  [ MIL ]={'\0'};
 	bool fAll, fBigger, found;
 	int vnum;
 	long largest = 0;
@@ -1823,7 +1823,7 @@ void do_shutdown( CHAR_DATA *ch, char *argument )
 
 void do_snoop( CHAR_DATA *ch, char *argument )
 {
-	char arg[MAX_INPUT_LENGTH]={'\0'};
+	char arg[MIL]={'\0'};
 	DESCRIPTOR_DATA *d;
 	CHAR_DATA *victim;
 
@@ -1901,7 +1901,7 @@ void do_snoop( CHAR_DATA *ch, char *argument )
 
 void do_switch( CHAR_DATA *ch, char *argument )
 {
-    char arg[MAX_INPUT_LENGTH]={'\0'};
+    char arg[MIL]={'\0'};
     CHAR_DATA *victim;
 
     CheckCH(ch);
@@ -2004,7 +2004,7 @@ void do_return( CHAR_DATA *ch, char *argument )
 
 void do_as( CHAR_DATA *ch, char *argument )
 {
-	char arg[MAX_INPUT_LENGTH]={'\0'};
+	char arg[MIL]={'\0'};
 	CHAR_DATA *victim;
 	DESCRIPTOR_DATA *desc;
 
@@ -2108,7 +2108,7 @@ void recursive_clone(CHAR_DATA *ch, OBJ_DATA *obj, OBJ_DATA *clone)
 /* command that is similar to load */
 void do_clone(CHAR_DATA *ch, char *argument )
 {
-	char arg[MAX_INPUT_LENGTH]={'\0'};
+	char arg[MIL]={'\0'};
 	char *rest;
 	CHAR_DATA *mob;
 	OBJ_DATA  *obj;
@@ -2221,7 +2221,7 @@ void do_clone(CHAR_DATA *ch, char *argument )
 
 void do_load(CHAR_DATA *ch, char *argument )
 {
-   char arg[MAX_INPUT_LENGTH]={'\0'};
+   char arg[MIL]={'\0'};
 
    CheckCH(ch);
 
@@ -2253,7 +2253,7 @@ void do_load(CHAR_DATA *ch, char *argument )
 
 void do_mload( CHAR_DATA *ch, char *argument )
 {
-    char arg[MAX_INPUT_LENGTH]={'\0'};
+    char arg[MIL]={'\0'};
     MOB_INDEX_DATA *pMobIndex;
     CHAR_DATA *victim;
 
@@ -2298,8 +2298,8 @@ void do_mload( CHAR_DATA *ch, char *argument )
 
 void do_oload( CHAR_DATA *ch, char *argument )
 {
-    char arg1[MAX_INPUT_LENGTH]={'\0'};
-    char arg2[MAX_INPUT_LENGTH]={'\0'};
+    char arg1[MIL]={'\0'};
+    char arg2[MIL]={'\0'};
     OBJ_INDEX_DATA *pObjIndex;
     OBJ_DATA *obj;
 
@@ -2349,7 +2349,7 @@ void do_oload( CHAR_DATA *ch, char *argument )
 
 void do_purge( CHAR_DATA *ch, char *argument )
 {
-	char arg[MAX_INPUT_LENGTH]={'\0'};
+	char arg[MIL]={'\0'};
 	CHAR_DATA *victim;
 	OBJ_DATA *obj;
 	DESCRIPTOR_DATA *d;
@@ -2433,8 +2433,8 @@ void do_purge( CHAR_DATA *ch, char *argument )
 
 void do_trust( CHAR_DATA *ch, char *argument )
 {
-	char arg1[MAX_INPUT_LENGTH]={'\0'};
-	char arg2[MAX_INPUT_LENGTH]={'\0'};
+	char arg1[MIL]={'\0'};
+	char arg2[MIL]={'\0'};
 	CHAR_DATA *victim;
 	int level;
 
@@ -2487,7 +2487,7 @@ void do_trust( CHAR_DATA *ch, char *argument )
 
 void do_restore( CHAR_DATA *ch, char *argument )
 {
-	char arg[MAX_INPUT_LENGTH]={'\0'};
+	char arg[MIL]={'\0'};
 	CHAR_DATA *victim;
 	CHAR_DATA *vch;
 	DESCRIPTOR_DATA *d;
@@ -2618,7 +2618,7 @@ void do_restore( CHAR_DATA *ch, char *argument )
  	
 void do_freeze( CHAR_DATA *ch, char *argument )
 {
-	char arg[MAX_INPUT_LENGTH]={'\0'};
+	char arg[MIL]={'\0'};
 	CHAR_DATA *victim;
 
 	CheckCH(ch);
@@ -2673,7 +2673,7 @@ void do_freeze( CHAR_DATA *ch, char *argument )
 
 void do_log( CHAR_DATA *ch, char *argument )
 {
-	char arg[MAX_INPUT_LENGTH]={'\0'};
+	char arg[MIL]={'\0'};
 	CHAR_DATA *victim;
 
 	CheckCH(ch);
@@ -2736,7 +2736,7 @@ void do_log( CHAR_DATA *ch, char *argument )
 
 void do_noemote( CHAR_DATA *ch, char *argument )
 {
-    char arg[MAX_INPUT_LENGTH]={'\0'};
+    char arg[MIL]={'\0'};
     CHAR_DATA *victim;
 
     CheckCH(ch);
@@ -2784,7 +2784,7 @@ void do_noemote( CHAR_DATA *ch, char *argument )
 
 void do_notell( CHAR_DATA *ch, char *argument )
 {
-	char arg[MAX_INPUT_LENGTH]={'\0'};
+	char arg[MIL]={'\0'};
 	CHAR_DATA *victim;
 
 	CheckCH(ch);
@@ -2894,7 +2894,7 @@ void do_newlock( CHAR_DATA *ch, char *argument )
 
 void do_slookup( CHAR_DATA *ch, char *argument )
 {
-	char arg[MAX_INPUT_LENGTH]={'\0'};
+	char arg[MIL]={'\0'};
 	int sn = 0;
 
 	CheckCH(ch);
@@ -2933,7 +2933,7 @@ void do_slookup( CHAR_DATA *ch, char *argument )
 
 void do_set( CHAR_DATA *ch, char *argument )
 {
-	char arg[MAX_INPUT_LENGTH]={'\0'};
+	char arg[MIL]={'\0'};
 
 	CheckCH(ch);
 
@@ -2979,9 +2979,9 @@ void do_set( CHAR_DATA *ch, char *argument )
 
 void do_sset( CHAR_DATA *ch, char *argument )
 {
-    char arg1 [MAX_INPUT_LENGTH]={'\0'};
-    char arg2 [MAX_INPUT_LENGTH]={'\0'};
-    char arg3 [MAX_INPUT_LENGTH]={'\0'};
+    char arg1 [MIL]={'\0'};
+    char arg2 [MIL]={'\0'};
+    char arg3 [MIL]={'\0'};
     CHAR_DATA *victim;
     int value;
     int sn;
@@ -3920,9 +3920,9 @@ void do_string( CHAR_DATA *ch, char *argument )
 
 void do_oset( CHAR_DATA *ch, char *argument )
 {
-    char arg1 [MAX_INPUT_LENGTH]={'\0'};
-    char arg2 [MAX_INPUT_LENGTH]={'\0'};
-    char arg3 [MAX_INPUT_LENGTH]={'\0'};
+    char arg1 [MIL]={'\0'};
+    char arg2 [MIL]={'\0'};
+    char arg3 [MIL]={'\0'};
     OBJ_DATA *obj;
     int value = 0;
 
@@ -4034,9 +4034,9 @@ void do_oset( CHAR_DATA *ch, char *argument )
 
 void do_rset( CHAR_DATA *ch, char *argument )
 {
-    char arg1 [MAX_INPUT_LENGTH]={'\0'};
-    char arg2 [MAX_INPUT_LENGTH]={'\0'};
-    char arg3 [MAX_INPUT_LENGTH]={'\0'};
+    char arg1 [MIL]={'\0'};
+    char arg2 [MIL]={'\0'};
+    char arg3 [MIL]={'\0'};
     ROOM_INDEX_DATA *location;
     int value = 0;
 
@@ -4929,9 +4929,9 @@ const char * name_expand (CHAR_DATA *ch)
 {
 	CHAR_DATA *rch;
 	int count = 1;
-	char name[MAX_INPUT_LENGTH]={'\0'}; /*  HOPEFULLY no mob has a name longer than THAT */
+	char name[MIL]={'\0'}; /*  HOPEFULLY no mob has a name longer than THAT */
 
-	static char outbuf[MAX_INPUT_LENGTH]={'\0'};
+	static char outbuf[MIL]={'\0'};
 
 	if (!IS_NPC(ch))
 		return ch->name;
@@ -6325,9 +6325,9 @@ void do_saveconcept(CHAR_DATA *ch, char *argument)
 {
 	CHAR_DATA *vch;
 	bool fConfirm = FALSE;
-	char arg[MAX_INPUT_LENGTH]={'\0'};
+	char arg[MIL]={'\0'};
 	DESCRIPTOR_DATA d;
-	char strsave[MAX_INPUT_LENGTH]={'\0'};
+	char strsave[MIL]={'\0'};
 	FILE *fp;
 	int i;
 	TRAIT_DATA *trait;

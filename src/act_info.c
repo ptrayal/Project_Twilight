@@ -987,9 +987,9 @@ void do_look( CHAR_DATA *ch, char *argument )
 	OBJ_DATA *obj;
 	ROOM_INDEX_DATA *original;
 	ROOM_INDEX_DATA *looking;
-	char arg1 [MAX_INPUT_LENGTH]={'\0'};
-	char arg2 [MAX_INPUT_LENGTH]={'\0'};
-	char arg3 [MAX_INPUT_LENGTH]={'\0'};
+	char arg1 [MIL]={'\0'};
+	char arg2 [MIL]={'\0'};
+	char arg3 [MIL]={'\0'};
 	char *pdesc;
 	int door = 0;
 	int number = 0,count = 0;
@@ -1377,7 +1377,7 @@ void do_read (CHAR_DATA *ch, char *argument )
 
 void do_examine( CHAR_DATA *ch, char *argument )
 {
-	char arg[MAX_INPUT_LENGTH]={'\0'};
+	char arg[MIL]={'\0'};
 	OBJ_DATA *obj;
 
 	CheckCH(ch);
@@ -2181,8 +2181,8 @@ void do_help( CHAR_DATA *ch, char *argument )
 {
 	HELP_DATA *pHelp;
 	BUFFER *output;
-	char argall[MAX_INPUT_LENGTH]={'\0'};
-	char argone[MAX_INPUT_LENGTH]={'\0'};
+	char argall[MIL]={'\0'};
+	char argone[MIL]={'\0'};
 	int level = 0;
 	bool found = FALSE;
 
@@ -2309,7 +2309,7 @@ void do_whois (CHAR_DATA *ch, char *argument)
 {
 	CHAR_DATA *wch;
 	BUFFER *output;
-	char arg[MAX_INPUT_LENGTH]={'\0'};
+	char arg[MIL]={'\0'};
 	char const *clan;
 	int app = 0;
 	bool online = FALSE;
@@ -2505,7 +2505,7 @@ void do_who( CHAR_DATA *ch, char *argument )
 	nNumber = 0;
 	for ( ;; )
 	{
-		char arg[MAX_INPUT_LENGTH]={'\0'};
+		char arg[MIL]={'\0'};
 
 		argument = one_argument( argument, arg );
 		if ( IS_NULLSTR(arg) )
@@ -2774,7 +2774,7 @@ void do_credits( CHAR_DATA *ch, char *argument )
 
 void do_where( CHAR_DATA *ch, char *argument )
 {
-	char arg[MAX_INPUT_LENGTH]={'\0'};
+	char arg[MIL]={'\0'};
 	CHAR_DATA *victim;
 	AREA_DATA *pArea;
 	DESCRIPTOR_DATA *d;
@@ -2838,7 +2838,7 @@ void do_where( CHAR_DATA *ch, char *argument )
 void do_consider( CHAR_DATA *ch, char *argument )
 {
 	CHAR_DATA *victim;
-	char arg[MAX_INPUT_LENGTH]={'\0'};
+	char arg[MIL]={'\0'};
 	char *msg;
 	int diff = 0;
 
@@ -3007,8 +3007,8 @@ void do_switchdesc(CHAR_DATA *ch, char *argument)
 
 void do_password( CHAR_DATA *ch, char *argument )
 {
-	char arg1[MAX_INPUT_LENGTH]={'\0'};
-	char arg2[MAX_INPUT_LENGTH]={'\0'};
+	char arg1[MIL]={'\0'};
+	char arg2[MIL]={'\0'};
 	char *pwdnew;
 	char *p;
 
@@ -3593,9 +3593,9 @@ void do_diceroll(CHAR_DATA *ch, char *argument)
 	CHAR_DATA *vch, *to;
 	char buf[MSL]={'\0'};
 	char result[MSL]={'\0'};
-	char arg1[MAX_INPUT_LENGTH]={'\0'};
-	char arg2[MAX_INPUT_LENGTH]={'\0'};
-	char arg3[MAX_INPUT_LENGTH]={'\0'};
+	char arg1[MIL]={'\0'};
+	char arg2[MIL]={'\0'};
+	char arg3[MIL]={'\0'};
 	int dice = 0;
 	int successcheck = FALSE, difficulty = -1, successes = 0;
 	int a = -1, b = -1, c = -1, d = -1, e = -1, f = -1, g = -1, h = -1;
@@ -3931,7 +3931,7 @@ bool is_nominee(CHAR_DATA *ch, int office)
 void do_nominate(CHAR_DATA *ch, char *argument)
 {
 	CHAR_DATA *nominee;
-	char arg[MAX_INPUT_LENGTH]={'\0'};
+	char arg[MIL]={'\0'};
 	bool online = FALSE;
 	bool in_char_list = FALSE;
 	int i = 0;
@@ -4040,7 +4040,7 @@ void do_nominate(CHAR_DATA *ch, char *argument)
 void do_vote(CHAR_DATA *ch, char *argument)
 {
 	CHAR_DATA *nominee;
-	char arg[MAX_INPUT_LENGTH]={'\0'};
+	char arg[MIL]={'\0'};
 	int i = 0;
 	bool online = FALSE;
 	bool in_char_list = FALSE;
@@ -4310,7 +4310,7 @@ void do_nominees (CHAR_DATA *ch, char *argument)
 
 void do_nature (CHAR_DATA *ch, char *argument)
 {
-	char arg[MAX_INPUT_LENGTH]={'\0'};
+	char arg[MIL]={'\0'};
 
 	CheckCH(ch);
 	CheckChNPC(ch);
@@ -4343,7 +4343,7 @@ void do_nature (CHAR_DATA *ch, char *argument)
 
 void do_demeanor (CHAR_DATA *ch, char *argument)
 {
-	char arg[MAX_INPUT_LENGTH]={'\0'};
+	char arg[MIL]={'\0'};
 
 	CheckCH(ch);
 	CheckChNPC(ch);
@@ -4397,8 +4397,8 @@ void do_archetypes(CHAR_DATA *ch, char *argument)
 void do_trainingcost(CHAR_DATA *ch, char *argument)
 {
 	char result[MSL]={'\0'};
-	char arg1[MAX_INPUT_LENGTH]={'\0'};
-	char arg2[MAX_INPUT_LENGTH]={'\0'};
+	char arg1[MIL]={'\0'};
+	char arg2[MIL]={'\0'};
 	int dice = 0;
 	int a = -1, b = -1, c = -1, d = -1;
 
@@ -4652,7 +4652,7 @@ void do_whorp(CHAR_DATA *ch, char *argument)
 
 void do_sentence(CHAR_DATA *ch, char *argument)
 {
-	char arg[MAX_INPUT_LENGTH]={'\0'};
+	char arg[MIL]={'\0'};
 	CHAR_DATA *vch;
 
 	CheckCH(ch);
@@ -4919,7 +4919,7 @@ void do_use(CHAR_DATA *ch, char *argument)
 {
 	OBJ_DATA *obj;
 	CHAR_DATA *vch;
-	char arg[MAX_INPUT_LENGTH]={'\0'};
+	char arg[MIL]={'\0'};
 	char buf[MSL]={'\0'};
 	int sn = 0, cmd = 0;
 
