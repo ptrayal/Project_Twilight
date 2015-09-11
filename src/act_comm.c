@@ -789,6 +789,9 @@ void do_immtalk( CHAR_DATA *ch, char *argument )
 
 	act_new(Format("\tY[Staff]\tn \tR%s: \tr$t\tn", IS_NPC(ch)?ch->short_descr:ch->name),ch,argument,NULL,TO_CHAR,P_DEAD,1);
 
+	// Test Code
+	// act_new(Format("\t<FRAME Name='Tells' Left='-20c' Top='0' Width='80c' Height='20c'>\tY[Staff]\tn \tR%s: \tr$t\tn\t</FRAME>", IS_NPC(ch)?ch->short_descr:ch->name),ch,argument,NULL,TO_CHAR,P_DEAD,1);
+
 	for ( d = descriptor_list; d != NULL; d = d->next )
 	{
 		if ( d->connected == CON_PLAYING &&

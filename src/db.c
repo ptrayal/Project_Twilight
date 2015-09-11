@@ -98,11 +98,11 @@ SHOP_DATA *     shop_list;
 
 MPROG_CODE *    mprog_list;
 
-char            bug_buf     [2*MAX_INPUT_LENGTH];
+char            bug_buf     [2*MIL];
 CHAR_DATA *     char_list;
 
 char *          help_greeting;
-char            log_buf     [2*MAX_INPUT_LENGTH];
+char            log_buf     [2*MIL];
 NOTE_DATA *     note_list;
 OBJ_DATA *      object_list = NULL;
 TIME_INFO_DATA  time_info;
@@ -193,7 +193,7 @@ int         sAllocPerm;
  */
 bool            fBootDb;
 FILE *          fpArea;
-char            strArea[MAX_INPUT_LENGTH];
+char            strArea[MIL];
 
 
 
@@ -4096,7 +4096,7 @@ void fread_to_eol( FILE *fp )
  */
 char *_fread_word( FILE *fp, const char *file, const char *function, int line )
 {
-	static char word[MAX_INPUT_LENGTH]={'\0'};
+	static char word[MIL]={'\0'};
 	char *pword;
 	char cEnd;
 
@@ -4138,7 +4138,7 @@ char *_fread_word( FILE *fp, const char *file, const char *function, int line )
 
 char *fread_chunk( FILE *fp, char delimiter )
 {
-	static char word[10*MAX_INPUT_LENGTH]={'\0'};
+	static char word[10*MIL]={'\0'};
 	char *pword;
 	char cEnd;
 
@@ -4865,7 +4865,7 @@ void log_to_file(char *file, char *extension, const char *string)
 }
 
 
-char logfile[MAX_INPUT_LENGTH];
+char logfile[MIL];
 
 char *get_curdate( )
 {

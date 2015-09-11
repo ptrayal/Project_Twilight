@@ -728,8 +728,8 @@ int command_available(CHAR_DATA *ch, char *command)
 */
 void interpret( CHAR_DATA *ch, char *argument )
 {
-	char command[MAX_INPUT_LENGTH]={'\0'};
-	char logline[MAX_INPUT_LENGTH]={'\0'};
+	char command[MIL]={'\0'};
+	char logline[MIL]={'\0'};
 	int cmd;
 	bool found, exists;
 	CHAR_DATA *vch, *next;
@@ -814,7 +814,7 @@ void interpret( CHAR_DATA *ch, char *argument )
 					&& (cmd_table[cmd].log == L_COM || cmd_table[cmd].log == L_SCOM))
 					||	 (fLogCom && cmd_table[cmd].log == L_COM) )
 	{
-		char    s[2*MAX_INPUT_LENGTH],*ps;
+		char    s[2*MIL],*ps;
 		int     i;
 
 		ps=s;
@@ -1022,7 +1022,7 @@ void do_function (CHAR_DATA *ch, DO_FUN *do_fun, char *argument)
 
 bool check_social( CHAR_DATA *ch, char *command, char *argument )
 {
-	char arg[MAX_INPUT_LENGTH]={'\0'};
+	char arg[MIL]={'\0'};
 	CHAR_DATA *victim;
 	int cmd;
 	bool found;

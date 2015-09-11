@@ -863,8 +863,8 @@ int can_carry_w( CHAR_DATA *ch )
 
 bool is_name ( char *str, char *namelist )
 {
-	char name[MAX_INPUT_LENGTH]={'\0'};
-	char part[MAX_INPUT_LENGTH]={'\0'};
+	char name[MIL]={'\0'};
+	char part[MIL]={'\0'};
 	char *list, *string;
 
 	/* fix crash on NULL namelist */
@@ -903,7 +903,7 @@ bool is_name ( char *str, char *namelist )
 
 bool is_exact_name(char *str, char *namelist )
 {
-	char name[MAX_INPUT_LENGTH]={'\0'};
+	char name[MIL]={'\0'};
 
 	if (namelist == NULL)
 		return FALSE;
@@ -2360,7 +2360,7 @@ void extract_char( CHAR_DATA *ch, bool fPull )
  */
 CHAR_DATA *get_char_dir( CHAR_DATA *ch, int dir, char *argument )
 {
-    char arg[MAX_INPUT_LENGTH]={'\0'};
+    char arg[MIL]={'\0'};
     CHAR_DATA *rch;
     int number = 0;
     int vision = 0;
@@ -2404,7 +2404,7 @@ CHAR_DATA *get_char_dir( CHAR_DATA *ch, int dir, char *argument )
  */
 CHAR_DATA *get_char_oroom( CHAR_DATA *ch, ROOM_INDEX_DATA *room, char *argument )
 {
-	char arg[MAX_INPUT_LENGTH]={'\0'};
+	char arg[MIL]={'\0'};
 	CHAR_DATA *rch;
 	int number = 0;
 	int count = 0;
@@ -2429,7 +2429,7 @@ CHAR_DATA *get_char_oroom( CHAR_DATA *ch, ROOM_INDEX_DATA *room, char *argument 
  */
 CHAR_DATA *get_char_room( CHAR_DATA *ch, char *argument )
 {
-	char arg[MAX_INPUT_LENGTH]={'\0'};
+	char arg[MIL]={'\0'};
 	CHAR_DATA *rch;
 	int number = 0;
 	int count = 0;
@@ -2469,7 +2469,7 @@ CHAR_DATA *get_char_room( CHAR_DATA *ch, char *argument )
  */
 CHAR_DATA *get_char_world( CHAR_DATA *ch, char *argument )
 {
-	char arg[MAX_INPUT_LENGTH]={'\0'};
+	char arg[MIL]={'\0'};
 	CHAR_DATA *wch;
 	int number = 0;
 	int count = 0;
@@ -2519,7 +2519,7 @@ OBJ_DATA *get_obj_type( OBJ_INDEX_DATA *pObjIndex )
  */
 OBJ_DATA *get_obj_list( CHAR_DATA *ch, char *argument, OBJ_DATA *list )
 {
-	char arg[MAX_INPUT_LENGTH]={'\0'};
+	char arg[MIL]={'\0'};
 	OBJ_DATA *obj;
 	int number = 0;
 	int count = 0;
@@ -2544,7 +2544,7 @@ OBJ_DATA *get_obj_list( CHAR_DATA *ch, char *argument, OBJ_DATA *list )
  */
 OBJ_DATA *get_obj_carry( CHAR_DATA *ch, char *argument, CHAR_DATA *viewer )
 {
-	char arg[MAX_INPUT_LENGTH]={'\0'};
+	char arg[MIL]={'\0'};
 	OBJ_DATA *obj;
 	int number = 0;
 	int count = 0;
@@ -2570,7 +2570,7 @@ OBJ_DATA *get_obj_carry( CHAR_DATA *ch, char *argument, CHAR_DATA *viewer )
  */
 OBJ_DATA *get_obj_wear( CHAR_DATA *ch, char *argument )
 {
-	char arg[MAX_INPUT_LENGTH]={'\0'};
+	char arg[MIL]={'\0'};
 	OBJ_DATA *obj;
 	int number = 0;
 	int count = 0;
@@ -2623,7 +2623,7 @@ OBJ_DATA *get_obj_here( CHAR_DATA *ch, char *argument )
  */
 OBJ_DATA *get_obj_world( CHAR_DATA *ch, char *argument )
 {
-	char arg[MAX_INPUT_LENGTH]={'\0'};
+	char arg[MIL]={'\0'};
 	OBJ_DATA *obj;
 	int number = 0;
 	int count = 0;
@@ -3069,7 +3069,7 @@ bool can_drop_obj( CHAR_DATA *ch, OBJ_DATA *obj )
 
 CHAR_DATA * get_char_area( CHAR_DATA *ch, char *argument )
 {
-	char arg[MAX_INPUT_LENGTH]={'\0'};
+	char arg[MIL]={'\0'};
 	CHAR_DATA *ach;
 	int number = 0, count = 0;
 

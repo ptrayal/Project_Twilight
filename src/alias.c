@@ -38,8 +38,8 @@ void substitute_alias(DESCRIPTOR_DATA *d, char *argument)
 {
 	CHAR_DATA *ch;
     char buf[MSL]={'\0'};
-	char prefix[MAX_INPUT_LENGTH]={'\0'};
-	char name[MAX_INPUT_LENGTH]={'\0'};
+	char prefix[MIL]={'\0'};
+	char name[MIL]={'\0'};
 	char *point;
 	int alias = 0;
 
@@ -103,7 +103,7 @@ void do_alia(CHAR_DATA *ch, char *argument)
 void do_alias(CHAR_DATA *ch, char *argument)
 {
 	CHAR_DATA *rch;
-	char arg[MAX_INPUT_LENGTH]={'\0'};
+	char arg[MIL]={'\0'};
 	int pos = 0;
 
 	smash_tilde(argument);
@@ -208,7 +208,7 @@ void do_alias(CHAR_DATA *ch, char *argument)
 void do_unalias(CHAR_DATA *ch, char *argument)
 {
 	CHAR_DATA *rch;
-	char arg[MAX_INPUT_LENGTH]={'\0'};
+	char arg[MIL]={'\0'};
 	int pos = 0;
 	bool found = FALSE;
 

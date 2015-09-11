@@ -286,7 +286,7 @@ bool		    god;		/* All new chars are gods!	*/
 bool		    merc_down;		/* Shutdown			*/
 bool		    wizlock;		/* Game is wizlocked		*/
 bool		    newlock;		/* Game is newlocked		*/
-char		    str_boot_time[MAX_INPUT_LENGTH];
+char		    str_boot_time[MIL];
 time_t		    current_time;	/* time of this pulse */	
 bool		    MOBtrigger = TRUE;	/* act() switch			*/
 
@@ -1620,7 +1620,7 @@ void bust_a_prompt( CHAR_DATA *ch )
 	char *point;
 	char *pbuff;
 	char buffer[ MSL*2 ]={'\0'};
-	char doors[MAX_INPUT_LENGTH]={'\0'};
+	char doors[MIL]={'\0'};
 	EXIT_DATA *pexit;
 	bool found;
 	const char *dir_name[] = {"N","E","S","W","U","D"};
@@ -1887,7 +1887,7 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 	CHAR_DATA *backup = NULL;
 	CHAR_DATA *ch;
 	char buf[MSL]={'\0'};
-	char arg[MAX_INPUT_LENGTH]={'\0'};
+	char arg[MIL]={'\0'};
 	int iClass = 0,race = 0,i = 0;
 	bool fOld = FALSE;
 
@@ -3594,7 +3594,7 @@ void act_new( const char *format, CHAR_DATA *ch, const void *arg1,  const void *
     static char * const his_her [] = { "its", "his", "her" };
  
     char buf[MSL] = {'\0'};
-    char fname[MAX_INPUT_LENGTH] = {'\0'};
+    char fname[MIL] = {'\0'};
     CHAR_DATA *to;
     CHAR_DATA *also_to;
     CHAR_DATA *vch = (CHAR_DATA *) arg2;
@@ -4011,7 +4011,7 @@ void logfmt (char * fmt, ...)
 /* this procedure handles the input parsing for the physical attribute generator */
 bool parse_gen_physical(CHAR_DATA *ch,char *argument)
 {
-    char arg[MAX_INPUT_LENGTH]={'\0'};
+    char arg[MIL]={'\0'};
     int sn = 0,i = 0;
  
     if (IS_NULLSTR(argument))
@@ -4110,7 +4110,7 @@ bool parse_gen_physical(CHAR_DATA *ch,char *argument)
 /* this procedure handles the input parsing for the social attribute generator */
 bool parse_gen_social(CHAR_DATA *ch,char *argument)
 {
-	char arg[MAX_INPUT_LENGTH]={'\0'};
+	char arg[MIL]={'\0'};
 	int sn = 0,i = 0;
 
 	if (IS_NULLSTR(argument))
@@ -4215,7 +4215,7 @@ bool parse_gen_social(CHAR_DATA *ch,char *argument)
 /* this procedure handles the input parsing for the mental attribute generator */
 bool parse_gen_mental(CHAR_DATA *ch,char *argument)
 {
-	char arg[MAX_INPUT_LENGTH]={'\0'};
+	char arg[MIL]={'\0'};
 	int sn = 0,i = 0;
 
 	if (IS_NULLSTR(argument))
