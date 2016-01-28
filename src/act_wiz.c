@@ -31,6 +31,8 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <assert.h>
+#include <stdio.h>
+#include <string.h>
 #include "twilight.h"
 #include "recycle.h"
 #include "tables.h"
@@ -6609,3 +6611,25 @@ MUDCMD(do_trackbuffer)
 	free_buf(output);
 	return;
 }
+
+/*#define disc_array sizeof(disc_table)/sizeof(const struct disc_type)
+
+static int disccompare (const void * a, const void * b)
+{
+    // The pointers point to offsets into "array", so we need to
+    //   dereference them to get at the strings. 
+
+    return strcmp (*(const char **) a, *(const char **) b);
+}*/
+
+/*
+int test_dump()
+{
+    int i;
+    qsort (disc_table, MAX_DISC, sizeof (struct disc_type), disccompare);
+    for (i = 0; i < disc_array; i++) {
+        printf ("%d: %s.\n", i, disc_table[i]);
+    }
+    return 0;
+}
+*/
