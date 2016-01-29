@@ -153,7 +153,7 @@ int	listen		args( ( int s, int backlog ) );
 */
 
 int	close		args( ( int fd ) );
-int	gettimeofday	args( ( struct timeval *tp, struct timezone *tzp ) );
+// int	gettimeofday	args( ( struct timeval *tp, struct timezone *tzp ) );
 //int	read		args( ( int fd, char *buf, int nbyte ) );
 int	select		args( ( int width, fd_set *readfds, fd_set *writefds,
 			    fd_set *exceptfds, struct timeval *timeout ) );
@@ -300,7 +300,7 @@ bool	write_to_descriptor	args( ( int desc, char *txt, int length ) );
 
 #if defined(__unix__)
 void	game_loop_unix		args( ( int control ) );
-int	init_socket		args( ( int port ) );
+int		init_socket		args( ( int port ) );
 void	init_descriptor		args( ( int control ) );
 bool	read_from_descriptor	args( ( DESCRIPTOR_DATA *d ) );
 bool	write_to_descriptor	args( ( int desc, char *txt, int length ) );
@@ -308,7 +308,7 @@ bool	write_to_descriptor	args( ( int desc, char *txt, int length ) );
 
 #if defined(__linux__)
 void	game_loop_unix		args( ( int control ) );
-int	init_socket		args( ( int port ) );
+int		init_socket		args( ( int port ) );
 void	init_descriptor		args( ( int control ) );
 bool	read_from_descriptor	args( ( DESCRIPTOR_DATA *d ) );
 bool	write_to_descriptor	args( ( int desc, char *txt, int length ) );
@@ -591,336 +591,6 @@ void cleanup_mud(int control)
 	return;
 }
 
-int main( int argc, char **argv )
-{
-	struct timeval now_time;
-	bool fCopyOver = FALSE;
-
-	/*
-	 * Init time.
-	 */
-	gettimeofday( &now_time, NULL );
-	current_time 	= (time_t) now_time.tv_sec;
-	strncpy( str_boot_time, ctime( &current_time ), sizeof(str_boot_time));
-
-	/*
-	 * Reserve one channel for our use.
-	 */
-	if ( ( fpReserve = fopen( NULL_FILE, "r" ) ) == NULL )
-	{
-		perror( NULL_FILE );
-		exit( 1 );
-	}
-
-	/*
-	 * Get the port number and initial log file number.
-	 */
-	port = MUD_PORT;
-	if ( argc > 1 )
-	{
-		if ( !is_number( argv[1] ) )
-		{
-			fprintf( stderr, "Usage: %s [port #] [first log #]\n", argv[0] );
-			exit( 1 );
-		}
-		else if ( ( port = atoi( argv[1] ) ) <= 1024 )
-		{
-			fprintf( stderr, "Port number must be above 1024.\n" );
-			exit( 1 );
-		}
-
-		/* Are we recovering from a copyover? */
-		if (argv[3] && argv[3][0])
-		{
-			fCopyOver = TRUE;
-			control = atoi(argv[3]);
-		}
-		else
-			fCopyOver = FALSE;
-	}
-
-	if( argv[2] == NULL || !is_number( argv[2] ) )
-		snprintf(logfile, sizeof(logfile), "%d", 1000);
-	else
-		snprintf(logfile, sizeof(logfile), "%s", argv[2] );
-
-	/*
-	 * Run the game.
-	 */
-		//	if (!fCopyOver)
-		control = init_socket( port );
-
-	boot_db( );
-	/* init_web(port+1); */
-	log_string( LOG_CONNECT, Format("Project Twilight loaded on port %d.", port) );
-	log_to_file(logfile, GLOBAL_XML_IN, "Project Twilight restarted.");
-/*
-	if(fCopyOver)
-		copyover_recover();
-*/
-	game_loop_unix( control );
-	/* shutdown_web(); */
-
-	cleanup_mud(control);
-
-
-	/*
-	 * That's all, folks.
-	 */
-	log_string( LOG_GAME, "Normal termination of game." );
-	if(fpReserve)
-	{
-		closeReserve();
-	}
-	exit( 0 );
-	return 0;
-}
-
-
-
-#if defined(__unix__)
-int init_socket( int port )
-{
-	static struct sockaddr_in sa_zero;
-	struct sockaddr_in sa;
-	int x = 1;
-	int fd;
-
-	if ( ( fd = socket( AF_INET, SOCK_STREAM, 0 ) ) < 0 )
-	{
-		perror( "Init_socket: socket" );
-		exit( 1 );
-	}
-
-	if ( setsockopt( fd, SOL_SOCKET, SO_REUSEADDR,
-			(char *) &x, sizeof(x) ) < 0 )
-	{
-		perror( "Init_socket: SO_REUSEADDR" );
-		close(fd);
-		exit( 1 );
-	}
-
-#if defined(SO_DONTLINGER) && !defined(SYSV)
-	{
-		struct	linger	ld;
-
-		ld.l_onoff  = 1;
-		ld.l_linger = 1000;
-
-		if ( setsockopt( fd, SOL_SOCKET, SO_DONTLINGER,
-				(char *) &ld, sizeof(ld) ) < 0 )
-		{
-			perror( "Init_socket: SO_DONTLINGER" );
-			close(fd);
-			exit( 1 );
-		}
-	}
-#endif
-
-	sa		    = sa_zero;
-	sa.sin_family   = AF_INET;
-	sa.sin_port	    = htons( port );
-
-	if ( bind( fd, (struct sockaddr *) &sa, sizeof(sa) ) < 0 )
-	{
-		perror("Init socket: bind" );
-		close(fd);
-		exit(1);
-	}
-
-
-	if ( listen( fd, 3 ) < 0 )
-	{
-		perror("Init socket: listen");
-		close(fd);
-		exit(1);
-	}
-
-	return fd;
-}
-#endif
-
-
-
-#if defined(Macintosh) || defined(__MSDOS__)
-void game_loop_mac_msdos( void )
-{
-	struct timeval last_time;
-	struct timeval now_time;
-	static DESCRIPTOR_DATA dcon;
-
-	gettimeofday( &last_time, NULL );
-	current_time = (time_t) last_time.tv_sec;
-
-	/*
-	 * New_descriptor analogue.
-	 */
-	dcon.descriptor	= 0;
-	dcon.connected	= CON_GET_NAME;
-	PURGE_DATA( dcon.host );
-	dcon.host		= str_dup( "localhost" );
-	dcon.outsize	= 2000;
-	ALLOC_DATA(dcon.outbuf, DESCRIPTOR_DATA, dcon.outsize);
-	dcon.next		= descriptor_list;
-	dcon.showstr_head	= NULL;
-	dcon.showstr_point	= NULL;
-	dcon.pEdit		= NULL; /* OLC */
-	dcon.pString	= NULL;
-	dcon.editor		= 0;	/* End OLC */
-	descriptor_list	= &dcon;
-
-	/*
-	 * Send the greeting.
-	 */
-	{
-		extern char * help_greeting;
-		if ( help_greeting[0] == '.' )
-			write_to_buffer( &dcon, help_greeting+1, 0 );
-		else
-			write_to_buffer( &dcon, help_greeting  , 0 );
-	}
-
-	/* Main loop */
-	while ( !merc_down )
-	{
-		DESCRIPTOR_DATA *d;
-
-		/*
-		 * Process input.
-		 */
-		for ( d = descriptor_list; d != NULL; d = d_next )
-		{
-			d_next	= d->next;
-			d->fcommand	= FALSE;
-
-#if defined(__MSDOS__)
-			if ( kbhit( ) )
-#endif
-			{
-				if ( d->character != NULL )
-					d->character->timer = 0;
-				if ( !read_from_descriptor( d ) )
-				{
-					if ( d->character != NULL && d->connected == CON_PLAYING)
-						save_char_obj( d->character );
-					d->outtop	= 0;
-					close_socket( d );
-					continue;
-				}
-			}
-
-			if (d->character != NULL && d->character->daze > 0)
-				--d->character->daze;
-
-			if ( d->character != NULL && d->character->wait > 0 )
-			{
-				--d->character->wait;
-				continue;
-			}
-
-			read_from_buffer( d );
-			if ( !IS_NULLSTR(d->incomm) )
-			{
-				d->fcommand	= TRUE;
-				if ( d->pProtocol != NULL )
-					d->pProtocol->WriteOOB = 0;
-				stop_idling( d->character );
-
-				/*OLC*/
-				if ( d->showstr_point )
-					show_string( d, d->incomm );
-				else
-					if ( d->pString )
-						string_add( s->character, d->incomm );
-					else
-						switch ( d->connected )
-						{
-						case CON_PLAYING:
-							if( !run_olc_editor( d ))
-								substitute_alias( d, d->incomm );
-							break;
-						default:
-							nanny( d, d->incomm );
-							break;
-						}
-
-				d->incomm[0]	= '\0';
-			}
-		}
-
-
-
-		/*
-		 * Autonomous game motion.
-		 */
-		update_handler( );
-
-
-
-		/*
-		 * Output.
-		 */
-		for ( d = descriptor_list; d != NULL; d = d_next )
-		{
-			d_next = d->next;
-
-			if ( ( d->fcommand || d->outtop > 0 ) )
-			{
-				if ( !process_output( d, TRUE ) )
-				{
-					if ( d->character != NULL && d->connected == CON_PLAYING)
-						save_char_obj( d->character );
-					d->outtop	= 0;
-					close_socket( d );
-				}
-			}
-		}
-
-
-
-		/*
-		 * Synchronize to a clock.
-		 * Busy wait (blargh).
-		 */
-		now_time = last_time;
-		for ( ; ; )
-		{
-			int delta;
-
-#if defined(__MSDOS__)
-			if ( kbhit( ) )
-#endif
-			{
-				if ( dcon.character != NULL )
-					dcon.character->timer = 0;
-				if ( !read_from_descriptor( &dcon ) )
-				{
-					if ( dcon.character != NULL && d->connected == CON_PLAYING)
-						save_char_obj( d->character );
-					dcon.outtop	= 0;
-					close_socket( &dcon );
-				}
-#if defined(__MSDOS__)
-				break;
-#endif
-			}
-
-			gettimeofday( &now_time, NULL );
-			delta = ( now_time.tv_sec  - last_time.tv_sec  ) * 1000 * 1000
-					+ ( now_time.tv_usec - last_time.tv_usec );
-			if ( delta >= 1000000 / PULSE_PER_SECOND )
-				break;
-		}
-		last_time    = now_time;
-		current_time = (time_t) last_time.tv_sec;
-	}
-
-	return;
-}
-#endif
-
-
-
 #if defined(__unix__)
 void game_loop_unix( int control )
 {
@@ -1138,6 +808,330 @@ void game_loop_unix( int control )
 }
 #endif
 
+#if defined(__unix__)
+int init_socket( int port )
+{
+	static struct sockaddr_in sa_zero;
+	struct sockaddr_in sa;
+	int x = 1;
+	int fd;
+
+	if ( ( fd = socket( AF_INET, SOCK_STREAM, 0 ) ) < 0 )
+	{
+		perror( "Init_socket: socket" );
+		exit( 1 );
+	}
+
+	if ( setsockopt( fd, SOL_SOCKET, SO_REUSEADDR,
+			(char *) &x, sizeof(x) ) < 0 )
+	{
+		perror( "Init_socket: SO_REUSEADDR" );
+		close(fd);
+		exit( 1 );
+	}
+
+#if defined(SO_DONTLINGER) && !defined(SYSV)
+	{
+		struct	linger	ld;
+
+		ld.l_onoff  = 1;
+		ld.l_linger = 1000;
+
+		if ( setsockopt( fd, SOL_SOCKET, SO_DONTLINGER,
+				(char *) &ld, sizeof(ld) ) < 0 )
+		{
+			perror( "Init_socket: SO_DONTLINGER" );
+			close(fd);
+			exit( 1 );
+		}
+	}
+#endif
+
+	sa		    = sa_zero;
+	sa.sin_family   = AF_INET;
+	sa.sin_port	    = htons( port );
+
+	if ( bind( fd, (struct sockaddr *) &sa, sizeof(sa) ) < 0 )
+	{
+		perror("Init socket: bind" );
+		close(fd);
+		exit(1);
+	}
+
+
+	if ( listen( fd, 3 ) < 0 )
+	{
+		perror("Init socket: listen");
+		close(fd);
+		exit(1);
+	}
+
+	return fd;
+}
+#endif
+
+int main( int argc, char **argv )
+{
+	struct timeval now_time;
+	bool fCopyOver = FALSE;
+
+	/*
+	 * Init time.
+	 */
+	gettimeofday( &now_time, NULL );
+	current_time 	= (time_t) now_time.tv_sec;
+	strncpy( str_boot_time, ctime( &current_time ), sizeof(str_boot_time));
+
+	/*
+	 * Reserve one channel for our use.
+	 */
+	if ( ( fpReserve = fopen( NULL_FILE, "r" ) ) == NULL )
+	{
+		perror( NULL_FILE );
+		exit( 1 );
+	}
+
+	/*
+	 * Get the port number and initial log file number.
+	 */
+	port = MUD_PORT;
+	if ( argc > 1 )
+	{
+		if ( !is_number( argv[1] ) )
+		{
+			fprintf( stderr, "Usage: %s [port #] [first log #]\n", argv[0] );
+			exit( 1 );
+		}
+		else if ( ( port = atoi( argv[1] ) ) <= 1024 )
+		{
+			fprintf( stderr, "Port number must be above 1024.\n" );
+			exit( 1 );
+		}
+
+		/* Are we recovering from a copyover? */
+		if (argv[3] && argv[3][0])
+		{
+			fCopyOver = TRUE;
+			control = atoi(argv[3]);
+		}
+		else
+			fCopyOver = FALSE;
+	}
+
+	if( argv[2] == NULL || !is_number( argv[2] ) )
+		snprintf(logfile, sizeof(logfile), "%d", 1000);
+	else
+		snprintf(logfile, sizeof(logfile), "%s", argv[2] );
+
+	/*
+	 * Run the game.
+	 */
+		//	if (!fCopyOver)
+		control = init_socket( port );
+
+	boot_db( );
+	/* init_web(port+1); */
+	log_string( LOG_CONNECT, Format("Project Twilight loaded on port %d.", port) );
+	log_to_file(logfile, GLOBAL_XML_IN, "Project Twilight restarted.");
+/*
+	if(fCopyOver)
+		copyover_recover();
+*/
+	game_loop_unix( control );
+	/* shutdown_web(); */
+
+	cleanup_mud(control);
+
+
+	/*
+	 * That's all, folks.
+	 */
+	log_string( LOG_GAME, "Normal termination of game." );
+	if(fpReserve)
+	{
+		closeReserve();
+	}
+	exit( 0 );
+	return 0;
+}
+
+
+#if defined(Macintosh) || defined(__MSDOS__)
+void game_loop_mac_msdos( void )
+{
+	struct timeval last_time;
+	struct timeval now_time;
+	static DESCRIPTOR_DATA dcon;
+
+	gettimeofday( &last_time, NULL );
+	current_time = (time_t) last_time.tv_sec;
+
+	/*
+	 * New_descriptor analogue.
+	 */
+	dcon.descriptor	= 0;
+	dcon.connected	= CON_GET_NAME;
+	PURGE_DATA( dcon.host );
+	dcon.host		= str_dup( "localhost" );
+	dcon.outsize	= 2000;
+	ALLOC_DATA(dcon.outbuf, DESCRIPTOR_DATA, dcon.outsize);
+	dcon.next		= descriptor_list;
+	dcon.showstr_head	= NULL;
+	dcon.showstr_point	= NULL;
+	dcon.pEdit		= NULL; /* OLC */
+	dcon.pString	= NULL;
+	dcon.editor		= 0;	/* End OLC */
+	descriptor_list	= &dcon;
+
+	/*
+	 * Send the greeting.
+	 */
+	{
+		extern char * help_greeting;
+		if ( help_greeting[0] == '.' )
+			write_to_buffer( &dcon, help_greeting+1, 0 );
+		else
+			write_to_buffer( &dcon, help_greeting  , 0 );
+	}
+
+	/* Main loop */
+	while ( !merc_down )
+	{
+		DESCRIPTOR_DATA *d;
+
+		/*
+		 * Process input.
+		 */
+		for ( d = descriptor_list; d != NULL; d = d_next )
+		{
+			d_next	= d->next;
+			d->fcommand	= FALSE;
+
+#if defined(__MSDOS__)
+			if ( kbhit( ) )
+#endif
+			{
+				if ( d->character != NULL )
+					d->character->timer = 0;
+				if ( !read_from_descriptor( d ) )
+				{
+					if ( d->character != NULL && d->connected == CON_PLAYING)
+						save_char_obj( d->character );
+					d->outtop	= 0;
+					close_socket( d );
+					continue;
+				}
+			}
+
+			if (d->character != NULL && d->character->daze > 0)
+				--d->character->daze;
+
+			if ( d->character != NULL && d->character->wait > 0 )
+			{
+				--d->character->wait;
+				continue;
+			}
+
+			read_from_buffer( d );
+			if ( !IS_NULLSTR(d->incomm) )
+			{
+				d->fcommand	= TRUE;
+				if ( d->pProtocol != NULL )
+					d->pProtocol->WriteOOB = 0;
+				stop_idling( d->character );
+
+				/*OLC*/
+				if ( d->showstr_point )
+					show_string( d, d->incomm );
+				else
+					if ( d->pString )
+						string_add( s->character, d->incomm );
+					else
+						switch ( d->connected )
+						{
+						case CON_PLAYING:
+							if( !run_olc_editor( d ))
+								substitute_alias( d, d->incomm );
+							break;
+						default:
+							nanny( d, d->incomm );
+							break;
+						}
+
+				d->incomm[0]	= '\0';
+			}
+		}
+
+
+
+		/*
+		 * Autonomous game motion.
+		 */
+		update_handler( );
+
+
+
+		/*
+		 * Output.
+		 */
+		for ( d = descriptor_list; d != NULL; d = d_next )
+		{
+			d_next = d->next;
+
+			if ( ( d->fcommand || d->outtop > 0 ) )
+			{
+				if ( !process_output( d, TRUE ) )
+				{
+					if ( d->character != NULL && d->connected == CON_PLAYING)
+						save_char_obj( d->character );
+					d->outtop	= 0;
+					close_socket( d );
+				}
+			}
+		}
+
+
+
+		/*
+		 * Synchronize to a clock.
+		 * Busy wait (blargh).
+		 */
+		now_time = last_time;
+		for ( ; ; )
+		{
+			int delta;
+
+#if defined(__MSDOS__)
+			if ( kbhit( ) )
+#endif
+			{
+				if ( dcon.character != NULL )
+					dcon.character->timer = 0;
+				if ( !read_from_descriptor( &dcon ) )
+				{
+					if ( dcon.character != NULL && d->connected == CON_PLAYING)
+						save_char_obj( d->character );
+					dcon.outtop	= 0;
+					close_socket( &dcon );
+				}
+#if defined(__MSDOS__)
+				break;
+#endif
+			}
+
+			gettimeofday( &now_time, NULL );
+			delta = ( now_time.tv_sec  - last_time.tv_sec  ) * 1000 * 1000
+					+ ( now_time.tv_usec - last_time.tv_usec );
+			if ( delta >= 1000000 / PULSE_PER_SECOND )
+				break;
+		}
+		last_time    = now_time;
+		current_time = (time_t) last_time.tv_sec;
+	}
+
+	return;
+}
+#endif
 
 
 #if defined(__unix__)

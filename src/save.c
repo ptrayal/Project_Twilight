@@ -748,7 +748,6 @@ bool load_char_obj( DESCRIPTOR_DATA *d, char *name, bool log_load, bool load_con
 	int stat = 0;
 	bool found = FALSE;
 	char *directory;
-	char strsave[MAX_INPUT_LENGTH]={'\0'};
 
 	if(load_concept)
 		directory = PLAYER_DIR;
@@ -845,7 +844,10 @@ bool load_char_obj( DESCRIPTOR_DATA *d, char *name, bool log_load, bool load_con
 	closeReserve();
 
 #if defined(__unix__)
-    		/* decompress if .gz file exists */
+	
+	/* decompress if .gz file exists */
+	char strsave[MAX_INPUT_LENGTH]={'\0'};
+
 	snprintf( strsave, sizeof(strsave), "%s%s%s", directory, capitalize(name),".gz");
 	if ( ( fp = fopen( strsave, "r" ) ) != NULL )
 	{
