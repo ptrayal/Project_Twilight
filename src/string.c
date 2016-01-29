@@ -12,7 +12,7 @@
  ***************************************************************************/
 
 
-#if defined(macintosh)
+#if defined(Macintosh)
 #include <types.h>
 #else
 #include <sys/types.h>

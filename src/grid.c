@@ -1,6 +1,6 @@
 /* grid.c. Where grids are created, displayed and destroyed. Davion. MudBytes.net */
 
-#if defined(macintosh)
+#if defined(Macintosh)
 #include <types.h>
 #else
 #include <sys/types.h>

@@ -32,7 +32,7 @@
 #include <fcntl.h>
 #include <stdarg.h>
 #include <unistd.h>
-#if defined(macintosh)
+#if defined(Macintosh)
 #include <types.h>
 #else
 #include <sys/types.h>
@@ -82,7 +82,7 @@ const char *Lower(const char *str)
 
 
 
-#if !defined(macintosh)
+#if !defined(Macintosh)
 extern  int _filbuf     args( (FILE *) );
 #endif
 

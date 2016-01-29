@@ -3409,7 +3409,7 @@ void do_myavnum (CHAR_DATA *ch, char *argument)
 /* What was note.c */
 
 /* globals from db.c for load_notes */
-#if !defined(macintosh)
+#if !defined(Macintosh)
 extern  int     _filbuf         args( (FILE *) );
 #endif
 extern FILE *                  fpArea;

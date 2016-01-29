@@ -1,4 +1,4 @@
-#if defined(macintosh)
+#if defined(Macintosh)
 #include <types.h>
 #else
 #include <sys/types.h>
@@ -11,7 +11,7 @@
 #include "tables.h"
 #include "lookup.h"
  
-#if !defined(macintosh)
+#if !defined(Macintosh)
 extern  int     _filbuf         args( (FILE *) );
 #endif
 

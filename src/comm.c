@@ -40,7 +40,7 @@
  * -- Furey  26 Jan 1993
  */
 
-#if defined(macintosh)
+#if defined(Macintosh)
 #include <types.h>
 #else
 #include <sys/types.h>
@@ -84,13 +84,13 @@
 /*
  * Socket and TCP/IP stuff.
  */
-#if	defined(macintosh) || defined(MSDOS)
+#if	defined(Macintosh) || defined(__MSDOS__)
 const	char	echo_off_str	[] = { '\0' };
 const	char	echo_on_str	[] = { '\0' };
 const	char 	go_ahead_str	[] = { '\0' };
 #endif
 
-#if	defined(unix)
+#if defined(__linux__) || defined(__unix__)
 #include <fcntl.h>
 #include <netdb.h>
 #include <netinet/in.h>
@@ -100,19 +100,6 @@ const	char	echo_off_str	[] = { IAC, WILL, TELOPT_ECHO, '\0' };
 const	char	echo_on_str		[] = { IAC, WONT, TELOPT_ECHO, '\0' };
 const	char 	go_ahead_str	[] = { IAC, GA, '\0' };
 #endif
-
-#if defined(__linux__)
-#include <fcntl.h>
-#include <netdb.h>
-#include <netinet/in.h>
-#include <sys/socket.h>
-#include "telnet.h"
-const	char	echo_off_str	[] = { IAC, WILL, TELOPT_ECHO, '\0' };
-const	char	echo_on_str		[] = { IAC, WONT, TELOPT_ECHO, '\0' };
-const	char 	go_ahead_str	[] = { IAC, GA, '\0' };
-#endif
-
-
 
 /*
  * OS-dependent declarations.
@@ -174,7 +161,7 @@ int	socket		args( ( int domain, int type, int protocol ) );
 //int	write		args( ( int fd, char *buf, int nbyte ) );
 #endif
 
-#if	defined(macintosh)
+#if	defined(Macintosh)
 #include <console.h>
 #include <fcntl.h>
 #include <unix.h>
@@ -195,7 +182,7 @@ int	gettimeofday		args( ( struct timeval *tp, void *tzp ) );
 extern	int		errno;
 #endif
 
-#if	defined(MSDOS)
+#if	defined(__MSDOS__)
 int	gettimeofday	args( ( struct timeval *tp, void *tzp ) );
 int	kbhit		args( ( void ) );
 #endif
@@ -305,13 +292,21 @@ bool		    MOBtrigger = TRUE;	/* act() switch			*/
 /*
  * OS-dependent local functions.
  */
-#if defined(macintosh) || defined(MSDOS)
+#if defined(Macintosh) || defined(__MSDOS__)
 void	game_loop_mac_msdos	args( ( void ) );
 bool	read_from_descriptor	args( ( DESCRIPTOR_DATA *d ) );
 bool	write_to_descriptor	args( ( int desc, char *txt, int length ) );
 #endif
 
 #if defined(unix)
+void	game_loop_unix		args( ( int control ) );
+int	init_socket		args( ( int port ) );
+void	init_descriptor		args( ( int control ) );
+bool	read_from_descriptor	args( ( DESCRIPTOR_DATA *d ) );
+bool	write_to_descriptor	args( ( int desc, char *txt, int length ) );
+#endif
+
+#if defined(__linux__)
 void	game_loop_unix		args( ( int control ) );
 int	init_socket		args( ( int port ) );
 void	init_descriptor		args( ( int control ) );
@@ -652,7 +647,7 @@ int main( int argc, char **argv )
 	/*
 	 * Run the game.
 	 */
-//	if (!fCopyOver)
+		//	if (!fCopyOver)
 		control = init_socket( port );
 
 	boot_db( );
@@ -747,7 +742,7 @@ int init_socket( int port )
 
 
 
-#if defined(macintosh) || defined(MSDOS)
+#if defined(Macintosh) || defined(__MSDOS__)
 void game_loop_mac_msdos( void )
 {
 	struct timeval last_time;
@@ -798,7 +793,7 @@ void game_loop_mac_msdos( void )
 			d_next	= d->next;
 			d->fcommand	= FALSE;
 
-#if defined(MSDOS)
+#if defined(__MSDOS__)
 			if ( kbhit( ) )
 #endif
 			{
@@ -892,7 +887,7 @@ void game_loop_mac_msdos( void )
 		{
 			int delta;
 
-#if defined(MSDOS)
+#if defined(__MSDOS__)
 			if ( kbhit( ) )
 #endif
 			{
@@ -905,7 +900,7 @@ void game_loop_mac_msdos( void )
 					dcon.outtop	= 0;
 					close_socket( &dcon );
 				}
-#if defined(MSDOS)
+#if defined(__MSDOS__)
 				break;
 #endif
 			}
@@ -1317,7 +1312,7 @@ void close_socket( DESCRIPTOR_DATA *dclose )
 	shutdown(dclose->descriptor, SHUT_RDWR);
 	close( dclose->descriptor );
 	free_descriptor(dclose);
-#if defined(MSDOS) || defined(macintosh)
+#if defined(__MSDOS__) || defined(Macintosh)
 	exit(1);
 #endif
 	return;
@@ -1347,7 +1342,7 @@ bool read_from_descriptor( DESCRIPTOR_DATA *d )
 	}
 
 	/* Snarf input. */
-#if defined(macintosh)
+#if defined(Macintosh)
 	for ( ; ; )
 	{
 		int c;
@@ -1868,7 +1863,7 @@ bool write_to_descriptor( int desc, char *txt, int length )
     int nWrite = 0;
     int nBlock = 0;
 
-#if defined(macintosh) || defined(MSDOS)
+#if defined(Macintosh) || defined(__MSDOS__)
     if ( desc == 0 )
 	desc = 1;
 #endif
@@ -3208,12 +3203,12 @@ bool check_parse_name( char *name )
 	if ( strlen(name) <  2 )
 		return FALSE;
 
-#if defined(MSDOS)
+#if defined(__MSDOS__)
 	if ( strlen(name) >  8 )
 		return FALSE;
 #endif
 
-#if defined(macintosh) || defined(unix)
+#if defined(Macintosh) || defined(unix)
 	if ( strlen(name) > 12 )
 		return FALSE;
 #endif
@@ -3976,7 +3971,7 @@ void act_new( const char *format, CHAR_DATA *ch, const void *arg1,  const void *
 /*
  * Macintosh support functions.
  */
-#if defined(macintosh)
+#if defined(Macintosh)
 int gettimeofday( struct timeval *tp, void *tzp )
 {
     tp->tv_sec  = time( NULL );

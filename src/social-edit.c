@@ -22,7 +22,7 @@
 
 /* This version contains minor modifications to support ROM 2.4b4. */
 
-#if defined(macintosh)
+#if defined(Macintosh)
 #include <types.h>
 #else
 #include <sys/types.h>
