@@ -844,7 +844,7 @@ bool load_char_obj( DESCRIPTOR_DATA *d, char *name, bool log_load, bool load_con
 	found = FALSE;
 	closeReserve();
 
-#if defined(unix)
+#if defined(__unix__)
     		/* decompress if .gz file exists */
 	snprintf( strsave, sizeof(strsave), "%s%s%s", directory, capitalize(name),".gz");
 	if ( ( fp = fopen( strsave, "r" ) ) != NULL )

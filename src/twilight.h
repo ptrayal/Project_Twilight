@@ -327,8 +327,8 @@ struct	weather_data
 /*
  * Copyover stuff.
  */
-#define COPYOVER_FILE 			"copyover.data"
-#define EXE_FILE			"../src/project"
+#define COPYOVER_FILE       "copyover.data"
+#define EXE_FILE            "../src/project"
 #define CH(descriptor)  ((descriptor)->original ? (descriptor)->original : (descriptor)->character)
 
 /*

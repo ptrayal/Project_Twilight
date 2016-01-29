@@ -71,7 +71,7 @@
 #define __attribute(x)
 #endif
 
-#if defined(unix)
+#if defined(__unix__)
 #include <signal.h>
 #endif
 
@@ -141,7 +141,7 @@ int	socket		args( ( int domain, int type, int protocol ) );
 #include <sys/fnctl.h>
 #endif
 
-#if	defined(linux)
+#if	defined(__linux__)
 /*
     Linux shouldn't need these. If you have a problem compiling, try
     uncommenting these functions.
@@ -202,7 +202,7 @@ int	select		args( ( int width, fd_set *readfds, fd_set *writefds,
 int	write		args( ( int fd, char *buf, int nbyte ) );
 #endif
 
-#if	defined(sequent)
+#if	defined(_SEQUENT_)
 int	accept		args( ( int s, struct sockaddr *addr, int *addrlen ) );
 int	bind		args( ( int s, struct sockaddr *name, int namelen ) );
 int	close		args( ( int fd ) );
@@ -254,7 +254,7 @@ int	socket		args( ( int domain, int type, int protocol ) );
 int	write		args( ( int fd, char *buf, int nbyte ) );
 #endif
 
-#if defined(ultrix)
+#if defined(__ultrix__)
 int	accept		args( ( int s, struct sockaddr *addr, int *addrlen ) );
 int	bind		args( ( int s, struct sockaddr *name, int namelen ) );
 void	bzero		args( ( char *b, int length ) );
@@ -298,7 +298,7 @@ bool	read_from_descriptor	args( ( DESCRIPTOR_DATA *d ) );
 bool	write_to_descriptor	args( ( int desc, char *txt, int length ) );
 #endif
 
-#if defined(unix)
+#if defined(__unix__)
 void	game_loop_unix		args( ( int control ) );
 int	init_socket		args( ( int port ) );
 void	init_descriptor		args( ( int control ) );
@@ -678,7 +678,7 @@ int main( int argc, char **argv )
 
 
 
-#if defined(unix)
+#if defined(__unix__)
 int init_socket( int port )
 {
 	static struct sockaddr_in sa_zero;
@@ -921,7 +921,7 @@ void game_loop_mac_msdos( void )
 
 
 
-#if defined(unix)
+#if defined(__unix__)
 void game_loop_unix( int control )
 {
 	static struct timeval null_time;
@@ -1140,7 +1140,7 @@ void game_loop_unix( int control )
 
 
 
-#if defined(unix)
+#if defined(__unix__)
 void init_descriptor( int control )
 {
 	DESCRIPTOR_DATA *dnew;
@@ -1358,7 +1358,7 @@ bool read_from_descriptor( DESCRIPTOR_DATA *d )
 	}
 #endif
 
-#if defined(MSDOS) || defined(unix)
+#if defined(MSDOS) || defined(__unix__)
 	for ( ; ; )
 	{
 		int nRead;
@@ -2098,7 +2098,7 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 		break;
 
 		case CON_GET_OLD_PASSWORD:
-#if defined(unix)
+#if defined(__unix__)
 			write_to_buffer( d, "\n\r", 2 );
 #endif
 
@@ -3208,7 +3208,7 @@ bool check_parse_name( char *name )
 		return FALSE;
 #endif
 
-#if defined(Macintosh) || defined(unix)
+#if defined(Macintosh) || defined(__unix__)
 	if ( strlen(name) > 12 )
 		return FALSE;
 #endif
@@ -4888,7 +4888,7 @@ void get_new_password(DESCRIPTOR_DATA *d, char *argument)
 	char *pwdnew;
 	char *p;
 
-#if defined(unix)
+#if defined(__unix__)
 	write_to_buffer( d, "\n\r", 2 );
 #endif
 
@@ -4919,7 +4919,7 @@ void confirm_new_password(DESCRIPTOR_DATA *d, char *argument)
 {
 	CHAR_DATA *ch = d->character;
 
-#if defined(unix)
+#if defined(__unix__)
 	write_to_buffer( d, "\n\r", 2 );
 #endif
 
