@@ -19,6 +19,7 @@
 #include <unistd.h>
 #include <assert.h>
 #include <stdlib.h>
+#include <time.h>
 /* Change these as you need to. */
 
 #define MYURL		"http://brandonsplace.net/projecttwilight/"
