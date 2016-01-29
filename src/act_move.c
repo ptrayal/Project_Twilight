@@ -1715,8 +1715,6 @@ void bzero(register char *sp,int len)
 }
 #endif
 
-
-
 void init_hash_table(struct hash_header *ht,int rec_size,int table_size)
 {
     ht->rec_size    = rec_size;
