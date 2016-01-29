@@ -1668,8 +1668,7 @@ struct hash_header
 {
     int         rec_size;
     int         table_size;
-    int         *keylist, klistsize, klistlen; /* this is really lame,
-                              AMAZINGLY lame */
+    int         *keylist, klistsize, klistlen; /* this is really lame, AMAZINGLY lame */
     struct hash_link    **buckets;
 };
 
@@ -4073,7 +4072,7 @@ void do_step(CHAR_DATA *ch, char *argument)
         }
     }
 
-    if(i != flag_value(rp_area_table, "school") && ch->dollars + (ch->cents / 100) < 5 && !IS_ADMIN(ch))
+    if(i != flag_value(rp_area_table, "newbie school") && ch->dollars + (ch->cents / 100) < 5 && !IS_ADMIN(ch))
     {
         send_to_char("You don't have $5 to pay for the taxi!\n\r", ch);
         return;
