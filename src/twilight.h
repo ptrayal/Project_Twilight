@@ -3042,16 +3042,6 @@ char *	crypt		args( ( const char *key, const char *salt ) );
 #define NULL_FILE   "/dev/null"     /* To reserve one stream */
 #endif
 
-#define PLAYER_DIR      "../player/"            /* Player files */
-#define PLAYER_BACKUP_DIR  "../player/backup/"  /* Player backup files */
-#define NPC_DIR     "../npc/"       /* NPC files    */
-#define AREA_DIR    "../area/"      /* Area files   */
-#define ORG_DIR     "../data/orgs/"     /* Org files    */
-#define SURVEY_DIR  "../data/survey/"   /* Survey files */
-#define LOG_DIR     "../log/"       /* Log files    */
-#define TEMP_FILE   "../player/mudtmp"
-#define NULL_FILE   "/dev/null"     /* To reserve one stream */
-
 #define AREA_LIST		"area.lst"				/* List of areas*/
 #define ORG_LIST		"org.lst"				/* List of orgs*/
 #define BUG_FILE		"bugs.txt"				/* For 'bug' and bug()*/
@@ -3066,6 +3056,18 @@ char *	crypt		args( ( const char *key, const char *salt ) );
 
 #define GLOBAL_XML_IN	"glob"			/* RSS global activity log */
 #define GLOBAL_XML_OUT	"../../public_html/global.xml" /* RSS output for globals */
+
+#if defined(windows)
+#ifndef SHUT_RD
+#define SHUT_RD SD_RECEIVE
+#endif
+#ifndef SHUT_WR
+#define SHUT_WR SD_SEND
+#endif
+#ifndef SHUT_RDWR
+#define SHUT_RDWR SD_BOTH
+#endif
+#endif
 
 
 // Log types
