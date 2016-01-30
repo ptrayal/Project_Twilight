@@ -52,6 +52,7 @@
 #include "recycle.h"
 #include "lookup.h"
 #include "olc.h"
+#include "grid.h"
 
 
 bool logFail = FALSE;           // this can be turned into a global value, it doesn't really need to be true
@@ -4209,20 +4210,23 @@ void do_areas( CHAR_DATA *ch, char *argument )
 
 void do_memory( CHAR_DATA *ch, char *argument )
 {
+
 	send_to_char( "\r\n", ch );
-	send_to_char( Format("Affects %5d\n\r", top_affect), ch );
-	send_to_char( Format("Areas   %5d\n\r", top_area), ch );
-	send_to_char( Format("ExDes   %5d\n\r", top_ed), ch );
-	send_to_char( Format("Exits   %5d\n\r", top_exit), ch );
-	send_to_char( Format("Helps   %5d\n\r", top_help), ch );
-	send_to_char( Format("Tips    %5d\n\r", top_tip), ch );
-	send_to_char( Format("Socials %5d\n\r", maxSocial), ch );
-	send_to_char( Format("Mobs    %d\n\r", newmobs), ch );
-	send_to_char( Format("(in use)%5d\n\r", mobile_count), ch );
-	send_to_char( Format("Objs    %d\n\r", newobjs), ch );
-	send_to_char( Format("Resets  %5d\n\r", top_reset), ch );
-	send_to_char( Format("Rooms   %5d\n\r", top_room), ch );
-	send_to_char( Format("Shops   %5d\n\r", top_shop), ch );
+	send_to_char( "****** Memory Allocations ******\n\r", ch);
+	send_to_char( Format("* Affects %5d                *\n\r", top_affect), ch );
+	send_to_char( Format("* Areas   %5d                *\n\r", top_area), ch );
+	send_to_char( Format("* ExDes   %5d                *\n\r", top_ed), ch );
+	send_to_char( Format("* Exits   %5d                *\n\r", top_exit), ch );
+	send_to_char( Format("* Helps   %5d                *\n\r", top_help), ch );
+	send_to_char( Format("* Mobs    %5d                *\n\r", newmobs), ch );
+	send_to_char( Format("*  (in use)%5d               *\n\r", mobile_count), ch );
+	send_to_char( Format("* Objs    %5d                *\n\r", newobjs), ch );
+	send_to_char( Format("* Resets  %5d                *\n\r", top_reset), ch );
+	send_to_char( Format("* Rooms   %5d                *\n\r", top_room), ch );
+	send_to_char( Format("* Shops   %5d                *\n\r", top_shop), ch );
+	send_to_char( Format("* Socials %5d                *\n\r", maxSocial), ch );
+	send_to_char( Format("* Tips    %5d                *\n\r", top_tip), ch );
+	send_to_char( "********************************\n\r", ch);
 
 	return;
 }
