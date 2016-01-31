@@ -1457,3 +1457,20 @@ void do_hsave2 (CHAR_DATA *ch, char *argument)
 	send_to_char("Helps saved.\n\r", ch);
 	return;
 }
+
+void do_help_unformatted (CHAR_DATA *ch, char *argument)
+{
+	HELP_DATA *help;
+
+	send_to_char("Helps with unformatted still:\n\r", ch);
+
+
+	for(help = help_list; help; help = help->next)
+	{
+		if(!IS_NULLSTR(help->unformatted))
+			send_to_char(Format("Topic:  %s\n\r", help->keyword), ch );
+	}
+
+	send_to_char("That's all!!!\n\r", ch);
+	return;
+}

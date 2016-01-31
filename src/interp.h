@@ -225,6 +225,7 @@ DECLARE_DO_FUN(	do_holylight	);
 DECLARE_DO_FUN(	do_home		);
 DECLARE_DO_FUN( do_hsave	);
 DECLARE_DO_FUN( do_hsave2	);
+DECLARE_DO_FUN( do_help_unformatted	);
 DECLARE_DO_FUN( do_hedit	);
 DECLARE_DO_FUN( do_hunt		);
 DECLARE_DO_FUN( do_hunted	);
