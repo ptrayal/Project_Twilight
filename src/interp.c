@@ -330,6 +330,7 @@ const	struct	cmd_type	cmd_table	[] =
 		{	"sleep",		do_sleep,		P_SLEEP,	0,	L_NRM,	1,	B|H,	0 },
 		{	"smash",		do_smash,		P_STAND,	0,	L_NRM,	1,	B|H,	0 },
 		{	"sneak",		do_sneak,		P_STAND,	0,	L_NRM,	1,	B|H,	0 },
+		{   "snippet",      do_snippets,    P_DEAD,     0,  L_NRM,  1,  A|B|E,  0 },
 		{	"socials",		do_socials,		P_DEAD,		0,	L_NRM,	1,	A|B|E,	0 },
 		{	"spin",			do_move_spin,	P_FIGHT,	0,	L_NRM,	1,	H,	0 },
 		{	"staff",		do_wizlist,		P_DEAD,		0,	L_NRM,	0,	A|B|E,	0 },

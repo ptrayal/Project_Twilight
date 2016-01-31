@@ -475,6 +475,7 @@ DECLARE_DO_FUN( do_wwgift2_4	);
 DECLARE_DO_FUN( do_wwgift3_4	);
 DECLARE_DO_FUN( do_smote	);
 DECLARE_DO_FUN(	do_sneak	);
+DECLARE_DO_FUN(	do_snippets	);
 DECLARE_DO_FUN(	do_snoop	);
 DECLARE_DO_FUN( do_socials	);
 DECLARE_DO_FUN(	do_south	);

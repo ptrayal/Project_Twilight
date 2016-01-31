@@ -588,13 +588,14 @@ AEDIT( aedit_show )
     send_to_char( Format("Recall:   [%5d] %s\n\r", pArea->recall, get_room_index( pArea->recall ) ? get_room_index( pArea->recall )->name : "none"), ch );
 #endif /* ROM */
 
-    send_to_char( Format("File:     %s\n\r", pArea->file_name), ch );
-    send_to_char( Format("Vnums:    [%d-%d]\n\r", pArea->min_vnum, pArea->max_vnum), ch );
-    send_to_char( Format("Age:      [%d]\n\r",	pArea->age), ch );
-    send_to_char( Format("Players:  [%d]\n\r", pArea->nplayer), ch );
-    send_to_char( Format("Security: [%d]\n\r", pArea->security), ch );
-    send_to_char( Format("Builders: [%s]\n\r", pArea->builders), ch );
-    send_to_char( Format("Credits : [%s]\n\r", pArea->credits), ch );
+    send_to_char( Format("File:      %s\n\r", pArea->file_name), ch );
+    send_to_char( Format("Vnums:     [%d-%d]\n\r", pArea->min_vnum, pArea->max_vnum), ch );
+    send_to_char( Format("Age:       [%d]\n\r",	pArea->age), ch );
+    send_to_char( Format("Players:   [%d]\n\r", pArea->nplayer), ch );
+    send_to_char( Format("Security:  [%d]\n\r", pArea->security), ch );
+    send_to_char( Format("Builders:  [%s]\n\r", pArea->builders), ch );
+    send_to_char( Format("Credits :  [%s]\n\r", pArea->credits), ch );
+    send_to_char( Format("Price Mod: [%d]\n\r", pArea->pricemod), ch);
     send_to_char( Format("Flags:    [%s]\n\r", flag_string( area_flags, pArea->area_flags )), ch );
 
     return FALSE;

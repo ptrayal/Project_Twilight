@@ -25,6 +25,7 @@
 #define MYURL		"http://brandonsplace.net/projecttwilight/"
 #define MYSERV		"brandonsplace.net port: 9080"
 #define PT_ENGINE	"Project Twilight (Heavily Modified ROM2.4)"
+#define WIZUTIL_VERSION "1.6"
 
 /* Debugging flag - Controls output to STDERR */
 

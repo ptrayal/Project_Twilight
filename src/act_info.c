@@ -39,6 +39,7 @@
 #include "interp.h"
 #include "version.h"
 #include "grid.h"
+#include "olc.h"
 
 char *flag_string       args ( (const struct flag_type *flag_table,int bits) );
 
@@ -5315,42 +5316,6 @@ int file_time( const char *filename, time_t *time )
 	return 0;
 }
 
-/*
- * Get time of last build.
- */
-void do_updatetime( CHAR_DATA *ch, char *argument)
-{
-	bool found = FALSE;
-	time_t time;
-
-	CheckCH(ch);
-
-	send_to_char("\tW------------------------------------------------------------------------------\tn\n\r", ch );
-	send_to_char("\tYLast code update:\tn ", ch);
-
-	if( file_time( "../src/project", &time ) < 0 ) {
-		if( file_time( "../src/project.exe", &time ) < 0 )
-			found = FALSE;
-	}
-	else
-		found = TRUE;
-
-	Assert(found = TRUE, "Project.exe file was not located.");
-
-	if(found)
-		send_to_char(ctime(&time), ch);
-	else
-		send_to_char(Format("\tRWARNING:\tn Unable to determine update time.\n\r"), ch);
-
-	send_to_char("\tGEngine: ", ch);
-	send_to_char(PT_ENGINE, ch);
-	send_to_char("\tn\n\r", ch);
-	send_to_char("\tYVersion: ", ch);
-	send_to_char(mudVersion, ch);
-	send_to_char("\tn\n\r", ch);
-	send_to_char("\tW------------------------------------------------------------------------------\tn\n\r", ch);
-}
-
 void do_lines(CHAR_DATA *ch, char *argument)
 {
 
@@ -6248,4 +6213,82 @@ void do_charsheet( CHAR_DATA *ch, char *argument )
 
 		}
 	}
+}
+
+/*
+ * Get time of last build.
+ */
+void do_updatetime( CHAR_DATA *ch, char *argument)
+{
+	bool found = FALSE;
+	time_t time;
+
+	CheckCH(ch);
+
+	send_to_char("\tW------------------------------------------------------------------------------\tn\n\r", ch );
+	send_to_char("\tYLast code update:\tn ", ch);
+
+	if( file_time( "../src/project", &time ) < 0 ) {
+		if( file_time( "../src/project.exe", &time ) < 0 )
+			found = FALSE;
+	}
+	else
+		found = TRUE;
+
+	Assert(found = TRUE, "Project.exe file was not located.");
+
+	if(found)
+		send_to_char(ctime(&time), ch);
+	else
+		send_to_char(Format("\tRWARNING:\tn Unable to determine update time.\n\r"), ch);
+
+	send_to_char("\tGEngine: ", ch);
+	send_to_char(PT_ENGINE, ch);
+	send_to_char("\tn\n\r", ch);
+	send_to_char("\tYVersion: ", ch);
+	send_to_char(mudVersion, ch);
+	send_to_char("\tn\n\r", ch);
+	send_to_char("\tW------------------------------------------------------------------------------\tn\n\r", ch);
+}
+
+
+void do_snippets( CHAR_DATA *ch, char *argument )
+{
+	bool found = FALSE;
+	time_t time;
+
+	CheckCH(ch);
+
+	send_to_char("\tW------------------------------------------------------------------------------\tn\n\r", ch );
+	send_to_char("\tYLast code update:\tn ", ch);
+
+	if( file_time( "../src/project", &time ) < 0 ) {
+		if( file_time( "../src/project.exe", &time ) < 0 )
+			found = FALSE;
+	}
+	else
+		found = TRUE;
+
+	Assert(found = TRUE, "Project.exe file was not located.");
+
+	if(found)
+		send_to_char(ctime(&time), ch);
+	else
+		send_to_char(Format("\tRWARNING:\tn Unable to determine update time.\n\r"), ch);
+
+	send_to_char("\tGEngine: ", ch);
+	send_to_char(PT_ENGINE, ch);
+	send_to_char("\tn\n\r", ch);
+	send_to_char("\tYVersion: ", ch);
+	send_to_char(mudVersion, ch);
+	send_to_char("\tn\n\r", ch);
+
+	send_to_char("\tW-----------------------------------Snippets-----------------------------------\tn\n\r", ch );
+	send_to_char( Format("| KaVir Protocol Path:  %3d                |\n\r", SNIPPET_VERSION), ch );
+	send_to_char( Format("| ILAB Online Creation:  %3s                |\n\r", OLC_VERSION), ch );
+	send_to_char( Format("| Grid Version:  %3d                |\n\r", GRID_VERSION), ch );
+	send_to_char( Format("| Wizard Utilities:  %3s                |\n\r", WIZUTIL_VERSION), ch );
+	send_to_char("\tW------------------------------------------------------------------------------\tn\n\r", ch );
+
+	return;
 }

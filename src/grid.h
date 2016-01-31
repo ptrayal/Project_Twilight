@@ -7,6 +7,7 @@
 #endif
 
 #define DEFAULT_GRID_SIZE = 80 //characters
+#define GRID_VERSION 1
 
 
 typedef struct grid_data GRID_DATA;

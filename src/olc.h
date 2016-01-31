@@ -37,6 +37,8 @@
 		"     (Port to PTv1.0 - Dec 27, 2000)\n\r"
 #define CREDITS "     Original by Surreality(cxw197@psu.edu) and Locke(locke@lm.com)"
 
+#define OLC_VERSION "1.00"
+
 
 
 /*
