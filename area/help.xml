@@ -1335,14 +1335,12 @@
 <keyword>press~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Topic: Pressing Buttons
- 
-Syntax: press [[button number]] - call/make elevator go to another floor.
- 
-Description:
-Pressing buttons allows you to manipulate an elevator and get it to go
-to the floor you want, or to come to the floor you are on.
-~</Unformatted>
+<Topic>Pressing Buttons~</Topic>
+<Syntax>Press [[button number]] - call/make elevator go to another floor.  
+~</Syntax>
+<Desc>Pressing buttons allows you to manipulate an elevator and get it to go to
+the floor you want, or to come to the floor you are on.  
+~</Desc>
 </help_object>
 <help_object><level>-1</level>
 <keyword>corpse looting~</keyword>
@@ -1420,15 +1418,13 @@
 <keyword>hedit~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Topic: Hedit the Help Editor
- 
-Syntax: hedit [keyword]
-hedit create [keyword]
- 
-Description:
-The hedit command will get sufficiently trusted people edit, create,
-and generally mess with the help files.
-~</Unformatted>
+<Topic>Hedit (the help editor)~</Topic>
+<Syntax>hedit [keyword] or help_edit [keyword]
+hedit create [keywords] or help_edit create [keywords]
+~</Syntax>
+<Desc>The hedit command will get sufficiently trusted people edit, create, and
+generally mess with the help files.  
+~</Desc>
 </help_object>
 <help_object><level>-1</level>
 <keyword>think~</keyword>
@@ -1554,7 +1550,7 @@
 ~</See>
 </help_object>
 <help_object><level>-1</level>
-<keyword>fbi feds federal bureau of investigation~</keyword>
+<keyword>fbi feds 'federal bureau of investigation'~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
 <Topic>Mortals: FBI~</Topic>
@@ -1567,6 +1563,8 @@
 FBI Agents start with 3 police influence to represent their sway and
 influence over Law Enforcement.
 ~</Desc>
+<See>HELP AGENCY
+~</See>
 </help_object>
 <help_object><level>-1</level>
 <keyword>name lastname surname last~</keyword>
@@ -1582,19 +1580,18 @@
 ~</Desc>
 </help_object>
 <help_object><level>-1</level>
-<keyword>age ageset~</keyword>
+<keyword>'age' 'ageset'~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Topic: Setting Your Age
- 
-Syntax: ageset [number]
- 
-Description:
-When you start out in PT your apparent age is 15 years old. If you don't
-want your apparent age to be that low you need to set it to the age that
-you want. As of right now almost no one can see your apparent age if it
-is not in your character description.
-~</Unformatted>
+<Topic>Setting Your Age~</Topic>
+<Syntax> 
+  ageset [number]
+~</Syntax>
+<Desc>When you start out in PT your apparent age is 15 years old.  If you don't
+want your apparent age to be that low you need to set it to the age that you
+want.  As of right now almost no one can see your apparent age if it is not
+in your character description.  
+~</Desc>
 </help_object>
 <help_object><level>-1</level>
 <keyword>language swearing cursing~</keyword>
@@ -1724,30 +1721,28 @@
 <keyword>World of Darkness wod~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Topic: {rWorld of Darkness.
- 
-   The World of Darkness deals in a world much like our own; the 
-same earth is occupied by the same people, history has evolved in 
-exactly the same way - at least on the surface - as what we know; 
-the same cities, nations and landmarks exist bearing the names 
-that are familiar to us.
-   -- And yet, behind the scenes, things stir in the shadows. 
-Vampires exist, predators on mankind for ages untold, and mages 
-harnessing vast, potent powers that bend reality to their will; 
-wild creatures roam the country sides. And for humans, the world 
-is a darker, more dangerous place - the crime rate is higher, 
-and the crimes committed viler, deeper and disturbing in their 
-violence.
- 
-  This is the world you are now inhabiting; perhaps you are one 
-of those creatures that go bump in the night, belonging to other 
-people's nightmares; maybe you are among its defenders, striving 
-to take back the night and put an end to madness; or you could
-be one of the potential victims, just trying to make it in this
-unfriendly, menacing era - without losing everything you value.
-   Or you may already have. After all, this is a World of Darkness.
- 
-~</Unformatted>
+<Topic>World of Darkness~</Topic>
+<Desc>The World of Darkness deals in a world much like our own; the same earth
+is occupied by the same people, history has evolved in exactly the same way
+- at least on the surface - as what we know; the same cities, nations and
+landmarks exist bearing the names that are familiar to us.  
+
+-- And yet, behind the scenes, things stir in the shadows.  Vampires exist,
+predators on mankind for ages untold, and mages harnessing vast, potent
+powers that bend reality to their will; wild creatures roam the country
+sides.  And for humans, the world is a darker, more dangerous place - the
+crime rate is higher, and the crimes committed viler, deeper and disturbing
+in their violence.  
+
+This is the world you are now inhabiting; perhaps you are one of those
+creatures that go bump in the night, belonging to other people's nightmares;
+maybe you are among its defenders, striving to take back the night and put
+an end to madness; or you could be one of the potential victims, just trying
+to make it in this unfriendly, menacing era - without losing everything you
+value.  
+
+Or you may already have.  After all, this is a World of Darkness.  
+~</Desc>
 </help_object>
 <help_object><level>-1</level>
 <keyword>Ravnos~</keyword>
@@ -2256,7 +2251,7 @@
 ~</Unformatted>
 </help_object>
 <help_object><level>0</level>
-<keyword>agency bureau~</keyword>
+<keyword>'agency' bureau~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
 <Topic>FBI: Special Division~</Topic>
@@ -2272,6 +2267,8 @@
 of for agents to "cross over", few, if any, would choose such an option
 given any choice in the matter.
 ~</Desc>
+<See>HELP FBI
+~</See>
 </help_object>
 <help_object><level>0</level>
 <keyword>alderman aldermen~</keyword>
@@ -2303,13 +2300,12 @@
 <keyword>alist~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Topic:  Area List
-Syntax:  alist
-Description:
-ALIST gives a list of the areas in the mud and details about 
-permissions, vnums, etc.
-See also:  HELP AREA
-~</Unformatted>
+<Topic>Area List~</Topic>
+<Syntax>alist~</Syntax>
+<Desc>ALIST gives a list of the areas in the mud and details about permissions,
+vnums, etc.  
+~</Desc>
+<Web>none~</Web>
 </help_object>
 <help_object><level>-1</level>
 <keyword>animalism~</keyword>
@@ -2329,10 +2325,9 @@
 <keyword>appoint~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Topic:  Mayoral Appointees
-Description:
-The mayor may appoint someone has police chief.
-~</Unformatted>
+<Topic>Mayor: Appointing the Police Chief~</Topic>
+<Desc>The mayor may appoint someone has police chief.
+~</Desc>
 </help_object>
 <help_object><level>2</level>
 <keyword>asave~</keyword>
@@ -2643,12 +2638,10 @@
 <keyword>CMW children's mud-o-vision workshop coded~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Topic:  Children's MUD-o-Vision Workshop
-Description:
-This mud has been a production of the Children's Mud-O-Vision Workshop.
-CMW Staff (Past and Present):
-Dsarky (Administrator, Coder, etc. etc.)
-Rayal (Storyteller, Builder, Help File guy and Bug Finder of the Year 2001)
+<Topic>Children's MUD-o-Vision Workshop~</Topic>
+<Desc>This mud has been a production of the Children's Mud-O-Vision Workshop.
+CMW Retired Staff (for current list, see staff):
+Dsarky (Administrator, Coder, etc)
 Rafkin (Builder and Bug Finder of the Year 2002)
 Stefan (Builder and Content Advisor)
 Bran (Builder and Content Advisor)
@@ -2656,7 +2649,7 @@
 Heathir (Builder)
 Celia (Builder)
 Bishop (Builder and Content Advisor)
-~</Unformatted>
+~</Desc>
 </help_object>
 <help_object><level>-1</level>
 <keyword>cockroachspirit cockroach 'cockroach totem' 'cockroach spirit'~</keyword>
@@ -2745,16 +2738,18 @@
 <keyword>conceal search bury~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Topic:  Hide and Seek
-Syntax:  conceal [object]
-search
-Description:
-Objects may be concealed in a room by the use of conceal [object]. This 
-does not make them permanently placed in the room, and objects will be 
-lost during reboots or crashes.
-Hidden objects can be searched out using the search command. If 
-successful, one or more objects hidden in the room will be discovered.
-~</Unformatted>
+<Topic>Conceal and Search~</Topic>
+<Syntax> 
+  conceal [object]
+  search
+~</Syntax>
+<Desc>Objects may be concealed in a room by the use of conceal [object].  This
+does not make them permanently placed in the room, and objects will be lost
+during reboots or crashes.  
+
+Hidden objects can be searched out using the search command.  If successful,
+one or more objects hidden in the room will be discovered.  
+~</Desc>
 </help_object>
 <help_object><level>-1</level>
 <keyword>mission statement here~</keyword>
@@ -2787,13 +2782,13 @@
 <keyword>conditioning~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Topic:  Conditioning
-Syntax:  condition [target]
-Description:
-The stronger the will the greater the command they may exert on another 
-being. By the use of this power the target may be rendered easily 
-commanded by the user with the "order" command.
-~</Unformatted>
+<Topic>Dominate: Conditioning~</Topic>
+<Syntax>condition [target]
+~</Syntax>
+<Desc>The stronger the will the greater the command they may exert on another
+being.  By the use of this power the target may be rendered easily commanded
+by the user with the "order" command.  
+~</Desc>
 </help_object>
 <help_object><level>-1</level>
 <keyword>mesmerise~</keyword>
@@ -2870,13 +2865,14 @@
 <keyword>croll~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Topic:  Combat Roll
-Syntax:  croll
-Description:
-To do a tumbling roll as part of your combo, use croll.  Rolling will 
-help you evade some attacks.
-See also:  HELP CSTAND
-~</Unformatted>
+<Topic>Combat Roll~</Topic>
+<Syntax>croll
+~</Syntax>
+<Desc>To do a tumbling roll as part of your combo, use croll.  Rolling will
+help you evade some attacks.  
+~</Desc>
+<See>HELP CSTAND
+~</See>
 </help_object>
 <help_object><level>0</level>
 <keyword>cstand~</keyword>
@@ -2966,17 +2962,15 @@
 <keyword>diku~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Topic:  
-Description:
-                 Original game idea, concept, and design:
-          Katja Nyboe             [Superwoman] (katz@freja.diku.dk)
-          Tom Madsen              [Stormbringer] (noop@freja.diku.dk)
-          Hans Henrik Staerfeldt  [God] (bombman@freja.diku.dk)
-          Michael Seifert         [Papi] (seifert@freja.diku.dk)
-          Sebastian Hammer        [Quinn] (quinn@freja.diku.dk)
+<Topic>Original game idea, concept, and design~</Topic>
+<Desc>Katja Nyboe             [Superwoman] (katz@freja.diku.dk)
+Tom Madsen              [Stormbringer] (noop@freja.diku.dk)
+Hans Henrik Staerfeldt  [God] (bombman@freja.diku.dk)
+Michael Seifert         [Papi] (seifert@freja.diku.dk)
+Sebastian Hammer        [Quinn] (quinn@freja.diku.dk)
 Developed at: DIKU -- The Department of Computer Science
-                      at the University of Copenhagen.
-~</Unformatted>
+at the University of Copenhagen.
+~</Desc>
 </help_object>
 <help_object><level>-1</level>
 <keyword>disciplines discs~</keyword>
@@ -3041,12 +3035,13 @@
 <keyword>dot dots~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>{MTopic: "Dots"
- 
-{MDescription:
-Dots are the basis for a character in Project Twilight. The 
-general scare is as follows, however the scale may vary somewhat
-dependent on the stat it falls into.
+<Topic>Dots~</Topic>
+<Desc>Dots are the basis for a character in Project Twilight.  The general
+scare is as follows, however the scale may vary somewhat dependent on the
+stat it falls into.  
+
+While scores highter than 5 are possible, those scores are generally
+reserved for supernatural levels of skill or power.  
  
 0 - Pissweak, completely useless
 1 - Below Average
@@ -3054,11 +3049,9 @@
 3 - Above average
 4 - Really good
 5 - Incredible
- 
-While scores highter than 5 are possible, those scores are generally
-reserved for supernatural levels of skill or power.
-{MSee also: HELP ATTRIBUTES
-~</Unformatted>
+~</Desc>
+<See>HELP ATTRIBUTES
+~</See>
 </help_object>
 <help_object><level>-1</level>
 <keyword>droll dice roll~</keyword>
@@ -3471,17 +3464,16 @@
 <keyword>inventory equipment~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>{MTopic: Equipment and Inventory
- 
-Syntax: inventory
-        equipment
- 
-{MDescription:
-Inventory lists all the items you are carrying but not wearing.
-Equipment lists all the items you are wearing and/or using.
- 
-{MSee also: HELP WIELD, HELP WEAR, HELP HOLD, HELP GET
-~</Unformatted>
+<Topic>Equipment and Inventory~</Topic>
+<Syntax>inventory
+equipment
+~</Syntax>
+<Desc>Inventory lists all the items you are carrying but not wearing.  
+
+Equipment lists all the items you are wearing and/or using.  
+~</Desc>
+<See>WIELD; WEAR; HOLD; GET
+~</See>
 </help_object>
 <help_object><level>0</level>
 <keyword>investigate research~</keyword>
@@ -3804,18 +3796,19 @@
 <keyword>'mask of a 1000 faces' 'mask of the thousand faces' 'mask of a thousand faces' mask thousand faces 1000~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Topic:  Mask of a 1000 Faces
-Syntax:  mask [target/name]
-mask [appearance modifier] [target/name]
-mask
-Description:
-Mask of a 1000 Faces is an obfuscate power with almost unlimited 
-potential.  It allows the person to appear to be someone else, anyone 
-else.  Typing mask by itself will return the person to their normal 
-appearance.
-It is important to know that all staff can see players for whom they 
-are, so don't try and use it to fool the staff.
-~</Unformatted>
+<Topic>Obfuscate: Mask of a Thousand Faces~</Topic>
+<Syntax> 
+  mask [target/name]
+  mask [appearance modifier] [target/name]
+  mask
+~</Syntax>
+<Desc>Mask of a Thousand Faces is an obfuscate power with almost unlimited
+potential.  It allows the person to appear to be someone else, anyone else. 
+Typing mask by itself will return the person to their normal appearance.  
+
+It is important to know that all staff can see players for whom they are, so
+don't try and use it to fool the staff.  
+~</Desc>
 </help_object>
 <help_object><level>-1</level>
 <keyword>mayor~</keyword>
@@ -4060,30 +4053,24 @@
 <keyword>mail post notes bugs ideas~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>{MTopic:  Writing a message to others
- 
-{MSyntax: See Below
- 
-{MDescription:
-{gProject Twilight uses a modified note editor, which is based off the
-basic Merc 2.2 note editor.  We have however modified it to be based off
-an OLC editor for greater control over the body of the message.
- 
-note - read next new note.
-note list - List all notes in thread.
-note read [number] - Read specific note in list.
-note to [list of names/builder/admin/elder/race/all] - Start new note/address
-                  note to specified people or group.
-note subject [string] - Give a subject to a note.
-note body - Open the string editor to write the body of the note.
-note show - display the message you're working on.
-note post - send the message.
-note remove [number] - remove a note you have posted from the list.
-note search [to/from/subject/body] [string] - search notes for a string.
-bug [message] - reports a bug to the administrator.
- 
-{MSee also: EDITOR
-~</Unformatted>
+<Topic>Writing a Message to Others~</Topic>
+<Syntax>note - Read the next new note.
+note list - See the list of notes available.
+note read [number] - Read the specific note in the list.
+note to [list of names/builder/admin/elder/race/all] - Start new note and
+     address it to a specified group of people or person.
+note subject [string] - The subject of the note.
+note body - Opens the editor to write the body of the note.
+note show - Displays the message you are currently working on.
+note post - Send off the note.
+note remove [number] - Remove the specified note you posted.
+~</Syntax>
+<Desc>Project Twilight uses a modified note editor, which is based off the
+basic Merc 2.  2 note editor.  We have however modified it to be based off
+an OLC editor for greater control over the body of the message.  
+~</Desc>
+<See>HELP EDITOR
+~</See>
 </help_object>
 <help_object><level>-1</level>
 <keyword>numina~</keyword>
@@ -4258,28 +4245,28 @@
 <keyword>plotsave~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Topic: Saving Plots, Events and Scripts
-Syntax: plotsave
-Description:
-Plotsave writes all the plot details out to plot.are. So long as all
-the events and scripts are in their respective places in the
-hierarchy, everything will be saved.
-See also: PLIST, ELIST, SLIST, PEDIT, EEDIT, SEDIT
-~</Unformatted>
+<Topic>Saving Plots, Events, and Scripts~</Topic>
+<Syntax>plotsave
+~</Syntax>
+<Desc>Plotsave writes all the plot details out to plot.  Are.  So long as all
+the events and scripts are in their respective places in the hierarchy,
+everything will be saved 
+~</Desc>
+<See>HELP PLIST; HELP ELIST; HELP SLIST; HELP PEDIT; HELP EEDIT; HELP SEDIT
+~</See>
 </help_object>
 <help_object><level>0</level>
 <keyword>'police chief'~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Topic:  The Police Chief
-Description:
-The Police Chief oversees all the police in the city and is answerable 
-only to the mayor (who can fire him at a whim).  However, the police 
-chief does have considerable powers, being in charge of the police 
-department.
-The Police chief should have a keen wit and excellent invesigative 
-abilities.
-~</Unformatted>
+<Topic>The Police Chief~</Topic>
+<Desc>The Police Chief oversees all the police in the city and is answerable
+only to the mayor (who can fire him at a whim).  However, the police chief
+does have considerable powers, being in charge of the police department.  
+
+The Police chief should have a keen wit and excellent invesigative
+abilities.  
+~</Desc>
 </help_object>
 <help_object><level>-1</level>
 <keyword>potence~</keyword>
@@ -4316,31 +4303,30 @@
 <keyword>premise~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Topic:  The Premise of Project Twilight
-Description:
-Project Twilight revolves around humanity and their interaction with the 
-supernatural.  The world is populated by stranger things than mortal 
-beings can fully understand.  Those who seek this elusive knowledge, and 
-those who embody that existence weave a tangled web of vast designs and 
-simple heroism affecting even the simplest of lives.
-Here, we'll seek to help you draw out the life of your character, and in 
-turn to let you draw from us and our humble creation a tale, an 
-experience of something other than the mundane. Choose you the path of 
-humanity, undead, faerie-kin or shapechanger, all will lead you on in 
-the story.
-Project Twilight is a mud based fairly closely on White Wolf Games' 
-"World of Darkness" games and associated products. The mud currently 
-sports vampires, werewolves, changelings and hunters all of which have 
-their own series of powers and abilities in addition to some more 
-generic skills.
-There are plans at some stage in the near future to add wraiths and 
-mages, however at this stage they are fairly far from being implemented.
-(All trademarks and copyrights for the World of Darkness and all related 
-games are and remain the property of White Wolf Games. Our mud is 
-running as a fan operation and is being "allowed" to use references so 
-long as we don't make any money off the deal.)
-See also:  HELP DISCLAIMER
-~</Unformatted>
+<Topic>The Premise of Project Twilight~</Topic>
+<Desc>Project Twilight revolves around humanity and their interaction with the
+supernatural.  The world is populated by stranger things than mortal beings
+can fully understand.  Those who seek this elusive knowledge, and those who
+embody that existence weave a tangled web of vast designs and simple heroism
+affecting even the simplest of lives.  
+
+Here, we'll seek to help you draw out the life of your character, and in
+turn to let you draw from us and our humble creation a tale, an experience
+of something other than the mundane.  Choose you the path of humanity,
+undead, faerie-kin or shapechanger, all will lead you on in the story.  
+
+Project Twilight is a mud based fairly closely on White Wolf Games' "World
+of Darkness" games and associated products.  The mud currently sports
+vampires, werewolves (kind of), and hunters all of which have their own
+series of powers and abilities in addition to some more generic skills.  
+
+(All trademarks and copyrights for the World of Darkness and all related
+games are and remain the property of White Wolf Games.  Our mud is running
+as a fan operation and is being "allowed" to use references so long as we
+don't make any money off the deal.)  
+~</Desc>
+<See>DISCLAIMER
+~</See>
 </help_object>
 <help_object><level>-1</level>
 <keyword>presence~</keyword>
@@ -4683,24 +4669,26 @@
 <keyword>abilities ability~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Topic:  Abilities
-Syntax:  [none needed]
-Description:
-Abilities are separated into three groups: Talents, Skills and
-Knowledges. The three groupings represent the kind of ability which
-falls into the relevant category. Abilities are not commands in
-themselves, but descriptive values for how good a person is at
-performing related actions.
-Talents contain those abilities which are extensions of personality
-traits. E.g. leadership, empathy, and brawl.
-Skills represent abilities which produce more tangible or physical
-results. E.g. drive, repair, and survival.
-Knowledges require greater studies and generally have less tangible
-bases. E.g. law, science and occult.
-Note: Not all abilities are available to all races. Check the
-abilities command for availability.
-See also:  TALENTS, SKILLS and KNOWLEDGES
-~</Unformatted>
+<Topic>Abilities (Overview)~</Topic>
+<Desc>Abilities are separated into three groups: Talents, Skills and
+Knowledges.  The three groupings represent the kind of ability which falls
+into the relevant category.  Abilities are not commands in themselves, but
+descriptive values for how good a person is at performing related actions. 
+
+
+Talents contain those abilities which are extensions of personality traits. 
+Example: leadership, empathy, and brawl.  
+
+Skills represent abilities which produce more tangible or physical results. 
+Example: drive, repair, and survival.  Knowledges require greater studies
+and generally have less tangible bases.  Example: law, science and occult. 
+
+
+Note: Not all abilities are available to all races.  Check the abilities
+command for availability.  
+~</Desc>
+<See>HELP TALENTS; HELP SKILLS; HELP KNOWLEDGES
+~</See>
 </help_object>
 <help_object><level>-1</level>
 <keyword>acting~</keyword>
@@ -4717,79 +4705,71 @@
 <keyword>athletics~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Topic:  Athletics
-Description:
-Being physically able and having skillful motion are both wrapped up
-under the athletics ability. Currently this is mostly used for combat
-situations, however there are plans for extending this beyond combat
-to other locomotive purposes.
-~</Unformatted>
+<Topic>Ability: Athletics~</Topic>
+<Desc>Being physically able and having skillful motion are both wrapped up
+under the athletics ability.  Currently this is mostly used for combat
+situations, however there are plans for extending this beyond combat to
+other locomotive purposes.  
+~</Desc>
 </help_object>
 <help_object><level>-1</level>
 <keyword>alertness~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Topic: Alertness
-Description:
-Alertness is the measure of how quickly a person can respond to stimuli
-and how honed that talent is. A person who has learnt to respond quickly
-can often act before anyone else has the opportunity to.
-~</Unformatted>
+<Topic>Ability: Alertness~</Topic>
+<Desc>Alertness is the measure of how quickly a person can respond to stimuli
+and how honed that talent is.  A person who has learnt to respond quickly
+can often act before anyone else has the opportunity to.  
+~</Desc>
 </help_object>
 <help_object><level>-1</level>
 <keyword>brawl~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Topic:  Brawl
-Description:
-"Ninja, the tea party's over!"
-Swinging fists, feet, and other assorted body parts to deal out
-injury, or rather how good a person is at doing so, is listed as the
-person's brawl ability.
-See also: COMBAT
-~</Unformatted>
+<Topic>Ability: Brawl~</Topic>
+<Desc>Swinging fists, feet, and other assorted body parts to deal out injury,
+or rather how good a person is at doing so, is listed as the person's brawl
+ability.  
+~</Desc>
+<See>HELP COMBAT
+~</See>
 </help_object>
 <help_object><level>-1</level>
 <keyword>dodge~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Topic:  Dodge
-Description:
-Diving, ducking, weaving and generally getting out of the way are
-all wrapped up in a person's dodge ability.
-~</Unformatted>
+<Topic>Ability: Dodge~</Topic>
+<Desc>Diving, ducking, weaving and generally getting out of the way are all
+wrapped up in a person's dodge ability.  
+~</Desc>
 </help_object>
 <help_object><level>-1</level>
 <keyword>animal ken animal_ken~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Topic: Animal Ken
-Description:
-Animal ken refers to skills with the handling, training and general
-"getting along with" members of the animal kingdom.
-~</Unformatted>
+<Topic>Ability: Animal Ken~</Topic>
+<Desc>Animal ken refers to skills with the handling, training and general
+"getting along with" members of the animal kingdom.  
+~</Desc>
 </help_object>
 <help_object><level>-1</level>
 <keyword>etiquette~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Topic: Etiquette
-Description:
-Proper manners can be very important when trying to be acceptible
-in society. Those with an understanding of the correct social
-protocols are more able to be polite and respectful in the proper
-and expected ways.
-~</Unformatted>
+<Topic>Ability: Etiquette~</Topic>
+<Desc>Proper manners can be very important when trying to be acceptible in
+society.  Those with an understanding of the correct social protocols are
+more able to be polite and respectful in the proper and expected ways.  
+~</Desc>
 </help_object>
 <help_object><level>-1</level>
 <keyword>drive~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Topic:  Drive
-Description:
-Get in a car and drive. Yes it is useless until the advent of
-vehicular transport.
-~</Unformatted>
+<Topic>Ability: Drive~</Topic>
+<Desc>Get in a car and drive.  Yes it is useless until the advent of vehicular
+transport.  
+~</Desc>
 </help_object>
 <help_object><level>-1</level>
 <keyword>firearms~</keyword>
@@ -4807,34 +4787,30 @@
 <keyword>melee~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Topic: Melee
-Description:
-Swinging a sword or bashing someone over the head with the
-proverbial blunt object are all skills developed within the melee
-skill.
-~</Unformatted>
+<Topic>Ability: Melee~</Topic>
+<Desc>Swinging a sword or bashing someone over the head with the proverbial
+blunt object are all skills developed within the melee skill.  
+~</Desc>
 </help_object>
 <help_object><level>-1</level>
 <keyword>performance~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Topic: Performance
-Description:
-The ability to perform before people, standing before crowds and
-entertaining or instructing requires a person with some skill.
-~</Unformatted>
+<Topic>Ability: Performance~</Topic>
+<Desc>The ability to perform before people, standing before crowds and
+entertaining or instructing requires a person with some skill.  
+~</Desc>
 </help_object>
 <help_object><level>-1</level>
 <keyword>repair~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Topic: Repair
-Description:
-Those skilled in repairing items can find numerous uses for their
-efforts. In particular, those skilled in repair are able to make
-and restore items to their original condition. This will become
-more important as objects will wear and decay over time.
-~</Unformatted>
+<Topic>Ability: Repair~</Topic>
+<Desc>Those skilled in repairing items can find numerous uses for their
+efforts.  In particular, those skilled in repair are able to make and
+restore items to their original condition.  This will become more important
+as objects will wear and decay over time.  
+~</Desc>
 </help_object>
 <help_object><level>-1</level>
 <keyword>security~</keyword>
@@ -4850,14 +4826,12 @@
 <keyword>stealth~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Topic: Stealth
-Description:
-Where subterfuge marks misdirection of thoughts and attitudes,
-stealth is the physical skill at moving quietly. Many times stealth
-can be called upon to decide whether a person is spotted while
-shadowing another, or whilst attempting to use some natural or
-supernatural ability to hide.
-~</Unformatted>
+<Topic>Ability: Stealth~</Topic>
+<Desc>Where subterfuge marks misdirection of thoughts and attitudes, stealth is
+the physical skill at moving quietly.  Many times stealth can be called upon
+to decide whether a person is spotted while shadowing another, or whilst
+attempting to use some natural or supernatural ability to hide.  
+~</Desc>
 </help_object>
 <help_object><level>-1</level>
 <keyword>survival~</keyword>
@@ -4871,40 +4845,35 @@
 ~</Desc>
 </help_object>
 <help_object><level>-1</level>
-<keyword>academia~</keyword>
+<keyword>'academics'~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Topic: Academia
-Description:
-Academia represents a general level of understanding of history, art,
-literature and so forth from an intellectual perspective.
-~</Unformatted>
+<Topic>Ability: Academics~</Topic>
+<Desc>Academics represents a general level of understanding of history, art,
+literature and so forth from an intellectual perspective.  
+~</Desc>
 </help_object>
 <help_object><level>-1</level>
 <keyword>computers~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Topic: Computer
-Description:
-The ability to use and manipulate computers is fast becoming an
-essential life skill in the modern world. Those with the knowledge
-of computing can at various levels use, program and master tools
-of the electronic age.
-~</Unformatted>
+<Topic>Ability: Computer~</Topic>
+<Desc>The ability to use and manipulate computers is fast becoming an essential
+life skill in the modern world.  Those with the knowledge of computing can
+at various levels use, program and master tools of the electronic age.  
+~</Desc>
 </help_object>
 <help_object><level>-1</level>
 <keyword>enigmas~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Topic: Enigmas
-Description:
-Living for great lengths of time has given the kindred a decidedly
-broad vision for the understanding of enigmas and mysteries. In
-many cases, the only way to discover how the pieces of the jihad
-fit together is to be able to think laterally and imagine the
-possibilities which might not be completely obvious to the casual
-observer.
-~</Unformatted>
+<Topic>Ability: Enigmas~</Topic>
+<Desc>Living for great lengths of time has given the kindred a decidedly broad
+vision for the understanding of enigmas and mysteries.  In many cases, the
+only way to discover how the pieces of the jihad fit together is to be able
+to think laterally and imagine the possibilities which might not be
+completely obvious to the casual observer.  
+~</Desc>
 </help_object>
 <help_object><level>-1</level>
 <keyword>finance~</keyword>
@@ -4913,109 +4882,100 @@
 <Topic>Ability: Finance~</Topic>
 <Desc>Where and when to invest or retract one's investments very definitely
 requires a great deal of understanding of what the markets and economic
-movements mean.  Being able to work out the correct move is of great
-import, and can make or break one's forunes.
-{RNote: The Finance ability affects your starting wealth.
+movements mean.  Being able to work out the correct move is of great import,
+and can make or break one's forunes.  
+ 
+Note: The Finance ability affects your starting wealth.
 ~</Desc>
 </help_object>
 <help_object><level>-1</level>
 <keyword>investigation~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Topic: Investigation
-Description:
-Sherlock Holmes is held up as the epitome of the investigator's
-profession. His abilities in observation and reasoning to discover
-the solution to a mystery are world famous, but those with the
-knowledge of investigatory process are ready, willing and at
-high levels able to follow in the great sleuth's footsteps.
-See also: INVESTIGATE
-~</Unformatted>
+<Topic>Ability: Investigation~</Topic>
+<Desc>Sherlock Holmes is held up as the epitome of the investigator's
+profession.  His abilities in observation and reasoning to discover the
+solution to a mystery are world famous, but those with the knowledge of
+investigatory process are ready, willing and at high levels able to follow
+in the great sleuth's footsteps.  
+~</Desc>
+<See>HELP INVESTIGATE
+~</See>
 </help_object>
 <help_object><level>-1</level>
 <keyword>law~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Topic: Law
-Description:
-Many professionals require an understanding of the law in order to
-perform their duties. The police must understand when an offender
-has broken the law and also when their actions might cause them to
-be labeled criminals themselves. Others such as lawyers and judges
-must understand the law to ply their trade also.
-~</Unformatted>
+<Topic>Ability: Law~</Topic>
+<Desc>Many professionals require an understanding of the law in order to
+perform their duties.  The police must understand when an offender has
+broken the law and also when their actions might cause them to be labeled
+criminals themselves.  Others such as lawyers and judges must understand the
+law to ply their trade also.  
+~</Desc>
 </help_object>
 <help_object><level>-1</level>
 <keyword>linguistics~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Topic: Linguistics
-Description:
-Linguistics is the study of language, and those with knowledge of
-languages may converse more readily with those of different
-cultures but they may also be more able to unravel ciphers.
-Note: Currently there are no languages beyond English in Project
-Twilight. There are some plans to create pseudo-languages for
-game purposes in the future.
-~</Unformatted>
+<Topic>Ability: Linguistics~</Topic>
+<Desc>Linguistics is the study of language, and those with knowledge of
+languages may converse more readily with those of different cultures but
+they may also be more able to unravel ciphers.  Note: Currently there are no
+languages beyond English in Project Twilight.  There are some plans to
+create pseudo-languages for game purposes in the future.  
+~</Desc>
 </help_object>
 <help_object><level>-1</level>
 <keyword>empathy~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Topic:  Empathy
-Description:
-With empathy, a character can recognise, understand and fake
-emotions. A high empathy rating does bring the risk of getting
-caught up in someone else's emotions however.
-~</Unformatted>
+<Topic>Ability: Empathy~</Topic>
+<Desc>With empathy, a character can recognise, understand and fake emotions.  A
+high empathy rating does bring the risk of getting caught up in someone
+else's emotions however.  
+~</Desc>
 </help_object>
 <help_object><level>-1</level>
 <keyword>expression~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Topic:  Expression
-Description:
-To express yourself in words, either in speech or the written word
-requires expression. How understandable or strongly the message is
-to the recipient is a measure of how well the character has
-expressed themselves.
-~</Unformatted>
+<Topic>Ability: Expression~</Topic>
+<Desc>To express yourself in words, either in speech or the written word
+requires expression.  How understandable or strongly the message is to the
+recipient is a measure of how well the character has expressed themselves.  
+~</Desc>
 </help_object>
 <help_object><level>-1</level>
 <keyword>intimidation intimidate~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Topic:  Intimidation
-Description:
-There's more than one way to get people to do what you want. Coaxing
-can work, however sometimes you've got to do things the hard way.
-~</Unformatted>
+<Topic>Ability: Intimidation~</Topic>
+<Desc>There's more than one way to get people to do what you want.  Coaxing can
+work, however sometimes you've got to do things the hard way.  
+~</Desc>
 </help_object>
 <help_object><level>-1</level>
 <keyword>leadership~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Topic: Leadership
-Description:
-Leadership is that talent of encouraging people to follow commands
-or go along with a character's way of thinking because that person
-has a commanding presence.
-~</Unformatted>
+<Topic>Ability: Leadership~</Topic>
+<Desc>Leadership is that talent of encouraging people to follow commands or go
+along with a character's way of thinking because that person has a
+commanding presence.  
+~</Desc>
 </help_object>
 <help_object><level>-1</level>
 <keyword>primal urge~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Topic: Primal Urge
-Description:
-Being in tune with your primal urges can be the difference between
-understanding what your instincts are telling you and getting hit
-by a train. A Garou who understands their instincts are better
-prepared to over-rule their instincts as well as sense if that
-thing coming at them is the spiritual or physical equivalent of a
-locomotive bearing down upon them.
-~</Unformatted>
+<Topic>Ability: Primal Urge~</Topic>
+<Desc>Being in tune with your primal urges can be the difference between
+understanding what your instincts are telling you and getting hit by a
+train.  A Garou who understands their instincts are better prepared to
+over-rule their instincts as well as sense if that thing coming at them is
+the spiritual or physical equivalent of a locomotive bearing down upon them.
+~</Desc>
 </help_object>
 <help_object><level>-1</level>
 <keyword>rituals rites~</keyword>
@@ -5043,68 +5003,64 @@
 <keyword>knowledges~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Topic:  Knowledges
-Description:
-Knowledges require greater studies and generally have less tangible
-bases.
-The Knowledges are:
-ACADEMIA, COMPUTER, ENIGMAS, FINANCE, INVESTIGATION, LAW, LINGUISTICS,
-MEDICINE, MYTHLORE, OCCULT, POLITICS, RITUALS, SCIENCE
-Note: Not all knowledges are available to all races. Check the
-abilities command for availability.
-See also:  ACADEMIA, COMPUTER, ENIGMAS, FINANCE, INVESTIGATION, LAW,
-LINGUISTICS, MEDICINE, MYTHLORE, OCCULT, POLITICS, RITUALS, SCIENCE
-~</Unformatted>
+<Topic>Knowledges~</Topic>
+<Desc>Knowledges require greater studies and generally have less tangible
+bases.  
+
+See the specific skill for more details.  Please note that not all
+knowledges are available to all races.  
+~</Desc>
+<See>HELP ACADEMICS; HELP COMPUTER; HELP ENIGMAS; HELP FINANCE; HELP
+INVESTIGATION; HELP LAW; HELP LINGUISTICS; HELP MEDICINE; HELP MYTHLORE;
+HELP OCCULT; HELP POLITICS; HELP RITUALS; HELP SCIENCE 
+~</See>
 </help_object>
 <help_object><level>-1</level>
 <keyword>medicine~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Topic:  Medicine
-Description:
-Knowing how the body works and how to patch it up when it breaks
-comes in real handy sometimes. Those with medicine scores can make
-a real difference in people's lives by assisting, or inhibiting, a
-persons health and wellbeing.
-~</Unformatted>
+<Topic>Ability: Medicine~</Topic>
+<Desc>Knowing how the body works and how to patch it up when it breaks comes in
+real handy sometimes.  Those with medicine scores can make a real difference
+in people's lives by assisting, or inhibiting, a persons health and
+wellbeing.  
+~</Desc>
 </help_object>
 <help_object><level>-1</level>
 <keyword>occult~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Topic: Occult
-Description:
-In Project Twilight, the supernatural are uncomfortably real. Those
-who have studied the occult have more chance at being able to use
-human occult lore to assist them. It should be recognised that in
-many cases the mortal lore is not correct.
-~</Unformatted>
+<Topic>Ability: Occult~</Topic>
+<Desc>In Project Twilight, the supernatural are uncomfortably real.  Those who
+have studied the occult have more chance at being able to use human occult
+lore to assist them.  It should be recognised that in many cases the mortal
+lore is not correct.  
+~</Desc>
 </help_object>
 <help_object><level>-1</level>
 <keyword>politics~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Topic: Politics
-Description:
-The myriad paths to power are at the disposal of those who know how
-political systems operate. At the highest levels, machiavellian
-moves are childs play to those with enough understanding.
-~</Unformatted>
+<Topic>Ability: Politics~</Topic>
+<Desc>The myriad paths to power are at the disposal of those who know how
+political systems operate.  At the highest levels, machiavellian moves are
+childs play to those with enough understanding.  
+~</Desc>
 </help_object>
 <help_object><level>-1</level>
 <keyword>science~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Topic:  Science
-Description:
-Science is a measure of the characters general understanding of
-scientific principles and facts. This understanding crosses
-specialties, covering chemistry, biology, physics, etc. Currently
-there are no commands which draw upon this attribute, but it may
-be called on in roleplaying events.
-Some future jobs will require or make use of the science ability
-when determining successes.
-~</Unformatted>
+<Topic>Ability: Science~</Topic>
+<Desc>Science is a measure of the characters general understanding of
+scientific principles and facts.  This understanding crosses specialties,
+covering chemistry, biology, physics, etc.  Currently there are no commands
+which draw upon this attribute, but it may be called on in roleplaying
+events.  
+
+Some future jobs will require or make use of the science ability when
+determining successes.  
+~</Desc>
 </help_object>
 <help_object><level>-1</level>
 <keyword>skills~</keyword>
@@ -5146,33 +5102,28 @@
 <keyword>social charisma manipulation appearance~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>{MTopic: Social Attributes
- 
-{MDescription:
-The three social attributes signify how a character is seen and
-influences others at a natural basic level.
- 
-{gCharisma: The natural attractiveness of a character's personality is
-recognised by their charisma attribute. The basic charm, vitality and
-presence of the character are all aspects of this attribute.
- 
- 
-{gManipulation: It's all about getting what you want. The manipulation
-attribute revolves around convincing people to do what the character
-wants. This does not describe how the character achieves his or her
-convincing, just how good the character is at doing it.
- 
- 
-{gAppearance: This is what it sounds like. The measure of a character's
-physical beauty can be found in the appearance attribute.
- 
- 
-{WNote: The members of clan Nosferatu are cursed with a hideous appearance
-and thus cannot gain any appearance either by expenditure of experience
-or in character generation.
- 
-{MSee also:  HELP ATTRIBUTES
-~</Unformatted>
+<Topic>Attributes: Social~</Topic>
+<Desc>The three social attributes signify how a character is seen and
+influences others at a natural basic level.  
+
+Charisma: The natural attractiveness of a character's personality is
+recognised by their charisma attribute.  The basic charm, vitality and
+presence of the character are all aspects of this attribute.  
+
+Manipulation: It's all about getting what you want.  The manipulation
+attribute revolves around convincing people to do what the character wants. 
+This does not describe how the character achieves his or her convincing,
+just how good the character is at doing it.  
+
+Appearance: This is what it sounds like.  The measure of a character's
+physical beauty can be found in the appearance attribute.  
+
+Note: The members of clan Nosferatu are cursed with a hideous appearance and
+thus cannot gain any appearance either by expenditure of experience or in
+character generation.  
+~</Desc>
+<See>HELP ATTRIBUTES
+~</See>
 </help_object>
 <help_object><level>0</level>
 <keyword>'society of leopold' leopold society~</keyword>
@@ -5471,18 +5422,19 @@
 <keyword>welcome~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Topic:  Welcome to Project Twilight!
-Description:
-We are an up and coming creation, fast approaching a full gala opening! 
-Our codebase is stable and constantly growing, the areas are few, but 
-also increasing in size and number. Most of the basic game mechanics are 
-working, although much more is on the way in terms of skills, powers and 
-the creation of a set of somewhat intelligent and interactive mobs.
-We've assembled some great people who are working in front of and behind 
-the scenes to make this a great place to be.
-Welcome to our corner of the World of Darkness, we hope your stay will 
-be fun, interesting and unlike anything you've seen in a mud before.
-~</Unformatted>
+<Topic>Welcome to Project Twilight!~</Topic>
+<Desc>We are an up and coming creation, fast approaching a full gala opening! 
+Our codebase is stable and constantly growing, the areas are few, but also
+increasing in size and number.  Most of the basic game mechanics are
+working, although much more is on the way in terms of skills, powers and the
+creation of a set of somewhat intelligent and interactive mobs.  
+
+We've assembled some great people who are working in front of and behind the
+scenes to make this a great place to be.  
+
+Welcome to our corner of the World of Darkness, we hope your stay will be
+fun, interesting and unlike anything you've seen in a mud before.  
+~</Desc>
 </help_object>
 <help_object><level>-1</level>
 <keyword>werewolf werewolves garou~</keyword>
@@ -5504,15 +5456,15 @@
 <keyword>white-wolf games 'white wolf'~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Topic:  White-Wolf Games
-Description:
-Project Twilight is based fairly closely upon White-Wolf Games Studio's 
-World of Darkness series of games. All rights and trademarks contained 
-herein remain the property of White-Wolf Studios.
-We would like to encourage anyone interested in further details on 
-White-Wolf's engrossing role-playing games to visit their website: 
-www.white-wolf.com
-~</Unformatted>
+<Topic>White-Wolf Games~</Topic>
+<Desc>Project Twilight is based fairly closely upon White-Wolf Games Studio's
+World of Darkness series of games.  All rights and trademarks contained
+herein remain the property of White-Wolf Studios.  
+
+We would like to encourage anyone interested in further details on
+White-Wolf's engrossing role-playing games to visit their website.  
+~</Desc>
+<Web>www.white-wolf.com~</Web>
 </help_object>
 <help_object><level>-1</level>
 <keyword>willpower 'will power'~</keyword>
@@ -5554,26 +5506,28 @@
 <keyword>salesman saleswoman~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Topic: Salesman/Saleswoman
-Requisite: Empathy
-Description:
-The life of a salesman requires diligence, charisma and empathy to know
-what a person can afford and what they really want.
-See also: SALESMAN_COMMANDS
-~</Unformatted>
+<Topic>Career: Salesman~</Topic>
+<Desc>The life of a salesman requires diligence, charisma and empathy to know
+what a person can afford and what they really want.  
+ 
+Requisite Skill: Empathy
+~</Desc>
+<See>HELP SALESMAN_COMMANDS
+~</See>
 </help_object>
 <help_object><level>-1</level>
 <keyword>chef~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Topic: Chef
-Requisite: 
-Description:
-Cooking up a storm can be one of the most rewarding of professions.
-Similarly to the maker profession, chef is a generic title for anyone
-who makes foodstuffs.
-See also: CHEF_COMMANDS
-~</Unformatted>
+<Topic>Career: Chef~</Topic>
+<Desc>Cooking up a storm can be one of the most rewarding of professions. 
+Similarly to the maker profession, chef is a generic title for anyone who
+makes foodstuffs 
+ 
+Requisite Skill: 
+~</Desc>
+<See>HELP CHEF_COMMANDS
+~</See>
 </help_object>
 <help_object><level>-1</level>
 <keyword>maker crafter~</keyword>
@@ -5593,26 +5547,28 @@
 <keyword>janitors~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Topic: Janitor
-Requisite: Streetwise
-Description:
-A janitor's work is never done. Day in day out the streets get dirty, and
-day in day out, someone's gotta go clean up the mess.
-See also: JANITOR_COMMANDS
-~</Unformatted>
+<Topic>Career: Janitor~</Topic>
+<Desc>A janitor's work is never done.  Day in day out the streets get dirty,
+and day in day out, someone's gotta go clean up the mess 
+ 
+Requisite Skill: Streetwise
+~</Desc>
+<See>HELP JANITOR_COMMANDS
+~</See>
 </help_object>
 <help_object><level>-1</level>
 <keyword>thug criminal~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Topic: Criminal
-Requisite: Security
-Description:
-Career criminals are a breed apart, and those who follow such paths
-generally prove the addage that crime doesn't pay. But you know... it
-pays pretty good for a while.
-See also: CRIMINAL_COMMANDS
-~</Unformatted>
+<Topic>Job: Criminal/Thug~</Topic>
+<Desc>Career criminals are a breed apart, and those who follow such paths
+generally prove the addage that crime doesn't pay.  But you know...  It pays
+pretty good for a while.  
+ 
+Requisite Skill: Security
+~</Desc>
+<See>CRIMINAL_COMMANDS
+~</See>
 </help_object>
 <help_object><level>-1</level>
 <keyword>cop officer police constable~</keyword>
@@ -5671,12 +5627,11 @@
 <keyword>subterfuge~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Topic: Subterfuge
-Description:
-The art of misdirection, subterfuge has many applications in the World
-of Darkness. Whether a person is lying or attempting to play someone
-as an unwitting pawn, subterfuge comes into play.
-~</Unformatted>
+<Topic>Subterfuge~</Topic>
+<Desc>The art of misdirection, subterfuge has many applications in the World of
+Darkness.  Whether a person is lying or attempting to play someone as an
+unwitting pawn, subterfuge comes into play.  
+~</Desc>
 </help_object>
 <help_object><level>-1</level>
 <keyword>sunlight~</keyword>
@@ -5738,14 +5693,13 @@
 <keyword>changes updates news~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Topic: Changes, Updates and News
-Description:
-Due to the still fairly rapid development within Project Twilight,
-we are currently not keeping track of updates and changes in help
-files. For up to the minute changes, we suggest keeping an eye on
-the notes as this is where most of this kind of information and
-information on what's happening will appear.
-~</Unformatted>
+<Topic>Changes, Updates, and News~</Topic>
+<Desc>Due to the still fairly rapid development within Project Twilight, we are
+currently not keeping track of updates and changes in help files.  For up to
+the minute changes, we suggest keeping an eye on the notes as this is where
+most of this kind of information and information on what's happening will
+appear.  
+~</Desc>
 </help_object>
 <help_object><level>-1</level>
 <keyword>command commands~</keyword>
@@ -5765,16 +5719,13 @@
 <keyword>money cash currency pay dollars cents~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Topic: Money
-Description:
-Being that I grew up in Australia and am now living in the USA (where
-the mud is based), Project Twilight operates on the dollars and cents
-concept of currency.
-Obtaining money can be achieved in several ways as it can in the real
-world. You can get a job, steal, beg, borrow and sell things for
-profit. If the worst comes to the worst, someone will probably be
-able to give you a loan if you really need it.
-~</Unformatted>
+<Topic>Money~</Topic>
+<Desc>Project Twilight operates on the dollars and cents concept of currency. 
+Obtaining money can be achieved in several ways as it can in the real world.
+You can get a job, steal, beg, borrow and sell things for profit.  If the
+worst comes to the worst, someone will probably be able to give you a loan
+if you really need it.  
+~</Desc>
 </help_object>
 <help_object><level>-1</level>
 <keyword>archtype archtypes archetypes personality personalities~</keyword>
@@ -5799,8 +5750,9 @@
 <race>(null)~</race>
 <clan>(null)~</clan>
 <Topic>Natures, Demeanors, and Archtypes~</Topic>
-<Syntax>nature [archtype]
-demeanor [archtype]
+<Syntax> 
+  nature [archtype]
+  demeanor [archtype]
 ~</Syntax>
 <Desc>Natures and demeanors are aspects of a character's personality. The
 character's nature is their inner personality, which may or may not be
@@ -5810,7 +5762,7 @@
 relatively static, requiring some effort at roleplaying to alter.
  
 ~</Desc>
-<See>ARCHTYPE
+<See>HELP ARCHETYPE; HELP CHARACTERIZATION
 ~</See>
 </help_object>
 <help_object><level>-1</level>
@@ -5836,30 +5788,30 @@
 <keyword>concept personality personalities~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Topic: Character Concept
-Syntax: concept [descriptive statement]
-Description:
-A character's concept can be virtually anything, but in essence is a
-statement of what the character sets out to be. Where an archetype is
-a hook to help define a character, the character's concept fleshes it
-out somewhat by giving a framework of what the character is about.
+<Topic>Character Concept~</Topic>
+<Syntax>concept [descriptive statement]
+~</Syntax>
+<Desc>A character's concept can be virtually anything, but in essence is a
+statement of what the character sets out to be.  Where an archetype is a
+hook to help define a character, the character's concept fleshes it out
+somewhat by giving a framework of what the character is about.  
+ 
 Eg. "Road warrior", "Urban missionary", etc.
-See also: ARCHETYPES, NATURE, DEMEANOR
-~</Unformatted>
+~</Desc>
+<See>HELP ARCHETYPES; HELP NATURE; HELP DEMEANOR
+~</See>
 </help_object>
 <help_object><level>-1</level>
 <keyword>socials~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Topic: Socials
- 
-Syntax: socials
- 
-Description:
-Socials are predefined actions which can be listed by using the
-socials command. Please be aware that socials are not necessarily
-appropriate for roleplaying uses.
-~</Unformatted>
+<Topic>Socials~</Topic>
+<Syntax>socials
+~</Syntax>
+<Desc>Socials are predefined actions which can be listed by using the socials
+command.  Please be aware that socials are not necessarily appropriate for
+roleplaying uses.  
+~</Desc>
 </help_object>
 <help_object><level>-1</level>
 <keyword>whois finger~</keyword>
@@ -5930,26 +5882,24 @@
 <keyword>materials~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Topic: Materials - Building Blocks?
-Description:
-Materials in Project Twilight are in the process of being properly
-completed. Materials are used for setting the properties of objects
-automatically without instilling too much confusion for those who
-need to create them. A list of materials is available within oedit
-by typing "? materials".
-~</Unformatted>
+<Topic>Materials - Building Blocks?~</Topic>
+<Desc>Materials in Project Twilight are in the process of being properly
+completed.  Materials are used for setting the properties of objects
+automatically without instilling too much confusion for those who need to
+create them.  A list of materials is available within oedit by typing "? 
+Materials".  
+~</Desc>
 </help_object>
 <help_object><level>-1</level>
 <keyword>breeds forms~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Topic: Breeds
-Description:
-A werewolf's breed is the form into which she was born, the shape
-she is most comfortable in and the body which feels most comfortable.
-The three forms are: HOMID, LUPUS and METIS
-See also: AUSPICE
-~</Unformatted>
+<Topic>Werewolf: Breeds~</Topic>
+<Desc>A werewolf's breed is the form into which she was born, the shape she is
+most comfortable in and the body which feels most comfortable.  
+~</Desc>
+<See>HOMID; LUPUS; METIS; AUSPICE
+~</See>
 </help_object>
 <help_object><level>-1</level>
 <keyword>homid~</keyword>
@@ -6036,20 +5986,20 @@
 <keyword>characterisation characterization~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Topic: Characterisation
-Description:
-Characterisation is a multi-faceted experience which should begin at
-character creation. A character is more than a set of vital
-statistics, more than a character sheet. A character is a living,
-breathing person from a fictional world. A character has a
-personality, motivations and flaws.
+<Topic>Characterization~</Topic>
+<Desc>Characterisation is a multi-faceted experience which should begin at
+character creation.  A character is more than a set of vital statistics,
+more than a character sheet.  A character is a living, breathing person from
+a fictional world.  A character has a personality, motivations and flaws.  
+
 In order to properly roleplay a character, one must define what that
-character is aiming to be. This is why Project Twilight gives you the
-space to select a NATURE, DEMEANOR and CONCEPT for your character. It
-is also the reason we {Yrequire you to have a description before
-you can receive experience from roleplaying.
-See also: DESCRIPTION, NATURE, DEMEANOR, CONCEPT, ARCHETYPES
-~</Unformatted>
+character is aiming to be.  This is why Project Twilight gives you the space
+to select a NATURE, DEMEANOR and CONCEPT for your character.  It is also the
+reason we require you to have a description before you can receive
+experience from roleplaying.  
+~</Desc>
+<See>HELP DESCRIPTION; HELP NATURE; HELP DEMEANOR; HELP CONCEPT; HELP ARCHETYPES 
+~</See>
 </help_object>
 <help_object><level>-1</level>
 <keyword>who wholist whorp~</keyword>
@@ -6255,34 +6205,37 @@
 <keyword>roll~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Are you looking for DROLL (die rolling) or CROLL (the combat manouver)?
-~</Unformatted>
+<Topic>What kind of Roll?~</Topic>
+<Desc>Are you looking for DROLL (die rolling) or CROLL (the combat manouver)?  
+~</Desc>
+<See>DROLL; CROLL
+~</See>
 </help_object>
 <help_object><level>-1</level>
 <keyword>drag~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Topic: Dragging Stuff Around
-Syntax: drag [object] [direction]
-Description:
-If you can't pick something up, you might be able to drag it around
-instead. This helps if you need to move something which is too heavy to
+<Topic>Dragging Stuff Around~</Topic>
+<Syntax>drag [object] [direction]
+~</Syntax>
+<Desc>If you can't pick something up, you might be able to drag it around
+instead.  This helps if you need to move something which is too heavy to
 lift or something which is draggable like furniture which has not been
-bolted down.
-~</Unformatted>
+bolted down.  
+~</Desc>
 </help_object>
 <help_object><level>-1</level>
 <keyword>wimpy recall levels leveling levelling classes chat gossip sacrifice practice gain lore identify autoloot stance~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Topic: Things Which Do Not Exist in Project Twilight
-Description:
-You have requested help on something which has no place in Project
-Twilight. These things include but are not limited to:
+<Topic>Things Which Do Not Exist in Project Twilight~</Topic>
+<Desc>You have requested help on something which has no place in Project
+Twilight.  These things include but are not limited to: 
+ 
 Classes       Levels       Identify   Chat       Gossip
 Recall        Sacrifice    Gain       Practice   Wimpy
 Lore          Autoloot
-~</Unformatted>
+~</Desc>
 </help_object>
 <help_object><level>1</level>
 <keyword>peace~</keyword>
@@ -6299,49 +6252,51 @@
 <keyword>areas~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Topic: Areas
-Syntax: area
-Description:
-A list of areas either in place within or being worked on for Project
-Twilight can be obtained via the area command.
-If you are interested in building, please contact Dsarky or Rafkin for
-further details on how you can help.
-~</Unformatted>
+<Topic>Areas~</Topic>
+<Syntax>area
+~</Syntax>
+<Desc>A list of areas either in place within or being worked on for Project
+Twilight can be obtained via the area command.  
+
+If you are interested in building, please contact Rayal for further details
+on how you can help.  
+~</Desc>
 </help_object>
 <help_object><level>-1</level>
-<keyword>storytellers storytelling~</keyword>
+<keyword>'storytelling'~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Topic: Storytelling
-Description:
-Project Twilight is a storytelling game in the style of White Wolf's
-games. The idea of a storytelling game is to weave an engrossing tale
-for the entertainment of all involved.
+<Topic>Storytelling~</Topic>
+<Desc>Project Twilight is a storytelling game in the style of White Wolf's
+games.  The idea of a storytelling game is to weave an engrossing tale for
+the entertainment of all involved.  
+
 In a story, the storyteller sets the scene and operates the non-player
-characters with whom the players' character can interact. A story has
-aspects similar to a dramatic production, however the script is
-improvised by the actors following the guidelines of each character's
-personality. Thus characters can develop and move the plot along in a
-fluid and natural way, rather than being bound by too much overhead.
-In scenes, the storyteller's ruling on an action is final, and his or
-her decisions must be accepted and respected. If you are uncomfortable
-with the given situation or distressed by the action in the scene,
-please notify the storyteller immediately so that the scene can be
-stopped and the difficulty circumvented. We do not want to cause any
-person to be made uncomfortable by the progression of a story.
-~</Unformatted>
+characters with whom the players' character can interact.  A story has
+aspects similar to a dramatic production, however the script is improvised
+by the actors following the guidelines of each character's personality. 
+Thus characters can develop and move the plot along in a fluid and natural
+way, rather than being bound by too much overhead.  In scenes, the
+storyteller's ruling on an action is final, and his or her decisions must be
+accepted and respected.  If you are uncomfortable with the given situation
+or distressed by the action in the scene, please notify the storyteller
+immediately so that the scene can be stopped and the difficulty
+circumvented.  We do not want to cause any person to be made uncomfortable
+by the progression of a story.  
+~</Desc>
 </help_object>
 <help_object><level>1</level>
 <keyword>storyteller~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Topic: Storyteller
-Syntax: storyteller
-Description:
-Staff may use the storyteller command to go into "storyteller mode".
-This is used when acting as the storyteller for a group of players.
-See also: STORY_UTILITIES
-~</Unformatted>
+<Topic>Storyteller Mode~</Topic>
+<Syntax>storyteller
+~</Syntax>
+<Desc>Staff may use the storyteller command to go into "storyteller mode". 
+This is used when acting as the storyteller for a group of players.  
+~</Desc>
+<See>STORY_UTILITIES
+~</See>
 </help_object>
 <help_object><level>1</level>
 <keyword>story_utilities~</keyword>
@@ -6570,17 +6525,18 @@
 <keyword>follow nofollow shadow grouping~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Topic: Following and Leading
-Syntax: nofollow - disallow casual followers.
-follow [target] - follow a person if they allow it.
-group [optional target] - add to your group/check group members.
-shadow [target] - follow a target trying not to be spotted.
-Description:
-Following people around can be an easy way to get from place to place
-or go exploring as a team. Keep in mind that you might be being followed
-by people who are shadowing you, watching to see where you go and trying
-to do it without you knowing.
-~</Unformatted>
+<Topic>Following and Leading~</Topic>
+<Syntax> 
+  nofollow - disallow casual followers.
+  follow [target] - follow a person if they allow it.
+  group [optional target] - add to your group/check group members.
+  shadow [target] - follow a target trying not to be spotted.
+~</Syntax>
+<Desc>Following people around can be an easy way to get from place to place or
+go exploring as a team.  Keep in mind that you might be being followed by
+people who are shadowing you, watching to see where you go and trying to do
+it without you knowing.  
+~</Desc>
 </help_object>
 <help_object><level>-1</level>
 <keyword>gnosis~</keyword>
@@ -6597,15 +6553,14 @@
 <keyword>weapons~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Topic: Weapons and Things to Bash People With
-Description:
-There are many things which may be used to make a violent impression on
-an opponent. Soon we are hoping that all objects will be able to be used
-as weapons if they can be picked up. For now however, you're going to
-have to find something of a "weapon" class of object. Be aware that your
-weapon of choice may be edible, for example a breadstick, so if something
-looks like it might be able to be used as a weapon, try it out.
-~</Unformatted>
+<Topic>Weapons~</Topic>
+<Desc>There are many things which may be used to make a violent impression on
+an opponent.  Soon we are hoping that all objects will be able to be used as
+weapons if they can be picked up.  For now however, you're going to have to
+find something of a "weapon" class of object.  Be aware that your weapon of
+choice may be edible, for example a breadstick, so if something looks like
+it might be able to be used as a weapon, try it out.  
+~</Desc>
 </help_object>
 <help_object><level>-1</level>
 <keyword>exits movement north south east west up down~</keyword>
@@ -6625,17 +6580,20 @@
 <keyword>at for~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Topic: Performing Actions from a Distance
-Syntax: at [target/room vnum] [action/command]
-for [all/admin/player/npcs/everywhere] [action/command]
-Description:
-Sometimes it is useful to perform actions from a distance while remaining
-in one's original location. The at and for commands allow a staff member
-to do just that.
+<Topic>Performing Actions from a Distance~</Topic>
+<Syntax> 
+  at [target/room vnum] [action/command]
+  for [all/admin/player/npcs/everywhere] [action/command]
+~</Syntax>
+<Desc>Sometimes it is useful to perform actions from a distance while remaining
+in one's original location.  The at and for commands allow a staff member to
+do just that. 
+
 Note: The for command's action can contain the variable # which will be
-replaced with the name of the target involved at that moment.
-See also: GOTO
-~</Unformatted>
+replaced with the name of the target involved at that moment.  
+~</Desc>
+<See>HELP GOTO
+~</See>
 </help_object>
 <help_object><level>2</level>
 <keyword>goto poofin poofout~</keyword>
@@ -6658,14 +6616,15 @@
 <keyword>looking examining examine~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Topic: Looking at Stuff
-Syntax: look (in/at) (optional target)
-examine (target)
-Description:
-Look is what it sounds like. You can look at objects, people and the
-room around you. However examining something is specifically for
-looking at what an object contains.
-~</Unformatted>
+<Topic>Look and Examine~</Topic>
+<Syntax> 
+  look [in/at] [optional target]
+  examine [target]
+~</Syntax>
+<Desc>Look is what it sounds like.  You can look at objects, people and the
+room around you.  However examining something is specifically for looking at
+what an object contains.  
+~</Desc>
 </help_object>
 <help_object><level>-1</level>
 <keyword>resting sleeping sitting standing~</keyword>
@@ -6769,9 +6728,10 @@
 <keyword>score ~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Addendum for staff: Giving score an online player's name as an argument
-will show you their stats.
-~</Unformatted>
+<Topic>Command: Score (Immortal Note)~</Topic>
+<Desc>Addendum for staff: Giving score an online player's name as an argument
+will show you their stats.  
+~</Desc>
 </help_object>
 <help_object><level>-1</level>
 <keyword>time weather~</keyword>
@@ -6835,12 +6795,12 @@
 <keyword>hunting~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Topic: Hunting
-Syntax: hunt [target]
-Description:
-Sometimes you've got to hunt someone down, when that time comes,
-the hunt command is ready for you.
-~</Unformatted>
+<Topic>Hunting~</Topic>
+<Syntax>hunt [target]
+~</Syntax>
+<Desc>Sometimes you've got to hunt someone down, when that time comes, the hunt
+command is ready for you.  
+~</Desc>
 </help_object>
 <help_object><level>-1</level>
 <keyword>quit~</keyword>
@@ -6999,7 +6959,7 @@
 ~</Desc>
 </help_object>
 <help_object><level>-1</level>
-<keyword>attune~</keyword>
+<keyword>'attune'~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
 <Topic>Gift: Attune~</Topic>
@@ -7138,12 +7098,14 @@
 <keyword>'song of serenity' song serenity~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Topic: Song of Serenity
-Syntax: song [target]
-Description:
-Song of serenity can render a target docile and unable to attack or
-react to their surroundings by draining them of the will to act.
-~</Unformatted>
+<Topic>Animalism: Song of Serenity~</Topic>
+<Syntax>song [target]
+~</Syntax>
+<Desc>Song of serenity can render a target docile and unable to attack or react
+to their surroundings by draining them of the will to act.  
+~</Desc>
+<See>ANIMALISM; DISCIPLINES
+~</See>
 </help_object>
 <help_object><level>-1</level>
 <keyword>beastform 'shadow of the beast' 'wolf form'~</keyword>
@@ -7202,12 +7164,12 @@
 <keyword>wrath gaia 'wrath of gaia'~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Topic: Wrath of Gaia
-Syntax: wrath
-Description:
-Unleashing the wrath of Gaia forces all creatures of the Wyrm to flee the
-area.
-~</Unformatted>
+<Topic>Gift: Wrath of Gaia~</Topic>
+<Syntax>wrath
+~</Syntax>
+<Desc>Unleashing the wrath of Gaia forces all creatures of the Wyrm to flee the
+area.  
+~</Desc>
 </help_object>
 <help_object><level>-1</level>
 <keyword>blur~</keyword>
@@ -7377,12 +7339,13 @@
 <keyword>grovel~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Topic: Grovel
-Syntax: grovel
-Description:
-Successful use of this gift causes pity in an opponent, stopping any
-conflict in progress with what is a fairly pathetic display of grovelling.
-~</Unformatted>
+<Topic>Gift: Grovel~</Topic>
+<Syntax> 
+  grovel
+~</Syntax>
+<Desc>Successful use of this gift causes pity in an opponent, stopping any
+conflict in progress with what is a fairly pathetic display of grovelling.  
+~</Desc>
 </help_object>
 <help_object><level>-1</level>
 <keyword>mindspeak mind speech~</keyword>
@@ -7410,12 +7373,12 @@
 <keyword>persuasion~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Topic: Persuasion
-Syntax: persuasion [charisma/manipulation/appearance]
-Description:
-A garou can improve their chances to persuade with this gift, using it
-to raise one of their social attributes.
-~</Unformatted>
+<Topic>Gift: Persuasion~</Topic>
+<Syntax>persuasion [charisma/manipulation/appearance]
+~</Syntax>
+<Desc>A garou can improve their chances to persuade with this gift, using it to
+raise one of their social attributes.  
+~</Desc>
 </help_object>
 <help_object><level>-1</level>
 <keyword>shed~</keyword>
@@ -7520,12 +7483,12 @@
 <keyword>reading~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Topic: Reading
-Syntax: read [target]
-Description:
-If one has a book or note, the read command enables the discovery of
-what is written therein.
-~</Unformatted>
+<Topic>Reading~</Topic>
+<Syntax>read [topic]
+~</Syntax>
+<Desc>If one has a book or note, the read command enables the discovery of what
+is written therein.  
+~</Desc>
 </help_object>
 <help_object><level>-1</level>
 <keyword>count~</keyword>
@@ -7846,14 +7809,15 @@
 <keyword>musician entertainment~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Topic: Musician
-Requisite: Performance
-Description:
-A musician provides much needed entertainment for the city, both on the
-street and in the various clubs around town.  A few players can form a
-band (group) to create more dynamic performances.
-See Also: MUSICIAN_COMMANDS
-~</Unformatted>
+<Topic>Career: Musician~</Topic>
+<Desc>A musician provides much needed entertainment for the city, both on the
+street and in the various clubs around town.  A few players can form a band
+(group) to create more dynamic performances.  
+ 
+Requisite Skill: Performance
+~</Desc>
+<See>HELP MUSICIAN_COMMANDS
+~</See>
 </help_object>
 <help_object><level>-1</level>
 <keyword>musician_commands~</keyword>

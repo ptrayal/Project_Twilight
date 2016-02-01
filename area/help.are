@@ -1243,13 +1243,11 @@ End
 -1 press~
 (null)~
 (null)~
-Unformatted Topic: Pressing Buttons
- 
-Syntax: press [[button number]] - call/make elevator go to another floor.
- 
-Description:
-Pressing buttons allows you to manipulate an elevator and get it to go
-to the floor you want, or to come to the floor you are on.
+Topic Pressing Buttons~
+Syntax Press [[button number]] - call/make elevator go to another floor.  
+~
+Desc Pressing buttons allows you to manipulate an elevator and get it to go to
+the floor you want, or to come to the floor you are on.  
 ~
 End
 -1 corpse looting~
@@ -1444,7 +1442,7 @@ Desc Ghouls are those mortals who have been enslaved by kindred blood.
 See KINDRED; FEED
 ~
 End
--1 fbi feds federal bureau of investigation~
+-1 fbi feds 'federal bureau of investigation'~
 (null)~
 (null)~
 Topic Mortals: FBI~
@@ -1456,6 +1454,8 @@ Desc Humans who join the FBI in Project Twilight are considered to belong to
 occurrances.
 FBI Agents start with 3 police influence to represent their sway and
 influence over Law Enforcement.
+~
+See HELP AGENCY
 ~
 End
 -1 name lastname surname last~
@@ -1470,18 +1470,17 @@ Desc This is used to set the last name for your character.  Almost no one can
 Last names can be no longer than 15 characters.  
 ~
 End
--1 age ageset~
+-1 'age' 'ageset'~
 (null)~
 (null)~
-Unformatted Topic: Setting Your Age
- 
-Syntax: ageset [number]
- 
-Description:
-When you start out in PT your apparent age is 15 years old. If you don't
-want your apparent age to be that low you need to set it to the age that
-you want. As of right now almost no one can see your apparent age if it
-is not in your character description.
+Topic Setting Your Age~
+Syntax  
+  ageset [number]
+~
+Desc When you start out in PT your apparent age is 15 years old.  If you don't
+want your apparent age to be that low you need to set it to the age that you
+want.  As of right now almost no one can see your apparent age if it is not
+in your character description.  
 ~
 End
 -1 language swearing cursing~
@@ -2109,7 +2108,7 @@ Unformatted Topic:  Area Editor
 [flags]             - area flags, type ? AREA for a list
 ~
 End
-0 agency bureau~
+0 'agency' bureau~
 (null)~
 (null)~
 Topic FBI: Special Division~
@@ -2124,6 +2123,8 @@ Desc The Agency is the special taskforce of the larger bureau which
 the things which their reason revolts against. While it is not unheard
 of for agents to "cross over", few, if any, would choose such an option
 given any choice in the matter.
+~
+See HELP FBI
 ~
 End
 0 alderman aldermen~
@@ -2176,9 +2177,8 @@ End
 0 appoint~
 (null)~
 (null)~
-Unformatted Topic:  Mayoral Appointees
-Description:
-The mayor may appoint someone has police chief.
+Topic Mayor: Appointing the Police Chief~
+Desc The mayor may appoint someone has police chief.
 ~
 End
 2 asave~
@@ -2468,12 +2468,10 @@ End
 -1 CMW children's mud-o-vision workshop coded~
 (null)~
 (null)~
-Unformatted Topic:  Children's MUD-o-Vision Workshop
-Description:
-This mud has been a production of the Children's Mud-O-Vision Workshop.
-CMW Staff (Past and Present):
-Dsarky (Administrator, Coder, etc. etc.)
-Rayal (Storyteller, Builder, Help File guy and Bug Finder of the Year 2001)
+Topic Children's MUD-o-Vision Workshop~
+Desc This mud has been a production of the Children's Mud-O-Vision Workshop.
+CMW Retired Staff (for current list, see staff):
+Dsarky (Administrator, Coder, etc)
 Rafkin (Builder and Bug Finder of the Year 2002)
 Stefan (Builder and Content Advisor)
 Bran (Builder and Content Advisor)
@@ -2564,15 +2562,17 @@ End
 0 conceal search bury~
 (null)~
 (null)~
-Unformatted Topic:  Hide and Seek
-Syntax:  conceal [object]
-search
-Description:
-Objects may be concealed in a room by the use of conceal [object]. This 
-does not make them permanently placed in the room, and objects will be 
-lost during reboots or crashes.
-Hidden objects can be searched out using the search command. If 
-successful, one or more objects hidden in the room will be discovered.
+Topic Conceal and Search~
+Syntax  
+  conceal [object]
+  search
+~
+Desc Objects may be concealed in a room by the use of conceal [object].  This
+does not make them permanently placed in the room, and objects will be lost
+during reboots or crashes.  
+
+Hidden objects can be searched out using the search command.  If successful,
+one or more objects hidden in the room will be discovered.  
 ~
 End
 -1 mission statement here~
@@ -2604,12 +2604,12 @@ End
 -1 conditioning~
 (null)~
 (null)~
-Unformatted Topic:  Conditioning
-Syntax:  condition [target]
-Description:
-The stronger the will the greater the command they may exert on another 
-being. By the use of this power the target may be rendered easily 
-commanded by the user with the "order" command.
+Topic Dominate: Conditioning~
+Syntax condition [target]
+~
+Desc The stronger the will the greater the command they may exert on another
+being.  By the use of this power the target may be rendered easily commanded
+by the user with the "order" command.  
 ~
 End
 -1 mesmerise~
@@ -2681,12 +2681,13 @@ End
 0 croll~
 (null)~
 (null)~
-Unformatted Topic:  Combat Roll
-Syntax:  croll
-Description:
-To do a tumbling roll as part of your combo, use croll.  Rolling will 
-help you evade some attacks.
-See also:  HELP CSTAND
+Topic Combat Roll~
+Syntax croll
+~
+Desc To do a tumbling roll as part of your combo, use croll.  Rolling will
+help you evade some attacks.  
+~
+See HELP CSTAND
 ~
 End
 0 cstand~
@@ -2771,16 +2772,14 @@ End
 -1 diku~
 (null)~
 (null)~
-Unformatted Topic:  
-Description:
-                 Original game idea, concept, and design:
-          Katja Nyboe             [Superwoman] (katz@freja.diku.dk)
-          Tom Madsen              [Stormbringer] (noop@freja.diku.dk)
-          Hans Henrik Staerfeldt  [God] (bombman@freja.diku.dk)
-          Michael Seifert         [Papi] (seifert@freja.diku.dk)
-          Sebastian Hammer        [Quinn] (quinn@freja.diku.dk)
+Topic Original game idea, concept, and design~
+Desc Katja Nyboe             [Superwoman] (katz@freja.diku.dk)
+Tom Madsen              [Stormbringer] (noop@freja.diku.dk)
+Hans Henrik Staerfeldt  [God] (bombman@freja.diku.dk)
+Michael Seifert         [Papi] (seifert@freja.diku.dk)
+Sebastian Hammer        [Quinn] (quinn@freja.diku.dk)
 Developed at: DIKU -- The Department of Computer Science
-                      at the University of Copenhagen.
+at the University of Copenhagen.
 ~
 End
 -1 disciplines discs~
@@ -2841,12 +2840,13 @@ End
 -1 dot dots~
 (null)~
 (null)~
-Unformatted {MTopic: "Dots"
- 
-{MDescription:
-Dots are the basis for a character in Project Twilight. The 
-general scare is as follows, however the scale may vary somewhat
-dependent on the stat it falls into.
+Topic Dots~
+Desc Dots are the basis for a character in Project Twilight.  The general
+scare is as follows, however the scale may vary somewhat dependent on the
+stat it falls into.  
+
+While scores highter than 5 are possible, those scores are generally
+reserved for supernatural levels of skill or power.  
  
 0 - Pissweak, completely useless
 1 - Below Average
@@ -2854,10 +2854,8 @@ Unformatted {MTopic: "Dots"
 3 - Above average
 4 - Really good
 5 - Incredible
- 
-While scores highter than 5 are possible, those scores are generally
-reserved for supernatural levels of skill or power.
-{MSee also: HELP ATTRIBUTES
+~
+See HELP ATTRIBUTES
 ~
 End
 -1 droll dice roll~
@@ -3245,16 +3243,15 @@ End
 0 inventory equipment~
 (null)~
 (null)~
-Unformatted {MTopic: Equipment and Inventory
- 
-Syntax: inventory
-        equipment
- 
-{MDescription:
-Inventory lists all the items you are carrying but not wearing.
-Equipment lists all the items you are wearing and/or using.
- 
-{MSee also: HELP WIELD, HELP WEAR, HELP HOLD, HELP GET
+Topic Equipment and Inventory~
+Syntax inventory
+equipment
+~
+Desc Inventory lists all the items you are carrying but not wearing.  
+
+Equipment lists all the items you are wearing and/or using.  
+~
+See WIELD; WEAR; HOLD; GET
 ~
 End
 0 investigate research~
@@ -3557,17 +3554,18 @@ End
 -1 'mask of a 1000 faces' 'mask of the thousand faces' 'mask of a thousand faces' mask thousand faces 1000~
 (null)~
 (null)~
-Unformatted Topic:  Mask of a 1000 Faces
-Syntax:  mask [target/name]
-mask [appearance modifier] [target/name]
-mask
-Description:
-Mask of a 1000 Faces is an obfuscate power with almost unlimited 
-potential.  It allows the person to appear to be someone else, anyone 
-else.  Typing mask by itself will return the person to their normal 
-appearance.
-It is important to know that all staff can see players for whom they 
-are, so don't try and use it to fool the staff.
+Topic Obfuscate: Mask of a Thousand Faces~
+Syntax  
+  mask [target/name]
+  mask [appearance modifier] [target/name]
+  mask
+~
+Desc Mask of a Thousand Faces is an obfuscate power with almost unlimited
+potential.  It allows the person to appear to be someone else, anyone else. 
+Typing mask by itself will return the person to their normal appearance.  
+
+It is important to know that all staff can see players for whom they are, so
+don't try and use it to fool the staff.  
 ~
 End
 -1 mayor~
@@ -3801,29 +3799,23 @@ End
 0 mail post notes bugs ideas~
 (null)~
 (null)~
-Unformatted {MTopic:  Writing a message to others
- 
-{MSyntax: See Below
- 
-{MDescription:
-{gProject Twilight uses a modified note editor, which is based off the
-basic Merc 2.2 note editor.  We have however modified it to be based off
-an OLC editor for greater control over the body of the message.
- 
-note - read next new note.
-note list - List all notes in thread.
-note read [number] - Read specific note in list.
-note to [list of names/builder/admin/elder/race/all] - Start new note/address
-                  note to specified people or group.
-note subject [string] - Give a subject to a note.
-note body - Open the string editor to write the body of the note.
-note show - display the message you're working on.
-note post - send the message.
-note remove [number] - remove a note you have posted from the list.
-note search [to/from/subject/body] [string] - search notes for a string.
-bug [message] - reports a bug to the administrator.
- 
-{MSee also: EDITOR
+Topic Writing a Message to Others~
+Syntax note - Read the next new note.
+note list - See the list of notes available.
+note read [number] - Read the specific note in the list.
+note to [list of names/builder/admin/elder/race/all] - Start new note and
+     address it to a specified group of people or person.
+note subject [string] - The subject of the note.
+note body - Opens the editor to write the body of the note.
+note show - Displays the message you are currently working on.
+note post - Send off the note.
+note remove [number] - Remove the specified note you posted.
+~
+Desc Project Twilight uses a modified note editor, which is based off the
+basic Merc 2.  2 note editor.  We have however modified it to be based off
+an OLC editor for greater control over the body of the message.  
+~
+See HELP EDITOR
 ~
 End
 -1 numina~
@@ -3988,26 +3980,26 @@ End
 0 plotsave~
 (null)~
 (null)~
-Unformatted Topic: Saving Plots, Events and Scripts
-Syntax: plotsave
-Description:
-Plotsave writes all the plot details out to plot.are. So long as all
-the events and scripts are in their respective places in the
-hierarchy, everything will be saved.
-See also: PLIST, ELIST, SLIST, PEDIT, EEDIT, SEDIT
+Topic Saving Plots, Events, and Scripts~
+Syntax plotsave
+~
+Desc Plotsave writes all the plot details out to plot.  Are.  So long as all
+the events and scripts are in their respective places in the hierarchy,
+everything will be saved 
+~
+See HELP PLIST; HELP ELIST; HELP SLIST; HELP PEDIT; HELP EEDIT; HELP SEDIT
 ~
 End
 0 'police chief'~
 (null)~
 (null)~
-Unformatted Topic:  The Police Chief
-Description:
-The Police Chief oversees all the police in the city and is answerable 
-only to the mayor (who can fire him at a whim).  However, the police 
-chief does have considerable powers, being in charge of the police 
-department.
-The Police chief should have a keen wit and excellent invesigative 
-abilities.
+Topic The Police Chief~
+Desc The Police Chief oversees all the police in the city and is answerable
+only to the mayor (who can fire him at a whim).  However, the police chief
+does have considerable powers, being in charge of the police department.  
+
+The Police chief should have a keen wit and excellent invesigative
+abilities.  
 ~
 End
 -1 potence~
@@ -4042,30 +4034,29 @@ End
 -1 premise~
 (null)~
 (null)~
-Unformatted Topic:  The Premise of Project Twilight
-Description:
-Project Twilight revolves around humanity and their interaction with the 
-supernatural.  The world is populated by stranger things than mortal 
-beings can fully understand.  Those who seek this elusive knowledge, and 
-those who embody that existence weave a tangled web of vast designs and 
-simple heroism affecting even the simplest of lives.
-Here, we'll seek to help you draw out the life of your character, and in 
-turn to let you draw from us and our humble creation a tale, an 
-experience of something other than the mundane. Choose you the path of 
-humanity, undead, faerie-kin or shapechanger, all will lead you on in 
-the story.
-Project Twilight is a mud based fairly closely on White Wolf Games' 
-"World of Darkness" games and associated products. The mud currently 
-sports vampires, werewolves, changelings and hunters all of which have 
-their own series of powers and abilities in addition to some more 
-generic skills.
-There are plans at some stage in the near future to add wraiths and 
-mages, however at this stage they are fairly far from being implemented.
-(All trademarks and copyrights for the World of Darkness and all related 
-games are and remain the property of White Wolf Games. Our mud is 
-running as a fan operation and is being "allowed" to use references so 
-long as we don't make any money off the deal.)
-See also:  HELP DISCLAIMER
+Topic The Premise of Project Twilight~
+Desc Project Twilight revolves around humanity and their interaction with the
+supernatural.  The world is populated by stranger things than mortal beings
+can fully understand.  Those who seek this elusive knowledge, and those who
+embody that existence weave a tangled web of vast designs and simple heroism
+affecting even the simplest of lives.  
+
+Here, we'll seek to help you draw out the life of your character, and in
+turn to let you draw from us and our humble creation a tale, an experience
+of something other than the mundane.  Choose you the path of humanity,
+undead, faerie-kin or shapechanger, all will lead you on in the story.  
+
+Project Twilight is a mud based fairly closely on White Wolf Games' "World
+of Darkness" games and associated products.  The mud currently sports
+vampires, werewolves (kind of), and hunters all of which have their own
+series of powers and abilities in addition to some more generic skills.  
+
+(All trademarks and copyrights for the World of Darkness and all related
+games are and remain the property of White Wolf Games.  Our mud is running
+as a fan operation and is being "allowed" to use references so long as we
+don't make any money off the deal.)  
+~
+See DISCLAIMER
 ~
 End
 -1 presence~
@@ -4390,23 +4381,25 @@ End
 -1 abilities ability~
 (null)~
 (null)~
-Unformatted Topic:  Abilities
-Syntax:  [none needed]
-Description:
-Abilities are separated into three groups: Talents, Skills and
-Knowledges. The three groupings represent the kind of ability which
-falls into the relevant category. Abilities are not commands in
-themselves, but descriptive values for how good a person is at
-performing related actions.
-Talents contain those abilities which are extensions of personality
-traits. E.g. leadership, empathy, and brawl.
-Skills represent abilities which produce more tangible or physical
-results. E.g. drive, repair, and survival.
-Knowledges require greater studies and generally have less tangible
-bases. E.g. law, science and occult.
-Note: Not all abilities are available to all races. Check the
-abilities command for availability.
-See also:  TALENTS, SKILLS and KNOWLEDGES
+Topic Abilities (Overview)~
+Desc Abilities are separated into three groups: Talents, Skills and
+Knowledges.  The three groupings represent the kind of ability which falls
+into the relevant category.  Abilities are not commands in themselves, but
+descriptive values for how good a person is at performing related actions. 
+
+
+Talents contain those abilities which are extensions of personality traits. 
+Example: leadership, empathy, and brawl.  
+
+Skills represent abilities which produce more tangible or physical results. 
+Example: drive, repair, and survival.  Knowledges require greater studies
+and generally have less tangible bases.  Example: law, science and occult. 
+
+
+Note: Not all abilities are available to all races.  Check the abilities
+command for availability.  
+~
+See HELP TALENTS; HELP SKILLS; HELP KNOWLEDGES
 ~
 End
 -1 acting~
@@ -4422,72 +4415,64 @@ End
 -1 athletics~
 (null)~
 (null)~
-Unformatted Topic:  Athletics
-Description:
-Being physically able and having skillful motion are both wrapped up
-under the athletics ability. Currently this is mostly used for combat
-situations, however there are plans for extending this beyond combat
-to other locomotive purposes.
+Topic Ability: Athletics~
+Desc Being physically able and having skillful motion are both wrapped up
+under the athletics ability.  Currently this is mostly used for combat
+situations, however there are plans for extending this beyond combat to
+other locomotive purposes.  
 ~
 End
 -1 alertness~
 (null)~
 (null)~
-Unformatted Topic: Alertness
-Description:
-Alertness is the measure of how quickly a person can respond to stimuli
-and how honed that talent is. A person who has learnt to respond quickly
-can often act before anyone else has the opportunity to.
+Topic Ability: Alertness~
+Desc Alertness is the measure of how quickly a person can respond to stimuli
+and how honed that talent is.  A person who has learnt to respond quickly
+can often act before anyone else has the opportunity to.  
 ~
 End
 -1 brawl~
 (null)~
 (null)~
-Unformatted Topic:  Brawl
-Description:
-"Ninja, the tea party's over!"
-Swinging fists, feet, and other assorted body parts to deal out
-injury, or rather how good a person is at doing so, is listed as the
-person's brawl ability.
-See also: COMBAT
+Topic Ability: Brawl~
+Desc Swinging fists, feet, and other assorted body parts to deal out injury,
+or rather how good a person is at doing so, is listed as the person's brawl
+ability.  
+~
+See HELP COMBAT
 ~
 End
 -1 dodge~
 (null)~
 (null)~
-Unformatted Topic:  Dodge
-Description:
-Diving, ducking, weaving and generally getting out of the way are
-all wrapped up in a person's dodge ability.
+Topic Ability: Dodge~
+Desc Diving, ducking, weaving and generally getting out of the way are all
+wrapped up in a person's dodge ability.  
 ~
 End
 -1 animal ken animal_ken~
 (null)~
 (null)~
-Unformatted Topic: Animal Ken
-Description:
-Animal ken refers to skills with the handling, training and general
-"getting along with" members of the animal kingdom.
+Topic Ability: Animal Ken~
+Desc Animal ken refers to skills with the handling, training and general
+"getting along with" members of the animal kingdom.  
 ~
 End
 -1 etiquette~
 (null)~
 (null)~
-Unformatted Topic: Etiquette
-Description:
-Proper manners can be very important when trying to be acceptible
-in society. Those with an understanding of the correct social
-protocols are more able to be polite and respectful in the proper
-and expected ways.
+Topic Ability: Etiquette~
+Desc Proper manners can be very important when trying to be acceptible in
+society.  Those with an understanding of the correct social protocols are
+more able to be polite and respectful in the proper and expected ways.  
 ~
 End
 -1 drive~
 (null)~
 (null)~
-Unformatted Topic:  Drive
-Description:
-Get in a car and drive. Yes it is useless until the advent of
-vehicular transport.
+Topic Ability: Drive~
+Desc Get in a car and drive.  Yes it is useless until the advent of vehicular
+transport.  
 ~
 End
 -1 firearms~
@@ -4504,31 +4489,27 @@ End
 -1 melee~
 (null)~
 (null)~
-Unformatted Topic: Melee
-Description:
-Swinging a sword or bashing someone over the head with the
-proverbial blunt object are all skills developed within the melee
-skill.
+Topic Ability: Melee~
+Desc Swinging a sword or bashing someone over the head with the proverbial
+blunt object are all skills developed within the melee skill.  
 ~
 End
 -1 performance~
 (null)~
 (null)~
-Unformatted Topic: Performance
-Description:
-The ability to perform before people, standing before crowds and
-entertaining or instructing requires a person with some skill.
+Topic Ability: Performance~
+Desc The ability to perform before people, standing before crowds and
+entertaining or instructing requires a person with some skill.  
 ~
 End
 -1 repair~
 (null)~
 (null)~
-Unformatted Topic: Repair
-Description:
-Those skilled in repairing items can find numerous uses for their
-efforts. In particular, those skilled in repair are able to make
-and restore items to their original condition. This will become
-more important as objects will wear and decay over time.
+Topic Ability: Repair~
+Desc Those skilled in repairing items can find numerous uses for their
+efforts.  In particular, those skilled in repair are able to make and
+restore items to their original condition.  This will become more important
+as objects will wear and decay over time.  
 ~
 End
 -1 security~
@@ -4543,13 +4524,11 @@ End
 -1 stealth~
 (null)~
 (null)~
-Unformatted Topic: Stealth
-Description:
-Where subterfuge marks misdirection of thoughts and attitudes,
-stealth is the physical skill at moving quietly. Many times stealth
-can be called upon to decide whether a person is spotted while
-shadowing another, or whilst attempting to use some natural or
-supernatural ability to hide.
+Topic Ability: Stealth~
+Desc Where subterfuge marks misdirection of thoughts and attitudes, stealth is
+the physical skill at moving quietly.  Many times stealth can be called upon
+to decide whether a person is spotted while shadowing another, or whilst
+attempting to use some natural or supernatural ability to hide.  
 ~
 End
 -1 survival~
@@ -4562,37 +4541,32 @@ Desc Survival is the ability to cook, catch or procure food and shelter. In a
 forced to hunt and gather your own food.
 ~
 End
--1 academia~
+-1 'academics'~
 (null)~
 (null)~
-Unformatted Topic: Academia
-Description:
-Academia represents a general level of understanding of history, art,
-literature and so forth from an intellectual perspective.
+Topic Ability: Academics~
+Desc Academics represents a general level of understanding of history, art,
+literature and so forth from an intellectual perspective.  
 ~
 End
 -1 computers~
 (null)~
 (null)~
-Unformatted Topic: Computer
-Description:
-The ability to use and manipulate computers is fast becoming an
-essential life skill in the modern world. Those with the knowledge
-of computing can at various levels use, program and master tools
-of the electronic age.
+Topic Ability: Computer~
+Desc The ability to use and manipulate computers is fast becoming an essential
+life skill in the modern world.  Those with the knowledge of computing can
+at various levels use, program and master tools of the electronic age.  
 ~
 End
 -1 enigmas~
 (null)~
 (null)~
-Unformatted Topic: Enigmas
-Description:
-Living for great lengths of time has given the kindred a decidedly
-broad vision for the understanding of enigmas and mysteries. In
-many cases, the only way to discover how the pieces of the jihad
-fit together is to be able to think laterally and imagine the
-possibilities which might not be completely obvious to the casual
-observer.
+Topic Ability: Enigmas~
+Desc Living for great lengths of time has given the kindred a decidedly broad
+vision for the understanding of enigmas and mysteries.  In many cases, the
+only way to discover how the pieces of the jihad fit together is to be able
+to think laterally and imagine the possibilities which might not be
+completely obvious to the casual observer.  
 ~
 End
 -1 finance~
@@ -4601,100 +4575,91 @@ End
 Topic Ability: Finance~
 Desc Where and when to invest or retract one's investments very definitely
 requires a great deal of understanding of what the markets and economic
-movements mean.  Being able to work out the correct move is of great
-import, and can make or break one's forunes.
-{RNote: The Finance ability affects your starting wealth.
+movements mean.  Being able to work out the correct move is of great import,
+and can make or break one's forunes.  
+ 
+Note: The Finance ability affects your starting wealth.
 ~
 End
 -1 investigation~
 (null)~
 (null)~
-Unformatted Topic: Investigation
-Description:
-Sherlock Holmes is held up as the epitome of the investigator's
-profession. His abilities in observation and reasoning to discover
-the solution to a mystery are world famous, but those with the
-knowledge of investigatory process are ready, willing and at
-high levels able to follow in the great sleuth's footsteps.
-See also: INVESTIGATE
+Topic Ability: Investigation~
+Desc Sherlock Holmes is held up as the epitome of the investigator's
+profession.  His abilities in observation and reasoning to discover the
+solution to a mystery are world famous, but those with the knowledge of
+investigatory process are ready, willing and at high levels able to follow
+in the great sleuth's footsteps.  
+~
+See HELP INVESTIGATE
 ~
 End
 -1 law~
 (null)~
 (null)~
-Unformatted Topic: Law
-Description:
-Many professionals require an understanding of the law in order to
-perform their duties. The police must understand when an offender
-has broken the law and also when their actions might cause them to
-be labeled criminals themselves. Others such as lawyers and judges
-must understand the law to ply their trade also.
+Topic Ability: Law~
+Desc Many professionals require an understanding of the law in order to
+perform their duties.  The police must understand when an offender has
+broken the law and also when their actions might cause them to be labeled
+criminals themselves.  Others such as lawyers and judges must understand the
+law to ply their trade also.  
 ~
 End
 -1 linguistics~
 (null)~
 (null)~
-Unformatted Topic: Linguistics
-Description:
-Linguistics is the study of language, and those with knowledge of
-languages may converse more readily with those of different
-cultures but they may also be more able to unravel ciphers.
-Note: Currently there are no languages beyond English in Project
-Twilight. There are some plans to create pseudo-languages for
-game purposes in the future.
+Topic Ability: Linguistics~
+Desc Linguistics is the study of language, and those with knowledge of
+languages may converse more readily with those of different cultures but
+they may also be more able to unravel ciphers.  Note: Currently there are no
+languages beyond English in Project Twilight.  There are some plans to
+create pseudo-languages for game purposes in the future.  
 ~
 End
 -1 empathy~
 (null)~
 (null)~
-Unformatted Topic:  Empathy
-Description:
-With empathy, a character can recognise, understand and fake
-emotions. A high empathy rating does bring the risk of getting
-caught up in someone else's emotions however.
+Topic Ability: Empathy~
+Desc With empathy, a character can recognise, understand and fake emotions.  A
+high empathy rating does bring the risk of getting caught up in someone
+else's emotions however.  
 ~
 End
 -1 expression~
 (null)~
 (null)~
-Unformatted Topic:  Expression
-Description:
-To express yourself in words, either in speech or the written word
-requires expression. How understandable or strongly the message is
-to the recipient is a measure of how well the character has
-expressed themselves.
+Topic Ability: Expression~
+Desc To express yourself in words, either in speech or the written word
+requires expression.  How understandable or strongly the message is to the
+recipient is a measure of how well the character has expressed themselves.  
 ~
 End
 -1 intimidation intimidate~
 (null)~
 (null)~
-Unformatted Topic:  Intimidation
-Description:
-There's more than one way to get people to do what you want. Coaxing
-can work, however sometimes you've got to do things the hard way.
+Topic Ability: Intimidation~
+Desc There's more than one way to get people to do what you want.  Coaxing can
+work, however sometimes you've got to do things the hard way.  
 ~
 End
 -1 leadership~
 (null)~
 (null)~
-Unformatted Topic: Leadership
-Description:
-Leadership is that talent of encouraging people to follow commands
-or go along with a character's way of thinking because that person
-has a commanding presence.
+Topic Ability: Leadership~
+Desc Leadership is that talent of encouraging people to follow commands or go
+along with a character's way of thinking because that person has a
+commanding presence.  
 ~
 End
 -1 primal urge~
 (null)~
 (null)~
-Unformatted Topic: Primal Urge
-Description:
-Being in tune with your primal urges can be the difference between
-understanding what your instincts are telling you and getting hit
-by a train. A Garou who understands their instincts are better
-prepared to over-rule their instincts as well as sense if that
-thing coming at them is the spiritual or physical equivalent of a
-locomotive bearing down upon them.
+Topic Ability: Primal Urge~
+Desc Being in tune with your primal urges can be the difference between
+understanding what your instincts are telling you and getting hit by a
+train.  A Garou who understands their instincts are better prepared to
+over-rule their instincts as well as sense if that thing coming at them is
+the spiritual or physical equivalent of a locomotive bearing down upon them.
 ~
 End
 -1 rituals rites~
@@ -4720,63 +4685,59 @@ End
 -1 knowledges~
 (null)~
 (null)~
-Unformatted Topic:  Knowledges
-Description:
-Knowledges require greater studies and generally have less tangible
-bases.
-The Knowledges are:
-ACADEMIA, COMPUTER, ENIGMAS, FINANCE, INVESTIGATION, LAW, LINGUISTICS,
-MEDICINE, MYTHLORE, OCCULT, POLITICS, RITUALS, SCIENCE
-Note: Not all knowledges are available to all races. Check the
-abilities command for availability.
-See also:  ACADEMIA, COMPUTER, ENIGMAS, FINANCE, INVESTIGATION, LAW,
-LINGUISTICS, MEDICINE, MYTHLORE, OCCULT, POLITICS, RITUALS, SCIENCE
+Topic Knowledges~
+Desc Knowledges require greater studies and generally have less tangible
+bases.  
+
+See the specific skill for more details.  Please note that not all
+knowledges are available to all races.  
+~
+See HELP ACADEMICS; HELP COMPUTER; HELP ENIGMAS; HELP FINANCE; HELP
+INVESTIGATION; HELP LAW; HELP LINGUISTICS; HELP MEDICINE; HELP MYTHLORE;
+HELP OCCULT; HELP POLITICS; HELP RITUALS; HELP SCIENCE 
 ~
 End
 -1 medicine~
 (null)~
 (null)~
-Unformatted Topic:  Medicine
-Description:
-Knowing how the body works and how to patch it up when it breaks
-comes in real handy sometimes. Those with medicine scores can make
-a real difference in people's lives by assisting, or inhibiting, a
-persons health and wellbeing.
+Topic Ability: Medicine~
+Desc Knowing how the body works and how to patch it up when it breaks comes in
+real handy sometimes.  Those with medicine scores can make a real difference
+in people's lives by assisting, or inhibiting, a persons health and
+wellbeing.  
 ~
 End
 -1 occult~
 (null)~
 (null)~
-Unformatted Topic: Occult
-Description:
-In Project Twilight, the supernatural are uncomfortably real. Those
-who have studied the occult have more chance at being able to use
-human occult lore to assist them. It should be recognised that in
-many cases the mortal lore is not correct.
+Topic Ability: Occult~
+Desc In Project Twilight, the supernatural are uncomfortably real.  Those who
+have studied the occult have more chance at being able to use human occult
+lore to assist them.  It should be recognised that in many cases the mortal
+lore is not correct.  
 ~
 End
 -1 politics~
 (null)~
 (null)~
-Unformatted Topic: Politics
-Description:
-The myriad paths to power are at the disposal of those who know how
-political systems operate. At the highest levels, machiavellian
-moves are childs play to those with enough understanding.
+Topic Ability: Politics~
+Desc The myriad paths to power are at the disposal of those who know how
+political systems operate.  At the highest levels, machiavellian moves are
+childs play to those with enough understanding.  
 ~
 End
 -1 science~
 (null)~
 (null)~
-Unformatted Topic:  Science
-Description:
-Science is a measure of the characters general understanding of
-scientific principles and facts. This understanding crosses
-specialties, covering chemistry, biology, physics, etc. Currently
-there are no commands which draw upon this attribute, but it may
-be called on in roleplaying events.
-Some future jobs will require or make use of the science ability
-when determining successes.
+Topic Ability: Science~
+Desc Science is a measure of the characters general understanding of
+scientific principles and facts.  This understanding crosses specialties,
+covering chemistry, biology, physics, etc.  Currently there are no commands
+which draw upon this attribute, but it may be called on in roleplaying
+events.  
+
+Some future jobs will require or make use of the science ability when
+determining successes.  
 ~
 End
 -1 skills~
@@ -4816,32 +4777,27 @@ End
 -1 social charisma manipulation appearance~
 (null)~
 (null)~
-Unformatted {MTopic: Social Attributes
- 
-{MDescription:
-The three social attributes signify how a character is seen and
-influences others at a natural basic level.
- 
-{gCharisma: The natural attractiveness of a character's personality is
-recognised by their charisma attribute. The basic charm, vitality and
-presence of the character are all aspects of this attribute.
- 
- 
-{gManipulation: It's all about getting what you want. The manipulation
-attribute revolves around convincing people to do what the character
-wants. This does not describe how the character achieves his or her
-convincing, just how good the character is at doing it.
- 
- 
-{gAppearance: This is what it sounds like. The measure of a character's
-physical beauty can be found in the appearance attribute.
- 
- 
-{WNote: The members of clan Nosferatu are cursed with a hideous appearance
-and thus cannot gain any appearance either by expenditure of experience
-or in character generation.
- 
-{MSee also:  HELP ATTRIBUTES
+Topic Attributes: Social~
+Desc The three social attributes signify how a character is seen and
+influences others at a natural basic level.  
+
+Charisma: The natural attractiveness of a character's personality is
+recognised by their charisma attribute.  The basic charm, vitality and
+presence of the character are all aspects of this attribute.  
+
+Manipulation: It's all about getting what you want.  The manipulation
+attribute revolves around convincing people to do what the character wants. 
+This does not describe how the character achieves his or her convincing,
+just how good the character is at doing it.  
+
+Appearance: This is what it sounds like.  The measure of a character's
+physical beauty can be found in the appearance attribute.  
+
+Note: The members of clan Nosferatu are cursed with a hideous appearance and
+thus cannot gain any appearance either by expenditure of experience or in
+character generation.  
+~
+See HELP ATTRIBUTES
 ~
 End
 0 'society of leopold' leopold society~
@@ -5122,17 +5078,18 @@ End
 -1 welcome~
 (null)~
 (null)~
-Unformatted Topic:  Welcome to Project Twilight!
-Description:
-We are an up and coming creation, fast approaching a full gala opening! 
-Our codebase is stable and constantly growing, the areas are few, but 
-also increasing in size and number. Most of the basic game mechanics are 
-working, although much more is on the way in terms of skills, powers and 
-the creation of a set of somewhat intelligent and interactive mobs.
-We've assembled some great people who are working in front of and behind 
-the scenes to make this a great place to be.
-Welcome to our corner of the World of Darkness, we hope your stay will 
-be fun, interesting and unlike anything you've seen in a mud before.
+Topic Welcome to Project Twilight!~
+Desc We are an up and coming creation, fast approaching a full gala opening! 
+Our codebase is stable and constantly growing, the areas are few, but also
+increasing in size and number.  Most of the basic game mechanics are
+working, although much more is on the way in terms of skills, powers and the
+creation of a set of somewhat intelligent and interactive mobs.  
+
+We've assembled some great people who are working in front of and behind the
+scenes to make this a great place to be.  
+
+Welcome to our corner of the World of Darkness, we hope your stay will be
+fun, interesting and unlike anything you've seen in a mud before.  
 ~
 End
 -1 werewolf werewolves garou~
@@ -5153,15 +5110,15 @@ End
 -1 white-wolf games 'white wolf'~
 (null)~
 (null)~
-Unformatted Topic:  White-Wolf Games
-Description:
-Project Twilight is based fairly closely upon White-Wolf Games Studio's 
-World of Darkness series of games. All rights and trademarks contained 
-herein remain the property of White-Wolf Studios.
-We would like to encourage anyone interested in further details on 
-White-Wolf's engrossing role-playing games to visit their website: 
-www.white-wolf.com
+Topic White-Wolf Games~
+Desc Project Twilight is based fairly closely upon White-Wolf Games Studio's
+World of Darkness series of games.  All rights and trademarks contained
+herein remain the property of White-Wolf Studios.  
+
+We would like to encourage anyone interested in further details on
+White-Wolf's engrossing role-playing games to visit their website.  
 ~
+Web www.white-wolf.com~
 End
 -1 willpower 'will power'~
 (null)~
@@ -5200,24 +5157,26 @@ End
 -1 salesman saleswoman~
 (null)~
 (null)~
-Unformatted Topic: Salesman/Saleswoman
-Requisite: Empathy
-Description:
-The life of a salesman requires diligence, charisma and empathy to know
-what a person can afford and what they really want.
-See also: SALESMAN_COMMANDS
+Topic Career: Salesman~
+Desc The life of a salesman requires diligence, charisma and empathy to know
+what a person can afford and what they really want.  
+ 
+Requisite Skill: Empathy
+~
+See HELP SALESMAN_COMMANDS
 ~
 End
 -1 chef~
 (null)~
 (null)~
-Unformatted Topic: Chef
-Requisite: 
-Description:
-Cooking up a storm can be one of the most rewarding of professions.
-Similarly to the maker profession, chef is a generic title for anyone
-who makes foodstuffs.
-See also: CHEF_COMMANDS
+Topic Career: Chef~
+Desc Cooking up a storm can be one of the most rewarding of professions. 
+Similarly to the maker profession, chef is a generic title for anyone who
+makes foodstuffs 
+ 
+Requisite Skill: 
+~
+See HELP CHEF_COMMANDS
 ~
 End
 -1 maker crafter~
@@ -5236,24 +5195,26 @@ End
 -1 janitors~
 (null)~
 (null)~
-Unformatted Topic: Janitor
-Requisite: Streetwise
-Description:
-A janitor's work is never done. Day in day out the streets get dirty, and
-day in day out, someone's gotta go clean up the mess.
-See also: JANITOR_COMMANDS
+Topic Career: Janitor~
+Desc A janitor's work is never done.  Day in day out the streets get dirty,
+and day in day out, someone's gotta go clean up the mess 
+ 
+Requisite Skill: Streetwise
+~
+See HELP JANITOR_COMMANDS
 ~
 End
 -1 thug criminal~
 (null)~
 (null)~
-Unformatted Topic: Criminal
-Requisite: Security
-Description:
-Career criminals are a breed apart, and those who follow such paths
-generally prove the addage that crime doesn't pay. But you know... it
-pays pretty good for a while.
-See also: CRIMINAL_COMMANDS
+Topic Job: Criminal/Thug~
+Desc Career criminals are a breed apart, and those who follow such paths
+generally prove the addage that crime doesn't pay.  But you know...  It pays
+pretty good for a while.  
+ 
+Requisite Skill: Security
+~
+See CRIMINAL_COMMANDS
 ~
 End
 -1 cop officer police constable~
@@ -5308,11 +5269,10 @@ End
 -1 subterfuge~
 (null)~
 (null)~
-Unformatted Topic: Subterfuge
-Description:
-The art of misdirection, subterfuge has many applications in the World
-of Darkness. Whether a person is lying or attempting to play someone
-as an unwitting pawn, subterfuge comes into play.
+Topic Subterfuge~
+Desc The art of misdirection, subterfuge has many applications in the World of
+Darkness.  Whether a person is lying or attempting to play someone as an
+unwitting pawn, subterfuge comes into play.  
 ~
 End
 -1 sunlight~
@@ -5371,13 +5331,12 @@ End
 -1 changes updates news~
 (null)~
 (null)~
-Unformatted Topic: Changes, Updates and News
-Description:
-Due to the still fairly rapid development within Project Twilight,
-we are currently not keeping track of updates and changes in help
-files. For up to the minute changes, we suggest keeping an eye on
-the notes as this is where most of this kind of information and
-information on what's happening will appear.
+Topic Changes, Updates, and News~
+Desc Due to the still fairly rapid development within Project Twilight, we are
+currently not keeping track of updates and changes in help files.  For up to
+the minute changes, we suggest keeping an eye on the notes as this is where
+most of this kind of information and information on what's happening will
+appear.  
 ~
 End
 -1 command commands~
@@ -5396,15 +5355,12 @@ End
 -1 money cash currency pay dollars cents~
 (null)~
 (null)~
-Unformatted Topic: Money
-Description:
-Being that I grew up in Australia and am now living in the USA (where
-the mud is based), Project Twilight operates on the dollars and cents
-concept of currency.
-Obtaining money can be achieved in several ways as it can in the real
-world. You can get a job, steal, beg, borrow and sell things for
-profit. If the worst comes to the worst, someone will probably be
-able to give you a loan if you really need it.
+Topic Money~
+Desc Project Twilight operates on the dollars and cents concept of currency. 
+Obtaining money can be achieved in several ways as it can in the real world.
+You can get a job, steal, beg, borrow and sell things for profit.  If the
+worst comes to the worst, someone will probably be able to give you a loan
+if you really need it.  
 ~
 End
 -1 archtype archtypes archetypes personality personalities~
@@ -5428,8 +5384,9 @@ End
 (null)~
 (null)~
 Topic Natures, Demeanors, and Archtypes~
-Syntax nature [archtype]
-demeanor [archtype]
+Syntax  
+  nature [archtype]
+  demeanor [archtype]
 ~
 Desc Natures and demeanors are aspects of a character's personality. The
 character's nature is their inner personality, which may or may not be
@@ -5439,7 +5396,7 @@ Desc Natures and demeanors are aspects of a character's personality. The
 relatively static, requiring some effort at roleplaying to alter.
  
 ~
-See ARCHTYPE
+See HELP ARCHETYPE; HELP CHARACTERIZATION
 ~
 End
 -1 steal stealing theft shoplifting shoplift pickpocket loot rob~
@@ -5463,28 +5420,28 @@ End
 -1 concept personality personalities~
 (null)~
 (null)~
-Unformatted Topic: Character Concept
-Syntax: concept [descriptive statement]
-Description:
-A character's concept can be virtually anything, but in essence is a
-statement of what the character sets out to be. Where an archetype is
-a hook to help define a character, the character's concept fleshes it
-out somewhat by giving a framework of what the character is about.
+Topic Character Concept~
+Syntax concept [descriptive statement]
+~
+Desc A character's concept can be virtually anything, but in essence is a
+statement of what the character sets out to be.  Where an archetype is a
+hook to help define a character, the character's concept fleshes it out
+somewhat by giving a framework of what the character is about.  
+ 
 Eg. "Road warrior", "Urban missionary", etc.
-See also: ARCHETYPES, NATURE, DEMEANOR
+~
+See HELP ARCHETYPES; HELP NATURE; HELP DEMEANOR
 ~
 End
 -1 socials~
 (null)~
 (null)~
-Unformatted Topic: Socials
- 
-Syntax: socials
- 
-Description:
-Socials are predefined actions which can be listed by using the
-socials command. Please be aware that socials are not necessarily
-appropriate for roleplaying uses.
+Topic Socials~
+Syntax socials
+~
+Desc Socials are predefined actions which can be listed by using the socials
+command.  Please be aware that socials are not necessarily appropriate for
+roleplaying uses.  
 ~
 End
 -1 whois finger~
@@ -5553,24 +5510,22 @@ End
 -1 materials~
 (null)~
 (null)~
-Unformatted Topic: Materials - Building Blocks?
-Description:
-Materials in Project Twilight are in the process of being properly
-completed. Materials are used for setting the properties of objects
-automatically without instilling too much confusion for those who
-need to create them. A list of materials is available within oedit
-by typing "? materials".
+Topic Materials - Building Blocks?~
+Desc Materials in Project Twilight are in the process of being properly
+completed.  Materials are used for setting the properties of objects
+automatically without instilling too much confusion for those who need to
+create them.  A list of materials is available within oedit by typing "? 
+Materials".  
 ~
 End
 -1 breeds forms~
 (null)~
 (null)~
-Unformatted Topic: Breeds
-Description:
-A werewolf's breed is the form into which she was born, the shape
-she is most comfortable in and the body which feels most comfortable.
-The three forms are: HOMID, LUPUS and METIS
-See also: AUSPICE
+Topic Werewolf: Breeds~
+Desc A werewolf's breed is the form into which she was born, the shape she is
+most comfortable in and the body which feels most comfortable.  
+~
+See HOMID; LUPUS; METIS; AUSPICE
 ~
 End
 -1 homid~
@@ -5652,19 +5607,19 @@ End
 -1 characterisation characterization~
 (null)~
 (null)~
-Unformatted Topic: Characterisation
-Description:
-Characterisation is a multi-faceted experience which should begin at
-character creation. A character is more than a set of vital
-statistics, more than a character sheet. A character is a living,
-breathing person from a fictional world. A character has a
-personality, motivations and flaws.
+Topic Characterization~
+Desc Characterisation is a multi-faceted experience which should begin at
+character creation.  A character is more than a set of vital statistics,
+more than a character sheet.  A character is a living, breathing person from
+a fictional world.  A character has a personality, motivations and flaws.  
+
 In order to properly roleplay a character, one must define what that
-character is aiming to be. This is why Project Twilight gives you the
-space to select a NATURE, DEMEANOR and CONCEPT for your character. It
-is also the reason we {Yrequire you to have a description before
-you can receive experience from roleplaying.
-See also: DESCRIPTION, NATURE, DEMEANOR, CONCEPT, ARCHETYPES
+character is aiming to be.  This is why Project Twilight gives you the space
+to select a NATURE, DEMEANOR and CONCEPT for your character.  It is also the
+reason we require you to have a description before you can receive
+experience from roleplaying.  
+~
+See HELP DESCRIPTION; HELP NATURE; HELP DEMEANOR; HELP CONCEPT; HELP ARCHETYPES 
 ~
 End
 -1 who wholist whorp~
@@ -5854,7 +5809,10 @@ End
 -1 roll~
 (null)~
 (null)~
-Unformatted Are you looking for DROLL (die rolling) or CROLL (the combat manouver)?
+Topic What kind of Roll?~
+Desc Are you looking for DROLL (die rolling) or CROLL (the combat manouver)?  
+~
+See DROLL; CROLL
 ~
 End
 -1 drag~
@@ -5872,10 +5830,10 @@ End
 -1 wimpy recall levels leveling levelling classes chat gossip sacrifice practice gain lore identify autoloot stance~
 (null)~
 (null)~
-Unformatted Topic: Things Which Do Not Exist in Project Twilight
-Description:
-You have requested help on something which has no place in Project
-Twilight. These things include but are not limited to:
+Topic Things Which Do Not Exist in Project Twilight~
+Desc You have requested help on something which has no place in Project
+Twilight.  These things include but are not limited to: 
+ 
 Classes       Levels       Identify   Chat       Gossip
 Recall        Sacrifice    Gain       Practice   Wimpy
 Lore          Autoloot
@@ -5894,46 +5852,48 @@ End
 -1 areas~
 (null)~
 (null)~
-Unformatted Topic: Areas
-Syntax: area
-Description:
-A list of areas either in place within or being worked on for Project
-Twilight can be obtained via the area command.
-If you are interested in building, please contact Dsarky or Rafkin for
-further details on how you can help.
+Topic Areas~
+Syntax area
+~
+Desc A list of areas either in place within or being worked on for Project
+Twilight can be obtained via the area command.  
+
+If you are interested in building, please contact Rayal for further details
+on how you can help.  
 ~
 End
--1 storytellers storytelling~
+-1 'storytelling'~
 (null)~
 (null)~
-Unformatted Topic: Storytelling
-Description:
-Project Twilight is a storytelling game in the style of White Wolf's
-games. The idea of a storytelling game is to weave an engrossing tale
-for the entertainment of all involved.
+Topic Storytelling~
+Desc Project Twilight is a storytelling game in the style of White Wolf's
+games.  The idea of a storytelling game is to weave an engrossing tale for
+the entertainment of all involved.  
+
 In a story, the storyteller sets the scene and operates the non-player
-characters with whom the players' character can interact. A story has
-aspects similar to a dramatic production, however the script is
-improvised by the actors following the guidelines of each character's
-personality. Thus characters can develop and move the plot along in a
-fluid and natural way, rather than being bound by too much overhead.
-In scenes, the storyteller's ruling on an action is final, and his or
-her decisions must be accepted and respected. If you are uncomfortable
-with the given situation or distressed by the action in the scene,
-please notify the storyteller immediately so that the scene can be
-stopped and the difficulty circumvented. We do not want to cause any
-person to be made uncomfortable by the progression of a story.
+characters with whom the players' character can interact.  A story has
+aspects similar to a dramatic production, however the script is improvised
+by the actors following the guidelines of each character's personality. 
+Thus characters can develop and move the plot along in a fluid and natural
+way, rather than being bound by too much overhead.  In scenes, the
+storyteller's ruling on an action is final, and his or her decisions must be
+accepted and respected.  If you are uncomfortable with the given situation
+or distressed by the action in the scene, please notify the storyteller
+immediately so that the scene can be stopped and the difficulty
+circumvented.  We do not want to cause any person to be made uncomfortable
+by the progression of a story.  
 ~
 End
 1 storyteller~
 (null)~
 (null)~
-Unformatted Topic: Storyteller
-Syntax: storyteller
-Description:
-Staff may use the storyteller command to go into "storyteller mode".
-This is used when acting as the storyteller for a group of players.
-See also: STORY_UTILITIES
+Topic Storyteller Mode~
+Syntax storyteller
+~
+Desc Staff may use the storyteller command to go into "storyteller mode". 
+This is used when acting as the storyteller for a group of players.  
+~
+See STORY_UTILITIES
 ~
 End
 1 story_utilities~
@@ -6148,16 +6108,17 @@ End
 -1 follow nofollow shadow grouping~
 (null)~
 (null)~
-Unformatted Topic: Following and Leading
-Syntax: nofollow - disallow casual followers.
-follow [target] - follow a person if they allow it.
-group [optional target] - add to your group/check group members.
-shadow [target] - follow a target trying not to be spotted.
-Description:
-Following people around can be an easy way to get from place to place
-or go exploring as a team. Keep in mind that you might be being followed
-by people who are shadowing you, watching to see where you go and trying
-to do it without you knowing.
+Topic Following and Leading~
+Syntax  
+  nofollow - disallow casual followers.
+  follow [target] - follow a person if they allow it.
+  group [optional target] - add to your group/check group members.
+  shadow [target] - follow a target trying not to be spotted.
+~
+Desc Following people around can be an easy way to get from place to place or
+go exploring as a team.  Keep in mind that you might be being followed by
+people who are shadowing you, watching to see where you go and trying to do
+it without you knowing.  
 ~
 End
 -1 gnosis~
@@ -6173,14 +6134,13 @@ End
 -1 weapons~
 (null)~
 (null)~
-Unformatted Topic: Weapons and Things to Bash People With
-Description:
-There are many things which may be used to make a violent impression on
-an opponent. Soon we are hoping that all objects will be able to be used
-as weapons if they can be picked up. For now however, you're going to
-have to find something of a "weapon" class of object. Be aware that your
-weapon of choice may be edible, for example a breadstick, so if something
-looks like it might be able to be used as a weapon, try it out.
+Topic Weapons~
+Desc There are many things which may be used to make a violent impression on
+an opponent.  Soon we are hoping that all objects will be able to be used as
+weapons if they can be picked up.  For now however, you're going to have to
+find something of a "weapon" class of object.  Be aware that your weapon of
+choice may be edible, for example a breadstick, so if something looks like
+it might be able to be used as a weapon, try it out.  
 ~
 End
 -1 exits movement north south east west up down~
@@ -6199,16 +6159,19 @@ End
 2 at for~
 (null)~
 (null)~
-Unformatted Topic: Performing Actions from a Distance
-Syntax: at [target/room vnum] [action/command]
-for [all/admin/player/npcs/everywhere] [action/command]
-Description:
-Sometimes it is useful to perform actions from a distance while remaining
-in one's original location. The at and for commands allow a staff member
-to do just that.
+Topic Performing Actions from a Distance~
+Syntax  
+  at [target/room vnum] [action/command]
+  for [all/admin/player/npcs/everywhere] [action/command]
+~
+Desc Sometimes it is useful to perform actions from a distance while remaining
+in one's original location.  The at and for commands allow a staff member to
+do just that. 
+
 Note: The for command's action can contain the variable # which will be
-replaced with the name of the target involved at that moment.
-See also: GOTO
+replaced with the name of the target involved at that moment.  
+~
+See HELP GOTO
 ~
 End
 2 goto poofin poofout~
@@ -6230,13 +6193,14 @@ End
 -1 looking examining examine~
 (null)~
 (null)~
-Unformatted Topic: Looking at Stuff
-Syntax: look (in/at) (optional target)
-examine (target)
-Description:
-Look is what it sounds like. You can look at objects, people and the
-room around you. However examining something is specifically for
-looking at what an object contains.
+Topic Look and Examine~
+Syntax  
+  look [in/at] [optional target]
+  examine [target]
+~
+Desc Look is what it sounds like.  You can look at objects, people and the
+room around you.  However examining something is specifically for looking at
+what an object contains.  
 ~
 End
 -1 resting sleeping sitting standing~
@@ -6333,8 +6297,9 @@ End
 1 score ~
 (null)~
 (null)~
-Unformatted Addendum for staff: Giving score an online player's name as an argument
-will show you their stats.
+Topic Command: Score (Immortal Note)~
+Desc Addendum for staff: Giving score an online player's name as an argument
+will show you their stats.  
 ~
 End
 -1 time weather~
@@ -6543,7 +6508,7 @@ Desc The Gift of the Termite allows the user to eat wooden objects to gain
 nourishment.
 ~
 End
--1 attune~
+-1 'attune'~
 (null)~
 (null)~
 Topic Gift: Attune~
@@ -6733,11 +6698,11 @@ End
 -1 wrath gaia 'wrath of gaia'~
 (null)~
 (null)~
-Unformatted Topic: Wrath of Gaia
-Syntax: wrath
-Description:
-Unleashing the wrath of Gaia forces all creatures of the Wyrm to flee the
-area.
+Topic Gift: Wrath of Gaia~
+Syntax wrath
+~
+Desc Unleashing the wrath of Gaia forces all creatures of the Wyrm to flee the
+area.  
 ~
 End
 -1 blur~
@@ -6892,11 +6857,12 @@ End
 -1 grovel~
 (null)~
 (null)~
-Unformatted Topic: Grovel
-Syntax: grovel
-Description:
-Successful use of this gift causes pity in an opponent, stopping any
-conflict in progress with what is a fairly pathetic display of grovelling.
+Topic Gift: Grovel~
+Syntax  
+  grovel
+~
+Desc Successful use of this gift causes pity in an opponent, stopping any
+conflict in progress with what is a fairly pathetic display of grovelling.  
 ~
 End
 -1 mindspeak mind speech~
@@ -6922,11 +6888,11 @@ End
 -1 persuasion~
 (null)~
 (null)~
-Unformatted Topic: Persuasion
-Syntax: persuasion [charisma/manipulation/appearance]
-Description:
-A garou can improve their chances to persuade with this gift, using it
-to raise one of their social attributes.
+Topic Gift: Persuasion~
+Syntax persuasion [charisma/manipulation/appearance]
+~
+Desc A garou can improve their chances to persuade with this gift, using it to
+raise one of their social attributes.  
 ~
 End
 -1 shed~
@@ -7323,13 +7289,14 @@ End
 -1 musician entertainment~
 (null)~
 (null)~
-Unformatted Topic: Musician
-Requisite: Performance
-Description:
-A musician provides much needed entertainment for the city, both on the
-street and in the various clubs around town.  A few players can form a
-band (group) to create more dynamic performances.
-See Also: MUSICIAN_COMMANDS
+Topic Career: Musician~
+Desc A musician provides much needed entertainment for the city, both on the
+street and in the various clubs around town.  A few players can form a band
+(group) to create more dynamic performances.  
+ 
+Requisite Skill: Performance
+~
+See HELP MUSICIAN_COMMANDS
 ~
 End
 -1 musician_commands~
