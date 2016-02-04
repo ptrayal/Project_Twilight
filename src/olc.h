@@ -333,7 +333,7 @@ DECLARE_OLC_FUN( hedit_keyword		);
 DECLARE_OLC_FUN( hedit_trust		);
 DECLARE_OLC_FUN( hedit_body		);
 DECLARE_OLC_FUN( hedit_create		);
-DECLARE_OLC_FUN( hedit_remove		);
+DECLARE_OLC_FUN( hedit_delete		);
 DECLARE_OLC_FUN( hedit_show		);
 DECLARE_OLC_FUN( hedit_create		);
 DECLARE_OLC_FUN( hedit_keyword		);

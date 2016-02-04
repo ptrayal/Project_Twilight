@@ -4886,7 +4886,9 @@ void log_string(int type, const char *fmt, ... )
 {
 	DESCRIPTOR_DATA *d;
 	va_list args;
-	char *strtime;
+	time_t rawtime;
+	char buffer[80]={'\0'};
+	struct tm *info;
 	char buf[45];
 	char bufew[2 * MSL];
 	char bufee[2 * MSL];
@@ -4904,9 +4906,10 @@ void log_string(int type, const char *fmt, ... )
 	{
 		snprintf( buf, sizeof(buf), "../log/%s.ritical", get_curdate() );
 		log_file = fopen( buf, "a" );
-		strtime = ctime( &current_time );
-		strtime[strlen(strtime)-1] = '\0';
-		fprintf( log_file, "%s :: %s\n", strtime, bufew );
+		time(&rawtime);
+		info = localtime( &rawtime);
+		strftime(buffer, 80, "%b-%d-%Y (%H:%M)", info);
+		fprintf( log_file, "%s :: %s\n", buffer, bufew );
 		fflush(log_file);
 		fclose( log_file );
 		for (d = descriptor_list; d != NULL; d = d->next)
@@ -4918,9 +4921,10 @@ void log_string(int type, const char *fmt, ... )
 		{
 			snprintf( buf, sizeof(buf), "../log/%s.error", get_curdate() );
 			log_file = fopen( buf, "a" );
-			strtime = ctime( &current_time );
-			strtime[strlen(strtime)-1] = '\0';
-			fprintf( log_file, "%s :: %s\n", strtime, bufew );
+			time(&rawtime);
+			info = localtime( &rawtime);
+			strftime(buffer, 80, "%b-%d-%Y (%H:%M)", info);
+			fprintf( log_file, "%s :: %s\n", buffer, bufew );
 			fflush(log_file);
 			fclose( log_file );
 			snprintf(bufee,sizeof(bufee), "Error: %s",bufew);
@@ -4929,9 +4933,10 @@ void log_string(int type, const char *fmt, ... )
 		{
 			snprintf( buf, sizeof(buf), "../log/%s.bug", get_curdate() );
 			log_file = fopen( buf, "a" );
-			strtime = ctime( &current_time );
-			strtime[strlen(strtime)-1] = '\0';
-			fprintf( log_file, "%s :: %s\n", strtime, bufew );
+			time(&rawtime);
+			info = localtime( &rawtime);
+			strftime(buffer, 80, "%b-%d-%Y (%H:%M)", info);
+			fprintf( log_file, "%s :: %s\n", buffer, bufew );
 			fflush(log_file);
 			fclose( log_file );
 			snprintf(bufee,sizeof(bufee), "Bug: %s",bufew);
@@ -4940,9 +4945,10 @@ void log_string(int type, const char *fmt, ... )
 		{
 			snprintf( buf, sizeof(buf), "../log/%s.security", get_curdate() );
 			log_file = fopen( buf, "a" );
-			strtime = ctime( &current_time );
-			strtime[strlen(strtime)-1] = '\0';
-			fprintf( log_file, "%s :: %s\n", strtime, bufew );
+			time(&rawtime);
+			info = localtime( &rawtime);
+			strftime(buffer, 80, "%b-%d-%Y (%H:%M)", info);
+			fprintf( log_file, "%s :: %s\n", buffer, bufew );
 			fflush(log_file);
 			fclose( log_file );
 			snprintf(bufee,sizeof(bufee), "Security: %s",bufew);
@@ -4951,9 +4957,10 @@ void log_string(int type, const char *fmt, ... )
 		{
 			snprintf( buf, sizeof(buf), "../log/%s.connect", get_curdate() );
 			log_file = fopen( buf, "a" );
-			strtime = ctime( &current_time );
-			strtime[strlen(strtime)-1] = '\0';
-			fprintf( log_file, "%s :: %s\n", strtime, bufew );
+			time(&rawtime);
+			info = localtime( &rawtime);
+			strftime(buffer, 80, "%b-%d-%Y (%H:%M)", info);
+			fprintf( log_file, "%s :: %s\n", buffer, bufew );
 			fflush(log_file);
 			fclose( log_file );
 			snprintf(bufee,sizeof(bufee), "Connect: %s",bufew);
@@ -4962,9 +4969,10 @@ void log_string(int type, const char *fmt, ... )
 		{
 			snprintf( buf, sizeof(buf), "../log/%s.game", get_curdate() );
 			log_file = fopen( buf, "a" );
-			strtime = ctime( &current_time );
-			strtime[strlen(strtime)-1] = '\0';
-			fprintf( log_file, "%s :: %s\n", strtime, bufew );
+			time(&rawtime);
+			info = localtime( &rawtime);
+			strftime(buffer, 80, "%b-%d-%Y (%H:%M)", info);
+			fprintf( log_file, "%s :: %s\n", buffer, bufew );
 			fflush(log_file);
 			fclose( log_file );
 			snprintf(bufee,sizeof(bufee), "Game: %s",bufew);
@@ -4973,9 +4981,10 @@ void log_string(int type, const char *fmt, ... )
 		{
 			snprintf( buf, sizeof(buf), "../log/%s.comm", get_curdate() );
 			log_file = fopen( buf, "a" );
-			strtime = ctime( &current_time );
-			strtime[strlen(strtime)-1] = '\0';
-			fprintf( log_file, "%s :: %s\n", strtime, bufew );
+			time(&rawtime);
+			info = localtime( &rawtime);
+			strftime(buffer, 80, "%b-%d-%Y (%H:%M)", info);
+			fprintf( log_file, "%s :: %s\n", buffer, bufew );
 			fflush(log_file);
 			fclose( log_file );
 			snprintf(bufee,sizeof(bufee), "Command: %s",bufew);
