@@ -6284,10 +6284,10 @@ void do_snippets( CHAR_DATA *ch, char *argument )
 	send_to_char("\tn\n\r", ch);
 
 	send_to_char("\tW-----------------------------------Snippets-----------------------------------\tn\n\r", ch );
-	send_to_char( Format("| KaVir Protocol Path:  %3d                |\n\r", SNIPPET_VERSION), ch );
-	send_to_char( Format("| ILAB Online Creation:  %3s                |\n\r", OLC_VERSION), ch );
-	send_to_char( Format("| Grid Version:  %3d                |\n\r", GRID_VERSION), ch );
-	send_to_char( Format("| Wizard Utilities:  %3s                |\n\r", WIZUTIL_VERSION), ch );
+	send_to_char( Format("| %25s %4d %44s|\n\r", "KaVir Protocol Path:",SNIPPET_VERSION, " "), ch );
+	send_to_char( Format("| %25s %4s %44s|\n\r", "ILAB Online Creation:",OLC_VERSION, " "), ch );
+	send_to_char( Format("| %25s %4d %44s|\n\r", "Grid Version:",GRID_VERSION, " "), ch );
+	send_to_char( Format("| %25s %4s %44s|\n\r", "Wizard Utilities:",WIZUTIL_VERSION, " "), ch );
 	send_to_char("\tW------------------------------------------------------------------------------\tn\n\r", ch );
 
 	return;
