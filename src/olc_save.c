@@ -1186,39 +1186,39 @@ void save_triggers(FILE *fp, PERSONA *persona)
 	fprintf(fp, "A0\n");
 }
 
-void save_personas(FILE *fp)
-{
-	PERSONA *persona;
+// void save_personas(FILE *fp)
+// {
+// 	PERSONA *persona;
 
-	for(persona = persona_first; persona; persona = persona->next)
-	{
-		fprintf(fp, "#%d\n", persona->vnum);
-		fprintf(fp, "%s~\n", persona->name);
-		save_triggers(fp, persona);
-		fprintf(fp, "#0\n");
-	}
-}
+// 	for(persona = persona_first; persona; persona = persona->next)
+// 	{
+// 		fprintf(fp, "#%d\n", persona->vnum);
+// 		fprintf(fp, "%s~\n", persona->name);
+// 		save_triggers(fp, persona);
+// 		fprintf(fp, "#0\n");
+// 	}
+// }
 
-void do_save_ai (CHAR_DATA *ch, char *argument)
-{
-	FILE *fp;
+// void do_save_ai (CHAR_DATA *ch, char *argument)
+// {
+// 	FILE *fp;
 
-	closeReserve();
-	if ( !( fp = fopen( "ai.are", "w" ) ) )
-	{
-		log_string(LOG_BUG, "Save_AI: fopen");
-		perror( "ai.are" );
-	}
+// 	closeReserve();
+// 	if ( !( fp = fopen( "ai.are", "w" ) ) )
+// 	{
+// 		log_string(LOG_BUG, "Save_AI: fopen");
+// 		perror( "ai.are" );
+// 	}
 
-	fprintf(fp, "#PERSONALITIES\n");
-	save_personas(fp);
+// 	fprintf(fp, "#PERSONALITIES\n");
+// 	save_personas(fp);
 
-	fprintf( fp, "#$\n" );
+// 	fprintf( fp, "#$\n" );
 
-	fclose( fp );
-	openReserve();
-	return;
-}
+// 	fclose( fp );
+// 	openReserve();
+// 	return;
+// }
 
 
 void do_hsave (CHAR_DATA *ch, char *argument)

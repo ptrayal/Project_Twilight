@@ -2067,50 +2067,50 @@ void do_sedit( CHAR_DATA *ch, char *argument )
 
 
 /* Entry point for editing personas. */
-void do_aiedit( CHAR_DATA *ch, char *argument )
-{
-	PERSONA *pPersona = NULL;
-	int value;
-	char arg1[MSL]={'\0'};
+// void do_aiedit( CHAR_DATA *ch, char *argument )
+// {
+// 	PERSONA *pPersona = NULL;
+// 	int value;
+// 	char arg1[MSL]={'\0'};
 
-	CheckChNPC(ch);
+// 	CheckChNPC(ch);
 
-	argument = one_argument( argument, arg1 );
+// 	argument = one_argument( argument, arg1 );
 
-	if ( is_number( arg1 ) )
-	{
-	value = atoi( arg1 );
-	if ( !( pPersona = get_persona_index( value ) ))
-	{
-		send_to_char( "AIEdit:  That vnum does not exist.\n\r", ch );
-		return;
-	}
+// 	if ( is_number( arg1 ) )
+// 	{
+// 	value = atoi( arg1 );
+// 	if ( !( pPersona = get_persona_index( value ) ))
+// 	{
+// 		send_to_char( "AIEdit:  That vnum does not exist.\n\r", ch );
+// 		return;
+// 	}
 
-	ch->desc->pEdit = (void *)pPersona;
-	ch->desc->editor = ED_PERSONA;
-	return;
-	}
-	else
-	{
-	if ( !str_cmp( arg1, "create" ) )
-	{
-		if ( IS_NULLSTR(arg1) )
-		{
-		send_to_char( "Syntax:  edit persona create\n\r", ch );
-		return;
-		}
+// 	ch->desc->pEdit = (void *)pPersona;
+// 	ch->desc->editor = ED_PERSONA;
+// 	return;
+// 	}
+// 	else
+// 	{
+// 	if ( !str_cmp( arg1, "create" ) )
+// 	{
+// 		if ( IS_NULLSTR(arg1) )
+// 		{
+// 		send_to_char( "Syntax:  edit persona create\n\r", ch );
+// 		return;
+// 		}
 
-		if ( aiedit_create( ch, "" ) )
-		{
-		ch->desc->editor = ED_PERSONA;
-		}
-		return;
-	}
-	}
+// 		if ( aiedit_create( ch, "" ) )
+// 		{
+// 		ch->desc->editor = ED_PERSONA;
+// 		}
+// 		return;
+// 	}
+// 	}
 
-	send_to_char( "AIEdit:  There is no default persona to edit.\n\r(Use aiedit create to create a new persona.)\n\r", ch );
-	return;
-}
+// 	send_to_char( "AIEdit:  There is no default persona to edit.\n\r(Use aiedit create to create a new persona.)\n\r", ch );
+// 	return;
+// }
 
 
 /* Entry point for editing reacts. */
@@ -2971,19 +2971,19 @@ void do_slist( CHAR_DATA *ch, char *argument )
  Purpose:	Normal command to list personas and display persona information.
  Called by:	interpreter(interp.c)
  ****************************************************************************/
-void do_ailist( CHAR_DATA *ch, char *argument )
-{
-	PERSONA *pPersona;
+// void do_ailist( CHAR_DATA *ch, char *argument )
+// {
+// 	PERSONA *pPersona;
 
-	send_to_char(Format("\n\r[%3s] [%-27s]\n\r", "Num", "Name"), ch);
+// 	send_to_char(Format("\n\r[%3s] [%-27s]\n\r", "Num", "Name"), ch);
 
-	for ( pPersona = persona_first; pPersona; pPersona = pPersona->next )
-	{
-		send_to_char(Format("[%3d] %-29.29s\n\r", pPersona->vnum, pPersona->name), ch);
-	}
+// 	for ( pPersona = persona_first; pPersona; pPersona = pPersona->next )
+// 	{
+// 		send_to_char(Format("[%3d] %-29.29s\n\r", pPersona->vnum, pPersona->name), ch);
+// 	}
 
-	return;
-}
+// 	return;
+// }
 
 int count_reactions(REACT_DATA *r1)
 {
