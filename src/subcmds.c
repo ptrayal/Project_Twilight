@@ -1901,7 +1901,7 @@ void stanza(char *argument)
 	/* Removed to try to fix name changing bug.
     return str_dup(temp);
 	 */
-	strncpy(argument, temp, sizeof(argument));
+	strncpy(argument, temp, sizeof(*argument));
 	return;
 }
 

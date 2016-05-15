@@ -681,7 +681,7 @@ void pretty_proc( char *buf, char *word )
 		/* strip trailing spaces */
 		for( i = strlen(pbuf) - 1; i >= 0 && pbuf[i] == ' '; i--)
 			pbuf[i] = 0;
-		strncat( pbuf, word, sizeof(pbuf)  );
+		strncat( pbuf, word, sizeof(*pbuf)  );
 		index = 0;
 		return;
 	}
@@ -701,12 +701,12 @@ void pretty_proc( char *buf, char *word )
 		/* strip trailing spaces */
 		for( i = strlen(pbuf) - 1; i >= 0 && pbuf[i] == ' '; i--)
 			pbuf[i] = 0;
-		strncat(pbuf,"\n\r", sizeof(pbuf) );
+		strncat(pbuf,"\n\r", sizeof(*pbuf) );
 		index = 0;
 		while(*word == ' ')
 			word++;
 	}
-	strncat( pbuf, word, sizeof(pbuf)  );
+	strncat( pbuf, word, sizeof(*pbuf)  );
 	index += strlen(word);
 }
 

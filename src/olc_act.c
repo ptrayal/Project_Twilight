@@ -4383,7 +4383,7 @@ MEDIT( medit_long )
 	}
 
 	PURGE_DATA( pMob->long_descr );
-	strncat( argument, "\n\r", sizeof(argument) );
+	strncat( argument, "\n\r", sizeof(*argument) );
 	pMob->long_descr = str_dup( argument );
 	pMob->long_descr[0] = UPPER( pMob->long_descr[0]  );
 
