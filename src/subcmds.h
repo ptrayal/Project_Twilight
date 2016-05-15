@@ -1,3 +1,6 @@
+#ifndef SUBCMDS_H
+#define SUBCMDS_H
+
 /*
  * Job commands.
  */
@@ -118,3 +121,4 @@ DECLARE_BLD_FUN( home_name		);
 DECLARE_BLD_FUN( home_desc		);
 DECLARE_BLD_FUN( home_list		);
 
+#endif

@@ -1,3 +1,5 @@
+#ifndef INTERP_H
+#define INTERP_H
 /* this is a listing of all the commands and command related data */
 
 /* wrapper function for safe command execution */
@@ -599,3 +601,5 @@ DECLARE_DO_FUN( do_aedit	);
 DECLARE_DO_FUN( do_medit	);
 DECLARE_DO_FUN( do_oedit	);
 DECLARE_DO_FUN( do_mpedit	);
+
+#endif

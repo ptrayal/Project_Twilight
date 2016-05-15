@@ -1,3 +1,6 @@
+#ifndef ABILITIES_H
+#define ABILITIES_H
+
 struct skill_list_entry {
 
 char * name;
@@ -25,3 +28,5 @@ sh_int value;
 #define RACE_DEMON	 9
 #define RACE_MUMMY	 10
 #define MAX_PC_RACE      11
+
+#endif

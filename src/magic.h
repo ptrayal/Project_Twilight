@@ -1,3 +1,5 @@
+#ifndef MAGIC_H
+#define MAGIC_H
 /*
  * Spell functions.
  * Defined in magic.c.
@@ -104,3 +106,5 @@ DECLARE_SPELL_FUN(	rite_introduction	);
 DECLARE_SPELL_FUN(	rite_pack		);
 DECLARE_SPELL_FUN(	rite_recognition	);
 DECLARE_SPELL_FUN(	rite_hero		);
+
+#endif

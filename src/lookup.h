@@ -1,3 +1,6 @@
+#ifndef LOOKUP_H
+#define LOOKUP_H
+
 int	position_lookup	args( (const char *name) );
 int 	sex_lookup	args( (const char *name) );
 int 	size_lookup	args( (const char *name) );
@@ -28,3 +31,5 @@ char * colour_lookup (char name, bool colour);
 int trait_lookup(char *name, const struct trait_struct *trait_table);
 int rite_lookup(CHAR_DATA *ch);
 int riteaction_lookup(char *name);
+
+#endif

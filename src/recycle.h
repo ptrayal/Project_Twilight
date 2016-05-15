@@ -1,3 +1,6 @@
+#ifndef RECYCLE_H
+#define RECYCLE_H
+
 /* externs */
 extern char str_empty[1];
 extern int mobile_count;
@@ -139,3 +142,4 @@ MPC	*new_mpcode args( (void) );
 void	free_mpcode args( (MPC *mpcode) );
 #undef MPC
 
+#endif

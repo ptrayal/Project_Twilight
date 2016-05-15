@@ -1,3 +1,6 @@
+#ifndef TABLES_H
+#define TABLES_H
+
 /* Table structs */
 struct flag_type
 {
@@ -438,3 +441,5 @@ extern  char *  const                           title_table     [MAX_CLAN]
 
 extern          char *          const dir_name  [];
 extern          const sh_int    rev_dir         [];
+
+#endif
