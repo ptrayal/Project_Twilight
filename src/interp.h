@@ -52,7 +52,7 @@ DECLARE_DO_FUN( do_afk		);
 DECLARE_DO_FUN( do_affects	);
 DECLARE_DO_FUN( do_wwgift1_ahr	);
 DECLARE_DO_FUN( do_wwgift4_ahr	);
-DECLARE_DO_FUN( do_aiedit	);
+// DECLARE_DO_FUN( do_aiedit	);
 // DECLARE_DO_FUN( do_ailist	);
 DECLARE_DO_FUN( do_alia		);
 DECLARE_DO_FUN( do_alias	);

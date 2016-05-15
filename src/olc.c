@@ -69,9 +69,9 @@ bool run_olc_editor( DESCRIPTOR_DATA *d )
 	case ED_SCRIPT:
 	sedit( d->character, d->incomm );
 	break;
-	case ED_PERSONA:
-	aiedit( d->character, d->incomm );
-	break;
+	// case ED_PERSONA:
+	// aiedit( d->character, d->incomm );
+	// break;
 	case ED_REACT:
 	rsedit( d->character, d->incomm );
 	break;
@@ -1376,45 +1376,45 @@ void sedit( CHAR_DATA *ch, char *argument )
 
 
 /* Persona Unit Interpreter, called by do_aiedit. */
-void aiedit( CHAR_DATA *ch, char *argument )
-{
-	PERSONA *pPersona;
-	char command[MIL]={'\0'};
-	char arg[MIL]={'\0'};
-	int  cmd = 0;
+// void aiedit( CHAR_DATA *ch, char *argument )
+// {
+// 	PERSONA *pPersona;
+// 	char command[MIL]={'\0'};
+// 	char arg[MIL]={'\0'};
+// 	int  cmd = 0;
 
-	EDIT_PERSONA(ch, pPersona);
-	smash_tilde( argument );
-	strncpy( arg, argument, sizeof(arg) );
-	argument = one_argument( argument, command );
+// 	EDIT_PERSONA(ch, pPersona);
+// 	smash_tilde( argument );
+// 	strncpy( arg, argument, sizeof(arg) );
+// 	argument = one_argument( argument, command );
 
-	if ( !str_cmp(command, "done") )
-	{
-	edit_done( ch );
-	return;
-	}
+// 	if ( !str_cmp(command, "done") )
+// 	{
+// 	edit_done( ch );
+// 	return;
+// 	}
 
-	if ( IS_NULLSTR(command) )
-	{
-	aiedit_show( ch, argument );
-	send_to_char("\tOType 'done' to exit the editor.\tn\n\r", ch);
-	return;
-	}
+// 	if ( IS_NULLSTR(command) )
+// 	{
+// 	aiedit_show( ch, argument );
+// 	send_to_char("\tOType 'done' to exit the editor.\tn\n\r", ch);
+// 	return;
+// 	}
 
-	/* Search Table and Dispatch Command. */
-	for ( cmd = 0; aiedit_table[cmd].name != NULL; cmd++ )
-	{
-	if ( !str_prefix( command, aiedit_table[cmd].name ) )
-	{
-		if ( (*aiedit_table[cmd].olc_fun) ( ch, argument ) )
-		return;
-	}
-	}
+// 	/* Search Table and Dispatch Command. */
+// 	for ( cmd = 0; aiedit_table[cmd].name != NULL; cmd++ )
+// 	{
+// 	if ( !str_prefix( command, aiedit_table[cmd].name ) )
+// 	{
+// 		if ( (*aiedit_table[cmd].olc_fun) ( ch, argument ) )
+// 		return;
+// 	}
+// 	}
 
-	/* Default to Standard Interpreter. */
-	interpret( ch, arg );
-	return;
-}
+// 	/* Default to Standard Interpreter. */
+// 	interpret( ch, arg );
+// 	return;
+// }
 
 
 /* AI Reaction Unit Interpreter, called by do_rsedit. */
@@ -1569,7 +1569,7 @@ const struct editor_cmd_type editor_table[] =
 	{   "plot",		do_pedit	},
 	{   "event",	do_eedit	},
 	{   "script",	do_sedit	},
-	{   "persona",	do_aiedit	},
+	// {   "persona",	do_aiedit	},
 	{   "react",	do_rsedit	},
 	{   "help",		do_hedit	},
 	{   "tip",		do_tipedit	},

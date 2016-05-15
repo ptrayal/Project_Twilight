@@ -191,12 +191,12 @@ void discreetify( char *argument, char *discreet )
 
 	if ((letter = strstr(argument,"\"")) == NULL)
 	{
-		strncpy(discreet, argument, sizeof(discreet));
+		strncpy(discreet, argument, sizeof(*discreet));
 		return;
 	}
 	if ((endbit = strstr(letter + 1,"\"")) == NULL)
 	{
-		strncpy(discreet, argument, sizeof(discreet));
+		strncpy(discreet, argument, sizeof(*discreet));
 		return;
 	}
 
@@ -215,7 +215,7 @@ void discreetify( char *argument, char *discreet )
 
 	return argument;
 	 */
-	strncpy(discreet, temp, sizeof(discreet));
+	strncpy(discreet, temp, sizeof(*discreet));
 
 	return;
 }
@@ -258,7 +258,7 @@ void emote_say_colouring( char *argument, CHAR_DATA *ch )
 
 	return argument;
 	 */
-	strncpy(argument, temp, sizeof(argument));
+	strncpy(argument, temp, sizeof(*argument));
 
 	return;
 }

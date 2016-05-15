@@ -168,7 +168,7 @@ DECLARE_DO_FUN( do_medit        );
 DECLARE_DO_FUN( do_pedit        );
 DECLARE_DO_FUN( do_eedit        );
 DECLARE_DO_FUN( do_sedit        );
-DECLARE_DO_FUN( do_aiedit        );
+// DECLARE_DO_FUN( do_aiedit        );
 DECLARE_DO_FUN( do_rsedit        );
 DECLARE_DO_FUN( do_hedit         );
 DECLARE_DO_FUN( do_know          );

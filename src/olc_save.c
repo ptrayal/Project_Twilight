@@ -1164,27 +1164,27 @@ void save_reactions(FILE *fp, REACT *trig)
 	}
 }
 
-void save_triggers(FILE *fp, PERSONA *persona)
-{
-	REACT *trig;
-	int i = 0;
+// void save_triggers(FILE *fp, PERSONA *persona)
+// {
+// 	REACT *trig;
+// 	int i = 0;
 
-	for(i = 0; i < MAX_ATTITUDE; i++)
-	{
-		if(persona->matrix[i] == NULL)
-		{
-			continue;
-		}
+// 	for(i = 0; i < MAX_ATTITUDE; i++)
+// 	{
+// 		if(persona->matrix[i] == NULL)
+// 		{
+// 			continue;
+// 		}
 
-		for(trig = persona->matrix[i]; trig; trig = trig->next_in_matrix_loc)
-		{
-			fprintf(fp, "T %d %s~\n", i, trig->trig);
-			save_reactions(fp, trig);
-			fprintf(fp, "End\n");
-		}
-	}
-	fprintf(fp, "A0\n");
-}
+// 		for(trig = persona->matrix[i]; trig; trig = trig->next_in_matrix_loc)
+// 		{
+// 			fprintf(fp, "T %d %s~\n", i, trig->trig);
+// 			save_reactions(fp, trig);
+// 			fprintf(fp, "End\n");
+// 		}
+// 	}
+// 	fprintf(fp, "A0\n");
+// }
 
 // void save_personas(FILE *fp)
 // {
