@@ -184,7 +184,6 @@ const	struct	cmd_type	cmd_table	[] =
 		{	"dsay",			do_dsay,		P_REST,		0,	L_COM,	1,	B|H,	0 },
 		{	"eat",			do_eat,			P_REST,		0,	L_NRM,	1,	B|H,	0 },
 		{	"edit",			do_olc,			P_DEAD,		0,	L_NRM,	2,	A|B,	0 },
-		{	"email",		do_email,		P_DEAD,		0,	L_COM,	1,	A|B|E,	0 },
 		{	"emote",		do_dmote,		P_REST,		0,	L_NRM,	1,	B,	0 },
 		{	"enter",		do_enter,		P_STAND,	0,	L_NRM,	1,	A|B|H,	0 },
 		{	"envenom",		do_envenom,		P_REST,		0,	L_NRM,	1,	B|H,	0 },

@@ -2650,66 +2650,6 @@ void set_email( CHAR_DATA *ch, char *email )
 	return;
 }
 
-void do_email(CHAR_DATA *ch, char *argument)
-{
-	char arg[MIL]={'\0'};
-
-	CheckCH(ch);
-
-	if(!IS_NULLSTR(argument))
-	{
-		if(ch->email_lock > 0)
-		{
-			send_to_char( "You need to enter the lock code from the email sent.\n\r", ch);
-			send_to_char("To change the submitted email address use: \tCemail [address]\tn\n\r", ch);
-			return;
-		}
-		else
-		{
-			send_to_char("Syntax: \tCemail [address]\tn\n\r", ch);
-			return;
-		}
-	}
-
-	one_argument(argument, arg);
-
-	if(is_number(arg))
-	{
-		long lock;
-		if(ch->email_lock == 0)
-		{
-			send_to_char( "You need to submit an email address before entering a lock code.\n\r", ch);
-			send_to_char("Syntax: \tCemail [address]\tn\n\r", ch);
-			return;
-		}
-
-		if((lock = atol(arg)) == ch->email_lock)
-		{
-			send_to_char("Email unlocked. You may now send emails from the note system.\n\r", ch);
-			SET_BIT(ch->plr_flags, PLR_EMAIL);
-			do_save(ch,"");
-		}
-		else
-		{
-			send_to_char("That is not the correct email lock code.\n\r", ch);
-		}
-
-		return;
-	}
-
-	if(!strchr(arg, '@') && !strchr(strchr(arg, '@'), '.'))
-	{
-		send_to_char("That doesn't even look like a valid email address.\n\r", ch);
-		return;
-	}
-
-	smash_tilde( arg );
-	set_email( ch, arg );
-	act( "Email address set to: $t\n\r", ch, ch->email_addr, NULL, TO_CHAR, 1 );
-	if(IS_SET(ch->plr_flags, PLR_EMAIL)) REMOVE_BIT(ch->plr_flags, PLR_EMAIL);
-	do_save(ch,"");
-}
-
 void do_ignore(CHAR_DATA *ch, char *argument)
 {
 	CHAR_DATA *vch;

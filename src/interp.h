@@ -172,7 +172,6 @@ DECLARE_DO_FUN(	do_eedit	);
 DECLARE_DO_FUN(	do_elder	);
 DECLARE_DO_FUN(	do_election	);
 DECLARE_DO_FUN(	do_elist	);
-DECLARE_DO_FUN(	do_email	);
 DECLARE_DO_FUN(	do_embrace	);
 DECLARE_DO_FUN(	do_emote	);
 DECLARE_DO_FUN( do_enchant	);
