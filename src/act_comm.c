@@ -2097,8 +2097,8 @@ void do_shadow( CHAR_DATA *ch, char *argument )
 {
 	char arg[MIL]={'\0'};
 	CHAR_DATA *victim;
-	int var_successes = 0, k = 0;
-	int var_difficulty = 0;
+	int var_shadower = 0, k = 0;
+	int var_observer = 0;
 
 	CheckCH(ch);
 
@@ -2140,16 +2140,16 @@ void do_shadow( CHAR_DATA *ch, char *argument )
 		k += 2;
 
 
-	var_difficulty = dice_rolls( victim, get_curr_stat(victim, STAT_PER) + victim->ability[ALERTNESS].value, 6);
-	var_successes = dice_rolls(ch, get_curr_stat(ch, STAT_DEX) + ch->ability[STEALTH].value + k, 6);
-	if(var_successes > var_difficulty)
+	var_observer = dice_rolls( victim, get_curr_stat(victim, STAT_PER) + victim->ability[ALERTNESS].value, 6);
+	var_shadower = dice_rolls(ch, get_curr_stat(ch, STAT_DEX) + ch->ability[STEALTH].value + k, 6);
+	if(var_shadower > var_observer)
 	{
 		if ( ch->master != NULL )
 			stop_follower( ch );
 
 		add_follower( ch, victim );
 	}
-	else if(var_successes <= var_difficulty)
+	else if(var_shadower <= var_observer)
 	{
 		act("$n tries to tail you!", ch, NULL, victim, TO_VICT, 0);
 		act("$N spots you!", ch, NULL, victim, TO_CHAR, 0);
