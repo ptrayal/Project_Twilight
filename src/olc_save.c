@@ -1238,7 +1238,8 @@ void do_hsave (CHAR_DATA *ch, char *argument)
 	for(help = help_list; help; help = help->next)
 	{
 		fprintf(fp, "%d %s~\n", help->level, help->keyword);
-		fprintf(fp, "%s~\n%s~\n", help->races, help->clans);
+		fprintf(fp, "%s~\n", help->races);
+		fprintf(fp, "%s~\n",help->clans);
 
 		if(!IS_NULLSTR(help->topic))
 			fprintf(fp, "Topic %s~\n", help->topic);

@@ -857,7 +857,8 @@ void fread_help( HELP_DATA *help, FILE *fp )
 
 		if ( !fMatch )
 		{
-			log_string(LOG_BUG, "Fread_help: no match. Dumping into unformatted.");
+			log_string(LOG_BUG, "Fread_help: no match for (%s). Dumping into unformatted.", help->keyword);
+			// log_string(LOG_BUG, "Fread_help: no match for (%s). Dumping into unformatted.", help->unformatted);
 			help->unformatted = fread_string( fp ) ;
 		}
 	}
