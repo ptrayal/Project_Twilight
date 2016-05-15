@@ -1164,8 +1164,9 @@ void char_update( void )
             if (af->level == 1)
             	continue;
 
-	    plague.where		= TO_AFFECTS;
+	    	plague.where		= TO_AFFECTS;
             plague.type 		= gsn_plague;
+            plague.level 		= af->level - 1;
             plague.duration 	= number_range(1,2 * plague.level);
             plague.location		= APPLY_STR;
             plague.modifier 	= -5;
