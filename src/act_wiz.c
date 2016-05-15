@@ -5666,7 +5666,7 @@ void do_backup(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	system("~/backup &");
+	system("~/ptmud/scripts/backup &");
 	send_to_char("Backup under way.\n\r", ch);
 	backup = TRUE;
 	wiznet("\tY[WIZNET]\tn $N starts a backup cycle.",	ch,NULL,WIZ_LOAD,WIZ_SECURE,3);
@@ -5682,7 +5682,7 @@ void do_unpak(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	system("~/mud/scripts/unpak &");
+	system("~/ptmud/scripts/unpak &");
 	send_to_char("Unpak under way.\n\r", ch);
 	backup = TRUE;
 	wiznet("\tY[WIZNET]\tn $N starts an unpak cycle.",	ch,NULL,WIZ_LOAD,WIZ_SECURE,3);
