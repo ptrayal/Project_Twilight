@@ -1177,12 +1177,12 @@ int number_argument( char *argument, char *arg )
 			*pdot = '\0';
 			number = atoi( argument );
 			*pdot = '.';
-			strncpy( arg, pdot+1, sizeof(arg) );
+			strncpy( arg, pdot+1, sizeof(*arg) );
 			return number;
 		}
 	}
 
-	strncpy( arg, argument, sizeof(arg) );
+	strncpy( arg, argument, sizeof(*arg) );
 	return 1;
 }
 
@@ -1201,12 +1201,12 @@ int mult_argument(char *argument, char *arg)
 			*pdot = '\0';
 			number = atoi( argument );
 			*pdot = '*';
-			strncpy( arg, pdot+1, sizeof(arg) );
+			strncpy( arg, pdot+1, sizeof(*arg) );
 			return number;
 		}
 	}
 
-	strncpy( arg, argument, sizeof(arg) );
+	strncpy( arg, argument, sizeof(*arg) );
 	return 1;
 }
 

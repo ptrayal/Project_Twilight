@@ -3899,7 +3899,7 @@ void do_string( CHAR_DATA *ch, char *argument )
 	    	return;
 	    }
 
- 	    strncat(argument,"\n\r", sizeof(argument));
+ 	    strncat(argument,"\n\r", sizeof(*argument));
 
 	    ed = new_extra_descr();
 
@@ -4789,7 +4789,7 @@ void checkexits (ROOM_INDEX_DATA *room, AREA_DATA *pArea, char* buffer)
 	EXIT_DATA *exit;
 	ROOM_INDEX_DATA *to_room;
 
-	strncpy (buffer, "", sizeof(buffer));
+	strncpy (buffer, "", sizeof(*buffer));
 	for (i = 0; i < 6; i++)
 	{
 		exit = room->exit[i];
@@ -4814,7 +4814,7 @@ void checkexits (ROOM_INDEX_DATA *room, AREA_DATA *pArea, char* buffer)
 				else
 					room_pair (room,to_room,exit_to,buf); /* > */
 
-				strncat (buffer, buf, sizeof(buffer));
+				strncat (buffer, buf, sizeof(*buffer));
 			}
 			else
 			if ( (room->area != pArea) && (exit->u1.to_room->area == pArea) )
@@ -4827,7 +4827,7 @@ void checkexits (ROOM_INDEX_DATA *room, AREA_DATA *pArea, char* buffer)
 				/* two-way exits are handled in the other if */
 				{
 					room_pair (to_room,room,exit_from,buf);
-					strncat (buffer, buf, sizeof(buffer));
+					strncat (buffer, buf, sizeof(*buffer));
 				}
 
 			} /* if room->area */
