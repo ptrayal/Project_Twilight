@@ -531,9 +531,9 @@ const	struct	cmd_type	cmd_table	[] =
 /* 		{ "vlist",	do_vlist,	P_DEAD,		WA, L_NRM, 1, A|B, 0},*/
 	{	":",				do_immtalk,			P_DEAD,	WA,	L_SCOM,	0,	A|B|E,	0 },
 	{	"addlag",			do_addlag,			P_DEAD,	ST,	L_ALL,	1,	A|B|E,	0 },
-	{	"ai_edit",			do_aiedit,			P_DEAD,	MA,	L_NRM,	1,	A|B|E,	0 },
-	{	"ai_list",			do_ailist,			P_DEAD,	ST,	L_NRM,	1,	A|B|E,	0 },
-	{	"ai_save",			do_save_ai,			P_DEAD,	MA,	L_NRM,	1,	A|B|E,	0 },
+	// {	"ai_edit",			do_aiedit,			P_DEAD,	MA,	L_NRM,	1,	A|B|E,	0 },
+	// {	"ai_list",			do_ailist,			P_DEAD,	ST,	L_NRM,	1,	A|B|E,	0 },
+	// {	"ai_save",			do_save_ai,			P_DEAD,	MA,	L_NRM,	1,	A|B|E,	0 },
 	{	"alist",			do_alist,			P_DEAD,	WA,	L_NRM,	1,	A|B|E,	0 },
 	{	"allow",			do_allow,			P_DEAD,	WA,	L_ALL,	1,	A|B|E,	0 },
 	{	"articles",			do_articles,		P_DEAD,	WA,	L_NRM,	1,	A|B|E,	0 },
