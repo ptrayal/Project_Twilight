@@ -2043,7 +2043,7 @@ void do_score( CHAR_DATA *ch, char *argument )
 		}
 	}
 
-	//send_to_char("\n\r\n\r", user);
+	send_to_char("\n\r", user);
 
 	send_to_char("\tW---------------------------------<\tGInfluences\tW>---------------------------------\tn\n\r", user);
 
