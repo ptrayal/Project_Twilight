@@ -6025,32 +6025,6 @@ void do_score_revised( CHAR_DATA *ch, char *argument )
 	send_to_char("\n\r", user);
 }
 
-void do_testceleb(CHAR_DATA *ch, char *argument)
-{
-	CheckCH(ch);
-
-	send_to_char("\tWCelebrities currently online are:\tn\n\r", ch);
-	send_to_char(Format("\tYAllies->%15s - %s\tn\n\r", ch->name, fame_table[ch->backgrounds[ALLIES]].name), ch);
-	send_to_char(Format("\tYPurebreed->%15s - %s\tn\n\r", ch->name, fame_table[ch->backgrounds[PUREBREED]].name), ch);
-	send_to_char(Format("\tYContacts->%15s - %s\tn\n\r", ch->name, fame_table[ch->backgrounds[CONTACTS]].name), ch);
-	send_to_char(Format("\tYFetishes->%15s - %s\tn\n\r", ch->name, fame_table[ch->backgrounds[FETISHES]].name), ch);
-	send_to_char(Format("\tYGeneration->%15s - %s\tn\n\r", ch->name, fame_table[ch->backgrounds[GENERATION]].name), ch);
-	send_to_char(Format("\tYHerd->%15s - %s\tn\n\r", ch->name, fame_table[ch->backgrounds[HERD]].name), ch);
-	send_to_char(Format("\tYMentor->%15s - %s\tn\n\r", ch->name, fame_table[ch->backgrounds[MENTOR]].name), ch);
-	send_to_char(Format("\tYPast life->%15s - %s\tn\n\r", ch->name, fame_table[ch->backgrounds[PASTLIFE]].name), ch);
-	send_to_char(Format("\tYResources->%15s - %s\tn\n\r", ch->name, fame_table[ch->backgrounds[RESOURCES]].name), ch);
-	send_to_char(Format("\tYRetainers->%15s - %s\tn\n\r", ch->name, fame_table[ch->backgrounds[RETAINERS]].name), ch);
-	send_to_char(Format("\tYClan Status->%15s - %s\tn\n\r", ch->name, fame_table[ch->backgrounds[CLAN_STATUS]].name), ch);
-	send_to_char(Format("\tYFame->%15s - %s\tn\n\r", ch->name, fame_table[ch->backgrounds[FAME_STATUS]].name), ch);
-	send_to_char(Format("\tYRace Status->%15s - %s\tn\n\r", ch->name, fame_table[ch->backgrounds[RACE_STATUS]].name), ch);
-
-	// for(vch = char_list; vch != NULL; vch = vch->next)
-	// {
-	//     if(IS_NPC(vch) || vch->backgrounds[FAME_STATUS] == 0) continue;
-
-	//     send_to_char(Format("\tY%15s - %s\tn\n\r", vch->name, fame_table[vch->backgrounds[FAME_STATUS]].name), ch);
-	// }
-}
 
 const char *styleBackgrounds(CHAR_DATA *ch, int num) 
 {

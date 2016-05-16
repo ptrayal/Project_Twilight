@@ -511,7 +511,6 @@ DECLARE_DO_FUN( do_taxi         );
 DECLARE_DO_FUN(	do_teach	);
 DECLARE_DO_FUN(	do_tell		);
 DECLARE_DO_FUN(	do_telepath	);
-DECLARE_DO_FUN( do_testceleb );
 DECLARE_DO_FUN(	do_thanatosis1	);
 DECLARE_DO_FUN(	do_thanatosis2	);
 DECLARE_DO_FUN(	do_thanatosis3	);

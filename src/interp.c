@@ -640,7 +640,6 @@ const	struct	cmd_type	cmd_table	[] =
 	{	"wiznet",			do_wiznet,			P_DEAD,	WA,	L_NRM,	1,	A|B|E,	0 },
 	{	"xpclear",			do_resetoocxp,		P_DEAD,	ST,	L_ALL,	1,	A|B|E,	0 },
 	{	"testscore",		do_score_revised,	P_DEAD, IM, L_NRM,	1,	A|B|E,	0 },
-	{	"testceleb",		do_testceleb,		P_DEAD, IM, L_NRM,	1,	A|B|E,	0 },
 	{	"charsheet",		do_charsheet,		P_DEAD, IM, L_NRM,	1,	A|B|E,	0 },
 
 
