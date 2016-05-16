@@ -5616,6 +5616,9 @@ void do_score_revised( CHAR_DATA *ch, char *argument )
 	char buf[MSL]={'\0'};
 	int num = 0, i = 0;
 	int statcount = 0;
+	GRID_DATA *grid;
+    GRID_ROW *row;
+    GRID_CELL *cell;
 
 	CheckCH(ch);
 
@@ -5768,6 +5771,25 @@ void do_score_revised( CHAR_DATA *ch, char *argument )
 			}
 		}
 	}
+
+	grid = create_grid(75);
+	row = create_row(grid);
+	cell = row_append_cell(row, 35, "\tGBackgrounds\tn\n\r");
+	i = 0;
+	for(num=0;background_table[num].name;num++)
+	{
+		if(background_table[num].settable)
+		{
+			if(num < MAX_BACKGROUND)
+			{
+				cell_append_contents(cell, "%-11s:%3d\n\r", background_table[num].name, ch->backgrounds[num]);
+				i++;
+			}
+		}
+	}
+	row_append_cell(row, 40, "Influences");
+
+	grid_to_char (grid, user, TRUE );
 
 	send_to_char("\n\r", user);
 }
