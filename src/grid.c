@@ -217,10 +217,19 @@ int count_colour ( char *str )
 	while ( ( c = *str++ ) != '\0'  ) 
 	{
 		if ( c == '\t' )
-			{ count += 2; }
+            {
+                count++;
+                str++;
+            }
 
 		if ( c == '^' )
 			{ count++; }
+
+        if(c == '{' || c == '@')
+            {
+                count++;
+                str++;
+            }
 	}
 	return count * 2;
 }

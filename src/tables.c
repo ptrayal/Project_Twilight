@@ -3265,6 +3265,11 @@ const struct flag_type staff_status [] =
  * Generation, resources, contacts, herd, statuses (in as much as they exist),
  * fame
  */
+
+ /**
+  * Background Tables
+  * Background Name | Background | Settable
+  */
 const struct flag_type background_table [] =
 {
     { "Allies",         ALLIES,         TRUE    },
@@ -3283,6 +3288,10 @@ const struct flag_type background_table [] =
     { NULL,				0,				TRUE	}
 };
 
+/**
+ * Influence Table
+ * Influence Name | Influence | Settable
+ */
 const struct flag_type influence_table [] =
 {
     { "Church",		INFL_CHURCH,	TRUE	},

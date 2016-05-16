@@ -1930,34 +1930,220 @@ void do_score( CHAR_DATA *ch, char *argument )
 
 	send_to_char("\tW--------------------------------<\tGAdvantages\tW>----------------------------------\tn\n\r", user);
 
-/*    send_to_char( "Virtues:\n\r", user );*/
-	if(ch->race != race_lookup("werewolf"))
+	send_to_char( Format("Health: %-22s  ", health_string(ch)), user );
+	send_to_char( Format("Carrying: %d/%d lbs.\n\r", get_carry_weight(ch) / 10, can_carry_w(ch) /10), user );
+
+	send_to_char( Format("%8s (%2d)", race_table[ch->race].pc_race?pc_race_table[ch->race].GHB:"Humanity", ch->GHB), ch);
+	send_to_char( Format("%15sConscience   ", " ", ch->virtues[0]), ch);
+	
+	if (ch->virtues[0]<=0)
 	{
-		send_to_char(Format("%s:  %-20d Conscience: %d\n\r",
-				race_table[ch->race].pc_race?pc_race_table[ch->race].GHB:"Humanity", ch->GHB, ch->virtues[0]), user);
+		send_to_char( "\t[U9675/O]", user);
+		statcount=1;
+				while (statcount < 5)
+		{
+			send_to_char( "\t[U9675/O]", user);
+			statcount++;
+		}
 	}
 	else
 	{
-		send_to_char(Format("%s:  %2d/%-20d Conscience: %d\n\r",
-				race_table[ch->race].pc_race?pc_race_table[ch->race].GHB:"Humanity", ch->GHB, ch->max_GHB, ch->virtues[0]), user);
+		while (statcount < ch->virtues[0])
+		{
+			send_to_char( "\t[U9679/*]", user);
+			statcount++;
+		}
+		while (statcount < 5)
+		{
+			send_to_char( "\t[U9675/O]", user);
+			statcount++;
+		}
+	}
+	statcount=0;
+	send_to_char("\n\r", ch);
+
+	if (ch->GHB<=0)
+	{
+		send_to_char( "\t[U9675/O]", user);
+		statcount=1;
+				while (statcount < 10)
+		{
+			send_to_char( "\t[U9675/O]", user);
+			statcount++;
+		}
+	}
+	else
+	{
+		while (statcount < ch->GHB)
+		{
+			send_to_char( "\t[U9679/*]", user);
+			statcount++;
+		}
+		while (statcount < 10)
+		{
+			send_to_char( "\t[U9675/O]", user);
+			statcount++;
+		}
+	}
+	statcount=0;
+
+	// Spacing for proper formatting
+	send_to_char( Format("%18s", " "), ch);
+
+	send_to_char( "Self-Control ", ch);
+	if (ch->virtues[1]<=0)
+	{
+		send_to_char( "\t[U9675/O]", user);
+		statcount=1;
+				while (statcount < 5)
+		{
+			send_to_char( "\t[U9675/O]", user);
+			statcount++;
+		}
+	}
+	else
+	{
+		while (statcount < ch->virtues[1])
+		{
+			send_to_char( "\t[U9679/*]", user);
+			statcount++;
+		}
+		while (statcount < 5)
+		{
+			send_to_char( "\t[U9675/O]", user);
+			statcount++;
+		}
+	}
+	statcount=0;
+	send_to_char("\n\r", ch);
+
+	send_to_char("Willpower ", ch);
+	send_to_char( "(Resist ", ch);
+	if (IS_SET(ch->act2, ACT2_RESIST))
+	{
+		send_to_char( Format("%3s)", "on"), ch);
+	}
+	else
+	{
+		send_to_char( Format("\t<send href='resist'>%3s\t</send>)", "off"), ch);
 	}
 
+	send_to_char( Format("%6s", " "), ch);
+	send_to_char( "Courage      ", ch);
+	if (ch->virtues[2]<=0)
+	{
+		statcount=1;
+				while (statcount < 5)
+		{
+			send_to_char( "\t[U9675/O]", user);
+			statcount++;
+		}
+	}
+	else
+	{
+		while (statcount < ch->virtues[2])
+		{
+			send_to_char( "\t[U9679/*]", user);
+			statcount++;
+		}
+		while (statcount < 5)
+		{
+			send_to_char( "\t[U9675/O]", user);
+			statcount++;
+		}
+	}
+	statcount=0;
+	send_to_char("\n\r", ch);
 
-	send_to_char( Format("%s:  %2d/%-20d Self-Control: %d\n\r", race_table[ch->race].pc_race?pc_race_table[ch->race].RBPG:"Faith",
-			ch->RBPG, ch->max_RBPG, ch->virtues[1]), user);
+	// Max willpower first
+	if (ch->max_willpower<=0)	
+	{
+		send_to_char( "\t[U9675/O]", user);
+		statcount=1;
+				while (statcount < 10)
+		{
+			send_to_char( "\t[U9675/O]", user);
+			statcount++;
+		}
+	}
+	else
+	{
+		while (statcount < ch->max_willpower)
+		{
+			send_to_char( "\t[U9679/*]", user);
+			statcount++;
+		}
+		while (statcount < 10)
+		{
+			send_to_char( "\t[U9675/O]", user);
+			statcount++;
+		}
+	}
+	statcount=0;
+	send_to_char("\n\r", ch);
 
-	send_to_char( Format("Willpower: %2d/%-17d Courage: %d\n\r", ch->willpower, ch->max_willpower, ch->virtues[2]), user);
+	// Available willpower
+	if (ch->willpower<=0)	
+	{
+		send_to_char( "\t[U9746/O]", user);
+		statcount=1;
+		while (statcount < ch->max_willpower)
+		{
+			send_to_char( "\t[U9746/O]", user);
+			statcount++;
+		}
+	}
+	else
+	{
+		while (statcount < ch->willpower)
+		{
+			send_to_char( "\t[U9744/*]", user);
+			statcount++;
+		}
+		while (statcount < ch->max_willpower)
+		{
+			send_to_char( "\t[U9746/O]", user);
+			statcount++;
+		}
+	}
+	statcount=0;
 
-	send_to_char( Format("Health: %-22s  ", health_string(ch)), user );
-	send_to_char( Format("Carrying: %d/%d lbs.\n\r", get_carry_weight(ch) / 10, can_carry_w(ch) /10), user );
+	
+	send_to_char("\n\r", ch);
+
+	send_to_char( Format("%s\n\r", race_table[ch->race].pc_race?pc_race_table[ch->race].RBPG:"Faith"), ch);
+	// Available RBPG pool
+	if (ch->willpower<=0)	
+	{
+		while (statcount < ch->max_RBPG)
+		{
+			send_to_char( "\t[U9746/O]", user);
+			statcount++;
+		}
+	}
+	else
+	{
+		while (statcount < ch->RBPG)
+		{
+			send_to_char( "\t[U9744/*]", user);
+			statcount++;
+		}
+		while (statcount < ch->max_RBPG)
+		{
+			send_to_char( "\t[U9746/O]", user);
+			statcount++;
+		}
+	}
+	statcount=0;
+	send_to_char("\n\r", ch);
+
+	send_to_char("\tW------------------------------------------------------------------------------\tn\n\r", user);
 
 	if((num = ch->cents/100) > 0)
 	{
 		ch->dollars = ch->dollars + num;
 		ch->cents = ch->cents - (100 * num);
 	}
-
-	send_to_char("\tW------------------------------------------------------------------------------\tn\n\r", user);
 
 	send_to_char(Format("Experience/OOC Experience: %d / %d\n\r", ch->exp, ch->oocxp), user);
 	send_to_char(Format("Experience to Gift: %d\n\r", ch->xpgift), user);
@@ -5764,215 +5950,6 @@ void do_score_revised( CHAR_DATA *ch, char *argument )
 		send_to_char(Format("You are the devoted servant of %s.\r\n", ch->ghouled_by), user);
 	}
 
-	send_to_char("\tW------------------------------------------------------------------------------\tn\n\r", user);
-
-	send_to_char( Format("%s\n\r", race_table[ch->race].pc_race?pc_race_table[ch->race].RBPG:"Faith"), ch);
-	// Available RBPG pool
-	if (ch->willpower<=0)	
-	{
-		while (statcount < ch->max_RBPG)
-		{
-			send_to_char( "\t[U9746/O]", user);
-			statcount++;
-		}
-	}
-	else
-	{
-		while (statcount < ch->RBPG)
-		{
-			send_to_char( "\t[U9744/*]", user);
-			statcount++;
-		}
-		while (statcount < ch->max_RBPG)
-		{
-			send_to_char( "\t[U9746/O]", user);
-			statcount++;
-		}
-	}
-	statcount=0;
-	send_to_char("\n\r", ch);
-
-
-
-	send_to_char("\tW------------------------------------------------------------------------------\tn\n\r", user);
-
-	send_to_char( Format("%8s (%2d)", race_table[ch->race].pc_race?pc_race_table[ch->race].GHB:"Humanity", ch->GHB), ch);
-	send_to_char( Format("%15sConscience   ", " ", ch->virtues[0]), ch);
-	
-	if (ch->virtues[0]<=0)
-	{
-		send_to_char( "\t[U9675/O]", user);
-		statcount=1;
-				while (statcount < 5)
-		{
-			send_to_char( "\t[U9675/O]", user);
-			statcount++;
-		}
-	}
-	else
-	{
-		while (statcount < ch->virtues[0])
-		{
-			send_to_char( "\t[U9679/*]", user);
-			statcount++;
-		}
-		while (statcount < 5)
-		{
-			send_to_char( "\t[U9675/O]", user);
-			statcount++;
-		}
-	}
-	statcount=0;
-	send_to_char("\n\r", ch);
-
-	if (ch->GHB<=0)
-	{
-		send_to_char( "\t[U9675/O]", user);
-		statcount=1;
-				while (statcount < 10)
-		{
-			send_to_char( "\t[U9675/O]", user);
-			statcount++;
-		}
-	}
-	else
-	{
-		while (statcount < ch->GHB)
-		{
-			send_to_char( "\t[U9679/*]", user);
-			statcount++;
-		}
-		while (statcount < 10)
-		{
-			send_to_char( "\t[U9675/O]", user);
-			statcount++;
-		}
-	}
-	statcount=0;
-
-	// Spacing for proper formatting
-	send_to_char( Format("%18s", " "), ch);
-
-	send_to_char( "Self-Control ", ch);
-	if (ch->virtues[1]<=0)
-	{
-		send_to_char( "\t[U9675/O]", user);
-		statcount=1;
-				while (statcount < 5)
-		{
-			send_to_char( "\t[U9675/O]", user);
-			statcount++;
-		}
-	}
-	else
-	{
-		while (statcount < ch->virtues[1])
-		{
-			send_to_char( "\t[U9679/*]", user);
-			statcount++;
-		}
-		while (statcount < 5)
-		{
-			send_to_char( "\t[U9675/O]", user);
-			statcount++;
-		}
-	}
-	statcount=0;
-	send_to_char("\n\r", ch);
-
-	send_to_char("Willpower ", ch);
-	send_to_char( "(Resist ", ch);
-	if (IS_SET(ch->act2, ACT2_RESIST))
-	{
-		send_to_char( Format("%3s)", "on"), ch);
-	}
-	else
-	{
-		send_to_char( Format("\t<send href='resist'>%3s\t</send>)", "off"), ch);
-	}
-
-	send_to_char( Format("%6s", " "), ch);
-	send_to_char( "Courage      ", ch);
-	if (ch->virtues[2]<=0)
-	{
-		statcount=1;
-				while (statcount < 5)
-		{
-			send_to_char( "\t[U9675/O]", user);
-			statcount++;
-		}
-	}
-	else
-	{
-		while (statcount < ch->virtues[2])
-		{
-			send_to_char( "\t[U9679/*]", user);
-			statcount++;
-		}
-		while (statcount < 5)
-		{
-			send_to_char( "\t[U9675/O]", user);
-			statcount++;
-		}
-	}
-	statcount=0;
-	send_to_char("\n\r", ch);
-
-	// Max willpower first
-	if (ch->max_willpower<=0)	
-	{
-		send_to_char( "\t[U9675/O]", user);
-		statcount=1;
-				while (statcount < 10)
-		{
-			send_to_char( "\t[U9675/O]", user);
-			statcount++;
-		}
-	}
-	else
-	{
-		while (statcount < ch->max_willpower)
-		{
-			send_to_char( "\t[U9679/*]", user);
-			statcount++;
-		}
-		while (statcount < 10)
-		{
-			send_to_char( "\t[U9675/O]", user);
-			statcount++;
-		}
-	}
-	statcount=0;
-	send_to_char("\n\r", ch);
-
-	// Available willpower
-	if (ch->willpower<=0)	
-	{
-		send_to_char( "\t[U9746/O]", user);
-		statcount=1;
-		while (statcount < ch->max_willpower)
-		{
-			send_to_char( "\t[U9746/O]", user);
-			statcount++;
-		}
-	}
-	else
-	{
-		while (statcount < ch->willpower)
-		{
-			send_to_char( "\t[U9744/*]", user);
-			statcount++;
-		}
-		while (statcount < ch->max_willpower)
-		{
-			send_to_char( "\t[U9746/O]", user);
-			statcount++;
-		}
-	}
-	statcount=0;
-
-	
-	send_to_char("\n\r", ch);
 	send_to_char("\tW--------------------------------<\tGBackgrounds\tW>---------------------------------\tn\n\r", user);
 
 	i = 0;
@@ -6016,178 +5993,48 @@ void do_score_revised( CHAR_DATA *ch, char *argument )
 
 	send_to_char("\tW---------------------------------<\tGInfluences\tW>---------------------------------\tn\n\r", user);
 
-	for(num=0;influence_table[num].name;num++)
+	i = 0;
+	for(num=0; influence_table[num].name; num++)
 	{
-		send_to_char(Format("%11s:%4d ", influence_table[num].name, ch->influences[num]), user);
-		if((num+1)%4 == 0)
-			send_to_char("\n\r", user);
+		if(influence_table[num].settable)
+		{
+			if(num < MAX_BG)
+			{
+				send_to_char(Format("\t<send href='help %s'>%-11s\t</send>:", influence_table[num].name, influence_table[num].name), user);
+				if(ch->influences[num]<=0)
+				{
+					send_to_char("\t[U9675/O]", user);
+					statcount = 1;
+					while (statcount < 5)
+					{
+						send_to_char("\t[U9675/O]", user);
+						statcount++;
+					}
+				}
+				else
+				{
+					while(statcount < ch->influences[num])
+					{
+						send_to_char("\t[U9679/*]", user);
+						statcount++;
+					}
+					while (statcount < 5)
+					{
+						send_to_char("\t[U9675/O]", user);
+						statcount++;
+					}
+
+				}
+				send_to_char("\r\n", user);
+				statcount = 0;
+				i++;
+			}
+		}
 	}
+
 	send_to_char("\n\r", user);
 }
 
-
-const char *styleBackgrounds(CHAR_DATA *ch, int num) 
-{
-
-    int statcount = 0;
-    static char            ostr  [ MSL ]={'\0'};
-
-    strncpy(ostr, "", MSL);
-
-    if(ch->desc && ch->desc->pProtocol && ch->desc->pProtocol->pVariables[eMSDP_UTF_8]->ValueInt == 1 ) 
-    {
-        if(ch->backgrounds[num]<=0)
-        {
-            snprintf(ostr, MSL, "\t[U9675/O]");
-            statcount = 1;
-            while (statcount < 5)
-            {
-                strncat(ostr, "\t[U9675/O]", MSL);
-                statcount++;
-            }
-        }
-        else
-        {
-            while(statcount < ch->backgrounds[num])
-            {
-                strncat(ostr, "\t[U9679/*]", MSL);
-                statcount++;
-            }
-            while (statcount < 5)
-            {
-                strncat(ostr, "\t[U9675/O]", MSL);
-                statcount++;
-            }
-        }
-    } 
-    else 
-    {
-        if(ch->backgrounds[num]<=0)
-        {
-            snprintf(ostr, MSL, "O");
-            statcount = 1;
-            while (statcount < 5)
-            {
-                strncat(ostr, "O", MSL);
-                statcount++;
-            }
-        }
-        else
-        {
-            while(statcount < ch->backgrounds[num])
-            {
-                strncat(ostr, "*", MSL);
-                statcount++;
-            }
-            while (statcount < 5)
-            {
-                strncat(ostr, "O", MSL);
-                statcount++;
-            }
-        }
-    }
-    statcount = 0;
-    return ostr;
-}
-
-void do_charsheet( CHAR_DATA *ch, char *argument )
-{
-	GRID_DATA *grid;
-	GRID_ROW *row;
-	GRID_CELL *cell;
-	char name[MSL]={'\0'};
-	int num = 0;
-	int sn = 0;
-	int i = 0;
-	int statcount = 0;
-	CheckCH(ch);
-
-	if(IS_ADMIN(ch))
-	{
-		if(ch->trust > MAX_LEVEL || ch->trust < 0)
-			ch->trust = 1;
-	}
-
-	grid = create_grid(75);
-	row = create_row(grid);
-	cell = row_append_cell(row, 27, "%-10s: %-15s\n%-10s: %s%-15s\n%-10s %-14s ", "First Name",IS_NPC(ch) ? ch->short_descr : ch->name, "Last Name",!IS_NULLSTR(ch->surname)? "" : "", !IS_NULLSTR(ch->surname)? ch->surname : "",
-					   IS_ADMIN(ch) ? "Admin Level:" : "", IS_ADMIN(ch) ? staff_status[ch->trust].name : "");
-
-	cell = row_append_cell(row, 27, "%-8s: ", IS_WEREWOLF(ch) ? "Breed" : "Nature");
-	if (ch->race == race_lookup("werewolf"))
-		cell_append_contents(cell, "%-14s\n", (breed_table[ch->breed].name));
-	else
-		cell_append_contents(cell, "%-14s\n", (capitalize(ch->nature)));
-	cell_append_contents(cell, "%-8s: ", IS_WEREWOLF(ch) ? "Auspice" : "Demeanor");
-	if(ch->race == race_lookup("werewolf"))
-		cell_append_contents(cell, "%-14s",auspice_table[ch->auspice].name);
-	else
-		cell_append_contents(cell, "%-14s", capitalize(ch->demeanor));
-	cell_append_contents(cell, "Profession/Sire: %s", "test");
-
-	cell = row_append_cell(row, 21, "%-5s: %s\n", IS_WEREWOLF(ch) ? "Tribe" : "Clan", capitalize(clan_table[ch->clan].name));
-	cell_append_contents(cell, "%-10s: ", IS_WEREWOLF(ch) ? "Totem" : "Generation");
-	 if(ch->race == race_lookup("werewolf"))
-        cell_append_contents(cell, "%s\n", "N/A");
-    else
-        cell_append_contents(cell, "%d\n", ch->gen);
-	
-	cell_append_contents(cell, "%-10s: %s", "Profession", ch->profession);
-
-	grid_to_char(grid, ch, TRUE);
-
-	for(sn = 0; disc_table[sn].vname != NULL; sn++)
-	{
-		if(sn != DISC_OBEAH) 
-		{
-			if(ch->disc[sn] != 0)
-			{
-				snprintf(name, sizeof(name), "%s", disc_table[sn].vname);
-				send_to_char(Format("\t<send href='help %s'>%-15s\t</send> %-2d     ", capitalize(name),capitalize(name), ch->disc[sn]), ch);
-
-				i = 0;
-				for(num=0; background_table[num].name; num++)
-				{
-					if(background_table[num].settable)
-					{
-						if(ch->backgrounds[num] != 0)
-						{
-							send_to_char(Format("\t<send href='help %s'>%-11s\t</send>:", background_table[num].name, background_table[num].name), ch);
-							if(ch->backgrounds[num]<=0)
-							{
-								send_to_char("\t[U9675/O]", ch);
-								statcount = 1;
-								while (statcount < 5)
-								{
-									send_to_char("\t[U9675/O]", ch);
-									statcount++;
-								}
-							}
-							else
-							{
-								while(statcount < ch->backgrounds[num])
-								{
-									send_to_char("\t[U9679/*]", ch);
-									statcount++;
-								}
-								while (statcount < 5)
-								{
-									send_to_char("\t[U9675/O]", ch);
-									statcount++;
-								}
-
-							}
-							send_to_char("\r\n", ch);
-							statcount = 0;
-							i++;
-						}
-					}
-				}
-			}
-
-		}
-	}
-}
 
 /*
  * Get time of last build.

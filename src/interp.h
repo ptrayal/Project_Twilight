@@ -115,7 +115,6 @@ DECLARE_DO_FUN(	do_cash		);
 DECLARE_DO_FUN(	do_cast		);
 DECLARE_DO_FUN(	do_celebs	);
 DECLARE_DO_FUN(	do_celerity	);
-DECLARE_DO_FUN( do_charsheet );
 DECLARE_DO_FUN(	do_chimerstry1	);
 DECLARE_DO_FUN(	do_chimerstry2	);
 DECLARE_DO_FUN(	do_chimerstry3	);
