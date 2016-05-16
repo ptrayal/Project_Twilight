@@ -1685,7 +1685,6 @@ void stock_update()
 {
 	STOCKS *stock;
 	int igain = 0;
-	int idays = 0;
 	int iflux = dice(1,7) - 4;
 	int istock_flux = dice(1,9);
 
@@ -1707,6 +1706,7 @@ void stock_update()
 				stock->phase = 0;
 		}
 
+		int idays = 0;
 		idays = (current_time - stock->last_change)/180;
 
 		stock->upordown = number_range(-1, 1);
