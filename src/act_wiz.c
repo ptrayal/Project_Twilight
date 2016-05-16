@@ -5577,6 +5577,7 @@ void do_election (CHAR_DATA *ch, char *argument)
 {
 	CheckCH(ch);
 	run_election();
+	// announce_election();
 	send_to_char("Election complete.\n\r", ch);
 }
 

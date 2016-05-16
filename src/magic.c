@@ -6761,6 +6761,11 @@ void do_auspex5(CHAR_DATA *ch, char *argument)
 /*
  * Animalism powers
  */
+/**
+ * [do_animalism1  This is the Feral Whispers ability.]
+ * @param ch     [description]
+ * @param string [description]
+ */
 void do_animalism1 (CHAR_DATA *ch, char *string)
 {
 	char arg[MAX_INPUT_LENGTH]={'\0'};
@@ -6773,7 +6778,7 @@ void do_animalism1 (CHAR_DATA *ch, char *string)
 
 	CheckCH(ch);
 
-	difficulty = number_fuzzy(7);
+	difficulty = 7;
 	power_stat = get_curr_stat(ch,STAT_MAN);
 	power_ability = ch->ability[ANIMAL_KEN].value;
 
@@ -6782,7 +6787,8 @@ void do_animalism1 (CHAR_DATA *ch, char *string)
 	string = one_argument(string,arg);
 	string = one_argument(string,buf);
 
-	if (ch->race != race_lookup("vampire") || !ch->disc[DISC_ANIMALISM]) {
+	if (ch->race != race_lookup("vampire") || !ch->disc[DISC_ANIMALISM]) 
+	{
 		send_to_char("You do not know the discipline Animalism.\n\r", ch);
 		return;
 	}
@@ -6859,6 +6865,11 @@ void do_animalism1 (CHAR_DATA *ch, char *string)
 	}
 }
 
+/**
+ * [do_animalism2  This is the Beckoning power.]
+ * @param ch       [description]
+ * @param argument [description]
+ */
 void do_animalism2 (CHAR_DATA *ch, char* argument)
 {
 	CHAR_DATA *victim;
@@ -6906,7 +6917,7 @@ void do_animalism2 (CHAR_DATA *ch, char* argument)
 
 	difficulty = victim->willpower;
 	power_stat = get_curr_stat(ch, STAT_CHA);
-	power_ability = ch->ability[ANIMAL_KEN].value;
+	power_ability = ch->ability[SURVIVAL].value;
 
 	success = dice_rolls(ch, power_stat + power_ability, difficulty);
 
@@ -6925,12 +6936,20 @@ void do_animalism2 (CHAR_DATA *ch, char* argument)
 	}
 }
 
+/**
+ * [do_animalism3  This is the Quell the Beast power.]
+ * @param ch       [description]
+ * @param argument [description]
+ */
 void do_animalism3 (CHAR_DATA *ch, char* argument)
 {
 	CHAR_DATA *victim;
 	char arg[MSL]={'\0'};
-	int fail = 0;
 	AFFECT_DATA af;
+	int success = 0;
+	int difficulty = 0;
+	int power_stat = 0;
+	int power_ability = 0;
 
 	CheckCH(ch);
 
@@ -6968,15 +6987,20 @@ void do_animalism3 (CHAR_DATA *ch, char* argument)
 		return;
 	}
 
-	fail = dice_rolls(ch, get_curr_stat(ch, STAT_INT) + ch->ability[EMPATHY].value, victim->willpower);
+	difficulty = victim->willpower;
+	power_stat = get_curr_stat(ch, STAT_INT);
+	power_ability = ch->ability[EMPATHY].value;
+
+	success = dice_rolls(ch, power_stat + power_ability, difficulty);
+
 	ch->power_timer = 2;
 
-	if(fail > (victim->willpower / 2))
+	if(success > (victim->willpower / 2))
 	{
 		af.where = TO_AFFECTS;
 		af.type = skill_lookup("calm");
 		af.level = ch->disc[DISC_ANIMALISM];
-		af.duration = fail * 5;
+		af.duration = success * 5;
 		af.location = APPLY_DEX;
 		af.modifier = -2;
 		af.bitvector = AFF_CALM;
@@ -6994,7 +7018,7 @@ void do_animalism3 (CHAR_DATA *ch, char* argument)
 		victim->condition[COND_ANGER] = 0;
 		victim->condition[COND_FEAR] = 0;
 	}
-	else if (fail < 0)
+	else if (success < 0)
 	{
 		send_to_char("This looks bad.\n\r", ch);
 		send_to_char(Format("%s tries to force you to be calm.\n\rYou don't appreciate that.\n\r", ch->name), victim);
