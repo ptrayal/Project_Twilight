@@ -3466,7 +3466,7 @@ void do_powers(CHAR_DATA *ch, char *argument)
 				}
 			}
 			send_to_char("\n\r", ch);
-		}
+	}
 
 		else if (ch->race == race_lookup("werewolf"))
 		{
@@ -5774,7 +5774,60 @@ void do_score_revised( CHAR_DATA *ch, char *argument )
 
 	grid = create_grid(75);
 	row = create_row(grid);
-	cell = row_append_cell(row, 35, "\tGBackgrounds\tn\n");
+
+	// Powers
+	int sn = 0;
+	char name[MSL]  = {'\0'};
+	i = 0;
+	if (IS_VAMPIRE(ch))
+	{
+		cell = row_append_cell(row, 31, "\tGDisciplines\tn\n");
+	}
+	else if (IS_WEREWOLF(ch))
+	{
+		cell = row_append_cell(row, 31, "\tGGifts\tn\n");
+	}
+	else if (IS_FAERIE(ch))
+	{
+		cell = row_append_cell(row, 31, "\tGGlamour\tn\n");
+	}
+	else
+	{
+		cell = row_append_cell(row, 31, "\tGOther\tn\n");
+	}
+
+	if (IS_VAMPIRE(ch))
+	{
+		if(IS_ADMIN(ch))
+		{
+			for(sn = 0; disc_table[sn].vname != NULL; sn++)
+			{
+				if(sn != DISC_OBEAH) 
+				{
+					snprintf(name, sizeof(name), "%s", disc_table[sn].vname);
+					cell_append_contents(cell, "%-14s:%3d\n", capitalize(name), ch->disc[sn]);
+				}
+			}
+			send_to_char("\n\r", ch);
+		}
+		else
+			for(sn = 0; disc_table[sn].vname != NULL; sn++)
+			{
+				if(sn != DISC_OBEAH) 
+				{
+					if(ch->disc[sn] != 0)
+					{
+					snprintf(name, sizeof(name), "%s", disc_table[sn].vname);
+					cell_append_contents(cell, "%-14s:%3d\n", capitalize(name), ch->disc[sn]);
+					}	
+				}
+			}
+			send_to_char("\n\r", ch);
+	}
+	
+
+	// Backgrounds
+	cell = row_append_cell(row, 22, "\tGBackgrounds\tn\n");
 	i = 0;
 	for(num=0;background_table[num].name;num++)
 	{
@@ -5787,7 +5840,9 @@ void do_score_revised( CHAR_DATA *ch, char *argument )
 			}
 		}
 	}
-	cell = row_append_cell(row, 40, "\tGInfluences\tn\n");
+	
+	//  Influences
+	cell = row_append_cell(row, 22, "\tGInfluences\tn\n");
 	i = 0;
 	for(num=0;influence_table[num].name;num++)
 	{

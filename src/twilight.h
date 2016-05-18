@@ -2779,6 +2779,7 @@ struct	skill_type
 
 #define IS_VAMPIRE(ch)		(ch->race == race_lookup("vampire"))
 #define IS_WEREWOLF(ch)     (ch->race == race_lookup("werewolf"))
+#define IS_FAERIE(ch)       (ch->race == race_lookup("faerie"))
 
 /* macro.c */
 bool IS_ATTRIB_AVAILABLE	args( (int race, int sn) );
