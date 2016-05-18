@@ -5774,7 +5774,7 @@ void do_score_revised( CHAR_DATA *ch, char *argument )
 
 	grid = create_grid(75);
 	row = create_row(grid);
-	cell = row_append_cell(row, 35, "\tGBackgrounds\tn\n\r");
+	cell = row_append_cell(row, 35, "\tGBackgrounds\tn\n");
 	i = 0;
 	for(num=0;background_table[num].name;num++)
 	{
@@ -5782,12 +5782,24 @@ void do_score_revised( CHAR_DATA *ch, char *argument )
 		{
 			if(num < MAX_BACKGROUND)
 			{
-				cell_append_contents(cell, "%-11s:%3d\n\r", background_table[num].name, ch->backgrounds[num]);
+				cell_append_contents(cell, "%-11s:%3d\n", background_table[num].name, ch->backgrounds[num]);
 				i++;
 			}
 		}
 	}
-	row_append_cell(row, 40, "Influences");
+	cell = row_append_cell(row, 40, "\tGInfluences\tn\n");
+	i = 0;
+	for(num=0;influence_table[num].name;num++)
+	{
+		if(influence_table[num].settable)
+		{
+			if(num < MAX_BACKGROUND)
+			{
+				cell_append_contents(cell, "%-11s:%3d\n", influence_table[num].name, ch->influences[num]);
+				i++;
+			}
+		}
+	}
 
 	grid_to_char (grid, user, TRUE );
 
