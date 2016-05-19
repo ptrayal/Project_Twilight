@@ -5885,10 +5885,25 @@ void do_advantages( CHAR_DATA *ch, char *argument )
 	{
 		if(background_table[num].settable)
 		{
-			if(num < MAX_BACKGROUND)
+			if(IS_ADMIN(ch))
 			{
-				cell_append_contents(cell, "%-11s:%3d\n", background_table[num].name, ch->backgrounds[num]);
-				i++;
+				if(num < MAX_BACKGROUND)
+				{
+						cell_append_contents(cell, "%-11s:%3d\n", background_table[num].name, ch->backgrounds[num]);
+						i++;
+				}
+			}
+			else
+			{
+				if(num < MAX_BACKGROUND)
+				{
+					if (ch->backgrounds[num] != 0)
+					{
+						cell_append_contents(cell, "%-11s:%3d\n", background_table[num].name, ch->backgrounds[num]);
+						i++;
+					}
+				}
+
 			}
 		}
 	}
@@ -5900,11 +5915,26 @@ void do_advantages( CHAR_DATA *ch, char *argument )
 	{
 		if(influence_table[num].settable)
 		{
-			if(num < MAX_BACKGROUND)
+			if(IS_ADMIN(ch))
 			{
-				cell_append_contents(cell, "%-11s:%3d\n", influence_table[num].name, ch->influences[num]);
-				i++;
+				if(num < MAX_BACKGROUND)
+				{
+					cell_append_contents(cell, "%-11s:%3d\n", influence_table[num].name, ch->influences[num]);
+					i++;
+				}
 			}
+			else
+			{
+				if(num < MAX_BACKGROUND)
+				{
+					if(ch->influences[num] != 0)
+					{
+						cell_append_contents(cell, "%-11s:%3d\n", influence_table[num].name, ch->influences[num]);
+						i++;
+					}
+				}
+			}
+
 		}
 	}
 
