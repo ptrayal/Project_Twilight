@@ -50,6 +50,7 @@ DECLARE_DO_FUN( do_activate	);
 DECLARE_DO_FUN( do_addlag	);
 DECLARE_DO_FUN( do_addy		);
 DECLARE_DO_FUN(	do_advance	);
+DECLARE_DO_FUN(	do_advantages	);
 DECLARE_DO_FUN( do_afk		);
 DECLARE_DO_FUN( do_affects	);
 DECLARE_DO_FUN( do_wwgift1_ahr	);

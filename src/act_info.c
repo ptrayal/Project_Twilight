@@ -1602,7 +1602,7 @@ void do_exits( CHAR_DATA *ch, char *argument )
 void do_score( CHAR_DATA *ch, char *argument )
 {
 	CHAR_DATA *user = ch;
-	int num = 0, i = 0;
+	int num = 0;
 	int statcount = 0;
 
 	CheckCH(ch);
@@ -1928,7 +1928,7 @@ void do_score( CHAR_DATA *ch, char *argument )
 	statcount=0;
 	send_to_char("\n\r", user);
 
-	send_to_char("\tW--------------------------------<\tGAdvantages\tW>----------------------------------\tn\n\r", user);
+	send_to_char("\tW--------------------------------<\tGOther\tW>----------------------------------\tn\n\r", user);
 
 	send_to_char( Format("Health: %-22s  ", health_string(ch)), user );
 	send_to_char( Format("Carrying: %d/%d lbs.\n\r", get_carry_weight(ch) / 10, can_carry_w(ch) /10), user );
@@ -2208,37 +2208,13 @@ void do_score( CHAR_DATA *ch, char *argument )
 		send_to_char(Format("You are the devoted servant of %s.\n\r", ch->ghouled_by), user);
 	}
 
-	send_to_char("\tW--------------------------------<\tGBackgrounds\tW>---------------------------------\tn\n\r", user);
+	send_to_char("\tW--------------------------------<\tGAbilities\tW>---------------------------------\tn\n\r", user);
+	send_to_char("Use \t<send href='abilities'>abilities\t</send> to see Skills, Talents, and Knowledges.\n\r", user);
 
-	i = 0;
-	for(num=0;background_table[num].name;num++)
-	{
-		if(background_table[num].settable)
-		{
-			if(num < MAX_BACKGROUND)
-			{
-				send_to_char(Format("\t<send href='help %s'>%11s\t</send>:%3d ", background_table[num].name, background_table[num].name,
-						ch->backgrounds[num]), user);
-				i++;
-			}
-		}
-		if(i == 4)
-		{
-			send_to_char("\n\r", user);
-			i = 0;
-		}
-	}
+	send_to_char("\tW---------------------------------<\tGAdvantages\tW>---------------------------------\tn\n\r", user);
+	send_to_char("Use \t<send href='advantages'>advantages\t</send> to see Powers, Backgrounds, and Influences.\n\r", user);
 
-	send_to_char("\n\r", user);
 
-	send_to_char("\tW---------------------------------<\tGInfluences\tW>---------------------------------\tn\n\r", user);
-
-	for(num=0;influence_table[num].name;num++)
-	{
-		send_to_char(Format("%11s:%3d ", influence_table[num].name, ch->influences[num]), user);
-		if((num+1)%4 == 0)
-			send_to_char("\n\r", user);
-	}
 	send_to_char("\n\r", user);
 }
 
@@ -5730,6 +5706,123 @@ void do_score_revised( CHAR_DATA *ch, char *argument )
 			}
 		}
 	}
+
+	grid = create_grid(75);
+	row = create_row(grid);
+
+	// Powers
+	int sn = 0;
+	char name[MSL]  = {'\0'};
+	i = 0;
+	if (IS_VAMPIRE(ch))
+	{
+		cell = row_append_cell(row, 31, "\tGDisciplines\tn\n");
+	}
+	else if (IS_WEREWOLF(ch))
+	{
+		cell = row_append_cell(row, 31, "\tGGifts\tn\n");
+	}
+	else if (IS_FAERIE(ch))
+	{
+		cell = row_append_cell(row, 31, "\tGGlamour\tn\n");
+	}
+	else
+	{
+		cell = row_append_cell(row, 31, "\tGOther\tn\n");
+	}
+
+	if (IS_VAMPIRE(ch))
+	{
+		if(IS_ADMIN(ch))
+		{
+			for(sn = 0; disc_table[sn].vname != NULL; sn++)
+			{
+				if(sn != DISC_OBEAH) 
+				{
+					snprintf(name, sizeof(name), "%s", disc_table[sn].vname);
+					cell_append_contents(cell, "%-14s:%3d\n", capitalize(name), ch->disc[sn]);
+				}
+			}
+			send_to_char("\n\r", ch);
+		}
+		else
+			for(sn = 0; disc_table[sn].vname != NULL; sn++)
+			{
+				if(sn != DISC_OBEAH) 
+				{
+					if(ch->disc[sn] != 0)
+					{
+					snprintf(name, sizeof(name), "%s", disc_table[sn].vname);
+					cell_append_contents(cell, "%-14s:%3d\n", capitalize(name), ch->disc[sn]);
+					}	
+				}
+			}
+			send_to_char("\n\r", ch);
+	}
+	
+
+	// Backgrounds
+	cell = row_append_cell(row, 22, "\tGBackgrounds\tn\n");
+	i = 0;
+	for(num=0;background_table[num].name;num++)
+	{
+		if(background_table[num].settable)
+		{
+			if(num < MAX_BACKGROUND)
+			{
+				cell_append_contents(cell, "%-11s:%3d\n", background_table[num].name, ch->backgrounds[num]);
+				i++;
+			}
+		}
+	}
+	
+	//  Influences
+	cell = row_append_cell(row, 22, "\tGInfluences\tn\n");
+	i = 0;
+	for(num=0;influence_table[num].name;num++)
+	{
+		if(influence_table[num].settable)
+		{
+			if(num < MAX_BACKGROUND)
+			{
+				cell_append_contents(cell, "%-11s:%3d\n", influence_table[num].name, ch->influences[num]);
+				i++;
+			}
+		}
+	}
+
+	grid_to_char (grid, user, TRUE );
+
+	send_to_char("\n\r", user);
+}
+
+void do_advantages( CHAR_DATA *ch, char *argument )
+{
+	CHAR_DATA *user = ch;
+	char buf[MSL]={'\0'};
+	int num = 0, i = 0;
+	GRID_DATA *grid;
+    GRID_ROW *row;
+    GRID_CELL *cell;
+
+	CheckCH(ch);
+
+	if(!IS_NULLSTR(argument) && IS_ADMIN(user))
+	{
+		if((ch = get_char_world(user, argument)) == NULL)
+		{
+			send_to_char("They aren't online.\r\n", user);
+			return;
+		}
+
+		if(ch->trust > user->trust)
+		{
+			send_to_char("Not available for those with higher authority.\r\n", user);
+			return;
+		}
+	}
+
+	buf[0] = '\0';
 
 	grid = create_grid(75);
 	row = create_row(grid);

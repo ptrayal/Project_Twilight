@@ -108,6 +108,7 @@ const	struct	cmd_type	cmd_table	[] =
 		{	"accept",		do_accept,		P_REST,		0,	L_NRM,	1,	0,	0 },
 		{	"address",		do_addy,		P_DEAD,		0,	L_ALL,	1,	A|B|E,	0 },
 		{	"advance",		do_train_power,	P_STAND,	0,	L_NRM,	1,	B|H,	0 },
+		{	"advantages",	do_advantages,	P_DEAD,		0,	L_NRM,	1,	A|B|E,	0 },
 		{	"aedit",		do_aedit,		P_DEAD,		0,	L_NRM,	2,	A|B|E,	0 },
 		{	"affects",		do_affects,		P_DEAD,		0,	L_NRM,	1,	A|B|E,	0 },
 		{	"afk",			do_afk,			P_TORPOR,	0,	L_NRM,	1,	A|B,	0 },
