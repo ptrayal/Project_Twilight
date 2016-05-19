@@ -3402,27 +3402,63 @@ void do_socials(CHAR_DATA *ch, char *argument)
 
 void do_abilities(CHAR_DATA *ch, char *argument)
 {
-	int sn = 0, count = 0;
+	GRID_DATA *grid;
+    GRID_ROW *row;
+    GRID_CELL *cell;
+    int sn = 0;
 
 	CheckCH(ch);
 
 	if (IS_NPC(ch))
 		return;
 
-	send_to_char("\n\r\tW---------------------------------<\tGAbilities\tW>----------------------------------\tn\n\r", ch);
-
-	for (sn = 0; sn < MAX_ABIL; sn++)
+	grid = create_grid(75);
+	row = create_row(grid);
+	row_append_cell(row, 75, "%31s\tYAbilities\tn %32s", " ", " ");
+	row = create_row(grid);
+	
+	// First Column  - Talents
+	cell = row_append_cell(row, 25, "\tGTalents\tn\n");
+	for (sn = 0; sn < 13; sn++)
 	{
 		if (ability_table[sn].name == NULL )
 			break;
 
 		if(IS_ATTRIB_AVAILABLE(ch->race, sn))
 		{
-			send_to_char(Format("\t<send href='help %s'>%-15s\t</send> %-2d  | ", capitalize(ability_table[sn].name), capitalize(ability_table[sn].name), ch->ability[sn].value), ch);
-			count++;if(!(count%3)) send_to_char("\n\r", ch);
+			cell_append_contents(cell, "%-15s: %-2d\n", capitalize(ability_table[sn].name), ch->ability[sn].value);
 		}
 	}
-	send_to_char("\n\r", ch);
+
+	// Second Column  - Skills
+	cell = row_append_cell(row, 25, "\tGSkills\tn\n");
+	for (sn = 13; sn < 24; sn++)
+	{
+		if (ability_table[sn].name == NULL )
+			break;
+
+		if(IS_ATTRIB_AVAILABLE(ch->race, sn))
+		{
+			cell_append_contents(cell, "%-15s: %-2d\n", capitalize(ability_table[sn].name), ch->ability[sn].value);
+		}
+	}
+
+	// Third Column  - Knowledges
+	cell = row_append_cell(row, 25, "\tGKnowledges\tn\n");
+	for (sn = 24; sn < MAX_ABIL; sn++)
+	{
+		if (ability_table[sn].name == NULL )
+			break;
+
+		if(IS_ATTRIB_AVAILABLE(ch->race, sn))
+		{
+			cell_append_contents(cell, "%-15s: %-2d\n", capitalize(ability_table[sn].name), ch->ability[sn].value);
+		}
+	}
+
+
+	grid_to_char (grid, ch, TRUE );
+
 }
 
 void do_powers(CHAR_DATA *ch, char *argument)
@@ -4751,83 +4787,6 @@ void do_stats(CHAR_DATA *ch, char *argument)
 	get_curr_stat(ch,STAT_WIT)), user );
 
 	send_to_char("--------------------------------<          >----------------------------------\n\r", user);
-}
-
-void do_talents(CHAR_DATA *ch, char *argument)
-{
-	int sn = 0, count = 0;
-
-	CheckCH(ch);
-
-	if (IS_NPC(ch))
-		return;
-
-	send_to_char("\n\r\tW--------------------------------<Talents>---------------------------------\tn\n\r", ch);
-
-	for (sn = 0; sn < 13; sn++)
-	{
-		if (ability_table[sn].name == NULL )
-			break;
-
-		if(IS_ATTRIB_AVAILABLE(ch->race, sn))
-		{
-			send_to_char(Format("%-15s %-2d      ", capitalize(ability_table[sn].name), ch->ability[sn].value), ch);
-			count++;if(!(count%3)) send_to_char("\n\r", ch);
-		}
-	}
-	send_to_char("\n\r", ch);
-}
-
-void do_skills(CHAR_DATA *ch, char *argument)
-{
-	int sn = 0, count = 0;
-
-	CheckCH(ch);
-
-	if (IS_NPC(ch))
-		return;
-
-	send_to_char("\n\r\tW---------------------------------<Skills>----------------------------------\tn\n\r", ch);
-
-	for (sn = 13; sn < 24; sn++)
-	{
-		if (ability_table[sn].name == NULL )
-			break;
-
-		if(IS_ATTRIB_AVAILABLE(ch->race, sn))
-		{
-			send_to_char(Format("%-15s %-2d      ", capitalize(ability_table[sn].name), ch->ability[sn].value), ch);
-			count++;
-			if(!(count%3))
-				send_to_char("\n\r", ch);
-		}
-	}
-	send_to_char("\n\r", ch);
-}
-
-void do_knowstats(CHAR_DATA *ch, char *argument)
-{
-	int sn = 0, count = 0;
-
-	CheckCH(ch);
-
-	if (IS_NPC(ch))
-		return;
-
-	send_to_char("\n\r\tW--------------------------------<Knowledges>---------------------------------\tn\n\r", ch);
-
-	for (sn = 24; sn < MAX_ABIL; sn++)
-	{
-		if (ability_table[sn].name == NULL )
-			break;
-
-		if(IS_ATTRIB_AVAILABLE(ch->race, sn))
-		{
-			send_to_char(Format("%-15s %-2d      ", capitalize(ability_table[sn].name), ch->ability[sn].value), ch);
-			count++;if(!(count%3)) send_to_char("\n\r", ch);
-		}
-	}
-	send_to_char("\n\r", ch);
 }
 
 void do_premise(CHAR_DATA *ch, char *argument)
