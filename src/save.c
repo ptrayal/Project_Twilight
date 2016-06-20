@@ -761,39 +761,43 @@ bool load_char_obj( DESCRIPTOR_DATA *d, char *name, bool log_load, bool load_con
 
 	d->character			= ch;
 	ch->desc				= d;
-	PURGE_DATA(ch->name);
-	ch->name				= str_dup( name );
-	ch->id					= get_pc_id();
-	ch->race				= race_lookup("human");
-	ch->plr_flags			= PLR_AUTOEXIT;
-	ch->comm				= COMM_COMBINE|COMM_PROMPT;
+	PURGE_DATA( ch->demeanor );
+	PURGE_DATA( ch->description );
+	PURGE_DATA( ch->email_addr );
+	PURGE_DATA( ch->married );
+	PURGE_DATA( ch->material );
+	PURGE_DATA( ch->name );
+	PURGE_DATA( ch->nature );
+	PURGE_DATA( ch->pack );
+	PURGE_DATA( ch->profession );
 	PURGE_DATA( ch->prompt );
-	ch->description = str_dup("An impossibly descriptive individual");
-	ch->prompt 				= str_dup("<%h> ");
-	ch->pcdata->confirm_delete		= FALSE;
-	ch->pcdata->full_reset		= FALSE;
-	PURGE_DATA( ch->pcdata->pwd );
+	PURGE_DATA( ch->sire );
+
 	PURGE_DATA( ch->pcdata->bamfin );
 	PURGE_DATA( ch->pcdata->bamfout );
-	PURGE_DATA( ch->pcdata->title );
+	PURGE_DATA( ch->pcdata->pwd );
 	PURGE_DATA( ch->pcdata->rpok_string );
-	PURGE_DATA( ch->profession );
-	PURGE_DATA( ch->nature );
-	PURGE_DATA( ch->demeanor );
-	PURGE_DATA( ch->married );
-	PURGE_DATA( ch->sire );
-	ch->pcdata->pwd			= NULL;
-	ch->married				= NULL;
+	PURGE_DATA( ch->pcdata->title );
+
+	ch->demeanor				= str_dup( "None" );
+	ch->description 			= str_dup("An impossibly descriptive individual");
+	ch->email_addr				= NULL;
+	ch->married					= NULL;
+	ch->material				= str_dup("flesh");
+	ch->name					= str_dup( name );
+	ch->nature					= str_dup( "None" );
+	ch->pack					= str_dup("None");
+	ch->profession				= str_dup( "None" );
+	ch->prompt 					= str_dup("<%h> ");
+	ch->sire					= str_dup( "None" );
+
 	ch->pcdata->bamfin			= NULL;
 	ch->pcdata->bamfout			= NULL;
-	ch->pcdata->title			= NULL;
+	ch->pcdata->pwd				= NULL;
 	ch->pcdata->rpok_string		= str_dup( "Not Available" );
-	ch->profession			= str_dup( "None" );
-	ch->email_addr			= NULL;
-	ch->email_lock			= 0;
-	ch->nature				= str_dup( "None" );
-	ch->demeanor			= str_dup( "None" );
-	ch->sire				= str_dup( "None" );
+	ch->pcdata->title			= NULL;
+
+
 	for (stat =0; stat < MAX_STATS; stat++)
 		ch->perm_stat[stat]		= 1;
 	for (stat =0; stat < MAX_POWERS; stat++)
@@ -804,6 +808,14 @@ bool load_char_obj( DESCRIPTOR_DATA *d, char *name, bool log_load, bool load_con
 		ch->influences[stat]		= 0;
 	for (stat =0; stat < MAX_BACKGROUND; stat++)
 		ch->backgrounds[stat]		= 0;
+
+	ch->pcdata->confirm_delete		= FALSE;
+	ch->pcdata->full_reset		= FALSE;
+	ch->id					= get_pc_id();
+	ch->race				= race_lookup("human");
+	ch->plr_flags			= PLR_AUTOEXIT;
+	ch->comm				= COMM_COMBINE|COMM_PROMPT;
+	ch->email_lock			= 0;
 	ch->bg_timer			= 6;
 	ch->bg_count			= 0;
 	ch->condition[COND_THIRST]	= 48;
@@ -817,7 +829,6 @@ bool load_char_obj( DESCRIPTOR_DATA *d, char *name, bool log_load, bool load_con
 	ch->power_timer			= 0;
 	ch->jump_timer			= 0;
 	ch->combat_flag			= 0;
-	ch->material			= str_dup("flesh");
 	ch->pospts				= 0;
 	ch->employer			= 0;
 	ch->xp_job_acts			= 0;
@@ -829,7 +840,6 @@ bool load_char_obj( DESCRIPTOR_DATA *d, char *name, bool log_load, bool load_con
 	ch->ooc_xp_count		= 0;
 	ch->oocxp				= 0;
 	ch->stock_ticker		= 0;
-	ch->pack				= str_dup("None");
 	ch->totem_attitudes[0]	= 3;
 	ch->totem_attitudes[1]	= 3;
 	ch->quest				= NULL;
