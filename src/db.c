@@ -522,14 +522,17 @@ void load_area( FILE *fp )
 	pArea = new_area();
 	/*  pArea->reset_first  = NULL;
 	pArea->reset_last   = NULL; */
-	pArea->file_name    = fread_string(fp);
+	PURGE_DATA(pArea->builders);
+	PURGE_DATA(pArea->file_name);
+	PURGE_DATA(pArea->name);
+	PURGE_DATA(pArea->credits);
 
 	pArea->area_flags   = AREA_LOADING;         /* OLC */
 	pArea->security     = 9;                    /* OLC */ /* 9 -- Hugin */
-	PURGE_DATA(pArea->builders);
-	pArea->builders     = str_dup( "None" );    /* OLC */
 	pArea->vnum         = top_area;             /* OLC */
 
+	pArea->builders     = str_dup( "None" );    /* OLC */
+	pArea->file_name    = fread_string(fp);
 	pArea->name     = fread_string( fp );
 	pArea->credits  = fread_string( fp );
 	pArea->min_vnum = fread_number( fp );
@@ -563,21 +566,23 @@ void load_org( FILE *fp )
 	int i = 0;
 
 	org                  = new_org();
-	PURGE_DATA(org->name);
-	PURGE_DATA(org->who_name);
+	PURGE_DATA(org->applicants);
 	PURGE_DATA(org->file_name);
 	PURGE_DATA(org->leader);
-	PURGE_DATA(org->applicants);
+	PURGE_DATA(org->name);
 	PURGE_DATA(org->races);
-	org->name            = fread_string(fp);
-	org->who_name        = fread_string(fp);
+	PURGE_DATA(org->who_name);
+
+	org->applicants      = fread_string(fp);
 	org->file_name       = str_dup(strArea);
 	org->leader          = fread_string(fp);
+	org->name            = fread_string(fp);
+	org->races           = fread_string(fp);
+	org->who_name        = fread_string(fp);
+
 	org->step_point      = fread_number(fp);
 	org->type            = fread_number(fp);
 	org->funds           = fread_number(fp);
-	org->applicants      = fread_string(fp);
-	org->races           = fread_string(fp);
 	org->default_auths   = fread_flag(fp);
 	for(i = 0; i < 5; i++)
 	{
@@ -877,37 +882,39 @@ void load_helps( FILE *fp, int type )
 
 	for ( ; ; )
 	{
-	pHelp       = new_help();
-	pHelp->level    = fread_number( fp );
-	pHelp->keyword  = fread_string( fp );
+		pHelp       = new_help();
+		pHelp->level    = fread_number( fp );
+		pHelp->keyword  = fread_string( fp );
 
-	if(pHelp->keyword == NULL) {
-		free_help(pHelp);
-		return;
-	}
+		if(pHelp->keyword == NULL) 
+			{
+				free_help(pHelp);
+				return;
+			}
 
-	if ( pHelp->keyword[0] == '$' ) {
-		free_help(pHelp);
-			break;
-	}
+		if ( pHelp->keyword[0] == '$' ) 
+			{
+				free_help(pHelp);
+					break;
+			}
 
-	pHelp->races    = fread_string( fp );
-	pHelp->clans    = fread_string( fp );
-	fread_help( pHelp, fp );
+		pHelp->races    = fread_string( fp );
+		pHelp->clans    = fread_string( fp );
+		fread_help( pHelp, fp );
 
-	if ( !str_cmp( pHelp->keyword, "greeting" ) )
-		help_greeting = pHelp->unformatted;
+		if ( !str_cmp( pHelp->keyword, "greeting" ) )
+			help_greeting = pHelp->unformatted;
 
-	if(!type)
-	{
-	  LINK_SINGLE(pHelp, next, help_list);
-	  top_help++;
-	}
-	else
-	{
-	  LINK_SINGLE(pHelp, next, tip_list);
-	  top_tip++;
-	}
+		if(!type)
+			{
+			  LINK_SINGLE(pHelp, next, help_list);
+			  top_help++;
+			}
+		else
+			{
+			  LINK_SINGLE(pHelp, next, tip_list);
+			  top_tip++;
+			}
 	}
 
 	return;
