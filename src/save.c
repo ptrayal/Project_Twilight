@@ -761,9 +761,14 @@ bool load_char_obj( DESCRIPTOR_DATA *d, char *name, bool log_load, bool load_con
 
 	d->character			= ch;
 	ch->desc				= d;
+	PURGE_DATA( ch->alt_name );
 	PURGE_DATA( ch->demeanor );
 	PURGE_DATA( ch->description );
 	PURGE_DATA( ch->email_addr );
+	PURGE_DATA( ch->ghouled_by );
+	PURGE_DATA( ch->ignore );
+	PURGE_DATA( ch->laston );
+	PURGE_DATA( ch->long_descr );
 	PURGE_DATA( ch->married );
 	PURGE_DATA( ch->material );
 	PURGE_DATA( ch->name );
@@ -771,17 +776,27 @@ bool load_char_obj( DESCRIPTOR_DATA *d, char *name, bool log_load, bool load_con
 	PURGE_DATA( ch->pack );
 	PURGE_DATA( ch->profession );
 	PURGE_DATA( ch->prompt );
+	PURGE_DATA( ch->short_descr );
 	PURGE_DATA( ch->sire );
+	PURGE_DATA( ch->surname );
+	PURGE_DATA( ch->switch_desc );
 
 	PURGE_DATA( ch->pcdata->bamfin );
 	PURGE_DATA( ch->pcdata->bamfout );
+	PURGE_DATA( ch->pcdata->block_join );
+	PURGE_DATA( ch->pcdata->ignore_reject );
 	PURGE_DATA( ch->pcdata->pwd );
 	PURGE_DATA( ch->pcdata->rpok_string );
 	PURGE_DATA( ch->pcdata->title );
 
+	ch->alt_name				= NULL;
 	ch->demeanor				= str_dup( "None" );
 	ch->description 			= str_dup("An impossibly descriptive individual");
 	ch->email_addr				= NULL;
+	ch->ghouled_by				= NULL;
+	ch->ignore 					= NULL;
+	ch->laston 					= NULL;
+	ch->long_descr				= NULL;
 	ch->married					= NULL;
 	ch->material				= str_dup("flesh");
 	ch->name					= str_dup( name );
@@ -789,10 +804,15 @@ bool load_char_obj( DESCRIPTOR_DATA *d, char *name, bool log_load, bool load_con
 	ch->pack					= str_dup("None");
 	ch->profession				= str_dup( "None" );
 	ch->prompt 					= str_dup("<%h> ");
+	ch->short_descr				= NULL;
 	ch->sire					= str_dup( "None" );
+	ch->surname					= NULL;
+	ch->switch_desc				= NULL;
 
 	ch->pcdata->bamfin			= NULL;
 	ch->pcdata->bamfout			= NULL;
+	ch->pcdata->block_join		= NULL;
+	ch->pcdata->ignore_reject	= NULL;
 	ch->pcdata->pwd				= NULL;
 	ch->pcdata->rpok_string		= str_dup( "Not Available" );
 	ch->pcdata->title			= NULL;
