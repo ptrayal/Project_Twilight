@@ -778,13 +778,16 @@ bool load_char_obj( DESCRIPTOR_DATA *d, char *name, bool log_load, bool load_con
 	PURGE_DATA( ch->material );
 	PURGE_DATA( ch->name );
 	PURGE_DATA( ch->nature );
+	PURGE_DATA( ch->oldname );
 	PURGE_DATA( ch->pack );
+	PURGE_DATA( ch->prefix );
 	PURGE_DATA( ch->profession );
 	PURGE_DATA( ch->prompt );
 	PURGE_DATA( ch->short_descr );
 	PURGE_DATA( ch->sire );
 	PURGE_DATA( ch->surname );
 	PURGE_DATA( ch->switch_desc );
+	PURGE_DATA( ch->to_learn );
 
 	PURGE_DATA( ch->pcdata->bamfin );
 	PURGE_DATA( ch->pcdata->bamfout );
@@ -809,6 +812,7 @@ bool load_char_obj( DESCRIPTOR_DATA *d, char *name, bool log_load, bool load_con
 	ch->material				= str_dup("flesh");
 	ch->name					= str_dup( name );
 	ch->nature					= str_dup( "None" );
+	ch->oldname					= NULL;
 	ch->pack					= str_dup("None");
 	ch->profession				= str_dup( "None" );
 	ch->prompt 					= str_dup("<%h> ");
@@ -816,6 +820,7 @@ bool load_char_obj( DESCRIPTOR_DATA *d, char *name, bool log_load, bool load_con
 	ch->sire					= str_dup( "None" );
 	ch->surname					= NULL;
 	ch->switch_desc				= NULL;
+	ch->to_learn				= NULL;
 
 	ch->pcdata->bamfin			= NULL;
 	ch->pcdata->bamfout			= NULL;

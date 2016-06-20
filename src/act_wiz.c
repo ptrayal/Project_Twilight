@@ -5591,6 +5591,7 @@ void do_newspaper (CHAR_DATA *ch, char *argument)
 	if(IS_NULLSTR(argument))
 	{
 		send_to_char("What are you trying to do with the news?\n\r", ch);
+		send_to_char("Do you mean to use \t<send href='newspaper commands'>newspaper commands\t</send>?\n\r", ch);
 		return;
 	}
 

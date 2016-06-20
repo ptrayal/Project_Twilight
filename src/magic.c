@@ -6789,7 +6789,7 @@ void do_animalism1 (CHAR_DATA *ch, char *string)
 
 	if (ch->race != race_lookup("vampire") || !ch->disc[DISC_ANIMALISM]) 
 	{
-		send_to_char("You do not know the discipline Animalism.\n\r", ch);
+		send_to_char("\tRWarning\tn: You do not know the discipline Animalism.\n\r", ch);
 		return;
 	}
 
@@ -6823,7 +6823,7 @@ void do_animalism1 (CHAR_DATA *ch, char *string)
 
 	if (!str_prefix(buf, "influences"))
 	{
-		send_to_char("You don't have enough control for that.\n\r",ch);
+		send_to_char("\tRWarning\tn: You don't have enough control for that.\n\r",ch);
 		return;
 	}
 
@@ -6835,7 +6835,7 @@ void do_animalism1 (CHAR_DATA *ch, char *string)
 
 	if ( !IS_ANIMAL(victim) )
 	{
-		send_to_char( "That power only works on animals.\n\r", ch);
+		send_to_char( "\tRWarning\tn: That power only works on animals.\n\r", ch);
 		return;
 	}
 
