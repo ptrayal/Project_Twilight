@@ -126,15 +126,16 @@ HELP_DATA *new_help()
 	ALLOC_DATA(help, HELP_DATA, 1);
 
 	help->level = 0;
-	help->keyword = NULL;
-	help->races = NULL;
+
 	help->clans = NULL;
-	help->topic = NULL;
-	help->syntax = NULL;
 	help->description = NULL;
-	help->unformatted = NULL;
-	help->see_also = NULL;
+	help->keyword = NULL;
 	help->quote = NULL;
+	help->races = NULL;
+	help->see_also = NULL;
+	help->syntax = NULL;
+	help->topic = NULL;
+	help->unformatted = NULL;
 	help->website = NULL;
 
 	return help;
@@ -154,6 +155,7 @@ void free_help(HELP_DATA *help)
 	PURGE_DATA( help->topic	);
 	PURGE_DATA( help->unformatted );
 	PURGE_DATA( help->website );
+
 	help->level = 0;
 	PURGE_DATA( help );
 }
@@ -197,11 +199,12 @@ NOTE_DATA *new_note()
 	note->race = 0;
 	note->successes = 1;
 	note->type = 0;
+
 	note->date = NULL;
 	note->sender = NULL;
-	note->to_list = NULL;
 	note->subject = NULL;
 	note->text = NULL;
+	note->to_list = NULL;
 
 	return note;
 }
@@ -949,9 +952,11 @@ void free_char (CHAR_DATA *ch)
 	PURGE_DATA(ch->short_descr);
 	PURGE_DATA(ch->surname);
 	PURGE_DATA(ch->switch_desc);
+	
 	PURGE_DATA(ch->to_learn);
 	PURGE_DATA(ch->pnote);
 	PURGE_DATA(ch->pcdata);
+
 	ch->ghouled_by = NULL;
 	ch->married = NULL;
     ch->next_in_room = NULL;

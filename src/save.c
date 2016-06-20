@@ -761,6 +761,11 @@ bool load_char_obj( DESCRIPTOR_DATA *d, char *name, bool log_load, bool load_con
 
 	d->character			= ch;
 	ch->desc				= d;
+
+	
+	PURGE_DATA( ch->aifile );
+	PURGE_DATA( ch->alt_description );
+	PURGE_DATA( ch->alt_long_descr );
 	PURGE_DATA( ch->alt_name );
 	PURGE_DATA( ch->demeanor );
 	PURGE_DATA( ch->description );
@@ -789,6 +794,9 @@ bool load_char_obj( DESCRIPTOR_DATA *d, char *name, bool log_load, bool load_con
 	PURGE_DATA( ch->pcdata->rpok_string );
 	PURGE_DATA( ch->pcdata->title );
 
+	ch->aifile 					= NULL;
+	ch->alt_description			= NULL;
+	ch->alt_long_descr			= NULL;
 	ch->alt_name				= NULL;
 	ch->demeanor				= str_dup( "None" );
 	ch->description 			= str_dup("An impossibly descriptive individual");
