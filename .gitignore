@@ -213,3 +213,13 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
+*.bug
+log/06-20-2016.comm
+*.connect
+*.error
+*.game
+*.security
+log/06-21-2016.comm
+*.comm
+log/1000.glob
+*.OOCXML

@@ -1,0 +1,50 @@
+#!/bin/csh
+
+cp ~/backup ~/ptmud/src/completedbackup
+
+cd ~/ptmud/src
+make wipe
+cd ~/ptmud/area
+rm core
+cd ~
+
+    set index = 1000
+    while ( 1 )
+	set logfile = $index
+	if ( ! -e $logfile.tgz ) break
+	@ index++
+    end
+
+tar -cvf player.tar ptmud/player/
+gzip player.tar
+mv player.tar.gz player.tgz
+chmod og-rwx player.tgz
+
+tar -cvf area.tar ptmud/area/
+gzip area.tar
+mv area.tar.gz area.tgz
+chmod og-rwx area.tgz
+
+tar -cvf src.tar ptmud/src/
+gzip src.tar
+mv src.tar.gz SRC.TGZ
+chmod og-rwx SRC.TGZ
+
+ls mud/log/ >> log
+
+tar -cvf mud.tar ptmud/ --exclude-from ~/log
+gzip mud.tar
+mv mud.tar.gz MUD.TGZ
+chmod og-rwx MUD.TGZ
+
+rm log
+
+#tar -cvf web.tar public_html/projecttwilight/
+#gzip web.tar
+#mv web.tar.gz WEB.TGZ
+#chmod og-rwx WEB.TGZ
+
+cd ~/ptmud/src/
+make
+
+rm ~/ptmud/src/completedbackup
