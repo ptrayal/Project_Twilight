@@ -1,7 +1,5 @@
 #!/bin/csh
 
-cp ~/backup ~/ptmud/src/completedbackup
-
 cd ~/ptmud/src
 make wipe
 cd ~/ptmud/area
@@ -15,36 +13,39 @@ cd ~
 	@ index++
     end
 
-tar -cvf player.tar ptmud/player/
-gzip player.tar
-mv player.tar.gz player.tgz
-chmod og-rwx player.tgz
+tar -cvf player-`date "+%d_%b_%Y_%H_%M"`.tar ptmud/player/
+gzip player-`date "+%d_%b_%Y_%H_%M"`.tar
+mv player-`date "+%d_%b_%Y_%H_%M"`.tar.gz player-`date "+%d_%b_%Y_%H_%M"`.tgz
+chmod og-rwx player-`date "+%d_%b_%Y_%H_%M"`.tgz
 
-tar -cvf area.tar ptmud/area/
-gzip area.tar
-mv area.tar.gz area.tgz
-chmod og-rwx area.tgz
+tar -cvf area-`date "+%d_%b_%Y_%H_%M"`.tar ptmud/area/
+gzip area-`date "+%d_%b_%Y_%H_%M"`.tar
+mv area-`date "+%d_%b_%Y_%H_%M"`.tar.gz area-`date "+%d_%b_%Y_%H_%M"`.tgz
+chmod og-rwx area-`date "+%d_%b_%Y_%H_%M"`.tgz
 
-tar -cvf src.tar ptmud/src/
-gzip src.tar
-mv src.tar.gz SRC.TGZ
-chmod og-rwx SRC.TGZ
+tar -cvf src-`date "+%d_%b_%Y_%H_%M"`.tar ptmud/src/
+gzip src-`date "+%d_%b_%Y_%H_%M"`.tar
+mv src-`date "+%d_%b_%Y_%H_%M"`.tar.gz SRC-`date "+%d_%b_%Y_%H_%M"`.tgz
+chmod og-rwx SRC-`date "+%d_%b_%Y_%H_%M"`.tgz
 
 ls mud/log/ >> log
 
-tar -cvf mud.tar ptmud/ --exclude-from ~/log
-gzip mud.tar
-mv mud.tar.gz MUD.TGZ
-chmod og-rwx MUD.TGZ
+tar -cvf mud-`date "+%d_%b_%Y_%H_%M"`.tar ptmud/ --exclude-from ~/log
+gzip mud-`date "+%d_%b_%Y_%H_%M"`.tar
+mv mud-`date "+%d_%b_%Y_%H_%M"`.tar.gz MUD-`date "+%d_%b_%Y_%H_%M"`.tgz
+chmod og-rwx MUD-`date "+%d_%b_%Y_%H_%M"`.tgz
 
 rm log
 
-tar -cvf web.tar public_html/projecttwilight/
-gzip web.tar
-mv web.tar.gz WEB.TGZ
-chmod og-rwx WEB.TGZ
+#tar -cvf web.tar public_html/projecttwilight/
+#gzip web.tar
+#mv web.tar.gz WEB.tgz
+#chmod og-rwx WEB.tgz
 
 cd ~/ptmud/src/
 make
+
+cd ~
+mv *.tgz ./backup
 
 rm ~/ptmud/src/completedbackup
