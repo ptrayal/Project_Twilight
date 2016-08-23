@@ -13,24 +13,28 @@
 UNAME = $(shell uname -s)
 ####################################################################################################
 
+ECHOCMD = /bin/echo
+
+#Colors Supported
+L_RED   = \x1B[1;31m
+L_GREEN = \x1B[1;32m
+L_YELL  = \x1B[1;33m
+L_BLUE  = \x1B[1;34m
+L_CYAN  = \x1B[1;36m
+L_WHITE = \x1B[1;37m
+L_NRM   = \x1B[0;00m
+
 CC      = gcc
 PROF    = -ggdb3 #-Werror -pedantic -DASSERT
 NOCRYPT =
 C_FLAGS =  -Wall -g $(PROF) #$(NOCRYPT)
 L_FLAGS =  $(PROF)
 
+C_FILES	= ${wildcard *.c}
 
-O_FILES = act_comm.o act_enter.o act_info.o act_move.o act_obj.o act_wiz.o \
-			alias.o comm.o const.o db.o fight.o fight_old.o handler.o interp.o \
-			lookup.o magic.o magic3.o mob_cmds.o mob_prog.o olc.o olc_act.o \
-			olc_mpcode.o olc_save.o protocol.o quest.o recycle.o save.o social-edit.o \
-			string.o subcmds.o tables.o update.o grid.o
+O_FILES = $(patsubst %.c, %.o, ${C_FILES})
 
-O_TESTFILES = act_comm.o act_enter.o act_info.o act_move.o act_obj.o act_wiz.o \
-			alias.o comm.o const.o db.o fight.o fight_old.o handler.o interp.o \
-			lookup.o magic.o magic3.o mob_cmds.o mob_prog.o olc.o olc_act.o \
-			olc_mpcode.o olc_save.o protocol.o quest.o recycle.o save.o social-edit.o \
-			string.o subcmds.o tables.o update.o grid.o
+O_TESTFILES = $(patsubst %.c, %.o, ${C_FILES})
 
 pt: $(O_FILES)
 	rm -f project
@@ -42,7 +46,7 @@ pt: $(O_FILES)
 	@echo "#define __Version_h" >> version.h
 	@echo '#define mudVersion "1.$(shell cat $(MJVERSION_FILE)).$(shell cat $(MVERSION_FILE)).$(shell cat $(BVERSION_FILE))"' >> version.h
 	@echo "#endif" >> version.h
-	@echo "Revision control completed!"
+	@$(ECHOCMD) -e "$(L_WHITE)Revision control completed!$(L_NRM)"
 	
 
 ptdev: $(O_TESTFILES)
@@ -55,7 +59,7 @@ ptdev: $(O_TESTFILES)
 	@echo "#define __Version_h" >> version.h
 	@echo '#define mudVersion "1.$(shell cat $(MJVERSION_FILE)).$(shell cat $(MVERSION_FILE)).$(shell cat $(BVERSION_FILE))"' >> version.h
 	@echo "#endif" >> version.h
-	@echo "Revision control completed!"
+	@$(ECHOCMD) -e "$(L_WHITE)Revision control completed!$(L_NRM)"
 
 .c.o: twilight.h
 	$(CC) -c $(C_FLAGS) $<
@@ -64,7 +68,7 @@ ptdev: $(O_TESTFILES)
 # clean out our folder of any/all un-necessary files allowing us to ensure our directory is clean.
 clean:
 	@rm -f *.o
-	@echo ".o files removed from directory."
+	@$(ECHOCMD) -e "$(L_RED).o files removed from directory.$(L_NRM)"
 ####################################################################################################
 
 ####################################################################################################
@@ -74,7 +78,7 @@ wipe:
 	@rm -f project.exe
 	@rm -f projectdev
 	@rm -f projectdev.exe
-	@echo "Project Twilight is wiped."
+	@$(ECHOCMD) -e "$(L_RED)Project Twilight is wiped.$(L_NRM)"
 ####################################################################################################
 
 ####################################################################################################
@@ -101,7 +105,7 @@ bversion:
 	@echo "#define __Version_h" >> version.h
 	@echo '#define mudVersion "1.$(shell cat $(MJVERSION_FILE)).$(shell cat $(MVERSION_FILE)).$(shell cat $(BVERSION_FILE))"' >> version.h
 	@echo "#endif" >> version.h
-	@echo "Revision control completed!"
+	@$(ECHOCMD) -e "$(L_WHITE)Revision control completed!$(L_NRM)"
 
 #####################################################################################################
 
@@ -115,7 +119,7 @@ mversion:
 	@echo "#define __Version_h" >> version.h
 	@echo '#define mudVersion "1.$(shell cat $(MJVERSION_FILE)).$(shell cat $(MVERSION_FILE)).$(shell cat $(BVERSION_FILE))"' >> version.h
 	@echo "#endif" >> version.h
-	@echo "Revision control completed!"
+	@$(ECHOCMD) -e "$(L_WHITE)Revision control completed!$(L_NRM)"
 
 #####################################################################################################
 
@@ -129,7 +133,7 @@ mjversion:
 	@echo "#define __Version_h" >> version.h
 	@echo '#define mudVersion "1.$(shell cat $(MJVERSION_FILE)).$(shell cat $(MVERSION_FILE)).$(shell cat $(BVERSION_FILE))"' >> version.h
 	@echo "#endif" >> version.h
-	@echo "Revision control completed!"
+	@$(ECHOCMD) -e "$(L_WHITE)Revision control completed!$(L_NRM)"
 
 #####################################################################################################
 
