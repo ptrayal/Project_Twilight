@@ -24,7 +24,7 @@ L_CYAN  = \x1B[1;36m
 L_WHITE = \x1B[1;37m
 L_NRM   = \x1B[0;00m
 
-# Ok Messages
+# Ok Messages - Not used currently.
 OK_S    = $(L_GREEN)OK$(L_NRM)
 ERR_S   = with $(L_RED)ERRORS$(L_NRM)
 WARN_S  = with $(L_YELL)WARNINGS$(L_NRM)
@@ -35,6 +35,8 @@ NOCRYPT =
 C_FLAGS =  -Wall -g $(PROF) #$(NOCRYPT)
 L_FLAGS =  $(PROF)
 
+
+# These look for all the .c files in the directory and use them in the compiling of the code.
 C_FILES	= ${wildcard *.c}
 
 O_FILES = $(patsubst %.c, %.o, ${C_FILES})
