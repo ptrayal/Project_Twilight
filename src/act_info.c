@@ -92,37 +92,37 @@ char *format_obj_to_char( OBJ_DATA *obj, CHAR_DATA *ch, bool fShort )
 		return buf;
 
 	if (fShort && obj->in_obj != NULL && obj->in_obj->item_type == ITEM_FURNITURE)
-		strncat( buf, "    " , sizeof(buf));
+		strncat( buf, "    " , sizeof(buf) - strlen(buf) - 1 );
 
-	if ( IS_OBJ_STAT(obj, ITEM_INVIS)       )   strncat( buf, "(Invis) ", sizeof(buf)     );
-	if ( IS_OBJ_STAT(obj, ITEM_GLOW)        )   strncat( buf, "(Glowing) ", sizeof(buf)   );
-	if ( IS_OBJ_STAT(obj, ITEM_DREAM)       )   strncat( buf, "(Dream) ", sizeof(buf)     );
-	if ( IS_OBJ_STAT(obj, ITEM_UMBRAL)      )   strncat( buf, "(Umbra) ", sizeof(buf)     );
-	if ( IS_OBJ_STAT(obj, ITEM_HIDDEN)      )   strncat( buf, "(Hidden) ", sizeof(buf)    );
+	if ( IS_OBJ_STAT(obj, ITEM_INVIS)       )   strncat( buf, "(Invis) ", sizeof(buf) - strlen(buf) - 1     );
+	if ( IS_OBJ_STAT(obj, ITEM_GLOW)        )   strncat( buf, "(Glowing) ", sizeof(buf) - strlen(buf) - 1   );
+	if ( IS_OBJ_STAT(obj, ITEM_DREAM)       )   strncat( buf, "(Dream) ", sizeof(buf) - strlen(buf) - 1     );
+	if ( IS_OBJ_STAT(obj, ITEM_UMBRAL)      )   strncat( buf, "(Umbra) ", sizeof(buf) - strlen(buf) - 1     );
+	if ( IS_OBJ_STAT(obj, ITEM_HIDDEN)      )   strncat( buf, "(Hidden) ", sizeof(buf) - strlen(buf) - 1   );
 
 	if ( fShort )
 	{
 		if ( obj->short_descr != NULL ) {
 			if(IS_SET(obj->extra2, OBJ_PACKAGED))
-				strncat( buf, "a package", sizeof(buf) );
+				strncat( buf, "a package", sizeof(buf) - strlen(buf) - 1 );
 			else
-				strncat( buf, obj->short_descr, sizeof(buf) );
+				strncat( buf, obj->short_descr, sizeof(buf) - strlen(buf) - 1 );
 		}
 		if (obj->in_obj != NULL && obj->in_obj->item_type == ITEM_FURNITURE) {
-			strncat( buf, " on " , sizeof(buf));
+			strncat( buf, " on " , sizeof(buf) - strlen(buf) - 1);
 			if(IS_SET(obj->in_obj->extra2, OBJ_PACKAGED))
-				strncat(buf, "a package", sizeof(buf));
+				strncat(buf, "a package", sizeof(buf) - strlen(buf) - 1);
 			else
-				strncat( buf, obj->in_obj->short_descr, sizeof(buf) );
+				strncat( buf, obj->in_obj->short_descr, sizeof(buf) - strlen(buf) - 1 );
 		}
 	}
 	else
 	{
 		if ( obj->description != NULL) {
 			if(IS_SET(obj->extra2, OBJ_PACKAGED))
-				strncat( buf, "a package sits here.", sizeof(buf) );
+				strncat( buf, "a package sits here.", sizeof(buf) - strlen(buf) - 1 );
 			else
-				strncat( buf, obj->description, sizeof(buf) );
+				strncat( buf, obj->description, sizeof(buf) - strlen(buf) - 1 );
 		}
 
 		if ( obj->item_type == ITEM_FURNITURE && obj->contains != NULL
@@ -131,7 +131,7 @@ char *format_obj_to_char( OBJ_DATA *obj, CHAR_DATA *ch, bool fShort )
 	}
 
 	if(strlen(buf) <= 0)
-		strncat(buf, "This object has no description.\n\r", sizeof(buf));
+		strncat(buf, "This object has no description.\n\r", sizeof(buf) - strlen(buf) - 1);
 		log_string(LOG_BUG, Format("Object VNUM %d has no description.", obj->pIndexData->vnum));
 
 	return buf;
@@ -273,34 +273,34 @@ void show_char_to_char_0( CHAR_DATA *victim, CHAR_DATA *ch )
 	{
 		if(IS_NPC(victim))
 		{
-			strncat( buf, Format("[%s] ", victim->short_descr), sizeof(buf) );
+			strncat( buf, Format("[%s] ", victim->short_descr), sizeof(buf) - strlen(buf) - 1 );
 		}
 		else
 		{
-			strncat( buf, Format("[%s] ", victim->name), sizeof(buf) );
+			strncat( buf, Format("[%s] ", victim->name), sizeof(buf) - strlen(buf) - 1 );
 		}
 
 
 		if(IS_SET(victim->act2, ACT2_STORY))
 		{
-			strncat(buf, Format("\tR[\tYST\tR]\tn "), sizeof(buf2));
+			strncat(buf, Format("\tR[\tYST\tR]\tn "), sizeof(buf2) - strlen(buf2) - 1);
 		}
 
 		if(IS_SET(victim->comm, COMM_AFK))
 		{
-			strncat(buf, Format("[\tYAFK\tn] "), sizeof(buf));
+			strncat(buf, Format("[\tYAFK\tn] "), sizeof(buf) - strlen(buf) - 1);
 		}
 
 		if ( !IS_SET(ch->act, ACT_DREAMING) && IS_SET(victim->act, ACT_DREAMING) )
-			strncat( buf, "(Dreaming) ", sizeof(buf) );
+			strncat( buf, "(Dreaming) ", sizeof(buf) - strlen(buf) - 1 );
 		if ( !IS_SET(ch->act, ACT_UMBRA) && IS_SET(victim->act, ACT_UMBRA) )
-			strncat( buf, "(Umbral) ", sizeof(buf) );
+			strncat( buf, "(Umbral) ", sizeof(buf) - strlen(buf) - 1 );
 		if ( (IS_SET(ch->act, ACT_UMBRA) || IS_SET(ch->act, ACT_DREAMING))
 				&& (!IS_SET(victim->act, ACT_UMBRA)
 						&& !IS_SET(victim->act, ACT_DREAMING)) )
-			strncat( buf, "(Real World) ", sizeof(buf));
+			strncat( buf, "(Real World) ", sizeof(buf) - strlen(buf) - 1);
 
-		if ( victim->invis_level >= LEVEL_IMMORTAL) strncat( buf, "(Wiz) ", MSL      );
+		if ( victim->invis_level >= LEVEL_IMMORTAL) strncat( buf, "(Wiz) ", sizeof(buf) - strlen(buf) - 1 );
 	}
 
 	if(!SAME_PLANE(victim, ch) && !IS_ADMIN(ch))
@@ -310,7 +310,7 @@ void show_char_to_char_0( CHAR_DATA *victim, CHAR_DATA *ch )
 					&& IS_NPC(victim)
 					&& (victim->shape == SHAPE_HUMAN || victim->shape == SHAPE_NONE) )
 	{
-		strncat( buf, victim->long_descr, sizeof(buf) );
+		strncat( buf, victim->long_descr, sizeof(buf) - strlen(buf) - 1 );
 		send_to_char( buf, ch );
 		return;
 	}
@@ -318,30 +318,30 @@ void show_char_to_char_0( CHAR_DATA *victim, CHAR_DATA *ch )
 	if(ch->form == FORM_BLOOD)
 	{
 		if(can_see(ch, victim))
-			strncat( buf, "a pool of blood", sizeof(buf) );
+			strncat( buf, "a pool of blood", sizeof(buf) - strlen(buf) - 1 );
 		else
-			strncat( buf, "someone", sizeof(buf) );
+			strncat( buf, "someone", sizeof(buf) - strlen(buf) - 1 );
 	}
 	else if(ch->form == FORM_SHADOW)
 	{
 		if(can_see(ch, victim))
-			strncat( buf, "a dark shadow", sizeof(buf) );
+			strncat( buf, "a dark shadow", sizeof(buf) - strlen(buf) - 1 );
 		else
-			strncat( buf, "someone", sizeof(buf) );
+			strncat( buf, "someone", sizeof(buf) - strlen(buf) - 1 );
 	}
 	else if(ch->form == FORM_HORRID)
 	{
 		if(can_see(ch, victim))
-			strncat( buf, "a horrid beast", sizeof(buf) );
+			strncat( buf, "a horrid beast", sizeof(buf) - strlen(buf) - 1 );
 		else
-			strncat( buf, "someone", sizeof(buf) );
+			strncat( buf, "someone", sizeof(buf) - strlen(buf) - 1 );
 	}
 	else if(ch->form == FORM_ASH)
 	{
 		if(can_see(ch, victim))
-			strncat( buf, "a pile of ashes", sizeof(buf) );
+			strncat( buf, "a pile of ashes", sizeof(buf) - strlen(buf) - 1 );
 		else
-			strncat( buf, "someone", sizeof(buf) );
+			strncat( buf, "someone", sizeof(buf) - strlen(buf) - 1 );
 	}
 	else if(victim->shape == SHAPE_HUMAN || victim->shape == SHAPE_NONE)
 	{
@@ -349,166 +349,166 @@ void show_char_to_char_0( CHAR_DATA *victim, CHAR_DATA *ch )
 		{
 			if(can_see(ch, victim))
 			{
-				strncat( buf, Format("%s", victim->alt_name), sizeof(buf) );
+				strncat( buf, Format("%s", victim->alt_name), sizeof(buf) - strlen(buf) - 1 );
 			}
 			else
 			{
-				strncat( buf, Format("someone"), sizeof(buf) );
+				strncat( buf, Format("someone"), sizeof(buf) - strlen(buf) - 1 );
 			}
 		}
 		else
-			strncat( buf, PERS( victim, ch ), sizeof(buf) );
+			strncat( buf, PERS( victim, ch ), sizeof(buf) - strlen(buf) - 1 );
 	}
 	else if(victim->shape == SHAPE_WOLF)
 	{
 		if(can_see(ch, victim)) {
 			if(victim->race == race_lookup("werewolf")) {
-				strncat( buf, "a large ", sizeof(buf) );
-				strncat( buf, clan_table[victim->clan].alt_race, sizeof(buf) );
-			} else strncat( buf, "a large wolf", sizeof(buf) );
-		} else strncat( buf, "someone", sizeof(buf) );
+				strncat( buf, "a large ", sizeof(buf) - strlen(buf) - 1 );
+				strncat( buf, clan_table[victim->clan].alt_race, sizeof(buf) - strlen(buf) - 1 );
+			} else strncat( buf, "a large wolf", sizeof(buf) - strlen(buf) - 1 );
+		} else strncat( buf, "someone", sizeof(buf) - strlen(buf) - 1 );
 	}
 	else if(victim->shape == SHAPE_CRINOS)
 	{
 		if(can_see(ch, victim)) {
-			strncat( buf, "a snarling ", sizeof(buf) );
-			strncat( buf, clan_table[victim->clan].crinos_desc, sizeof(buf) );
+			strncat( buf, "a snarling ", sizeof(buf) - strlen(buf) - 1 );
+			strncat( buf, clan_table[victim->clan].crinos_desc, sizeof(buf) - strlen(buf) - 1 );
 		} else
-			strncat( buf, "someone", sizeof(buf) );
+			strncat( buf, "someone", sizeof(buf) - strlen(buf) - 1 );
 	}
 	else if(victim->shape == SHAPE_BAT)
 	{
 		if(can_see(ch, victim))
-			strncat( buf, "a bat", sizeof(buf) );
+			strncat( buf, "a bat", sizeof(buf) - strlen(buf) - 1 );
 		else
-			strncat( buf, "someone", sizeof(buf) );
+			strncat( buf, "someone", sizeof(buf) - strlen(buf) - 1 );
 	}
 
 	if(IS_SET(victim->form, FORM_MIST))
 	{
-		strncat( buf, " drifts a little in the breeze.", sizeof(buf) );
+		strncat( buf, " drifts a little in the breeze.", sizeof(buf) - strlen(buf) - 1 );
 	}
 	else if(IS_SET(victim->form, FORM_BLOOD))
 	{
-		strncat( buf, " ripples a little.", sizeof(buf) );
+		strncat( buf, " ripples a little.", sizeof(buf) - strlen(buf) - 1 );
 	}
 	else if(IS_SET(victim->form, FORM_SHADOW))
 	{
-		strncat( buf, " dims the light.", sizeof(buf) );
+		strncat( buf, " dims the light.", sizeof(buf) - strlen(buf) - 1 );
 	}
 	else if(IS_SET(victim->form, FORM_ASH))
 	{
-		strncat( buf, " rests peacefully, stirring slightly in the breeze.", sizeof(buf) );
+		strncat( buf, " rests peacefully, stirring slightly in the breeze.", sizeof(buf) - strlen(buf) - 1 );
 	}
 	else
 	{
 		switch ( victim->position )
 		{
-		case P_DEAD:  strncat( buf, " is DEAD!!", sizeof(buf) );              break;
-		case P_MORT:  strncat( buf, " is mortally wounded.", sizeof(buf) );   break;
-		case P_INCAP: strncat( buf, " is incapacitated.", sizeof(buf) );      break;
-		case P_STUN:  strncat( buf, " is lying here stunned.", sizeof(buf) ); break;
+		case P_DEAD:  strncat( buf, " is DEAD!!", sizeof(buf) - strlen(buf) - 1 );              break;
+		case P_MORT:  strncat( buf, " is mortally wounded.", sizeof(buf) - strlen(buf) - 1 );   break;
+		case P_INCAP: strncat( buf, " is incapacitated.", sizeof(buf) - strlen(buf) - 1 );      break;
+		case P_STUN:  strncat( buf, " is lying here stunned.", sizeof(buf) - strlen(buf) - 1 ); break;
 		case P_SLEEP:
 			if (victim->on != NULL)
 			{
 				if (IS_SET(victim->on->value[2],SLEEP_AT))
 				{
-					strncat(buf,Format(" is sleeping at %s.", victim->on->short_descr), sizeof(buf));
+					strncat(buf,Format(" is sleeping at %s.", victim->on->short_descr), sizeof(buf) - strlen(buf) - 1);
 				}
 				else if (IS_SET(victim->on->value[2],SLEEP_ON))
 				{
-					strncat(buf,Format(" is sleeping on %s.", victim->on->short_descr), sizeof(buf));
+					strncat(buf,Format(" is sleeping on %s.", victim->on->short_descr), sizeof(buf) - strlen(buf) - 1);
 				}
 				else
 				{
-					strncat(buf,Format(" is sleeping in %s.", victim->on->short_descr), sizeof(buf));
+					strncat(buf,Format(" is sleeping in %s.", victim->on->short_descr), sizeof(buf) - strlen(buf) - 1);
 				}
 			}
 			else
-				strncat(buf," is sleeping here.", sizeof(buf));
+				strncat(buf," is sleeping here.", sizeof(buf) - strlen(buf) - 1);
 			break;
 		case P_TORPOR:
-			strncat(buf, " lies here in torpor.", sizeof(buf));
+			strncat(buf, " lies here in torpor.", sizeof(buf) - strlen(buf) - 1);
 			break;
 		case P_REST:
 			if (victim->on != NULL)
 			{
 				if (IS_SET(victim->on->value[2],REST_AT))
 				{
-					strncat(buf, Format(" is resting at %s.", victim->on->short_descr), sizeof(buf));
+					strncat(buf, Format(" is resting at %s.", victim->on->short_descr), sizeof(buf) - strlen(buf) - 1);
 				}
 				else if (IS_SET(victim->on->value[2],REST_ON))
 				{
-					strncat(buf,Format(" is resting on %s.", victim->on->short_descr), sizeof(buf));
+					strncat(buf,Format(" is resting on %s.", victim->on->short_descr), sizeof(buf) - strlen(buf) - 1);
 				}
 				else
 				{
-					strncat(buf, Format(" is resting in %s.", victim->on->short_descr), sizeof(buf));
+					strncat(buf, Format(" is resting in %s.", victim->on->short_descr), sizeof(buf) - strlen(buf) - 1);
 				}
 			}
 			else
-				strncat( buf, " is resting here.", sizeof(buf) );
+				strncat( buf, " is resting here.", sizeof(buf) - strlen(buf) - 1 );
 			break;
 		case P_SIT:
 			if (victim->on != NULL)
 			{
 				if (IS_SET(victim->on->value[2],SIT_AT))
 				{
-					strncat(buf, Format(" is sitting at %s.", victim->on->short_descr), sizeof(buf));
+					strncat(buf, Format(" is sitting at %s.", victim->on->short_descr), sizeof(buf) - strlen(buf) - 1);
 				}
 				else if (IS_SET(victim->on->value[2],SIT_ON))
 				{
-					strncat(buf, Format(" is sitting on %s.", victim->on->short_descr), sizeof(buf));
+					strncat(buf, Format(" is sitting on %s.", victim->on->short_descr), sizeof(buf) - strlen(buf) - 1);
 				}
 				else
 				{
-					strncat(buf, Format(" is sitting in %s.", victim->on->short_descr), sizeof(buf));
+					strncat(buf, Format(" is sitting in %s.", victim->on->short_descr), sizeof(buf) - strlen(buf) - 1);
 				}
 			}
 			else
-				strncat(buf, " is sitting here.", sizeof(buf));
+				strncat(buf, " is sitting here.",sizeof(buf) - strlen(buf) - 1);
 			break;
 		case P_STAND:
 			if (victim->on != NULL)
 			{
 				if (IS_SET(victim->on->value[2],STAND_AT))
 				{
-					strncat(buf, Format(" is standing at %s", victim->on->short_descr), sizeof(buf));
+					strncat(buf, Format(" is standing at %s", victim->on->short_descr), sizeof(buf) - strlen(buf) - 1);
 				}
 				else if (IS_SET(victim->on->value[2],STAND_ON))
 				{
-					strncat(buf, Format(" is standing on %s", victim->on->short_descr), sizeof(buf));
+					strncat(buf, Format(" is standing on %s", victim->on->short_descr), sizeof(buf) - strlen(buf) - 1);
 				}
 				else
 				{
-					strncat(buf, Format(" is standing in %s", victim->on->short_descr), sizeof(buf));
+					strncat(buf, Format(" is standing in %s", victim->on->short_descr), sizeof(buf) - strlen(buf) - 1);
 				}
 			}
 			else
-				strncat( buf, " is here", sizeof(buf) );
+				strncat( buf, " is here", sizeof(buf) - strlen(buf) - 1 );
 			if ( IS_AFFECTED(victim, AFF_CHARM)       )
-				strncat( buf, " with glassy eyes.", sizeof(buf)    );
+				strncat( buf, " with glassy eyes.", sizeof(buf) - strlen(buf) - 1    );
 			else
-				strncat( buf, ".", sizeof(buf) );
+				strncat( buf, ".", sizeof(buf) - strlen(buf) - 1 );
 			break;
 		case P_FIGHT:
-			strncat( buf, " is here, fighting ", sizeof(buf) );
+			strncat( buf, " is here, fighting ", sizeof(buf) - strlen(buf) - 1 );
 			if ( victim->fighting == NULL )
-				strncat( buf, "thin air??", sizeof(buf) );
+				strncat( buf, "thin air??", sizeof(buf) - strlen(buf) - 1 );
 			else if ( victim->fighting == ch )
-				strncat( buf, "YOU!", sizeof(buf) );
+				strncat( buf, "YOU!", sizeof(buf) - strlen(buf) - 1 );
 			else if ( victim->in_room == victim->fighting->in_room )
 			{
-				strncat( buf, PERS( victim->fighting, ch ), sizeof(buf) );
-				strncat( buf, ".", sizeof(buf) );
+				strncat( buf, PERS( victim->fighting, ch ), sizeof(buf) - strlen(buf) - 1 );
+				strncat( buf, ".", sizeof(buf) - strlen(buf) - 1 );
 			}
 			else
-				strncat( buf, "someone who left??", sizeof(buf) );
+				strncat( buf, "someone who left??", sizeof(buf) - strlen(buf) - 1 );
 			break;
 		}
 	}
 
-	strncat( buf, "\n\r", sizeof(buf) );
+	strncat( buf, "\n\r", sizeof(buf) - strlen(buf) - 1 );
 	buf[0] = UPPER(buf[0]);
 	send_to_char( buf, ch );
 	return;
@@ -1501,22 +1501,22 @@ void do_exits( CHAR_DATA *ch, char *argument )
 				{
 					if( !IS_SET(pexit->exit_info, EX_WINDOW) )
 					{
-						strncat( buf, " ", sizeof(buf) );
+						strncat( buf, " ", sizeof(buf) - strlen(buf) - 1 );
 						if( IS_SET(pexit->exit_info, EX_HIDDEN) )
-							strncat( buf, "\tR-", sizeof(buf) );
+							strncat( buf, "\tR-", sizeof(buf) - strlen(buf) - 1 );
 						if( IS_SET(pexit->exit_info, EX_CLOSED) )
-							strncat( buf, "(", sizeof(buf) );
-						strncat( buf, dir_name[door], sizeof(buf) );
+							strncat( buf, "(", sizeof(buf) - strlen(buf) - 1 );
+						strncat( buf, dir_name[door], sizeof(buf) - strlen(buf) - 1);
 						if( IS_SET(pexit->exit_info, EX_CLOSED) )
-							strncat( buf, ")", sizeof(buf) );
+							strncat( buf, ")", sizeof(buf) - strlen(buf) - 1 );
 						if( IS_SET(pexit->exit_info, EX_HIDDEN) )
-							strncat( buf, "-\tn", sizeof(buf) );
+							strncat( buf, "-\tn", sizeof(buf) - strlen(buf) - 1 );
 					}
 					else
 					{
-						strncat( buf, " <", sizeof(buf) );
+						strncat( buf, " <", sizeof(buf) - strlen(buf) - 1 );
 						strcat(buf, dir_name[door]);
-						strncat( buf, ">", sizeof(buf) );
+						strncat( buf, ">", sizeof(buf) - strlen(buf) - 1 );
 					}
 				}
 				else
@@ -1548,25 +1548,25 @@ void do_exits( CHAR_DATA *ch, char *argument )
 				found = TRUE;
 				if ( fAuto )
 				{
-					strncat( buf, " ", sizeof(buf) );
+					strncat( buf, " ", sizeof(buf) - strlen(buf) - 1 );
 					if( IS_SET(pexit->exit_info, EX_WINDOW) )
-						strncat( buf, "<", sizeof(buf) );
+						strncat( buf, "<", sizeof(buf) - strlen(buf) - 1 );
 					else if( IS_SET(pexit->exit_info, EX_CLOSED) )
 					{
 						if( IS_SET(pexit->exit_info, EX_HIDDEN) )
-							strncat( buf, "\tR-(", sizeof(buf) );
+							strncat( buf, "\tR-(", sizeof(buf) - strlen(buf) - 1 );
 						else
-							strncat( buf, "(", sizeof(buf) );
+							strncat( buf, "(", sizeof(buf) - strlen(buf) - 1 );
 					}
 					strcat(buf, dir_name[door]);
 					if( IS_SET(pexit->exit_info, EX_WINDOW) )
-						strncat( buf, ">", sizeof(buf) );
+						strncat( buf, ">", sizeof(buf) - strlen(buf) - 1 );
 					else if( IS_SET(pexit->exit_info, EX_CLOSED) )
 					{
 						if( IS_SET(pexit->exit_info, EX_HIDDEN) )
-							strncat( buf, ")-\tn", sizeof(buf) );
+							strncat( buf, ")-\tn", sizeof(buf) - strlen(buf) - 1 );
 						else
-							strncat( buf, ")", sizeof(buf) );
+							strncat( buf, ")", sizeof(buf) - strlen(buf) - 1 );
 					}
 				}
 				else
@@ -1589,10 +1589,10 @@ void do_exits( CHAR_DATA *ch, char *argument )
 	}
 
 	if ( !found )
-		strncat( buf, fAuto ? " none" : "None.\n\r", sizeof(buf) );
+		strncat( buf, fAuto ? " none" : "None.\n\r", sizeof(buf) - strlen(buf) - 1 );
 
 	if ( fAuto )
-		strncat( buf, "]\n\r", sizeof(buf) );
+		strncat( buf, "]\n\r", sizeof(buf) - strlen(buf) - 1 );
 
 	send_to_char( buf, ch );
 	send_to_char( "", ch );
@@ -2362,8 +2362,8 @@ void do_help( CHAR_DATA *ch, char *argument )
 	{
 		argument = one_argument(argument,argone);
 		if (!IS_NULLSTR(argall))
-			strncat(argall," ", sizeof(argall) );
-		strncat(argall,argone, sizeof(argall) );
+			strncat(argall," ", sizeof(argall) - strlen(argall) - 1 );
+		strncat(argall,argone, sizeof(argall) - strlen(argall) - 1 );
 	}
 
 	if ( strlen( argall ) == 1 )
@@ -4018,52 +4018,52 @@ void do_diceroll(CHAR_DATA *ch, char *argument)
 	snprintf(result, sizeof(result), "%s rolls: ", IS_NPC(vch) ? vch->short_descr : vch->name);
 	if(a >= 0)
 	{
-		strncat(result, Format("%s ", stat_table[a].name), sizeof(result) );
+		strncat(result, Format("%s ", stat_table[a].name), sizeof(result) - strlen(result) - 1 );
 	}
 	if(b >= 0)
 	{
-		strncat(result, Format("%s ", ability_table[b].name), sizeof(result) );
+		strncat(result, Format("%s ", ability_table[b].name), sizeof(result) - strlen(result) - 1 );
 	}
 	if(c >= 0)
 	{
 		if(ch->race == race_lookup("human"))
 		{
-			strncat(result, Format("%s ", disc_table[c].hname), sizeof(result) );
+			strncat(result, Format("%s ", disc_table[c].hname), sizeof(result) - strlen(result) - 1 );
 		}
 		else if(IS_VAMPIRE(ch))
 		{
-			strncat(result, Format("%s ", disc_table[c].vname), sizeof(result) );
+			strncat(result, Format("%s ", disc_table[c].vname), sizeof(result) - strlen(result) - 1 );
 		}
 		else if(ch->race == race_lookup("werewolf"))
 		{
-			strncat(result, Format("%s ", disc_table[c].wname), sizeof(result) );
+			strncat(result, Format("%s ", disc_table[c].wname), sizeof(result) - strlen(result) - 1 );
 		}
 		else if(ch->race == race_lookup("faerie"))
 		{
-			strncat(result, Format("%s ", disc_table[c].fname), sizeof(result) );
+			strncat(result, Format("%s ", disc_table[c].fname), sizeof(result) - strlen(result) - 1 );
 		}
 	}
 	if(d >= 0)
 	{
-		strncat(result, Format("%s ", virtue_table[d].name), sizeof(result));
+		strncat(result, Format("%s ", virtue_table[d].name), sizeof(result) - strlen(result) - 1);
 	}
 	if(e >= 0)
 	{
-		strncat(result, Format("%s ", influence_table[e].name), sizeof(result));
+		strncat(result, Format("%s ", influence_table[e].name), sizeof(result) - strlen(result) - 1);
 	}
 	if(f >= 0)
 	{
-		strncat(result, Format("%s ", background_table[f].name), sizeof(result));
+		strncat(result, Format("%s ", background_table[f].name), sizeof(result) - strlen(result) - 1);
 	}
 	if(g >= 0)
 	{
-		strncat(result, Format("%s ", extra_names[g]), sizeof(result));
+		strncat(result, Format("%s ", extra_names[g]), sizeof(result) - strlen(result) - 1);
 	}
 	if(h >= 0)
 	{
-		strncat(result, Format("%d dice ", h), sizeof(result));
+		strncat(result, Format("%d dice ", h), sizeof(result) - strlen(result) - 1);
 	}
-	strncat(result, "\n\r", sizeof(result));
+	strncat(result, "\n\r", sizeof(result) - strlen(result) - 1);
 
 	if(dice <= 0)
 	{
@@ -4083,7 +4083,7 @@ void do_diceroll(CHAR_DATA *ch, char *argument)
 				a = UMIN(UMAX(a+2, a), 10);
 			if(IS_SET(ch->off_flags, LOADED_DICE_BNEG))
 				a = UMAX(UMIN(a-2, a), 1);
-			strncat(result, Format("%d ", a), sizeof(result) );
+			strncat(result, Format("%d ", a), sizeof(result) - strlen(result) - 1 );
 			if(difficulty > 1)
 			{
 				if(a >= difficulty) successes++;
@@ -4092,13 +4092,13 @@ void do_diceroll(CHAR_DATA *ch, char *argument)
 			else
 				successes++;
 		}
-		strncat(result, "\n\r", sizeof(result) );
+		strncat(result, "\n\r", sizeof(result) - strlen(result) - 1 );
 		if(successcheck)
 		{
 			if(successes >= 0)
-				strncat(result, Format("Successes: %d\n\r", successes), sizeof(result) );
+				strncat(result, Format("Successes: %d\n\r", successes), sizeof(result) - strlen(result) - 1 );
 			else
-				strncat(result, Format("Successes: Botch!\n\r"), sizeof(result) );
+				strncat(result, Format("Successes: Botch!\n\r"), sizeof(result) - strlen(result) - 1 );
 		}
 	}
 	act(result, ch, NULL, to, whom, 1);
@@ -4648,11 +4648,11 @@ void do_trainingcost(CHAR_DATA *ch, char *argument)
 	send_to_char("The cost is: ", ch);
 	if(a >= 0)
 	{
-		strncat(result, Format("%d.", xp_cost_mod(ch, dice ? dice * 4: 10, a)), sizeof(result));
+		strncat(result, Format("%d.", xp_cost_mod(ch, dice ? dice * 4: 10, a)), sizeof(result) - strlen(result) - 1 );
 	}
 	else if(b >= 0)
 	{
-		strncat(result, Format("%d.", xp_cost_mod(ch, dice ? dice * 2: 3, b)), sizeof(result) );
+		strncat(result, Format("%d.", xp_cost_mod(ch, dice ? dice * 2: 3, b)), sizeof(result) - strlen(result) - 1 );
 	}
 	else if(c >= 0)
 	{
@@ -4664,13 +4664,13 @@ void do_trainingcost(CHAR_DATA *ch, char *argument)
 			dice = 7 * ch->disc[c];
 		else
 			dice = 10 * ch->disc[c];
-		strncat(result, Format("%d.", xp_cost_mod(ch, dice, c)), sizeof(result) );
+		strncat(result, Format("%d.", xp_cost_mod(ch, dice, c)), sizeof(result) - strlen(result) - 1 );
 	}
 	else if(d >= 0)
 	{
-		strncat(result, Format("%d. (approx only)", xp_cost_mod(ch, dice ? dice * 3: 10, d)), sizeof(result) );
+		strncat(result, Format("%d. (approx only)", xp_cost_mod(ch, dice ? dice * 3: 10, d)), sizeof(result) - strlen(result) - 1 );
 	}
-	strncat(result, "\n\r", sizeof(result) );
+	strncat(result, "\n\r", sizeof(result) - strlen(result) - 1 );
 
 	send_to_char(result, ch);
 }
