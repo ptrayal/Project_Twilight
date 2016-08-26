@@ -100,16 +100,16 @@ void do_wiznet( CHAR_DATA *ch, char *argument )
 		buf[0] = '\0';
 
 		if (!IS_SET(ch->wiznet,WIZ_ON))
-			strncat(buf,"off ", sizeof(buf));
+			strncat(buf,"off ", sizeof(buf) - strlen(buf) - 1);
 
 		for (flag = 0; wiznet_table[flag].name != NULL; flag++)
 			if (IS_SET(ch->wiznet,wiznet_table[flag].flag))
 			{
-				strncat(buf,wiznet_table[flag].name, sizeof(buf));
-				strncat(buf," ", sizeof(buf));
+				strncat(buf,wiznet_table[flag].name, sizeof(buf) - strlen(buf) - 1);
+				strncat(buf," ", sizeof(buf) - strlen(buf) - 1);
 			}
 
-		strncat(buf,"\n\r", sizeof(buf));
+		strncat(buf,"\n\r", sizeof(buf) - strlen(buf) - 1);
 
 		send_to_char("Wiznet status:\n\r",ch);
 		send_to_char(buf,ch);
@@ -125,12 +125,12 @@ void do_wiznet( CHAR_DATA *ch, char *argument )
 		{
 			if (wiznet_table[flag].level <= get_trust(ch))
 			{
-				strncat(buf,IS_SET(ch->wiznet,wiznet_table[flag].flag)?allcaps(wiznet_table[flag].name):wiznet_table[flag].name, sizeof(buf));
-				strncat(buf," ", sizeof(buf));
+				strncat(buf,IS_SET(ch->wiznet,wiznet_table[flag].flag)?allcaps(wiznet_table[flag].name):wiznet_table[flag].name, sizeof(buf) - strlen(buf) - 1);
+				strncat(buf," ", sizeof(buf) - strlen(buf) - 1);
 			}
 		}
 
-		strncat(buf,"\n\r", sizeof(buf));
+		strncat(buf,"\n\r", sizeof(buf) - strlen(buf) - 1);
 
 		send_to_char("Wiznet options available to you are:\n\r",ch);
 		send_to_char(buf,ch);
@@ -1802,7 +1802,7 @@ void do_shutdown( CHAR_DATA *ch, char *argument )
 	}
 
 	append_file( ch, SHUTDOWN_FILE, buf );
-	strncat( buf, "\n\r" , sizeof(buf));
+	strncat( buf, "\n\r" , sizeof(buf) - strlen(buf) - 1);
 
 	if (ch->invis_level < LEVEL_IMMORTAL)
 	{
@@ -3380,10 +3380,10 @@ void do_mset( CHAR_DATA *ch, char *argument )
         	for ( clan = 0; clan < MAX_CLAN; clan++ )
         	{
             	    if ( clan > 0 )
-                    	strncat( buf, " ", sizeof(buf) );
-            	    strncat( buf, clan_table[clan].name, sizeof(buf) );
+                    	strncat( buf, " ", sizeof(buf) - strlen(buf) - 1 );
+            	    strncat( buf, clan_table[clan].name, sizeof(buf) - strlen(buf) - 1 );
         	}
-            strncat( buf, ".\n\r", sizeof(buf) );
+            strncat( buf, ".\n\r", sizeof(buf) - strlen(buf) - 1 );
 
 	    send_to_char(buf,ch);
 	    return;
@@ -3837,7 +3837,7 @@ void do_string( CHAR_DATA *ch, char *argument )
     	if ( !str_prefix( arg2, "long" ) )
     	{
     		PURGE_DATA( victim->long_descr );
-    		strncat(arg3,"\n\r", sizeof(arg3));
+    		strncat(arg3,"\n\r", sizeof(arg3) - strlen(arg3) - 1 );
     		victim->long_descr = str_dup( arg3 );
     		return;
     	}
@@ -4128,8 +4128,8 @@ void do_sockets( CHAR_DATA *ch, char *argument )
 
 	CheckCH(ch);
 
-	strncat( buf2, "\n\r\tW[Num Connected_State Login@ Idl] Player Name Host\tn\n\r", sizeof(buf2) );
-	strncat( buf2, "\tW--------------------------------------------------------------------------\tn\n\r", sizeof(buf2));
+	strncat( buf2, "\n\r\tW[Num Connected_State Login@ Idl] Player Name Host\tn\n\r", sizeof(buf2) - strlen(buf2) - 1 );
+	strncat( buf2, "\tW--------------------------------------------------------------------------\tn\n\r", sizeof(buf2) - strlen(buf2) - 1 );
 	for ( d = descriptor_list; d; d = d->next )
 	{
 		if ( d->character && can_see( ch, d->character ) )
@@ -4149,12 +4149,12 @@ void do_sockets( CHAR_DATA *ch, char *argument )
 
 			strncat( buf2, Format("\tY[%3d %s %7s %2s] %-12s %-32.32s\tn\n\r",
 					d->descriptor, st, s, idle, ( d->original ) ? d->original->name : ( d->character )  ? d->character->name : "(None!)",
-									  d->host), sizeof(buf2) );
+									  d->host), sizeof(buf2) - strlen(buf2) - 1 );
 
 		}
 	}
 
-	strncat( buf2, Format("\n\r\tY%d user%s\tn\n\r", count, count == 1 ? "" : "s"), sizeof(buf2) );
+	strncat( buf2, Format("\n\r\tY%d user%s\tn\n\r", count, count == 1 ? "" : "s"), sizeof(buf2) - strlen(buf2) - 1 );
 	send_to_char( buf2, ch );
 	return;
 }
@@ -5981,7 +5981,7 @@ void do_org(CHAR_DATA *ch, char *argument)
 
 		unlink( (char *)Format("%s%s", ORG_DIR, org->file_name));
 
-		strncat(arg, ".org", sizeof(arg));
+		strncat(arg, ".org", sizeof(arg) - strlen(arg) - 1 );
 		PURGE_DATA(org->file_name);
 		org->file_name = str_dup(arg);
 		save_org_list();
@@ -6147,10 +6147,10 @@ void do_org(CHAR_DATA *ch, char *argument)
 
 			if (!IS_NULLSTR(org->races) )
 			{
-				strncat( buf, org->races, sizeof(buf) );
-				strncat( buf, " ", sizeof(buf) );
+				strncat( buf, org->races, sizeof(buf) - strlen(buf) - 1 );
+				strncat( buf, " ", sizeof(buf) - strlen(buf) - 1 );
 			}
-			strncat( buf, name, sizeof(buf) );
+			strncat( buf, name, sizeof(buf) - strlen(buf) - 1 );
 			PURGE_DATA( org->races );
 			org->races = string_proper( str_dup( buf ) );
 
@@ -6228,10 +6228,10 @@ void do_org(CHAR_DATA *ch, char *argument)
 
 			if (!IS_NULLSTR(org->races) )
 			{
-				strncat( buf, org->races, sizeof(buf) );
-				strncat( buf, " ", sizeof(buf) );
+				strncat( buf, org->races, sizeof(buf) - strlen(buf) - 1 );
+				strncat( buf, " ", sizeof(buf) - strlen(buf) - 1 );
 			}
-			strncat( buf, name, sizeof(buf) );
+			strncat( buf, name, sizeof(buf) - strlen(buf) - 1 );
 			PURGE_DATA( org->races );
 			org->races = string_proper( str_dup( buf ) );
 
