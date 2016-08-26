@@ -257,13 +257,13 @@ void show_olc_cmds( CHAR_DATA *ch, const struct olc_cmd_type *olc_table )
 	for (cmd = 0; olc_table[cmd].name != NULL; cmd++)
 	{
 		send_to_char(Format("%-15.15s", olc_table[cmd].name), ch);
-		strncat( buf1, buf, sizeof(buf1) );
+		strncat( buf1, buf, sizeof(buf1) + strlen(buf1) - 1);
 		if ( ++col % 5 == 0 )
-			strncat( buf1, "\n\r", sizeof(buf1) );
+			strncat( buf1, "\n\r", sizeof(buf1) + strlen(buf1) - 1 );
 	}
 
 	if ( col % 5 != 0 )
-		strncat( buf1, "\n\r", sizeof(buf1) );
+		strncat( buf1, "\n\r", sizeof(buf1) + strlen(buf1) - 1 );
 
 	send_to_char( buf1, ch );
 	return;
@@ -801,8 +801,8 @@ HELP_DATA * get_help(char *argument)
 	{
 		argument = one_argument(argument,argone);
 		if (!IS_NULLSTR(argall))
-			strncat(argall," ", sizeof(argall));
-		strncat(argall,argone, sizeof(argall));
+			strncat(argall," ", sizeof(argall) - strlen(argall) - 1 );
+		strncat(argall,argone, sizeof(argall) - strlen(argall) - 1 );
 	}
 
 	for ( pHelp = help_list; pHelp != NULL; pHelp = pHelp->next )
@@ -858,8 +858,8 @@ NOTE_DATA * get_kbg(char *argument, int type)
 	{
 		argument = one_argument(argument,argone);
 		if (!IS_NULLSTR(argall))
-			strncat(argall," ", sizeof(argall));
-		strncat(argall,argone, sizeof(argall));
+			strncat(argall," ", sizeof(argall) - strlen(argall) - 1 );
+		strncat(argall,argone, sizeof(argall) - strlen(argall) - 1 );
 	}
 
 	if(type == NOTE_BACKGROUND)
@@ -2339,32 +2339,32 @@ void display_resets( CHAR_DATA *ch )
 	switch ( pReset->command )
 	{
 	default:
-		strncat( final, Format("Bad reset command: %c.", pReset->command), sizeof(final) );
+		strncat( final, Format("Bad reset command: %c.", pReset->command), sizeof(final) - strlen(final) - 1);
 		break;
 
 	case 'M':
 		if ( !( pMobIndex = get_mob_index( pReset->arg1 ) ) )
 		{
-				strncat( final, Format("Load Mobile - Bad Mob %d\n\r", pReset->arg1), sizeof(final) );
+				strncat( final, Format("Load Mobile - Bad Mob %d\n\r", pReset->arg1), sizeof(final) - strlen(final) - 1 );
 				continue;
 		}
 
 		if ( !( pRoomIndex = get_room_index( pReset->arg3 ) ) )
 		{
-				strncat( final, Format("Load Mobile - Bad Room %d\n\r", pReset->arg3), sizeof(final) );
+				strncat( final, Format("Load Mobile - Bad Room %d\n\r", pReset->arg3), sizeof(final) - strlen(final) - 1 );
 				continue;
 		}
 
 			pMob = pMobIndex;
 			strncat( final, Format("M[%5d] %-13.13s in room             R[%5d] %2d-%2d %-15.15s\n\r",
-					   pReset->arg1, pMob->short_descr, pReset->arg3, pReset->arg2, pReset->arg4, pRoomIndex->name), sizeof(final) );
+					   pReset->arg1, pMob->short_descr, pReset->arg3, pReset->arg2, pReset->arg4, pRoomIndex->name), sizeof(final) - strlen(final) - 1 );
 
 		break;
 
 	case 'O':
 		if ( !( pObjIndex = get_obj_index( pReset->arg1 ) ) )
 		{
-				strncat( final, Format("Load Object - Bad Object %d\n\r", pReset->arg1), sizeof(final) );
+				strncat( final, Format("Load Object - Bad Object %d\n\r", pReset->arg1), sizeof(final) - strlen(final) - 1 );
 				continue;
 		}
 
@@ -2372,19 +2372,19 @@ void display_resets( CHAR_DATA *ch )
 
 		if ( !( pRoomIndex = get_room_index( pReset->arg3 ) ) )
 		{
-				strncat( final, Format("Load Object - Bad Room %d\n\r", pReset->arg3), sizeof(final) );
+				strncat( final, Format("Load Object - Bad Room %d\n\r", pReset->arg3), sizeof(final) - strlen(final) - 1 );
 				continue;
 		}
 
 			strncat( final, Format("O[%5d] %-13.13s in room             R[%5d]       %-15.15s\n\r",
-						  pReset->arg1, pObj->short_descr, pReset->arg3, pRoomIndex->name), sizeof(final) );
+						  pReset->arg1, pObj->short_descr, pReset->arg3, pRoomIndex->name), sizeof(final) - strlen(final) - 1 );
 
 		break;
 
 	case 'P':
 		if ( !( pObjIndex = get_obj_index( pReset->arg1 ) ) )
 		{
-				strncat( final, Format("Put Object - Bad Object %d\n\r", pReset->arg1), sizeof(final) );
+				strncat( final, Format("Put Object - Bad Object %d\n\r", pReset->arg1), sizeof(final) - strlen(final) - 1 );
 				continue;
 		}
 
@@ -2392,12 +2392,12 @@ void display_resets( CHAR_DATA *ch )
 
 		if ( !( pObjToIndex = get_obj_index( pReset->arg3 ) ) )
 		{
-				strncat( final, Format("Put Object - Bad To Object %d\n\r", pReset->arg3), sizeof(final) );
+				strncat( final, Format("Put Object - Bad To Object %d\n\r", pReset->arg3), sizeof(final) - strlen(final) - 1 );
 				continue;
 		}
 
 		strncat( final, Format("O[%5d] %-13.13s inside              O[%5d] %2d-%2d %-15.15s\n\r",
-				pReset->arg1, pObj->short_descr, pReset->arg3, pReset->arg2, pReset->arg4, pObjToIndex->short_descr), sizeof(final) );
+				pReset->arg1, pObj->short_descr, pReset->arg3, pReset->arg2, pReset->arg4, pObjToIndex->short_descr), sizeof(final) - strlen(final) - 1 );
 
 		break;
 
@@ -2405,7 +2405,7 @@ void display_resets( CHAR_DATA *ch )
 	case 'E':
 		if ( !( pObjIndex = get_obj_index( pReset->arg1 ) ) )
 		{
-				strncat( final, Format("Give/Equip Object - Bad Object %d\n\r", pReset->arg1), sizeof(final) );
+				strncat( final, Format("Give/Equip Object - Bad Object %d\n\r", pReset->arg1), sizeof(final) - strlen(final) - 1 );
 				continue;
 		}
 
@@ -2413,7 +2413,7 @@ void display_resets( CHAR_DATA *ch )
 
 		if ( !pMob )
 		{
-				strncat( final, Format("Give/Equip Object - No Previous Mobile\n\r"), sizeof(final) );
+				strncat( final, Format("Give/Equip Object - No Previous Mobile\n\r"), sizeof(final) - strlen(final) - 1 );
 				break;
 		}
 
@@ -2425,7 +2425,7 @@ void display_resets( CHAR_DATA *ch )
 		else
 		strncat( final, Format("O[%5d] %-13.13s %-19.19s M[%5d]       %-15.15s\n\r",
 					pReset->arg1, pObj->short_descr, (pReset->command == 'G') ? flag_string( wear_loc_strings, WEAR_NONE ) : flag_string( wear_loc_strings, pReset->arg3 ),
-							pMob->vnum, pMob->short_descr), sizeof(final) );
+							pMob->vnum, pMob->short_descr), sizeof(final) - strlen(final) - 1 );
 
 		break;
 
@@ -2437,7 +2437,8 @@ void display_resets( CHAR_DATA *ch )
 	case 'D':
 		pRoomIndex = get_room_index( pReset->arg1 );
 		strncat( final, Format("R[%5d] %s door of %-19.19s reset to %s\n\r",
-				pReset->arg1, capitalize( dir_name[ pReset->arg2 ] ), pRoomIndex->name, flag_string( door_resets, pReset->arg3 )), sizeof(final) );
+				pReset->arg1, capitalize( dir_name[ pReset->arg2 ] ), pRoomIndex->name, flag_string( door_resets, pReset->arg3 )), 
+				sizeof(final) - strlen(final) - 1 );
 
 		break;
 		/*
@@ -2446,11 +2447,11 @@ void display_resets( CHAR_DATA *ch )
 	case 'R':
 		if ( !( pRoomIndex = get_room_index( pReset->arg1 ) ) )
 		{
-			strncat( final, Format("Randomize Exits - Bad Room %d\n\r", pReset->arg1), sizeof(final) );
+			strncat( final, Format("Randomize Exits - Bad Room %d\n\r", pReset->arg1), sizeof(final) - strlen(final) - 1 );
 			continue;
 		}
 
-		strncat( final, Format("R[%5d] Exits are randomized in %s\n\r", pReset->arg1, pRoomIndex->name), sizeof(final) );
+		strncat( final, Format("R[%5d] Exits are randomized in %s\n\r", pReset->arg1, pRoomIndex->name), sizeof(final) - strlen(final) - 1 );
 
 		break;
 	}
@@ -2863,7 +2864,7 @@ void do_myalist( CHAR_DATA *ch, char *argument )
 		if(strstr(pArea->builders, ch->name))
 		{
 			strncat( result, Format("[%3d] %-29.29s (%-5d-%5d) %-12.12s [%d] [%-10.10s]\n\r",
-					pArea->vnum, pArea->name, pArea->min_vnum, pArea->max_vnum, pArea->file_name, pArea->security, pArea->builders), sizeof(result) );
+					pArea->vnum, pArea->name, pArea->min_vnum, pArea->max_vnum, pArea->file_name, pArea->security, pArea->builders), sizeof(result) - strlen(result) - 1 );
 		}
 	}
 
@@ -3016,7 +3017,7 @@ void do_rslist( CHAR_DATA *ch, char *argument )
 	{
 		i++;
 		strncat( result, Format("[%-29.29s] [%3d] (%3d) %-29.29s [%7d]\n\r",
-				pScript->persona ? pScript->persona->name : "None", i, pScript->attitude, pScript->trig, count_reactions(pScript->react)), sizeof(result) );
+				pScript->persona ? pScript->persona->name : "None", i, pScript->attitude, pScript->trig, count_reactions(pScript->react)), sizeof(result) - strlen(result) - 1);
 	}
 
 	send_to_char( result, ch );
@@ -3071,56 +3072,56 @@ void check_area(AREA_DATA *pArea, CHAR_DATA *ch)
 			if(!str_cmp(rm->name, "(null)") || rm->name == NULL)
 			{
 				Found = TRUE;
-				strncat(buf, "no name", sizeof(buf));
+				strncat(buf, "no name", sizeof(buf) - strlen(buf) - 1);
 			}
 			if(!str_cmp(rm->description, "(null)") || rm->description == NULL)
 			{
 				if(Found == TRUE)
 				{
-					strncat(buf, ", ", sizeof(buf));
+					strncat(buf, ", ", sizeof(buf) - strlen(buf) - 1);
 				}
 				Found = TRUE;
-				strncat(buf, "no description", sizeof(buf));
+				strncat(buf, "no description", sizeof(buf) - strlen(buf) - 1);
 			}
 			if(!str_cmp(rm->uname, "(null)") || rm->uname == NULL)
 			{
 				if(Found == TRUE)
 				{
-					strncat(buf, ", ", sizeof(buf));
+					strncat(buf, ", ", sizeof(buf) - strlen(buf) - 1);
 				}
 				Found = TRUE;
-				strncat(buf, "no umbra name", sizeof(buf));
+				strncat(buf, "no umbra name", sizeof(buf) - strlen(buf) - 1);
 			}
 			if(!str_cmp(rm->udescription, "(null)") || rm->udescription == NULL)
 			{
 				if(Found == TRUE)
 				{
-					strncat(buf, ", ", sizeof(buf));
+					strncat(buf, ", ", sizeof(buf) - strlen(buf) - 1);
 				}
 				Found = TRUE;
-				strncat(buf, "no umbra description", sizeof(buf));
+				strncat(buf, "no umbra description", sizeof(buf) - strlen(buf) - 1);
 			}
 			if(!str_cmp(rm->dname, "(null)") || rm->dname == NULL)
 			{
 				if(Found == TRUE)
 				{
-					strncat(buf, ", ", sizeof(buf));
+					strncat(buf, ", ",sizeof(buf) - strlen(buf) - 1);
 				}
 				Found = TRUE;
-				strncat(buf, "no dream name", sizeof(buf));
+				strncat(buf, "no dream name", sizeof(buf) - strlen(buf) - 1);
 			}
 			if(!str_cmp(rm->ddescription, "(null)") || rm->ddescription == NULL)
 			{
 				if(Found == TRUE)
 				{
-					strncat(buf, ", ", sizeof(buf));
+					strncat(buf, ", ", sizeof(buf) - strlen(buf) - 1);
 				}
 				Found = TRUE;
-				strncat(buf, "no dream description", sizeof(buf));
+				strncat(buf, "no dream description", sizeof(buf) - strlen(buf) - 1);
 			}
 			if(Found == TRUE)
 			{
-				strncat(buf, ".\n\r", sizeof(buf));
+				strncat(buf, ".\n\r", sizeof(buf) - strlen(buf) - 1);
 				send_to_char(buf, ch);
 			}
 			Found = FALSE;
@@ -3132,12 +3133,12 @@ void check_area(AREA_DATA *pArea, CHAR_DATA *ch)
 					if(rm->exit[j]->u1.to_room == NULL)
 					{
 						Found = TRUE;
-						strncat(buf, "no target room", sizeof(buf));
+						strncat(buf, "no target room", sizeof(buf) - strlen(buf) - 1);
 					}
 				}
 				if(Found == TRUE)
 				{
-					strncat(buf, ".\n\r", sizeof(buf));
+					strncat(buf, ".\n\r", sizeof(buf) - strlen(buf) - 1);
 					send_to_char(buf, ch);
 				}
 			}
@@ -3940,8 +3941,8 @@ void note_remove( CHAR_DATA *ch, NOTE_DATA *pnote, bool bdelete)
 			to_list	= one_argument( to_list, to_one );
 			if ( !IS_NULLSTR(to_one) && str_cmp( ch->name, to_one ) )
 		{
-			strncat( to_new, " ", sizeof(to_new) );
-			strncat( to_new, to_one, sizeof(to_new) );
+			strncat( to_new, " ", sizeof(to_new) - strlen(to_new) - 1 );
+			strncat( to_new, to_one, sizeof(to_new) - strlen(to_new) - 1);
 		}
 		}
 		/* Just a simple recipient removal? */

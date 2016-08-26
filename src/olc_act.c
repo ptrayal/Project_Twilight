@@ -137,14 +137,14 @@ void show_flag_cmds( CHAR_DATA *ch, const struct flag_type *flag_table )
 	{
 		if ( flag_table[flag].settable )
 		{
-			strncat( buf1, Format("%-19.18s", flag_table[flag].name), sizeof(buf1) );
+			strncat( buf1, Format("%-19.18s", flag_table[flag].name), sizeof(buf1) - strlen(buf1) - 1 );
 			if ( ++col % 4 == 0 )
-				strncat( buf1, "\n\r", sizeof(buf1) );
+				strncat( buf1, "\n\r", sizeof(buf1) - strlen(buf1) - 1 );
 		}
 	}
 
 	if ( col % 4 != 0 )
-		strncat( buf1, "\n\r", sizeof(buf1) );
+		strncat( buf1, "\n\r", sizeof(buf1) - strlen(buf1) - 1 );
 
 	send_to_char( buf1, ch );
 	return;
@@ -179,14 +179,14 @@ void show_skill_cmds( CHAR_DATA *ch, int tar )
 
 		if ( tar == -1 || skill_table[sn].target == tar )
 		{
-			strncat( buf1, Format("%-19.18s", skill_table[sn].name), sizeof(buf1) );
+			strncat( buf1, Format("%-19.18s", skill_table[sn].name), sizeof(buf1) - strlen(buf1) - 1 );
 			if ( ++col % 4 == 0 )
-				strncat( buf1, "\n\r", sizeof(buf1) );
+				strncat( buf1, "\n\r", sizeof(buf1) - strlen(buf1) - 1 );
 		}
 	}
 
 	if ( col % 4 != 0 )
-		strncat( buf1, "\n\r", sizeof(buf1) );
+		strncat( buf1, "\n\r", sizeof(buf1) - strlen(buf1) - 1 );
 
 	send_to_char( buf1, ch );
 	return;
@@ -736,8 +736,8 @@ AEDIT( aedit_file )
 	}
 
 	/* Prevent filename overwrite by Takeda (takeda@mathlab.sunysb.edu) */
-	strncat( file2, file, sizeof(file2) );
-	strncat( file2, ".are", sizeof(file2));
+	strncat( file2, file, sizeof(file2) - strlen(file2) - 1 );
+	strncat( file2, ".are", sizeof(file2) - strlen(file2) - 1 );
 	for ( tArea = area_first; tArea; tArea = tArea->next )
 	{
 		if(!str_cmp(tArea->file_name,file2)) {
@@ -751,7 +751,7 @@ AEDIT( aedit_file )
 	}
 
 	PURGE_DATA( pArea->file_name );
-	strncat( file, ".are", sizeof(file2) );
+	strncat( file, ".are", sizeof(file2) - strlen(file2) - 1 );
 	pArea->file_name = str_dup( file );
 
 	send_to_char( "Filename set.\n\r", ch );
@@ -895,10 +895,10 @@ AEDIT( aedit_builder )
 
 	if (pArea->builders[0] != '\0' )
 	{
-	    strncat( buf, pArea->builders, sizeof(buf) );
-	    strncat( buf, " ", sizeof(buf) );
+	    strncat( buf, pArea->builders, sizeof(buf) - strlen(buf) - 1 );
+	    strncat( buf, " ", sizeof(buf) - strlen(buf) - 1 );
 	}
-	strncat( buf, name, sizeof(buf) );
+	strncat( buf, name, sizeof(buf) - strlen(buf) - 1);
 	PURGE_DATA( pArea->builders );
 	pArea->builders = string_proper( str_dup( buf ) );
 
@@ -1073,104 +1073,104 @@ REDIT( redit_show )
 
 	buf1[0] = '\0';
 
-	strncat( buf1, Format("\tWDescription:\tn\n\r%s\n\r", pRoom->description), sizeof( buf1 ) );
-	strncat( buf1, Format("\tWName:\tn       [%s]\n\r", pRoom->name), sizeof( buf1 ) );
-	strncat( buf1, Format("\tWArea:\tn       [%5d] %s\n\r", pRoom->area->vnum, pRoom->area->name), sizeof( buf1 ) );
-	strncat( buf1, Format("\tWVnum:\tn       [%5d]\n\r\tWSector:\tn     [%s]\n\r", pRoom->vnum, flag_string( sector_flags, pRoom->sector_type )), sizeof( buf1 ) );
-	strncat( buf1, Format("\tYUmbra Description:\tn\n\r%s\n\r", pRoom->udescription), sizeof( buf1 ) );
-	strncat( buf1, Format("\tYUmbra Name:\tn       [%s]\n\r", pRoom->uname), sizeof( buf1 ) );
-	strncat( buf1, Format("\tGDreaming Description:\tn\n\r%s\n\r", pRoom->ddescription), sizeof( buf1 ) );
-	strncat( buf1, Format("\tGDreaming Name:\tn       [%s]\n\r", pRoom->dname), sizeof( buf1 ) );
-	strncat( buf1, Format("\tWRoom flags:\tn [%s]\n\r", flag_string( room_flags, pRoom->room_flags )), sizeof( buf1 ) );
-	strncat( buf1, Format("\tWHealth recovery:\tn [%d]\n\r", pRoom->heal_rate), sizeof( buf1 ) );
-	strncat( buf1, Format("\tWClan:\tn [%d] %s\n\r" , pRoom->clan, ((pRoom->clan > 0) ? clan_table[pRoom->clan].name : "none" )), sizeof( buf1 ) );
+	strncat( buf1, Format("\tWDescription:\tn\n\r%s\n\r", pRoom->description), sizeof(buf1) - strlen(buf1) - 1 );
+	strncat( buf1, Format("\tWName:\tn       [%s]\n\r", pRoom->name), sizeof(buf1) - strlen(buf1) - 1 );
+	strncat( buf1, Format("\tWArea:\tn       [%5d] %s\n\r", pRoom->area->vnum, pRoom->area->name), sizeof(buf1) - strlen(buf1) - 1 );
+	strncat( buf1, Format("\tWVnum:\tn       [%5d]\n\r\tWSector:\tn     [%s]\n\r", pRoom->vnum, flag_string( sector_flags, pRoom->sector_type )), sizeof(buf1) - strlen(buf1) - 1 );
+	strncat( buf1, Format("\tYUmbra Description:\tn\n\r%s\n\r", pRoom->udescription), sizeof(buf1) - strlen(buf1) - 1 );
+	strncat( buf1, Format("\tYUmbra Name:\tn       [%s]\n\r", pRoom->uname), sizeof(buf1) - strlen(buf1) - 1 );
+	strncat( buf1, Format("\tGDreaming Description:\tn\n\r%s\n\r", pRoom->ddescription), sizeof(buf1) - strlen(buf1) - 1 );
+	strncat( buf1, Format("\tGDreaming Name:\tn       [%s]\n\r", pRoom->dname), sizeof(buf1) - strlen(buf1) - 1 );
+	strncat( buf1, Format("\tWRoom flags:\tn [%s]\n\r", flag_string( room_flags, pRoom->room_flags )), sizeof(buf1) - strlen(buf1) - 1 );
+	strncat( buf1, Format("\tWHealth recovery:\tn [%d]\n\r", pRoom->heal_rate), sizeof(buf1) - strlen(buf1) - 1 );
+	strncat( buf1, Format("\tWClan:\tn [%d] %s\n\r" , pRoom->clan, ((pRoom->clan > 0) ? clan_table[pRoom->clan].name : "none" )), sizeof(buf1) - strlen(buf1) - 1 );
 
 	if(pRoom->owner != NULL && pRoom->owner[0] != '\0') {
-		strncat( buf1, Format("\tWOwner:\tn [%s]\n\r" , pRoom->owner), sizeof(buf1) );
+		strncat( buf1, Format("\tWOwner:\tn [%s]\n\r" , pRoom->owner), sizeof(buf1) - strlen(buf1) - 1 );
 	}
 
 	if ( pRoom->extra_descr )
 	{
 		EXTRA_DESCR_DATA *ed;
 
-		strncat( buf1, "\tWExtra Desc Keywords:\tn  [", sizeof( buf1 ) );
+		strncat( buf1, "\tWExtra Desc Keywords:\tn  [", sizeof(buf1) - strlen(buf1) - 1 );
 		for ( ed = pRoom->extra_descr; ed; ed = ed->next )
 		{
-			strncat( buf1, ed->keyword, sizeof(buf1) );
+			strncat( buf1, ed->keyword, sizeof(buf1) - strlen(buf1) - 1 );
 			if ( ed->next )
-				strncat( buf1, " ", sizeof(buf1) );
+				strncat( buf1, " ", sizeof(buf1) - strlen(buf1) - 1 );
 		}
-		strncat( buf1, "]\n\r", sizeof(buf1) );
+		strncat( buf1, "]\n\r", sizeof(buf1) - strlen(buf1) - 1 );
 	}
 
 	if(IS_SET(pRoom->room_flags, ROOM_STOP))
 	{
-		strncat( buf1, "\tWStop for elevator:\tn  [Room vnum: ", sizeof(buf1) );
-		strncat( buf1, Format("%d Stop number: %d", pRoom->car, pRoom->stops[0]), sizeof(buf1) );
-		strncat( buf1, "]\n\r", sizeof(buf1) );
+		strncat( buf1, "\tWStop for elevator:\tn  [Room vnum: ", sizeof(buf1) - strlen(buf1) - 1 );
+		strncat( buf1, Format("%d Stop number: %d", pRoom->car, pRoom->stops[0]), sizeof(buf1) - strlen(buf1) - 1 );
+		strncat( buf1, "]\n\r", sizeof(buf1) - strlen(buf1) - 1 );
 	}
 
 	if(IS_SET(pRoom->room_flags, ROOM_VEHICLE))
 	{
-		strncat( buf1, "\tWInitially Parked:\tn  [", sizeof(buf1) );
-		strncat( buf1, Format("%d", pRoom->stops[0]), sizeof(buf1) );
-		strncat( buf1, "]\n\r", sizeof(buf1) );
+		strncat( buf1, "\tWInitially Parked:\tn  [", sizeof(buf1) - strlen(buf1) - 1 );
+		strncat( buf1, Format("%d", pRoom->stops[0]), sizeof(buf1) - strlen(buf1) - 1 );
+		strncat( buf1, "]\n\r", sizeof(buf1) - strlen(buf1) - 1 );
 	}
 
 	if(IS_SET(pRoom->room_flags, ROOM_TRAIN)
 			|| IS_SET(pRoom->room_flags, ROOM_ELEVATOR))
 	{
-		strncat( buf1, Format("Stops (1-%d):  ", MAX_CAR_STOPS), sizeof(buf1));
+		strncat( buf1, Format("Stops (1-%d):  ", MAX_CAR_STOPS), sizeof(buf1) - strlen(buf1) - 1);
 		for(door = 1; door < MAX_CAR_STOPS; door++)
 		{
 			if(pRoom->stops[door] > 0) {
-				strncat( buf1, Format("[%d] %d ", door, pRoom->stops[door]), sizeof(buf1) );
+				strncat( buf1, Format("[%d] %d ", door, pRoom->stops[door]), sizeof(buf1) - strlen(buf1) - 1 );
 			}
 		}
-		strncat( buf1, "\n\r", sizeof(buf1) );
+		strncat( buf1, "\n\r", sizeof(buf1) - strlen(buf1) - 1 );
 	}
 
-	strncat( buf1, "\tWCharacters:\tn [" , sizeof(buf1));
+	strncat( buf1, "\tWCharacters:\tn [" , sizeof(buf1) - strlen(buf1) - 1);
 	fcnt = FALSE;
 	for ( rch = pRoom->people; rch; rch = rch->next_in_room )
 	{
 		one_argument( rch->name, buf );
-		strncat( buf1, buf, sizeof(buf1) );
-		strncat( buf1, " ", sizeof(buf1) );
+		strncat( buf1, buf, sizeof(buf1) - strlen(buf1) - 1 );
+		strncat( buf1, " ", sizeof(buf1) - strlen(buf1) - 1 );
 		fcnt = TRUE;
 	}
 
 	if ( fcnt )
 	{
-		int end;
+		int end = 0;
 
 		end = strlen(buf1) - 1;
 		buf1[end] = ']';
-		strncat( buf1, "\n\r", sizeof(buf1) );
+		strncat( buf1, "\n\r", sizeof(buf1) - strlen(buf1) - 1 );
 	}
 	else
-		strncat( buf1, "none]\n\r", sizeof(buf1) );
+		strncat( buf1, "none]\n\r", sizeof(buf1) - strlen(buf1) - 1 );
 
-	strncat( buf1, "\tWObjects:\tn    [", sizeof(buf1) );
+	strncat( buf1, "\tWObjects:\tn    [", sizeof(buf1) - strlen(buf1) - 1 );
 	fcnt = FALSE;
 	for ( obj = pRoom->contents; obj; obj = obj->next_content )
 	{
 		one_argument( obj->name, buf );
-		strncat( buf1, buf, sizeof(buf1) );
-		strncat( buf1, " ", sizeof(buf1) );
+		strncat( buf1, buf, sizeof(buf1) - strlen(buf1) - 1 );
+		strncat( buf1, " ", sizeof(buf1) - strlen(buf1) - 1 );
 		fcnt = TRUE;
 	}
 
 	if ( fcnt )
 	{
-		int end;
+		int end = 0;
 
 		end = strlen(buf1) - 1;
 		buf1[end] = ']';
-		strncat( buf1, "\n\r", sizeof(buf1) );
+		strncat( buf1, "\n\r", sizeof(buf1) - strlen(buf1) - 1 );
 	}
 	else
-		strncat( buf1, "none]\n\r", sizeof(buf1) );
+		strncat( buf1, "none]\n\r", sizeof(buf1) - strlen(buf1) - 1 );
 
 	for ( door = 0; door < MAX_DIR; door++ )
 	{
@@ -1184,7 +1184,7 @@ REDIT( redit_show )
 			int i, length;
 
 			strncat( buf1, Format("-%-5s to [%5d] Key: [%5d] ",
-					capitalize(dir_name[door]), pexit->u1.to_room ? pexit->u1.to_room->vnum : 0, pexit->key), sizeof(buf1) );
+					capitalize(dir_name[door]), pexit->u1.to_room ? pexit->u1.to_room->vnum : 0, pexit->key), sizeof(buf1) - strlen(buf1) - 1 );
 
 			/*
 			 * Format up the exit info.
@@ -1192,7 +1192,7 @@ REDIT( redit_show )
 			 */
 			strncpy( reset_state, flag_string( exit_flags, pexit->rs_flags ), MSL );
 			state = flag_string( exit_flags, pexit->exit_info );
-			strncat( buf1, " Exit flags: [", sizeof(buf1) );
+			strncat( buf1, " Exit flags: [", sizeof(buf1) - strlen(buf1) - 1 );
 			for (; ;)
 			{
 				state = one_argument( state, word );
@@ -1203,7 +1203,7 @@ REDIT( redit_show )
 
 					end = strlen(buf1) - 1;
 					buf1[end] = ']';
-					strncat( buf1, "\n\r", sizeof(buf1) );
+					strncat( buf1, "\n\r",sizeof(buf1) - strlen(buf1) - 1 );
 					break;
 				}
 
@@ -1213,22 +1213,22 @@ REDIT( redit_show )
 					for (i = 0; i < length; i++)
 						word[i] = UPPER(word[i]);
 				}
-				strncat( buf1, word, sizeof(buf1) );
-				strncat( buf1, " ", sizeof(buf1) );
+				strncat( buf1, word, sizeof(buf1) - strlen(buf1) - 1 );
+				strncat( buf1, " ", sizeof(buf1) - strlen(buf1) - 1 );
 			}
 
 			if ( pexit->keyword && pexit->keyword[0] != '\0' )
 			{
-				strncat( buf1, Format("Kwds: [%s]\n\r", pexit->keyword), sizeof(buf1) );
+				strncat( buf1, Format("Kwds: [%s]\n\r", pexit->keyword), sizeof(buf1) - strlen(buf1) - 1 );
 			}
 			if ( pexit->description && pexit->description[0] != '\0' )
 			{
-				strncat( buf1, Format("%s", pexit->description), sizeof(buf1) );
+				strncat( buf1, Format("%s", pexit->description), sizeof(buf1) - strlen(buf1) - 1 );
 			}
 
 			if(pexit->jumpto.to_room) {
 				strncat( buf1, Format("-%-5s has jumpto link to [%5d]\n\r",
-						capitalize(dir_name[door]), pexit->jumpto.to_room?pexit->jumpto.to_room->vnum:0), sizeof(buf1) );
+						capitalize(dir_name[door]), pexit->jumpto.to_room?pexit->jumpto.to_room->vnum:0), sizeof(buf1) - strlen(buf1) - 1 );
 			}
 		}
 	}
@@ -1245,7 +1245,7 @@ bool change_exit( CHAR_DATA *ch, char *argument, int door, int thissideonly )
     ROOM_INDEX_DATA *pRoom;
     char command[MAX_INPUT_LENGTH]={'\0'};
     char arg[MAX_INPUT_LENGTH]={'\0'};
-    int  value;
+    int  value = 0;
 
     EDIT_ROOM(ch, pRoom);
 
@@ -4894,11 +4894,11 @@ MEDIT( medit_triggers )
 			snprintf( arg, sizeof(arg), "Triggers:  [ _ " );
 			for ( ps = pMobIndex->triggers; ps; ps = ps->next_in_event )
 			{
-				strncat( arg, ps->trigger, sizeof(arg) );
+				strncat( arg, ps->trigger, sizeof(arg) - strlen(arg) - 1 );
 				if ( ps->next_in_event )
-					strncat( arg, " _ ", sizeof(arg) );
+					strncat( arg, " _ ", sizeof(arg) - strlen(arg) - 1 );
 			}
-			strncat( arg, "]\n\r", sizeof(arg) );
+			strncat( arg, "]\n\r", sizeof(arg) - strlen(arg) - 1 );
 			send_to_char(arg, ch);
 		}
 		return FALSE;
@@ -5675,10 +5675,10 @@ PEDIT( pedit_assignevent )
 
 		if (pEvent->author[0] != '\0' )
 		{
-			strncat( buf, pEvent->author, sizeof(buf) );
-			strncat( buf, " ", sizeof(buf) );
+			strncat( buf, pEvent->author, sizeof(buf) - strlen(buf) - 1 );
+			strncat( buf, " ", sizeof(buf) - strlen(buf) - 1 );
 		}
-		strncat( buf, name, sizeof(buf) );
+		strncat( buf, name, sizeof(buf) - strlen(buf) - 1 );
 		PURGE_DATA( pEvent->author );
 		pEvent->author = string_proper( str_dup( buf ) );
 
@@ -6748,10 +6748,10 @@ HEDIT( hedit_clans )
 
 		if (help->clans[0] != '\0' )
 		{
-			strncat( buf, help->clans, sizeof(buf) );
-			strncat( buf, " ", sizeof(buf) );
+			strncat( buf, help->clans, sizeof(buf) - strlen(buf) - 1 );
+			strncat( buf, " ", sizeof(buf) - strlen(buf) - 1 );
 		}
-		strncat( buf, name, sizeof(buf) );
+		strncat( buf, name, sizeof(buf) - strlen(buf) - 1 );
 		PURGE_DATA( help->clans );
 		help->clans = string_proper( str_dup( buf ) );
 
@@ -6807,10 +6807,10 @@ HEDIT( hedit_races )
 
 		if (help->races[0] != '\0' )
 		{
-			strncat( buf, help->races, sizeof(buf) );
-			strncat( buf, " ", sizeof(buf) );
+			strncat( buf, help->races, sizeof(buf) - strlen(buf) - 1 );
+			strncat( buf, " ", sizeof(buf) - strlen(buf) - 1 );
 		}
-		strncat( buf, name, sizeof(buf) );
+		strncat( buf, name, sizeof(buf) - strlen(buf) - 1 );
 		PURGE_DATA( help->races );
 		help->races = string_proper( str_dup( buf ) );
 
