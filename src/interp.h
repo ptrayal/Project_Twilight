@@ -7,9 +7,9 @@ void do_function args((CHAR_DATA *ch, DO_FUN *do_fun, char *argument));
 
 /* for command types */
 #define IM	MAX_LEVEL	/* implementor */
-#define MA	MAX_LEVEL - 1  	/* master*/
-#define ST	MAX_LEVEL - 2  	/* storyteller */
-#define WA	MAX_LEVEL - 3  	/* watcher */
+#define MA	MAX_LEVEL - 1  	/* Administrator */
+#define ST	MAX_LEVEL - 2  	/* Storyteller */
+#define WA	MAX_LEVEL - 3  	/* Staff */
 
 #define COM_INGORE	1
 

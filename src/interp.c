@@ -535,8 +535,8 @@ const	struct	cmd_type	cmd_table	[] =
 	{	"allow",			do_allow,			P_DEAD,	WA,	L_ALL,	1,	A|B|E,	0 },
 	{	"articles",			do_articles,		P_DEAD,	WA,	L_NRM,	1,	A|B|E,	0 },
 	{	"at",				do_at,				P_DEAD,	WA,	L_NRM,	1,	A|B,	0 },
-	{	"backupmud",		do_backup,			P_DEAD,	MA,	L_NRM,	1,	A|B|E,	0 },
-	{	"ban",				do_ban,				P_DEAD,	ST,	L_ALL,	1,	A|B|E,	0 },
+	{	"backupmud",		do_backup,			P_DEAD,	IM,	L_ALL,	1,	A|B|E,	0 },
+	{	"ban",				do_ban,				P_DEAD,	MA,	L_ALL,	1,	A|B|E,	0 },
 	{	"being",			do_as,				P_DEAD,	WA,	L_ALL,	1,	A|B|E,	0 },
 	{	"bg",				do_bg,				P_DEAD,	WA,	L_NRM,	1,	A|B|E,	0 },
 	{	"bonus",			do_bonus,			P_DEAD,	WA,	L_NRM,	1,	A|B|E,	0 },
@@ -552,7 +552,7 @@ const	struct	cmd_type	cmd_table	[] =
 	{	"event_list",		do_elist,			P_DEAD,	ST,	L_NRM,	1,	A|B|E,	0 },
 	{	"exlist",			do_exlist,			P_DEAD,	WA,	L_ALL,	1,	A|B,	0 },
 	{	"facts",			do_know,			P_DEAD,	WA,	L_NRM,	1,	A|B|H,	0 },
-	{	"fixchar",			do_fixchar,			P_DEAD,	ST,	L_ALL,	1,	A|B|E,	0 },
+	{	"fixchar",			do_fixchar,			P_DEAD,	MA,	L_ALL,	1,	A|B|E,	0 },
 	{	"flag",				do_flag,			P_DEAD,	WA,	L_ALL,	1,	A|B|E,	0 },
 	{	"for",				do_for,				P_DEAD,	MA,	L_ALL,	1,	A|B,	0 },
 	{	"force",			do_force,			P_DEAD,	ST,	L_ALL,	1,	A|B|E,	0 },
@@ -630,11 +630,11 @@ const	struct	cmd_type	cmd_table	[] =
 	{	"trackbuffer",		do_trackbuffer,		P_DEAD,	MA,	L_ALL,	0,	A|B|E,	0 },
 	{	"transfer",			do_transfer,		P_DEAD,	WA,	L_ALL,	1,	A|B,	0 },
 	{	"tsave",			do_tsave,			P_DEAD,	WA,	L_NRM,	1,	A|B|E,	0 },
-	{	"unpak",			do_unpak,			P_DEAD,	MA,	L_NRM,	1,	A|B|E,	0 },
+	{	"unpak",			do_unpak,			P_DEAD,	IM,	L_NRM,	1,	A|B|E,	0 },
 	{	"vnum",				do_vnum,			P_DEAD,	WA,	L_NRM,	1,	A|B|E,	0 },
 	{	"wizhelp",			do_wizhelp,			P_DEAD,	WA,	L_NRM,	1,	A|B|E,	0 },
 	{	"wizinvis",			do_invis,			P_DEAD,	WA,	L_NRM,	1,	A|B|E,	0 },
-	{	"wizlock",			do_wizlock,			P_DEAD,	ST,	L_ALL,	1,	A|B|E,	0 },
+	{	"wizlock",			do_wizlock,			P_DEAD,	MA,	L_ALL,	1,	A|B|E,	0 },
 	{	"wiznet",			do_wiznet,			P_DEAD,	WA,	L_NRM,	1,	A|B|E,	0 },
 	{	"xpclear",			do_resetoocxp,		P_DEAD,	ST,	L_ALL,	1,	A|B|E,	0 },
 	{	"testscore",		do_score_revised,	P_DEAD, IM, L_NRM,	1,	A|B|E,	0 },
@@ -1368,18 +1368,29 @@ void do_wizhelp( CHAR_DATA *ch, char *argument )
 {
 	int cmd = 0;
 	int col = 0;
+	int staff_level = 0;
 
-	for ( cmd = 0; !IS_NULLSTR(cmd_table[cmd].name); cmd++ )
+	// Break down commands by Trust Level
+	for ( staff_level = LEVEL_IMMORTAL; staff_level <= MAX_LEVEL; staff_level++)
 	{
-		if ( cmd_table[cmd].level >= LEVEL_IMMORTAL
-				&&   cmd_table[cmd].level <= get_trust( ch )
-				&&   cmd_table[cmd].show)
+		// Show what trust level it is.
+		send_to_char( Format("\n\r<-- %s -->\n\r", staff_status[staff_level].name ), ch);
+		// Show commands for that trust level.
+		for ( cmd = 0; !IS_NULLSTR(cmd_table[cmd].name); cmd++ )
 		{
-			send_to_char( Format("\t<send href='%s'>%-17s\t</send> |", cmd_table[cmd].name, cmd_table[cmd].name), ch );
-			if ( ++col % 4 == 0 )
-				send_to_char( "\n\r", ch );
+			if ( cmd_table[cmd].level >= LEVEL_IMMORTAL
+					&&   cmd_table[cmd].level <= get_trust( ch )
+					&&   cmd_table[cmd].show
+					&&   cmd_table[cmd].level == staff_level)
+			{
+				send_to_char( Format("\t<send href='%s'>%-17s\t</send> |", cmd_table[cmd].name, cmd_table[cmd].name), ch );
+				if ( ++col % 4 == 0 )
+					send_to_char( "\n\r", ch );
+			}
 		}
+
 	}
+
 
 	if ( col % 4 != 0 )
 		send_to_char( "\n\r", ch );
