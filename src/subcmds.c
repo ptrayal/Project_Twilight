@@ -1890,13 +1890,13 @@ void stanza(char *argument)
 
 	strncpy(temp, argument, sizeof(temp));
 	temp[strlen(argument) - strlen(letter)] = '\0';
-	strncat(temp, "\n\r", sizeof(temp));
+	strncat(temp, "\n\r", sizeof(temp) - strlen(temp) - 1);
 
 	letter++;
 
 	if(strstr(letter, "/"))
 		stanza(letter);
-	strncat(temp, letter, sizeof(temp));
+	strncat(temp, letter, sizeof(temp) - strlen(temp) - 1);
 
 	/* Removed to try to fix name changing bug.
     return str_dup(temp);

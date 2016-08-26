@@ -576,10 +576,10 @@ void do_reject( CHAR_DATA *ch, char *argument )
 
         if (!IS_NULLSTR(ch->pcdata->ignore_reject) )
         {
-            strncat( buf, ch->pcdata->ignore_reject, sizeof(buf) );
-            strncat( buf, " ", sizeof(buf) );
+            strncat( buf, ch->pcdata->ignore_reject, sizeof(buf) - strlen(buf) - 1 );
+            strncat( buf, " ", sizeof(buf) - strlen(buf) - 1 );
         }
-        strncat( buf, name, sizeof(buf) );
+        strncat( buf, name,sizeof(buf) - strlen(buf) - 1 );
         PURGE_DATA( ch->pcdata->ignore_reject );
         ch->pcdata->ignore_reject = string_proper( str_dup( buf ) );
 
@@ -638,10 +638,10 @@ void do_block( CHAR_DATA *ch, char *argument )
 
         if (!IS_NULLSTR(ch->pcdata->block_join) )
         {
-            strncat( buf, ch->pcdata->block_join, sizeof(buf) );
-            strncat( buf, " ", sizeof(buf) );
+            strncat( buf, ch->pcdata->block_join, sizeof(buf) - strlen(buf) - 1 );
+            strncat( buf, " ", sizeof(buf) - strlen(buf) - 1 );
         }
-        strncat( buf, name, sizeof(buf) );
+        strncat( buf, name, sizeof(buf) - strlen(buf) - 1 );
         PURGE_DATA( ch->pcdata->block_join );
         ch->pcdata->block_join = string_proper( str_dup( buf ) );
 
@@ -740,10 +740,10 @@ void do_apply(CHAR_DATA *ch, char *argument)
 
 		if (!IS_NULLSTR(org->applicants) )
 		{
-			strncat( buf, org->applicants, sizeof(buf) );
-			strncat( buf, " ", sizeof(buf) );
+			strncat( buf, org->applicants, sizeof(buf) - strlen(buf) - 1 );
+			strncat( buf, " ", sizeof(buf) - strlen(buf) - 1 );
 		}
-		strncat( buf, ch->name, sizeof(buf) );
+		strncat( buf, ch->name, sizeof(buf) - strlen(buf) - 1 );
 		PURGE_DATA( org->applicants );
 		org->applicants = string_proper( str_dup( buf ) );
 		send_to_char( "Application submitted.\n\r", ch );

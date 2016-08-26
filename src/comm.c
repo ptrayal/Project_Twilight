@@ -1685,7 +1685,7 @@ void bust_a_prompt( CHAR_DATA *ch )
 												&&  !IS_SET(pexit->exit_info,EX_CLOSED))
 						{
 							found = TRUE;
-							strncat(doors,dir_name[door], sizeof(doors));
+							strncat(doors,dir_name[door], sizeof(doors) - strlen(doors) - 1);
 						}
 					}
 				}
@@ -1694,7 +1694,7 @@ void bust_a_prompt( CHAR_DATA *ch )
 				found=TRUE;
 			}
 	    if (!found)
-	 	strncat(doors,"none", sizeof(doors));
+	 	strncat(doors,"none", sizeof(doors) - strlen(doors) - 1);
 	    snprintf(buf2, sizeof(buf2), "%s",doors);
 	    i = buf2; break;
  	 case 'n' :
@@ -2357,11 +2357,11 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 					for ( iClass = 1; iClass < MAX_CLAN; iClass++ )
 					{
 						if (IS_CLASS_AVAILABLE(ch->race,iClass)) {
-							strncat( buf, capitalize(clan_table[iClass].name), sizeof(buf) );
-							strncat( buf, ", ", sizeof(buf) );
+							strncat( buf, capitalize(clan_table[iClass].name), sizeof(buf) - strlen(buf) - 1 );
+							strncat( buf, ", ", sizeof(buf) - strlen(buf) - 1 );
 						}
 					}
-					strncat( buf, "]: \n\r\n\r", sizeof(buf) );
+					strncat( buf, "]: \n\r\n\r", sizeof(buf) - strlen(buf) - 1 );
 					write_to_buffer( d, buf, 0 );
 					d->connected = CON_GET_NEW_CLAN;
 					break;
@@ -2376,11 +2376,11 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 							for ( iClass = 1; iClass < MAX_CLAN; iClass++ )
 							{
 								if (IS_CLASS_AVAILABLE(ch->race,iClass)) {
-									strncat( buf, capitalize(clan_table[iClass].name), sizeof(buf) );
-									strncat( buf, ", ", sizeof(buf) );
+									strncat( buf, capitalize(clan_table[iClass].name), sizeof(buf) - strlen(buf) - 1 );
+									strncat( buf, ", ", sizeof(buf) - strlen(buf) - 1 );
 								}
 							}
-							strncat( buf, "]: \n\r\n\r\tWPlease select a clan.\tn", sizeof(buf) );
+							strncat( buf, "]: \n\r\n\r\tWPlease select a clan.\tn", sizeof(buf) - strlen(buf) - 1 );
 							write_to_buffer( d, buf, 0 );
 							return;
 						}

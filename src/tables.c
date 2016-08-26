@@ -2744,14 +2744,14 @@ char *flag_string( const struct flag_type *flag_table, int bits )
     {
 	if ( !is_stat( flag_table ) && IS_SET(bits, flag_table[flag].bit) )
 	{
-	    strncat( buf, " ", sizeof(buf) );
-	    strncat( buf, flag_table[flag].name, sizeof(buf) );
+	    strncat( buf, " ", sizeof(buf) - strlen(buf) - 1 );
+	    strncat( buf, flag_table[flag].name, sizeof(buf) - strlen(buf) - 1 );
 	}
 	else
 	if ( flag_table[flag].bit == bits )
 	{
-	    strncat( buf, " ", sizeof(buf) );
-	    strncat( buf, flag_table[flag].name, sizeof(buf) );
+	    strncat( buf, " ", sizeof(buf) - strlen(buf) - 1 );
+	    strncat( buf, flag_table[flag].name, sizeof(buf) - strlen(buf) - 1 );
 	    break;
 	}
     }
@@ -2775,10 +2775,10 @@ char *power_string( const struct gift_type *power_table, int bits, int level )
 	if ( IS_SET(bits, power_table[flag].flag)
 	&& power_table[flag].level == level )
 	{
-	    strncat( buf, power_table[flag].name, sizeof(buf) );
-	    strncat( buf, ": ", sizeof(buf) );
-	    strncat( buf, power_table[flag].desc, sizeof(buf) );
-	    strncat( buf, "\n\r", sizeof(buf) );
+	    strncat( buf, power_table[flag].name, sizeof(buf) - strlen(buf) - 1 );
+	    strncat( buf, ": ", sizeof(buf) - strlen(buf) - 1 );
+	    strncat( buf, power_table[flag].desc, sizeof(buf) - strlen(buf) - 1 );
+	    strncat( buf, "\n\r", sizeof(buf) - strlen(buf) - 1 );
 	}
     }
     return (!IS_NULLSTR(buf)) ? buf : (char *)"none";

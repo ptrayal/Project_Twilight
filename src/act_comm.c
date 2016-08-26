@@ -158,11 +158,12 @@ void translate( CHAR_DATA *ch, char * oldwords, char * newwords )
 		if ( !str_prefix( syl_table[iSyl].old, pName ) )
 		{
 		if(ch->shape == SHAPE_WOLF)
-			strncat( buf, syl_table[iSyl].wolf, sizeof(buf) );
+			strncat( buf, syl_table[iSyl].wolf, sizeof(buf) - strlen(buf) - 1 );
 		else if(ch->shape == SHAPE_BAT)
-			strncat( buf, syl_table[iSyl].bat, sizeof(buf) );
+			strncat( buf, syl_table[iSyl].bat, sizeof(buf) - strlen(buf) - 1 );
 /*	        strncat( buf, syl_table[iSyl].bnew, sizeof(buf) ); */
-		else strncat( buf, syl_table[iSyl].old, sizeof(buf) );
+		else 
+			strncat( buf, syl_table[iSyl].old, sizeof(buf) - strlen(buf) - 1 );
 			break;
 		}
 	}
@@ -204,11 +205,11 @@ void discreetify( char *argument, char *discreet )
 
 	strncpy(temp,argument, sizeof(temp));
 	temp[strlen(argument) - strlen(letter)] = '\0';
-	strncat(temp, "\"something you can't make out\"", sizeof(temp));
+	strncat(temp, "\"something you can't make out\"", sizeof(temp) - strlen(temp) - 1 );
 
 	if(strstr(endbit, "\""))
 		discreetify(endbit, endbit);
-	strncat(temp, endbit, sizeof(temp));
+	strncat(temp, endbit, sizeof(temp) - strlen(temp) - 1);
 
 	/* Removed to try to fix name changes.
 	argument = str_dup(temp);
@@ -245,13 +246,13 @@ void emote_say_colouring( char *argument, CHAR_DATA *ch )
 	strncpy(middle,letter, sizeof(middle));
 	middle[strlen(letter) - strlen(endbit)] = '\0';
 
-	strncat(temp, "\tW", sizeof(temp));
+	strncat(temp, "\tW", sizeof(temp) - strlen(temp) - 1);
 
-	strncat(temp, middle, sizeof(temp));
+	strncat(temp, middle, sizeof(temp) - strlen(temp) - 1);
 
 	if(strstr(endbit, "\""))
 		emote_say_colouring(endbit, ch);
-	strncat(temp, endbit, sizeof(temp));
+	strncat(temp, endbit, sizeof(temp) - strlen(temp) - 1);
 
 	/* Removed to try to fix name changes.
 	argument = str_dup(temp);
@@ -1704,7 +1705,7 @@ void do_dpmote( CHAR_DATA *ch, char *argument )
 		{
 			if (*letter == '\'' && matches == strlen(vch->name))
 			{
-				strncat(temp,"r", sizeof(temp));
+				strncat(temp,"r", sizeof(temp) - strlen(temp) - 1);
 				continue;
 			}
 
@@ -1725,7 +1726,7 @@ void do_dpmote( CHAR_DATA *ch, char *argument )
 				name++;
 				if (matches == strlen(vch->name))
 				{
-					strncat(temp,"you", sizeof(temp));
+					strncat(temp, "you", sizeof(temp) - strlen(temp) - 1);
 					last[0] = '\0';
 					name = vch->name;
 					continue;
@@ -1735,7 +1736,7 @@ void do_dpmote( CHAR_DATA *ch, char *argument )
 			}
 
 			matches = 0;
-			strncat(temp,last, sizeof(temp));
+			strncat(temp,last, sizeof(temp) - strlen(temp) - 1);
 			strncat(temp,letter,1);
 			last[0] = '\0';
 			name = vch->name;
@@ -1923,7 +1924,7 @@ void do_pmote( CHAR_DATA *ch, char *argument )
 		{
 			if (*letter == '\'' && matches == strlen(vch->name))
 			{
-				strncat(temp,"r", sizeof(temp));
+				strncat(temp,"r", sizeof(temp) - strlen(temp) - 1);
 				continue;
 			}
 
@@ -1944,7 +1945,7 @@ void do_pmote( CHAR_DATA *ch, char *argument )
 				name++;
 				if (matches == strlen(vch->name))
 				{
-					strncat(temp,"you", sizeof(temp));
+					strncat(temp,"you", sizeof(temp) - strlen(temp) - 1);
 					last[0] = '\0';
 					name = vch->name;
 					continue;
@@ -1954,7 +1955,7 @@ void do_pmote( CHAR_DATA *ch, char *argument )
 			}
 
 			matches = 0;
-			strncat(temp,last, sizeof(temp));
+			strncat(temp,last, sizeof(temp) - strlen(temp) - 1);
 			strncat(temp,letter,1);
 			last[0] = '\0';
 			name = vch->name;
@@ -2696,10 +2697,10 @@ void do_ignore(CHAR_DATA *ch, char *argument)
 
 		if (!IS_NULLSTR(ch->ignore))
 		{
-			strncat( buf, ch->ignore, sizeof(buf) );
-			strncat( buf, " ", sizeof(buf) );
+			strncat( buf, ch->ignore, sizeof(buf) - strlen(buf) - 1 );
+			strncat( buf, " ", sizeof(buf) - strlen(buf) - 1 );
 		}
-		strncat( buf, vch->name, sizeof(buf) );
+		strncat( buf, vch->name, sizeof(buf) - strlen(buf) - 1 );
 		PURGE_DATA( ch->ignore );
 		ch->ignore = string_proper( str_dup( buf ) );
 		send_to_char( "Ignore block activated.\n\r", ch );

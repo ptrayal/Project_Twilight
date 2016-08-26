@@ -78,9 +78,9 @@ void substitute_alias(DESCRIPTOR_DATA *d, char *argument)
 			if (!str_cmp(ch->pcdata->alias[alias],name))
 			{
 				buf[0] = '\0';
-				strncat(buf,ch->pcdata->alias_sub[alias], sizeof(buf));
-				strncat(buf," ", sizeof(buf));
-				strncat(buf,point, sizeof(buf));
+				strncat(buf, ch->pcdata->alias_sub[alias], sizeof(buf) - strlen(buf) - 1);
+				strncat(buf, " ", sizeof(buf) - strlen(buf) - 1);
+				strncat(buf, point, sizeof(buf) - strlen(buf) - 1);
 
 				if (strlen(buf) > MAX_INPUT_LENGTH - 1)
 				{
