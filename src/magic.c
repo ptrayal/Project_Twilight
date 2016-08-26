@@ -206,7 +206,7 @@ void say_spell( CHAR_DATA *ch, int sn )
     	{
     		if ( !str_prefix( syl_table[iSyl].old, pName ) )
     		{
-    			strncat( buf, syl_table[iSyl].bnew, sizeof(buf) );
+    			strncat( buf, syl_table[iSyl].bnew, sizeof(buf) - strlen(buf) - 1 );
     			break;
     		}
     	}
@@ -6319,13 +6319,13 @@ void do_scent_trueform ( CHAR_DATA * ch, char * string )
 			switch(victim->race)
 			{
 			case RACE_WEREWOLF:
-				strncat(buf,	" one of Gaia's\n\r", sizeof(buf));
+				strncat(buf,	" one of Gaia's\n\r", sizeof(buf) - strlen(buf) - 1);
 				break;
 			case RACE_VAMPIRE:
-				strncat(buf, " the wyrm\n\r", sizeof(buf));
+				strncat(buf, " the wyrm\n\r", sizeof(buf) - strlen(buf) - 1);
 				break;
 			case RACE_HUMAN:
-				strncat(buf, " the weaver\n\r", sizeof(buf));
+				strncat(buf, " the weaver\n\r", sizeof(buf) - strlen(buf) - 1);
 				break;
 			}
 		}
@@ -6333,16 +6333,16 @@ void do_scent_trueform ( CHAR_DATA * ch, char * string )
 		if(fail >= 2)
 		{
 			if(victim->condition[COND_ANGER] > 50)
-				strncat(buf, " touched by the Beast of War", sizeof(buf));
+				strncat(buf, " touched by the Beast of War", sizeof(buf) - strlen(buf) - 1);
 			if(victim->condition[COND_PAIN] > 50)
-				strncat(buf, " touched by the Defiler Wyrm", sizeof(buf));
+				strncat(buf, " touched by the Defiler Wyrm", sizeof(buf) - strlen(buf) - 1);
 			if(victim->condition[COND_FEAR] > 50)
-				strncat(buf, " touched by the Eater-of-Souls", sizeof(buf));
+				strncat(buf, " touched by the Eater-of-Souls", sizeof(buf) - strlen(buf) - 1);
 			if(victim->condition[COND_FRENZY] > 50)
-				strncat(buf, " that is rapidly rippling", sizeof(buf));
+				strncat(buf, " that is rapidly rippling", sizeof(buf) - strlen(buf) - 1);
 			if(fail >= 2)
 			{
-				strncat(buf, ".\n\r", sizeof(buf));
+				strncat(buf, ".\n\r", sizeof(buf) - strlen(buf) - 1);
 			}
 		}
 
@@ -6462,126 +6462,126 @@ void do_auspex2 ( CHAR_DATA * ch, char * string )
 			switch(victim->race)
 			{
 			case RACE_WEREWOLF:
-				strncat(buf,	" an intense and vibrant aura which moves like flames", sizeof(buf));
+				strncat(buf,	" an intense and vibrant aura which moves like flames", sizeof(buf) - strlen(buf) - 1);
 				break;
 			case RACE_CHANGELING:
-				strncat(buf, " a bright iridescent aura", sizeof(buf));
+				strncat(buf, " a bright iridescent aura", sizeof(buf) - strlen(buf) - 1);
 				break;
 			case RACE_VAMPIRE:
-				strncat(buf, " a pale aura", sizeof(buf));
+				strncat(buf, " a pale aura", sizeof(buf) - strlen(buf) - 1);
 				break;
 			case RACE_HUMAN:
-				strncat(buf, " a rosy aura", sizeof(buf));
+				strncat(buf, " a rosy aura", sizeof(buf) - strlen(buf) - 1);
 				break;
 			}
 			if(success == 1)
 			{
-				strncat(buf, ".\n\r", sizeof(buf));
+				strncat(buf, ".\n\r", sizeof(buf) - strlen(buf) - 1);
 			}
 
 		}
 		if(success >= 2)
 		{
 			if(victim->condition[COND_ANGER] > 50)
-				strncat(buf, " with red bursts", sizeof(buf));
+				strncat(buf, " with red bursts", sizeof(buf) - strlen(buf) - 1);
 			if(victim->condition[COND_PAIN] > 50)
-				strncat(buf, " with patches of red and purples", sizeof(buf));
+				strncat(buf, " with patches of red and purples", sizeof(buf) - strlen(buf) - 1);
 			if(victim->condition[COND_FEAR] > 50)
-				strncat(buf, " with orange skittering lines", sizeof(buf));
+				strncat(buf, " with orange skittering lines", sizeof(buf) - strlen(buf) - 1);
 			if(victim->condition[COND_FRENZY] > 50)
-				strncat(buf, " that is rapidly rippling", sizeof(buf));
+				strncat(buf, " that is rapidly rippling", sizeof(buf) - strlen(buf) - 1);
 			if(victim->condition[COND_ANGER] < 50
 					&& victim->condition[COND_FEAR] < 50
 					&& victim->condition[COND_FRENZY] < 50
 					&& victim->condition[COND_PAIN] < 50)
-				strncat(buf, " that is mild blue color", sizeof(buf));
+				strncat(buf, " that is mild blue color", sizeof(buf) - strlen(buf) - 1);
 			if(success >= 2)
 			{
-				strncat(buf, ".\n\r", sizeof(buf));
+				strncat(buf, ".\n\r", sizeof(buf) - strlen(buf) - 1);
 			}
 		}
 		if(success >= 3)
 		{
-			strncat(buf, "You also see color patterns", sizeof(buf));
+			strncat(buf, "You also see color patterns", sizeof(buf) - strlen(buf) - 1);
 
 			if(victim->clan == clan_lookup("brujah"))
-				strncat(buf, " in purple and violet", sizeof(buf));
+				strncat(buf, " in purple and violet", sizeof(buf) - strlen(buf) - 1);
 
 			else if(victim->clan == clan_lookup("gangrel"))
-				strncat(buf, " of green and brown", sizeof(buf));
+				strncat(buf, " of green and brown", sizeof(buf) - strlen(buf) - 1);
 
 			else if(victim->clan == clan_lookup("malkavian"))
-				strncat(buf, " of yellow", sizeof(buf));
+				strncat(buf, " of yellow", sizeof(buf) - strlen(buf) - 1);
 
 			else if(victim->clan == clan_lookup("nosferatu"))
-				strncat(buf, " in a sickly green", sizeof(buf));
+				strncat(buf, " in a sickly green", sizeof(buf) - strlen(buf) - 1);
 
 			else if(victim->clan == clan_lookup("toreador"))
-				strncat(buf, " of green", sizeof(buf));
+				strncat(buf, " of green", sizeof(buf) - strlen(buf) - 1);
 
 			else if(victim->clan == clan_lookup("tremere"))
-				strncat(buf, " in brown and light green", sizeof(buf));
+				strncat(buf, " in brown and light green", sizeof(buf) - strlen(buf) - 1);
 
 			else if(victim->clan == clan_lookup("ventrue"))
-				strncat(buf, " in lavender", sizeof(buf));
+				strncat(buf, " in lavender",sizeof(buf) - strlen(buf) - 1);
 
 			else if(victim->clan == clan_lookup("lasombra"))
-				strncat(buf, " of pulsating and writhing black and grey", sizeof(buf));
+				strncat(buf, " of pulsating and writhing black and grey", sizeof(buf) - strlen(buf) - 1);
 
 			else if(victim->clan == clan_lookup("tzimisce"))
-				strncat(buf, " in a myriad of sparkling green", sizeof(buf));
+				strncat(buf, " in a myriad of sparkling green", sizeof(buf) - strlen(buf) - 1);
 
 			else if(victim->clan == clan_lookup("assamite"))
-				strncat(buf, " of blue with black arteries", sizeof(buf));
+				strncat(buf, " of blue with black arteries", sizeof(buf) - strlen(buf) - 1);
 
 			else if(victim->clan == clan_lookup("settite"))
-				strncat(buf, " in a deep red and gold", sizeof(buf));
+				strncat(buf, " in a deep red and gold", sizeof(buf) - strlen(buf) - 1);
 
 			else if(victim->clan == clan_lookup("giovanni"))
-				strncat(buf, " in a deep red and green", sizeof(buf));
+				strncat(buf, " in a deep red and green", sizeof(buf) - strlen(buf) - 1);
 
 			else if(victim->clan == clan_lookup("ravnos"))
-				strncat(buf, " in sharp, flickering black and violet", sizeof(buf));
+				strncat(buf, " in sharp, flickering black and violet", sizeof(buf) - strlen(buf) - 1);
 
 			else if(victim->clan == clan_lookup("child of cacophony"))
-				strncat(buf, " in a mottled silver and yellow", sizeof(buf));
+				strncat(buf, " in a mottled silver and yellow", sizeof(buf) - strlen(buf) - 1);
 
 			else if(victim->clan == clan_lookup("bone"))
-				strncat(buf, " of gold and light green", sizeof(buf));
+				strncat(buf, " of gold and light green", sizeof(buf) - strlen(buf) - 1);
 
 			else if(victim->clan == clan_lookup("glass"))
-				strncat(buf, " of gold and deep red", sizeof(buf));
+				strncat(buf, " of gold and deep red", sizeof(buf) - strlen(buf) - 1);
 
 			else if(victim->clan == clan_lookup("malk"))
-				strncat(buf, " with hypnotic swirling colors.\n\r", sizeof(buf));
+				strncat(buf, " with hypnotic swirling colors.\n\r", sizeof(buf) - strlen(buf) - 1);
 
 			else if(victim->clan == clan_lookup("tremere"))
-				strncat(buf, " with a myriad of sparkles.\n\r", sizeof(buf));
+				strncat(buf, " with a myriad of sparkles.\n\r", sizeof(buf) - strlen(buf) - 1);
 
 			else if(victim->clan == clan_lookup("soc. of Leopold"))
-				strncat(buf, " with bright gold.\n\r", sizeof(buf));
+				strncat(buf, " with bright gold.\n\r", sizeof(buf) - strlen(buf) - 1);
 
 			else if(victim->clan == clan_lookup("silver"))
-				strncat(buf, " of brown and gold", sizeof(buf));
+				strncat(buf, " of brown and gold", sizeof(buf) - strlen(buf) - 1);
 			/*
 			else if(victim->clan == clan_lookup("silent"))
-				strncat(buf, " of gold and silver", sizeof(buf));
+				strncat(buf, " of gold and silver", sizeof(buf) - strlen(buf) - 1);
 			 */
 			else
-				strncat(buf, " of white", sizeof(buf));
+				strncat(buf, " of white", sizeof(buf) - strlen(buf) - 1);
 
 			if(success == 3)
 			{
-				strncat(buf, ".\n\r", sizeof(buf));
+				strncat(buf, ".\n\r", sizeof(buf) - strlen(buf) - 1);
 			}
 		}
 
 		if(success >= 4)
 		{
 			if(victim->GHB > 7)
-				strncat(buf, " with golden flecks.\n\r", sizeof(buf));
+				strncat(buf, " with golden flecks.\n\r", sizeof(buf) - strlen(buf) - 1);
 			else if(victim->GHB < 3)
-				strncat(buf, " with white flecks.\n\r", sizeof(buf));
+				strncat(buf, " with white flecks.\n\r", sizeof(buf) - strlen(buf) - 1);
 		}
 
 		send_to_char(buf, ch);
