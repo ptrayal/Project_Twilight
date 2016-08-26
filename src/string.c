@@ -92,9 +92,9 @@ char * string_insert_return( char * orig, char * old )
 		{
 				i = strlen( orig ) - strlen( strstr( orig, old ) );
 				xbuf[i] = '\0';
-				strncat( xbuf, old, sizeof(xbuf)  );
-				strncat( xbuf, "\n", sizeof(xbuf)  );
-				strncat( xbuf, &orig[i+strlen( old )], sizeof(xbuf)  );
+				strncat( xbuf, old, sizeof(xbuf) - strlen(xbuf) -1  );
+				strncat( xbuf, "\n", sizeof(xbuf) - strlen(xbuf) -1  );
+				strncat( xbuf, &orig[i+strlen( old )], sizeof(xbuf) - strlen(xbuf) -1  );
 				PURGE_DATA( orig );
 		}
 
@@ -118,8 +118,8 @@ char * string_replace( char * orig, char * old, char * bnew )
 		{
 				i = strlen( orig ) - strlen( strstr( orig, old ) );
 				xbuf[i] = '\0';
-				strncat( xbuf, bnew, sizeof(xbuf)  );
-				strncat( xbuf, &orig[i+strlen( old )], sizeof(xbuf)  );
+				strncat( xbuf, bnew, sizeof(xbuf) - strlen(xbuf) -1  );
+				strncat( xbuf, &orig[i+strlen( old )], sizeof(xbuf) - strlen(xbuf) -1  );
 				PURGE_DATA( orig );
 		}
 
@@ -252,8 +252,8 @@ void string_add( CHAR_DATA *ch, char *argument )
 		 */
 		smash_tilde( argument );
 
-		strncat( buf, argument, sizeof(buf)  );
-		strncat( buf, "\n\r", sizeof(buf)  );
+		strncat( buf, argument, sizeof(buf) - strlen(buf) - 1 );
+		strncat( buf, "\n\r", sizeof(buf) - strlen(buf) - 1 );
 		PURGE_DATA( *ch->desc->pString );
 		*ch->desc->pString = str_dup( buf );
 		return;
@@ -501,8 +501,8 @@ char *format_string (char *oldstring /*, bool fSpace */ )
 			if (i)
 			{
 				*(rdesc + i) = 0;
-				strncat (xbuf, rdesc, sizeof(xbuf));
-				strncat (xbuf, "\n\r", sizeof(xbuf));
+				strncat (xbuf, rdesc, sizeof(xbuf) - strlen(xbuf) - 1);
+				strncat (xbuf, "\n\r", sizeof(xbuf) - strlen(xbuf) - 1);
 				rdesc += i + 1;
 				while (*rdesc == ' ')
 					rdesc++;
@@ -511,16 +511,16 @@ char *format_string (char *oldstring /*, bool fSpace */ )
 			{
 				log_string(LOG_BUG, "`5Wrap_string: `@No spaces``");
 				*(rdesc + (end_of_line - 2)) = 0;
-				strncat (xbuf, rdesc, sizeof(xbuf));
-				strncat (xbuf, "-\n\r", sizeof(xbuf));
+				strncat (xbuf, rdesc, sizeof(xbuf) - strlen(xbuf) - 1);
+				strncat (xbuf, "-\n\r", sizeof(xbuf) - strlen(xbuf) - 1);
 				rdesc += end_of_line - 1;
 			}
 		}
 		else
 		{
 			*(rdesc + i - 1) = 0;
-			strncat (xbuf, rdesc, sizeof(xbuf));
-			strncat (xbuf, "\r", sizeof(xbuf));
+			strncat (xbuf, rdesc, sizeof(xbuf) - strlen(xbuf) - 1);
+			strncat (xbuf, "\r", sizeof(xbuf) - strlen(xbuf) - 1);
 			rdesc += i;
 			while (*rdesc == ' ')
 				rdesc++;
@@ -531,9 +531,9 @@ char *format_string (char *oldstring /*, bool fSpace */ )
 		*(rdesc + i) == '\r'))
 		i--;
 	*(rdesc + i + 1) = 0;
-	strncat (xbuf, rdesc, sizeof(xbuf));
+	strncat (xbuf, rdesc, sizeof(xbuf) - strlen(xbuf) - 1);
 	if (xbuf[strlen (xbuf) - 2] != '\n')
-		strncat (xbuf, "\n\r", sizeof(xbuf));
+		strncat (xbuf, "\n\r", sizeof(xbuf) - strlen(xbuf) - 1);
 
 	PURGE_DATA(oldstring);
 	return (str_dup (xbuf));
@@ -768,7 +768,7 @@ char *desc_pretty( char *string, int start, int lines, bool no_free )
 		}
 	}
 	/* and append any leftover lines directly */
-	strncat( buf, p, sizeof(buf)  );
+	strncat( buf, p, sizeof(buf) - strlen(buf) -1 );
 	/* and swap in the new editted description */
 	if(no_free)
 	{
