@@ -483,22 +483,22 @@ void weather_update( void )
 		{
 		case  5:
 			weather_info.sunlight = SUN_LIGHT;
-			strncat( buf, "The day has begun.\n\r", sizeof(buf)  );
+			strncat( buf, "The day has begun.\n\r", sizeof(buf) - strlen(buf) - 1 );
 			break;
 
 		case  6:
 			weather_info.sunlight = SUN_RISE;
-			strncat( buf, "The sun rises in the east.\n\r", sizeof(buf)  );
+			strncat( buf, "The sun rises in the east.\n\r", sizeof(buf) - strlen(buf) - 1  );
 			break;
 
 		case 19:
 			weather_info.sunlight = SUN_SET;
-			strncat( buf, "The sun slowly disappears in the west.\n\r", sizeof(buf)  );
+			strncat( buf, "The sun slowly disappears in the west.\n\r", sizeof(buf) - strlen(buf) - 1  );
 			break;
 
 		case 20:
 			weather_info.sunlight = SUN_DARK;
-			strncat( buf, "The night has begun.\n\r", sizeof(buf)  );
+			strncat( buf, "The night has begun.\n\r", sizeof(buf) - strlen(buf) - 1  );
 			break;
 
 		case 24:
@@ -574,7 +574,7 @@ void weather_update( void )
 		if ( weather_info.mmhg <  990
 				|| ( weather_info.mmhg < 1010 && number_bits( 2 ) == 0 ) )
 		{
-			strncat( buf, "The sky is getting cloudy.\n\r" , sizeof(buf) );
+			strncat( buf, "The sky is getting cloudy.\n\r" , sizeof(buf) - strlen(buf) - 1 );
 			weather_info.sky = SKY_CLOUDY;
 		}
 		break;
@@ -583,18 +583,18 @@ void weather_update( void )
 		if ( weather_info.mmhg <  970
 				|| ( weather_info.mmhg <  990 && number_bits( 2 ) == 0 ) )
 		{
-			strncat( buf, "It starts to rain.\n\r", sizeof(buf)  );
+			strncat( buf, "It starts to rain.\n\r", sizeof(buf) - strlen(buf) - 1  );
 			weather_info.sky = SKY_RAINING;
 		}
 		else
 		{
-			strncat( buf, "A fog rolls in.\n\r", sizeof(buf)  );
+			strncat( buf, "A fog rolls in.\n\r", sizeof(buf) - strlen(buf) - 1  );
 			weather_info.sky = SKY_FOGGY;
 		}
 
 		if ( weather_info.mmhg > 1030 && number_bits( 2 ) == 0 )
 		{
-			strncat( buf, "The clouds disappear.\n\r", sizeof(buf)  );
+			strncat( buf, "The clouds disappear.\n\r", sizeof(buf) - strlen(buf) - 1  );
 			weather_info.sky = SKY_CLOUDLESS;
 		}
 		break;
@@ -602,14 +602,14 @@ void weather_update( void )
 	case SKY_RAINING:
 		if ( weather_info.mmhg <  970 && number_bits( 2 ) == 0 )
 		{
-			strncat( buf, "Lightning flashes in the sky.\n\r", sizeof(buf)  );
+			strncat( buf, "Lightning flashes in the sky.\n\r", sizeof(buf) - strlen(buf) - 1  );
 			weather_info.sky = SKY_LIGHTNING;
 		}
 
 		if ( weather_info.mmhg > 1030
 				|| ( weather_info.mmhg > 1010 && number_bits( 2 ) == 0 ) )
 		{
-			strncat( buf, "The rain stopped.\n\r", sizeof(buf)  );
+			strncat( buf, "The rain stopped.\n\r", sizeof(buf) - strlen(buf) - 1  );
 			weather_info.sky = SKY_CLOUDY;
 		}
 		break;
@@ -618,7 +618,7 @@ void weather_update( void )
 		if ( weather_info.mmhg > 1010
 				|| ( weather_info.mmhg >  990 && number_bits( 2 ) == 0 ) )
 		{
-			strncat( buf, "The lightning has stopped.\n\r", sizeof(buf)  );
+			strncat( buf, "The lightning has stopped.\n\r", sizeof(buf) - strlen(buf) - 1  );
 			weather_info.sky = SKY_RAINING;
 			break;
 		}
@@ -628,7 +628,7 @@ void weather_update( void )
 		if ( weather_info.mmhg > 1010
 				|| ( weather_info.mmhg >  990 && number_bits( 2 ) == 0 ) )
 		{
-			strncat( buf, "The fog clears.\n\r" , sizeof(buf) );
+			strncat( buf, "The fog clears.\n\r" , sizeof(buf) - strlen(buf) - 1 );
 			weather_info.sky = SKY_CLOUDLESS;
 			break;
 		}
