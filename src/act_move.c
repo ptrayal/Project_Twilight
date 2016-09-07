@@ -3473,7 +3473,7 @@ void do_scan(CHAR_DATA *ch, char *argument)
 
     argument = one_argument(argument, arg1);
 
-    if (!IS_NULLSTR(arg1) || is_number(arg1))
+    if (IS_NULLSTR(arg1) || is_number(arg1))
     {
         if(!IS_NULLSTR(arg1) )
             tag = UMIN(get_curr_stat(ch, STAT_PER), atoi(arg1));
@@ -3503,12 +3503,12 @@ void do_scan(CHAR_DATA *ch, char *argument)
         }
         return;
     }
-    else if (!str_cmp(arg1, "n") || !str_cmp(arg1, "north")) door = 0;
-    else if (!str_cmp(arg1, "e") || !str_cmp(arg1, "east"))  door = 1;
-    else if (!str_cmp(arg1, "s") || !str_cmp(arg1, "south")) door = 2;
-    else if (!str_cmp(arg1, "w") || !str_cmp(arg1, "west"))  door = 3;
-    else if (!str_cmp(arg1, "u") || !str_cmp(arg1, "up" ))   door = 4;
-    else if (!str_cmp(arg1, "d") || !str_cmp(arg1, "down"))  door = 5;
+    else if (!str_prefix(arg1, "n") || !str_prefix(arg1, "north")) door = 0;
+    else if (!str_prefix(arg1, "e") || !str_prefix(arg1, "east"))  door = 1;
+    else if (!str_prefix(arg1, "s") || !str_prefix(arg1, "south")) door = 2;
+    else if (!str_prefix(arg1, "w") || !str_prefix(arg1, "west"))  door = 3;
+    else if (!str_prefix(arg1, "u") || !str_prefix(arg1, "up" ))   door = 4;
+    else if (!str_prefix(arg1, "d") || !str_prefix(arg1, "down"))  door = 5;
     else { send_to_char("Which way do you want to scan?\n\r", ch); return; }
 
     if(!IS_SET(ch->act2, ACT2_ASTRAL))
@@ -3540,12 +3540,17 @@ void scan_list(ROOM_INDEX_DATA *scan_room, CHAR_DATA *ch, sh_int depth, sh_int d
 {
     CHAR_DATA *rch;
 
-    if (scan_room == NULL) return;
+    if (scan_room == NULL)
+        return;
+
     for (rch=scan_room->people; rch != NULL; rch=rch->next_in_room)
     {
-        if (rch == ch) continue;
-        if (!IS_NPC(rch) && rch->invis_level > get_trust(ch)) continue;
-        if (can_see(ch, rch)) scan_char(rch, ch, depth, door);
+        if (rch == ch)
+            continue;
+        if (!IS_NPC(rch) && rch->invis_level > get_trust(ch)) 
+            continue;
+        if (can_see(ch, rch))
+            scan_char(rch, ch, depth, door);
     }
     return;
 }
@@ -3553,6 +3558,7 @@ void scan_list(ROOM_INDEX_DATA *scan_room, CHAR_DATA *ch, sh_int depth, sh_int d
 void scan_char(CHAR_DATA *victim, CHAR_DATA *ch, sh_int depth, sh_int door)
 {
     extern char *const distance[];
+    extern char *const dir_name[];
     char buf[MSL]={'\0'};
     char buf2[MIL]={'\0'};
 
@@ -3560,7 +3566,9 @@ void scan_char(CHAR_DATA *victim, CHAR_DATA *ch, sh_int depth, sh_int door)
 
     strncat(buf, PERS(victim, ch), sizeof(buf) - strlen(buf) - 1);
     strncat(buf, ", ", sizeof(buf) - strlen(buf) - 1);
+
     snprintf(buf2, sizeof(buf2), distance[depth], dir_name[door]);
+
     strncat(buf, buf2, sizeof(buf) - strlen(buf) - 1 );
     strncat(buf, "\n\r", sizeof(buf) - strlen(buf) - 1);
 
