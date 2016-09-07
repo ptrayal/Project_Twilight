@@ -2514,20 +2514,50 @@ void do_whois (CHAR_DATA *ch, char *argument)
 	 */
 	if(IS_ADMIN(ch))
 	{
-		send_to_char (Format("\tW######### [ \tC%12s %s\tn \tW] #########\tn\n\r", wch->name, IS_NULLSTR(wch->surname) ? "" : wch->surname), ch);
+		send_to_char (Format("\tW############################ [ \tC%12s %s\tn \tW] ############################\tn\n\r", wch->name, IS_NULLSTR(wch->surname) ? "" : wch->surname), ch);
 		send_to_char (Format("\tW%-10s\tn : \tG%s\tn\n\r", "Position", staff_status[wch->trust].name), ch);
 		send_to_char (Format("\tW%-10s\tn : \tG%s\tn\n\r", "Gender", gender_string(wch)), ch);
 		send_to_char (Format("\tW%-10s\tn : \tG%s\tn\n\r", "Appearance", appearance_string(wch)), ch);
 		send_to_char (Format("Famous?    : %s\n\r", fame_table[wch->backgrounds[FAME_STATUS]].name), ch);
 		send_to_char (Format("Available for RP : %s\n\r", wch->pcdata->rpok_string), ch);
-		send_to_char("\tW######################################\tn\n\r",ch);
+		send_to_char("\tW###########################################################################\tn\n\r",ch);
 		send_to_char (Format("Race          : %s\n\r", wch->race < MAX_PC_RACE ? pc_race_table[wch->race].name:"     "), ch);
 		send_to_char (Format("Clan/Tribe    : %s\n\r", capitalize(clan_table[wch->clan].name)), ch);
 		send_to_char (Format("AFK: %s\n\r", IS_SET(wch->comm, COMM_AFK) ? "\tRA\tn": ""), ch);
+		send_to_char("\tW###########################################################################\tn\n\r",ch);
+		send_to_char(Format ("In area:     \tg%s\tn\n\r", wch->in_room->area->name), ch);
+		send_to_char(Format ("In room:     \tg%s\tn\n\r", wch->in_room->name), ch);
+		send_to_char(Format ("Room vnum:   \tg%d\tn\n\r", wch->in_room->vnum), ch);
+		send_to_char("\tW###########################################################################\tn\n\r",ch);
+		send_to_char(Format ("Client:         %s (Version: %s)\n\r", wch->desc->pProtocol->pVariables[eMSDP_CLIENT_ID]->pValueString, wch->desc->pProtocol->pVariables[eMSDP_CLIENT_VERSION]->pValueString), ch);
+		send_to_char(Format ("Protocols:     "), ch);
+
+        if (wch->desc->pProtocol->bNAWS )
+            send_to_char(Format (" NAWS"), ch);
+        if (wch->desc->pProtocol->bTTYPE )
+            send_to_char(Format (" TTYPE"), ch);
+        if (wch->desc->pProtocol->bMSP )
+            send_to_char(Format (" MSP"), ch);
+        if (wch->desc->pProtocol->bATCP )
+            send_to_char(Format (" ATCP"), ch);
+        if (wch->desc->pProtocol->b256Support )
+            send_to_char(Format (" 256Colours"), ch);
+        if (wch->desc->pProtocol->bMXP )
+        {
+              send_to_char(Format (" MXP (%s)",  wch->desc->pProtocol->pMXPVersion), ch);
+        }
+        if (wch->desc->pProtocol->bMCCP)
+            send_to_char(Format (" MCCP"), ch);
+        if (wch->desc->pProtocol->bMSDP )
+            send_to_char(Format (" MSDP"), ch);
+        send_to_char(Format("\n\r"), ch);
+
+
 		if (wch->desc && wch->desc->pProtocol && wch->desc->pProtocol->pVariables[eMSDP_UTF_8]->ValueInt == 1)
 			send_to_char (Format("UTF-8 Enabled : Yes\n\r"), ch);
 		else
 			send_to_char (Format("UTF-8 Enabled : No\n\r"), ch);
+		send_to_char("\tW###########################################################################\tn\n\r",ch);
 	}
 	else
 	{
