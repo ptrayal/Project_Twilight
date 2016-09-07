@@ -184,6 +184,7 @@ DECLARE_DO_FUN(	do_equipment	);
 DECLARE_DO_FUN(	do_examine	);
 DECLARE_DO_FUN(	do_exits	);
 DECLARE_DO_FUN(	do_exlist	);
+DECLARE_DO_FUN(	do_arealinks	);
 DECLARE_DO_FUN(	do_experience	);
 DECLARE_DO_FUN(	do_fake_add	);
 DECLARE_DO_FUN(	do_wwgift1_2	);

@@ -4837,24 +4837,25 @@ void checkexits (ROOM_INDEX_DATA *room, AREA_DATA *pArea, char* buffer)
 }
 
 /* for now, no arguments, just list the current area */
-void do_exlist (CHAR_DATA *ch, char * argument)
-{
-	AREA_DATA* pArea;
-	ROOM_INDEX_DATA* room;
-	int i = 0;
-	char buffer[MSL]={'\0'};
+// This command has been replaced by do_arealinks.
+// void do_exlist (CHAR_DATA *ch, char * argument)
+// {
+// 	AREA_DATA* pArea;
+// 	ROOM_INDEX_DATA* room;
+// 	int i = 0;
+// 	char buffer[MSL]={'\0'};
 	
-	CheckCH(ch);
+// 	CheckCH(ch);
 
-	pArea = ch->in_room->area;			/* this is the area we want info on */
-	for (i = 0; i < MAX_KEY_HASH; i++)	/* room index hash table */
-		for (room = room_index_hash[i]; room != NULL; room = room->next)
-			/* run through all the rooms on the MUD */
-		{
-			checkexits (room, pArea, buffer);
-			send_to_char (buffer, ch);
-		}
-} 
+// 	pArea = ch->in_room->area;			/* this is the area we want info on */
+// 	for (i = 0; i < MAX_KEY_HASH; i++)	/* room index hash table */
+// 		for (room = room_index_hash[i]; room != NULL; room = room->next)
+// 			/* run through all the rooms on the MUD */
+// 		{
+// 			checkexits (room, pArea, buffer);
+// 			send_to_char (buffer, ch);
+// 		}
+// } 
 
 /* show a list of all used VNUMS */
 
@@ -6485,4 +6486,166 @@ MUDCMD(do_trackbuffer)
 	page_to_char(buf_string(output), ch);
 	free_buf(output);
 	return;
+}
+
+void do_arealinks(CHAR_DATA *ch, char *argument)
+{
+    BUFFER *buffer;
+    AREA_DATA *parea;
+    EXIT_DATA *pexit;
+    ROOM_INDEX_DATA *to_room;
+    ROOM_INDEX_DATA *from_room;
+    char buf[MAX_STRING_LENGTH];
+    char arg1[MAX_INPUT_LENGTH];
+    int vnum = 0;
+    int iHash, door;
+    bool found = FALSE;
+
+    static char * const dir_name[] = {"north","east","south","west","up","down"};
+
+    argument = one_argument(argument, arg1);
+
+    /* First, the 'all' option */
+    if (!str_cmp(arg1,"all"))
+    {
+        buffer = new_buf();
+
+        for (parea = area_first; parea != NULL; parea = parea->next)
+        {
+            /* First things, add area name  and vnums to the buffer */
+            sprintf(buf, "*** %s (%d to %d) ***\n\r",
+                    parea->name, parea->min_vnum, parea->max_vnum);
+
+            found = FALSE;
+            for (iHash = 0; iHash < MAX_KEY_HASH; iHash++)
+            {
+                for ( from_room = room_index_hash[iHash];
+                        from_room != NULL;
+                        from_room = from_room->next )
+                {
+                    if ( from_room->vnum < parea->min_vnum
+                            ||   from_room->vnum > parea->max_vnum )
+                        continue;
+
+                    for (door = 0; door < 6; door++)
+                    {
+                        /* Does an exit exist in this direction? */
+                        if ( (pexit = from_room->exit[door]) != NULL )
+                        {
+                            to_room = pexit->u1.to_room;
+
+                            if ( to_room != NULL
+                                    &&  (to_room->vnum < parea->min_vnum
+                                         ||   to_room->vnum > parea->max_vnum) )
+                            {
+                                found = TRUE;
+                                sprintf(buf, "%s (%d) links %s to %s (%d)\n\r",
+                                        parea->name, from_room->vnum, dir_name[door],
+                                        to_room->area->name, to_room->vnum);
+
+                                add_buf(buffer, buf);
+                            }
+                        }
+                    }
+                }
+            }
+
+            if (!found)
+                sprintf(buf, "%s No links to other areas found.\n\r", parea->name);
+
+            add_buf(buffer, buf);
+        }
+
+        page_to_char(buffer->string, ch);
+        free_buf(buffer);
+
+        return;
+    }
+
+    if (arg1[0] == '\0')
+    {
+        parea = ch->in_room ? ch->in_room->area : NULL;
+
+        if (parea == NULL)
+        {
+            send_to_char("You aren't in an area right now, funky.\n\r",ch);
+            return;
+        }
+    }
+
+    else if (is_number(arg1))
+    {
+        vnum = atoi(arg1);
+
+        if (vnum <= 0)
+        {
+            send_to_char("The vnum must be greater than 1.\n\r",ch);
+            return;
+        }
+
+        for (parea = area_first; parea != NULL; parea = parea->next)
+        {
+            if (vnum >= parea->min_vnum && vnum <= parea->max_vnum)
+                break;
+        }
+
+        if (parea == NULL)
+        {
+            send_to_char("There is no area containing that vnum.\n\r",ch);
+            return;
+        }
+    }
+
+    else
+    {
+        for (parea = area_first; parea != NULL; parea = parea->next)
+        {
+            if (!str_prefix(arg1, parea->name))
+                break;
+        }
+
+        if (parea == NULL)
+        {
+            send_to_char("There is no such area.\n\r",ch);
+            return;
+        }
+    }
+
+    for (iHash = 0; iHash < MAX_KEY_HASH; iHash++)
+    {
+        for ( from_room = room_index_hash[iHash];
+                from_room != NULL;
+                from_room = from_room->next )
+        {
+            if ( from_room->vnum < parea->min_vnum
+                    ||   from_room->vnum > parea->max_vnum )
+                continue;
+
+            for (door = 0; door < 6; door++)
+            {
+                if ( (pexit = from_room->exit[door]) != NULL )
+                {
+                    to_room = pexit->u1.to_room;
+
+                    if ( to_room != NULL
+                            &&  (to_room->vnum < parea->min_vnum
+                                 ||   to_room->vnum > parea->max_vnum) )
+                    {
+                        found = TRUE;
+                        sprintf(buf, "%s (%d) links %s to %s (%d)\n\r",
+                                parea->name, from_room->vnum, dir_name[door],
+                                to_room->area->name, to_room->vnum);
+                        send_to_char(buf, ch);
+                    }
+                }
+            }
+        }
+    }
+
+    if (!found)
+    {
+        send_to_char("No links to other areas found.\n\r",ch);
+        return;
+    }
+
 }
