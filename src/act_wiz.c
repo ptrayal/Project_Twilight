@@ -4494,7 +4494,7 @@ void do_addlag(CHAR_DATA *ch, char *argument)
 
 	CHAR_DATA *victim;
 	char arg1[MSL]={'\0'};
-	int x;
+	int x = 0;
 
 	CheckCH(ch);
 
@@ -4595,8 +4595,8 @@ void copyover_recover ()
 	FILE *fp;
 	char name [100]={'\0'};
 	char host[MSL]={'\0'};
-	int desc;
-	bool fOld;
+	int desc = 0;
+	bool fOld = FALSE;
 
 	log_string(LOG_CONNECT,"Warm reboot recovery initiated");
 

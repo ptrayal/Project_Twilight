@@ -574,7 +574,7 @@ void weather_update( void )
 		if ( weather_info.mmhg <  990
 				|| ( weather_info.mmhg < 1010 && number_bits( 2 ) == 0 ) )
 		{
-			strncat( buf, "The sky is getting cloudy.\n\r" , sizeof(buf) - strlen(buf) - 1 );
+			strncat( buf, "\twThe sky is getting cloudy\tn.\n\r" , sizeof(buf) - strlen(buf) - 1 );
 			weather_info.sky = SKY_CLOUDY;
 		}
 		break;
@@ -583,12 +583,12 @@ void weather_update( void )
 		if ( weather_info.mmhg <  970
 				|| ( weather_info.mmhg <  990 && number_bits( 2 ) == 0 ) )
 		{
-			strncat( buf, "It starts to rain.\n\r", sizeof(buf) - strlen(buf) - 1  );
+			strncat( buf, "\tbIt starts to rain\tn.\n\r", sizeof(buf) - strlen(buf) - 1  );
 			weather_info.sky = SKY_RAINING;
 		}
 		else
 		{
-			strncat( buf, "A fog rolls in.\n\r", sizeof(buf) - strlen(buf) - 1  );
+			strncat( buf, "\taA fog rolls in\tn.\n\r", sizeof(buf) - strlen(buf) - 1  );
 			weather_info.sky = SKY_FOGGY;
 		}
 
@@ -602,7 +602,7 @@ void weather_update( void )
 	case SKY_RAINING:
 		if ( weather_info.mmhg <  970 && number_bits( 2 ) == 0 )
 		{
-			strncat( buf, "Lightning flashes in the sky.\n\r", sizeof(buf) - strlen(buf) - 1  );
+			strncat( buf, "\tYLightning flashes in the sky\tn.\n\r", sizeof(buf) - strlen(buf) - 1  );
 			weather_info.sky = SKY_LIGHTNING;
 		}
 
