@@ -21,7 +21,8 @@ int rename(const char *oldfname, const char *newfname);
 char *print_flags(int flag)
 {
     static char buf[52]={'\0'};
-    int count = 0, pos = 0;
+    int count = 0;
+    int pos = 0;
 
     for (count = 0; count < 32;  count++)
     {

@@ -3557,7 +3557,9 @@ void be_frenzied(CHAR_DATA *ch)
 
     if(IS_SET(ch->act2, ACT2_RESIST))
     {
-	send_to_char( "You exert your will to prevent the frenzy from taking over.\n\r", ch);
+	send_to_char(
+	    "You exert your will to prevent the frenzy from taking over.\n\r",
+	        ch);
 	if(IS_SET(ch->act2, ACT2_FRENZY)) REMOVE_BIT(ch->act2, ACT2_FRENZY);
 	ch->condition[COND_FRENZY] -= 70;
 	return;

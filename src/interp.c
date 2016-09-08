@@ -687,7 +687,7 @@ bool CAN_USE_CMD(CHAR_DATA *ch, int cmd)
 */
 int command_lookup(char *command)
 {
-	int cmd;
+	int cmd = 0;
 
 	for ( cmd = 0; !IS_NULLSTR(cmd_table[cmd].name); cmd++ )
 	{
@@ -702,7 +702,7 @@ int command_lookup(char *command)
 
 int command_available(CHAR_DATA *ch, char *command)
 {
-	int cmd;
+	int cmd = 0;
 	int trust = get_trust(ch);
 
 	for ( cmd = 0; !IS_NULLSTR(cmd_table[cmd].name); cmd++ )
@@ -727,8 +727,9 @@ void interpret( CHAR_DATA *ch, char *argument )
 {
 	char command[MIL]={'\0'};
 	char logline[MIL]={'\0'};
-	int cmd;
-	bool found, exists;
+	int cmd = 0;
+	bool found = FALSE;
+	bool exists = FALSE;
 	CHAR_DATA *vch, *next;
 
 	assert(ch);
@@ -786,8 +787,6 @@ void interpret( CHAR_DATA *ch, char *argument )
 	/*
 	 * Look for command in command table.
 	 */
-	found = FALSE;
-	exists = FALSE;
 	if((cmd = command_lookup(command)) > -1)
 	{
 		exists = TRUE;
@@ -812,7 +811,7 @@ void interpret( CHAR_DATA *ch, char *argument )
 					||	 (fLogCom && cmd_table[cmd].log == L_COM) )
 	{
 		char    s[2*MIL],*ps;
-		int     i;
+		int     i = 0;
 
 		ps=s;
 		/*send_to_char(Format("Log %s: %s", ch->name, logline), ch); */
@@ -1021,10 +1020,9 @@ bool check_social( CHAR_DATA *ch, char *command, char *argument )
 {
 	char arg[MIL]={'\0'};
 	CHAR_DATA *victim;
-	int cmd;
-	bool found;
+	int cmd = 0;
+	bool found  = FALSE;
 
-	found  = FALSE;
 	for ( cmd = 0; !IS_NULLSTR(social_table[cmd].name); cmd++ )
 	{
 	if ( command[0] == social_table[cmd].name[0]
@@ -1164,7 +1162,7 @@ bool is_number ( char *arg )
 int number_argument( char *argument, char *arg )
 {
 	char *pdot;
-	int number;
+	int number = 0;
 
 	for ( pdot = argument; *pdot != '\0'; pdot++ )
 	{
@@ -1188,7 +1186,7 @@ int number_argument( char *argument, char *arg )
 int mult_argument(char *argument, char *arg)
 {
 	char *pdot;
-	int number;
+	int number = 0;
 
 	for ( pdot = argument; *pdot != '\0'; pdot++ )
 	{

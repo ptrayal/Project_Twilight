@@ -31,5 +31,5 @@ while ( 1 )
 	rm -f shutdown.txt
 	exit 0
     endif
-    sleep 15
+    sleep 10
 end
