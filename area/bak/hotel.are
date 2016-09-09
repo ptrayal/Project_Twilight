@@ -26,8 +26,8 @@ ABCGKc DF 75 0 0 0 punch
 ADHIMVc ABCDEFGHIJK medium flesh
 A G
 I 0
-Tr 0 has arrived~ emote smiles and asks, {Y'{CCan I interest you in a room today or are you just here for the restaraunt?{Y'{x~
 Tr 0 **base**~ **do not delete~
+Tr 0 has arrived~ emote smiles and asks, {Y'{CCan I interest you in a room today or are you just here for the restaraunt?{Y'{x~
 #8002
 maid~
 a maid~
@@ -330,9 +330,9 @@ ABY 0 25 0 0 0 none
 AHMV ABCDEFGHIJK medium wood
 A 0
 I 0
-Tr 0 **base**~ **base**~
-Tr 0 has arrived.~ emote slowly opens it's lid.~
 Tr 0 leaves~ emote slowly closes it's lid.~
+Tr 0 has arrived.~ emote slowly opens it's lid.~
+Tr 0 **base**~ **base**~
 #8025
 $f~
 $f~
@@ -438,26 +438,26 @@ E
 --USES~
 -2~
 E
-key~
-[The Haven] Key  A=alley  B=bathroom  C=laundry  E=restaurant  F=fire escapeH=hallway  L=lobby  O=office  P=parking lot  R=roomS=stairs  T=rooftop  W=sidewalk  X=spacer  Y=separating room  Z=freezers~
-E
-Levelb-1~
-[The Haven]  lvl: b-1 XXXXXXXXXXOYYYYZHXXOYYYYZHXXOYYYYZHXSHYYYYZHXXHYYYYZHXXHHHHHHSXXXXXXXXXX ~
-E
-Level5~
-[The Haven] lvl: 5 XXXXXXXXXXTTTTTXXXXTTTTTXXXXTTTTTXXXXTTTTTTTXXTSTTTTTXFTTTTTTTXXXXXXXXXX~
-E
-Level4~
-[The Haven] lvl: 4 XXXXXXXXXXEEEKYXXXXERRRRXXXXERRRRXXXXHHHHHHHXFHSRRRRCXFHVRRRRCXXXXXXXXXX ~
-E
-Level3~
-[The Haven] lvl: 3 XXXXXXXXXXEEEEEXXXXERRRRXXXXERRRRXXXXHHHHHHHXFHSRRRRCXFHVRRRRCXXXXXXXXXX ~
+Level1~
+[The Haven] lvl: 1 AAAAAAAAWARRHRRPPWARRHRRPPWARRHHHPPPACCRRHLLWFCSRRHBBWAHHHHHVSWAAAAAAAAW~
 E
 Level2~
 [The Haven] lvl: 2 XXXXXXXXXXHHHHHXXXXHRRRRXXXXHRRRRXXXXHVRRRBCXFHSRRRBCXFHHHHHHHXXXXXXXXXX ~
 E
-Level1~
-[The Haven] lvl: 1 AAAAAAAAWARRHRRPPWARRHRRPPWARRHHHPPPACCRRHLLWFCSRRHBBWAHHHHHVSWAAAAAAAAW~
+Level3~
+[The Haven] lvl: 3 XXXXXXXXXXEEEEEXXXXERRRRXXXXERRRRXXXXHHHHHHHXFHSRRRRCXFHVRRRRCXXXXXXXXXX ~
+E
+Level4~
+[The Haven] lvl: 4 XXXXXXXXXXEEEKYXXXXERRRRXXXXERRRRXXXXHHHHHHHXFHSRRRRCXFHVRRRRCXXXXXXXXXX ~
+E
+Level5~
+[The Haven] lvl: 5 XXXXXXXXXXTTTTTXXXXTTTTTXXXXTTTTTXXXXTTTTTTTXXTSTTTTTXFTTTTTTTXXXXXXXXXX~
+E
+Levelb-1~
+[The Haven]  lvl: b-1 XXXXXXXXXXOYYYYZHXXOYYYYZHXXOYYYYZHXSHYYYYZHXXHYYYYZHXXHHHHHHSXXXXXXXXXX ~
+E
+key~
+[The Haven] Key  A=alley  B=bathroom  C=laundry  E=restaurant  F=fire escapeH=hallway  L=lobby  O=office  P=parking lot  R=roomS=stairs  T=rooftop  W=sidewalk  X=spacer  Y=separating room  Z=freezers~
 Q 15
 #8007
 stun gun stungun small~
@@ -1052,20 +1052,20 @@ E
 --USES~
 -2~
 E
-bench~
-A long, curved, wooden bench sits here next to a dining table.  It hassoft, white leather cushions, and fancy designs carved into the wood hereand there.  ~
-E
-rose~
-A small, unopened rose sits here in a small glass vase just waiting forthe right time.  It appears to be freshly placed.  ~
-E
-red~
-A small, unopened rose sits here in a small glass vase just waiting forthe right time.  It appears to be freshly placed.  ~
+candle~
+A long candlestick sits on a glass candleholder trying to illuminate thetable.  ~
 E
 white~
 A long candlestick sits on a glass candleholder trying to illuminate thetable.  ~
 E
-candle~
-A long candlestick sits on a glass candleholder trying to illuminate thetable.  ~
+red~
+A small, unopened rose sits here in a small glass vase just waiting forthe right time.  It appears to be freshly placed.  ~
+E
+rose~
+A small, unopened rose sits here in a small glass vase just waiting forthe right time.  It appears to be freshly placed.  ~
+E
+bench~
+A long, curved, wooden bench sits here next to a dining table.  It hassoft, white leather cushions, and fancy designs carved into the wood hereand there.  ~
 Q 0
 #8052
 black bag body bodybag~
@@ -1347,10 +1347,10 @@ E
 --USES~
 -2~
 E
-ashtrays~
+alabaster~
 Ashtrays that look almost unused due to the populace that uses this club.Made of alabaster, and in the shape of small skulls with their gaping,fanged mouths waiting for cigarette butts to be inserted.  ~
 E
-alabaster~
+ashtrays~
 Ashtrays that look almost unused due to the populace that uses this club.Made of alabaster, and in the shape of small skulls with their gaping,fanged mouths waiting for cigarette butts to be inserted.  ~
 Q 0
 #8073
@@ -3596,17 +3596,17 @@ E
 XDDREAM~
 None~
 E
-aisle~
-These small metal shelves have frost buildup on them so thick it looksas if it is actually a living organism growing on it.  The large,clear, plastic bags hold some type of red liquid, and they appear tohave different types of tags on each bag on each aisle.  One, forexample, says: 'O+ Jan1994'.~
-E
-aisles~
+bags~
 These small metal shelves have frost buildup on them so thick it looksas if it is actually a living organism growing on it.  The large, clear,plastic bags hold some type of red liquid, and they appear to havedifferent types of tags on each bag on each aisle.  One, for example,says: 'O+ Jan1994'.~
 E
 shelves~
 These small metal shelves have frost buildup on them so thick it looksas if it is actually a living organism growing on it.  The large, clear,plastic bags hold some type of red liquid, and they appear to havedifferent types of tags on each bag on each aisle.  One, for example,says: 'O+ Jan1994'.~
 E
-bags~
+aisles~
 These small metal shelves have frost buildup on them so thick it looksas if it is actually a living organism growing on it.  The large, clear,plastic bags hold some type of red liquid, and they appear to havedifferent types of tags on each bag on each aisle.  One, for example,says: 'O+ Jan1994'.~
+E
+aisle~
+These small metal shelves have frost buildup on them so thick it looksas if it is actually a living organism growing on it.  The large,clear, plastic bags hold some type of red liquid, and they appear tohave different types of tags on each bag on each aisle.  One, forexample, says: 'O+ Jan1994'.~
 D2
 (none)~
 (null)~
@@ -4307,10 +4307,10 @@ E
 XDDREAM~
 None~
 E
-sign~
+small~
 Free instructions provided by the hotel management: buy _ shop - allows you to buy something from the shopkeeper.list shop  - the shopkeeper will tell you the price and sort of items available.~
 E
-small~
+sign~
 Free instructions provided by the hotel management: buy _ shop - allows you to buy something from the shopkeeper.list shop  - the shopkeeper will tell you the price and sort of items available.~
 D1
 (none)~
@@ -4765,14 +4765,14 @@ E
 XDDREAM~
 None~
 E
-doorstop~
-A small rubber doorstop sits here on the gray carpet trying to keep the door from making a hole into the wall.It is in excellent condition.~
+light~
+A small white light switch sits here in the wall waiting to be used.It is in excellent condition.~
 E
 switch~
 A small white light switch sits here in the wall waiting to be used.It is in excellent condition.~
 E
-light~
-A small white light switch sits here in the wall waiting to be used.It is in excellent condition.~
+doorstop~
+A small rubber doorstop sits here on the gray carpet trying to keep the door from making a hole into the wall.It is in excellent condition.~
 D1
 (none)~
 (null)~
@@ -4800,14 +4800,14 @@ E
 XDDREAM~
 None~
 E
-doorstop~
-A small rubber doorstop sits here on the gray carpet trying to keep the door from making a hole into the wall.It is in excellent condition.~
+light~
+A small white light switch sits here in the wall waiting to be used.It is in excellent condition.~
 E
 switch~
 A small white light switch sits here in the wall waiting to be used.It is in excellent condition.~
 E
-light~
-A small white light switch sits here in the wall waiting to be used.It is in excellent condition.~
+doorstop~
+A small rubber doorstop sits here on the gray carpet trying to keep the door from making a hole into the wall.It is in excellent condition.~
 D1
 (none)~
 (null)~
@@ -4969,20 +4969,20 @@ E
 XDDREAM~
 None~
 E
-drops~
+sign~
+This fountain is out of order, sorry for the inconvenience!!   MNGT~
+E
+small~
+This fountain is out of order, sorry for the inconvenience!!   MNGT~
+E
+dried~
 Several spots on the floor look to be what used to be blood spots thatnever got cleaned up and stained the tile.  Whatever happened here to spillblood looks to have happened some time ago.  They seem to originate from thefountain on the eastern wall, but it looks almost like one is under thewall.  ~
 E
 blood~
 Several spots on the floor look to be what used to be blood spots thatnever got cleaned up and stained the tile.  Whatever happened here to spillblood looks to have happened some time ago.  They seem to originate from thefountain on the eastern wall, but it looks almost like one is under thewall.  ~
 E
-dried~
+drops~
 Several spots on the floor look to be what used to be blood spots thatnever got cleaned up and stained the tile.  Whatever happened here to spillblood looks to have happened some time ago.  They seem to originate from thefountain on the eastern wall, but it looks almost like one is under thewall.  ~
-E
-small~
-This fountain is out of order, sorry for the inconvenience!!   MNGT~
-E
-sign~
-This fountain is out of order, sorry for the inconvenience!!   MNGT~
 D1
 The slight outline of a door can be seen here.  ~
 wall~
@@ -5307,14 +5307,14 @@ E
 XDDREAM~
 None~
 E
-doorstop~
-A small rubber doorstop sits here on the gray carpet trying to keep the door from making a hole into the wall.It is in excellent condition.~
+light~
+A small white light switch sits here in the wall waiting to be used.It is in excellent condition.~
 E
 switch~
 A small white light switch sits here in the wall waiting to be used.It is in excellent condition.~
 E
-light~
-A small white light switch sits here in the wall waiting to be used.It is in excellent condition.~
+doorstop~
+A small rubber doorstop sits here on the gray carpet trying to keep the door from making a hole into the wall.It is in excellent condition.~
 D1
 (none)~
 (null)~
@@ -5364,11 +5364,11 @@ E
 XDDREAM~
 None~
 E
-104~
-A faded blue door rests here with a white sign on it that says: 104~
-E
 103~
 A faded blue door rests here with a white sign on it that says: 103~
+E
+104~
+A faded blue door rests here with a white sign on it that says: 104~
 D0
 (none)~
 (null)~
@@ -5500,11 +5500,11 @@ E
 XDDREAM~
 None~
 E
-key report~
-A blue door rests here with a white sign on it that says: 102~
-E
 101~
 A blue door rests here with a white sign on it that says: 101~
+E
+key report~
+A blue door rests here with a white sign on it that says: 102~
 D1
 A blue door rests here with a white sign on it that says: 101 ~
 101~
@@ -5662,10 +5662,10 @@ E
 XDDREAM~
 None~
 E
-blood~
+traces~
 Small streaks of blood fill in some of the cracks near the solid ironmanhole cover here.  It seems not even the rain can wash away the crime thatmust have taken place here.  ~
 E
-traces~
+blood~
 Small streaks of blood fill in some of the cracks near the solid ironmanhole cover here.  It seems not even the rain can wash away the crime thatmust have taken place here.  ~
 D2
 (none)~
@@ -6673,10 +6673,10 @@ E
 XDDREAM~
 None~
 E
-small~
+sign~
 This fountain is out of order, sorry for the inconvenience!!   MNGT~
 E
-sign~
+small~
 This fountain is out of order, sorry for the inconvenience!!   MNGT~
 D3
 (none)~
@@ -7041,17 +7041,17 @@ E
 XDDREAM~
 None~
 E
-light~
-A small white light switch sits here in the wall waiting to be used.It is in excellent condition.~
-E
-switch~
-A small white light switch sits here in the wall waiting to be used.It is in excellent condition.~
+mirror~
+A small rubber doorstop sits here on the gray carpet trying to keep the door from making a hole into the wall.It is in excellent condition.~
 E
 doorstop~
 A small rubber doorstop sits here on the gray carpet trying to keep the door from making a hole into the wall.It is in excellent condition.~
 E
-mirror~
-A small rubber doorstop sits here on the gray carpet trying to keep the door from making a hole into the wall.It is in excellent condition.~
+switch~
+A small white light switch sits here in the wall waiting to be used.It is in excellent condition.~
+E
+light~
+A small white light switch sits here in the wall waiting to be used.It is in excellent condition.~
 D0
 (none)~
 (null)~
@@ -7101,17 +7101,17 @@ E
 XDDREAM~
 None~
 E
-mirror~
-A long mirror, with a wooden frame hangs from the wall here.It is in excellent condition.~
-E
-doorstop~
-A small rubber doorstop sits here on the gray carpet trying to keep the door from making a hole into the wall.It is in excellent condition.~
+switch~
+A small white light switch sits here in the wall waiting to be used.It is in excellent condition.~
 E
 light~
 A small white light switch sits here in the wall waiting to be used.It is in excellent condition.~
 E
-switch~
-A small white light switch sits here in the wall waiting to be used.It is in excellent condition.~
+doorstop~
+A small rubber doorstop sits here on the gray carpet trying to keep the door from making a hole into the wall.It is in excellent condition.~
+E
+mirror~
+A long mirror, with a wooden frame hangs from the wall here.It is in excellent condition.~
 D0
 (none)~
 (null)~
@@ -7161,17 +7161,17 @@ E
 XDDREAM~
 None~
 E
-light~
-A small white light switch sits here in the wall waiting to be used.It is in excellent condition.~
-E
-switch~
-A small white light switch sits here in the wall waiting to be used.It is in excellent condition.~
+mirror~
+A long mirror, with a wooden frame hangs from the wall here.It is in excellent condition.~
 E
 doorstop~
 A small rubber doorstop sits here on the gray carpet trying to keep the door from making a hole into the wall.It is in excellent condition.~
 E
-mirror~
-A long mirror, with a wooden frame hangs from the wall here.It is in excellent condition.~
+switch~
+A small white light switch sits here in the wall waiting to be used.It is in excellent condition.~
+E
+light~
+A small white light switch sits here in the wall waiting to be used.It is in excellent condition.~
 D0
 (none)~
 (null)~
@@ -7221,17 +7221,17 @@ E
 XDDREAM~
 None~
 E
-light~
-A small white light switch sits here in the wall waiting to be used.It is in excellent condition.~
-E
-switch~
-A small white light switch sits here in the wall waiting to be used.It is in excellent condition.~
+mirror~
+A long mirror, with a wooden frame hangs from the wall here.It is in excellent condition.~
 E
 doorstop~
 A small rubber doorstop sits here on the gray carpet trying to keep the door from making a hole into the wall.It is in excellent condition.~
 E
-mirror~
-A long mirror, with a wooden frame hangs from the wall here.It is in excellent condition.~
+switch~
+A small white light switch sits here in the wall waiting to be used.It is in excellent condition.~
+E
+light~
+A small white light switch sits here in the wall waiting to be used.It is in excellent condition.~
 D0
 (none)~
 (null)~
@@ -7281,17 +7281,17 @@ E
 XDDREAM~
 None~
 E
-mirror~
-A long mirror, with a wooden frame hangs from the wall here.It is in excellent condition.~
-E
-doorstop~
-(null)~
+light~
+A small white light switch sits here in the wall waiting to be used.It is in excellent condition ~
 E
 switch~
 A small white light switch sits here in the wall waiting to be used.It is in excellent condition ~
 E
-light~
-A small white light switch sits here in the wall waiting to be used.It is in excellent condition ~
+doorstop~
+(null)~
+E
+mirror~
+A long mirror, with a wooden frame hangs from the wall here.It is in excellent condition.~
 D0
 (none)~
 (null)~
@@ -7341,17 +7341,17 @@ E
 XDDREAM~
 None~
 E
-doorstop~
-A small rubber doorstop sits here on the gray carpet trying to keep the door from making a hole into the wall.It is in excellent condition.~
-E
-switch~
-A small white light switch sits here in the wall waiting to be used.It is in excellent condition.~
+mirror~
+A long mirror, with a wooden frame hangs from the wall here.It is in excellent condition.~
 E
 light~
 A small white light switch sits here in the wall waiting to be used.It is in excellent condition.~
 E
-mirror~
-A long mirror, with a wooden frame hangs from the wall here.It is in excellent condition.~
+switch~
+A small white light switch sits here in the wall waiting to be used.It is in excellent condition.~
+E
+doorstop~
+A small rubber doorstop sits here on the gray carpet trying to keep the door from making a hole into the wall.It is in excellent condition.~
 D0
 (none)~
 (null)~
@@ -8565,10 +8565,10 @@ E
 XDDREAM~
 None~
 E
-small~
+sign~
 This fountain is out of order, sorry for the inconvenience!!  MNGT ~
 E
-sign~
+small~
 This fountain is out of order, sorry for the inconvenience!!  MNGT ~
 D3
 (none)~

@@ -73,35 +73,35 @@ C 0 0 Y
 AHMVc ABCDEFGHIJK huge flesh
 A FH
 I 0
-Tr 0 will not~ emote growls something inaudible.~
-Tr 0 do you mean~ emote says, {Y'{CYou must prove yourself worthy to be called an adult by fighting me.{Y'{x~
-Tr 0 no cub~ emote grins evily, {Y'{CYou must be - otherwise you would keep your honor and fight me.{Y'{x~
-Tr 0 yes I have~ emote whispers, {Y'{CGood, now fight me and be a cub no more.{Y'{x~
-Tr 0 a pack~ emote studies you intently.~
-Tr 0 what pack~ emote studies you intently.~
-Tr 0 yes I am~ emote whispers, {Y'{CGood, now hit me and learn something about yourself today.{Y'{x~
-Tr 0 fight you~ emote whispers, {Y'{CYes, that's it! Just fight me!{Y'{x~
-Tr 0 what hunt~ emote smiles as if lost in thought.~
-Tr 0 not fight~ emote whispers, {Y'{COkay cub, just know that until you fight me as an adult you will never have respect here.{Y'{x~
-Tr 0 the hunt~ emote smiles as if lost in thought.~
-Tr 0 not ready~ emote growls, {Y'{CYou must face me, there is no other way! Will you not fight me?{Y'{x~
-Tr 0 a cub~ emote whispers, {Y'{CUntil you show you are an adult the pack will always consider you a cub.  Are you ready to fight me?{Y'{x~
-Tr 0 not sure~ emote whispers, {Y'{CAll you have to do is hit me, just once is all I ask.{Y'{x~
-Tr 0 don't know~ emote whispers, {Y'{CYou must explain yourself, are you or are you not ready to fight me?{Y'{x~
-Tr 0 not ready to fight you~ emote growls, {Y'{CIf you do not face me soon you will always be known as a cub ....{Y'{x~
-Tr 0 am ready to fight you~ emote smiles and whispers, {Y'{CGood, you've faced your fears.  Now I want you to hit me as hard as you can - it's okay you'll feel better about it once you've done it.{Y'{x~
-Tr 0 DEAD~ emote laughs with insane glee.transform human~
-Tr 0 has arrived~ emote snarls and whispers, {Y'{CAnother cub has come to challenge me?{Y'{x~
-Tr 0 challenge you~ emote whispers, {Y'{CThe reason why you live is for the hunt, don't tell me you've grown so tame you can't summon the courage to face me!  Know who you are, and fight me.{Y'{x~
-Tr 0 I am ready~ emote smiles and whispers, {Y'{CGood I can see it in your eyes, now hit me with your best shot.{Y'{x~
-Tr 0 not know~ emote whispers, {Y'{CYou must explain yourself, are you or are you not ready to fight me?{Y'{x~
-Tr 0 **base**~ **base**~
-Tr 0 your stab~ transform crinos~
-Tr 0 Your stab~ transform crinos~
-Tr 0 your pierce~ transform crinos~
-Tr 0 Your pierce~ transform crinos~
-Tr 0 leaves west.~ transform human~
 Tr 0 leaves south.~ transform human~
+Tr 0 leaves west.~ transform human~
+Tr 0 Your pierce~ transform crinos~
+Tr 0 your pierce~ transform crinos~
+Tr 0 Your stab~ transform crinos~
+Tr 0 your stab~ transform crinos~
+Tr 0 **base**~ **base**~
+Tr 0 not know~ emote whispers, {Y'{CYou must explain yourself, are you or are you not ready to fight me?{Y'{x~
+Tr 0 I am ready~ emote smiles and whispers, {Y'{CGood I can see it in your eyes, now hit me with your best shot.{Y'{x~
+Tr 0 challenge you~ emote whispers, {Y'{CThe reason why you live is for the hunt, don't tell me you've grown so tame you can't summon the courage to face me!  Know who you are, and fight me.{Y'{x~
+Tr 0 has arrived~ emote snarls and whispers, {Y'{CAnother cub has come to challenge me?{Y'{x~
+Tr 0 DEAD~ emote laughs with insane glee.transform human~
+Tr 0 am ready to fight you~ emote smiles and whispers, {Y'{CGood, you've faced your fears.  Now I want you to hit me as hard as you can - it's okay you'll feel better about it once you've done it.{Y'{x~
+Tr 0 not ready to fight you~ emote growls, {Y'{CIf you do not face me soon you will always be known as a cub ....{Y'{x~
+Tr 0 don't know~ emote whispers, {Y'{CYou must explain yourself, are you or are you not ready to fight me?{Y'{x~
+Tr 0 not sure~ emote whispers, {Y'{CAll you have to do is hit me, just once is all I ask.{Y'{x~
+Tr 0 a cub~ emote whispers, {Y'{CUntil you show you are an adult the pack will always consider you a cub.  Are you ready to fight me?{Y'{x~
+Tr 0 not ready~ emote growls, {Y'{CYou must face me, there is no other way! Will you not fight me?{Y'{x~
+Tr 0 the hunt~ emote smiles as if lost in thought.~
+Tr 0 not fight~ emote whispers, {Y'{COkay cub, just know that until you fight me as an adult you will never have respect here.{Y'{x~
+Tr 0 what hunt~ emote smiles as if lost in thought.~
+Tr 0 fight you~ emote whispers, {Y'{CYes, that's it! Just fight me!{Y'{x~
+Tr 0 yes I am~ emote whispers, {Y'{CGood, now hit me and learn something about yourself today.{Y'{x~
+Tr 0 what pack~ emote studies you intently.~
+Tr 0 a pack~ emote studies you intently.~
+Tr 0 yes I have~ emote whispers, {Y'{CGood, now fight me and be a cub no more.{Y'{x~
+Tr 0 no cub~ emote grins evily, {Y'{CYou must be - otherwise you would keep your honor and fight me.{Y'{x~
+Tr 0 do you mean~ emote says, {Y'{CYou must prove yourself worthy to be called an adult by fighting me.{Y'{x~
+Tr 0 will not~ emote growls something inaudible.~
 #8326
 guardian1 $f $l~
 $f $l~

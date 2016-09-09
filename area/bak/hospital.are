@@ -4668,14 +4668,14 @@ E
 XDDREAM~
 None~
 E
-sign~
-{YLab A Control Room
-{yResearch Staff Only
-~
-E
 panel~
 {rOperation In progress
 {GLab Not In Use
+~
+E
+sign~
+{YLab A Control Room
+{yResearch Staff Only
 ~
 D0
 (none)~
@@ -4741,14 +4741,14 @@ E
 XDDREAM~
 None~
 E
-sign~
-{YLab B Control Room
-{yResearch Staff Only
-~
-E
 panel~
 {ROperation In Progress
 {gLab Not In Use
+~
+E
+sign~
+{YLab B Control Room
+{yResearch Staff Only
 ~
 D1
 (none)~

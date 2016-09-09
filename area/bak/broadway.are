@@ -2433,7 +2433,15 @@ M 0 H 100
 S
 #7047
 Within a Short Alleyway~
-Branching off the main street, this alley forms a narrow "U" between thebordering buildings.  While not quite as bright as Broadway due to theshadows cast from the structures to the north and south, enough light existsto make out the relative cleanliness of the alleyway.  The pavement featuresa few covered potholes, but otherwise is in remarkable condition.  A seriesof concrete posts on the alley's eastern end restricts traffic topedestrians.  Broadway is clearly visible to the east, while the alley comesto a halt just to the west.  ~
+Branching off the main street, this alley forms a narrow "U" between
+thebordering buildings.  While not quite as bright as Broadway due to
+theshadows cast from the structures to the north and south, enough light
+existsto make out the relative cleanliness of the alleyway.  The pavement
+featuresa few covered potholes, but otherwise is in remarkable condition.  A
+seriesof concrete posts on the alley's eastern end restricts traffic
+topedestrians.  Broadway is clearly visible to the east, while the alley
+comesto a halt just to the west.  
+~
 0 0 0
 E
 XNUMB1~
@@ -2451,10 +2459,6 @@ D1
 (none)~
 (null)~
 0 0 7060
-D3
-(none)~
-(null)~
-0 0 7001
 M 0 H 100
 S
 #7048

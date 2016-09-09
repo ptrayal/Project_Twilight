@@ -12,8 +12,8 @@ End
 
 #MOBILES
 #8280
-cat cheshire~
 cheshire cat~
+The Cheshire Cat~
 A cheshire cat stands here watching with it's large eyes.
 ~
 A very plump, yet happy cat stands here looking at you with bright,
@@ -27,13 +27,23 @@ FH 0 0 0
 AGV ACDEFHJKQUV medium flesh
 A 0
 I 0
-Tr 0 has arrived~ purr~
+Tr 0 stumbles a little~ say Welcome to Project Twilight.
+say If you are confused or need help, type tips for help.
+~
+Tr 0 has arrived~ purr 
+say Why don't you look sign?
+~
 Tr 0 **base**~ **do not delete**~
 #8281
 dr. greenthumb green thumb doc DR doctor~
 Dr. Greenthumb~
 Dr. Greenthumb stands here waiting patiently for something.~
-This man, identified by the nametag on his white lab coat - doesn't looktoo professional for some reason.  Maybe it's the Timberlands he's wearingon his feet - or maybe it's the loose Ruff Ryder jeans that hang down low onhis hips showing his plaid boxers.  Whatever it is, he claims to be a doctor- what could he be selling?  ~
+This man, identified by the nametag on his white lab coat - doesn't look
+too professional for some reason.  Maybe it's the Timberlands he's wearing
+on his feet - or maybe it's the loose Ruff Ryder jeans that hang down low on
+his hips showing his plaid boxers.  Whatever it is, he claims to be a doctor
+- what could he be selling?  
+~
 human~
 ABG 0 50 0 0 0 punch
 0 A 0 0
@@ -70,6 +80,9 @@ For a more in-depth tour of the PT MUD tutorial, why not try looking at
 all of the highlighted words in the room descriptions.  Also, each
 highlighted word has a help for it.  Thanks for stopping in, and from all of
 us here at Project Twilight, we hope you enjoy your stay.  
+
+If you need more help as you are going along, use the tip command to see
+additional tips.  
 ~
 plastic~
 13 AM 0
@@ -144,8 +157,7 @@ Welcome to Project Twilight, also affectionately called: PT.  This school
 has been designed preferably for newbies - so if this doesn't apply to you
 feel free to enter the game at any time.  This place is one of the few
 actual RP MUD's that is more on the side of RP than hack and slash, so it
-makes sense to cover RP commands first.  Oh, and feel free to type'color' so
-you can enjoy your experience here even more.  
+makes sense to cover RP commands first.  
 ~
 0 0 1
 E
@@ -171,7 +183,17 @@ M 0 H 100
 S
 #8281
 Inside the PT MUD Tutorial~
-Since role playing is an essential part of PT there of course are manycommands based around it to give a much more wholesome environment.  Hereare some of them now that you can feel free to try out on your own.  Tobegin role playing you must list yourself on the role playing list with'{Crpavail{g topic' where topic is what theme you want to rp in. '{Crpwho{g', and '{Cwhorp{g' lists who is currently active on that list.  Toget to anyone on that list simply type '{Crpjoin{g name', and of coursedon't forget to insert yourself into '{Crpmode{g' so that the necessities offood and water don't interfere with your game play.  {x {YNote: Try lookingat the {Chighlighted{Y words to see a further description.  {x ~
+Since role playing is an essential part of PT there of course are many
+commands based around it to give a much more wholesome environment.  Here
+are some of them now that you can feel free to try out on your own.  To
+begin role playing you must list yourself on the role playing list with
+'rpavail topic' where topic is what theme you want to rp in.  'rpwho', and
+'whorp' lists who is currently active on that list.  To get to anyone on
+that list simply type 'rpjoin name', and of course don't forget to insert
+yourself into 'rpmode' so that the necessities of food and water don't
+interfere with your game play.  Note: Try looking at the highlighted words
+to see a further description.  
+~
 0 8 0
 E
 XNUMB1~
@@ -212,7 +234,15 @@ M 0 H 100
 S
 #8282
 Inside the PT MUD Tutorial~
-Well now that we are able to rp you may have noticed all of the socialsare ooc.  That just leaves the '{Cemote{g', right?  Well, we have expandedthat a bit.  Using a '{Cpmote{g' will allow you to use a persons name in theaction and to that character it looks personalized.  The '{Cdmote{g' commandwill allow for a players to use a scene-setting statement, while'{Cdpmote{g' is a combination of a scene-setting statement, and personalizedlike '{Cpmote{g'.  {x {YNote: Try looking at the {Chighlighted{Y words tosee a further description.  {x ~
+Well now that we are able to rp you may have noticed all of the
+socialsare ooc.  That just leaves the '{Cemote{g', right?  Well, we have
+expandedthat a bit.  Using a '{Cpmote{g' will allow you to use a persons
+name in theaction and to that character it looks personalized.  The
+'{Cdmote{g' commandwill allow for a players to use a scene-setting
+statement, while'{Cdpmote{g' is a combination of a scene-setting statement,
+and personalizedlike '{Cpmote{g'.  {x {YNote: Try looking at the
+{Chighlighted{Y words tosee a further description.  {x 
+~
 0 12 0
 E
 XNUMB1~
@@ -247,7 +277,12 @@ M 0 H 100
 S
 #8283
 Inside the PT MUD Tutorial~
-Next comes extra descriptions: '{Cedesc{g'.  This command simply is usedto supplement your main description.  Taking actions in the game while in rpcan be as easy as rolling the dice with the '{Cdroll{g' command.  {x {YNote:Try looking at the {Chighlighted{Y words to see a further description.  {x ~
+Next comes extra descriptions: '{Cedesc{g'.  This command simply is
+usedto supplement your main description.  Taking actions in the game while
+in rpcan be as easy as rolling the dice with the '{Cdroll{g' command.  {x
+{YNote:Try looking at the {Chighlighted{Y words to see a further
+description.  {x 
+~
 0 8 0
 E
 XNUMB1~
@@ -279,7 +314,15 @@ M 0 H 100
 S
 #8284
 Inside the PT MUD Tutorial~
-Part of role play can be reflected in the type of {C'job{g' a person has.It's not just working for the man - it's who the man is you're working for. To get a '{Cjob{g' simply find a person with a '{Cjob{g' or go to a storeand 'job {Capply{g "Dr.  Green" where 'Dr.  Green' is the person you are towhom you are applying.  Now to perform your '{Cjob{g' you'll need lots of'job {Cenergy{g'.  The only way to recoup that is sleeping or resting.  Whynot try to get a job right now?  {x {YNote: Try looking at the{Chighlighted{Y words to see a further description.  {x ~
+Part of role play can be reflected in the type of {C'job{g' a person has.
+It's not just working for the man - it's who the man is you're working for. 
+To get a '{Cjob{g' simply find a person with a '{Cjob{g' or go to a storeand
+'job {Capply{g "Dr.  Green" where 'Dr.  Green' is the person you are towhom
+you are applying.  Now to perform your '{Cjob{g' you'll need lots of'job
+{Cenergy{g'.  The only way to recoup that is sleeping or resting.  Whynot
+try to get a job right now?  {x {YNote: Try looking at the{Chighlighted{Y
+words to see a further description.  {x 
+~
 0 8 0
 E
 XNUMB1~
@@ -314,7 +357,16 @@ M 0 H 100
 S
 #8285
 Inside the PT MUD Tutorial~
-As was mentioned in the last room job energy can be seen in the{Cprompt{g, but that's not the only thing the {Cprompt{g can show.  Itcan also be a useful tool for many other things - like knowing what timeit is! You can also add {Ccolor{gs to your {Cprompt{g!  Now how aboutchannels? There's {Csay{g,{C ooc{g,{C think{g,{C telephone{g,{Cyell{g,{C >{g, and {Chelpline{g.  These can all be monitored with thesingle command of {Ccon{g which lists them all out for you and lists thestatus of them. Oh, and it also shows your prompt status!  {x {YNote:You get the general idea right? Keep looking at these {Cwords{g.  {x~
+As was mentioned in the last room job energy can be seen in
+the{Cprompt{g, but that's not the only thing the {Cprompt{g can show.  Itcan
+also be a useful tool for many other things - like knowing what timeit is! 
+You can also add {Ccolor{gs to your {Cprompt{g!  Now how aboutchannels? 
+There's {Csay{g, {C ooc{g, {C think{g, {C telephone{g, {Cyell{g, {C >{g, and
+{Chelpline{g.  These can all be monitored with thesingle command of {Ccon{g
+which lists them all out for you and lists thestatus of them.  Oh, and it
+also shows your prompt status!  {x {YNote:You get the general idea right? 
+Keep looking at these {Cwords{g.  {x
+~
 0 8 0
 E
 XNUMB1~
@@ -718,7 +770,21 @@ M 0 H 100
 S
 #8293
 Inside the PT MUD Tutorial~
-You've always known you were a little different, and you still may nottotally realize just how different until the first time it happens to you. When your bones begin to grind and crunch, your muscles and sinews snappingand reforming within your body as if it has a mind of it's own.  Your first{Ctransform{gation can be difficult and even dangerous - but it is one thatyou will most likely never forget.  The raw {Cpower{g urging you to submitto the {Crage{g - both a tool and an enemy.  Then there's the first time yourealize there are others like you - and they show you how to {Cuwalk{gsafely into the {Cumbra{g.  That one day you met your {Ctotem{g was the dayyou gained {Cgift{gs to protect {CGaia{g.  If everything happens for apurpose what purpose will you serve?  The {Ctribes{g available to{Cwerewolves{g are: {CBoneGnawers{g, {CGlasswalkers{g, {CSilentStriders{g,and {CSilverFangs{g.  {x ~
+You've always known you were a little different, and you still may
+nottotally realize just how different until the first time it happens to
+you.  When your bones begin to grind and crunch, your muscles and sinews
+snappingand reforming within your body as if it has a mind of it's own. 
+Your first{Ctransform{gation can be difficult and even dangerous - but it is
+one thatyou will most likely never forget.  The raw {Cpower{g urging you to
+submitto the {Crage{g - both a tool and an enemy.  Then there's the first
+time yourealize there are others like you - and they show you how to
+{Cuwalk{gsafely into the {Cumbra{g.  That one day you met your {Ctotem{g was
+the dayyou gained {Cgift{gs to protect {CGaia{g.  If everything happens for
+apurpose what purpose will you serve?  The {Ctribes{g available
+to{Cwerewolves{g are: {CBoneGnawers{g, {CGlasswalkers{g, {CSilentStriders{g,
+and {CSilverFangs{g.  {x 
+ 
+~
 0 8 0
 E
 XNUMB1~

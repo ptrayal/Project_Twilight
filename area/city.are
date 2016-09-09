@@ -75,15 +75,15 @@ ACG 0 75 0 0 0 pound
 AHMV ABCDEFGHIJK medium flesh
 A 0
 I 0
-M SPEECH 10004 job~
-M SPEECH 10003 garou~
-M SPEECH 10003 werewolf~
-M GREET 10000 100~
-M SPEECH 10001 changeling~
-M SPEECH 10001 fae~
-M SPEECH 10001 faerie~
-M SPEECH 10002 vampire~
 M SPEECH 10002 kindred~
+M SPEECH 10002 vampire~
+M SPEECH 10001 faerie~
+M SPEECH 10001 fae~
+M SPEECH 10001 changeling~
+M GREET 10000 100~
+M SPEECH 10003 werewolf~
+M SPEECH 10003 garou~
+M SPEECH 10004 job~
 #0
 
 
@@ -1101,25 +1101,21 @@ E
 XDDREAM~
 None~
 E
-garbage~
+ladder~
+On closer inspection, the ladder looks new and it looks rather well usedfor climbing over the high mounds of garbage.  ~
+E
+trash~
 Searching the piles of rubbish and garbage that litter the surroudingarea to the pond you spot a conveniently placed step {Wladder{x that leans upagainst the one of the larger piles to the north of the pond.  ~
 E
 rubbish~
 Searching the piles of rubbish and garbage that litter the surroudingarea to the pond you spot a conveniently placed step {Wladder{x that leans upagainst the one of the larger piles to the north of the pond.  ~
 E
-trash~
+garbage~
 Searching the piles of rubbish and garbage that litter the surroudingarea to the pond you spot a conveniently placed step {Wladder{x that leans upagainst the one of the larger piles to the north of the pond.  ~
-E
-ladder~
-On closer inspection, the ladder looks new and it looks rather well usedfor climbing over the high mounds of garbage.  ~
 D1
 (none)~
 (null)~
 0 -1 10007
-D5
-Murky, smelly and foul.  The water of this pond oozesmore than flows, smells like bad egg and probably glowsin the dark.  You do notice that there is a strangelight under there, and some kind of movement?~
-pond~
-ABCIMR 0 6502
 M 0 H 100
 S
 #10012
@@ -2627,7 +2623,6 @@ S
 
 #RESETS
 D 0 10417 2 3
-D 0 10011 5 135431
 M 1 5 48 10000 1
 E 0 10000 0 17
 O 0 10004 0 10000
