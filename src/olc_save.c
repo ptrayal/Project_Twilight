@@ -1321,10 +1321,10 @@ void fwrite_votes ()
 	PACK_DATA *pack;
 
 	closeReserve();
-	if ( !( fp = fopen( "votes.txt", "w" ) ) )
+	if ( !( fp = fopen( VOTES_FILE, "w" ) ) )
 	{
 		log_string(LOG_BUG, "Write_votes: fopen");
-		perror( "votes.txt" );
+		perror( VOTES_FILE);
 	}
 
 	for(i=0; i<MAX_OFFICES; i++)

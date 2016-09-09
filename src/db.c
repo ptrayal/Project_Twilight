@@ -3054,7 +3054,7 @@ void load_votes(void)
 
 	i=0;j=0;
 
-	if ( ( fp = fopen( "votes.txt", "r" ) ) == NULL )
+	if ( ( fp = fopen( VOTES_FILE, "r" ) ) == NULL )
 	{
 	log_string(LOG_BUG, "Load_votes: file open fail.");
 	return;

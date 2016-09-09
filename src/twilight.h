@@ -3045,17 +3045,18 @@ char *	crypt		args( ( const char *key, const char *salt ) );
 #define NULL_FILE   "/dev/null"     /* To reserve one stream */
 #endif
 
-#define AREA_LIST		"area.lst"				/* List of areas*/
-#define ORG_LIST		"org.lst"				/* List of orgs*/
-#define BUG_FILE		"bugs.txt"				/* For 'bug' and bug()*/
-#define SHUTDOWN_FILE	"shutdown.txt"			/* For 'shutdown'*/
+#define AREA_LIST		"area.lst"				/* List of areas */
+#define ORG_LIST		"org.lst"				/* List of orgs */
+#define BUG_FILE		"../data/bugs.txt"				/* For 'bug' and bug() */
+#define SHUTDOWN_FILE	"shutdown.txt"			/* For 'shutdown' */
 #define BAN_FILE		"ban.txt"				/* For 'ban' */
-#define NOTE_FILE		"../data/notes.txt"		/* For 'notes'*/
-#define BG_FILE			"../data/bg.txt"		/* For 'backgrounds'*/
-#define KNOW_FILE		"../data/know.txt"		/* For 'backgrounds'*/
-#define NEWS_FILE		"../data/news.txt"		/* For 'articles'*/
-#define PAPER_FILE		"../data/paper.txt"		/* For 'newspapers'*/
-#define STOCK_FILE		"../data/stock.txt"		/* For 'stocks'*/
+#define NOTE_FILE		"../data/notes.txt"		/* For 'notes' */
+#define BG_FILE			"../data/bg.txt"		/* For 'backgrounds' */
+#define KNOW_FILE		"../data/know.txt"		/* For 'backgrounds' */
+#define NEWS_FILE		"../data/news.txt"		/* For 'articles' */
+#define PAPER_FILE		"../data/paper.txt"		/* For 'newspapers' */
+#define STOCK_FILE		"../data/stock.txt"		/* For 'stocks' */
+#define VOTES_FILE      "../data/votes.txt"     /* for 'votes' */
 
 #define GLOBAL_XML_IN	"glob"			/* RSS global activity log */
 #define GLOBAL_XML_OUT	"../../public_html/global.xml" /* RSS output for globals */
