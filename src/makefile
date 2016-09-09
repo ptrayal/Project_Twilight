@@ -27,14 +27,18 @@ L_NRM   = \x1B[0;00m
 CC      = gcc
 PROF    = -ggdb3 #-Werror -pedantic -DASSERT
 NOCRYPT =
-C_FLAGS =  -Wall -g $(PROF) #$(NOCRYPT)
+C_FLAGS =  -Wall -g $(PROF) -I$(INCLUDE) #$(NOCRYPT)
 L_FLAGS =  $(PROF)
 
+# Source Files
 C_FILES	= ${wildcard *.c}
 
 O_FILES = $(patsubst %.c, %.o, ${C_FILES})
 
 O_TESTFILES = $(patsubst %.c, %.o, ${C_FILES})
+
+# Include Files
+INCLUDE	= include
 
 pt: $(O_FILES)
 	rm -f project
@@ -42,10 +46,10 @@ pt: $(O_FILES)
 	$(CC) $(L_FLAGS) -o project $(O_FILES) -lm
 	@if ! test -f $(BVERSION_FILE); then echo 0 > $(BVERSION_FILE); fi
 	@echo $$(($$(cat $(BVERSION_FILE)) + 1)) > $(BVERSION_FILE)
-	@echo "#ifndef __Version_H" > version.h
-	@echo "#define __Version_h" >> version.h
-	@echo '#define mudVersion "1.$(shell cat $(MJVERSION_FILE)).$(shell cat $(MVERSION_FILE)).$(shell cat $(BVERSION_FILE))"' >> version.h
-	@echo "#endif" >> version.h
+	@echo "#ifndef __Version_H" > ./include/version.h
+	@echo "#define __Version_h" >> ./include/version.h
+	@echo '#define mudVersion "1.$(shell cat $(MJVERSION_FILE)).$(shell cat $(MVERSION_FILE)).$(shell cat $(BVERSION_FILE))"' >> ./include/version.h
+	@echo "#endif" >> ./include/version.h
 	@$(ECHOCMD) -e "$(L_WHITE)Revision control completed!$(L_NRM)"
 	
 
@@ -55,10 +59,10 @@ ptdev: $(O_TESTFILES)
 	$(CC) $(C_FLAGS) -o projectdev $(O_TESTFILES) #-lm
 	@if ! test -f $(BVERSION_FILE); then echo 0 > $(BVERSION_FILE); fi
 	@echo $$(($$(cat $(BVERSION_FILE)) + 1)) > $(BVERSION_FILE)
-	@echo "#ifndef __Version_H" > version.h
-	@echo "#define __Version_h" >> version.h
-	@echo '#define mudVersion "1.$(shell cat $(MJVERSION_FILE)).$(shell cat $(MVERSION_FILE)).$(shell cat $(BVERSION_FILE))"' >> version.h
-	@echo "#endif" >> version.h
+	@echo "#ifndef __Version_H" > ./include/version.h
+	@echo "#define __Version_h" >> ./include/version.h
+	@echo '#define mudVersion "1.$(shell cat $(MJVERSION_FILE)).$(shell cat $(MVERSION_FILE)).$(shell cat $(BVERSION_FILE))"' >> ./include/version.h
+	@echo "#endif" >> ./include/version.h
 	@$(ECHOCMD) -e "$(L_WHITE)Revision control completed!$(L_NRM)"
 
 .c.o: twilight.h
@@ -85,9 +89,9 @@ wipe:
 ####################################################################################################
 # VERSION SUPPORT: allow us to control our revisions of the executable being built.
 # name of our version file
-BVERSION_FILE = .bversion
-MVERSION_FILE = .mversion
-MJVERSION_FILE = .mjversion
+BVERSION_FILE = ./include/.bversion
+MVERSION_FILE = ./include/.mversion
+MJVERSION_FILE = ./include/.mjversion
 
 # Ensure we are built properly with the correct data
 BUILD_DATE = $(shell date +'%Y%m%d')
@@ -102,10 +106,10 @@ COMPILE_FLAGS += -DBUILD_DATE=$(BUILD_DATE) -DBUILD_NUM=$(BUILD_NUM)
 bversion:
 	@if ! test -f $(BVERSION_FILE); then echo 0 > $(BVERSION_FILE); fi
 	@echo $$(($$(cat $(BVERSION_FILE)) + 1)) > $(BVERSION_FILE)
-	@echo "#ifndef __Version_H" > version.h
-	@echo "#define __Version_h" >> version.h
-	@echo '#define mudVersion "1.$(shell cat $(MJVERSION_FILE)).$(shell cat $(MVERSION_FILE)).$(shell cat $(BVERSION_FILE))"' >> version.h
-	@echo "#endif" >> version.h
+	@echo "#ifndef __Version_H" > ./include/version.h
+	@echo "#define __Version_h" >> ./include/version.h
+	@echo '#define mudVersion "1.$(shell cat $(MJVERSION_FILE)).$(shell cat $(MVERSION_FILE)).$(shell cat $(BVERSION_FILE))"' >> ./include/version.h
+	@echo "#endif" >> ./include/version.h
 	@$(ECHOCMD) -e "$(L_WHITE)Revision control completed!$(L_NRM)"
 
 #####################################################################################################
@@ -116,10 +120,10 @@ bversion:
 mversion:
 	@if ! test -f $(MVERSION_FILE); then echo 0 > $(MVERSION_FILE); fi
 	@echo $$(($$(cat $(MVERSION_FILE)) + 1)) > $(MVERSION_FILE)
-	@echo "#ifndef __Version_H" > version.h
-	@echo "#define __Version_h" >> version.h
-	@echo '#define mudVersion "1.$(shell cat $(MJVERSION_FILE)).$(shell cat $(MVERSION_FILE)).$(shell cat $(BVERSION_FILE))"' >> version.h
-	@echo "#endif" >> version.h
+	@echo "#ifndef __Version_H" > ./include/version.h
+	@echo "#define __Version_h" >> ./include/version.h
+	@echo '#define mudVersion "1.$(shell cat $(MJVERSION_FILE)).$(shell cat $(MVERSION_FILE)).$(shell cat $(BVERSION_FILE))"' >> ./include/version.h
+	@echo "#endif" >> ./include/version.h
 	@$(ECHOCMD) -e "$(L_WHITE)Revision control completed!$(L_NRM)"
 
 #####################################################################################################
@@ -130,10 +134,10 @@ mversion:
 mjversion:
 	@if ! test -f $(MJVERSION_FILE); then echo 0 > $(MJVERSION_FILE); fi
 	@echo $$(($$(cat $(MJVERSION_FILE)) + 1)) > $(MJVERSION_FILE)
-	@echo "#ifndef __Version_H" > version.h
-	@echo "#define __Version_h" >> version.h
-	@echo '#define mudVersion "1.$(shell cat $(MJVERSION_FILE)).$(shell cat $(MVERSION_FILE)).$(shell cat $(BVERSION_FILE))"' >> version.h
-	@echo "#endif" >> version.h
+	@echo "#ifndef __Version_H" > ./include/version.h
+	@echo "#define __Version_h" >> ./include/version.h
+	@echo '#define mudVersion "1.$(shell cat $(MJVERSION_FILE)).$(shell cat $(MVERSION_FILE)).$(shell cat $(BVERSION_FILE))"' >> ./include/version.h
+	@echo "#endif" >> ./include/version.h
 	@$(ECHOCMD) -e "$(L_WHITE)Revision control completed!$(L_NRM)"
 
 #####################################################################################################
