@@ -15,7 +15,6 @@
  *  around, comes around.                                                  *
  ***************************************************************************/
 
-/* include "protocol.h" */
 #include <unistd.h>
 #include <assert.h>
 #include <stdlib.h>
@@ -77,7 +76,7 @@ typedef unsigned char			bool;
 #include <stdio.h>
 #include <string.h>
 #include "abilities.h"
-
+#include "gsn.h"
 #include "protocol.h"
 
 /*
@@ -158,7 +157,7 @@ typedef	int  BLD_FUN	args( ( CHAR_DATA *ch, char *argument, int type,
  * Increase the max'es if you add more of something.
  * Adjust the pulse numbers to suit yourself.
  */
-#define MUD_PORT				9085
+#define MUD_PORT				9080
 /* #define MAX_SOCIALS		  256 */
 #define MAX_SKILL				150
 #define MAX_ABIL				38
@@ -2622,7 +2621,6 @@ struct	skill_type
     char *	msg_obj;		/* Wear off message for obects	*/
 };
 
-#include "gsn.h"
 
 /* Abilities: GENERAL (extra one fer mobs) */
 #define GENERAL			0
