@@ -1,17 +1,6 @@
-#
-# I am not at all against seeing something that looks good and then using the concept, so here we go.
-# The makefile is getting a make-over to try and help things out.
-
-#####
-## ## Compile our game engine for our new mud
-## ## Force the muds development forward!
-#####
-
-####################################################################################################
-# Grab our u-name for giggles; used later on to detect possible support
-# for the game engine
-UNAME = $(shell uname -s)
-####################################################################################################
+#####################################################################################
+#                    Project Twilight MUD Powered by ROM 2.4                        #
+#####################################################################################
 
 ECHOCMD = /bin/echo
 
@@ -24,11 +13,20 @@ L_CYAN  = \x1B[1;36m
 L_WHITE = \x1B[1;37m
 L_NRM   = \x1B[0;00m
 
-CC      = gcc
-PROF    = -ggdb3 #-Werror -pedantic -DASSERT
-NOCRYPT =
-C_FLAGS =  -Wall -g $(PROF) -I$(INCLUDE) #$(NOCRYPT)
-L_FLAGS =  $(PROF)
+#####################################################################################
+# COMPILER SPECIFICS
+COMPILER		= gcc
+
+#####################################################################################
+# FLAGS and LIBRARIES
+
+# Old Profiler
+# PROFILER      	= -ggdb3 #-Werror -pedantic -DASSERT
+# New Profiler
+PROFILER		= -O -g -ggdb  -Wall  -funroll-loops -fcaller-saves -ffast-math
+NOCRYPT			=
+C_FLAGS			=  -Wall -g $(PROFILER) -I$(INCLUDE) #$(NOCRYPT)
+LIBRARY_FLAGS	=  $(PROFILER)
 
 # Source Files
 C_FILES	= ${wildcard *.c}
@@ -37,26 +35,30 @@ O_FILES = $(patsubst %.c, %.o, ${C_FILES})
 
 O_TESTFILES = $(patsubst %.c, %.o, ${C_FILES})
 
-# Include Files
+#####################################################################################
+# Engine
+ENGINE	= project
+
+# Directories
 INCLUDE	= include
 
 pt: $(O_FILES)
-	rm -f project
-	rm -f project.exe
-	$(CC) $(L_FLAGS) -o project $(O_FILES) -lm
-	@if ! test -f $(BVERSION_FILE); then echo 0 > $(BVERSION_FILE); fi
-	@echo $$(($$(cat $(BVERSION_FILE)) + 1)) > $(BVERSION_FILE)
-	@echo "#ifndef __Version_H" > ./include/version.h
-	@echo "#define __Version_h" >> ./include/version.h
-	@echo '#define mudVersion "1.$(shell cat $(MJVERSION_FILE)).$(shell cat $(MVERSION_FILE)).$(shell cat $(BVERSION_FILE))"' >> ./include/version.h
-	@echo "#endif" >> ./include/version.h
+	rm -f $(ENGINE)
+	rm -f $(ENGINE).exe
+	$(COMPILER) $(LIBRARY_FLAGS) -o $(ENGINE) $(O_FILES) -lm
+	# @if ! test -f $(BVERSION_FILE); then echo 0 > $(BVERSION_FILE); fi
+	# @$(ECHOCMD) -e $$(($$(cat $(BVERSION_FILE)) + 1)) > $(BVERSION_FILE)
+	# @$(ECHOCMD) -e "#ifndef __Version_H" > ./include/version.h
+	# @$(ECHOCMD) -e "#define __Version_h" >> ./include/version.h
+	# @$(ECHOCMD) -e '#define mudVersion "1.$(shell cat $(MJVERSION_FILE)).$(shell cat $(MVERSION_FILE)).$(shell cat $(BVERSION_FILE))"' >> ./include/version.h
+	# @$(ECHOCMD) -e "#endif" >> ./include/version.h
 	@$(ECHOCMD) -e "$(L_WHITE)Revision control completed!$(L_NRM)"
 	
 
 ptdev: $(O_TESTFILES)
 	rm -f projectdev
 	rm -f projectdev.exe
-	$(CC) $(C_FLAGS) -o projectdev $(O_TESTFILES) #-lm
+	$(COMPILER) $(C_FLAGS) -o projectdev $(O_TESTFILES) #-lm
 	@if ! test -f $(BVERSION_FILE); then echo 0 > $(BVERSION_FILE); fi
 	@echo $$(($$(cat $(BVERSION_FILE)) + 1)) > $(BVERSION_FILE)
 	@echo "#ifndef __Version_H" > ./include/version.h
@@ -67,7 +69,7 @@ ptdev: $(O_TESTFILES)
 
 .c.o: twilight.h
 	@$(ECHOCMD) -e "[$(L_WHITE)`date +%T`$(L_NRM)] Compiling $< ..."
-	@$(CC) -c $(C_FLAGS) $<
+	@$(COMPILER) -c $(C_FLAGS) $<
 
 ####################################################################################################
 # clean out our folder of any/all un-necessary files allowing us to ensure our directory is clean.
@@ -79,8 +81,8 @@ clean:
 ####################################################################################################
 # Wipes the directory clean of .o files and the executibles.  Helps ensure a clean directory.
 wipe:
-	@rm -f *.o project
-	@rm -f project.exe
+	@rm -f *.o $(ENGINE)
+	@rm -f $(ENGINE).exe
 	@rm -f projectdev
 	@rm -f projectdev.exe
 	@$(ECHOCMD) -e "$(L_RED)Project Twilight is wiped.$(L_NRM)"
@@ -142,4 +144,10 @@ mjversion:
 
 #####################################################################################################
 
-# valgrind -v --tool=memcheck --leak-check=full --show-reachable=yes --demangle=yes --db-attach=yes --num-callers=10 --track-origins=yes --track-fds=yes ../src/project -v
+# valgrind -v --tool=memcheck --leak-check=full --show-reachable=yes --demangle=yes --db-attach=yes --num-callers=10 --track-origins=yes --track-fds=yes ../src/$(ENGINE) -v
+
+#####################################################################################
+# Grab our u-name for giggles; used later on to detect possible support
+# for the game engine
+UNAME = $(shell uname -s)
+#####################################################################################
