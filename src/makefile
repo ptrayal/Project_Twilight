@@ -19,7 +19,11 @@ COMPILER		= gcc
 
 #####################################################################################
 # FLAGS and LIBRARIES
-PROFILER      	= -ggdb3 #-Werror -pedantic -DASSERT
+
+# Old Profiler
+# PROFILER      	= -ggdb3 #-Werror -pedantic -DASSERT
+# New Profiler
+PROFILER		= -O -g -ggdb  -Wall  -funroll-loops -fcaller-saves -ffast-math
 NOCRYPT			=
 C_FLAGS			=  -Wall -g $(PROFILER) -I$(INCLUDE) #$(NOCRYPT)
 LIBRARY_FLAGS	=  $(PROFILER)
