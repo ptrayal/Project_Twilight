@@ -1,13 +1,13 @@
 Name  Alterra Health~
 Tick  alh~
 Last_Change  1473647926
-Stock_Price  514
+Stock_Price  526
 Stock_Phase  1
-UporDown  0
+UporDown  1
 Name  Bank of America~
 Tick  bac~
 Last_Change  1473647926
-Stock_Price  351
+Stock_Price  341
 Stock_Phase  1
 UporDown  -1
 Name  Microsoft~
@@ -15,16 +15,16 @@ Tick  msc~
 Last_Change  1473647926
 Stock_Price  1219
 Stock_Phase  1
-UporDown  1
+UporDown  -1
 Name  Purrena Animal Foods~
 Tick  pur~
 Last_Change  1473647926
-Stock_Price  1399
+Stock_Price  1382
 Stock_Phase  1
 UporDown  0
 Name  Pentex~
 Tick  ptx~
 Last_Change  1473647926
-Stock_Price  2543
+Stock_Price  2558
 Stock_Phase  1
-UporDown  0
+UporDown  -1
