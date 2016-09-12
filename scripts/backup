@@ -1,8 +1,8 @@
 #!/bin/csh
 
-cd ~/ptmud/src
+cd ~/Project_Twilight/src
 make wipe
-cd ~/ptmud/area
+cd ~/Project_Twilight/area
 rm core
 cd ~
 
@@ -13,27 +13,27 @@ cd ~
 	@ index++
     end
 
-tar -cvf player-`date "+%d_%b_%Y_%H_%M"`.tar ptmud/player/
-gzip player-`date "+%d_%b_%Y_%H_%M"`.tar
-mv player-`date "+%d_%b_%Y_%H_%M"`.tar.gz player-`date "+%d_%b_%Y_%H_%M"`.tgz
-chmod og-rwx player-`date "+%d_%b_%Y_%H_%M"`.tgz
+tar -cvf Project_Twilight-player-`date "+%d_%b_%Y_%H_%M"`.tar Project_Twilight/player/
+gzip Project_Twilight-player-`date "+%d_%b_%Y_%H_%M"`.tar
+mv Project_Twilight-player-`date "+%d_%b_%Y_%H_%M"`.tar.gz Project_Twilight-player-`date "+%d_%b_%Y_%H_%M"`.tgz
+chmod og-rwx Project_Twilight-player-`date "+%d_%b_%Y_%H_%M"`.tgz
 
-tar -cvf area-`date "+%d_%b_%Y_%H_%M"`.tar ptmud/area/
-gzip area-`date "+%d_%b_%Y_%H_%M"`.tar
-mv area-`date "+%d_%b_%Y_%H_%M"`.tar.gz area-`date "+%d_%b_%Y_%H_%M"`.tgz
-chmod og-rwx area-`date "+%d_%b_%Y_%H_%M"`.tgz
+tar -cvf Project_Twilight-area-`date "+%d_%b_%Y_%H_%M"`.tar Project_Twilight/area/
+gzip Project_Twilight-area-`date "+%d_%b_%Y_%H_%M"`.tar
+mv Project_Twilight-area-`date "+%d_%b_%Y_%H_%M"`.tar.gz Project_Twilight-area-`date "+%d_%b_%Y_%H_%M"`.tgz
+chmod og-rwx Project_Twilight-area-`date "+%d_%b_%Y_%H_%M"`.tgz
 
-tar -cvf src-`date "+%d_%b_%Y_%H_%M"`.tar ptmud/src/
-gzip src-`date "+%d_%b_%Y_%H_%M"`.tar
-mv src-`date "+%d_%b_%Y_%H_%M"`.tar.gz SRC-`date "+%d_%b_%Y_%H_%M"`.tgz
-chmod og-rwx SRC-`date "+%d_%b_%Y_%H_%M"`.tgz
+tar -cvf Project_Twilight-src-`date "+%d_%b_%Y_%H_%M"`.tar Project_Twilight/src/
+gzip Project_Twilight-src-`date "+%d_%b_%Y_%H_%M"`.tar
+mv Project_Twilight-src-`date "+%d_%b_%Y_%H_%M"`.tar.gz Project_Twilight-SRC-`date "+%d_%b_%Y_%H_%M"`.tgz
+chmod og-rwx Project_Twilight-SRC-`date "+%d_%b_%Y_%H_%M"`.tgz
 
 ls mud/log/ >> log
 
-tar -cvf mud-`date "+%d_%b_%Y_%H_%M"`.tar ptmud/ --exclude-from ~/log
-gzip mud-`date "+%d_%b_%Y_%H_%M"`.tar
-mv mud-`date "+%d_%b_%Y_%H_%M"`.tar.gz MUD-`date "+%d_%b_%Y_%H_%M"`.tgz
-chmod og-rwx MUD-`date "+%d_%b_%Y_%H_%M"`.tgz
+tar -cvf Project_Twilight-mud-`date "+%d_%b_%Y_%H_%M"`.tar Project_Twilight/ --exclude-from ~/log
+gzip Project_Twilight-mud-`date "+%d_%b_%Y_%H_%M"`.tar
+mv Project_Twilight-mud-`date "+%d_%b_%Y_%H_%M"`.tar.gz Project_Twilight-MUD-`date "+%d_%b_%Y_%H_%M"`.tgz
+chmod og-rwx Project_Twilight-MUD-`date "+%d_%b_%Y_%H_%M"`.tgz
 
 rm log
 
@@ -42,10 +42,10 @@ rm log
 #mv web.tar.gz WEB.tgz
 #chmod og-rwx WEB.tgz
 
-cd ~/ptmud/src/
+cd ~/Project_Twilight/src/
 make
 
 cd ~
 mv *.tgz ./backup
 
-rm ~/ptmud/src/completedbackup
+rm ~/Project_Twilight/src/completedbackup
