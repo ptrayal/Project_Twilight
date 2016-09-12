@@ -1,65 +1,0 @@
-#HELPS
--1 greeting~
-(null)~
-(null)~
-Unformatted Twilight falls...
-                                              The Project Awakens...
-  .  .  .    .  .     .   . .  .  .  . .   . .  . .   .    .  . .  .
- . . . .  . . .  . .  . .  . .. .  .. . . . . ..  .  . . .  .. .  ..
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-... ... ... ... ... ... ... ... ..|------|. ... ... ... ... ... ... .
-..... ..... |-----|.... ..... ....|      |..... ..... ..... ..... ...
-|---|.|-----|     |..... ..... ...|      |....... ..... ..... ..... .
-|   |.|     |     |------|.....|------|  |........  ..... ..... .....
-|   |-----| |     |     |--------|    |  |....... ..... ..... ..... .
-|   |     | |     |     |        |    |-------|...... ...... ........
-|   |     | |     |     |        |    |       |.... ...... ...... ...
----------------------------------------------------------------------
-       Original DikuMUD by Hans Staerfeldt, Katja Nyboe,
-       Tom Madsen, Michael Seifert, and Sebastian Hammer
-       Based on MERC 2.1 code by Hatchet, Furey, and Kahn
-         ROM 2.4 copyright (c) 1993-1996 Russ Taylor
-       Project Twilight is a production of:
-             The Children's Mud-O-Vision Workshop
-       The World of Darkness and All related concepts are
-              copyrights of White-Wolf Studios.
-           Comments: ptrayal@gmail.com
----------------------------------------------------------------------
-Project Twilight.
-Please enter Agent Name: ~
-End
-1 imotd~
-(null)~
-(null)~
-Topic Immortal Messages~
-Desc Welcome Aboard or Welcome Back!
-* Changes are made frequently around here as we add/delete/tweak.
-* Remember, this is a role-playing MUD.  Try to stay in-character
-  whenever possible and use oocsay when it is needed.
-* You are responsible for enforcing the rules and, are in turn,
-  expected to abide by them.
-[Press Return to Continue]
-~
-End
--1 motd~
-(null)~
-(null)~
-Topic Welcome to Project Twilight~
-Desc News and Updates
-* Thank you for visiting Project Twilight.  We are in the midst of updating
-  our code and you may find that some things are not working correctly.  We
-  appreciate your patronage and participation, but please bear with us.  Look
-  around and have fun.
-* In-character information is not in all the helps.  Use the
-  investigate and research commands to learn more about
-  in-character information.
-* Type 'HELP NEWBIE' for important starting information.  Also
-  please review 'HELP DISCLAIMER' for information about Project
-  Twilight.  Finally, please make sure you view 'HELP DEATH',
-  as it is very important.
-~
-Web http://www.brandonsplace.net/projecttwilight/~
-End
-0 $~
-#$
-
