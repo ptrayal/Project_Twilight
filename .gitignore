@@ -2,6 +2,8 @@ log/
 player/
 npc/
 *.o
+data/stock.txt
+
 
 #################
 ## Eclipse
