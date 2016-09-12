@@ -75,15 +75,15 @@ ACG 0 75 0 0 0 pound
 AHMV ABCDEFGHIJK medium flesh
 A 0
 I 0
-M SPEECH 10002 kindred~
-M SPEECH 10002 vampire~
-M SPEECH 10001 faerie~
-M SPEECH 10001 fae~
-M SPEECH 10001 changeling~
-M GREET 10000 100~
-M SPEECH 10003 werewolf~
-M SPEECH 10003 garou~
 M SPEECH 10004 job~
+M SPEECH 10003 garou~
+M SPEECH 10003 werewolf~
+M GREET 10000 100~
+M SPEECH 10001 changeling~
+M SPEECH 10001 fae~
+M SPEECH 10001 faerie~
+M SPEECH 10002 vampire~
+M SPEECH 10002 kindred~
 #0
 
 
@@ -1101,17 +1101,17 @@ E
 XDDREAM~
 None~
 E
-ladder~
-On closer inspection, the ladder looks new and it looks rather well usedfor climbing over the high mounds of garbage.  ~
-E
-trash~
+garbage~
 Searching the piles of rubbish and garbage that litter the surroudingarea to the pond you spot a conveniently placed step {Wladder{x that leans upagainst the one of the larger piles to the north of the pond.  ~
 E
 rubbish~
 Searching the piles of rubbish and garbage that litter the surroudingarea to the pond you spot a conveniently placed step {Wladder{x that leans upagainst the one of the larger piles to the north of the pond.  ~
 E
-garbage~
+trash~
 Searching the piles of rubbish and garbage that litter the surroudingarea to the pond you spot a conveniently placed step {Wladder{x that leans upagainst the one of the larger piles to the north of the pond.  ~
+E
+ladder~
+On closer inspection, the ladder looks new and it looks rather well usedfor climbing over the high mounds of garbage.  ~
 D1
 (none)~
 (null)~
@@ -2608,7 +2608,7 @@ E
 XDDREAM~
 None~
 D1
-(none)~
+none~
 (null)~
 0 0 12701
 D2
