@@ -819,7 +819,7 @@ char *numlineas( char *string )
 	{
 		string = get_line( string, tmpb );
 		sprintf( buf2, "%2d. %s\n\r", cnt++, tmpb );
-		strcat( buf, buf2 );
+		strcat( buf, buf2, sizeof(buf) - strlen(buf) - 1 );
 	}
 
 	return buf;

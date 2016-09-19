@@ -888,7 +888,7 @@ void do_prompt(CHAR_DATA *ch, char *argument)
 		strcpy( buf, argument );
 		smash_tilde( buf );
 		if (str_suffix("%c",buf))
-			strcat(buf," " );
+			strncat(buf," ",sizeof(buf) - strlen(buf) - 1 );
 
 	}
 
