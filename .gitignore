@@ -3,7 +3,7 @@ player/
 npc/
 *.o
 data/stock.txt
-
+/src/project
 
 #################
 ## Eclipse
