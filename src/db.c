@@ -5027,12 +5027,12 @@ void tail_chain( void )
 }
 
 // Replacement for strcpy
-char *_strmove(char* s1,const char* s2) 
-{
-    size_t n=strlen(s2);
-    memmove(s1,s2,n+1);
-    return s1;
-}
+// char *_strmove(char* s1,const char* s2) 
+// {
+//     size_t n=strlen(s2);
+//     memmove(s1,s2,n+1);
+//     return s1;
+// }
 
 
 // Improved strdup capabilitys for logging / debugging by David Simmerson
