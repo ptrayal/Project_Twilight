@@ -5027,7 +5027,7 @@ void tail_chain( void )
 }
 
 // Replacement for strcpy
-char *strmove(char* s1,const char* s2) 
+char *_strmove(char* s1,const char* s2) 
 {
     size_t n=strlen(s2);
     memmove(s1,s2,n+1);
