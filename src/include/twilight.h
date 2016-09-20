@@ -3225,7 +3225,7 @@ void	log_to_file	args( ( char *file, char *extension,
 const char *Upper args( (const char *str) );
 const char *Lower args( (const char *str) );
 char *_str_dup args( (const char *str, const char *file, const char *function, int line) );
-// char *_strmove args(char* s1, const char* s2);
+char* strmove(char* s1,const char* s2);
 const char *Format args( (const char *fmt, ...) );
 char *CapitalSentence args( (const char *str) );
 
