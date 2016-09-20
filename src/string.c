@@ -229,9 +229,9 @@ void string_add( CHAR_DATA *ch, char *argument )
 		}
 
 	if(IS_NULLSTR(ch->desc->pString))
-		strcpy( buf, "");
+		strmove( buf, "");
 	else	
-		strcpy( buf, *ch->desc->pString );
+		strmove( buf, *ch->desc->pString );
 
 		/*
 		 * Truncate strings to MAX_STRING_LENGTH.

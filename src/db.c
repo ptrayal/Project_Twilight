@@ -760,7 +760,7 @@ void colourstrip( char *txt, char *out )
 	/* Removed to try to fix name changing bug.
 	return str_dup(buffer);
 	*/
-	strcpy(out, buffer);
+	strmove(out, buffer);
 	
 	return;
 }
@@ -4572,7 +4572,7 @@ void name_replacer(char *format, char *first_name, char *last_name, char *out)
 	}
 	*point++ = '\0';
 
-	strcpy(out, buf);
+	strmove(out, buf);
 
 	free(toFree);
 
@@ -5027,7 +5027,8 @@ void tail_chain( void )
 }
 
 // Replacement for strcpy
-char *strmove(char *s1, const char *s2) 
+// 
+char* strmove(char* s1,const char* s2) 
 {
     size_t n=strlen(s2);
     memmove(s1,s2,n+1);
