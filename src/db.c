@@ -5026,6 +5026,15 @@ void tail_chain( void )
 	return;
 }
 
+// Replacement for strcpy
+char* strmove(char* s1,const char* s2) 
+{
+    size_t n=strlen(s2);
+    memmove(s1,s2,n+1);
+    return s1;
+}
+
+
 // Improved strdup capabilitys for logging / debugging by David Simmerson
 char *_str_dup(const char *str, const char *file, const char *function, int line)
 {
