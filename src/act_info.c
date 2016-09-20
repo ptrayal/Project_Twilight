@@ -880,12 +880,12 @@ void do_prompt(CHAR_DATA *ch, char *argument)
 	}
 
 	if( !str_cmp( argument, "all" )  || !str_cmp( argument, "default" ) )
-		strcpy( buf, "<\tY%h\tn> ");
+		strmove( buf, "<\tY%h\tn> ");
 	else
 	{
 		if ( strlen(argument) > 50 )
 			argument[50] = '\0';
-		strcpy( buf, argument );
+		strmove( buf, argument );
 		smash_tilde( buf );
 		if (str_suffix("%c",buf))
 			strncat(buf," ",sizeof(buf) - strlen(buf) - 1 );
