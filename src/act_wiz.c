@@ -6495,8 +6495,8 @@ void do_arealinks(CHAR_DATA *ch, char *argument)
     EXIT_DATA *pexit;
     ROOM_INDEX_DATA *to_room;
     ROOM_INDEX_DATA *from_room;
-    char buf[MAX_STRING_LENGTH];
-    char arg1[MAX_INPUT_LENGTH];
+    char buf[MAX_STRING_LENGTH] = {'\0'};
+    char arg1[MAX_INPUT_LENGTH] = {'\0'};
     int vnum = 0;
     int iHash, door;
     bool found = FALSE;
