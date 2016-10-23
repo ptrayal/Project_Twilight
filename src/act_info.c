@@ -6005,7 +6005,7 @@ void do_updatetime( CHAR_DATA *ch, char *argument)
 	send_to_char(PT_ENGINE, ch);
 	send_to_char("\tn\n\r", ch);
 	send_to_char("\tYVersion: ", ch);
-	send_to_char(mudVersion, ch);
+	send_to_char(VERSION, ch);
 	send_to_char("\tn\n\r", ch);
 	send_to_char("\tW------------------------------------------------------------------------------\tn\n\r", ch);
 }
@@ -6039,7 +6039,7 @@ void do_snippets( CHAR_DATA *ch, char *argument )
 	send_to_char(PT_ENGINE, ch);
 	send_to_char("\tn\n\r", ch);
 	send_to_char("\tYVersion: ", ch);
-	send_to_char(mudVersion, ch);
+	send_to_char(VERSION, ch);
 	send_to_char("\tn\n\r", ch);
 
 	send_to_char("\tW-----------------------------------Snippets-----------------------------------\tn\n\r", ch );
