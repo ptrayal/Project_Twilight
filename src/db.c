@@ -3508,6 +3508,7 @@ OBJ_DATA *create_object( OBJ_INDEX_DATA *pObjIndex )
 	obj->value[2]   = pObjIndex->value[2];
 	obj->value[3]   = pObjIndex->value[3];
 	obj->value[4]   = pObjIndex->value[4];
+	obj->value[5]   = pObjIndex->value[5];
 	obj->weight     = pObjIndex->weight;
 	obj->condition  = pObjIndex->condition;
 	obj->quality    = pObjIndex->quality;

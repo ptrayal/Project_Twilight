@@ -3904,6 +3904,7 @@ OEDIT( oedit_type )      /* Moved out of oedit() due to naming conflicts -- Hugi
 	    pObj->value[2] = 0;
 	    pObj->value[3] = 0;
 	    pObj->value[4] = 0;
+	    pObj->value[5] = 0;
 
 	    return TRUE;
 	}
