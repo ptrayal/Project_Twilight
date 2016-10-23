@@ -68,7 +68,7 @@ OBJ_FILES = $(patsubst %.c, $(OBJ_DIR)/%.o, ${SRC_FILES})
 	@echo '#endif' >> build.h
 	@echo '#ifndef VERSION_H' > version.h
 	@echo '#define VERSION_H' >> version.h
-	@echo "#define VERSION   `cat .version`" >> version.h
+	@echo "#define MUD_VERSION   `cat .version`" >> version.h
 	@echo '#endif' >> version.h
 	@$(ECHOCMD) -e "           -> $(L_NRM)Current Code Version: $(L_RED)$(shell echo "scale=2; `cat .version` / 10000" | bc)$(L_NRM). Build: $(L_RED)`cat .build`$(L_NRM).$(L_NRM)"
 #	@$(ECHOCMD) -e "$(L_WHITE)Build number $(L_RED)`cat .build`$(L_WHITE), version $(L_RED)`cat .version` $(L_WHITE)set.$(L_NRM)"
