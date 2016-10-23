@@ -4,7 +4,7 @@ I3 = 1
 EXE	= ../src/project
 RM	= rm
 # Old Options
-CC	= ccache gcc
+CC	= gcc
 PROF	= -O3 -g -ggdb  -Wall  -Wno-unused-but-set-variable -funroll-loops -ffast-math
 C_FLAGS	= -Dlinux $(PROF) -I$(INCLUDE) -DI3 -DI3ROM
 L_FLAGS	= $(PROF) -lcrypt -lz
