@@ -5,7 +5,7 @@ EXE	= ../src/project
 RM	= rm
 # Old Options
 CC	= gcc
-PROF	= -O3 -g -ggdb  -Wall  -Wno-unused-but-set-variable -funroll-loops -ffast-math
+PROF	= -O3 -g -ggdb  -Wall -funroll-loops -ffast-math
 C_FLAGS	= -Dlinux $(PROF) -I$(INCLUDE) -DI3 -DI3ROM
 L_FLAGS	= $(PROF) -lcrypt -lz
 
@@ -93,12 +93,6 @@ copy:
 	@$(ECHOCMD) -e  "[$(L_WHITE)`date +%T`$(L_NRM)] Copying executable to live port"
 	@$(ECHOCMD) -e  ""
 	@cp -f project ../bin/
-
-dev:
-	@$(ECHOCMD) -e  ""
-	@$(ECHOCMD) -e  "[$(L_WHITE)`date +%T`$(L_NRM)] Copying executable to builder port"
-	@$(ECHOCMD) -e  ""
-	@cp -f project ../../aadaria.test/src/
 
 clean: 
 	@$(RM) -fr $(OBJ_FILES) $(EXE)
