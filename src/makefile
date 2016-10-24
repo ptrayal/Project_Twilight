@@ -1,23 +1,10 @@
-#Intermud-3
-I3 = 1
-
-EXE	= ../src/project
-RM	= rm
-# Old Options
-CC	= gcc
-PROF	= -O3 -g -ggdb  -Wall -funroll-loops -ffast-math
-C_FLAGS	= -Dlinux $(PROF) -I$(INCLUDE) -DI3 -DI3ROM
-L_FLAGS	= $(PROF) -lcrypt -lz
-
-# Source Files
-SRC_FILES := ${wildcard *.c}
-
-# Include Files
-INCLUDE	= include
+#####################################################################################
+#                    Project Twilight MUD Powered by ROM 2.4                        #
+#####################################################################################
 
 ECHOCMD = /bin/echo
 
-#Colours Supported
+#Colors Supported
 L_RED   = \x1B[1;31m
 L_GREEN = \x1B[1;32m
 L_YELL  = \x1B[1;33m
@@ -26,76 +13,141 @@ L_CYAN  = \x1B[1;36m
 L_WHITE = \x1B[1;37m
 L_NRM   = \x1B[0;00m
 
-# Ok Messages
-OK_S    = $(L_GREEN)OK$(L_NRM)
-ERR_S   = with $(L_RED)ERRORS$(L_NRM)
-WARN_S  = with $(L_YELL)WARNINGS$(L_NRM)
+#####################################################################################
+# COMPILER SPECIFICS
+COMPILER		= gcc
 
-project     = ../src/project
+#####################################################################################
+# FLAGS and LIBRARIES
 
-# Object Files
-OBJ_DIR	= obj
-OBJ_FILES = $(patsubst %.c, $(OBJ_DIR)/%.o, ${SRC_FILES})
-# OBJ_FILES:= $(patsubst %.c,$(OBJ_DIR)/%.o,$(SRC_FILES))
+# Old Profiler
+# PROFILER      	= -ggdb3 #-Werror -pedantic -DASSERT
+# New Profiler
+PROFILER		= -O3 -g -ggdb  -Wall  -funroll-loops -fcaller-saves -ffast-math
+NOCRYPT			=
+C_FLAGS			=  -Wall -g $(PROFILER) -I$(INCLUDE) #$(NOCRYPT)
+LIBRARY_FLAGS	=  $(PROFILER)
 
+# Source Files
+C_FILES	= ${wildcard *.c}
 
-../src/project: $(OBJ_FILES)
-	@$(RM) -f files.txt
-	@wc *.c >> files.txt
-	@$(ECHOCMD) -e  "[$(L_WHITE)`date +%T`$(L_NRM)] Linking Executable..."
-	@$(CC) -o $(EXE) $(OBJ_FILES) $(L_FLAGS) -lm
-	@chmod 755 $(EXE)
-	@$(ECHOCMD) -e  "[$(L_WHITE)`date +%T`$(L_NRM)] Compilation Complete"
+O_FILES = $(patsubst %.c, %.o, ${C_FILES})
 
-# Increment .build and .version
+O_TESTFILES = $(patsubst %.c, %.o, ${C_FILES})
 
-	@if [ -f .build ]; then \
-		expr `cat .build` + 1 > .build; \
-	else \
-	echo '1' > .build; \
-	fi
-	@if [ -f .version ]; then \
-	expr `cat .version` + 1 > .version; \
-	else \
-	echo '10001' > .version; \
-	fi
-	@if [ `cat .build` -ge 101 ]; then \
-	echo '1' > .build; \
-	fi
-	@echo '#ifndef BUILD_H' > build.h
-	@echo '#define BUILD_H' >> build.h
-	@echo "#define LINKCOUNT   `cat .build`" >> build.h
-	@echo '#endif' >> build.h
-	@echo '#ifndef VERSION_H' > version.h
-	@echo '#define VERSION_H' >> version.h
-	@echo "#define MUD_VERSION   `cat .version`" >> version.h
-	@echo '#endif' >> version.h
-	@$(ECHOCMD) -e "           -> $(L_NRM)Current Code Version: $(L_RED)$(shell echo "scale=2; `cat .version` / 10000" | bc)$(L_NRM). Build: $(L_RED)`cat .build`$(L_NRM).$(L_NRM)"
-#	@$(ECHOCMD) -e "$(L_WHITE)Build number $(L_RED)`cat .build`$(L_WHITE), version $(L_RED)`cat .version` $(L_WHITE)set.$(L_NRM)"
+#####################################################################################
+# Engine
+ENGINE	= project
 
-	@$(ECHOCMD) -e  ""
-	@$(ECHOCMD) -e  "If you wish to copy executable to live port type '$(L_WHITE)make copy$(L_NRM)'"
-	@$(ECHOCMD) -e  "If you wish to copy executable to builder port type '$(L_WHITE)make dev$(L_NRM)'"
-	@$(ECHOCMD) -e  ""
+# Directories
+INCLUDE	= include
 
+pt: $(O_FILES)
+	rm -f $(ENGINE)
+	rm -f $(ENGINE).exe
+	$(COMPILER) $(LIBRARY_FLAGS) -o $(ENGINE) $(O_FILES) -lm
+	# @if ! test -f $(BVERSION_FILE); then echo 0 > $(BVERSION_FILE); fi
+	# @$(ECHOCMD) -e $$(($$(cat $(BVERSION_FILE)) + 1)) > $(BVERSION_FILE)
+	# @$(ECHOCMD) -e "#ifndef __Version_H" > ./include/version.h
+	# @$(ECHOCMD) -e "#define __Version_h" >> ./include/version.h
+	# @$(ECHOCMD) -e '#define mudVersion "1.$(shell cat $(MJVERSION_FILE)).$(shell cat $(MVERSION_FILE)).$(shell cat $(BVERSION_FILE))"' >> ./include/version.h
+	# @$(ECHOCMD) -e "#endif" >> ./include/version.h
+	@$(ECHOCMD) -e "$(L_WHITE)Revision control completed!$(L_NRM)"
+	
 
-$(OBJ_DIR)/%.o: %.c
-	@rm -f .temp.errors .temp.log
+ptdev: $(O_TESTFILES)
+	rm -f projectdev
+	rm -f projectdev.exe
+	$(COMPILER) $(C_FLAGS) -o projectdev $(O_TESTFILES) #-lm
+	@if ! test -f $(BVERSION_FILE); then echo 0 > $(BVERSION_FILE); fi
+	@echo $$(($$(cat $(BVERSION_FILE)) + 1)) > $(BVERSION_FILE)
+	@echo "#ifndef __Version_H" > ./include/version.h
+	@echo "#define __Version_h" >> ./include/version.h
+	@echo '#define mudVersion "1.$(shell cat $(MJVERSION_FILE)).$(shell cat $(MVERSION_FILE)).$(shell cat $(BVERSION_FILE))"' >> ./include/version.h
+	@echo "#endif" >> ./include/version.h
+	@$(ECHOCMD) -e "$(L_WHITE)Revision control completed!$(L_NRM)"
+
+.c.o: twilight.h
 	@$(ECHOCMD) -e "[$(L_WHITE)`date +%T`$(L_NRM)] Compiling $< ..."
-	@$(CC) -c -MMD -MP $(C_FLAGS) $< -o $@ 2> .temp.log || touch .temp.errors
-	@$(ECHOCMD) -en "[$(L_WHITE)`date +%T`$(L_NRM)] $(L_NRM)$<$(L_NRM) compiled "
-	@if test -e .temp.errors; then $(ECHOCMD) -e  "$(ERR_S)" && cat .temp.log; exit 2; elif test -s .temp.log; then $(ECHOCMD) -e "$(WARN_S)" && cat .temp.log; else $(ECHOCMD) -e  "$(OK_S)"; fi;
-	@rm -f .temp.errors .temp.log
+	@$(COMPILER) -c $(C_FLAGS) $<
 
+####################################################################################################
+# clean out our folder of any/all un-necessary files allowing us to ensure our directory is clean.
+clean:
+	@rm -f *.o
+	@$(ECHOCMD) -e "$(L_RED).o files removed from directory.$(L_NRM)"
+####################################################################################################
 
-copy:
-	@$(ECHOCMD) -e  ""
-	@$(ECHOCMD) -e  "[$(L_WHITE)`date +%T`$(L_NRM)] Copying executable to live port"
-	@$(ECHOCMD) -e  ""
-	@cp -f project ../bin/
+####################################################################################################
+# Wipes the directory clean of .o files and the executibles.  Helps ensure a clean directory.
+wipe:
+	@rm -f *.o $(ENGINE)
+	@rm -f $(ENGINE).exe
+	@rm -f projectdev
+	@rm -f projectdev.exe
+	@$(ECHOCMD) -e "$(L_RED)Project Twilight is wiped.$(L_NRM)"
+####################################################################################################
 
-clean: 
-	@$(RM) -fr $(OBJ_FILES) $(EXE)
-	@$(ECHOCMD) -e  "[$(L_WHITE)`date +%T`$(L_NRM)] Done cleaning..."
-	@make 
-	@make copy
+####################################################################################################
+# VERSION SUPPORT: allow us to control our revisions of the executable being built.
+# name of our version file
+BVERSION_FILE = ./include/.bversion
+MVERSION_FILE = ./include/.mversion
+MJVERSION_FILE = ./include/.mjversion
+
+# Ensure we are built properly with the correct data
+BUILD_DATE = $(shell date +'%Y%m%d')
+BUILD_NUM = $(shell cat $(VERSION_FILE))
+
+# define our version (within the compiler flags)
+COMPILE_FLAGS += -DBUILD_DATE=$(BUILD_DATE) -DBUILD_NUM=$(BUILD_NUM)
+
+#####################################################################################################
+#Generate our build version file (generates a .version file, and a .h file)
+.PHONY: bversion
+bversion:
+	@if ! test -f $(BVERSION_FILE); then echo 0 > $(BVERSION_FILE); fi
+	@echo $$(($$(cat $(BVERSION_FILE)) + 1)) > $(BVERSION_FILE)
+	@echo "#ifndef __Version_H" > ./include/version.h
+	@echo "#define __Version_h" >> ./include/version.h
+	@echo '#define mudVersion "1.$(shell cat $(MJVERSION_FILE)).$(shell cat $(MVERSION_FILE)).$(shell cat $(BVERSION_FILE))"' >> ./include/version.h
+	@echo "#endif" >> ./include/version.h
+	@$(ECHOCMD) -e "$(L_WHITE)Revision control completed!$(L_NRM)"
+
+#####################################################################################################
+
+#####################################################################################################
+#Generate our minor version file (generates a .version file, and a .h file)
+.PHONY: mversion
+mversion:
+	@if ! test -f $(MVERSION_FILE); then echo 0 > $(MVERSION_FILE); fi
+	@echo $$(($$(cat $(MVERSION_FILE)) + 1)) > $(MVERSION_FILE)
+	@echo "#ifndef __Version_H" > ./include/version.h
+	@echo "#define __Version_h" >> ./include/version.h
+	@echo '#define mudVersion "1.$(shell cat $(MJVERSION_FILE)).$(shell cat $(MVERSION_FILE)).$(shell cat $(BVERSION_FILE))"' >> ./include/version.h
+	@echo "#endif" >> ./include/version.h
+	@$(ECHOCMD) -e "$(L_WHITE)Revision control completed!$(L_NRM)"
+
+#####################################################################################################
+
+#####################################################################################################
+#Generate our major version file (generates a .version file, and a .h file)
+.PHONY: mjversion
+mjversion:
+	@if ! test -f $(MJVERSION_FILE); then echo 0 > $(MJVERSION_FILE); fi
+	@echo $$(($$(cat $(MJVERSION_FILE)) + 1)) > $(MJVERSION_FILE)
+	@echo "#ifndef __Version_H" > ./include/version.h
+	@echo "#define __Version_h" >> ./include/version.h
+	@echo '#define mudVersion "1.$(shell cat $(MJVERSION_FILE)).$(shell cat $(MVERSION_FILE)).$(shell cat $(BVERSION_FILE))"' >> ./include/version.h
+	@echo "#endif" >> ./include/version.h
+	@$(ECHOCMD) -e "$(L_WHITE)Revision control completed!$(L_NRM)"
+
+#####################################################################################################
+
+# valgrind -v --tool=memcheck --leak-check=full --show-reachable=yes --demangle=yes --db-attach=yes --num-callers=10 --track-origins=yes --track-fds=yes ../src/$(ENGINE) -v
+
+#####################################################################################
+# Grab our u-name for giggles; used later on to detect possible support
+# for the game engine
+UNAME = $(shell uname -s)
+#####################################################################################

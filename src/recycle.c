@@ -1511,7 +1511,7 @@ OBJ_INDEX_DATA *new_obj_index( void )
     pObj->weight        =   0;
     pObj->cost          =   0;
     pObj->condition     =   100;                        /* ROM */
-    for ( value = 0; value < 5; value++ )               /* 5 - ROM */
+    for ( value = 0; value < 6; value++ )               /* 5 - ROM */
         pObj->value[value]  =   0;
     pObj->quality	=   2;
 
