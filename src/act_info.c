@@ -6054,8 +6054,9 @@ void do_snippets( CHAR_DATA *ch, char *argument )
 
 void do_testarray (CHAR_DATA *ch, char *argument)
 {
+	OBJ_DATA *obj
 	CheckCH(ch);
 
-	send_to_char( Format("Length of ch->armor: %d\n\r", (int)( sizeof(ch->armor) / sizeof(ch->armor[0]) )), ch);
+	send_to_char( Format("Length of obj->value: %d\n\r", (int)( sizeof(obj->value) / sizeof(obj->value[0]) )), ch);
 
 }
