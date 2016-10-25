@@ -3439,7 +3439,7 @@ void clone_mobile(CHAR_DATA *parent, CHAR_DATA *clone)
 	clone->default_pos  = parent->default_pos;
 	clone->spec_fun = parent->spec_fun;
 	
-	for (i = 0; i < 4; i++)
+	for (i = 0; i < 3; i++)
 		clone->armor[i] = parent->armor[i];
 
 	for (i = 0; i < MAX_STATS; i++)
