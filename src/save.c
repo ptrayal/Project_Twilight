@@ -681,10 +681,10 @@ void fwrite_obj( CHAR_DATA *ch, OBJ_DATA *obj, FILE *fp, int iNest )
 	WriteNumber( fp, "Cost", obj->cost );
 	if (obj->value[0] != obj->pIndexData->value[0] ||  obj->value[1] != obj->pIndexData->value[1]
           ||  obj->value[2] != obj->pIndexData->value[2] ||  obj->value[3] != obj->pIndexData->value[3]
-          ||  obj->value[4] != obj->pIndexData->value[4] ||  obj->value[5] != obj->pIndexData->value[5])
-		fprintf( fp, "Val  %d %d %d %d %d %d\n",
+          ||  obj->value[4] != obj->pIndexData->value[4])
+		fprintf( fp, "Val  %d %d %d %d %d\n",
 				obj->value[0], obj->value[1], obj->value[2], obj->value[3],
-				obj->value[4], obj->value[5]	     );
+				obj->value[4]	     );
 
 	switch ( obj->item_type )
 	{
