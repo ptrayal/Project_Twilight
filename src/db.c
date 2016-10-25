@@ -3684,7 +3684,7 @@ void clear_char( CHAR_DATA *ch )
 	ch->prompt                  = NULL;
 	ch->logon           = current_time;
 	ch->lines           = PAGELEN;
-	for (i = 0; i < 4; i++)
+	for (i = 0; i < 3; i++)
 		ch->armor[i]        = 100;
 	ch->position        = P_STAND;
 	ch->health          = 7;
