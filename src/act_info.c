@@ -6052,6 +6052,7 @@ void do_snippets( CHAR_DATA *ch, char *argument )
 	return;
 }
 
+// This function is to check the length of an array to make sure we are sizing them correctly.
 void do_testarray (CHAR_DATA *ch, char *argument)
 {
 	OBJ_DATA *obj;
