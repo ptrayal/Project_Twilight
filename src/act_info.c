@@ -6051,3 +6051,11 @@ void do_snippets( CHAR_DATA *ch, char *argument )
 
 	return;
 }
+
+void do_testarray (CHAR_DATA *ch, char *argument)
+{
+	CheckCH(ch);
+
+	send_to_char( Format("Length of ch->armor: %d\n\r", (int)( sizeof(ch->armor) / sizeof(ch->armor[0]) )), ch);
+
+}

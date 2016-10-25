@@ -598,5 +598,6 @@ DECLARE_DO_FUN( do_aedit	);
 DECLARE_DO_FUN( do_medit	);
 DECLARE_DO_FUN( do_oedit	);
 DECLARE_DO_FUN( do_mpedit	);
+DECLARE_DO_FUN( do_testarray );
 
 #endif
