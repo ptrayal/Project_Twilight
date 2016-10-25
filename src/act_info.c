@@ -6056,8 +6056,9 @@ void do_snippets( CHAR_DATA *ch, char *argument )
 void do_testarray (CHAR_DATA *ch, char *argument)
 {
 	OBJ_DATA *obj;
+	ROOM_INDEX_DATA *pRoomIndex;
 	CheckCH(ch);
 
-	send_to_char( Format("Length of obj->value: %d\n\r", (int)( sizeof(obj->value) / sizeof(obj->value[0]) )), ch);
+	send_to_char( Format("Length of pRoomIndex->exit: %d\n\r", (int)( sizeof(pRoomIndex->exit) / sizeof(pRoomIndex->exit[0]) )), ch);
 
 }
