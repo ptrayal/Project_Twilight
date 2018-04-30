@@ -1156,7 +1156,7 @@ void do_stand( CHAR_DATA *ch, char *argument )
     }
     ch->on = obj;
     }
-    
+
     switch ( ch->position )
     {
     case P_SLEEP:
@@ -1390,7 +1390,7 @@ void do_sit (CHAR_DATA *ch, char *argument )
     }
     else obj = ch->on;
 
-    if (obj != NULL)                                                              
+    if (obj != NULL)
     {
     if (obj->item_type != ITEM_FURNITURE
     ||  (!IS_SET(obj->value[2],SIT_ON)
@@ -1823,7 +1823,7 @@ ROOM_INDEX_DATA *room_find_or_create(ROOM_INDEX_DATA *rb[],int key)
 
   rv = (ROOM_INDEX_DATA *)malloc(sizeof(ROOM_INDEX_DATA));
   rb[key] = rv;
-    
+
   return rv;
 }
 
@@ -1855,38 +1855,43 @@ int room_remove(ROOM_INDEX_DATA *rb[],int key)
 
 void *hash_remove(struct hash_header *ht,int key)
 {
-  struct hash_link **scan;
+    struct hash_link **scan;
 
-  scan = ht->buckets+HASH_KEY(ht,key);
+    scan = ht->buckets+HASH_KEY(ht,key);
 
-  while(*scan && (*scan)->key!=key)
-    scan = &(*scan)->next;
-
-  if(*scan)
+    while(*scan && (*scan)->key!=key)
     {
-      int       i;
-      struct hash_link  *temp, *aux;
-
-      temp  = (struct hash_link*)(*scan)->data;
-      aux   = *scan;
-      *scan = aux->next;
-      free(aux);
-
-      for(i=0;i<ht->klistlen;i++)
-    if(ht->keylist[i]==key)
-      break;
-
-      if(i<ht->klistlen)
-    {
-      bcopy((char *)ht->keylist+i+1,(char *)ht->keylist+i,(ht->klistlen-i)
-        *sizeof(*ht->keylist));
-      ht->klistlen--;
+        scan = &(*scan)->next;
     }
 
-      return temp;
+    if(*scan)
+    {
+        int       i;
+        struct hash_link  *temp, *aux;
+
+        temp  = (struct hash_link*)(*scan)->data;
+        aux   = *scan;
+        *scan = aux->next;
+        free(aux);
+
+        for(i=0;i<ht->klistlen;i++)
+        {
+            if(ht->keylist[i]==key)
+            {
+                break;
+            }
+        }
+
+        if(i<ht->klistlen)
+        {
+            bcopy((char *)ht->keylist+i+1,(char *)ht->keylist+i,(ht->klistlen-i)*sizeof(*ht->keylist));
+            ht->klistlen--;
+        }
+
+        return temp;
     }
 
-  return NULL;
+    return NULL;
 }
 
 void room_iterate(ROOM_INDEX_DATA *rb[],void (*func)(),void *cdata)
@@ -1896,7 +1901,7 @@ void room_iterate(ROOM_INDEX_DATA *rb[],void (*func)(),void *cdata)
   for(i=0;i<WORLD_SIZE;i++)
     {
       ROOM_INDEX_DATA *temp;
-  
+
       temp = room_find(rb,i);
     }
 }
@@ -1912,7 +1917,7 @@ void hash_iterate(struct hash_header *ht,void (*func)(),void *cdata)
 
       key = ht->keylist[i];
       temp = hash_find(ht,key);
- 
+
       if(ht->keylist[i]!=key) /* They must have deleted this room */
     i--;              /* Hit this slot again. */
 
@@ -3547,7 +3552,7 @@ void scan_list(ROOM_INDEX_DATA *scan_room, CHAR_DATA *ch, sh_int depth, sh_int d
     {
         if (rch == ch)
             continue;
-        if (!IS_NPC(rch) && rch->invis_level > get_trust(ch)) 
+        if (!IS_NPC(rch) && rch->invis_level > get_trust(ch))
             continue;
         if (can_see(ch, rch))
             scan_char(rch, ch, depth, door);
@@ -3881,19 +3886,21 @@ void do_rp_join( CHAR_DATA *ch, char *argument )
 
     for ( rch = location->people; rch != NULL; rch = rch->next_in_room )
     {
-    if(IS_SET(rch->plr_flags, PLR_RP_OK))
-        LOC_RP_OK = TRUE;
+        if(IS_SET(rch->plr_flags, PLR_RP_OK))
+        {
+            LOC_RP_OK = TRUE;
+        }
         count++;
     }
 
     if(!LOC_RP_OK)
     {
-    send_to_char( "There doesn't seem to be anyone interested in RP there.\n\r", ch);
-    return;
+        send_to_char( "There doesn't seem to be anyone interested in RP there.\n\r", ch);
+        return;
     }
 
     if (!is_room_owner(ch,location) && room_is_private(location)
-    &&  (count > 1 || get_trust(ch) < MAX_LEVEL))
+        &&  (count > 1 || get_trust(ch) < MAX_LEVEL))
     {
         send_to_char( "That room is private right now.\n\r", ch );
         return;

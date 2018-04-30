@@ -433,7 +433,7 @@ void mobile_update( void )
 	}
 
 	/* Wander */
-	if ( !IS_SET(ch->act, ACT_SENTINEL) 
+	if ( !IS_SET(ch->act, ACT_SENTINEL)
 	&& number_bits(3) == 0
 	&& ( door = number_bits( 5 ) ) <= 5
 	&& ( pexit = ch->in_room->exit[door] ) != NULL
@@ -441,9 +441,9 @@ void mobile_update( void )
 	&&   !IS_SET(pexit->exit_info, EX_CLOSED)
 	&&   !IS_SET(pexit->u1.to_room->room_flags, ROOM_NO_MOB)
 	&& ( !IS_SET(ch->act, ACT_STAY_AREA)
-	||   pexit->u1.to_room->area == ch->in_room->area ) 
+	||   pexit->u1.to_room->area == ch->in_room->area )
 	&& ( !IS_SET(ch->act, ACT_OUTDOORS)
-	||   !IS_SET(pexit->u1.to_room->room_flags,ROOM_INDOORS)) 
+	||   !IS_SET(pexit->u1.to_room->room_flags,ROOM_INDOORS))
 	&& ( !IS_SET(ch->act, ACT_INDOORS)
 	||   IS_SET(pexit->u1.to_room->room_flags,ROOM_INDOORS))
 	&& ch->fighting == NULL
@@ -676,7 +676,7 @@ void room_update( void )
 	EXTRA_DESCR_DATA *back;
 	EXTRA_DESCR_DATA *ed_next = NULL;
 	int i = 0;
-	
+
 	for ( i = 0; i < MAX_KEY_HASH; i++)
 		for ( rm = room_index_hash[i]; rm != NULL; rm = rm_next )
 		{
@@ -819,318 +819,385 @@ void fake_out() {}
  * Update all chars, including mobs.
  */
 void char_update( void )
-{   
-    CHAR_DATA *ch;
-    CHAR_DATA *ch_next;
-    CHAR_DATA *ch_quit;
-    int diff = 0;
+{
+	CHAR_DATA *ch;
+	CHAR_DATA *ch_next;
+	CHAR_DATA *ch_quit;
+	int diff = 0;
 
-    ch_quit	= NULL;
+	ch_quit	= NULL;
 
     /* update save counter */
-    save_number++;
+	save_number++;
 
-    if (save_number > 29)
-	save_number = 0;
-
-    for ( ch = char_list; ch != NULL; ch = ch_next )
-    {
-	AFFECT_DATA *paf;
-	AFFECT_DATA *paf_next;
-
-	ch_next = ch->next;
-
-	if(IS_SET(ch->act, ACT_REINCARNATE))
-		continue;
-
-	if(ch->position == P_DEAD)
+	if (save_number > 29)
 	{
-	    raw_kill(ch, FALSE);
-	    continue;
+		save_number = 0;
 	}
 
-	if(ch->pospts < 100)
-	  switch(ch->position)
-	  {
-	    default : 		ch->pospts++;		break;
-	    case P_SLEEP: 	ch->pospts += 3;	break;
-	    case P_REST:  	ch->pospts += 5;	break;
- 	  }
-
-	ch->dollars += ch->backgrounds[RESOURCES];
-
-	if(--ch->ooc_xp_time <= 0)
+	for ( ch = char_list; ch != NULL; ch = ch_next )
 	{
-	    ch->ooc_xp_time = 60;
-	    ch->ooc_xp_count = 0;
-	}
+		AFFECT_DATA *paf;
+		AFFECT_DATA *paf_next;
 
-	if(!IS_NPC(ch) && IS_VAMPIRE(ch))
-	{
-	    if(ch->GHB < 7 && !IS_SET(ch->act2, ACT2_WYRM))
-		SET_BIT(ch->act2, ACT2_WYRM);
-	    else if(ch->GHB > 7 && IS_SET(ch->act2, ACT2_WYRM))
-		REMOVE_BIT(ch->act2, ACT2_WYRM);
-	}
+		ch_next = ch->next;
 
-	if(ch->warrants && ch->in_room == get_room_index(ROOM_VNUM_JAIL))
-	{
-	    ch->warrants -= UMIN(ch->warrants, 4);
-	    if(ch->warrants == 0)
-	    {
-		char_from_room(ch);
-		char_to_room(ch, get_room_index(ROOM_VNUM_POLICE_STATION));
-		send_to_char("\tGFreed! \tWYou have been released after serving your time.\tn\n\r", ch);
-	    }
-	}
-	else if(ch->warrants)
-	    ch->warrants--;
+		if(IS_SET(ch->act, ACT_REINCARNATE))
+		{
+			continue;
+		}
 
-	if(ch->hunter_vis > 40)
-	{
-	    /* Generate hunter (ACT2_TWILIGHT, ACT2_HUNTER) and set after ch */
-	    if(IS_HUNTED(ch))
-		gen_hunter(ch);
-	    ch->hunter_vis -= 5;
-	}
-	else if(ch->hunter_vis)
-	    ch->hunter_vis--;
+		if(ch->position == P_DEAD)
+		{
+			raw_kill(ch, FALSE);
+			continue;
+		}
 
-	if (ch->infl_timer > 0)
-	{
-	    ch->infl_timer--;
-	    if(ch->infl_timer == 0)
-	    	send_to_char("\tGUpdate: \tWYour influence is now available for use.\tn\n\r", ch);
-	}
+		if(ch->pospts < 100)
+			switch(ch->position)
+		{
+			default : 		ch->pospts++;		break;
+			case P_SLEEP: 	ch->pospts += 3;	break;
+			case P_REST:  	ch->pospts += 5;	break;
+		}
 
-	if (ch->herd_timer > 0)
-	{
-		ch->herd_timer--;
-		if(ch->herd_timer == 0)
-			send_to_char("\tGUpdate: \tWYour herd is now available.\tn\n\r", ch);
-	}
+		ch->dollars += ch->backgrounds[RESOURCES];
 
-	if (ch->power_timer > 0)
-	{
-	    ch->power_timer--;
-	    if(ch->power_timer == 0)
-		send_to_char("\tGUpdate: \tWYour powers wax stronger.\tn\n\r", ch);
-	}
+		if(--ch->ooc_xp_time <= 0)
+		{
+			ch->ooc_xp_time = 60;
+			ch->ooc_xp_count = 0;
+		}
 
-	if (ch->power_timer == 0)
-	{
-	    if(ch->race == race_lookup("faerie") && ch->RBPG < ch->max_RBPG)
-		ch->RBPG += 1;
-	    if(ch->race == race_lookup("werewolf") && ch->RBPG < ch->max_RBPG)
-		ch->RBPG += 1;
-	    if(ch->race == race_lookup("human") && ch->RBPG < ch->max_RBPG)
-		ch->RBPG += 1;
-	}
+		if(!IS_NPC(ch) && IS_VAMPIRE(ch))
+		{
+			if(ch->GHB < 7 && !IS_SET(ch->act2, ACT2_WYRM))
+			{
+				SET_BIT(ch->act2, ACT2_WYRM);
+			}
+			else if(ch->GHB > 7 && IS_SET(ch->act2, ACT2_WYRM))
+			{
+				REMOVE_BIT(ch->act2, ACT2_WYRM);
+			}
+		}
 
-	if(time_info.moon_phase == MOON_FULL 
-	  && ch->race == race_lookup("werewolf"))
-	{
-	    if(ch->RBPG < ch->max_RBPG)
-		ch->RBPG = ch->max_RBPG;
-	    if(ch->GHB < ch->max_GHB)
-		ch->GHB = ch->max_GHB;
-	}
+		if(ch->warrants && ch->in_room == get_room_index(ROOM_VNUM_JAIL))
+		{
+			ch->warrants -= UMIN(ch->warrants, 4);
+			if(ch->warrants == 0)
+			{
+				char_from_room(ch);
+				char_to_room(ch, get_room_index(ROOM_VNUM_POLICE_STATION));
+				send_to_char("\tGFreed! \tWYou have been released after serving your time.\tn\n\r", ch);
+			}
+		}
+		else if(ch->warrants)
+		{
+			ch->warrants--;
+		}
 
-        if(--ch->torpor_timer > 0)
-	{
-	    if(ch->RBPG <= 0) ch->RBPG = ch->max_RBPG;
-	}
-	else
-	{
-	    update_pos(ch, 0);
-	}
+		if(ch->hunter_vis > 40)
+		{
+		    /* Generate hunter (ACT2_TWILIGHT, ACT2_HUNTER) and set after ch */
+			if(IS_HUNTED(ch))
+			{
+				gen_hunter(ch);
+			}
+			ch->hunter_vis -= 5;
+		}
+		else if(ch->hunter_vis)
+		{
+			ch->hunter_vis--;
+		}
 
-	if(IS_VAMPIRE(ch) && ch->blood_timer == 0 && !IS_SET(ch->act2, ACT2_RP_ING))
-	{
-	    if(ch->RBPG > -10)
-	    {
-		ch->RBPG -= 1;
-		if(ch->RBPG < 0)
-		    send_to_char("\tOYou will slip into torpor without some blood really soon!!!\tn\n\r", ch);
-	    }
-	    else if(!IS_ADMIN(ch))
-		ch->position = P_TORPOR;
+		if (ch->infl_timer > 0)
+		{
+			ch->infl_timer--;
+			if(ch->infl_timer == 0)
+			{
+				send_to_char("\tGUpdate: \tWYour influence is now available for use.\tn\n\r", ch);
+			}
+		}
 
-	    ch->blood_timer = 20;
-	}
-	else
-	{
-	    if(!IS_NPC(ch))
-	    ch->blood_timer--;
-	}
+		if (ch->herd_timer > 0)
+		{
+			ch->herd_timer--;
+			if(ch->herd_timer == 0)
+			{
+				send_to_char("\tGUpdate: \tWYour herd is now available.\tn\n\r", ch);
+			}
+		}
 
-	if(IS_ADMIN(ch))
-	{
-	    if(ch->RBPG < ch->max_RBPG)
-	    ch->RBPG++;
-	    if(ch->race != race_lookup("faerie") && ch->GHB < ch->max_GHB)
-	    ch->GHB++;
-	    ch->condition[COND_FRENZY] = 0;
-	    ch->condition[COND_ANGER] = 0;
-	    ch->condition[COND_PAIN] = 0;
-	}
+		if (ch->power_timer > 0)
+		{
+			ch->power_timer--;
+			if(ch->power_timer == 0)
+			{
+				send_to_char("\tGUpdate: \tWYour powers wax stronger.\tn\n\r", ch);
+			}
+		}
 
-	if(ch->willpower < ch->max_willpower)
-	{
-	    ch->willpower++;
-	}
+		if (ch->power_timer == 0)
+		{
+			if(ch->race == race_lookup("faerie") && ch->RBPG < ch->max_RBPG)
+			{
+				ch->RBPG += 1;
+			}
+			if(ch->race == race_lookup("werewolf") && ch->RBPG < ch->max_RBPG)
+			{
+				ch->RBPG += 1;
+			}
+			if(ch->race == race_lookup("human") && ch->RBPG < ch->max_RBPG)
+			{
+				ch->RBPG += 1;
+			}
+		}
 
-        if ( ch->timer > 30 )
-            ch_quit = ch;
+		if(time_info.moon_phase == MOON_FULL && ch->race == race_lookup("werewolf"))
+		{
+			if(ch->RBPG < ch->max_RBPG)
+			{
+				ch->RBPG = ch->max_RBPG;
+			}
+			if(ch->GHB < ch->max_GHB)
+			{
+				ch->GHB = ch->max_GHB;
+			}
+		}
 
-	if ( ch->position >= P_STUN )
-	{
+		if(--ch->torpor_timer > 0)
+		{
+			if(ch->RBPG <= 0)
+			{
+				ch->RBPG = ch->max_RBPG;
+			}
+		}
+		else
+		{
+			update_pos(ch, 0);
+		}
+
+		if(IS_VAMPIRE(ch) && ch->blood_timer == 0 && !IS_SET(ch->act2, ACT2_RP_ING))
+		{
+			if(ch->RBPG > -10)
+			{
+				ch->RBPG -= 1;
+				if(ch->RBPG < 0)
+				{
+					send_to_char("\tOYou will slip into torpor without some blood really soon!!!\tn\n\r", ch);
+				}
+			}
+			else if(!IS_ADMIN(ch))
+			{
+				ch->position = P_TORPOR;
+			}
+
+			ch->blood_timer = 20;
+		}
+		else
+		{
+			if(!IS_NPC(ch))
+			{
+				ch->blood_timer--;
+			}
+		}
+
+		if(IS_ADMIN(ch))
+		{
+			if(ch->RBPG < ch->max_RBPG)
+			{
+				ch->RBPG++;
+			}
+			if(ch->race != race_lookup("faerie") && ch->GHB < ch->max_GHB)
+			{
+				ch->GHB++;
+			}
+			ch->condition[COND_FRENZY] = 0;
+			ch->condition[COND_ANGER] = 0;
+			ch->condition[COND_PAIN] = 0;
+		}
+
+		if(ch->willpower < ch->max_willpower)
+		{
+			ch->willpower++;
+		}
+
+		if ( ch->timer > 30 )
+		{
+			ch_quit = ch;
+		}
+
+		if ( ch->position >= P_STUN )
+		{
 
             /* check to see if we need to go home */
-            if (IS_NPC(ch) && ch->zone != NULL && ch->zone != ch->in_room->area
-            && ch->desc == NULL &&  ch->fighting == NULL 
-	    && !IS_AFFECTED(ch,AFF_CHARM) && number_percent() < 5)
-            {
-            	act("$n wanders on home.",ch,NULL,NULL,TO_ROOM,0);
-            	extract_char(ch,TRUE);
-            	continue;
-            }
+			if (IS_NPC(ch) && ch->zone != NULL && ch->zone != ch->in_room->area
+				&& ch->desc == NULL &&  ch->fighting == NULL
+				&& !IS_AFFECTED(ch,AFF_CHARM) && number_percent() < 5)
+			{
+				act("$n wanders on home.",ch,NULL,NULL,TO_ROOM,0);
+				extract_char(ch,TRUE);
+				continue;
+			}
 
-	    if ( ch->agghealth  < MAX_HEALTH )
-		ch->agghealth  += hit_gain(ch);
-	    else
-		ch->agghealth = MAX_HEALTH;
-	    
-	    if ( ch->health  < MAX_HEALTH )
-		ch->health  += hit_gain(ch);
-	    else
-		ch->health = MAX_HEALTH;
-	}
+			if ( ch->agghealth  < MAX_HEALTH )
+			{
+				ch->agghealth  += hit_gain(ch);
+			}
+			else
+			{
+				ch->agghealth = MAX_HEALTH;
+			}
 
-	if(!IS_NPC(ch))
-	{
-	if(--(ch->pcdata->points) <= 0)
-	{
-	    ch->pcdata->points = HOURS_PER_EXP;
-	    diff = 2;
-	    if(IS_ADMIN(ch))
-		diff = diff*10;
-	    ch->xpgift         += diff;
-	}
-	}
+			if ( ch->health  < MAX_HEALTH )
+			{
+				ch->health  += hit_gain(ch);
+			}
+			else
+			{
+				ch->health = MAX_HEALTH;
+			}
+		}
 
-	if ( ch->position == P_STUN )
-	    update_pos( ch, 0 );
+		if(!IS_NPC(ch))
+		{
+			if(--(ch->pcdata->points) <= 0)
+			{
+				ch->pcdata->points = HOURS_PER_EXP;
+				diff = 2;
+				if(IS_ADMIN(ch))
+				{
+					diff = diff*10;
+				}
+				ch->xpgift         += diff;
+			}
+		}
 
-	gain_condition( ch, COND_HIGH, -4 );
-	gain_condition( ch, COND_TRIPPING, -4 );
-	if(ch->condition[COND_HIGH] > 60 && number_range(1, 100) > 67)
-	{
-	    check_social(ch, "giggle", "");
-	}
-	if(ch->condition[COND_TRIPPING] > 60 && number_range(1, 100) > 90)
-	{
-	    check_social(ch, "groan", "");
-	}
+		if ( ch->position == P_STUN )
+		{
+			update_pos( ch, 0 );
+		}
 
-	gain_condition( ch, COND_ANGER, -4 );
-	gain_condition( ch, COND_FEAR, -4 );
-	gain_condition( ch, COND_PAIN, -4 );
-	gain_condition( ch, COND_FRENZY, -10 );
+		gain_condition( ch, COND_HIGH, -4 );
+		gain_condition( ch, COND_TRIPPING, -4 );
+		if(ch->condition[COND_HIGH] > 60 && number_range(1, 100) > 67)
+		{
+			check_social(ch, "giggle", "");
+		}
+		if(ch->condition[COND_TRIPPING] > 60 && number_range(1, 100) > 90)
+		{
+			check_social(ch, "groan", "");
+		}
 
-	if( IS_SET(ch->comm, COMM_TIPS) )
-		tip_to_char(ch);
+		gain_condition( ch, COND_ANGER, -4 );
+		gain_condition( ch, COND_FEAR, -4 );
+		gain_condition( ch, COND_PAIN, -4 );
+		gain_condition( ch, COND_FRENZY, -10 );
 
-	if ( !IS_NPC(ch) && ch->trust < LEVEL_IMMORTAL )
-	{
-	    OBJ_DATA *obj;
+		if( IS_SET(ch->comm, COMM_TIPS) )
+		{
+			tip_to_char(ch);
+		}
+
+		if ( !IS_NPC(ch) && ch->trust < LEVEL_IMMORTAL )
+		{
+			OBJ_DATA *obj;
 
 	    /* Decrement room light when light source dies. */
-	    if ( ( obj = get_eq_char( ch, WEAR_HOLD ) ) != NULL
-	    &&   obj->item_type == ITEM_LIGHT
-	    &&   obj->value[2] > 0 )
-	    {
-		if ( --obj->value[2] == 0 && ch->in_room != NULL )
-		{
-		    --ch->in_room->light;
-		    act( "$p goes out.", ch, obj, NULL, TO_ROOM, 0 );
-		    act( "$p flickers and goes out.", ch, obj, NULL, TO_CHAR,1);
-		    extract_obj( obj );
-		}
-	 	else if ( obj->value[2] <= 5 && ch->in_room != NULL)
-		    act("$p flickers.",ch,obj,NULL,TO_CHAR,1);
-	    }
+			if ( ( obj = get_eq_char( ch, WEAR_HOLD ) ) != NULL
+				&&   obj->item_type == ITEM_LIGHT
+				&&   obj->value[2] > 0 )
+			{
+				if ( --obj->value[2] == 0 && ch->in_room != NULL )
+				{
+					--ch->in_room->light;
+					act( "$p goes out.", ch, obj, NULL, TO_ROOM, 0 );
+					act( "$p flickers and goes out.", ch, obj, NULL, TO_CHAR,1);
+					extract_obj( obj );
+				}
+				else if ( obj->value[2] <= 5 && ch->in_room != NULL)
+				{
+					act("$p flickers.",ch,obj,NULL,TO_CHAR,1);
+				}
+			}
 
-	    if ( !IS_NPC(ch) && !IS_ADMIN(ch) && ++ch->timer >= 12 )
-	    {
-		if ( ch->was_in_room == NULL && ch->in_room != NULL )
-		{
-		    ch->was_in_room = ch->in_room;
-		    if ( ch->fighting != NULL )
-			stop_fighting( ch, TRUE );
-		    act( "$n disappears into the void.", ch, NULL, NULL, TO_ROOM, 0 );
-		    send_to_char( "You disappear into the void.\n\r", ch );
-		    if (ch->trust > 0)
-		        save_char_obj( ch );
-		    char_from_room( ch );
-		    char_to_room( ch, get_room_index( ROOM_VNUM_LIMBO ) );
-		}
-	    }
+			if ( !IS_NPC(ch) && !IS_ADMIN(ch) && ++ch->timer >= 12 )
+			{
+				if ( ch->was_in_room == NULL && ch->in_room != NULL )
+				{
+					ch->was_in_room = ch->in_room;
+					if ( ch->fighting != NULL )
+					{
+						stop_fighting( ch, TRUE );
+					}
+					act( "$n disappears into the void.", ch, NULL, NULL, TO_ROOM, 0 );
+					send_to_char( "You disappear into the void.\n\r", ch );
+					if (ch->trust > 0)
+					{
+						save_char_obj( ch );
+					}
+					char_from_room( ch );
+					char_to_room( ch, get_room_index( ROOM_VNUM_LIMBO ) );
+				}
+			}
 
 	/* Deal with dead characters */
-	    if ( ch->position == P_DEAD )
-	    {
-	    raw_kill(ch, FALSE);
-	    continue;
-	    }
+			if ( ch->position == P_DEAD )
+			{
+				raw_kill(ch, FALSE);
+				continue;
+			}
 
-	    if(ch->position == P_TORPOR && IS_VAMPIRE(ch)
-		&& (ch->condition[COND_THIRST] <= 0 && ch->RBPG == 0) )
-		ch->position = P_DEAD;
+			if(ch->position == P_TORPOR && IS_VAMPIRE(ch) && (ch->condition[COND_THIRST] <= 0 && ch->RBPG == 0) )
+			{
+				ch->position = P_DEAD;
+			}
 
-	    gain_condition( ch, COND_DRUNK,  -1 );
-	    if(ch->condition[COND_HIGH] > 10)
-	    {
-	        gain_condition( ch, COND_FULL, ch->size > SIZE_MEDIUM ? -10 : -6 );
-	        gain_condition( ch, COND_HUNGER, ch->size > SIZE_MEDIUM ? -6 : -4);
-	    }
-	    else
-	    {
-	        gain_condition( ch, COND_FULL, ch->size > SIZE_MEDIUM ? -4 : -2 );
-	        gain_condition( ch, COND_HUNGER, ch->size > SIZE_MEDIUM ? -2 : -1);
-	    }
-	    gain_condition( ch, COND_THIRST, -1 );
-	    gain_condition( ch, COND_HIGH, -1 );
-	    gain_condition( ch, COND_TRIPPING, -1 );
-	}
-
-	for ( paf = ch->affected; paf != NULL; paf = paf_next )
-	{
-	    paf_next	= paf->next;
-	    if ( paf->duration > 0 )
-	    {
-		paf->duration--;
-		if (number_range(0,4) == 0 && paf->level > 0)
-		  paf->level--;  /* spell strength fades with time */
-            }
-	    else if ( paf->duration < 0 )
-		;
-	    else
-	    {
-		if ( paf_next == NULL
-		||   paf_next->type != paf->type
-		||   paf_next->duration > 0 )
-		{
-		    if ( paf->type > 0 && skill_table[paf->type].msg_off )
-		    {
-			send_to_char( skill_table[paf->type].msg_off, ch );
-			send_to_char( "\n\r", ch );
-		    }
+			gain_condition( ch, COND_DRUNK,  -1 );
+			if(ch->condition[COND_HIGH] > 10)
+			{
+				gain_condition( ch, COND_FULL, ch->size > SIZE_MEDIUM ? -10 : -6 );
+				gain_condition( ch, COND_HUNGER, ch->size > SIZE_MEDIUM ? -6 : -4);
+			}
+			else
+			{
+				gain_condition( ch, COND_FULL, ch->size > SIZE_MEDIUM ? -4 : -2 );
+				gain_condition( ch, COND_HUNGER, ch->size > SIZE_MEDIUM ? -2 : -1);
+			}
+			gain_condition( ch, COND_THIRST, -1 );
+			gain_condition( ch, COND_HIGH, -1 );
+			gain_condition( ch, COND_TRIPPING, -1 );
 		}
-	  
-		affect_remove( ch, paf );
-	    }
-	}
+
+		for ( paf = ch->affected; paf != NULL; paf = paf_next )
+		{
+			paf_next	= paf->next;
+			if ( paf->duration > 0 )
+			{
+				paf->duration--;
+				if (number_range(0,4) == 0 && paf->level > 0)
+				{
+		  			paf->level--;  /* spell strength fades with time */
+				}
+			}
+			else if ( paf->duration < 0 )
+				;
+			else
+			{
+				if ( paf_next == NULL
+					||   paf_next->type != paf->type
+					||   paf_next->duration > 0 )
+				{
+					if ( paf->type > 0 && skill_table[paf->type].msg_off )
+					{
+						send_to_char( skill_table[paf->type].msg_off, ch );
+						send_to_char( "\n\r", ch );
+					}
+				}
+
+				affect_remove( ch, paf );
+			}
+		}
 
 	/*
 	 * Careful with the damages here,
@@ -1138,108 +1205,113 @@ void char_update( void )
 	 *   as it may be lethal damage (on NPC).
 	 */
 
-        if (is_affected(ch, gsn_plague) && ch != NULL)
-        {
-            AFFECT_DATA *af, plague;
-            CHAR_DATA *vch;
-            int dam;
+		if (is_affected(ch, gsn_plague) && ch != NULL)
+		{
+			AFFECT_DATA *af, plague;
+			CHAR_DATA *vch;
+			int dam = 0;
 
-	    if (ch->in_room == NULL)
-		continue;
- 
-	    act("$n writhes in agony as plague sores erupt from $s skin.", ch,NULL,NULL,TO_ROOM,0);
-	    send_to_char("You writhe in agony from the plague.\n\r",ch);
-            for ( af = ch->affected; af != NULL; af = af->next )
-            {
-            	if (af->type == gsn_plague)
-                    break;
-            }
-        
-            if (af == NULL)
-            {
-            	REMOVE_BIT(ch->affected_by,AFF_PLAGUE);
-            	continue;
-            }
-        
-            if (af->level == 1)
-            	continue;
+			if (ch->in_room == NULL)
+			{
+				continue;
+			}
 
-	    	plague.where		= TO_AFFECTS;
-            plague.type 		= gsn_plague;
-            plague.level 		= af->level - 1;
-            plague.duration 	= number_range(1,2 * plague.level);
-            plague.location		= APPLY_STR;
-            plague.modifier 	= -5;
-            plague.bitvector 	= AFF_PLAGUE;
-        
-            for ( vch = ch->in_room->people; vch != NULL; vch = vch->next_in_room)
-            {
-                if (!saves_spell(1,vch,DAM_DISEASE) 
-		&&  !IS_ADMIN(vch)
-            	&&  !IS_AFFECTED(vch,AFF_PLAGUE) && number_bits(4) == 0)
-            	{
-            	    send_to_char("You feel hot and feverish.\n\r",vch);
-            	    act("$n shivers and looks very ill.", vch,NULL,NULL,TO_ROOM,0);
-            	    affect_join(vch,&plague);
-            	}
-            }
+			act("$n writhes in agony as plague sores erupt from $s skin.", ch,NULL,NULL,TO_ROOM,0);
+			send_to_char("You writhe in agony from the plague.\n\r",ch);
+			for ( af = ch->affected; af != NULL; af = af->next )
+			{
+				if (af->type == gsn_plague)
+				{
+					break;
+				}
+			}
 
-	    dam = UMIN(ch->trust,2);
-	    damage( ch, ch, dam, gsn_plague,DAM_DISEASE,FALSE,0,-1);
-        }
-	else if ( IS_AFFECTED(ch, AFF_POISON) && ch != NULL
-	     &&   !IS_AFFECTED(ch,AFF_SLOW))
+			if (af == NULL)
+			{
+				REMOVE_BIT(ch->affected_by,AFF_PLAGUE);
+				continue;
+			}
 
-	{
-	    AFFECT_DATA *poison;
+			if (af->level == 1)
+			{
+				continue;
+			}
 
-	    poison = affect_find(ch->affected,gsn_poison);
+			plague.where		= TO_AFFECTS;
+			plague.type 		= gsn_plague;
+			plague.level 		= af->level - 1;
+			plague.duration 	= number_range(1,2 * plague.level);
+			plague.location		= APPLY_STR;
+			plague.modifier 	= -5;
+			plague.bitvector 	= AFF_PLAGUE;
 
-	    if (poison != NULL)
-	    {
-	        act( "$n shivers and suffers.", ch, NULL, NULL, TO_ROOM, 0 );
-	        send_to_char( "You shiver and suffer.\n\r", ch );
-	        damage(ch,ch,poison->level/10 + 1,gsn_poison,
-		    DAM_POISON,FALSE,0,-1);
-	    }
+			for ( vch = ch->in_room->people; vch != NULL; vch = vch->next_in_room)
+			{
+				if (!saves_spell(1,vch,DAM_DISEASE)
+					&&  !IS_ADMIN(vch)
+					&&  !IS_AFFECTED(vch,AFF_PLAGUE) && number_bits(4) == 0)
+				{
+					send_to_char("You feel hot and feverish.\n\r",vch);
+					act("$n shivers and looks very ill.", vch,NULL,NULL,TO_ROOM,0);
+					affect_join(vch,&plague);
+				}
+			}
+
+			dam = UMIN(ch->trust,2);
+			damage( ch, ch, dam, gsn_plague,DAM_DISEASE,FALSE,0,-1);
+		}
+		else if ( IS_AFFECTED(ch, AFF_POISON) && ch != NULL && !IS_AFFECTED(ch,AFF_SLOW))
+		{
+			AFFECT_DATA *poison;
+
+			poison = affect_find(ch->affected,gsn_poison);
+
+			if (poison != NULL)
+			{
+				act( "$n shivers and suffers.", ch, NULL, NULL, TO_ROOM, 0 );
+				send_to_char( "You shiver and suffer.\n\r", ch );
+				damage(ch,ch,poison->level/10 + 1,gsn_poison,
+					DAM_POISON,FALSE,0,-1);
+			}
+		}
+		else if ( ch->position == P_INCAP && number_range(0,1) == 0)
+		{
+			damage( ch, ch, 1, TYPE_UNDEFINED, DAM_NONE,FALSE,0,-1);
+		}
+		else if ( ch->position == P_MORT )
+		{
+			damage( ch, ch, 1, TYPE_UNDEFINED, DAM_NONE,FALSE,0,-1);
+		}
 	}
-
-	else if ( ch->position == P_INCAP && number_range(0,1) == 0)
-	{
-	    damage( ch, ch, 1, TYPE_UNDEFINED, DAM_NONE,FALSE,0,-1);
-	}
-	else if ( ch->position == P_MORT )
-	{
-	    damage( ch, ch, 1, TYPE_UNDEFINED, DAM_NONE,FALSE,0,-1);
-	}
-    }
 
     /*
      * Autosave and autoquit.
      * Check that these chars still exist.
      */
-    for ( ch = char_list; ch != NULL; ch = ch_next )
-    {
-        ch_next = ch->next;
+	for ( ch = char_list; ch != NULL; ch = ch_next )
+	{
+		ch_next = ch->next;
 
-	if (ch->desc != NULL && ch->desc->descriptor % 30 == save_number)
-	    save_char_obj(ch);
+		if (ch->desc != NULL && ch->desc->descriptor % 30 == save_number)
+		{
+			save_char_obj(ch);
+		}
 
-        if ( ch == ch_quit )
-            do_function(ch, &do_quit, "" );
-    }
+		if ( ch == ch_quit )
+		{
+			do_function(ch, &do_quit, "" );
+		}
+	}
 
-    return;
+	return;
 }
-
-
 
 /*
  * Update all objs.
  * This function is performance sensitive.
  */
 void obj_update( void )
-{   
+{
     OBJ_DATA *obj;
     OBJ_DATA *obj_next;
     AFFECT_DATA *paf, *paf_next;
@@ -1282,7 +1354,7 @@ void obj_update( void )
 			    rch = obj->carried_by;
 			    act(skill_table[paf->type].msg_obj, rch,obj,NULL,TO_CHAR,1);
 			}
-			if (obj->in_room != NULL 
+			if (obj->in_room != NULL
 			&& obj->in_room->people != NULL)
 			{
 			    rch = obj->in_room->people;
@@ -1382,10 +1454,10 @@ void obj_update( void )
 	case ITEM_CORPSE_NPC: message = "$p decays and rots away."; break;
 	case ITEM_CORPSE_PC:  message = "$p decays and rots away."; break;
 	case ITEM_FOOD:       message = "$p starts to stink and has to be thrown out."; break;
-	case ITEM_POTION:     message = "$p has evaporated from disuse.";	
+	case ITEM_POTION:     message = "$p has evaporated from disuse.";
 								break;
 	case ITEM_PORTAL:     message = "$p fades out of existence."; break;
-	case ITEM_CONTAINER: 
+	case ITEM_CONTAINER:
 	    message = "$p develops holes and becomes useless.";
 	    break;
 	case ITEM_CLOTHING:   message = "$p becomes too threadbare to be worn.";
@@ -1394,7 +1466,7 @@ void obj_update( void )
 
 	if ( obj->carried_by != NULL )
 	{
-	    if (IS_NPC(obj->carried_by) 
+	    if (IS_NPC(obj->carried_by)
 	    &&  obj->carried_by->pIndexData->pShop != NULL)
 		obj->carried_by->cents += obj->cost/5;
 	    else
@@ -1738,7 +1810,7 @@ OBJ_DATA *make_newspapers ()
 	char buf[MSL]={'\0'};
 	char tmp[MSL]={'\0'};
 	int i = 0;
-	
+
 	for(pnews = paper_list; pnews; pnews = pnews->next)
 	{
 		obj = create_object(get_obj_index(OBJ_VNUM_NEWSPAPER));
@@ -2068,7 +2140,7 @@ void msdp_update( void )
             {
                 char skill_buf[MAX_STRING_LENGTH];
                 sprintf( skill_buf, "%c%s%c%d",
-                    (char)MSDP_VAR, skill_table[paf->type].name, 
+                    (char)MSDP_VAR, skill_table[paf->type].name,
                     (char)MSDP_VAL, paf->duration );
                 strcat( buf, skill_buf );
             }
@@ -2078,8 +2150,8 @@ void msdp_update( void )
         }
     }
 
-    /* Ideally this should be called once at startup, and again whenever 
-     * someone leaves or joins the mud.  But this works, and it keeps the 
+    /* Ideally this should be called once at startup, and again whenever
+     * someone leaves or joins the mud.  But this works, and it keeps the
      * snippet simple.  Optimise as you see fit.
      */
     MSSPSetPlayers( PlayerCount );

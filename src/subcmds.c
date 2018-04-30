@@ -91,7 +91,7 @@ int maker_creation(CHAR_DATA *ch, char *argument)
 	int fail1 = 0;
 	int fail2 = 0;
 
-	
+
 
 	smash_tilde( argument );
 	argument = one_argument(argument, arg);
@@ -340,7 +340,7 @@ int maker_type(CHAR_DATA *ch, char *argument)
 {
 	int type = 0;
 
-	
+
 
 	if((type = flag_value(type_flags, argument)) == NO_FLAG)
 	{
@@ -684,7 +684,7 @@ int sales_markup(CHAR_DATA *ch, char *argument)
 int mayor_tax(CHAR_DATA *ch, char *argument)
 {
 
-	
+
 
 	if(IS_NULLSTR(argument))
 	{
@@ -765,7 +765,7 @@ int mayor_appoint(CHAR_DATA *ch, char *argument)
 
 	if(!IS_SET(ch->act2, ACT2_RP_ING)) ch->xp_job_acts++;
 
-	snprintf(buf, sizeof(buf), position);
+	snprintf(buf, sizeof(buf), "%s", position);
 	PURGE_DATA(position);
 	position = str_dup(vch->name);
 	vch->backgrounds[FAME_STATUS] += office_table[o].fame;
@@ -903,7 +903,7 @@ int job_commands(CHAR_DATA *ch, char *argument)
 	int col = 0;
 	int jn = 0;
 
-	
+
 
 	if(ch->profession == NULL || (jn = job_lookup(ch->profession)) < 0)
 	{
@@ -929,7 +929,7 @@ int job_advance(CHAR_DATA *ch, char *argument)
 	int cost = 0;
 	int jn = 0;
 
-	
+
 
 	if(ch->profession == NULL || (jn = job_lookup(ch->profession)) < 0)
 	{
@@ -1083,7 +1083,7 @@ int job_nohire (CHAR_DATA *ch, char *argument)
 
 int job_quit (CHAR_DATA *ch, char *argument)
 {
-	
+
 
 	if(ch->employer > 0)
 	{
@@ -1125,14 +1125,14 @@ int pharm_fill_script (CHAR_DATA *ch, char *argument)
 }
 
 /*
- * Police Constable Commands 
+ * Police Constable Commands
  */
 int police_arrest (CHAR_DATA *ch, char *argument)
 {
 	CHAR_DATA *victim;
 	int fail = 0;
 
-	
+
 
 	if(IS_NULLSTR(argument))
 	{
@@ -1202,7 +1202,7 @@ int police_breathalise (CHAR_DATA *ch, char *argument)
 	CHAR_DATA *victim;
 	int fail = 0;
 
-	
+
 
 	if(IS_NULLSTR(argument))
 	{
@@ -1246,7 +1246,7 @@ int police_background (CHAR_DATA *ch, char *argument)
 	CHAR_DATA *victim;
 	int fail = 0;
 
-	
+
 
 	if(IS_NULLSTR(argument))
 	{
@@ -1475,7 +1475,7 @@ int crim_whack (CHAR_DATA *ch, char *argument)
 	CHAR_DATA *victim;
 	int fail = 0;
 
-	
+
 
 	if(IS_NULLSTR(argument))
 	{
@@ -1533,7 +1533,7 @@ int crim_whack (CHAR_DATA *ch, char *argument)
 
 int crim_hotwire (CHAR_DATA *ch, char *argument)
 {
-	
+
 
 	send_to_char("Hotwire is coming with vehicles.\n\r", ch);
 
@@ -1545,7 +1545,7 @@ int crim_stickup (CHAR_DATA *ch, char *argument)
 	CHAR_DATA *victim;
 	int fail = 0;
 
-	
+
 
 	if(IS_NULLSTR(argument))
 	{
@@ -1627,7 +1627,7 @@ int crim_case(CHAR_DATA *ch, char *argument)
 	CHAR_DATA *victim;
 	int fail = 0;
 
-	
+
 
 	if(IS_NULLSTR(argument))
 	{
@@ -1758,7 +1758,7 @@ void do_teach(CHAR_DATA *ch, char *argument)
  */
 int reporter_subject(CHAR_DATA *ch, char *argument)
 {
-	
+
 
 	parse_note(ch, (char *)Format("subject %s", argument), NOTE_ARTICLE);
 
@@ -1767,7 +1767,7 @@ int reporter_subject(CHAR_DATA *ch, char *argument)
 
 int reporter_category(CHAR_DATA *ch, char *argument)
 {
-	
+
 
 	parse_note(ch, (char *)Format("to %s", argument), NOTE_ARTICLE);
 
@@ -1776,7 +1776,7 @@ int reporter_category(CHAR_DATA *ch, char *argument)
 
 int reporter_body(CHAR_DATA *ch, char *argument)
 {
-	
+
 
 	parse_note(ch, (char *)Format("body %s", argument), NOTE_ARTICLE);
 
@@ -1787,7 +1787,7 @@ int reporter_post(CHAR_DATA *ch, char *argument)
 {
 	bool note_there = FALSE;
 
-	
+
 
 	if(ch->pnote) note_there = TRUE;
 	parse_note(ch, (char *)Format("post %s", argument), NOTE_ARTICLE);
@@ -1810,8 +1810,6 @@ int muso_jam(CHAR_DATA *ch, char *argument)
 	CHAR_DATA *vch;
 	bool no_go = FALSE;
 
-	
-
 	/* Start playing... initiate music stuff. */
 	if(IS_NULLSTR(argument))
 	{
@@ -1833,7 +1831,9 @@ int muso_jam(CHAR_DATA *ch, char *argument)
 		for(vch = ch->in_room->people;vch;vch = vch->next_in_room)
 		{
 			if(vch != ch && IS_SET(ch->comm, COMM_JAM_LEAD))
+			{
 				no_go = TRUE;
+			}
 		}
 
 		send_to_char("There seems to be a band only jam going on already.\n\r", ch);
@@ -1847,9 +1847,13 @@ int muso_jam(CHAR_DATA *ch, char *argument)
 			for(vch = ch->in_room->people; vch; vch = vch->next_in_room)
 			{
 				if(is_same_group(vch, ch))
+				{
 					act("$n nods to you and the band and you start the set.", ch, NULL, vch, TO_VICT, 0);
+				}
 				else
+				{
 					act("$n nods to the band and starts the set.", ch, NULL, vch, TO_VICT, 0);
+				}
 			}
 			SET_BIT(ch->in_room->room_flags, ROOM_JAMMIN);
 			SET_BIT(ch->comm, COMM_JAMMIN);
@@ -1869,7 +1873,9 @@ int muso_jam(CHAR_DATA *ch, char *argument)
 		send_to_char("You end your set.\n\r", ch);
 		act("$n steps out of the jam.", ch, NULL, NULL, TO_ROOM, 0);
 		if(IS_SET(ch->comm, COMM_JAMMIN))
+		{
 			REMOVE_BIT(ch->comm, COMM_JAMMIN);
+		}
 		if(IS_SET(ch->comm, COMM_JAM_LEAD))
 		{
 			REMOVE_BIT(ch->comm, COMM_JAM_LEAD);
@@ -2081,9 +2087,9 @@ int influence_advance(CHAR_DATA *ch, char *argument)
 		return FALSE;
 	}
 
-	if(ch->influences[in] == 0) 
+	if(ch->influences[in] == 0)
 		cost = 7;
-	else 
+	else
 		cost = ch->influences[in] * 5;
 
 	if(ch->exp < cost)
@@ -2146,7 +2152,7 @@ int church_collection(CHAR_DATA *ch, char *argument)
 {
 	int fail = dice_rolls(ch, get_curr_stat(ch, STAT_CHA) + ch->ability[LEADERSHIP].value, 7);
 
-	
+
 
 	if(fail > 0)
 	{
@@ -2172,10 +2178,8 @@ int church_collection(CHAR_DATA *ch, char *argument)
 
 int church_research(CHAR_DATA *ch, char *argument)
 {
-	int diff = 0, fail = 0;
+	int fail = 0;
 	NOTE_DATA *pbg;
-
-	
 
 	/* 5 rolls making up an extended research attempt. */
 
@@ -2185,7 +2189,9 @@ int church_research(CHAR_DATA *ch, char *argument)
 		return FALSE;
 	}
 	else
-		pbg = find_knowledge_keyword(argument);
+		{
+			pbg = find_knowledge_keyword(argument);
+		}
 
 	if(pbg == NULL)
 	{
@@ -2193,7 +2199,6 @@ int church_research(CHAR_DATA *ch, char *argument)
 		return TRUE;
 	}
 
-	diff = atoi(pbg->subject);
 	fail = UMIN(dice_rolls(ch, get_curr_stat(ch, STAT_INT)
 			+ ch->ability[OCCULT].value, 7), 4 + ch->influences[INFL_CHURCH]);
 	fail = fail + UMIN(dice_rolls(ch, get_curr_stat(ch, STAT_INT)
@@ -2225,7 +2230,7 @@ int church_tipoff(CHAR_DATA *ch, char *argument)
 	int fail = dice_rolls(ch, get_curr_stat(ch, STAT_CHA) + ch->ability[SUBTERFUGE].value, 7);
 	CHAR_DATA *vch;
 
-	
+
 
 	if((vch = get_char_world(ch, argument)) == NULL)
 	{
@@ -2272,8 +2277,6 @@ int church_findrelic(CHAR_DATA *ch, char *argument)
 	int  col = 0;
 	int nMatch = 0;
 
-	
-
 	buf1 = new_buf();
 	found   = FALSE;
 	nMatch      = 0;
@@ -2295,8 +2298,11 @@ int church_findrelic(CHAR_DATA *ch, char *argument)
 				send_to_char("You know of the following relics which exist:\n\r", ch);
 				add_buf( buf1, (char *)Format("%-17.16s", capitalize( pObjIndex->short_descr )) );
 				if ( ++col % 3 == 0 )
+				{
 					add_buf( buf1, "\n\r" );
-				if(pObjIndex->weight > lsize) {
+				}
+				if(pObjIndex->weight > lsize)
+				{
 					lsize = pObjIndex->weight;
 					largest = pObjIndex->vnum;
 				}
@@ -2325,7 +2331,7 @@ int criminal_racket(CHAR_DATA *ch, char *argument)
 {
 	int fail = dice_rolls(ch, get_curr_stat(ch, STAT_MAN) + ch->ability[LARCENY].value, 7);
 
-	
+
 
 	if(fail > 0)
 	{
@@ -2357,7 +2363,7 @@ int criminal_scout(CHAR_DATA *ch, char *argument)
 	int inf = 0;
 	int fail = dice_rolls(ch, get_curr_stat(ch, STAT_CHA) + ch->ability[STREETWISE].value, 7);
 
-	
+
 
 	if(IS_NULLSTR(argument))
 	{
@@ -2417,7 +2423,7 @@ int political_raise(CHAR_DATA *ch, char *argument)
 {
 	int fail = dice_rolls(ch, get_curr_stat(ch, STAT_CHA) + ch->ability[LEADERSHIP].value, 7);
 
-	
+
 
 	if(fail > 0)
 	{
@@ -2450,7 +2456,7 @@ int political_campaign(CHAR_DATA *ch, char *argument)
 	int i = 0,j = 0;
 	int fail = dice_rolls(ch, get_curr_stat(ch, STAT_MAN) + ch->ability[POLITICS].value, 7);
 
-	
+
 
 	argument = one_argument(argument, arg);
 
@@ -2680,7 +2686,7 @@ int police_warrant(CHAR_DATA *ch, char *argument)
 	char buf[MSL]={'\0'};
 	int UpOrDown = 0;
 
-	
+
 
 	if(IS_NULLSTR(argument))
 	{
@@ -2731,7 +2737,7 @@ int police_apb(CHAR_DATA *ch, char *argument)
 	int fail = dice_rolls(ch, get_curr_stat(ch, STAT_MAN) + ch->ability[LAW].value, 7);
 	CHAR_DATA *victim;
 
-	
+
 
 	if(IS_NULLSTR(argument))
 	{
@@ -2771,8 +2777,6 @@ int judicial_sentence(CHAR_DATA *ch, char *argument)
 	CHAR_DATA *victim;
 	char buf[MSL]={'\0'};
 	int UpOrDown = 0;
-
-	
 
 	if(IS_NULLSTR(argument))
 	{
@@ -2822,7 +2826,7 @@ int judicial_pardon(CHAR_DATA *ch, char *argument)
 	int fail = dice_rolls(ch, get_curr_stat(ch, STAT_MAN) + ch->ability[LAW].value, 7);
 	CHAR_DATA *victim;
 
-	
+
 
 	if(IS_NULLSTR(argument))
 	{
@@ -2862,7 +2866,7 @@ int media_articles(CHAR_DATA *ch, char *argument)
 {
 	int fail = dice_rolls(ch, get_curr_stat(ch, STAT_MAN) + ch->ability[EXPRESSION].value, 7);
 
-	
+
 
 	if(fail > 0)
 	{
@@ -2888,7 +2892,7 @@ int media_suppress(CHAR_DATA *ch, char *argument)
 	int anum = 0, vnum = 0;
 	NOTE_DATA *pnote;
 
-	
+
 
 	pnote = news_list;
 
@@ -2939,7 +2943,7 @@ int media_promote(CHAR_DATA *ch, char *argument)
 	int anum = 0, vnum = 0;
 	NOTE_DATA *pnote;
 
-	
+
 
 	if(IS_NULLSTR(argument) || !is_number(argument))
 	{
@@ -2987,7 +2991,7 @@ int economic_raise(CHAR_DATA *ch, char *argument)
 {
 	int success = 0;
 
-	
+
 
 	success = dice_rolls(ch, get_curr_stat(ch, STAT_CHA) + ch->ability[FINANCE].value, 7);
 
@@ -3019,7 +3023,7 @@ int economic_market(CHAR_DATA *ch, char *argument)
 	char buf[MSL]={'\0'};
 	int UpOrDown = 0;
 
-	
+
 
 	success = dice_rolls(ch, get_curr_stat(ch, STAT_MAN) + ch->ability[FINANCE].value, 7);
 
@@ -3081,7 +3085,7 @@ int economic_trade(CHAR_DATA *ch, char *argument)
 	char buf[MSL]={'\0'};
 	bool Buy = FALSE;
 
-	
+
 
 	if(IS_NULLSTR(argument))
 	{
@@ -3221,7 +3225,7 @@ int scientific_tipoff(CHAR_DATA *ch, char *argument)
 	int power_stat = 0;
 	int power_ability = 0;
 
-	
+
 
 	power_stat = get_curr_stat(ch, STAT_MAN);
 	power_ability = ch->ability[SUBTERFUGE].value;
@@ -3884,7 +3888,7 @@ int newspaper_place(CHAR_DATA *ch, char *argument)
 
 int newspaper_save(CHAR_DATA *ch, char *arg)
 {
-	
+
 	save_papers();
 	send_to_char("Papers saved.\n\r", ch);
 	return TRUE;
@@ -3965,7 +3969,7 @@ int smarket_commands(CHAR_DATA *ch, char *argument)
 	int cmd = 0;
 	int col = 0;
 
-	
+
 
 	col = 0;
 	send_to_char("Stock Market Commands.\n\rSyntax: \tCsmarket [command] [arguments]\tn\n\r", ch);
@@ -4024,7 +4028,7 @@ int smarket_list(CHAR_DATA *ch, char *argument)
 	STOCKS *stock;
 	int count = 0;
 
-	
+
 
 	for(stock = stock_list; stock; stock = stock->next)
 	{
@@ -4042,7 +4046,7 @@ int smarket_show (CHAR_DATA *ch, char *arg)
 	STOCKS *stock = NULL;
 	STOCKS *tmp;
 
-	
+
 
 	if(IS_NULLSTR(arg))
 	{
@@ -4298,7 +4302,7 @@ int smarket_price(CHAR_DATA *ch, char *argument)
 
 int smarket_save(CHAR_DATA *ch, char *arg)
 {
-	
+
 	save_stocks();
 	send_to_char("Stock market saved.\n\r", ch);
 	return TRUE;
@@ -4393,7 +4397,7 @@ int home_commands(CHAR_DATA *ch, char *argument, int type, ORG_DATA *org)
 	int cmd = 0;
 	int col = 0;
 
-	
+
 
 	col = 0;
 	send_to_char("Available commands for building are:\n\r", ch);
@@ -4413,7 +4417,7 @@ int home_prices(CHAR_DATA *ch, char *argument, int type, ORG_DATA *org)
 	int i = 0;
 	long cost = 0;
 
-	
+
 
 	send_to_char(Format("+ %30s + %15s + %20s +\n\r", "", "", ""), ch);
 	send_to_char("+--------------------------------------------------\n\r",ch);

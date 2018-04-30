@@ -1594,7 +1594,7 @@ void do_olc( CHAR_DATA *ch, char *argument )
 		do_help( ch, "olc" );
 		return;
 	}
- 
+
 	/* Search Table and Dispatch Command. */
 	for ( cmd = 0; editor_table[cmd].name != NULL; cmd++ )
 	{
@@ -1715,7 +1715,7 @@ void do_redit( CHAR_DATA *ch, char *argument )
 	else
 	{
 		pRoom2 = get_room_index(atoi(arg1));
-	
+
 		if ( (pRoom2 != NULL) && IS_BUILDER(ch,pRoom2->area) )
 		{
 		   char_from_room( ch );
@@ -1727,7 +1727,7 @@ void do_redit( CHAR_DATA *ch, char *argument )
 		{
 		   send_to_char("Either you do not have authority to edit that room, or it does not exist..\n\r",ch);
 		   return;
-		}   
+		}
 	}
 
 	if ( !IS_BUILDER( ch, pRoom->area ) )
@@ -2190,7 +2190,7 @@ void do_hedit( CHAR_DATA *ch, char *argument )
 	}
 	else if(arg1[0] !='\0')
 	{
-	
+
 	if ( (pHelp = get_help( arg1 )) == NULL )
 	{
 		send_to_char( "HEdit:  That help does not exist.\n\r", ch );
@@ -2286,7 +2286,7 @@ void do_kbedit( CHAR_DATA *ch, char *argument, int type )
 	}
 	else if(arg1[0] !='\0')
 	{
-	
+
 	if ( (pNote = get_kbg( arg1, type )) == NULL )
 	{
 		if(type == NOTE_KNOWLEDGE)
@@ -2321,7 +2321,7 @@ void display_resets( CHAR_DATA *ch )
 	int 		iReset = 0;
 
 	EDIT_ROOM(ch, pRoom);
-	
+
 	send_to_char(" No.   Loads   Description       Location         Vnum   Mx Mn Description\n\r", ch);
 	send_to_char("==== ======== ============= =================== ======== ===== ===========\n\r", ch);
 
@@ -2437,7 +2437,7 @@ void display_resets( CHAR_DATA *ch )
 	case 'D':
 		pRoomIndex = get_room_index( pReset->arg1 );
 		strncat( final, Format("R[%5d] %s door of %-19.19s reset to %s\n\r",
-				pReset->arg1, capitalize( dir_name[ pReset->arg2 ] ), pRoomIndex->name, flag_string( door_resets, pReset->arg3 )), 
+				pReset->arg1, capitalize( dir_name[ pReset->arg2 ] ), pRoomIndex->name, flag_string( door_resets, pReset->arg3 )),
 				sizeof(final) - strlen(final) - 1 );
 
 		break;
@@ -4023,7 +4023,7 @@ bool hide_note (CHAR_DATA *ch, NOTE_DATA *pnote)
 		else
 		return TRUE;
 	}
-	
+
 	if (pnote->date_stamp <= last_read)
 	return TRUE;
 
@@ -4069,21 +4069,21 @@ void parse_note( CHAR_DATA *ch, char *argument, int type )
 
 	switch(type)
 	{
-	default:
+		default:
 		return;
-	case NOTE_NOTE:
+		case NOTE_NOTE:
 		list = &note_list;
 		list_name = "notes";
 		break;
-	case NOTE_BACKGROUND:
+		case NOTE_BACKGROUND:
 		list = &bg_list;
 		list_name = "backgrounds";
 		break;
-	case NOTE_KNOWLEDGE:
+		case NOTE_KNOWLEDGE:
 		list = &know_list;
 		list_name = "knowledges";
 		break;
-	case NOTE_ARTICLE:
+		case NOTE_ARTICLE:
 		list = &news_list;
 		list_name = "articles";
 		break;
@@ -4111,7 +4111,7 @@ void parse_note( CHAR_DATA *ch, char *argument, int type )
 				if (!hide_note(ch,pnote))
 				{
 					send_to_char( Format("From: %s\n\rTo: %s\n\rDate: %s\n\rMessage Number: [%3d]\n\rSubject Line:%s\n\r",
-							pnote->sender, pnote->to_list, pnote->date, vnum, pnote->subject), ch );
+						pnote->sender, pnote->to_list, pnote->date, vnum, pnote->subject), ch );
 					page_to_char( pnote->text, ch );
 					update_read(ch,pnote);
 					return;
@@ -4195,53 +4195,53 @@ void parse_note( CHAR_DATA *ch, char *argument, int type )
 
 		}
 
-	for ( pnote = *list; pnote != NULL; pnote = pnote->next )
-	{
-		if ( is_note_to( ch, pnote ) )
+		for ( pnote = *list; pnote != NULL; pnote = pnote->next )
 		{
-			if(type == NOTE_NOTE)
+			if ( is_note_to( ch, pnote ) )
 			{
-				send_to_char( Format("\tY[%3d%s]  \tW|\tY %-15s \tW|\tY %-11s \tW|\tY %s\tn\n\r", vnum, hide_note(ch,pnote) ? " " : "N", pnote->sender, pnote->to_list, pnote->subject), ch );
+				if(type == NOTE_NOTE)
+				{
+					send_to_char( Format("\tY[%3d%s]  \tW|\tY %-15s \tW|\tY %-11s \tW|\tY %s\tn\n\r", vnum, hide_note(ch,pnote) ? " " : "N", pnote->sender, pnote->to_list, pnote->subject), ch );
+				}
+				else if(type == NOTE_BACKGROUND || type == NOTE_KNOWLEDGE)
+				{
+					send_to_char( Format("\tY%3d%s    \tW|\tY %s\tn\n\r", vnum, hide_note(ch,pnote) ? " " : "N", pnote->to_list), ch );
+				}
+				else if(type == NOTE_ARTICLE)
+				{
+					send_to_char( Format("\tY %6d \tW|\tY %s  \tW|\tY %s: %s %s\tn\n\r", vnum, pnote->sender, pnote->to_list, pnote->subject, pnote->successes ? " (\tYSuppressed\tn)" : ""), ch );
+				}
+				vnum++;
 			}
-			else if(type == NOTE_BACKGROUND || type == NOTE_KNOWLEDGE)
-			{
-				send_to_char( Format("\tY%3d%s    \tW|\tY %s\tn\n\r", vnum, hide_note(ch,pnote) ? " " : "N", pnote->to_list), ch );
-			}
-			else if(type == NOTE_ARTICLE)
-			{
-				send_to_char( Format("\tY %6d \tW|\tY %s  \tW|\tY %s: %s %s\tn\n\r", vnum, pnote->sender, pnote->to_list, pnote->subject, pnote->successes ? " (\tYSuppressed\tn)" : ""), ch );
-			}
-			vnum++;
 		}
-	}
-	if (!vnum)
-	{
-		switch(type)
+		if (!vnum)
 		{
-		case NOTE_NOTE:	
-			send_to_char("There are no notes for you.\n\r",ch);
-			break;
-		case NOTE_BACKGROUND:
-			if(IS_ADMIN(ch))
-				send_to_char("There are no background entries.\n\r",ch);
-			else
-				send_to_char("Huh?\n\r",ch);
-			break;
-		case NOTE_KNOWLEDGE:
-			if(IS_ADMIN(ch))
-				send_to_char("There are no fact entries.\n\r",ch);
-			else
-				send_to_char("Huh?\n\r",ch);
-			break;
-		case NOTE_ARTICLE:
-			if(IS_ADMIN(ch))
-				send_to_char("There are no newspaper articles.\n\r",ch);
-			else
-				send_to_char("Huh?\n\r",ch);
-			break;
+			switch(type)
+			{
+				case NOTE_NOTE:
+				send_to_char("There are no notes for you.\n\r",ch);
+				break;
+				case NOTE_BACKGROUND:
+				if(IS_ADMIN(ch))
+					send_to_char("There are no background entries.\n\r",ch);
+				else
+					send_to_char("Huh?\n\r",ch);
+				break;
+				case NOTE_KNOWLEDGE:
+				if(IS_ADMIN(ch))
+					send_to_char("There are no fact entries.\n\r",ch);
+				else
+					send_to_char("Huh?\n\r",ch);
+				break;
+				case NOTE_ARTICLE:
+				if(IS_ADMIN(ch))
+					send_to_char("There are no newspaper articles.\n\r",ch);
+				else
+					send_to_char("Huh?\n\r",ch);
+				break;
+			}
 		}
-	}
-	return;
+		return;
 	}
 
 	if ( !str_prefix( arg, "suppression" ))
@@ -4252,12 +4252,12 @@ void parse_note( CHAR_DATA *ch, char *argument, int type )
 			if ( !is_number( argument ) || !is_number( arg2 )  )
 			{
 				send_to_char(
-						"Which article's suppression are you trying to affect?\n\r",
-						ch );
+					"Which article's suppression are you trying to affect?\n\r",
+					ch );
 				send_to_char(
-						"And what number of successes are you setting it to?\n\r", ch);
+					"And what number of successes are you setting it to?\n\r", ch);
 				send_to_char(
-						"(Use 0 for unsuppressed)\n\r", ch);
+					"(Use 0 for unsuppressed)\n\r", ch);
 				return;
 			}
 
@@ -4282,76 +4282,76 @@ void parse_note( CHAR_DATA *ch, char *argument, int type )
 
 	if ( !str_prefix( arg, "search" ) )
 	{
-	argument = one_argument(argument, arg2);
-	vnum = 0;
-	for ( pnote = *list; pnote != NULL; pnote = pnote->next )
-	{
-		if ( is_note_to( ch, pnote ) )
+		argument = one_argument(argument, arg2);
+		vnum = 0;
+		for ( pnote = *list; pnote != NULL; pnote = pnote->next )
 		{
-		  if(((!str_cmp(arg2, "to")
-		|| !str_cmp(arg2, "keywords")
-		|| !str_cmp(arg2, "category"))
-		&& strstr(pnote->to_list, argument))
-		  || ((!str_cmp(arg2, "subject")
-		|| !str_cmp(arg2, "difficulty"))
-		&& strstr(pnote->subject, argument))
-		  || ((!str_cmp(arg2, "text")
-		|| !str_cmp(arg2, "body")
-		|| !str_cmp(arg2, "contents"))
-		&& strstr(pnote->text, argument))
-		  || ((!str_cmp(arg2, "from")
-		|| !str_cmp(arg2, "by")
-		|| !str_cmp(arg2, "sender")
-		|| !str_cmp(arg2, "author"))
-		&& !str_cmp(pnote->sender, argument))
-		  || (!str_cmp(arg2, "suppressed")
-		&& type == NOTE_ARTICLE
-		&& pnote->successes))
-		  {
-			  if(type == NOTE_NOTE)
-			  {
-				  send_to_char( Format("[%3d%s] %s: %s\n\r", vnum, hide_note(ch,pnote) ? " " : "N", pnote->sender, pnote->subject), ch );
-			  }
-			  else if(type == NOTE_BACKGROUND || type == NOTE_KNOWLEDGE)
-			  {
-				  send_to_char( Format("[%3d%s] %s: %s\n\r", vnum, hide_note(ch,pnote) ? " " : "N", pnote->sender, pnote->to_list), ch );
-			  }
-			  else if(type == NOTE_ARTICLE)
-			  {
-				  send_to_char( Format("[%3d %s] %s: %s%s\n\r", vnum, pnote->sender, pnote->to_list, pnote->subject, pnote->successes ? " (\tYSuppressed\tn)" : ""), ch );
-			  }
-		  }
-		  vnum++;
+			if ( is_note_to( ch, pnote ) )
+			{
+				if(((!str_cmp(arg2, "to")
+					|| !str_cmp(arg2, "keywords")
+					|| !str_cmp(arg2, "category"))
+					&& strstr(pnote->to_list, argument))
+					|| ((!str_cmp(arg2, "subject")
+						|| !str_cmp(arg2, "difficulty"))
+					&& strstr(pnote->subject, argument))
+					|| ((!str_cmp(arg2, "text")
+						|| !str_cmp(arg2, "body")
+						|| !str_cmp(arg2, "contents"))
+					&& strstr(pnote->text, argument))
+					|| ((!str_cmp(arg2, "from")
+						|| !str_cmp(arg2, "by")
+						|| !str_cmp(arg2, "sender")
+						|| !str_cmp(arg2, "author"))
+					&& !str_cmp(pnote->sender, argument))
+					|| (!str_cmp(arg2, "suppressed")
+						&& type == NOTE_ARTICLE
+						&& pnote->successes))
+				{
+					if(type == NOTE_NOTE)
+					{
+						send_to_char( Format("[%3d%s] %s: %s\n\r", vnum, hide_note(ch,pnote) ? " " : "N", pnote->sender, pnote->subject), ch );
+					}
+					else if(type == NOTE_BACKGROUND || type == NOTE_KNOWLEDGE)
+					{
+						send_to_char( Format("[%3d%s] %s: %s\n\r", vnum, hide_note(ch,pnote) ? " " : "N", pnote->sender, pnote->to_list), ch );
+					}
+					else if(type == NOTE_ARTICLE)
+					{
+						send_to_char( Format("[%3d %s] %s: %s%s\n\r", vnum, pnote->sender, pnote->to_list, pnote->subject, pnote->successes ? " (\tYSuppressed\tn)" : ""), ch );
+					}
+				}
+				vnum++;
+			}
 		}
-	}
-	if (!vnum)
-	{
-		switch(type)
+		if (!vnum)
 		{
-		case NOTE_NOTE:	
-			send_to_char("Search found no notes.\n\r",ch);
-			break;
-		case NOTE_BACKGROUND:
-			if(IS_ADMIN(ch))
-			send_to_char("Search found no background entries.\n\r",ch);
-			else
-			send_to_char("Huh?\n\r",ch);
-			break;
-		case NOTE_KNOWLEDGE:
-			if(IS_ADMIN(ch))
-			send_to_char("Search found no knowledge entries.\n\r",ch);
-			else
-			send_to_char("Huh?\n\r",ch);
-			break;
-		case NOTE_ARTICLE:
-			if(IS_ADMIN(ch))
-			send_to_char("Search found no newspaper articles.\n\r",ch);
-			else
-			send_to_char("Huh?\n\r",ch);
-			break;
+			switch(type)
+			{
+				case NOTE_NOTE:
+				send_to_char("Search found no notes.\n\r",ch);
+				break;
+				case NOTE_BACKGROUND:
+				if(IS_ADMIN(ch))
+					send_to_char("Search found no background entries.\n\r",ch);
+				else
+					send_to_char("Huh?\n\r",ch);
+				break;
+				case NOTE_KNOWLEDGE:
+				if(IS_ADMIN(ch))
+					send_to_char("Search found no knowledge entries.\n\r",ch);
+				else
+					send_to_char("Huh?\n\r",ch);
+				break;
+				case NOTE_ARTICLE:
+				if(IS_ADMIN(ch))
+					send_to_char("Search found no newspaper articles.\n\r",ch);
+				else
+					send_to_char("Huh?\n\r",ch);
+				break;
+			}
 		}
-	}
-	return;
+		return;
 	}
 
 	if ( !str_prefix( arg, "remove" ) )
@@ -4361,7 +4361,7 @@ void parse_note( CHAR_DATA *ch, char *argument, int type )
 			send_to_char( "Remove which number?\n\r", ch );
 			return;
 		}
- 
+
 		anum = atoi( argument );
 		vnum = 0;
 		for ( pnote = *list; pnote != NULL; pnote = pnote->next )
@@ -4373,11 +4373,11 @@ void parse_note( CHAR_DATA *ch, char *argument, int type )
 				return;
 			}
 		}
- 
-	send_to_char(Format("There aren't that many %s.",list_name),ch);
+
+		send_to_char(Format("There aren't that many %s.",list_name),ch);
 		return;
 	}
- 
+
 	if ( !str_prefix( arg, "delete" ) && get_trust(ch) >= MAX_LEVEL - 1)
 	{
 		if ( !is_number( argument ) )
@@ -4385,7 +4385,7 @@ void parse_note( CHAR_DATA *ch, char *argument, int type )
 			send_to_char( "Note delete which number?\n\r", ch );
 			return;
 		}
- 
+
 		anum = atoi( argument );
 		vnum = 0;
 		for ( pnote = *list; pnote != NULL; pnote = pnote->next )
@@ -4398,130 +4398,130 @@ void parse_note( CHAR_DATA *ch, char *argument, int type )
 			}
 		}
 
-	send_to_char(Format("There aren't that many %s.",list_name), ch);
+		send_to_char(Format("There aren't that many %s.",list_name), ch);
 		return;
 	}
 
 	if ( !str_prefix( arg, "body" ) )
 	{
-	note_attach( ch,type );
-	if (ch->pnote->type != type)
-	{
-		send_to_char("You already have a note, background, knowledge, or newspaper\n\r",ch);
-		send_to_char("article in progress.\n\r",ch);
-		return;
-	}
+		note_attach( ch,type );
+		if (ch->pnote->type != type)
+		{
+			send_to_char("You already have a note, background, knowledge, or newspaper\n\r",ch);
+			send_to_char("article in progress.\n\r",ch);
+			return;
+		}
 
-	if(IS_NULLSTR(argument))
-	{
-		string_append( ch, &ch->pnote->text );
-		return;
-	}
+		if(IS_NULLSTR(argument))
+		{
+			string_append( ch, &ch->pnote->text );
+			return;
+		}
 
-	send_to_char("Syntax: note body\n\rThis will load the string editor.\n\r", ch);
-	return;
+		send_to_char("Syntax: note body\n\rThis will load the string editor.\n\r", ch);
+		return;
 	}
 
 	if ( !str_prefix( arg, "subject" ) || !str_prefix(arg, "difficulty") )
 	{
-	note_attach( ch,type );
+		note_attach( ch,type );
 		if (ch->pnote->type != type)
 		{
-		send_to_char("You already have a note, background, knowledge, or newspaper\n\r",ch);
-		send_to_char("article in progress.\n\r",ch);
+			send_to_char("You already have a note, background, knowledge, or newspaper\n\r",ch);
+			send_to_char("article in progress.\n\r",ch);
 			return;
 		}
 
 		if (!is_number(argument) && (ch->pnote->type == NOTE_BACKGROUND
-		|| ch->pnote->type == NOTE_KNOWLEDGE))
-	{
-		send_to_char("Difficulty must be a number from 1 to 10.\n\r",ch);
-		return;
-	}
-	else if(is_number(argument) && (ch->pnote->type == NOTE_BACKGROUND
-		|| ch->pnote->type == NOTE_KNOWLEDGE))
-	{
-		if( 1 > atoi(argument) || atoi(argument) > 10 )
+			|| ch->pnote->type == NOTE_KNOWLEDGE))
 		{
-		send_to_char("Difficulty must be a number from 1 to 10.\n\r",ch);
-		return;
+			send_to_char("Difficulty must be a number from 1 to 10.\n\r",ch);
+			return;
 		}
-	}
+		else if(is_number(argument) && (ch->pnote->type == NOTE_BACKGROUND
+			|| ch->pnote->type == NOTE_KNOWLEDGE))
+		{
+			if( 1 > atoi(argument) || atoi(argument) > 10 )
+			{
+				send_to_char("Difficulty must be a number from 1 to 10.\n\r",ch);
+				return;
+			}
+		}
 
 		PURGE_DATA( ch->pnote->subject );
-	ch->pnote->subject = str_dup( argument );
-	send_to_char( "Ok.\n\r", ch );
-	return;
+		ch->pnote->subject = str_dup( argument );
+		send_to_char( "Ok.\n\r", ch );
+		return;
 	}
 
 	if ( !str_prefix( arg, "to" ) || !str_prefix( arg, "keywords" )
-	|| !str_prefix( arg, "category" ) )
+		|| !str_prefix( arg, "category" ) )
 	{
-	note_attach( ch,type );
+		note_attach( ch,type );
 		if (ch->pnote->type != type)
 		{
-		send_to_char("You already have a note, background, knowledge, or newspaper\n\r",ch);
-		send_to_char("article in progress.\n\r",ch);
+			send_to_char("You already have a note, background, knowledge, or newspaper\n\r",ch);
+			send_to_char("article in progress.\n\r",ch);
 			return;
 		}
 		PURGE_DATA( ch->pnote->to_list );
-	ch->pnote->to_list = str_dup( argument );
-	send_to_char( "Ok.\n\r", ch );
-	return;
+		ch->pnote->to_list = str_dup( argument );
+		send_to_char( "Ok.\n\r", ch );
+		return;
 	}
 
 	if ( !str_prefix( arg, "clear" ) )
 	{
-	if ( ch->pnote != NULL )
-	{
-		free_note(ch->pnote);
-		ch->pnote = NULL;
-	}
+		if ( ch->pnote != NULL )
+		{
+			free_note(ch->pnote);
+			ch->pnote = NULL;
+		}
 
-	send_to_char( "Ok.\n\r", ch );
-	return;
+		send_to_char( "Ok.\n\r", ch );
+		return;
 	}
 
 	if ( !str_prefix( arg, "show" ) )
 	{
-	if ( ch->pnote == NULL )
-	{
-		send_to_char( "You have no note, background, knowledge, or newspaper\n\r",ch);
-		send_to_char("article in progress.\n\r",ch);
-		return;
-	}
+		if ( ch->pnote == NULL )
+		{
+			send_to_char( "You have no note, background, knowledge, or newspaper\n\r",ch);
+			send_to_char("article in progress.\n\r",ch);
+			return;
+		}
 
-	if (ch->pnote->type != type)
-	{
-		send_to_char("You aren't working on that kind of text.\n\r",ch);
-		return;
-	}
+		if (ch->pnote->type != type)
+		{
+			send_to_char("You aren't working on that kind of text.\n\r",ch);
+			return;
+		}
 
-	if(type == NOTE_NOTE)
-	{
-		send_to_char(Format("%s: %s\n\rTo: %s\n\r", ch->pnote->sender, ch->pnote->subject, ch->pnote->to_list), ch);
-	}
-	else if (type == NOTE_BACKGROUND || type == NOTE_KNOWLEDGE)
-	{
-		send_to_char(Format("Author: %s Difficulty: %s\n\rKeywords: %s\n\r", ch->pnote->sender, ch->pnote->subject, ch->pnote->to_list), ch);
-	}
-	else if (type == NOTE_ARTICLE)
-	{
-		send_to_char(Format("Author: %s Subject: %s\n\rCategory: %s\n\r", ch->pnote->sender, ch->pnote->subject, ch->pnote->to_list), ch);
-	}
-	send_to_char( ch->pnote->text, ch );
-	return;
+		if(type == NOTE_NOTE)
+		{
+			send_to_char(Format("%s: %s\n\rTo: %s\n\r", ch->pnote->sender, ch->pnote->subject, ch->pnote->to_list), ch);
+		}
+		else if (type == NOTE_BACKGROUND || type == NOTE_KNOWLEDGE)
+		{
+			send_to_char(Format("Author: %s Difficulty: %s\n\rKeywords: %s\n\r", ch->pnote->sender, ch->pnote->subject, ch->pnote->to_list), ch);
+		}
+		else if (type == NOTE_ARTICLE)
+		{
+			send_to_char(Format("Author: %s Subject: %s\n\rCategory: %s\n\r", ch->pnote->sender, ch->pnote->subject, ch->pnote->to_list), ch);
+		}
+		send_to_char( ch->pnote->text, ch );
+		return;
 	}
 
 	if ( !str_prefix( arg, "post" ) || !str_prefix(arg, "send"))
 	{
-	char *strtime;
+		char *strtime;
 
-	if ( ch->pnote == NULL )
-	{
-		send_to_char( "You have no note in progress.\n\r", ch );
-		return;
-	}
+		if ( ch->pnote == NULL )
+		{
+			send_to_char( "You have no note in progress.\n\r", ch );
+			return;
+		}
 
 		if (ch->pnote->type != type)
 		{
@@ -4529,66 +4529,73 @@ void parse_note( CHAR_DATA *ch, char *argument, int type )
 			return;
 		}
 
-	if (!str_cmp(ch->pnote->to_list,""))
-	{
-		if(type == NOTE_NOTE)
-		send_to_char(
-		"You need to provide a recipient (name, all, or admin).\n\r",
-		ch);
-		else if(type == NOTE_BACKGROUND)
-		send_to_char("You need to provide at least one keyword or room vnum.\n\r", ch);
-		else if(type == NOTE_KNOWLEDGE)
-		send_to_char("You need to provide at least one keyword.\n\r", ch);
-		else if(type == NOTE_ARTICLE) {
-		send_to_char("Article placed in general news stream.\n\r", ch);
-		PURGE_DATA(ch->pnote->to_list);
-		ch->pnote->to_list = str_dup("General");
+		if (!str_cmp(ch->pnote->to_list,""))
+		{
+			if(type == NOTE_NOTE)
+				send_to_char(
+					"You need to provide a recipient (name, all, or admin).\n\r",
+					ch);
+			else if(type == NOTE_BACKGROUND)
+				send_to_char("You need to provide at least one keyword or room vnum.\n\r", ch);
+			else if(type == NOTE_KNOWLEDGE)
+				send_to_char("You need to provide at least one keyword.\n\r", ch);
+			else if(type == NOTE_ARTICLE) {
+				send_to_char("Article placed in general news stream.\n\r", ch);
+				PURGE_DATA(ch->pnote->to_list);
+				ch->pnote->to_list = str_dup("General");
+			}
+			return;
 		}
-		return;
-	}
 
-	if (!str_cmp(ch->pnote->subject,""))
-	{
+		if (!str_cmp(ch->pnote->subject,""))
+		{
+			if(type == NOTE_NOTE || type == NOTE_ARTICLE)
+				send_to_char("You need to provide a subject.\n\r",ch);
+			else if(type == NOTE_BACKGROUND || type == NOTE_KNOWLEDGE)
+				send_to_char("You need to provide a difficulty.\n\r", ch);
+			return;
+		}
+
+		ch->pnote->next			= NULL;
+		strtime				= ctime( &current_time );
+		strtime[strlen(strtime)-1]	= '\0';
+		PURGE_DATA( ch->pnote->date );
+		ch->pnote->date			= str_dup( strtime );
+		ch->pnote->date_stamp		= current_time;
+
 		if(type == NOTE_NOTE || type == NOTE_ARTICLE)
-		send_to_char("You need to provide a subject.\n\r",ch);
-		else if(type == NOTE_BACKGROUND || type == NOTE_KNOWLEDGE)
-		send_to_char("You need to provide a difficulty.\n\r", ch);
-		return;
-	}
-
-	ch->pnote->next			= NULL;
-	strtime				= ctime( &current_time );
-	strtime[strlen(strtime)-1]	= '\0';
-	PURGE_DATA( ch->pnote->date );
-	ch->pnote->date			= str_dup( strtime );
-	ch->pnote->date_stamp		= current_time;
-
-	if(type == NOTE_NOTE || type == NOTE_ARTICLE)
-		send_to_char("Posted.\n\r",ch);
-	else if(type == NOTE_BACKGROUND || type == NOTE_KNOWLEDGE)
-		send_to_char("Added.\n\r", ch);
-
-		for(d = descriptor_list; d != NULL; d = d->next) {
-		if((type == NOTE_ARTICLE || type == NOTE_BACKGROUND
-		|| type == NOTE_KNOWLEDGE)
-		&& (IS_ADMIN(d->character)
-		  || (d->original != NULL && IS_ADMIN(d->original)))) {
-		send_to_char(Format("A new item has been added to %s by %s\n\r", list_name, ch->name), d->character);
+		{
+			send_to_char("Posted.\n\r",ch);
 		}
 		else
 		{
-		if(d->character && is_note_to(d->character, ch->pnote))
-			send_to_char("A new note has been delivered.\n\r", d->character);
+			if(type == NOTE_BACKGROUND || type == NOTE_KNOWLEDGE)
+			{
+				send_to_char("Added.\n\r", ch);
+			}
+		}
+
+		for(d = descriptor_list; d != NULL; d = d->next) {
+			if((type == NOTE_ARTICLE || type == NOTE_BACKGROUND
+				|| type == NOTE_KNOWLEDGE)
+				&& (IS_ADMIN(d->character)
+					|| (d->original != NULL && IS_ADMIN(d->original)))) {
+				send_to_char(Format("A new item has been added to %s by %s\n\r", list_name, ch->name), d->character);
+		}
+		else
+		{
+			if(d->character && is_note_to(d->character, ch->pnote))
+				send_to_char("A new note has been delivered.\n\r", d->character);
 		}
 	}
 
-		append_note(ch->pnote);
-		ch->pnote = NULL;
-		return;
-	}
-
-	send_to_char( "You can't do that.\n\r", ch );
+	append_note(ch->pnote);
+	ch->pnote = NULL;
 	return;
+}
+
+send_to_char( "You can't do that.\n\r", ch );
+return;
 }
 
 NOTE_DATA * find_bg_keyword(char *arg)

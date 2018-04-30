@@ -255,8 +255,8 @@ CHAR_DATA *get_random_char( CHAR_DATA *mob )
     int now = 0, highest = 0;
     for( vch = mob->in_room->people; vch; vch = vch->next_in_room )
     {
-        if ( mob != vch 
-        &&   !IS_NPC( vch ) 
+        if ( mob != vch
+        &&   !IS_NPC( vch )
         &&   can_see( mob, vch )
         &&   ( now = number_percent() ) > highest )
         {
@@ -267,7 +267,7 @@ CHAR_DATA *get_random_char( CHAR_DATA *mob )
     return victim;
 }
 
-/* 
+/*
  * How many other players / mobs are there in the room
  * iFlag: 0: all, 1: players, 2: mobiles 3: mobs w/ same vnum 4: same group
  */
@@ -276,14 +276,14 @@ int count_people_room( CHAR_DATA *mob, int iFlag )
     CHAR_DATA *vch;
     int count;
     for ( count = 0, vch = mob->in_room->people; vch; vch = vch->next_in_room )
-	if ( mob != vch 
+	if ( mob != vch
 	&&   (iFlag == 0
-	  || (iFlag == 1 && !IS_NPC( vch )) 
+	  || (iFlag == 1 && !IS_NPC( vch ))
 	  || (iFlag == 2 && IS_NPC( vch ))
-	  || (iFlag == 3 && IS_NPC( mob ) && IS_NPC( vch ) 
+	  || (iFlag == 3 && IS_NPC( mob ) && IS_NPC( vch )
 	     && mob->pIndexData->vnum == vch->pIndexData->vnum )
 	  || (iFlag == 4 && is_same_group( mob, vch )) )
-	&& can_see( mob, vch ) ) 
+	&& can_see( mob, vch ) )
 	    count++;
     return ( count );
 }
@@ -291,7 +291,7 @@ int count_people_room( CHAR_DATA *mob, int iFlag )
 /*
  * Get the order of a mob in the room. Useful when several mobs in
  * a room have the same trigger and you want only the first of them
- * to act 
+ * to act
  */
 int get_order( CHAR_DATA *ch )
 {
@@ -304,7 +304,7 @@ int get_order( CHAR_DATA *ch )
     {
 	if ( vch == ch )
 	    return i;
-	if ( IS_NPC(vch) 
+	if ( IS_NPC(vch)
 	&&   vch->pIndexData->vnum == ch->pIndexData->vnum )
 	    i++;
     }
@@ -364,9 +364,7 @@ bool get_obj_vnum_room( CHAR_DATA *ch, sh_int vnum )
  *
  *----------------------------------------------------------------------
  */
-int cmd_eval( sh_int vnum, char *line, int check,
-	CHAR_DATA *mob, CHAR_DATA *ch, 
-	const void *arg1, const void *arg2, CHAR_DATA *rch )
+int cmd_eval( sh_int vnum, char *line, int check, CHAR_DATA *mob, CHAR_DATA *ch,  const void *arg1, const void *arg2, CHAR_DATA *rch )
 {
     CHAR_DATA *lval_char = mob;
     CHAR_DATA *vch = (CHAR_DATA *) arg2;
@@ -380,285 +378,331 @@ int cmd_eval( sh_int vnum, char *line, int check,
     original = line;
     line = one_argument( line, buf );
     if ( buf[0] == '\0' || mob == NULL )
-	return FALSE;
+    {
+        return FALSE;
+    }
 
     /*
      * If this mobile has no target, let's assume our victim is the one
      */
     if ( mob->mprog_target == NULL )
-	mob->mprog_target = ch;
+    {
+        mob->mprog_target = ch;
+    }
 
     switch ( check )
     {
 	/*
 	 * Case 1: keyword and value
 	 */
-	case CHK_RAND:
-	    return( atoi( buf ) < number_percent() );
-	case CHK_MOBHERE:
-	    if ( is_number( buf ) )
-		return( get_mob_vnum_room( mob, atoi(buf) ) );
-	    else
-		return( (bool) (get_char_room( mob, buf) != NULL) );
-	case CHK_OBJHERE:
-	    if ( is_number( buf ) )
-		return( get_obj_vnum_room( mob, atoi(buf) ) );
-	    else
-		return( (bool) (get_obj_here( mob, buf) != NULL) );
-        case CHK_MOBEXISTS:
-	    return( (bool) (get_char_world( mob, buf) != NULL) );
-	case CHK_OBJEXISTS:
-	    return( (bool) (get_obj_world( mob, buf) != NULL) );
+       case CHK_RAND:
+       return( atoi( buf ) < number_percent() );
+       case CHK_MOBHERE:
+       if ( is_number( buf ) )
+       {
+        return( get_mob_vnum_room( mob, atoi(buf) ) );
+    }
+    else
+    {
+        return( (bool) (get_char_room( mob, buf) != NULL) );
+    }
+    case CHK_OBJHERE:
+    if ( is_number( buf ) )
+    {
+        return( get_obj_vnum_room( mob, atoi(buf) ) );
+    }
+    else
+    {
+        return( (bool) (get_obj_here( mob, buf) != NULL) );
+    }
+    case CHK_MOBEXISTS:
+    return( (bool) (get_char_world( mob, buf) != NULL) );
+    case CHK_OBJEXISTS:
+    return( (bool) (get_obj_world( mob, buf) != NULL) );
 	/*
 	 * Case 2 begins here: We sneakily use rval to indicate need
 	 * 		       for numeric eval...
 	 */
-	case CHK_PEOPLE:
-	    rval = count_people_room( mob, 0 ); break;
-	case CHK_PLAYERS:
-	    rval = count_people_room( mob, 1 ); break;
-	case CHK_MOBS:
-	    rval = count_people_room( mob, 2 ); break;
-	case CHK_CLONES:
-	    rval = count_people_room( mob, 3 ); break;
-	case CHK_ORDER:
-	    rval = get_order( mob ); break;
-	case CHK_HOUR:
-	    rval = time_info.hour; break;
-	default:;
-    }
+    case CHK_PEOPLE:
+    rval = count_people_room( mob, 0 ); break;
+    case CHK_PLAYERS:
+    rval = count_people_room( mob, 1 ); break;
+    case CHK_MOBS:
+    rval = count_people_room( mob, 2 ); break;
+    case CHK_CLONES:
+    rval = count_people_room( mob, 3 ); break;
+    case CHK_ORDER:
+    rval = get_order( mob ); break;
+    case CHK_HOUR:
+    rval = time_info.hour; break;
+    default:;
+}
 
     /*
      * Case 2 continued: evaluate expression
      */
-    if ( rval >= 0 )
-    {
-	if ( (oper = keyword_lookup( fn_evals, buf )) < 0 )
-	{
-	    log_string(LOG_BUG, Format("Cmd_eval: prog %d syntax error(2) '%s'", vnum, original));
-	    return FALSE;
-	}
-	one_argument( line, buf );
-	lval = rval;
-	rval = atoi( buf );
-	return( num_eval( lval, oper, rval ) );
-    }
+if ( rval >= 0 )
+{
+   if ( (oper = keyword_lookup( fn_evals, buf )) < 0 )
+   {
+       log_string(LOG_BUG, Format("Cmd_eval: prog %d syntax error(2) '%s'", vnum, original));
+       return FALSE;
+   }
+   one_argument( line, buf );
+   lval = rval;
+   rval = atoi( buf );
+   return( num_eval( lval, oper, rval ) );
+}
 
     /*
      * Case 3,4,5: Grab actors from $* codes
      */
-    if ( buf[0] != '$' || buf[1] == '\0' )
-    {
-    	log_string(LOG_BUG, Format("Cmd_eval: prog %d syntax error(3) '%s'", vnum, original));
-    	return FALSE;
-    }
-    else
-        code = buf[1];
-    switch( code )
-    {
-    	case 'i':
-            lval_char = mob; break;
-        case 'n':
-            lval_char = ch; break;
-        case 't':
-            lval_char = vch; break;
-        case 'r':
-            lval_char = rch == NULL ? get_random_char( mob ) : rch ; break;
-        case 'o':
-            lval_obj = obj1; break;
-        case 'p':
-            lval_obj = obj2; break;
-	case 'q':
-	    lval_char = mob->mprog_target; break;
-	default:
-	    log_string(LOG_BUG, Format("Cmd_eval: prog %d syntax error(4) '%s'", vnum, original));
-	    return FALSE;
-    }
+if ( buf[0] != '$' || buf[1] == '\0' )
+{
+   log_string(LOG_BUG, Format("Cmd_eval: prog %d syntax error(3) '%s'", vnum, original));
+   return FALSE;
+}
+else
+    code = buf[1];
+switch( code )
+{
+   case 'i':
+   lval_char = mob; break;
+   case 'n':
+   lval_char = ch; break;
+   case 't':
+   lval_char = vch; break;
+   case 'r':
+   lval_char = rch == NULL ? get_random_char( mob ) : rch ; break;
+   case 'o':
+   lval_obj = obj1; break;
+   case 'p':
+   lval_obj = obj2; break;
+   case 'q':
+   lval_char = mob->mprog_target; break;
+   default:
+   log_string(LOG_BUG, Format("Cmd_eval: prog %d syntax error(4) '%s'", vnum, original));
+   return FALSE;
+}
     /*
      * From now on, we need an actor, so if none was found, bail out
      */
-    if ( lval_char == NULL && lval_obj == NULL )
-    	return FALSE;
+if ( lval_char == NULL && lval_obj == NULL )
+   return FALSE;
 
     /*
      * Case 3: Keyword, comparison and value
      */
-    switch( check )
-    {
+switch( check )
+{
 	case CHK_ISPC:
-            return( lval_char != NULL && !IS_NPC( lval_char ) );
-        case CHK_ISNPC:
-            return( lval_char != NULL && IS_NPC( lval_char ) );
-        case CHK_ISFRENZY:
-            return( lval_char != NULL && NEAR_FRENZY( lval_char ) );
-        case CHK_ISDRUNK:
-            return( lval_char != NULL && IS_DRUNK( lval_char ) );
-        case CHK_ISHIGH:
-            return( lval_char != NULL && IS_HIGH( lval_char ) );
-        case CHK_ISTRIPPING:
-            return( lval_char != NULL && IS_TRIPPING( lval_char ) );
-        case CHK_ISAFRAID:
-            return( lval_char != NULL && IS_FEARFUL( lval_char ) );
-        case CHK_ISHUNTED:
-            return( lval_char != NULL && IS_HUNTED( lval_char ) );
-        case CHK_ISWANTED:
-            return( lval_char != NULL && IS_WANTED( lval_char ) );
-        case CHK_ISNATURAL:
-            return( lval_char != NULL && IS_NATURAL( lval_char ) );
-	case CHK_ISADMIN:
-            return( lval_char != NULL && IS_ADMIN( lval_char ) );
+    return( lval_char != NULL && !IS_NPC( lval_char ) );
+    case CHK_ISNPC:
+    return( lval_char != NULL && IS_NPC( lval_char ) );
+    case CHK_ISFRENZY:
+    return( lval_char != NULL && NEAR_FRENZY( lval_char ) );
+    case CHK_ISDRUNK:
+    return( lval_char != NULL && IS_DRUNK( lval_char ) );
+    case CHK_ISHIGH:
+    return( lval_char != NULL && IS_HIGH( lval_char ) );
+    case CHK_ISTRIPPING:
+    return( lval_char != NULL && IS_TRIPPING( lval_char ) );
+    case CHK_ISAFRAID:
+    return( lval_char != NULL && IS_FEARFUL( lval_char ) );
+    case CHK_ISHUNTED:
+    return( lval_char != NULL && IS_HUNTED( lval_char ) );
+    case CHK_ISWANTED:
+    return( lval_char != NULL && IS_WANTED( lval_char ) );
+    case CHK_ISNATURAL:
+    return( lval_char != NULL && IS_NATURAL( lval_char ) );
+    case CHK_ISADMIN:
+    return( lval_char != NULL && IS_ADMIN( lval_char ) );
         case CHK_ISCHARM: /* A relic from MERC 2.2 MOBprograms */
-            return( lval_char != NULL && IS_AFFECTED( lval_char, AFF_CHARM ) );
-        case CHK_ISFOLLOW:
-            return( lval_char != NULL && lval_char->master != NULL 
-		 && lval_char->master->in_room == lval_char->in_room );
-	case CHK_ISACTIVE:
-	    return( lval_char != NULL && lval_char->position > P_SLEEP );
-	case CHK_ISDELAY:
-	    return( lval_char != NULL && lval_char->mprog_delay > 0 );
-	case CHK_ISVISIBLE:
-            switch( code )
-            {
-                default :
-                case 'i':
-                case 'n':
-                case 't':
-                case 'r':
-		case 'q':
-	    	    return( lval_char != NULL && can_see( mob, lval_char ) );
-		case 'o':
-		case 'p':
-	    	    return( lval_obj != NULL && can_see_obj( mob, lval_obj ) );
-	    }
-	case CHK_HASTARGET:
-	    return( lval_char != NULL && lval_char->mprog_target != NULL
-		&&  lval_char->in_room == lval_char->mprog_target->in_room );
-	case CHK_ISTARGET:
-	    return( lval_char != NULL && mob->mprog_target == lval_char );
-	default:;
-     }
+    return( lval_char != NULL && IS_AFFECTED( lval_char, AFF_CHARM ) );
+    case CHK_ISFOLLOW:
+    return( lval_char != NULL && lval_char->master != NULL
+     && lval_char->master->in_room == lval_char->in_room );
+    case CHK_ISACTIVE:
+    return( lval_char != NULL && lval_char->position > P_SLEEP );
+    case CHK_ISDELAY:
+    return( lval_char != NULL && lval_char->mprog_delay > 0 );
+    case CHK_ISVISIBLE:
+    switch( code )
+    {
+        default :
+        case 'i':
+        case 'n':
+        case 't':
+        case 'r':
+        case 'q':
+        return( lval_char != NULL && can_see( mob, lval_char ) );
+        case 'o':
+        case 'p':
+        return( lval_obj != NULL && can_see_obj( mob, lval_obj ) );
+    }
+    case CHK_HASTARGET:
+    return( lval_char != NULL && lval_char->mprog_target != NULL
+      &&  lval_char->in_room == lval_char->mprog_target->in_room );
+    case CHK_ISTARGET:
+    return( lval_char != NULL && mob->mprog_target == lval_char );
+    default:;
+}
 
-     /* 
+     /*
       * Case 4: Keyword, actor and value
       */
-     line = one_argument( line, buf );
-     switch( check )
-     {
+line = one_argument( line, buf );
+switch( check )
+{
 	case CHK_AFFECTED:
-	    return( lval_char != NULL 
-		&&  IS_SET(lval_char->affected_by, flag_lookup(buf, affect_flags)) );
-	case CHK_ACT:
-	    return( lval_char != NULL 
-		&&  IS_SET(lval_char->act, flag_lookup(buf, act_flags)) );
-	case CHK_IMM:
-	    return( lval_char != NULL 
-		&&  IS_SET(lval_char->imm_flags, flag_lookup(buf, imm_flags)) );
-	case CHK_OFF:
-	    return( lval_char != NULL 
-		&&  IS_SET(lval_char->off_flags, flag_lookup(buf, off_flags)) );
-	case CHK_CARRIES:
-	    if ( is_number( buf ) )
-		return( lval_char != NULL && has_item( lval_char, atoi(buf), -1, FALSE ) );
-	    else
-		return( lval_char != NULL && (get_obj_carry( lval_char, buf, lval_char ) != NULL) );
-	case CHK_WEARS:
-	    if ( is_number( buf ) )
-		return( lval_char != NULL && has_item( lval_char, atoi(buf), -1, TRUE ) );
-	    else
-		return( lval_char != NULL && (get_obj_wear( lval_char, buf ) != NULL) );
-	case CHK_HAS:
-	    return( lval_char != NULL && has_item( lval_char, -1, item_lookup(buf), FALSE ) );
-	case CHK_USES:
-	    return( lval_char != NULL && has_item( lval_char, -1, item_lookup(buf), TRUE ) );
-	case CHK_NAME:
-            switch( code )
-            {
-                default :
-                case 'i':
-                case 'n':
-                case 't':
-                case 'r':
-		case 'q':
-		    return( lval_char != NULL && is_name( buf, lval_char->name ) );
-		case 'o':
-		case 'p':
-		    return( lval_obj != NULL && is_name( buf, lval_obj->name ) );
-	    }
-	case CHK_POS:
-	    return( lval_char != NULL && lval_char->position == position_lookup( buf ) );
-	case CHK_CLAN:
-	    return( lval_char != NULL && lval_char->clan == clan_lookup( buf ) );
-	case CHK_RACE:
-	    return( lval_char != NULL && lval_char->race == race_lookup( buf ) );
-	case CHK_ORG:
-	    return( lval_char != NULL
-		    && (mem_lookup(org_lookup(buf), lval_char->name) != NULL));
-	case CHK_OBJTYPE:
-	    return( lval_obj != NULL && lval_obj->item_type == item_lookup( buf ) );
-	default:;
-    }
+   return( lval_char != NULL
+      &&  IS_SET(lval_char->affected_by, flag_lookup(buf, affect_flags)) );
+   case CHK_ACT:
+   return( lval_char != NULL
+      &&  IS_SET(lval_char->act, flag_lookup(buf, act_flags)) );
+   case CHK_IMM:
+   return( lval_char != NULL
+      &&  IS_SET(lval_char->imm_flags, flag_lookup(buf, imm_flags)) );
+   case CHK_OFF:
+   return( lval_char != NULL
+      &&  IS_SET(lval_char->off_flags, flag_lookup(buf, off_flags)) );
+   case CHK_CARRIES:
+   if ( is_number( buf ) )
+      return( lval_char != NULL && has_item( lval_char, atoi(buf), -1, FALSE ) );
+  else
+      return( lval_char != NULL && (get_obj_carry( lval_char, buf, lval_char ) != NULL) );
+  case CHK_WEARS:
+  if ( is_number( buf ) )
+      return( lval_char != NULL && has_item( lval_char, atoi(buf), -1, TRUE ) );
+  else
+      return( lval_char != NULL && (get_obj_wear( lval_char, buf ) != NULL) );
+  case CHK_HAS:
+  return( lval_char != NULL && has_item( lval_char, -1, item_lookup(buf), FALSE ) );
+  case CHK_USES:
+  return( lval_char != NULL && has_item( lval_char, -1, item_lookup(buf), TRUE ) );
+  case CHK_NAME:
+  switch( code )
+  {
+    default :
+    case 'i':
+    case 'n':
+    case 't':
+    case 'r':
+    case 'q':
+    return( lval_char != NULL && is_name( buf, lval_char->name ) );
+    case 'o':
+    case 'p':
+    return( lval_obj != NULL && is_name( buf, lval_obj->name ) );
+}
+case CHK_POS:
+return( lval_char != NULL && lval_char->position == position_lookup( buf ) );
+case CHK_CLAN:
+return( lval_char != NULL && lval_char->clan == clan_lookup( buf ) );
+case CHK_RACE:
+return( lval_char != NULL && lval_char->race == race_lookup( buf ) );
+case CHK_ORG:
+return( lval_char != NULL
+  && (mem_lookup(org_lookup(buf), lval_char->name) != NULL));
+case CHK_OBJTYPE:
+return( lval_obj != NULL && lval_obj->item_type == item_lookup( buf ) );
+default:;
+}
 
     /*
      * Case 5: Keyword, actor, comparison and value
      */
-     if ( (oper = keyword_lookup( fn_evals, buf )) < 0 )
-     {
-    	 log_string(LOG_BUG, Format("Cmd_eval: prog %d syntax error(5): '%s'", vnum, original));
-    	 return FALSE;
-     }
-     one_argument( line, buf );
-     rval = atoi( buf );
+if ( (oper = keyword_lookup( fn_evals, buf )) < 0 )
+{
+  log_string(LOG_BUG, Format("Cmd_eval: prog %d syntax error(5): '%s'", vnum, original));
+  return FALSE;
+}
+one_argument( line, buf );
+rval = atoi( buf );
 
-    switch( check )
-    {
+switch( check )
+{
 	case CHK_VNUM:
-	    switch( code )
-            {
-                default :
-                case 'i':
-                case 'n':
-                case 't':
-                case 'r':
-                case 'q':
-                	if( lval_char != NULL && IS_NPC( lval_char ) )
-                		lval = lval_char->pIndexData->vnum;
-                	break;
-                case 'o':
-                case 'p':
-                	if ( lval_obj != NULL )
-                		lval = lval_obj->pIndexData->vnum;
-                	break;
-            }
-	    break;
-	case CHK_HPCNT:
-	    if ( lval_char != NULL )
-		lval = ((lval_char->health+lval_char->agghealth-7) * 100)
-				/7;
-	    break;
-	case CHK_ROOM:
-	    if ( lval_char != NULL && lval_char->in_room != NULL )
-		lval = lval_char->in_room->vnum; break;
-        case CHK_SEX:
-	    if ( lval_char != NULL ) lval = lval_char->sex; break;
-	case CHK_MONEY:  /* Money is converted to cents... */
-	    if ( lval_char != NULL ) 
-		lval = lval_char->cents + (lval_char->dollars * 100); break;
-	case CHK_OBJVAL0:
-            if ( lval_obj != NULL ) lval = lval_obj->value[0]; break;
-        case CHK_OBJVAL1:
-            if ( lval_obj != NULL ) lval = lval_obj->value[1]; break;
-        case CHK_OBJVAL2: 
-            if ( lval_obj != NULL ) lval = lval_obj->value[2]; break;
-        case CHK_OBJVAL3:
-            if ( lval_obj != NULL ) lval = lval_obj->value[3]; break;
-	case CHK_OBJVAL4:
-	    if ( lval_obj != NULL ) lval = lval_obj->value[4]; break;
-	case CHK_GRPSIZE:
-	    if( lval_char != NULL ) lval = count_people_room( lval_char, 4 ); break;
-	default:
-            return FALSE;
+   switch( code )
+   {
+    default :
+    case 'i':
+    case 'n':
+    case 't':
+    case 'r':
+    case 'q':
+    if( lval_char != NULL && IS_NPC( lval_char ) )
+      lval = lval_char->pIndexData->vnum;
+  break;
+  case 'o':
+  case 'p':
+  if ( lval_obj != NULL )
+      lval = lval_obj->pIndexData->vnum;
+  break;
+}
+break;
+case CHK_HPCNT:
+if ( lval_char != NULL )
+  lval = ((lval_char->health+lval_char->agghealth-7) * 100)
+/7;
+break;
+case CHK_ROOM:
+if ( lval_char != NULL && lval_char->in_room != NULL )
+{
+    lval = lval_char->in_room->vnum;}
+
+    break;
+    case CHK_SEX:
+    if ( lval_char != NULL )
+    {
+        lval = lval_char->sex;
     }
-    return( num_eval( lval, oper, rval ) );
+    break;
+	case CHK_MONEY:  /* Money is converted to cents... */
+    if ( lval_char != NULL )
+    {
+        lval = lval_char->cents + (lval_char->dollars * 100);
+    }
+    break;
+    case CHK_OBJVAL0:
+    if ( lval_obj != NULL )
+    {
+        lval = lval_obj->value[0];
+    }
+    break;
+    case CHK_OBJVAL1:
+    if ( lval_obj != NULL )
+    {
+        lval = lval_obj->value[1];
+    }
+    break;
+    case CHK_OBJVAL2:
+    if ( lval_obj != NULL )
+    {
+        lval = lval_obj->value[2];
+    }
+    break;
+    case CHK_OBJVAL3:
+    if ( lval_obj != NULL )
+    {
+        lval = lval_obj->value[3];
+    }
+    break;
+    case CHK_OBJVAL4:
+    if ( lval_obj != NULL )
+    {
+        lval = lval_obj->value[4];
+    }
+    break;
+    case CHK_GRPSIZE:
+    if( lval_char != NULL )
+    {
+        lval = count_people_room( lval_char, 4 );
+    }
+    break;
+    default:
+    return FALSE;
+}
+return( num_eval( lval, oper, rval ) );
 }
 
 /*
@@ -668,9 +712,9 @@ int cmd_eval( sh_int vnum, char *line, int check,
  * so that missing or invalid $-codes do not crash the server
  * ------------------------------------------------------------------------
  */
-void expand_arg( char *buf, 
-	const char *format, 
-	CHAR_DATA *mob, CHAR_DATA *ch, 
+void expand_arg( char *buf,
+	const char *format,
+	CHAR_DATA *mob, CHAR_DATA *ch,
 	const void *arg1, const void *arg2, CHAR_DATA *rch )
 {
     static char * const he_she  [] = { "it",  "he",  "she" };
@@ -679,7 +723,7 @@ void expand_arg( char *buf,
     const char *someone = "someone";
     const char *something = "something";
     const char *someones = "someone's";
- 
+
     char fname[MAX_INPUT_LENGTH]={'\0'};
     CHAR_DATA *vch = (CHAR_DATA *) arg2;
     OBJ_DATA *obj1 = (OBJ_DATA  *) arg1;
@@ -687,7 +731,7 @@ void expand_arg( char *buf,
     const char *str;
     const char *i;
     char *point;
- 
+
     /*
      * Discard null and zero-length messages.
      */
@@ -713,30 +757,30 @@ void expand_arg( char *buf,
 		one_argument( mob->name, fname );
 		i = fname;                         		break;
             case 'I': i = mob->short_descr;                     break;
-            case 'n': 
+            case 'n':
 		i = someone;
 		if ( ch != NULL && can_see( mob, ch ) )
 		{
             	    one_argument( ch->name, fname );
 		    i = capitalize(fname);
 		}						break;
-            case 'N': 
+            case 'N':
 	    	i = (ch != NULL && can_see( mob, ch ) )
 		? ( IS_NPC( ch ) ? ch->short_descr : ch->name )
 		: someone;                         		break;
-            case 't': 
+            case 't':
 		i = someone;
 		if ( vch != NULL && can_see( mob, vch ) )
 		{
             	     one_argument( vch->name, fname );
 		     i = capitalize(fname);
 		}						break;
-            case 'T': 
+            case 'T':
 	    	i = (vch != NULL && can_see( mob, vch ))
 		? ( IS_NPC( vch ) ? vch->short_descr : vch->name )
 		: someone;                         		break;
-            case 'r': 
-		if ( rch == NULL ) 
+            case 'r':
+		if ( rch == NULL )
 		    rch = get_random_char( mob );
 		i = someone;
 		if( rch != NULL && can_see( mob, rch ) )
@@ -744,8 +788,8 @@ void expand_arg( char *buf,
                     one_argument( rch->name, fname );
 		    i = capitalize(fname);
 		} 						break;
-            case 'R': 
-		if ( rch == NULL ) 
+            case 'R':
+		if ( rch == NULL )
 		    rch = get_random_char( mob );
 		i  = ( rch != NULL && can_see( mob, rch ) )
 		? ( IS_NPC( ch ) ? ch->short_descr : ch->name )
@@ -762,57 +806,57 @@ void expand_arg( char *buf,
 		? ( IS_NPC( mob->mprog_target ) ? mob->mprog_target->short_descr : mob->mprog_target->name )
 		: someone;                         		break;
             case 'j': i = he_she  [URANGE(0, mob->sex, 2)];     break;
-            case 'e': 
+            case 'e':
 	    	i = (ch != NULL && can_see( mob, ch ))
-		? he_she  [URANGE(0, ch->sex, 2)]        
+		? he_she  [URANGE(0, ch->sex, 2)]
 		: someone;					break;
-            case 'E': 
+            case 'E':
 	    	i = (vch != NULL && can_see( mob, vch ))
-		? he_she  [URANGE(0, vch->sex, 2)]        
+		? he_she  [URANGE(0, vch->sex, 2)]
 		: someone;					break;
-            case 'J': 
+            case 'J':
 		i = (rch != NULL && can_see( mob, rch ))
-		? he_she  [URANGE(0, rch->sex, 2)]        
+		? he_she  [URANGE(0, rch->sex, 2)]
 		: someone;					break;
 	    case 'X':
 		i = (mob->mprog_target != NULL && can_see( mob, mob->mprog_target))
 		? he_she  [URANGE(0, mob->mprog_target->sex, 2)]
 		: someone;					break;
             case 'k': i = him_her [URANGE(0, mob->sex, 2)];	break;
-            case 'm': 
+            case 'm':
 	    	i = (ch != NULL && can_see( mob, ch ))
 		? him_her [URANGE(0, ch  ->sex, 2)]
 		: someone;        				break;
-            case 'M': 
+            case 'M':
 	    	i = (vch != NULL && can_see( mob, vch ))
-		? him_her [URANGE(0, vch ->sex, 2)]        
+		? him_her [URANGE(0, vch ->sex, 2)]
 		: someone;					break;
-            case 'K': 
-		if ( rch == NULL ) 
+            case 'K':
+		if ( rch == NULL )
 		    rch = get_random_char( mob );
 		i = (rch != NULL && can_see( mob, rch ))
 		? him_her [URANGE(0, rch ->sex, 2)]
 		: someone;					break;
-            case 'Y': 
+            case 'Y':
 	    	i = (mob->mprog_target != NULL && can_see( mob, mob->mprog_target ))
-		? him_her [URANGE(0, mob->mprog_target->sex, 2)]        
+		? him_her [URANGE(0, mob->mprog_target->sex, 2)]
 		: someone;					break;
             case 'l': i = his_her [URANGE(0, mob ->sex, 2)];    break;
-            case 's': 
+            case 's':
 	    	i = (ch != NULL && can_see( mob, ch ))
 		? his_her [URANGE(0, ch ->sex, 2)]
 		: someones;					break;
-            case 'S': 
+            case 'S':
 	    	i = (vch != NULL && can_see( mob, vch ))
 		? his_her [URANGE(0, vch ->sex, 2)]
 		: someones;					break;
-            case 'L': 
-		if ( rch == NULL ) 
+            case 'L':
+		if ( rch == NULL )
 		    rch = get_random_char( mob );
 		i = ( rch != NULL && can_see( mob, rch ) )
 		? his_her [URANGE(0, rch ->sex, 2)]
 		: someones;					break;
-            case 'Z': 
+            case 'Z':
 	    	i = (mob->mprog_target != NULL && can_see( mob, mob->mprog_target ))
 		? his_her [URANGE(0, mob->mprog_target->sex, 2)]
 		: someones;					break;
@@ -839,16 +883,16 @@ void expand_arg( char *buf,
                 ? obj2->short_descr
                 : something;					break;
         }
- 
+
         ++str;
         while ( ( *point = *i ) != '\0' )
             ++point, ++i;
- 
+
     }
     *point = '\0';
- 
+
     return;
-}    
+}
 
 /*
  * ------------------------------------------------------------------------
@@ -866,7 +910,7 @@ void expand_arg( char *buf,
 #define END_BLOCK        -2 /* Flag: End of if-else-endif block */
 #define MAX_CALL_LEVEL    5 /* Maximum nested calls */
 
-void program_flow( 
+void program_flow(
         sh_int pvnum,  /* For diagnostic purposes */
 	char *source,  /* the actual MOBprog code */
 	CHAR_DATA *mob, CHAR_DATA *ch, const void *arg1, const void *arg2 )
@@ -1067,7 +1111,7 @@ void program_flow(
     call_level--;
 }
 
-/* 
+/*
  * ---------------------------------------------------------------------
  * Trigger handlers. These are called from various parts of the code
  * when an event is triggered.
@@ -1078,15 +1122,15 @@ void program_flow(
  * A general purpose string trigger. Matches argument to a string trigger
  * phrase.
  */
-void mp_act_trigger( 
-	char *argument, CHAR_DATA *mob, CHAR_DATA *ch, 
+void mp_act_trigger(
+	char *argument, CHAR_DATA *mob, CHAR_DATA *ch,
 	const void *arg1, const void *arg2, int type )
 {
     MPROG_LIST *prg;
 
     for ( prg = mob->pIndexData->mprogs; prg != NULL; prg = prg->next )
     {
-    	if ( prg->trig_type == type 
+    	if ( prg->trig_type == type
 	&&  strstr( argument, prg->trig_phrase ) != NULL )
         {
 	    program_flow( prg->vnum, prg->code, mob, ch, arg1, arg2 );
@@ -1100,15 +1144,15 @@ void mp_act_trigger(
  * A general purpose percentage trigger. Checks if a random percentage
  * number is less than trigger phrase
  */
-bool mp_percent_trigger( 
-	CHAR_DATA *mob, CHAR_DATA *ch, 
+bool mp_percent_trigger(
+	CHAR_DATA *mob, CHAR_DATA *ch,
 	const void *arg1, const void *arg2, int type )
 {
     MPROG_LIST *prg;
 
     for ( prg = mob->pIndexData->mprogs; prg != NULL; prg = prg->next )
     {
-    	if ( prg->trig_type == type 
+    	if ( prg->trig_type == type
 	&&   number_percent() < atoi( prg->trig_phrase ) )
         {
 	    program_flow( prg->vnum, prg->code, mob, ch, arg1, arg2 );
@@ -1145,7 +1189,7 @@ bool mp_exit_trigger( CHAR_DATA *ch, int dir )
     MPROG_LIST   *prg;
 
     for ( mob = ch->in_room->people; mob != NULL; mob = mob->next_in_room )
-    {    
+    {
 	if ( IS_NPC( mob )
 	&&   ( HAS_TRIGGER(mob, TRIG_EXIT) || HAS_TRIGGER(mob, TRIG_EXALL) ) )
 	{
@@ -1264,7 +1308,7 @@ void mp_greet_trigger( CHAR_DATA *ch )
     CHAR_DATA *mob;
 
     for ( mob = ch->in_room->people; mob != NULL; mob = mob->next_in_room )
-    {    
+    {
 	if ( IS_NPC( mob )
 	&& ( HAS_TRIGGER(mob, TRIG_GREET) || HAS_TRIGGER(mob,TRIG_GRALL) ) )
 	{
@@ -1277,7 +1321,7 @@ void mp_greet_trigger( CHAR_DATA *ch )
 	    &&   mob->position == mob->pIndexData->default_pos
 	    &&   can_see( mob, ch ) )
 		mp_percent_trigger( mob, ch, NULL, NULL, TRIG_GREET );
-	    else                 
+	    else
 	    if ( HAS_TRIGGER( mob, TRIG_GRALL ) )
 		mp_percent_trigger( mob, ch, NULL, NULL, TRIG_GRALL );
 	}

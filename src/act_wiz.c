@@ -792,7 +792,7 @@ void do_at( CHAR_DATA *ch, char *argument )
     CHAR_DATA *wch;
 
     CheckCH(ch);
-    
+
     argument = one_argument( argument, arg );
 
     if ( IS_NULLSTR(arg) || IS_NULLSTR(argument) )
@@ -807,7 +807,7 @@ void do_at( CHAR_DATA *ch, char *argument )
 	return;
     }
 
-    if (!is_room_owner(ch,location) && room_is_private( location ) 
+    if (!is_room_owner(ch,location) && room_is_private( location )
     &&  get_trust(ch) < MAX_LEVEL)
     {
 	send_to_char( "That room is private right now.\n\r", ch );
@@ -1022,14 +1022,14 @@ void do_ostat( CHAR_DATA *ch, char *argument )
 	obj->in_obj     == NULL    ? "(none)" : obj->in_obj->short_descr,
 	obj->carried_by == NULL    ? "(none)" :  can_see(ch,obj->carried_by) ? obj->carried_by->name : "someone",
 	obj->wear_loc), ch );
-    
+
     send_to_char( Format("Values: %d %d %d %d %d\n\r", obj->value[0], obj->value[1], obj->value[2], obj->value[3], obj->value[4]), ch );
-    
+
     /* now give out vital statistics as per identify */
-    
+
     switch ( obj->item_type )
     {
-    	case ITEM_SCROLL: 
+    	case ITEM_SCROLL:
     	case ITEM_POTION:
     	case ITEM_PILL:
 	    send_to_char( Format("Level %d spells of:", obj->value[0]), ch );
@@ -1068,31 +1068,31 @@ void do_ostat( CHAR_DATA *ch, char *argument )
 	case ITEM_DRINK_CON:
 	    send_to_char(Format("It holds %s-colored %s.\n\r", liq_table[obj->value[2]].liq_color, liq_table[obj->value[2]].liq_name), ch);
 	    break;
-		
-      
+
+
     	case ITEM_WEAPON:
  	    send_to_char("Weapon type is ",ch);
 	    switch (obj->value[0])
 	    {
-	    	case(WEAPON_EXOTIC): 
+	    	case(WEAPON_EXOTIC):
 		    send_to_char("exotic\n\r",ch);
 		    break;
-	    	case(WEAPON_FIREARM): 
+	    	case(WEAPON_FIREARM):
 		    send_to_char("\n\r",ch);
-		    break;	
-	    	case(WEAPON_BLADE): 
+		    break;
+	    	case(WEAPON_BLADE):
 		    send_to_char("blade\n\r",ch);
 		    break;
 	    	case(WEAPON_BLUNT):
 		    send_to_char("blunt\n\r",ch);
 		    break;
-	    	case(WEAPON_GRAPPLE): 
-		    send_to_char("grapple\n\r",ch);	
+	    	case(WEAPON_GRAPPLE):
+		    send_to_char("grapple\n\r",ch);
 		    break;
-	    	case(WEAPON_WHIP): 
+	    	case(WEAPON_WHIP):
 		    send_to_char("whip\n\r",ch);
 		    break;
-	    	default: 
+	    	default:
 		    send_to_char("unknown\n\r",ch);
 		    break;
  	    }
@@ -1101,7 +1101,7 @@ void do_ostat( CHAR_DATA *ch, char *argument )
 
 	    send_to_char(Format("Damage noun is %s.\n\r",
 		(obj->value[3] > 0 && obj->value[3] < MAX_DAMAGE_MESSAGE) ? attack_table[obj->value[3]].noun : "undefined"), ch);
-	    
+
 	    if (obj->value[4])  /* weapon flags */
 	    {
 	    	send_to_char(Format("Weapons flags: %s\n\r", flag_string(weapon_flags, obj->value[4])), ch);
@@ -1575,7 +1575,9 @@ void do_owhere(CHAR_DATA *ch, char *argument )
 	for ( obj = object_list; obj != NULL; obj = obj->next )
 	{
 		if ( !can_see_obj( ch, obj ) || !is_name( argument, obj->name ))
+		{
 			continue;
+		}
 
 		found = TRUE;
 		number++;
@@ -1583,23 +1585,34 @@ void do_owhere(CHAR_DATA *ch, char *argument )
 		for ( in_obj = obj; in_obj->in_obj != NULL; in_obj = in_obj->in_obj )
 			;
 
-		if ( in_obj->carried_by != NULL && can_see(ch,in_obj->carried_by)
-		&&  in_obj->carried_by->in_room != NULL)
+		if ( in_obj->carried_by != NULL && can_see(ch,in_obj->carried_by) && in_obj->carried_by->in_room != NULL)
+		{
 			add_buf(buffer, (char *)Format("%3d) %s is carried by %s [Room %d]\n\r",
-					number, CapitalSentence(obj->short_descr), PERS(in_obj->carried_by, ch), in_obj->carried_by->in_room->vnum ) );
+				number, CapitalSentence(obj->short_descr), PERS(in_obj->carried_by, ch), in_obj->carried_by->in_room->vnum ) );
+		}
 		else if (in_obj->in_room != NULL && can_see_room(ch,in_obj->in_room))
+		{
 			add_buf(buffer, (char *)Format("%3d) %s is in %s [Room %d]\n\r",
-					number, CapitalSentence(obj->short_descr),in_obj->in_room->name, in_obj->in_room->vnum) );
+				number, CapitalSentence(obj->short_descr),in_obj->in_room->name, in_obj->in_room->vnum) );
+		}
 		else
+		{
 			add_buf(buffer, (char *)Format("%3d) %s is somewhere\n\r", number, CapitalSentence(obj->short_descr) ));
+		}
 		if (number >= max_found)
+		{
 			break;
+		}
 	}
 
 	if ( !found )
+	{
 		send_to_char( "Nothing like that in heaven or earth.\n\r", ch );
+	}
 	else
+	{
 		page_to_char(buf_string(buffer),ch);
+	}
 
 	free_buf(buffer);
 }
@@ -1680,7 +1693,7 @@ void do_mwhere( CHAR_DATA *ch, char *argument )
                     IS_NPC(victim) ? victim->short_descr : victim->name, (unsigned long)victim));
             }
         }
-        if (found) 
+        if (found)
             page_to_char(buf_string(buffer),ch);
         else
             send_to_char("No mobs without rooms found.\n\r",ch);
@@ -1816,7 +1829,9 @@ void do_shutdown( CHAR_DATA *ch, char *argument )
 		d_next = d->next;
 		vch = d->original ? d->original : d->character;
 		if (vch != NULL)
+		{
 			save_char_obj(vch);
+		}
 		close_socket(d);
 	}
 
@@ -1909,7 +1924,7 @@ void do_switch( CHAR_DATA *ch, char *argument )
     CheckCH(ch);
 
     one_argument( argument, arg );
-    
+
     if ( IS_NULLSTR(arg) )
     {
 	send_to_char( "Switch into whom?\n\r", ch );
@@ -1918,7 +1933,7 @@ void do_switch( CHAR_DATA *ch, char *argument )
 
     if ( ch->desc == NULL )
 	return;
-    
+
     if ( ch->desc->original != NULL )
     {
 	send_to_char( "You are already switched.\n\r", ch );
@@ -1943,7 +1958,7 @@ void do_switch( CHAR_DATA *ch, char *argument )
 	return;
     }
 
-    if (!is_room_owner(ch,victim->in_room) && ch->in_room != victim->in_room 
+    if (!is_room_owner(ch,victim->in_room) && ch->in_room != victim->in_room
     &&  room_is_private(victim->in_room) && !IS_TRUSTED(ch,MASTER))
     {
 	send_to_char("That character is in a private room.\n\r",ch);
@@ -2260,7 +2275,7 @@ void do_mload( CHAR_DATA *ch, char *argument )
     CHAR_DATA *victim;
 
     CheckCH(ch);
-    
+
     one_argument( argument, arg );
 
     if ( IS_NULLSTR(arg) || !is_number(arg) )
@@ -2306,7 +2321,7 @@ void do_oload( CHAR_DATA *ch, char *argument )
     OBJ_DATA *obj;
 
     CheckCH(ch);
-    
+
     argument = one_argument( argument, arg1 );
     one_argument( argument, arg2 );
 
@@ -2314,8 +2329,8 @@ void do_oload( CHAR_DATA *ch, char *argument )
     {
 	send_to_char( "Syntax: load obj <vnum>.\n\r", ch );
 	return;
-    } 
- 
+    }
+
     if ( ( pObjIndex = get_obj_index( atoi( arg1 ) ) ) == NULL )
     {
 	send_to_char( "No object has that vnum.\n\r", ch );
@@ -2617,7 +2632,7 @@ void do_restore( CHAR_DATA *ch, char *argument )
 	return;
 }
 
- 	
+
 void do_freeze( CHAR_DATA *ch, char *argument )
 {
 	char arg[MIL]={'\0'};
@@ -3337,7 +3352,7 @@ void do_mset( CHAR_DATA *ch, char *argument )
 	    send_to_char( "Not available on NPC's.\n\r", ch );
 	    return;
 	}
-	
+
 	if (value > ch->pcdata->security || value < 0 )
 	{
 	    if( ch->pcdata->security != 0 )
@@ -3574,13 +3589,13 @@ void do_mset( CHAR_DATA *ch, char *argument )
             send_to_char( "Not on NPC's.\n\r", ch );
             return;
         }
- 
+
         if ( value < -50 || value > 100 )
         {
             send_to_char( "Full range is -50 to 100.\n\r", ch );
             return;
         }
- 
+
         victim->condition[COND_HUNGER] = value;
         return;
     }
@@ -3606,7 +3621,7 @@ void do_mset( CHAR_DATA *ch, char *argument )
 	victim->race = race;
 	return;
     }
-   
+
     if (!str_prefix(arg2,"group"))
     {
 	if (!IS_NPC(victim))
@@ -3819,7 +3834,7 @@ void do_string( CHAR_DATA *ch, char *argument )
 	    victim->name = str_dup( arg3 );
 	    return;
     	}
-    	
+
     	if ( !str_prefix( arg2, "description" ) )
     	{
     		PURGE_DATA(victim->description);
@@ -3855,17 +3870,17 @@ void do_string( CHAR_DATA *ch, char *argument )
     	}
 
     }
-    
+
     if (!str_prefix(type,"object"))
     {
     	/* string an obj */
-    	
+
    	if ( ( obj = get_obj_world( ch, arg1 ) ) == NULL )
     	{
 	    send_to_char( "Nothing like that in heaven or earth.\n\r", ch );
 	    return;
     	}
-    	
+
         if ( !str_prefix( arg2, "name" ) )
     	{
         	PURGE_DATA( obj->name );
@@ -3912,8 +3927,8 @@ void do_string( CHAR_DATA *ch, char *argument )
 	    return;
     	}
     }
-    
-    	
+
+
     /* echo bad use message */
     do_function(ch, &do_string, "" );
 }
@@ -4024,7 +4039,7 @@ void do_oset( CHAR_DATA *ch, char *argument )
 	obj->timer = value;
 	return;
     }
-	
+
     /*
      * Generate usage message.
      */
@@ -4064,7 +4079,7 @@ void do_rset( CHAR_DATA *ch, char *argument )
 	return;
     }
 
-    if (!is_room_owner(ch,location) && ch->in_room != location 
+    if (!is_room_owner(ch,location) && ch->in_room != location
     &&  room_is_private(location) && !IS_TRUSTED(ch,MASTER))
     {
         send_to_char("That room is private right now.\n\r",ch);
@@ -4691,7 +4706,7 @@ const char wizutil_id [] = "$Id: wizutil.c,v 1.6 1996/01/04 21:30:45 root Exp ro
 
 /*
 ===========================================================================
-This snippet was written by Erwin S. Andreasen, erwin@pip.dknet.dk. You may 
+This snippet was written by Erwin S. Andreasen, erwin@pip.dknet.dk. You may
 use this code freely, as long as you retain my name in all of the files. You
 also have to mail me telling that you are using it. I am giving this,
 hopefully useful, piece of source code to you for free, and all I require
@@ -4719,7 +4734,7 @@ the /pub/pip1773 directory.
   A rename command which renames a player. Search for do_rename to see
   more info on it.
 
-  A FOR command which executes a command at/on every player/mob/location.  
+  A FOR command which executes a command at/on every player/mob/location.
 
   Fixes since last release: None.
 
@@ -4727,7 +4742,7 @@ the /pub/pip1773 directory.
 */
 
 
-/* To have VLIST show more than vnum 0 - 9900, change the number below: */ 
+/* To have VLIST show more than vnum 0 - 9900, change the number below: */
 
 #define MAX_SHOW_VNUM   999999 /* show only 1 - 100*100 */
 
@@ -4844,7 +4859,7 @@ void checkexits (ROOM_INDEX_DATA *room, AREA_DATA *pArea, char* buffer)
 // 	ROOM_INDEX_DATA* room;
 // 	int i = 0;
 // 	char buffer[MSL]={'\0'};
-	
+
 // 	CheckCH(ch);
 
 // 	pArea = ch->in_room->area;			/* this is the area we want info on */
@@ -4855,7 +4870,7 @@ void checkexits (ROOM_INDEX_DATA *room, AREA_DATA *pArea, char* buffer)
 // 			checkexits (room, pArea, buffer);
 // 			send_to_char (buffer, ch);
 // 		}
-// } 
+// }
 
 /* show a list of all used VNUMS */
 
@@ -4881,7 +4896,7 @@ void do_vlist (CHAR_DATA *ch, char *argument)
 			{
 				room = get_room_index (vnum * 100 + 1); /* each zone has to have a XXX01 room */
 				strncat (buffer, Format("%3d %-8.8s  ", vnum, room ? area_name(room->area) : "-"), sizeof(buffer));
-			} 
+			}
 		} /* for columns */
 
 		send_to_char (buffer,ch);
@@ -4909,7 +4924,7 @@ in game. If there is no #, the action will be executed for every room containg
 at least one target, but only once per room. # cannot be used with FOR EVERY-
 WHERE. # can be anywhere in the action.
 
-Example: 
+Example:
 
 FOR ALL SMILE -> you will only smile once in a room with 2 players.
 FOR ALL TWIDDLE # -> In a room with A and B, you will twiddle A then B.
@@ -4920,14 +4935,14 @@ avoid something like FOR MOBS PURGE (although it actually works at my MUD).
 FOR MOBS TRANS 3054 (transfer ALL the mobs to Midgaard temple) does NOT work
 though :)
 
-The command works by transporting the character to each of the rooms with 
+The command works by transporting the character to each of the rooms with
 target in them. Private rooms are not violated.
 
 */
 
 /* Expand the name of a character into a string that identifies THAT
    character within a room. E.g. the second 'guard' -> 2. guard
-*/   
+*/
 const char * name_expand (CHAR_DATA *ch)
 {
 	CHAR_DATA *rch;
@@ -5008,7 +5023,7 @@ void do_for (CHAR_DATA *ch, char *argument)
 	}
 
 	if (strchr (argument, '#')) /* replace # ? */
-	{ 
+	{
 		for (p = char_list; p ; p = p_next)
 		{
 			p_next = p->next; /* In case someone DOES try to AT MOBS SLAY # */
@@ -5024,7 +5039,7 @@ void do_for (CHAR_DATA *ch, char *argument)
 			else if (!IS_NPC(p) && p->trust < LEVEL_IMMORTAL && fMortals)
 				found = TRUE;
 
-			/* It looks ugly to me.. but it works :) */				
+			/* It looks ugly to me.. but it works :) */
 			if (found) /* p is 'appropriate' */
 			{
 				char *pSource = argument; /* head of buffer to be parsed */
@@ -5724,7 +5739,7 @@ void do_sayat( CHAR_DATA *ch, char *argument )
 	CHAR_DATA *rch;
 	ROOM_INDEX_DATA *location;
 	char arg[MIL]={'\0'};
-	
+
 	CheckCH(ch);
 
 	if ( IS_NULLSTR(argument) )
@@ -6119,7 +6134,7 @@ void do_org(CHAR_DATA *ch, char *argument)
 			org->races = str_dup( "All" );
 			send_to_char("All races and clans are now acceptible.\n\r", ch);
 		}
-		else if ( strstr( org->races, name ) != '\0' )
+		else if ( strstr( org->races, name ) != NULL )
 		{
 			org->races = string_replace( org->races, name, "\0" );
 			org->races = string_unpad( org->races );
@@ -6134,13 +6149,13 @@ void do_org(CHAR_DATA *ch, char *argument)
 		else
 		{
 			buf[0] = '\0';
-			if ( strstr( org->races, "None" ) != '\0' )
+			if ( strstr( org->races, "None" ) != NULL )
 			{
 				org->races = string_replace( org->races, "None", "\0" );
 				org->races = string_unpad( org->races );
 			}
 
-			if ( strstr( org->races, "All" ) != '\0' )
+			if ( strstr( org->races, "All" ) != NULL )
 			{
 				org->races = string_replace( org->races, "All", "\0" );
 				org->races = string_unpad( org->races );
@@ -6200,7 +6215,7 @@ void do_org(CHAR_DATA *ch, char *argument)
 			org->races = str_dup( "All" );
 			send_to_char("All races and clans are now acceptible.\n\r", ch);
 		}
-		else if ( strstr( org->races, name ) != '\0' )
+		else if ( strstr( org->races, name ) != NULL )
 		{
 			org->races = string_replace( org->races, name, "\0" );
 			org->races = string_unpad( org->races );
@@ -6215,13 +6230,13 @@ void do_org(CHAR_DATA *ch, char *argument)
 		else
 		{
 			buf[0] = '\0';
-			if ( strstr( org->races, "None" ) != '\0' )
+			if ( strstr( org->races, "None" ) != NULL )
 			{
 				org->races = string_replace( org->races, "None", "\0" );
 				org->races = string_unpad( org->races );
 			}
 
-			if ( strstr( org->races, "All" ) != '\0' )
+			if ( strstr( org->races, "All" ) != NULL )
 			{
 				org->races = string_replace( org->races, "All", "\0" );
 				org->races = string_unpad( org->races );

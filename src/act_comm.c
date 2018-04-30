@@ -89,7 +89,7 @@ void do_delete( CHAR_DATA *ch, char *argument)
 	ch->pcdata->confirm_delete = TRUE;
 	wiznet("\tY[WIZNET]\tn $N is contemplating deletion.",ch,NULL,0,0,get_trust(ch));
 }
-		
+
 /*
  * Translate statement into other "language".
  */
@@ -110,66 +110,72 @@ void translate( CHAR_DATA *ch, char * oldwords, char * newwords )
 
 	static const struct syl_type syl_table[] =
 	{
-	{ " ",		" ",		" ",		" "		},
-	{ "ar",		"abra",		"ow",		"eek"		},
-	{ "au",		"kada",		"ow",		"ea"		},
-	{ "bless",	"fido",		"arooo",	"skeel"		},
-	{ "blind",	"nose",		"arf",		"shree"		},
-	{ "bur",	"mosa",		"grow",		"skeeeah"	},
-	{ "cu",		"judi",		"-cough-",	"ee"		},
-	{ "de",		"oculo",	"rl",		"kea"		},
-	{ "en",		"unso",		"snrl",		"k"		},
-	{ "light",	"dies",		"sn",		"kreeek"	},
-	{ "lo",		"hi",		"arl",		"krae"		},
-	{ "mor",	"zak",		"arr",		"squee"		},
-	{ "move",	"sido",		"rrrrrr",	"skeeah"	},
-	{ "ness",	"lacri",	"owwwwl",	"keep"		},
-	{ "ning",	"illa",		"owl",		"eeeyee"	},
-	{ "per",	"duda",		"arrr",		"pek"		},
-	{ "ra",		"gru",		"grr",		"ea"		},
-	{ "fresh",	"ima",		"howwwwwwl",	"squeak"	},
-	{ "re",		"candus",	"arooo",	"quee"		},
-	{ "son",	"sabru",	"owl",		"shreek"	},
-	{ "tect",	"infra",	"owl",		"kreep"		},
-	{ "the",	"trak",		"grr",		"skree"		},
-	{ "tri",	"cula",		"grrr",		"reeic"		},
-	{ "ven",	"nofo",		"grar",		"sque"		},
-	{ "a", "a", "a", "a" }, { "b", "b", "gr", "e" },
-	{ "c", "q", "graw", "quea" }, { "d", "e", "hooo", "eak" },
-	{ "e", "z", "ow", "ee" }, { "f", "y", "owl", "k" },
-	{ "g", "o", "gr", "squ" }, { "h", "p", "how", "k" },
-	{ "i", "u", "ow", "ee" }, { "j", "y", "owoo", "eak" },
-	{ "k", "t", "grrr", "eek" }, { "l", "r", "owl", "squea" },
-	{ "m", "w", "ooow", "squee" }, { "n", "i", "grr", "ee" },
-	{ "o", "a", "oooo", "eep" }, { "p", "s", "owl", "squ" },
-	{ "q", "d", "ow", "sque" }, { "r", "f", "rrr", "ee" },
-	{ "s", "g", "sna", "squ" }, { "t", "h", "grr", "k" },
-	{ "u", "j", "ow", "ea" }, { "v", "z", "sna", "eep" },
-	{ "w", "x", "owl", "eak" }, { "x", "n", "h", "skree" },
-	{ "y", "l", "owoo", "ee" }, { "z", "k", "sna", "k" },
-	{ "", "", "", "" }
+		{ " ",		" ",		" ",		" "		},
+		{ "ar",		"abra",		"ow",		"eek"		},
+		{ "au",		"kada",		"ow",		"ea"		},
+		{ "bless",	"fido",		"arooo",	"skeel"		},
+		{ "blind",	"nose",		"arf",		"shree"		},
+		{ "bur",	"mosa",		"grow",		"skeeeah"	},
+		{ "cu",		"judi",		"-cough-",	"ee"		},
+		{ "de",		"oculo",	"rl",		"kea"		},
+		{ "en",		"unso",		"snrl",		"k"		},
+		{ "light",	"dies",		"sn",		"kreeek"	},
+		{ "lo",		"hi",		"arl",		"krae"		},
+		{ "mor",	"zak",		"arr",		"squee"		},
+		{ "move",	"sido",		"rrrrrr",	"skeeah"	},
+		{ "ness",	"lacri",	"owwwwl",	"keep"		},
+		{ "ning",	"illa",		"owl",		"eeeyee"	},
+		{ "per",	"duda",		"arrr",		"pek"		},
+		{ "ra",		"gru",		"grr",		"ea"		},
+		{ "fresh",	"ima",		"howwwwwwl",	"squeak"	},
+		{ "re",		"candus",	"arooo",	"quee"		},
+		{ "son",	"sabru",	"owl",		"shreek"	},
+		{ "tect",	"infra",	"owl",		"kreep"		},
+		{ "the",	"trak",		"grr",		"skree"		},
+		{ "tri",	"cula",		"grrr",		"reeic"		},
+		{ "ven",	"nofo",		"grar",		"sque"		},
+		{ "a", "a", "a", "a" }, { "b", "b", "gr", "e" },
+		{ "c", "q", "graw", "quea" }, { "d", "e", "hooo", "eak" },
+		{ "e", "z", "ow", "ee" }, { "f", "y", "owl", "k" },
+		{ "g", "o", "gr", "squ" }, { "h", "p", "how", "k" },
+		{ "i", "u", "ow", "ee" }, { "j", "y", "owoo", "eak" },
+		{ "k", "t", "grrr", "eek" }, { "l", "r", "owl", "squea" },
+		{ "m", "w", "ooow", "squee" }, { "n", "i", "grr", "ee" },
+		{ "o", "a", "oooo", "eep" }, { "p", "s", "owl", "squ" },
+		{ "q", "d", "ow", "sque" }, { "r", "f", "rrr", "ee" },
+		{ "s", "g", "sna", "squ" }, { "t", "h", "grr", "k" },
+		{ "u", "j", "ow", "ea" }, { "v", "z", "sna", "eep" },
+		{ "w", "x", "owl", "eak" }, { "x", "n", "h", "skree" },
+		{ "y", "l", "owoo", "ee" }, { "z", "k", "sna", "k" },
+		{ "", "", "", "" }
 	};
 
 	buf[0]      = '\0';
 	for ( pName = oldwords; *pName != '\0'; pName += length )
 	{
-	for ( iSyl = 0; (length = strlen(syl_table[iSyl].old)) != 0; iSyl++ )
-	{
-		if ( !str_prefix( syl_table[iSyl].old, pName ) )
+		for ( iSyl = 0; (length = strlen(syl_table[iSyl].old)) != 0; iSyl++ )
 		{
-		if(ch->shape == SHAPE_WOLF)
-			strncat( buf, syl_table[iSyl].wolf, sizeof(buf) - strlen(buf) - 1 );
-		else if(ch->shape == SHAPE_BAT)
-			strncat( buf, syl_table[iSyl].bat, sizeof(buf) - strlen(buf) - 1 );
-/*	        strncat( buf, syl_table[iSyl].bnew, sizeof(buf) ); */
-		else 
-			strncat( buf, syl_table[iSyl].old, sizeof(buf) - strlen(buf) - 1 );
-			break;
+			if ( !str_prefix( syl_table[iSyl].old, pName ) )
+			{
+				if(ch->shape == SHAPE_WOLF)
+				{
+					strncat( buf, syl_table[iSyl].wolf, sizeof(buf) - strlen(buf) - 1 );
+				}
+				else if(ch->shape == SHAPE_BAT)
+				{
+					strncat( buf, syl_table[iSyl].bat, sizeof(buf) - strlen(buf) - 1 );
+		/*	        strncat( buf, syl_table[iSyl].bnew, sizeof(buf) ); */
+				}
+				else
+				{
+					strncat( buf, syl_table[iSyl].old, sizeof(buf) - strlen(buf) - 1 );
+				}
+				break;
+			}
 		}
-	}
 
-	if ( length == 0 )
-		length = 1;
+		if ( length == 0 )
+			length = 1;
 	}
 
 	snprintf( newwords, sizeof(newwords), "%s", buf );
@@ -385,7 +391,7 @@ void do_toggle( CHAR_DATA *ch, char *argument )
 	if((flag = flag_lookup2(argument, comm_flags)) == NO_FLAG)
 	{
 		if(!IS_ADMIN(ch)
-				|| (flag = flag_lookup2(argument, admin_comm_flags)) == NO_FLAG)
+			|| (flag = flag_lookup2(argument, admin_comm_flags)) == NO_FLAG)
 		{
 			send_to_char("No such flag.\n\r", ch);
 			return;
@@ -411,16 +417,16 @@ void do_phone( CHAR_DATA *ch, char *argument)
 
 	CheckCH(ch);
 
-   if (IS_SET(ch->comm,COMM_NOPHONE))
-   {
-	 send_to_char("You turn on your phone.\n\r",ch);
-	 REMOVE_BIT(ch->comm,COMM_NOPHONE);
-   }
-   else 
-   {
-	 send_to_char("You turn off your phone.\n\r",ch);
-	 SET_BIT(ch->comm,COMM_NOPHONE);
-   }
+	if (IS_SET(ch->comm,COMM_NOPHONE))
+	{
+		send_to_char("You turn on your phone.\n\r",ch);
+		REMOVE_BIT(ch->comm,COMM_NOPHONE);
+	}
+	else
+	{
+		send_to_char("You turn off your phone.\n\r",ch);
+		SET_BIT(ch->comm,COMM_NOPHONE);
+	}
 }
 
 /* RT quiet blocks out all communication */
@@ -431,14 +437,14 @@ void do_quiet ( CHAR_DATA *ch, char * argument)
 
 	if (IS_SET(ch->comm,COMM_QUIET))
 	{
-	  send_to_char("Quiet mode removed.\n\r",ch);
-	  REMOVE_BIT(ch->comm,COMM_QUIET);
+		send_to_char("Quiet mode removed.\n\r",ch);
+		REMOVE_BIT(ch->comm,COMM_QUIET);
 	}
-   else
-   {
-	 send_to_char("From now on, you will only hear says and emotes.\n\r",ch);
-	 SET_BIT(ch->comm,COMM_QUIET);
-   }
+	else
+	{
+		send_to_char("From now on, you will only hear says and emotes.\n\r",ch);
+		SET_BIT(ch->comm,COMM_QUIET);
+	}
 }
 
 /* RT tips turns the tip feed on or off */
@@ -454,9 +460,9 @@ void do_tips( CHAR_DATA *ch, char *argument)
 		send_to_char( Format("\t[U10148/*] \tOYou should spend some of your free backgrounds.  You have %d you could spend\tn.\n\r", (5 - ch->bg_count)), ch );
 
 	if(ch->exp < 5)
-		{
-			send_to_char( Format ("\t[U10148/*] You should try \t<send href='help %s'>%-11s\t</send>.  Investigating uses your skills and thus may not always be successful.  I would start by \t(investigate %s\t).  Then try investigating other topics.\n\r", "investigate", "investigating", clan_table[ch->clan].name), ch);
-		}
+	{
+		send_to_char( Format ("\t[U10148/*] You should try \t<send href='help %s'>%-11s\t</send>.  Investigating uses your skills and thus may not always be successful.  I would start by \t(investigate %s\t).  Then try investigating other topics.\n\r", "investigate", "investigating", clan_table[ch->clan].name), ch);
+	}
 
 	if(ch->exp < 5)
 	{
@@ -469,7 +475,7 @@ void do_tips( CHAR_DATA *ch, char *argument)
 	// 	send_to_char("You turn off the tip feed.\n\r",ch);
 	// 	REMOVE_BIT(ch->comm,COMM_TIPS);
 	// }
-	// else 
+	// else
 	// {
 	// 	send_to_char("You turn on the tip feed.\n\r",ch);
 	// 	SET_BIT(ch->comm,COMM_TIPS);
@@ -533,38 +539,38 @@ void do_yell( CHAR_DATA *ch, char *argument )
 				continue;
 
 			if ( d->connected == CON_PLAYING &&
-					d->character != ch &&
-					!IS_SET(victim->comm,COMM_NOGOSSIP)	&&
-					!IS_SET(victim->comm,COMM_QUIET)		&&
-					victim->in_room->area == ch->in_room->area &&
-					!IS_SET(victim->comm,COMM_OLC)		&&
-					can_comprehend(victim, ch) )
+				d->character != ch &&
+				!IS_SET(victim->comm,COMM_NOGOSSIP)	&&
+				!IS_SET(victim->comm,COMM_QUIET)		&&
+				victim->in_room->area == ch->in_room->area &&
+				!IS_SET(victim->comm,COMM_OLC)		&&
+				can_comprehend(victim, ch) )
 			{
 				act_new( "$n yells '$t'", ch,argument, d->character, TO_VICT,P_SLEEP, 0 );
 				if(IS_AFFECTED(victim, AFF_HSENSES)
-						&& ch->in_room == victim->in_room
-						&& victim->shape <= SHAPE_HUMAN
-						&& !IS_ADMIN(victim)
-						&& SAME_PLANE(ch, victim))
+					&& ch->in_room == victim->in_room
+					&& victim->shape <= SHAPE_HUMAN
+					&& !IS_ADMIN(victim)
+					&& SAME_PLANE(ch, victim))
 				{
 					send_to_char("Your ears bleed as you go deaf.\n\r", d->character);
 					SET_BIT(victim->comm, COMM_DEAF);
 				}
 			}
 			else if ( d->connected == CON_PLAYING &&
-					d->character != ch &&
-					!IS_SET(victim->comm,COMM_NOGOSSIP)        &&
-					!IS_SET(victim->comm,COMM_QUIET)           &&
-					victim->in_room->area == ch->in_room->area &&
-					!IS_SET(victim->comm,COMM_OLC) )
+				d->character != ch &&
+				!IS_SET(victim->comm,COMM_NOGOSSIP)        &&
+				!IS_SET(victim->comm,COMM_QUIET)           &&
+				victim->in_room->area == ch->in_room->area &&
+				!IS_SET(victim->comm,COMM_OLC) )
 			{
 				translate(ch, argument, buf2);
 				act_new( "$n yells '$t'", ch, buf2, d->character, TO_VICT, P_SLEEP, 0 );
 				if(IS_AFFECTED(ch, AFF_HSENSES)
-						&& ch->in_room == victim->in_room
-						&& victim->shape <= SHAPE_HUMAN
-						&& !IS_ADMIN(victim)
-						&& SAME_PLANE(ch, victim))
+					&& ch->in_room == victim->in_room
+					&& victim->shape <= SHAPE_HUMAN
+					&& !IS_ADMIN(victim)
+					&& SAME_PLANE(ch, victim))
 				{
 					send_to_char("Your ears bleed as you go deaf.\n\r", d->character);
 					SET_BIT(victim->comm, COMM_DEAF);
@@ -584,53 +590,53 @@ void do_callwyld( CHAR_DATA *ch, char *argument )
 	DESCRIPTOR_DATA *d;
 
 	CheckCH(ch);
- 
-	  REMOVE_BIT(ch->comm,COMM_NOGOSSIP);
 
-	  if(ch->auspice != auspice_lookup("galliard") || ch->disc[DISC_AUSPICE] < 2)
-	  {
-	send_to_char("Huh?\n\r", ch);
-	return;
-	  }
+	REMOVE_BIT(ch->comm,COMM_NOGOSSIP);
 
-	  if(ch->power_timer > 0)
-	  {
+	if(ch->auspice != auspice_lookup("galliard") || ch->disc[DISC_AUSPICE] < 2)
+	{
+		send_to_char("Huh?\n\r", ch);
+		return;
+	}
+
+	if(ch->power_timer > 0)
+	{
 		send_to_char("Your powers have not rejuvenated yet.\n\r", ch);
 		return;
-	  }
- 
-	  send_to_char( Format("You howl with the strength of the Wyld '%s'\n\r", argument), ch );
-	  for ( d = descriptor_list; d != NULL; d = d->next )
-	  {
+	}
+
+	send_to_char( Format("You howl with the strength of the Wyld '%s'\n\r", argument), ch );
+	for ( d = descriptor_list; d != NULL; d = d->next )
+	{
 		CHAR_DATA *victim;
 
 		victim = d->original ? d->original : d->character;
 
 		if ( d->connected == CON_PLAYING &&
-			 d->character != ch &&
-			 !IS_SET(victim->comm,COMM_NOGOSSIP)	&&
-			 !IS_SET(victim->comm,COMM_QUIET)		&&
-		 !IS_SET(victim->comm,COMM_OLC)		&&
-		 (victim->race == race_lookup("werewolf")   ||
-		 IS_ADMIN(victim)) )
+			d->character != ch &&
+			!IS_SET(victim->comm,COMM_NOGOSSIP)	&&
+			!IS_SET(victim->comm,COMM_QUIET)		&&
+			!IS_SET(victim->comm,COMM_OLC)		&&
+			(victim->race == race_lookup("werewolf")   ||
+				IS_ADMIN(victim)) )
 		{
-		  act_new( "$n howls with the strength of the Wyld '$t'", ch,argument, d->character, TO_VICT, P_SLEEP, 0 );
+			act_new( "$n howls with the strength of the Wyld '$t'", ch,argument, d->character, TO_VICT, P_SLEEP, 0 );
 		}
 		else if ( d->connected == CON_PLAYING &&
-			 d->character != ch &&
-			 !IS_SET(victim->comm,COMM_NOGOSSIP)	&&
-			 !IS_SET(victim->comm,COMM_QUIET)		&&
-		 !IS_SET(victim->comm,COMM_OLC)		&&
-		 victim->in_room == ch->in_room		&&
-		 victim->race != race_lookup("werewolf") )
+			d->character != ch &&
+			!IS_SET(victim->comm,COMM_NOGOSSIP)	&&
+			!IS_SET(victim->comm,COMM_QUIET)		&&
+			!IS_SET(victim->comm,COMM_OLC)		&&
+			victim->in_room == ch->in_room		&&
+			victim->race != race_lookup("werewolf") )
 		{
-		  act_new("$n howls loudly!",ch,NULL,d->character,TO_VICT,P_SLEEP,0);
+			act_new("$n howls loudly!",ch,NULL,d->character,TO_VICT,P_SLEEP,0);
 		}
-	else
+		else
 		{
-		  act_new("Something howls in the distance!", ch,NULL,d->character,TO_VICT,P_SLEEP,0);
+			act_new("Something howls in the distance!", ch,NULL,d->character,TO_VICT,P_SLEEP,0);
 		}
-	  }
+	}
 
 	ch->power_timer = 1;
 }
@@ -675,10 +681,10 @@ void do_clantalk( CHAR_DATA *ch, char *argument )
 	for ( d = descriptor_list; d != NULL; d = d->next )
 	{
 		if ( d->connected == CON_PLAYING &&
-				d->character != ch &&
-				is_same_clan(ch,d->character) &&
-				!IS_SET(d->character->comm,COMM_NOCLAN) &&
-				!IS_SET(d->character->comm,COMM_QUIET) )
+			d->character != ch &&
+			is_same_clan(ch,d->character) &&
+			!IS_SET(d->character->comm,COMM_NOCLAN) &&
+			!IS_SET(d->character->comm,COMM_QUIET) )
 		{
 			act_new("$n clans '$t'",ch,argument,d->character,TO_VICT,P_DEAD,1);
 		}
@@ -704,8 +710,8 @@ void do_buildertalk( CHAR_DATA *ch, char *argument )
 	for ( d = descriptor_list; d != NULL; d = d->next )
 	{
 		if ( d->connected == CON_PLAYING &&
-				(IS_ADMIN(d->character) ||
-						d->character->pcdata->security > 0))
+			(IS_ADMIN(d->character) ||
+				d->character->pcdata->security > 0))
 		{
 			act_new("\tY[Builder]\tn $n: $t",ch,argument,d->character,TO_VICT, P_DEAD,1);
 		}
@@ -725,7 +731,7 @@ void do_helpline( CHAR_DATA *ch, char *argument )
 	for ( d = descriptor_list; d != NULL; d = d->next )
 	{
 		if ( d->connected == CON_PLAYING &&
-				!IS_SET(d->character->comm,COMM_NOWIZ) )
+			!IS_SET(d->character->comm,COMM_NOWIZ) )
 		{
 			act_new(Format("\tR[Help Line] %s: $t\tn", IS_NPC(ch)?ch->short_descr:ch->name),ch,argument,d->character,TO_VICT,P_DEAD,1);
 		}
@@ -757,8 +763,8 @@ void do_oocchan( CHAR_DATA *ch, char *argument )
 	for ( d = descriptor_list; d != NULL; d = d->next )
 	{
 		if ( d->connected == CON_PLAYING &&
-				!IS_SET(d->character->comm,COMM_NOWIZ)
-				&& !IS_SET(d->character->comm, COMM_OOC_OFF))
+			!IS_SET(d->character->comm,COMM_NOWIZ)
+			&& !IS_SET(d->character->comm, COMM_OOC_OFF))
 		{
 			act_new(Format("\tY[OOC] %s: \ty$t\tn", IS_NPC(ch)?ch->short_descr:ch->name),ch,argument,d->character,TO_VICT,P_DEAD,1);
 		}
@@ -796,8 +802,8 @@ void do_immtalk( CHAR_DATA *ch, char *argument )
 	for ( d = descriptor_list; d != NULL; d = d->next )
 	{
 		if ( d->connected == CON_PLAYING &&
-				IS_ADMIN(d->character) &&
-				!IS_SET(d->character->comm,COMM_NOWIZ) )
+			IS_ADMIN(d->character) &&
+			!IS_SET(d->character->comm,COMM_NOWIZ) )
 		{
 			act_new(Format("\tY[Staff]\tn \tR%s: \tr$t\tn", IS_NPC(ch)?ch->short_descr:ch->name),ch,argument,d->character,TO_VICT,P_DEAD,1);
 		}
@@ -827,7 +833,7 @@ void do_oocsay( CHAR_DATA *ch, char *argument )
 				if(!IS_SET(ch->act2, ACT2_STORY))
 				{
 					if((ch->on && rch->on == ch->on && IS_SET(ch->comm, COMM_DISCREET))
-							|| ch->on == NULL || !IS_SET(ch->comm, COMM_DISCREET))
+						|| ch->on == NULL || !IS_SET(ch->comm, COMM_DISCREET))
 					{
 						act(Format("\tG%s says, in an ooc manner, \tY'$t'\tn", IS_NPC(ch)?ch->short_descr:ch->name), ch, argument, rch, TO_VICT, 1 );
 					}
@@ -879,12 +885,12 @@ void do_think( CHAR_DATA *ch, char *argument )
 			if(IS_SET(rch->affected_by, AFF_AUSPEX4))
 			{
 				fail = dice_rolls(rch, get_curr_stat(rch,
-						STAT_INT) + rch->ability[SUBTERFUGE].value, rch->max_willpower);
+					STAT_INT) + rch->ability[SUBTERFUGE].value, rch->max_willpower);
 			}
 
 			if(((IS_ADMIN(rch) && IS_SET(ch->comm, COMM_THINK_ON))
-					|| (IS_SET(rch->affected_by, AFF_AUSPEX4) && fail > 0))
-					&& !IS_SET(rch->act2, ACT2_ASTRAL))
+				|| (IS_SET(rch->affected_by, AFF_AUSPEX4) && fail > 0))
+				&& !IS_SET(rch->act2, ACT2_ASTRAL))
 			{
 				act(Format("\tM%s thinks, '\tY$t\tM'\tn", IS_NPC(ch)?ch->short_descr:ch->name), ch, argument, rch, TO_VICT, 1 );
 			}
@@ -898,11 +904,11 @@ void do_think( CHAR_DATA *ch, char *argument )
 			if(IS_SET(rch->affected_by, AFF_AUSPEX4))
 			{
 				fail = dice_rolls(rch, get_curr_stat(rch,
-						STAT_INT) + rch->ability[SUBTERFUGE].value, rch->max_willpower);
+					STAT_INT) + rch->ability[SUBTERFUGE].value, rch->max_willpower);
 			}
 
 			if(IS_SET(ch->comm, COMM_THINK_ON)
-					|| (IS_SET(rch->affected_by, AFF_AUSPEX4) && fail > 0))
+				|| (IS_SET(rch->affected_by, AFF_AUSPEX4) && fail > 0))
 			{
 				act(Format("\tM%s thinks, '\tY$t\tM'\tn", IS_NPC(ch)?ch->short_descr:ch->name), ch, argument, rch, TO_VICT, 1 );
 			}
@@ -914,57 +920,57 @@ void do_think( CHAR_DATA *ch, char *argument )
 	return;
 }
 
-	void do_say( CHAR_DATA *ch, char *argument )
+void do_say( CHAR_DATA *ch, char *argument )
+{
+	char buf[4*MSL]={'\0'};
+	CHAR_DATA *rch, *rch_next;
+	CheckCH(ch);
+	if ( IS_NULLSTR(argument) )
 	{
-		char buf[4*MSL]={'\0'};
-		CHAR_DATA *rch, *rch_next;
-		CheckCH(ch);
-		if ( IS_NULLSTR(argument) )
+		send_to_char( "Say what?\n\r", ch );
+		return;
+	}
+	translate(ch, argument, buf);
+	MOBtrigger = FALSE;
+	act( Format("\tCYou say '\tY$T\tC'\tn"), ch, NULL, argument, TO_CHAR, 0 );
+	for ( rch = ch->in_room->people; rch; rch = rch_next )
+	{
+		rch_next = rch->next_in_room;
+		if ( rch != ch )
 		{
-			send_to_char( "Say what?\n\r", ch );
-			return;
-		}
-		translate(ch, argument, buf);
-		MOBtrigger = FALSE;
-		act( Format("\tCYou say '\tY$T\tC'\tn"), ch, NULL, argument, TO_CHAR, 0 );
-		for ( rch = ch->in_room->people; rch; rch = rch_next )
-		{
-			rch_next = rch->next_in_room;
-			if ( rch != ch )
+			if(!IS_SET(ch->comm, COMM_DEAF))
 			{
-				if(!IS_SET(ch->comm, COMM_DEAF))
+				if((ch->on && rch->on == ch->on && IS_SET(ch->comm, COMM_DISCREET))
+					|| ch->on == NULL
+					|| !IS_SET(ch->comm, COMM_DISCREET)
+					|| IS_AFFECTED(rch, AFF_HSENSES)
+					|| IS_SET(rch->affected_by, AFF_HSENSES))
 				{
-					if((ch->on && rch->on == ch->on && IS_SET(ch->comm, COMM_DISCREET))
-							|| ch->on == NULL
-							|| !IS_SET(ch->comm, COMM_DISCREET)
-							|| IS_AFFECTED(rch, AFF_HSENSES)
-							|| IS_SET(rch->affected_by, AFF_HSENSES))
-					{
-						act( Format("\tC$n says, \tY'$t\tY'\tn"), ch, ((!IS_NPC(rch) && ch->clan==rch->clan) || can_comprehend(rch, ch)) ? argument : buf, rch, TO_VICT, 0 );
-					}
-					else
-					{
-						MOBtrigger = TRUE;
-						act("$n mutters something to those close enough to hear.", ch, NULL, rch, TO_VICT, 0 );
-						MOBtrigger = FALSE;
-					}
+					act( Format("\tC$n says, \tY'$t\tY'\tn"), ch, ((!IS_NPC(rch) && ch->clan==rch->clan) || can_comprehend(rch, ch)) ? argument : buf, rch, TO_VICT, 0 );
 				}
 				else
 				{
 					MOBtrigger = TRUE;
-					act("$n says something, but you don't hear a word.", ch, NULL, rch, TO_VICT, 0 );
+					act("$n mutters something to those close enough to hear.", ch, NULL, rch, TO_VICT, 0 );
 					MOBtrigger = FALSE;
 				}
-				if ( IS_NPC(rch) && HAS_TRIGGER( rch, TRIG_SPEECH )
-						&&  rch->position == rch->pIndexData->default_pos )
-					mp_act_trigger( ((!IS_NPC(rch) && ch->clan==rch->clan) || can_comprehend(rch, ch)) ? argument : buf, rch, ch, NULL, NULL, TRIG_SPEECH );
 			}
+			else
+			{
+				MOBtrigger = TRUE;
+				act("$n says something, but you don't hear a word.", ch, NULL, rch, TO_VICT, 0 );
+				MOBtrigger = FALSE;
+			}
+			if ( IS_NPC(rch) && HAS_TRIGGER( rch, TRIG_SPEECH )
+				&&  rch->position == rch->pIndexData->default_pos )
+				mp_act_trigger( ((!IS_NPC(rch) && ch->clan==rch->clan) || can_comprehend(rch, ch)) ? argument : buf, rch, ch, NULL, NULL, TRIG_SPEECH );
 		}
-		MOBtrigger = TRUE;
-		if(IS_AFFECTED(ch, AFF_HIDE) || IS_AFFECTED(ch, AFF_INVISIBLE) || IS_AFFECTED(ch, AFF_SNEAK))
-			do_visible(ch,"");
-		return;
 	}
+	MOBtrigger = TRUE;
+	if(IS_AFFECTED(ch, AFF_HIDE) || IS_AFFECTED(ch, AFF_INVISIBLE) || IS_AFFECTED(ch, AFF_SNEAK))
+		do_visible(ch,"");
+	return;
+}
 
 void do_dsay( CHAR_DATA *ch, char *argument )
 {
@@ -1008,10 +1014,10 @@ void do_dsay( CHAR_DATA *ch, char *argument )
 			if(!IS_SET(ch->comm, COMM_DEAF))
 			{
 				if((ch->on && rch->on == ch->on && IS_SET(ch->comm, COMM_DISCREET))
-						|| ch->on == NULL
-						|| !IS_SET(ch->comm, COMM_DISCREET)
-						|| IS_AFFECTED(rch, AFF_HSENSES)
-						|| IS_SET(rch->affected_by, AFF_HSENSES))
+					|| ch->on == NULL
+					|| !IS_SET(ch->comm, COMM_DISCREET)
+					|| IS_AFFECTED(rch, AFF_HSENSES)
+					|| IS_SET(rch->affected_by, AFF_HSENSES))
 				{
 					if(rch == victim)
 					{
@@ -1042,7 +1048,7 @@ void do_dsay( CHAR_DATA *ch, char *argument )
 
 			if ( IS_NPC(rch) && HAS_TRIGGER( rch, TRIG_SPEECH ) &&   rch->position == rch->pIndexData->default_pos )
 				mp_act_trigger( ((!IS_NPC(rch) && ch->clan==rch->clan) || can_comprehend(rch, ch)) ? argument : buf,
-						rch, ch, NULL, NULL, TRIG_SPEECH );
+					rch, ch, NULL, NULL, TRIG_SPEECH );
 		}
 	}
 
@@ -1104,31 +1110,31 @@ void do_whisper( CHAR_DATA *ch, char *argument )
 					name = victim->alt_name;
 				else name = victim->name;
 				if((IS_AFFECTED(rch, AFF_HSENSES) || IS_SET(rch->affected_by, AFF_HSENSES))
-						&& !IS_SET(rch->comm, COMM_DEAF)) {
+					&& !IS_SET(rch->comm, COMM_DEAF)) {
 					snprintf(string, sizeof(string), "\tC$n whispers to %s '\tY%s$t\tC'\tn", name, ch->colours[0][0]=='\0'?"{c":ch->colours[0]);
-					MOBtrigger = FALSE;
-				}
-				else
-				{
-					snprintf(string, sizeof(string), "\tC%s$n whispers something to %s.\tn", ch->colours[0][0]=='\0'?"{c":ch->colours[0], name);
-				}
+				MOBtrigger = FALSE;
 			}
-			act(string, ch, ((!IS_NPC(rch) && ch->clan==rch->clan) || can_comprehend(rch, ch)) ? argument : buf, rch, TO_VICT, 0 );
-			if ( IS_NPC(rch) && HAS_TRIGGER( rch, TRIG_SPEECH )
-					&&   rch->position == rch->pIndexData->default_pos )
-				mp_act_trigger( ((!IS_NPC(rch) && ch->clan==rch->clan) || can_comprehend(rch, ch)) ? argument : buf,
-						rch, ch, NULL, NULL, TRIG_SPEECH );
-			MOBtrigger = TRUE;
+			else
+			{
+				snprintf(string, sizeof(string), "\tC%s$n whispers something to %s.\tn", ch->colours[0][0]=='\0'?"{c":ch->colours[0], name);
+			}
 		}
+		act(string, ch, ((!IS_NPC(rch) && ch->clan==rch->clan) || can_comprehend(rch, ch)) ? argument : buf, rch, TO_VICT, 0 );
+		if ( IS_NPC(rch) && HAS_TRIGGER( rch, TRIG_SPEECH )
+			&&   rch->position == rch->pIndexData->default_pos )
+			mp_act_trigger( ((!IS_NPC(rch) && ch->clan==rch->clan) || can_comprehend(rch, ch)) ? argument : buf,
+				rch, ch, NULL, NULL, TRIG_SPEECH );
+		MOBtrigger = TRUE;
 	}
+}
 
-	act(Format("\tCYou whisper to $N '\tY%t\tC'\tn"), ch, argument, victim, TO_CHAR, 0 );
+act(Format("\tCYou whisper to $N '\tY%t\tC'\tn"), ch, argument, victim, TO_CHAR, 0 );
 
-	if((IS_AFFECTED(ch, AFF_HIDE) || IS_AFFECTED(ch, AFF_INVISIBLE)
-			|| IS_AFFECTED(ch, AFF_SNEAK)) && number_range(0,100) > 75)
-		do_visible(ch,"");
+if((IS_AFFECTED(ch, AFF_HIDE) || IS_AFFECTED(ch, AFF_INVISIBLE)
+	|| IS_AFFECTED(ch, AFF_SNEAK)) && number_range(0,100) > 75)
+	do_visible(ch,"");
 
-	return;
+return;
 }
 
 bool HAS_PHONE ( CHAR_DATA * ch )
@@ -1197,7 +1203,7 @@ void do_tell( CHAR_DATA *ch, char *argument )
 	 * -- Furey
 	 */
 	if ( ( victim = get_char_world( ch, arg ) ) == NULL
-			|| ( IS_NPC(victim) && victim->in_room != ch->in_room ) )
+		|| ( IS_NPC(victim) && victim->in_room != ch->in_room ) )
 	{
 		send_to_char( "They aren't here.\n\r", ch );
 		return;
@@ -1211,7 +1217,7 @@ void do_tell( CHAR_DATA *ch, char *argument )
 	}
 
 	if (((IS_SET(victim->comm,COMM_QUIET) || IS_SET(victim->comm,COMM_DEAF))
-			&& !IS_ADMIN(ch)) || IS_SET(victim->comm,COMM_OLC))
+		&& !IS_ADMIN(ch)) || IS_SET(victim->comm,COMM_OLC))
 	{
 		act( "$E can't hear you.", ch, 0, victim, TO_CHAR, 1 );
 		return;
@@ -1277,7 +1283,7 @@ void do_call( CHAR_DATA *ch, char *argument )
 	argument = one_argument( argument, arg );
 
 	if ( (!str_cmp(arg, "end") || !str_cmp(arg, "End"))
-			&& (ch->on_phone) )
+		&& (ch->on_phone) )
 	{
 		if( ch != ch->calling && ch->calling != NULL )
 			ch->calling->on_phone = FALSE;
@@ -1307,7 +1313,7 @@ void do_call( CHAR_DATA *ch, char *argument )
 	 * -- Furey
 	 */
 	if ( ( victim = get_char_world( ch, arg ) ) == NULL
-			|| ( IS_NPC(victim) && victim->in_room != ch->in_room ) )
+		|| ( IS_NPC(victim) && victim->in_room != ch->in_room ) )
 	{
 		send_to_char( "That number is not connected.\n\rPlease check the number, and try again.\n\r", ch );
 		return;
@@ -1330,14 +1336,14 @@ void do_call( CHAR_DATA *ch, char *argument )
 		send_to_char("The phone rings, but no-one picks it up.\n\r", ch);
 		act("$n's phone rings.", ch, NULL, NULL, TO_ROOM, 0);
 		if((IS_AFFECTED(ch, AFF_INVISIBLE)
-				|| IS_AFFECTED(ch, AFF_HIDE)
-				|| IS_AFFECTED(ch, AFF_SNEAK))
-				&& SAME_PLANE(ch, victim))
+			|| IS_AFFECTED(ch, AFF_HIDE)
+			|| IS_AFFECTED(ch, AFF_SNEAK))
+			&& SAME_PLANE(ch, victim))
 			do_visible(ch, "");
 		if((IS_AFFECTED(victim, AFF_INVISIBLE)
-				|| IS_AFFECTED(victim, AFF_HIDE)
-				|| IS_AFFECTED(victim, AFF_SNEAK))
-				&& SAME_PLANE(ch, victim))
+			|| IS_AFFECTED(victim, AFF_HIDE)
+			|| IS_AFFECTED(victim, AFF_SNEAK))
+			&& SAME_PLANE(ch, victim))
 			do_visible(victim, "");
 		act("Your phone rings.", ch, NULL, victim, TO_VICT, 0);
 		return;
@@ -1363,7 +1369,7 @@ void do_call( CHAR_DATA *ch, char *argument )
 	}
 
 	if (((IS_SET(victim->comm,COMM_QUIET) || IS_SET(victim->comm,COMM_NOPHONE))
-			&& !IS_ADMIN(ch)) || IS_SET(victim->comm,COMM_OLC))
+		&& !IS_ADMIN(ch)) || IS_SET(victim->comm,COMM_OLC))
 	{
 		act("$E must have switched off their phone.",ch,0,victim,TO_CHAR,0);
 		return;
@@ -1381,7 +1387,7 @@ void do_call( CHAR_DATA *ch, char *argument )
 		{
 			act_new("You pick up a call from $n",ch,NULL,victim,TO_VICT,P_DEAD,0);
 			if(IS_AFFECTED(victim, AFF_INVISIBLE) || IS_AFFECTED(victim, AFF_HIDE)
-					|| IS_AFFECTED(victim, AFF_SNEAK))
+				|| IS_AFFECTED(victim, AFF_SNEAK))
 				do_visible(victim, "");
 			act("$n's phone rings.", victim, NULL, NULL, TO_ROOM,0);
 		}
@@ -1456,7 +1462,7 @@ void do_dreamspeak( CHAR_DATA *ch, char *argument )
 	 * No telling to mobs.
 	 */
 	if ( ( victim = get_char_world( ch, arg ) ) == NULL
-			|| victim->position != P_SLEEP )
+		|| victim->position != P_SLEEP )
 	{
 		send_to_char( "They cannot hear you.\n\r", ch );
 		return;
@@ -1465,12 +1471,12 @@ void do_dreamspeak( CHAR_DATA *ch, char *argument )
 	if ( victim->desc == NULL )
 	{
 		act("$N cannot hear through the fog of sleep.",
-				ch,NULL,victim,TO_CHAR,1);
+			ch,NULL,victim,TO_CHAR,1);
 		return;
 	}
 
 	if ((IS_SET(victim->comm,COMM_QUIET)
-			&& !IS_ADMIN(ch)) || IS_SET(victim->comm,COMM_OLC))
+		&& !IS_ADMIN(ch)) || IS_SET(victim->comm,COMM_OLC))
 	{
 		act( "$E is unable to hear your message.", ch, 0, victim, TO_CHAR, 1 );
 		return;
@@ -1534,12 +1540,12 @@ void do_mentalspeech( CHAR_DATA *ch, char *argument )
 	if ( victim->desc == NULL )
 	{
 		act("$N cannot hear through the psychic static.",
-				ch,NULL,victim,TO_CHAR,1);
+			ch,NULL,victim,TO_CHAR,1);
 		return;
 	}
 
 	if ((IS_SET(victim->comm,COMM_QUIET)
-			&& !IS_ADMIN(ch)) || IS_SET(victim->comm,COMM_OLC))
+		&& !IS_ADMIN(ch)) || IS_SET(victim->comm,COMM_OLC))
 	{
 		act( "$E is unable to hear your message.", ch, 0, victim, TO_CHAR, 1 );
 		return;
@@ -1595,8 +1601,8 @@ void do_reply( CHAR_DATA *ch, char *argument )
 	}
 
 	if (((IS_SET(victim->comm,COMM_QUIET) || IS_SET(victim->comm,COMM_DEAF))
-			&&  !IS_ADMIN(ch) && !IS_ADMIN(victim))
-			|| IS_SET(victim->comm,COMM_OLC))
+		&&  !IS_ADMIN(ch) && !IS_ADMIN(victim))
+		|| IS_SET(victim->comm,COMM_OLC))
 	{
 		act_new( "$E is not receiving tells.", ch, 0, victim, TO_CHAR,P_DEAD,1);
 		return;
@@ -1655,7 +1661,7 @@ void do_dmote( CHAR_DATA *ch, char *argument )
 	act( "$t$T \tR[\tC$n\tR]\tn", ch, NULL, argument, TO_CHAR, 0 );
 
 	if(IS_AFFECTED(ch, AFF_HIDE) || IS_AFFECTED(ch, AFF_INVISIBLE) || IS_AFFECTED(ch, AFF_SNEAK))
-	do_visible(ch,"");
+		do_visible(ch,"");
 
 	return;
 }
@@ -1783,11 +1789,11 @@ void do_emote( CHAR_DATA *ch, char *argument )
 		if(ch!=rch)
 		{
 			if(((ch->on && rch->on == ch->on && IS_SET(ch->comm, COMM_DISCREET))
-					|| ch->on == NULL
-					|| !IS_SET(ch->comm, COMM_DISCREET)
-					|| IS_AFFECTED(rch, AFF_HSENSES)
-					|| IS_SET(rch->affected_by, AFF_HSENSES))
-					&& !IS_SET(ch->comm, COMM_DEAF))
+				|| ch->on == NULL
+				|| !IS_SET(ch->comm, COMM_DISCREET)
+				|| IS_AFFECTED(rch, AFF_HSENSES)
+				|| IS_SET(rch->affected_by, AFF_HSENSES))
+				&& !IS_SET(ch->comm, COMM_DEAF))
 			{
 				if(!str_prefix("'s ", release))
 				{
@@ -1876,11 +1882,11 @@ void do_pmote( CHAR_DATA *ch, char *argument )
 			if(ch!=vch)
 			{
 				if(((ch->on && vch->on == ch->on && IS_SET(ch->comm, COMM_DISCREET))
-						|| ch->on == NULL
-						|| !IS_SET(ch->comm, COMM_DISCREET)
-						|| IS_AFFECTED(vch, AFF_HSENSES)
-						|| IS_SET(vch->affected_by, AFF_HSENSES))
-						&& !IS_SET(ch->comm, COMM_DEAF))
+					|| ch->on == NULL
+					|| !IS_SET(ch->comm, COMM_DISCREET)
+					|| IS_AFFECTED(vch, AFF_HSENSES)
+					|| IS_SET(vch->affected_by, AFF_HSENSES))
+					&& !IS_SET(ch->comm, COMM_DEAF))
 				{
 					if(!str_prefix("'s ", release))
 					{
@@ -1967,11 +1973,11 @@ void do_pmote( CHAR_DATA *ch, char *argument )
 			emote_say_colouring(discreet, ch);
 
 			if(((ch->on && vch->on == ch->on && IS_SET(ch->comm, COMM_DISCREET))
-					|| ch->on == NULL
-					|| !IS_SET(ch->comm, COMM_DISCREET)
-					|| IS_AFFECTED(vch, AFF_HSENSES)
-					|| IS_SET(vch->affected_by, AFF_HSENSES))
-					&& !IS_SET(ch->comm, COMM_DEAF))
+				|| ch->on == NULL
+				|| !IS_SET(ch->comm, COMM_DISCREET)
+				|| IS_AFFECTED(vch, AFF_HSENSES)
+				|| IS_SET(vch->affected_by, AFF_HSENSES))
+				&& !IS_SET(ch->comm, COMM_DEAF))
 			{
 				if(!str_prefix("'s ", release))
 				{
@@ -1998,7 +2004,7 @@ void do_pmote( CHAR_DATA *ch, char *argument )
 	}
 
 	if(IS_AFFECTED(ch, AFF_HIDE) || IS_AFFECTED(ch, AFF_INVISIBLE)
-			|| IS_AFFECTED(ch, AFF_SNEAK))
+		|| IS_AFFECTED(ch, AFF_SNEAK))
 		do_visible(ch,"");
 
 	return;
@@ -2206,10 +2212,10 @@ void do_follow( CHAR_DATA *ch, char *argument )
 	}
 
 	if (!IS_NPC(victim) && IS_SET(victim->plr_flags,PLR_NOFOLLOW)
-			&& !IS_ADMIN(ch))
+		&& !IS_ADMIN(ch))
 	{
 		act("$N doesn't seem to want any followers.\n\r",
-				ch,NULL,victim, TO_CHAR, 0);
+			ch,NULL,victim, TO_CHAR, 0);
 		return;
 	}
 
@@ -2314,7 +2320,7 @@ void do_order( CHAR_DATA *ch, char *argument )
 	one_argument(argument,arg2);
 
 	if (!str_cmp(buf,"delete") || !str_cmp(buf, "quit") || !str_cmp(buf, "concede")
-			|| !str_cmp(arg2, "mob"))
+		|| !str_cmp(arg2, "mob"))
 	{
 		send_to_char("That will NOT be done.\n\r",ch);
 		return;
@@ -2365,8 +2371,8 @@ void do_order( CHAR_DATA *ch, char *argument )
 		och_next = och->next_in_room;
 
 		if ( IS_AFFECTED(och, AFF_CHARM)
-				&&   och->master == ch
-				&& ( fAll || och == victim ) )
+			&&   och->master == ch
+			&& ( fAll || och == victim ) )
 		{
 			found = TRUE;
 			act( Format("$n orders you to '%s'.", argument), ch, NULL, och, TO_VICT, 0 );
@@ -2445,7 +2451,7 @@ void do_group( CHAR_DATA *ch, char *argument )
 	if (IS_AFFECTED(ch,AFF_CHARM))
 	{
 		act_new("You like your master too much to leave $m!",
-				ch,NULL,victim,TO_VICT,P_SLEEP,1);
+			ch,NULL,victim,TO_VICT,P_SLEEP,1);
 		return;
 	}
 
@@ -2453,11 +2459,11 @@ void do_group( CHAR_DATA *ch, char *argument )
 	{
 		victim->leader = NULL;
 		act_new("$n removes $N from $s group.",
-				ch,NULL,victim,TO_NOTVICT,P_REST,1);
+			ch,NULL,victim,TO_NOTVICT,P_REST,1);
 		act_new("$n removes you from $s group.",
-				ch,NULL,victim,TO_VICT,P_SLEEP,1);
+			ch,NULL,victim,TO_VICT,P_SLEEP,1);
 		act_new("You remove $N from your group.",
-				ch,NULL,victim,TO_CHAR,P_SLEEP,1);
+			ch,NULL,victim,TO_CHAR,P_SLEEP,1);
 		return;
 	}
 
@@ -2491,11 +2497,11 @@ void do_gtell( CHAR_DATA *ch, char *argument )
 	{
 		if ( is_same_group( gch, ch ) )
 			act_new("$n tells the group '$t'",
-					ch,argument,gch,TO_VICT,P_SLEEP,1);
+				ch,argument,gch,TO_VICT,P_SLEEP,1);
 	}
 
 	act_new("You tell the group '$t'",
-			ch,argument,gch,TO_CHAR,P_SLEEP,1);
+		ch,argument,gch,TO_CHAR,P_SLEEP,1);
 
 	return;
 }
@@ -2654,7 +2660,8 @@ void set_email( CHAR_DATA *ch, char *email )
 void do_ignore(CHAR_DATA *ch, char *argument)
 {
 	CHAR_DATA *vch;
-	int online = 0, in_char_list = 0;
+	int online = 0;
+	int in_char_list = 0;
 
 	CheckCH(ch);
 
@@ -2666,13 +2673,14 @@ void do_ignore(CHAR_DATA *ch, char *argument)
 
 	online = is_online(argument);
 	in_char_list = pc_in_char_list(argument);
+
 	if((vch = get_char_world(ch, argument)) == NULL)
 	{
 		send_to_char("That player does not exist.\n\r", ch);
 		return;
 	}
 
-	if ( strstr( ch->ignore, vch->name ) != '\0' )
+	if ( strstr( ch->ignore, vch->name ) != NULL )
 	{
 		ch->ignore = string_replace( ch->ignore, vch->name, "" );
 		ch->ignore = string_unpad( ch->ignore );
@@ -2687,9 +2695,9 @@ void do_ignore(CHAR_DATA *ch, char *argument)
 	else
 	{
 		char buf[MSL]={'\0'};
-		
+
 		buf[0] = '\0';
-		if ( strstr(ch->ignore, "None") != '\0' )
+		if ( strstr(ch->ignore, "None") != NULL )
 		{
 			ch->ignore = string_replace( ch->ignore, "None", "\0" );
 			ch->ignore = string_unpad( ch->ignore );
@@ -2706,5 +2714,8 @@ void do_ignore(CHAR_DATA *ch, char *argument)
 		send_to_char( "Ignore block activated.\n\r", ch );
 	}
 
-	if(!online && !in_char_list) free_char(vch);
+	if(!online && !in_char_list)
+	{
+		free_char(vch);
+	}
 }

@@ -238,7 +238,7 @@ bool saves_spell( int level, CHAR_DATA *victim, int dam_type )
 	int save = 0;
 	int agg = 3;
 
-	if(IS_NATURAL(victim)) 
+	if(IS_NATURAL(victim))
 		save = 6;
 	else
 		save = 4;
@@ -260,9 +260,9 @@ bool saves_spell( int level, CHAR_DATA *victim, int dam_type )
 bool saves_dispel( int dis_level, int spell_level, int duration)
 {
     int save = 0;
-    
+
     if (duration == -1)
-      spell_level += 5;  
+      spell_level += 5;
       /* very hard to dispel permanent effects */
 
     save = 50 + (spell_level - dis_level) * 5;
@@ -369,7 +369,7 @@ void do_cast( CHAR_DATA *ch, char *argument )
     obj		= NULL;
     vo		= NULL;
     target	= TARGET_NONE;
-      
+
     switch ( skill_table[sn].target )
     {
     default:
@@ -462,7 +462,7 @@ void do_cast( CHAR_DATA *ch, char *argument )
 		send_to_char("Cast the spell on whom or what?\n\r",ch);
 		return;
 	    }
-	
+
 	    target = TARGET_CHAR;
 	}
 	else if ((victim = get_char_room(ch,target_name)) != NULL)
@@ -491,7 +491,7 @@ void do_cast( CHAR_DATA *ch, char *argument )
 	    send_to_char("You don't see that here.\n\r",ch);
 	    return;
 	}
-	break; 
+	break;
 
     case TAR_OBJ_CHAR_DEF:
         if (IS_NULLSTR(arg2))
@@ -519,9 +519,9 @@ void do_cast( CHAR_DATA *ch, char *argument )
 
     if ( str_cmp( skill_table[sn].name, "ventriloquate" ) )
 	say_spell( ch, sn );
-    
+
     /* FIX - Put in tests into spells (abil calls/skill calls) */
-  
+
     WAIT_STATE( ch, skill_table[sn].beats );
 
     (*skill_table[sn].spell_fun) ( sn, ch->trust, ch, vo,target);
@@ -647,14 +647,14 @@ void obj_cast_spell( int sn, int level, CHAR_DATA *ch, CHAR_DATA *victim, OBJ_DA
 	    vo = (void *) obj;
 	    target = TARGET_OBJ;
 	}
-	
+
 	break;
     }
 
     target_name = "";
     (*skill_table[sn].spell_fun) ( sn, level, ch, vo,target);
 
-    
+
 
     if ( (skill_table[sn].target == TAR_CHAR_OFFENSIVE
     ||   (skill_table[sn].target == TAR_OBJ_CHAR_OFF && target == TARGET_CHAR))
@@ -777,7 +777,7 @@ void spell_cure_blindness(int sn,int level,CHAR_DATA *ch,void *vo,int target)
           act("$N doesn't appear to be blinded.",ch,NULL,victim,TO_CHAR,1);
         return;
     }
- 
+
     if (check_dispel(level,victim,gsn_blindness))
     {
         send_to_char( "Your vision returns!\n\r", victim );
@@ -800,7 +800,7 @@ void spell_cure_disease( int sn, int level, CHAR_DATA *ch,void *vo,int target)
           act("$N doesn't appear to be diseased.",ch,NULL,victim,TO_CHAR,1);
         return;
     }
-    
+
     if (check_dispel(level,victim,gsn_plague))
     {
 	send_to_char("Your sores vanish.\n\r",victim);
@@ -814,7 +814,7 @@ void spell_cure_disease( int sn, int level, CHAR_DATA *ch,void *vo,int target)
 void spell_cure_poison( int sn, int level, CHAR_DATA *ch, void *vo,int target )
 {
     CHAR_DATA *victim = (CHAR_DATA *) vo;
- 
+
     if ( !is_affected( victim, gsn_poison ) )
     {
         if (victim == ch)
@@ -823,7 +823,7 @@ void spell_cure_poison( int sn, int level, CHAR_DATA *ch, void *vo,int target )
           act("$N doesn't appear to be poisoned.",ch,NULL,victim,TO_CHAR,1);
         return;
     }
- 
+
     if (check_dispel(level,victim,gsn_poison))
     {
         send_to_char("A warm feeling runs through your body.\n\r",victim);
@@ -835,65 +835,73 @@ void spell_cure_poison( int sn, int level, CHAR_DATA *ch, void *vo,int target )
 
 void spell_curse( int sn, int level, CHAR_DATA *ch, void *vo,int target )
 {
-    CHAR_DATA *victim;
-    OBJ_DATA *obj;
-    AFFECT_DATA af;
+	CHAR_DATA *victim;
+	OBJ_DATA *obj;
+	AFFECT_DATA af;
 
     /* deal with the object case first */
-    if (target == TARGET_OBJ)
-    {
-        obj = (OBJ_DATA *) vo;
-        if (IS_OBJ_STAT(obj,ITEM_EVIL))
-        {
-            act("$p is already filled with evil.",ch,obj,NULL,TO_CHAR,1);
-            return;
-        }
+	if (target == TARGET_OBJ)
+	{
+		obj = (OBJ_DATA *) vo;
+		if (IS_OBJ_STAT(obj,ITEM_EVIL))
+		{
+			act("$p is already filled with evil.",ch,obj,NULL,TO_CHAR,1);
+			return;
+		}
 
-        if (IS_OBJ_STAT(obj,ITEM_BLESS))
-        {
-            AFFECT_DATA *paf;
+		if (IS_OBJ_STAT(obj,ITEM_BLESS))
+		{
+			AFFECT_DATA *paf;
 
-            paf = affect_find(obj->affected,skill_lookup("bless"));
-        }
+			paf = affect_find(obj->affected,skill_lookup("bless"));
 
-        af.where        = TO_OBJECT;
-        af.type         = sn;
-        af.level        = level;
-        af.duration     = 2 * level;
-        af.location     = APPLY_STA;
-        af.modifier     = +1;
-        af.bitvector    = ITEM_EVIL;
-        affect_to_obj(obj,&af);
+			if (paf != NULL)
+			{
+				affect_remove_obj(obj,paf);
+			}
+			act("$p glows with a red aura.",ch,obj,NULL,TO_ALL,0);
+			REMOVE_BIT(obj->extra_flags,ITEM_BLESS);
+			return;
+		}
 
-        act("$p glows with a malevolent aura.",ch,obj,NULL,TO_ALL,0);
+		af.where        = TO_OBJECT;
+		af.type         = sn;
+		af.level        = level;
+		af.duration     = 2 * level;
+		af.location     = APPLY_STA;
+		af.modifier     = +1;
+		af.bitvector    = ITEM_EVIL;
+		affect_to_obj(obj,&af);
 
-	if (obj->wear_loc != WEAR_NONE)
-	    ch->saving_throw += 1;
-        return;
-    }
+		act("$p glows with a malevolent aura.",ch,obj,NULL,TO_ALL,0);
+
+		if (obj->wear_loc != WEAR_NONE)
+			ch->saving_throw += 1;
+		return;
+	}
 
     /* character curses */
-    victim = (CHAR_DATA *) vo;
+	victim = (CHAR_DATA *) vo;
 
-    if (IS_AFFECTED(victim,AFF_CURSE) || saves_spell(level,victim,DAM_NEGATIVE))
+	if (IS_AFFECTED(victim,AFF_CURSE) || saves_spell(level,victim,DAM_NEGATIVE))
+		return;
+	af.where     = TO_AFFECTS;
+	af.type      = sn;
+	af.level     = level;
+	af.duration  = 2*level;
+	af.location  = APPLY_DEX;
+	af.modifier  = -1 * (level / 8);
+	af.bitvector = AFF_CURSE;
+	affect_to_char( victim, &af );
+
+	af.location  = APPLY_STA;
+	af.modifier  = level / 8;
+	affect_to_char( victim, &af );
+
+	send_to_char( "You feel unclean.\n\r", victim );
+	if ( ch != victim )
+		act("$N looks very uncomfortable.",ch,NULL,victim,TO_CHAR,1);
 	return;
-    af.where     = TO_AFFECTS;
-    af.type      = sn;
-    af.level     = level;
-    af.duration  = 2*level;
-    af.location  = APPLY_DEX;
-    af.modifier  = -1 * (level / 8);
-    af.bitvector = AFF_CURSE;
-    affect_to_char( victim, &af );
-
-    af.location  = APPLY_STA;
-    af.modifier  = level / 8;
-    affect_to_char( victim, &af );
-
-    send_to_char( "You feel unclean.\n\r", victim );
-    if ( ch != victim )
-	act("$N looks very uncomfortable.",ch,NULL,victim,TO_CHAR,1);
-    return;
 }
 
 void spell_detect_hidden(int sn,int level,CHAR_DATA *ch,void *vo,int target)
@@ -977,7 +985,7 @@ void spell_dispel_evil( int sn, int level, CHAR_DATA *ch, void *vo,int target)
 {
     CHAR_DATA *victim = (CHAR_DATA *) vo;
     int dam = 0;
-  
+
     if ( !IS_NPC(ch) && !IS_NATURAL(ch) )
 	victim = ch;
 
@@ -1252,7 +1260,7 @@ void spell_locate_object( int sn, int level, CHAR_DATA *ch, void *vo,int target)
 	int number = 0;
 	int max_found = IS_ADMIN(ch) ? 200 : 2 * level;
 	bool found = FALSE;
-	
+
 	buffer = new_buf();
 
 	for ( obj = object_list; obj != NULL; obj = obj->next )
@@ -1436,7 +1444,7 @@ void spell_protection_evil(int sn,int level,CHAR_DATA *ch,void *vo, int target)
 		act("$N is protected from evil.",ch,NULL,victim,TO_CHAR,1);
 	return;
 }
- 
+
 void spell_remove_curse( int sn, int level, CHAR_DATA *ch, void *vo,int target)
 {
     CHAR_DATA *victim;
@@ -1496,7 +1504,7 @@ void spell_sleep( int sn, int level, CHAR_DATA *ch, void *vo,int target)
 {
     CHAR_DATA *victim = (CHAR_DATA *) vo;
     AFFECT_DATA af;
-  
+
     if ( IS_AFFECTED(victim, AFF_SLEEP) )
 	return;
 
@@ -1522,7 +1530,7 @@ void spell_slow( int sn, int level, CHAR_DATA *ch, void *vo,int target )
 {
     CHAR_DATA *victim = (CHAR_DATA *) vo;
     AFFECT_DATA af;
- 
+
     if ( is_affected( victim, sn ) || IS_AFFECTED(victim,AFF_SLOW))
     {
         if (victim == ch)
@@ -1531,8 +1539,8 @@ void spell_slow( int sn, int level, CHAR_DATA *ch, void *vo,int target )
           act("$N can't get any slower than that.", ch,NULL,victim,TO_CHAR,1);
         return;
     }
- 
-    if (saves_spell(level,victim,DAM_OTHER) 
+
+    if (saves_spell(level,victim,DAM_OTHER)
     ||  IS_SET(victim->imm_flags,IMM_MAGIC))
     {
 	if (victim != ch)
@@ -1540,7 +1548,7 @@ void spell_slow( int sn, int level, CHAR_DATA *ch, void *vo,int target )
         send_to_char("You feel momentarily lethargic.\n\r",victim);
         return;
     }
- 
+
     af.where     = TO_AFFECTS;
     af.type      = sn;
     af.level     = level;
@@ -5568,10 +5576,11 @@ void do_thaumaturgy4(CHAR_DATA *ch, char *argument)
 
 void do_thaumaturgy5(CHAR_DATA *ch, char *argument)
 {
-	int fail = 0;
-	int diff, blood;
-	char arg[MAX_INPUT_LENGTH]={'\0'};
 	CHAR_DATA *vch;
+	char arg[MAX_INPUT_LENGTH]={'\0'};
+	int fail = 0;
+	int diff = 0;
+	int blood = 0;
 
 	CheckCH(ch);
 
@@ -5584,7 +5593,9 @@ void do_thaumaturgy5(CHAR_DATA *ch, char *argument)
 	}
 
 	if (!has_enough_power(ch))
+	{
 		return;
+	}
 
 	if(ch->RBPG <= 1)
 	{
@@ -5612,6 +5623,15 @@ void do_thaumaturgy5(CHAR_DATA *ch, char *argument)
 	blood = atoi(arg);
 	diff = UMIN(4+blood, 10);
 	fail = dice_rolls(ch, ch->willpower, diff);
+
+	if (fail)
+	{
+		send_to_char("TRUE", ch);
+	}
+	else
+	{
+		send_to_char("FALSE", ch);
+	}
 
 	/* Check for mortality */
 
@@ -6787,7 +6807,7 @@ void do_animalism1 (CHAR_DATA *ch, char *string)
 	string = one_argument(string,arg);
 	string = one_argument(string,buf);
 
-	if (ch->race != race_lookup("vampire") || !ch->disc[DISC_ANIMALISM]) 
+	if (ch->race != race_lookup("vampire") || !ch->disc[DISC_ANIMALISM])
 	{
 		send_to_char("\tRWarning\tn: You do not know the discipline Animalism.\n\r", ch);
 		return;

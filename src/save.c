@@ -10,7 +10,7 @@
 #include "recycle.h"
 #include "tables.h"
 #include "lookup.h"
- 
+
 #if !defined(Macintosh)
 extern  int     _filbuf         args( (FILE *) );
 #endif
@@ -247,11 +247,11 @@ void fwrite_char( CHAR_DATA *ch, FILE *fp )
     WriteToFile(fp, true, "Name", ch->name);
     WriteToFile(fp, true, "SName", ch->surname);
     WriteToFile(fp, true, "AName", ch->alt_name);
-    
+
     WriteLong(fp, "Id", ch->id);
 	WriteLong(fp, "LogO", current_time);
 	WriteLong(fp, "LastV", ch->pcdata->last_vote);
-	
+
 
     snprintf( buf, sizeof(buf), "%s", ctime(&current_time));
     buf[strlen(buf) - 1] = '\0';
@@ -263,7 +263,7 @@ void fwrite_char( CHAR_DATA *ch, FILE *fp )
     WriteToFile(fp, true, "SDesc", ch->switch_desc);
 
 	WriteNumber(fp, "Race", ch->race);
-	
+
     fprintf( fp, "AusBr %d %d\n", ch->auspice, ch->breed);
 
 	WriteNumber(fp, "Gen", ch->gen);
@@ -288,7 +288,7 @@ void fwrite_char( CHAR_DATA *ch, FILE *fp )
 	WriteLong(fp, "Not", ch->pcdata->last_note);
 	WriteNumber(fp, "Scro", ch->lines);
 
-	 WriteNumber(fp, "Room", 
+	 WriteNumber(fp, "Room",
         (  ch->in_room == get_room_index( ROOM_VNUM_LIMBO )
          && ch->was_in_room != NULL )
              ? ch->was_in_room->vnum
@@ -327,7 +327,7 @@ void fwrite_char( CHAR_DATA *ch, FILE *fp )
 
 	WriteToFile(fp, true, "Marry", ch->married);
 	WriteToFile(fp, true, "Ghld", ch->ghouled_by);
-    
+
     WriteNumber( fp, "BgTime",	ch->bg_timer );
     WriteNumber( fp, "BgCount",ch->bg_count );
 
@@ -336,7 +336,7 @@ void fwrite_char( CHAR_DATA *ch, FILE *fp )
     WriteNumber( fp, "Age",	ch->char_age );
 
     fprintf( fp, "Oocxp %d %d\n",	ch->ooc_xp_time, ch->ooc_xp_count );
-	
+
 	WriteToFile(fp, true, "Reject", ch->pcdata->ignore_reject);
 	WriteToFile(fp, true, "Block", ch->pcdata->block_join);
 
@@ -380,7 +380,7 @@ void fwrite_char( CHAR_DATA *ch, FILE *fp )
     	WriteToFile( fp, true, "Part", print_flags(ch->parts) );
     if (ch->form != race_table[ch->race].form)
     	WriteToFile( fp, true, "Form", print_flags(ch->form) );
-    
+
     WriteToFile( fp, true, "Comm", print_flags(ch->comm) );
 
     if (ch->wiznet)
@@ -556,7 +556,7 @@ void fwrite_pet( CHAR_DATA *pet, FILE *fp)
 	WriteToFile(fp, true, "LnD", pet->long_descr);
 	WriteToFile(fp, true, "Desc", pet->description);
 	WriteToFile(fp, true, "Race", race_table[pet->race].name);
-	
+
 	if (pet->clan)
 	{
 		WriteToFile(fp, true, "Cln", clan_table[pet->clan].name);
@@ -616,7 +616,7 @@ void fwrite_pet( CHAR_DATA *pet, FILE *fp)
 	fprintf(fp,"End\n");
 	return;
 }
-    
+
 /*
  * Write an object and its contents.
  */
@@ -630,15 +630,21 @@ void fwrite_obj( CHAR_DATA *ch, OBJ_DATA *obj, FILE *fp, int iNest )
 	 *   so loading them will load in forwards order.
 	 */
 	if ( obj->next_content != NULL )
+	{
 		fwrite_obj( ch, obj->next_content, fp, iNest );
+	}
 
 	if  ( (obj->item_type == ITEM_KEY && !IS_SET(obj->extra2, OBJ_KEEP))
-			||   (obj->item_type == ITEM_MAP && !obj->value[0]))
+		||   (obj->item_type == ITEM_MAP && !obj->value[0]))
+	{
 		return;
+	}
 
 	if(obj->name[0] == '\0' && obj->short_descr[0] == '\0'
-			&& obj->description == '\0')
+		&& obj->description == NULL )
+	{
 		return;
+	}
 
 	fprintf( fp, "#O\n" );
 	WriteNumber( fp, "Vnum", obj->pIndexData->vnum );
@@ -680,17 +686,17 @@ void fwrite_obj( CHAR_DATA *ch, OBJ_DATA *obj, FILE *fp, int iNest )
 		WriteNumber( fp, "Time", obj->timer );
 	WriteNumber( fp, "Cost", obj->cost );
 	if (obj->value[0] != obj->pIndexData->value[0] ||  obj->value[1] != obj->pIndexData->value[1]
-          ||  obj->value[2] != obj->pIndexData->value[2] ||  obj->value[3] != obj->pIndexData->value[3]
-          ||  obj->value[4] != obj->pIndexData->value[4] ||  obj->value[5] != obj->pIndexData->value[5])
+		||  obj->value[2] != obj->pIndexData->value[2] ||  obj->value[3] != obj->pIndexData->value[3]
+		||  obj->value[4] != obj->pIndexData->value[4] ||  obj->value[5] != obj->pIndexData->value[5])
 		fprintf( fp, "Val  %d %d %d %d %d %d\n",
-				obj->value[0], obj->value[1], obj->value[2], obj->value[3],
-				obj->value[4], obj->value[5]	     );
+			obj->value[0], obj->value[1], obj->value[2], obj->value[3],
+			obj->value[4], obj->value[5]	     );
 
 	switch ( obj->item_type )
 	{
-	case ITEM_POTION:
-	case ITEM_SCROLL:
-	case ITEM_PILL:
+		case ITEM_POTION:
+		case ITEM_SCROLL:
+		case ITEM_PILL:
 		if ( obj->value[1] > 0 )
 		{
 			fprintf( fp, "Spell 1 '%s'\n", skill_table[obj->value[1]].name );
@@ -714,14 +720,14 @@ void fwrite_obj( CHAR_DATA *ch, OBJ_DATA *obj, FILE *fp, int iNest )
 		if (paf->type < 0 || paf->type >= MAX_SKILL)
 			continue;
 		fprintf( fp, "Affc '%s' %3d %3d %3d %3d %3d %10d\n",
-				skill_table[paf->type].name,
-				paf->where,
-				paf->level,
-				paf->duration,
-				paf->modifier,
-				paf->location,
-				paf->bitvector
-		);
+			skill_table[paf->type].name,
+			paf->where,
+			paf->level,
+			paf->duration,
+			paf->modifier,
+			paf->location,
+			paf->bitvector
+			);
 	}
 
 	for ( ed = obj->extra_descr; ed != NULL; ed = ed->next )
@@ -763,7 +769,7 @@ bool load_char_obj( DESCRIPTOR_DATA *d, char *name, bool log_load, bool load_con
 	d->character			= ch;
 	ch->desc				= d;
 
-	
+
 	PURGE_DATA( ch->aifile );
 	PURGE_DATA( ch->alt_description );
 	PURGE_DATA( ch->alt_long_descr );
@@ -888,7 +894,7 @@ bool load_char_obj( DESCRIPTOR_DATA *d, char *name, bool log_load, bool load_con
 	closeReserve();
 
 #if defined(__unix__)
-	
+
 	/* decompress if .gz file exists */
 	char strsave[MAX_INPUT_LENGTH]={'\0'};
 
@@ -1524,7 +1530,7 @@ void fread_char( CHAR_DATA *ch, FILE *fp, bool log_load )
 			KEY( "TSex",	ch->pcdata->true_sex,   fread_number( fp ) );
 			KEY( "Tru",		ch->trust,		fread_number( fp ) );
 
-			
+
             KEY( "Titl", ch->pcdata->title,        fread_string( fp ) );
 			if(!str_cmp(word, "Totem"))
 			{
@@ -1813,7 +1819,7 @@ void fread_obj( CHAR_DATA *ch, FILE *fp )
 	bool first = TRUE;
 
 	obj = NULL;
-	
+
 	word   = feof( fp ) ? "End" : fread_word( fp );
 	if (!str_cmp(word,"Vnum" ))
 	{
@@ -1859,12 +1865,12 @@ void fread_obj( CHAR_DATA *ch, FILE *fp )
 
 		switch ( UPPER(word[0]) )
 		{
-		case '*':
+			case '*':
 			fMatch = TRUE;
 			fread_to_eol( fp );
 			break;
 
-		case 'A':
+			case 'A':
 			if (!str_cmp(word,"AffD"))
 			{
 				AFFECT_DATA *paf;
@@ -1914,17 +1920,17 @@ void fread_obj( CHAR_DATA *ch, FILE *fp )
 			}
 			break;
 
-		case 'C':
+			case 'C':
 			KEY( "Cond",	obj->condition,		fread_number( fp ) );
 			KEY( "Cost",	obj->cost,		fread_number( fp ) );
 			break;
 
-		case 'D':
+			case 'D':
 			KEY( "Description",	obj->description,	fread_string( fp ) );
 			KEY( "Desc",	obj->description,	fread_string( fp ) );
 			break;
 
-		case 'E':
+			case 'E':
 
 			if ( !str_cmp( word, "Enchanted"))
 			{
@@ -1951,8 +1957,8 @@ void fread_obj( CHAR_DATA *ch, FILE *fp )
 			if ( !str_cmp( word, "End" ) )
 			{
 				if((obj->name[0] == '\0' && obj->short_descr[0] == '\0'
-						&& obj->description == '\0')
-						|| !fNest || (fVnum && obj->pIndexData == NULL))
+					&& obj->description == NULL )
+					|| !fNest || (fVnum && obj->pIndexData == NULL))
 				{
 					log_string(LOG_BUG, "Fread_obj: incomplete object.");
 					extract_obj(obj);
@@ -1975,16 +1981,16 @@ void fread_obj( CHAR_DATA *ch, FILE *fp )
 			}
 			break;
 
-		case 'F':
+			case 'F':
 			KEY( "FDesc",	obj->full_desc,		fread_string( fp ) );
 			break;
 
-		case 'I':
+			case 'I':
 			KEY( "ItemType",	obj->item_type,		fread_number( fp ) );
 			KEY( "Ityp",	obj->item_type,		fread_number( fp ) );
 			break;
 
-		case 'N':
+			case 'N':
 			KEY( "Name",	obj->name,		fread_string( fp ) );
 
 			if ( !str_cmp( word, "Nest" ) )
@@ -2003,14 +2009,14 @@ void fread_obj( CHAR_DATA *ch, FILE *fp )
 			}
 			break;
 
-		case 'O':
+			case 'O':
 			break;
 
-		case 'Q':
+			case 'Q':
 			KEY( "Quality",	obj->quality,		fread_number( fp ) );
 			break;
 
-		case 'S':
+			case 'S':
 			KEY( "ShD",		obj->short_descr,	fread_string( fp ) );
 
 			if ( !str_cmp( word, "Spell" ) )
@@ -2038,16 +2044,16 @@ void fread_obj( CHAR_DATA *ch, FILE *fp )
 
 			break;
 
-		case 'T':
+			case 'T':
 			KEY( "Timer",	obj->timer,		fread_number( fp ) );
 			KEY( "Time",	obj->timer,		fread_number( fp ) );
 			break;
 
-		case 'U':
+			case 'U':
 			KEY( "Uses",	obj->uses,		fread_number( fp ) );
 			break;
 
-		case 'V':
+			case 'V':
 			if ( !str_cmp( word, "Values" ) || !str_cmp(word,"Vals"))
 			{
 				obj->value[0]	= fread_number( fp );
@@ -2086,7 +2092,7 @@ void fread_obj( CHAR_DATA *ch, FILE *fp )
 			}
 			break;
 
-		case 'W':
+			case 'W':
 			KEY( "WearFlags",	obj->wear_flags,	fread_number( fp ) );
 			KEY( "WeaF",	obj->wear_flags,	fread_number( fp ) );
 			KEY( "WearLoc",	obj->wear_loc,		fread_number( fp ) );

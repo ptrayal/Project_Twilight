@@ -285,7 +285,7 @@ bool		    merc_down;		/* Shutdown			*/
 bool		    wizlock;		/* Game is wizlocked		*/
 bool		    newlock;		/* Game is newlocked		*/
 char		    str_boot_time[MIL];
-time_t		    current_time;	/* time of this pulse */	
+time_t		    current_time;	/* time of this pulse */
 bool		    MOBtrigger = TRUE;	/* act() switch			*/
 
 
@@ -377,6 +377,9 @@ void cleanup_mud(int control)
 
 	close(control);
 	control = -1;
+
+	// Start Going through the different lists and cleaning.
+
 	log_string(LOG_ERR, "cleaning character list");
 	for(ch = char_list; ch != NULL; ch = ch_next)
 	{
@@ -394,14 +397,16 @@ void cleanup_mud(int control)
 	}
 
 	log_string(LOG_ERR, "cleaning helpfiles");
-	for(help = help_list; help; help = help_next) {
+	for(help = help_list; help; help = help_next)
+	{
 		help_next = help->next;
 
 		free_help(help);
 	}
 
 	log_string(LOG_ERR, "cleaning tips");
-	for(help = tip_list; help; help = help_next) {
+	for(help = tip_list; help; help = help_next)
+	{
 		help_next = help->next;
 
 		free_help(help);
@@ -580,13 +585,14 @@ void cleanup_mud(int control)
 	}
 
 	log_string(LOG_ERR, "Cleaning out events / scripts / actors ");
-	for(pEvent = event_list; pEvent; pEvent = pEvent_next) {
+	for(pEvent = event_list; pEvent; pEvent = pEvent_next)
+	{
 		pEvent_next = pEvent->next;
 
 		free_event(pEvent);
 	}
 
-    purgeExtractedWorldData();
+	purgeExtractedWorldData();
 	log_string(LOG_GAME, "Project Twilight has completed its cleanup procedure and may now shutdown.");
 	return;
 }
@@ -1870,7 +1876,7 @@ bool write_to_descriptor( int desc, char *txt, int length )
 	nBlock = UMIN( length - iStart, 4096 );
 	if ( ( nWrite = write( desc, txt + iStart, nBlock ) ) < 0 )
 	    { perror( "Write_to_descriptor" ); return FALSE; }
-    } 
+    }
 
     return TRUE;
 }
@@ -2242,7 +2248,7 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 					}
 					else
 					{
-						
+
 						ProtocolNoEcho( d, true );
 						write_to_buffer( d, Format("New character.\n\rGive me a password for %s:", ch->name), 0 );
 					}
@@ -3528,7 +3534,8 @@ void show_string(struct descriptor_data *d, char *input)
 	char buffer[4*MSL]={'\0'};
 	char buf[MSL]={'\0'};
 	register char *scan, *chk;
-	int lines = 0, toggle = 1;
+	int lines = 0;
+	int toggle = 1;
 	int show_lines = 0;
 
 	one_argument(input,buf);
@@ -3544,16 +3551,20 @@ void show_string(struct descriptor_data *d, char *input)
 	}
 
 	if (d->character)
+	{
 		show_lines = d->character->lines;
+	}
 	else
+	{
 		show_lines = 0;
+	}
 
 	for (scan = buffer; ; scan++, d->showstr_point++)
 	{
-		if (((*scan = *d->showstr_point) == '\n' || *scan == '\r')
-				&& (toggle = -toggle) < 0)
+		if (((*scan = *d->showstr_point) == '\n' || *scan == '\r') && (toggle = -toggle) < 0)
+		{
 			lines++;
-
+		}
 		else if (!*scan || (show_lines > 0 && lines >= show_lines))
 		{
 			*scan = '\0';
@@ -3589,375 +3600,610 @@ void fix_sex(CHAR_DATA *ch)
  */
 void act_new( const char *format, CHAR_DATA *ch, const void *arg1,  const void *arg2, int type, int min_pos, int all_planes)
 {
-    static char * const he_she  [] = { "it",  "he",  "she" };
-    static char * const him_her [] = { "it",  "him", "her" };
-    static char * const his_her [] = { "its", "his", "her" };
- 
-    char buf[MSL] = {'\0'};
-    char fname[MIL] = {'\0'};
-    CHAR_DATA *to;
-    CHAR_DATA *also_to;
-    CHAR_DATA *vch = (CHAR_DATA *) arg2;
-    OBJ_DATA *obj1 = (OBJ_DATA  *) arg1;
-    OBJ_DATA *obj2 = (OBJ_DATA  *) arg2;
-    ROOM_INDEX_DATA *room = (ROOM_INDEX_DATA  *) arg2;
-    const char *str;
-    const char *i = " <@@@> ";
-    char *point;
-    char 		*pbuff;
-    char 		buffer[ MSL*2 ] = {'\0'};
-    bool		fColour = FALSE;
- 
+	static char * const he_she  [] = { "it",  "he",  "she" };
+	static char * const him_her [] = { "it",  "him", "her" };
+	static char * const his_her [] = { "its", "his", "her" };
+
+	char buf[MSL] = {'\0'};
+	char fname[MIL] = {'\0'};
+	CHAR_DATA *to;
+	CHAR_DATA *also_to;
+	CHAR_DATA *vch = (CHAR_DATA *) arg2;
+	OBJ_DATA *obj1 = (OBJ_DATA  *) arg1;
+	OBJ_DATA *obj2 = (OBJ_DATA  *) arg2;
+	ROOM_INDEX_DATA *room = (ROOM_INDEX_DATA  *) arg2;
+	const char *str;
+	const char *i = " <@@@> ";
+	char *point;
+	char 		*pbuff;
+	char 		buffer[ MSL*2 ] = {'\0'};
+	bool		fColour = FALSE;
+
     /*
      * Discard null and zero-length messages.
      */
-    if ( format == NULL || format[0] == '\0' )
-    	return;
+	if ( format == NULL || format[0] == '\0' )
+	{
+		return;
+	}
 
     /* discard null rooms and chars */
-    if (ch == NULL || ch->in_room == NULL)
-    	return;
-
-    if(type == TO_OROOM)
-    {
-    	if(room == NULL)
-    	{
-    		log_string(LOG_BUG, "Act: null room with TO_OROOM.");
-    		return;
-    	}
-
-    	to = room->people;
-    	also_to = room->listeners;
-    }
-    else
-    {
-    	if(IS_SET(ch->act2, ACT2_ASTRAL))
-    	{
-    		to = ch->listening->people;
-    		also_to = ch->listening->listeners;
-    	}
-    	else
-    	{
-    		to = ch->in_room->people;
-    		also_to = ch->in_room->listeners;
-    	}
-    }
-
-    if ( type == TO_VICT )
-    {
-        if ( vch == NULL )
-        {
-            log_string(LOG_BUG, "Act: null vch with TO_VICT.");
-            return;
-        }
-
-	if (!SAME_PLANE(ch, vch) && !all_planes)
-	    return;
-
-	if (vch->in_room == NULL)
-	    return;
-
-        to = vch->in_room->people;
-        also_to = vch->in_room->listeners;
-    }
-
-    for ( ; to != NULL; to = to->next_in_room )
-    {
-        if (to->position < min_pos) continue;
-        if (!SAME_PLANE(ch, to) && !all_planes && type != TO_OPLANE) continue;
-	    if (!IS_NPC(to) && to->desc == NULL ) continue;
-	    if ( IS_NPC(to) && !HAS_TRIGGER(to, TRIG_ACT) && !HAS_SCRIPT(to) ) continue;
-
-        if ( (type == TO_CHAR) && to != ch )
-            continue;
-        if ( type == TO_VICT && ( to != vch || to == ch ) )
-            continue;
-        if ( type == TO_ROOM && to == ch )
-            continue;
-        if ( type == TO_NOTVICT && (to == ch || to == vch) )
-            continue;
-        if ( type == TO_GROUP && !is_same_group(to, ch) && to != ch )
-            continue;
-        if ( type == TO_OPLANE && to == ch )
-            continue;
-	if(ch != NULL && to != NULL)
+	if (ch == NULL || ch->in_room == NULL)
 	{
-		// -- what if to->ignore is NULL ? Hmm?  Protection, we wrap it up :)
-		if(!IS_NULLSTR(to->ignore)) {
-			if(strstr(to->ignore, ch->name) != '\0')
-				continue;
+		return;
+	}
+
+	if(type == TO_OROOM)
+	{
+		if(room == NULL)
+		{
+			log_string(LOG_BUG, "Act: null room with TO_OROOM.");
+			return;
+		}
+
+		to = room->people;
+		also_to = room->listeners;
+	}
+	else
+	{
+		if(IS_SET(ch->act2, ACT2_ASTRAL))
+		{
+			to = ch->listening->people;
+			also_to = ch->listening->listeners;
+		}
+		else
+		{
+			to = ch->in_room->people;
+			also_to = ch->in_room->listeners;
 		}
 	}
 
-        point   = buf;
-        str     = format;
-        while ( *str != '\0' )
-        {
-            if ( *str != '$' )
-            {
-                *point++ = *str++;
-                continue;
-            }
-	    fColour = TRUE;
-            ++str;
- 
-            if ( arg2 == NULL && *str >= 'A' && *str <= 'Z' )
-            {
-                log_string(LOG_BUG, Format("Act: missing arg2 for code %d.", *str ));
-                i = " <@@@> ";
-            }
-            else
-            {
-                switch ( *str )
-                {
-                default:  log_string(LOG_BUG, Format("Act: bad code %d.", *str ));
-                          i = " <@@@> ";                                break;
-                case '$': i = "$";
-                            break;
-                /* Thx alex for 't' idea */
-                case 't': if (arg1) i = (char *) arg1;
-			  else log_string(LOG_BUG, "Act: bad code $t for 'arg1'");
-                            break;
-                case 'T': if (arg2) i = (char *) arg2;
-			  else log_string(LOG_BUG, "Act: bad code $T for 'arg2'");
-                            break;
-                case 'n': if (ch&&to) {
-        		if(LOOKS_DIFFERENT(ch))
-        		    i = ALT_PERS( ch, to );
-        		else
-        		    i = PERS( ch, to ); }
-			  else log_string(LOG_BUG, "Act: bad code $n for 'ch' or 'to'");
-			    break;
-                case 'N': if (vch&&to) {
-        		if(LOOKS_DIFFERENT(vch))
-        		    i = ALT_PERS( vch, to );
-        		else
-        		    i = PERS( vch, to ); }
-			  else log_string(LOG_BUG, "Act: bad code $N for 'vch' or 'to'");
-			    break;
-                case 'e': if (ch) i = he_she  [URANGE(0, ch  ->sex, 2)];
-			  else log_string(LOG_BUG, "Act: bad code $e for 'ch'");
-		            break;
-                case 'E': if (vch) i = he_she  [URANGE(0, vch ->sex, 2)];
-			  else log_string(LOG_BUG, "Act: bad code $E for 'vch'");
-		            break;
-                case 'm': if (ch) i = him_her [URANGE(0, ch  ->sex, 2)];
-			  else log_string(LOG_BUG, "Act: bad code $m for 'ch'");
-		            break;
-                case 'M': if (vch) i = him_her [URANGE(0, vch ->sex, 2)];
-			  else log_string(LOG_BUG, "Act: bad code $M for 'vch'");
-		            break;
-                case 's': if (ch) i = his_her [URANGE(0, ch  ->sex, 2)];
-			  else log_string(LOG_BUG, "Act: bad code $s for 'ch'");
-		            break;
-                case 'S': if (vch) i = his_her [URANGE(0, vch ->sex, 2)];
-			  else log_string(LOG_BUG, "Act: bad code $S for 'vch'");
-		            break;
+	if ( type == TO_VICT )
+	{
+		if ( vch == NULL )
+		{
+			log_string(LOG_BUG, "Act: null vch with TO_VICT.");
+			return;
+		}
 
-                case 'p':
-                    if (obj1) {
-			if ( can_see_obj( to, obj1 ) )
-                            i = IS_SET(obj1->extra2, OBJ_PACKAGED)
-				? "a package" : obj1->short_descr;
-                        else
-			    i = "something";
-		    }
-		    else 
-		    	log_string(LOG_BUG, "Act: bad code $p for 'obj1'");
-                    break;
- 
-                case 'P':
-                    if (obj2) {
-			if ( can_see_obj( to, obj2 ) )
-                            i = IS_SET(obj2->extra2, OBJ_PACKAGED)
-				? "a package" : obj2->short_descr;
-                        else
-			    i = "something";
-		    }
-		    else log_string(LOG_BUG, "Act: bad code $P for 'obj2'");
-                    break;
- 
-                case 'd':
-                    if ( arg2 == NULL || ((char *) arg2)[0] == '\0' )
-                    {
-                        i = "door";
-                    }
-                    else
-                    {
-                        one_argument( (char *) arg2, fname );
-                        i = fname;
-                    }
-                    break;
+		if (!SAME_PLANE(ch, vch) && !all_planes)
+		{
+			return;
+		}
 
-		case 'i':
-		    if ( is_number((char *)arg1) )
-		    {
-			snprintf(fname, sizeof(fname), "%d", atoi((char *)arg1));
-			i = fname;
-		    }
-		    else log_string(LOG_BUG, Format("Act: bad code $i for 'arg1', which is %s", arg1));
-		    break;
-                }
-            }
- 
-            ++str;
-            while ( ( *point = *i ) != '\0' )
-                ++point, ++i;
-        }
- 
-        *point++ = '\n';
-        *point++ = '\r';
-        *point   = '\0';
-        buf[0]   = UPPER(buf[0]);
-        if (to->desc == NULL)
-        {
-        	trigger_test(buf, to, ch);
-        }
-        else
-        {
-        	pbuff	 = buffer;
-        	write_to_buffer( to->desc, buf, 0 );
-        }
-    }
+		if (vch->in_room == NULL)
+		{
+			return;
+		}
 
-    for ( ; also_to != NULL; also_to = also_to->next_listener )
-    {
-        if (!SAME_PLANE(ch, to) && !all_planes && type != TO_OPLANE) continue;
+		to = vch->in_room->people;
+		also_to = vch->in_room->listeners;
+	}
 
-        if ( (type == TO_CHAR) && also_to != ch )
-            continue;
-        if ( type == TO_VICT )
-            continue;
-        if ( type == TO_ROOM && also_to == ch )
-            continue;
-        if ( type == TO_NOTVICT && (also_to == ch || also_to == vch) )
-            continue;
-        if ( type == TO_GROUP && !is_same_group(also_to, ch) && also_to != ch )
-            continue;
-        if ( type == TO_OPLANE && also_to == ch )
-            continue;
- 
-        point   = buf;
-        str     = format;
-        while ( *str != '\0' )
-        {
-            if ( *str != '$' )
-            {
-                *point++ = *str++;
-                continue;
-            }
-            ++str;
- 
-            if ( arg2 == NULL && *str >= 'A' && *str <= 'Z' )
-            {
-                log_string(LOG_BUG, Format("Act: missing arg2 for code %d.", *str ));
-                i = " <@@@> ";
-            }
-            else
-            {
-                switch ( *str )
-                {
-                default:  log_string(LOG_BUG, Format("Act: bad code %d.", *str ));
-                          i = " <@@@> ";                                break;
-                /* Thx alex for 't' idea */
-                case 't': if (arg1) i = (char *) arg1;
-			  else log_string(LOG_BUG, "Act: bad code $t for 'arg1'");
-                            break;
-                case 'T': if (arg2) i = (char *) arg2;
-			  else log_string(LOG_BUG, "Act: bad code $T for 'arg2'");
-                            break;
-                case 'n': if (ch&&also_to) {
-        		if(LOOKS_DIFFERENT(ch))
-        		{
-        		    if(can_see(also_to, ch))
-        		        i = ch->alt_name;
-	                    else
-                		i = "someone";
-        		}
-        		else
-        		    i = PERS( ch, also_to ); }
-			  else log_string(LOG_BUG, "Act: bad code $n for 'ch' or 'also_to'");
-			    break;
-                case 'N': if (vch&&also_to) {
-        		if(LOOKS_DIFFERENT(vch))
-        		{
-        		    if(can_see(also_to, vch))
-        		        i = vch->alt_name;
-	                    else
-                		i = "someone";
-        		}
-        		else
-        		    i = PERS( vch, also_to ); }
-			  else log_string(LOG_BUG, "Act: bad code $N for 'vch' or 'also_to'");
-			    break;
-                case 'e': if (ch) i = he_she  [URANGE(0, ch  ->sex, 2)];
-			  else log_string(LOG_BUG, "Act: bad code $e for 'ch'");
-		            break;
-                case 'E': if (vch) i = he_she  [URANGE(0, vch ->sex, 2)];
-			  else log_string(LOG_BUG, "Act: bad code $E for 'vch'");
-		            break;
-                case 'm': if (ch) i = him_her [URANGE(0, ch  ->sex, 2)];
-			  else log_string(LOG_BUG, "Act: bad code $m for 'ch'");
-		            break;
-                case 'M': if (vch) i = him_her [URANGE(0, vch ->sex, 2)];
-			  else log_string(LOG_BUG, "Act: bad code $M for 'vch'");
-		            break;
-                case 's': if (ch) i = his_her [URANGE(0, ch  ->sex, 2)];
-			  else log_string(LOG_BUG, "Act: bad code $s for 'ch'");
-		            break;
-                case 'S': if (vch) i = his_her [URANGE(0, vch ->sex, 2)];
-			  else log_string(LOG_BUG, "Act: bad code $S for 'vch'");
-		            break;
- 
-                case 'p':
-                    if (obj1) i = can_see_obj( also_to, obj1 )
-                            ? obj1->short_descr
-                            : "something";
-		    else log_string(LOG_BUG, "Act: bad code $p for 'obj1'");
-                    break;
- 
-                case 'P':
-                    if (obj2) i = can_see_obj( also_to, obj2 )
-                            ? obj2->short_descr
-                            : "something";
-		    else log_string(LOG_BUG, "Act: bad code $p for 'obj2'");
-                    break;
- 
-                case 'd':
-                    if ( arg2 == NULL || ((char *) arg2)[0] == '\0' )
-                    {
-                        i = "door";
-                    }
-                    else
-                    {
-                        one_argument( (char *) arg2, fname );
-                        i = fname;
-                    }
-                    break;
-                }
-            }
+	for ( ; to != NULL; to = to->next_in_room )
+	{
+		if (to->position < min_pos)
+		{
+			continue;
+		}
+		if (!SAME_PLANE(ch, to) && !all_planes && type != TO_OPLANE)
+		{
+			continue;
+		}
+		if (!IS_NPC(to) && to->desc == NULL )
+		{
+			continue;
+		}
+		if ( IS_NPC(to) && !HAS_TRIGGER(to, TRIG_ACT) && !HAS_SCRIPT(to) )
+		{
+			continue;
+		}
+		if ( (type == TO_CHAR) && to != ch )
+		{
+			continue;
+		}
+		if ( type == TO_VICT && ( to != vch || to == ch ) )
+		{
+			continue;
+		}
+		if ( type == TO_ROOM && to == ch )
+		{
+			continue;
+		}
+		if ( type == TO_NOTVICT && (to == ch || to == vch) )
+		{
+			continue;
+		}
+		if ( type == TO_GROUP && !is_same_group(to, ch) && to != ch )
+		{
+			continue;
+		}
+		if ( type == TO_OPLANE && to == ch )
+		{
+			continue;
+		}
+		if(ch != NULL && to != NULL)
+		{
+			// -- what if to->ignore is NULL ? Hmm?  Protection, we wrap it up :)
+			if(!IS_NULLSTR(to->ignore))
+			{
+				if(strstr(to->ignore, ch->name) != NULL)
+				{
+					continue;
+				}
+			}
+		}
 
-            ++str;
-            while ( ( *point = *i ) != '\0' )
-                ++point, ++i;
-        }
+		point   = buf;
+		str     = format;
+		while ( *str != '\0' )
+		{
+			if ( *str != '$' )
+			{
+				*point++ = *str++;
+				continue;
+			}
+			fColour = TRUE;
+			++str;
 
-        *point++ = '\n';
-        *point++ = '\r';
-        *point   = '\0';
-        buf[0]   = UPPER(buf[0]);
-        if (also_to->desc == NULL)
-        {
-        	trigger_test(buf, also_to, ch);
-        }
-        else
-        {
-        	pbuff	 = buffer;
-        	write_to_buffer( also_to->desc, buffer, 0 );
-        }
-    }
+			if ( arg2 == NULL && *str >= 'A' && *str <= 'Z' )
+			{
+				log_string(LOG_BUG, Format("Act: missing arg2 for code %d.", *str ));
+				i = " <@@@> ";
+			}
+			else
+			{
+				switch ( *str )
+				{
+					default:  log_string(LOG_BUG, Format("Act: bad code %d.", *str ));
+					i = " <@@@> ";                                break;
+					case '$': i = "$";
+					break;
+            	    /* Thx alex for 't' idea */
+					case 't':
+					if (arg1)
+					{
+						i = (char *) arg1;
+					}
+					else
+					{
+						log_string(LOG_BUG, "Act: bad code $t for 'arg1'");
+					}
+					break;
+					case 'T':
+					if (arg2)
+					{
+						i = (char *) arg2;
+					}
+					else
+					{
+						log_string(LOG_BUG, "Act: bad code $T for 'arg2'");
+					}
+					break;
+					case 'n':
+					if (ch&&to)
+					{
+						if(LOOKS_DIFFERENT(ch))
+						{
+							i = ALT_PERS( ch, to );
+						}
+						else
+						{
+							i = PERS( ch, to );
+						}
+					}
+					else
+					{
+						log_string(LOG_BUG, "Act: bad code $n for 'ch' or 'to'");
+					}
+					break;
+					case 'N':
+					if (vch&&to)
+					{
+						if(LOOKS_DIFFERENT(vch))
+						{
+							i = ALT_PERS( vch, to );
+						}
+						else
+						{
+							i = PERS( vch, to );
+						}
+					}
+					else
+					{
+						log_string(LOG_BUG, "Act: bad code $N for 'vch' or 'to'");
+					}
+					break;
+					case 'e':
+					if (ch)
+					{
+						i = he_she  [URANGE(0, ch  ->sex, 2)];
+					}
+					else
+					{
+						log_string(LOG_BUG, "Act: bad code $e for 'ch'");
+					}
+					break;
+					case 'E':
+					if (vch)
+					{
+						i = he_she  [URANGE(0, vch ->sex, 2)];
+					}
+					else
+					{
+						log_string(LOG_BUG, "Act: bad code $E for 'vch'");
+					}
+					break;
+					case 'm':
+					if (ch)
+					{
+						i = him_her [URANGE(0, ch  ->sex, 2)];
+					}
+					else
+					{
+						log_string(LOG_BUG, "Act: bad code $m for 'ch'");
+					}
+					break;
+					case 'M':
+					if (vch)
+					{
+						i = him_her [URANGE(0, vch ->sex, 2)];
+					}
+					else
+					{
+						log_string(LOG_BUG, "Act: bad code $M for 'vch'");
+					}
+					break;
+					case 's':
+					if (ch)
+					{
+						i = his_her [URANGE(0, ch  ->sex, 2)];
+					}
+					else
+					{
+						log_string(LOG_BUG, "Act: bad code $s for 'ch'");
+					}
+					break;
+					case 'S':
+					if (vch)
+					{
+						i = his_her [URANGE(0, vch ->sex, 2)];
+					}
+					else
+					{
+						log_string(LOG_BUG, "Act: bad code $S for 'vch'");
+					}
+					break;
 
-    return;
+					case 'p':
+					if (obj1)
+					{
+						if ( can_see_obj( to, obj1 ) )
+						{
+							i = IS_SET(obj1->extra2, OBJ_PACKAGED) ? "a package" : obj1->short_descr;
+						}
+						else
+						{
+							i = "something";
+						}
+					}
+					else
+					{
+						log_string(LOG_BUG, "Act: bad code $p for 'obj1'");
+					}
+					break;
+
+					case 'P':
+					if (obj2)
+					{
+						if ( can_see_obj( to, obj2 ) )
+						{
+							i = IS_SET(obj2->extra2, OBJ_PACKAGED) ? "a package" : obj2->short_descr;
+						}
+						else
+						{
+							i = "something";
+						}
+					}
+					else
+					{
+						log_string(LOG_BUG, "Act: bad code $P for 'obj2'");
+					}
+					break;
+
+					case 'd':
+					if ( arg2 == NULL || ((char *) arg2)[0] == '\0' )
+					{
+						i = "door";
+					}
+					else
+					{
+						one_argument( (char *) arg2, fname );
+						i = fname;
+					}
+					break;
+
+					case 'i':
+					if ( is_number((char *)arg1) )
+					{
+						snprintf(fname, sizeof(fname), "%d", atoi((char *)arg1));
+						i = fname;
+					}
+					else
+					{
+						log_string(LOG_BUG, Format("Act: bad code $i for 'arg1', which is %s", arg1));
+					}
+					break;
+				}
+			}
+
+			++str;
+			while ( ( *point = *i ) != '\0' )
+			{
+				++point, ++i;
+			}
+		}
+
+		*point++ = '\n';
+		*point++ = '\r';
+		*point   = '\0';
+		buf[0]   = UPPER(buf[0]);
+		if (to->desc == NULL)
+		{
+			trigger_test(buf, to, ch);
+		}
+		else
+		{
+			pbuff	 = buffer;
+			write_to_buffer( to->desc, buf, 0 );
+		}
+	}
+
+	for ( ; also_to != NULL; also_to = also_to->next_listener )
+	{
+		if (!SAME_PLANE(ch, to) && !all_planes && type != TO_OPLANE)
+		{
+			continue;
+		}
+
+		if ( (type == TO_CHAR) && also_to != ch )
+		{
+			continue;
+		}
+		if ( type == TO_VICT )
+		{
+			continue;
+		}
+		if ( type == TO_ROOM && also_to == ch )
+		{
+			continue;
+		}
+		if ( type == TO_NOTVICT && (also_to == ch || also_to == vch) )
+		{
+			continue;
+		}
+		if ( type == TO_GROUP && !is_same_group(also_to, ch) && also_to != ch )
+		{
+			continue;
+		}
+		if ( type == TO_OPLANE && also_to == ch )
+		{
+			continue;
+		}
+
+		point   = buf;
+		str     = format;
+		while ( *str != '\0' )
+		{
+			if ( *str != '$' )
+			{
+				*point++ = *str++;
+				continue;
+			}
+			++str;
+
+			if ( arg2 == NULL && *str >= 'A' && *str <= 'Z' )
+			{
+				log_string(LOG_BUG, Format("Act: missing arg2 for code %d.", *str ));
+				i = " <@@@> ";
+			}
+			else
+			{
+				switch ( *str )
+				{
+					default:
+					log_string(LOG_BUG, Format("Act: bad code %d.", *str ));
+					i = " <@@@> ";
+					break;
+        			/* Thx alex for 't' idea */
+					case 't':
+					if (arg1)
+					{
+						i = (char *) arg1;
+					}
+					else
+					{
+						log_string(LOG_BUG, "Act: bad code $t for 'arg1'");
+					}
+					break;
+					case 'T':
+					if (arg2)
+					{
+						i = (char *) arg2;
+					}
+					else
+					{
+						log_string(LOG_BUG, "Act: bad code $T for 'arg2'");
+					}
+					break;
+					case 'n':
+					if (ch&&also_to)
+					{
+						if(LOOKS_DIFFERENT(ch))
+						{
+							if(can_see(also_to, ch))
+							{
+								i = ch->alt_name;
+							}
+							else
+							{
+								i = "someone";
+							}
+						}
+						else
+						{
+							i = PERS( ch, also_to );
+						}
+					}
+					else
+					{
+						log_string(LOG_BUG, "Act: bad code $n for 'ch' or 'also_to'");
+					}
+					break;
+					case 'N':
+					if (vch&&also_to)
+					{
+						if(LOOKS_DIFFERENT(vch))
+						{
+							if(can_see(also_to, vch))
+							{
+								i = vch->alt_name;
+							}
+							else
+							{
+								i = "someone";
+							}
+						}
+						else
+						{
+							i = PERS( vch, also_to );
+						}
+					}
+					else
+					{
+						log_string(LOG_BUG, "Act: bad code $N for 'vch' or 'also_to'");
+					}
+					break;
+					case 'e':
+					if (ch)
+					{
+						i = he_she  [URANGE(0, ch  ->sex, 2)];
+					}
+					else
+					{
+						log_string(LOG_BUG, "Act: bad code $e for 'ch'");
+					}
+					break;
+					case 'E':
+					if (vch)
+					{
+						i = he_she  [URANGE(0, vch ->sex, 2)];
+					}
+					else
+					{
+						log_string(LOG_BUG, "Act: bad code $E for 'vch'");
+					}
+					break;
+					case 'm':
+					if (ch)
+					{
+						i = him_her [URANGE(0, ch  ->sex, 2)];
+					}
+					else
+					{
+						log_string(LOG_BUG, "Act: bad code $m for 'ch'");
+					}
+					break;
+					case 'M':
+					if (vch)
+					{
+						i = him_her [URANGE(0, vch ->sex, 2)];
+					}
+					else
+					{
+						log_string(LOG_BUG, "Act: bad code $M for 'vch'");
+					}
+					break;
+					case 's':
+					if (ch)
+					{
+						i = his_her [URANGE(0, ch  ->sex, 2)];
+					}
+					else
+					{
+						log_string(LOG_BUG, "Act: bad code $s for 'ch'");
+					}
+					break;
+					case 'S':
+					if (vch)
+					{
+						i = his_her [URANGE(0, vch ->sex, 2)];
+					}
+					else
+					{
+						log_string(LOG_BUG, "Act: bad code $S for 'vch'");
+					}
+					break;
+
+					case 'p':
+					if (obj1)
+					{
+						i = can_see_obj( also_to, obj1 ) ? obj1->short_descr : "something";
+					}
+					else
+					{
+						log_string(LOG_BUG, "Act: bad code $p for 'obj1'");
+					}
+					break;
+
+					case 'P':
+					if (obj2)
+					{
+						i = can_see_obj( also_to, obj2 ) ? obj2->short_descr : "something";
+					}
+					else
+					{
+						log_string(LOG_BUG, "Act: bad code $p for 'obj2'");
+					}
+					break;
+
+					case 'd':
+					if ( arg2 == NULL || ((char *) arg2)[0] == '\0' )
+					{
+						i = "door";
+					}
+					else
+					{
+						one_argument( (char *) arg2, fname );
+						i = fname;
+					}
+					break;
+				}
+			}
+
+			++str;
+			while ( ( *point = *i ) != '\0' )
+			{
+				++point, ++i;
+			}
+		}
+
+		*point++ = '\n';
+		*point++ = '\r';
+		*point   = '\0';
+		buf[0]   = UPPER(buf[0]);
+		if (also_to->desc == NULL)
+		{
+			trigger_test(buf, also_to, ch);
+		}
+		else
+		{
+			pbuff	 = buffer;
+			write_to_buffer( also_to->desc, buffer, 0 );
+		}
+	}
+
+	return;
 }
 
 
@@ -3980,12 +4226,16 @@ int colour( char type, CHAR_DATA *ch, char *string )
 	bool	colour = 0;
 
 	if( IS_NPC( ch ) )
+	{
 		return( 0 );
+	}
 
 	if(IS_SET(ch->plr_flags, PLR_COLOUR))
+	{
 		colour = 1;
+	}
 
-	snprintf( code, sizeof(code), colour_lookup(type, colour));
+	snprintf( code, sizeof(code), "%s", colour_lookup(type, colour));
 
 	p = code;
 	while( *p != '\0' )
@@ -4013,7 +4263,7 @@ bool parse_gen_physical(CHAR_DATA *ch,char *argument)
 {
     char arg[MIL]={'\0'};
     int sn = 0,i = 0;
- 
+
     if (IS_NULLSTR(argument))
 	return FALSE;
 
@@ -4315,7 +4565,7 @@ bool parse_gen_talents(CHAR_DATA *ch,char *argument)
 {
     char arg[MIL]={'\0'};
     int sn = 0,i = 0;
- 
+
     if (IS_NULLSTR(argument))
 	return FALSE;
 
@@ -4418,7 +4668,7 @@ bool parse_gen_skills(CHAR_DATA *ch,char *argument)
 {
 	char arg[MIL]={'\0'};
 	int sn = 0,i = 0;
-	
+
 	if (IS_NULLSTR(argument))
 		return FALSE;
 
@@ -4520,116 +4770,117 @@ bool parse_gen_skills(CHAR_DATA *ch,char *argument)
 /* this procedure handles the input parsing for the knowledges abilities generator */
 bool parse_gen_knowledges(CHAR_DATA *ch,char *argument)
 {
-    char arg[MIL]={'\0'};
-    int sn = 0,i = 0;
- 
-    if (IS_NULLSTR(argument))
-	return FALSE;
+	char arg[MIL]={'\0'};
+	int sn = 0,i = 0;
 
-    argument = one_argument(argument,arg);
-
-    if (!str_prefix(arg,"help"))
-    {
 	if (IS_NULLSTR(argument))
-	{
-	    do_function(ch, &do_help, "knowledge" );
-	    return TRUE;
-	}
+		return FALSE;
 
-	do_function(ch, &do_help, argument );
-	return TRUE;
-    }
+	argument = one_argument(argument,arg);
 
-    if (!str_prefix(arg,"add"))
-    {
-	if (IS_NULLSTR(argument))
+	if (!str_prefix(arg,"help"))
 	{
-	    send_to_char("You must provide an ability name.\n\r",ch);
-	    return TRUE;
-	}
+		if (IS_NULLSTR(argument))
+		{
+			do_function(ch, &do_help, "knowledge" );
+			return TRUE;
+		}
 
-	if (ch->gen_data->skill_dots[2] == 0)
-	{
-	send_to_char("You have no more dots available.\n\r",ch);
-	return TRUE;
-	}
-
-	sn = abil_lookup(argument, ch);
-	if (sn != -1
-	  && (sn >= 24) && (sn < MAX_ABIL))
-	{
-	    if (ch->ability[sn].value == 5)
-	    {
-		send_to_char("You cannot increase the ability more.\n\r",ch);
+		do_function(ch, &do_help, argument );
 		return TRUE;
-	    }
-
-	    if (IS_ATTRIB_AVAILABLE(ch->race, sn))
-	    {
-	    ch->gen_data->skill_dots[2] -= 1;
-	    ch->ability[sn].value += 1;
-	    send_to_char(Format("%s : %d\n\r",ability_table[sn].name, ch->ability[sn].value),ch);
-	    return TRUE;
-	    }
 	}
 
-	send_to_char("No ability by that name...\n\r",ch);
-	return TRUE;
-    }
-
-    if (!str_cmp(arg,"minus"))
-    {
-	if (IS_NULLSTR(argument))
-  	{
-	    send_to_char("You must provide an ability to subtract from.\n\r",ch);
-	    return TRUE;
-	}
-
-	sn = abil_lookup(argument, ch);
-	if (sn != -1 && ch->ability[sn].value > 0
-	  && (sn >= 24) && (sn < MAX_ABIL))
+	if (!str_prefix(arg,"add"))
 	{
-	    ch->gen_data->skill_dots[2] += 1;
-	    ch->ability[sn].value -= 1;
-	    send_to_char(Format("%s : %d\n\r",ability_table[sn].name, ch->ability[sn].value),ch);
-	    return TRUE;
+		if (IS_NULLSTR(argument))
+		{
+			send_to_char("You must provide an ability name.\n\r",ch);
+			return TRUE;
+		}
+
+		if (ch->gen_data->skill_dots[2] == 0)
+		{
+			send_to_char("You have no more dots available.\n\r",ch);
+			return TRUE;
+		}
+
+		sn = abil_lookup(argument, ch);
+		if (sn != -1 && (sn >= 24) && (sn < MAX_ABIL))
+		{
+			if (ch->ability[sn].value == 5)
+			{
+				send_to_char("You cannot increase the ability more.\n\r",ch);
+				return TRUE;
+			}
+
+			if (IS_ATTRIB_AVAILABLE(ch->race, sn))
+			{
+				ch->gen_data->skill_dots[2] -= 1;
+				ch->ability[sn].value += 1;
+				send_to_char(Format("%s : %d\n\r",ability_table[sn].name, ch->ability[sn].value),ch);
+				return TRUE;
+			}
+		}
+
+		send_to_char("No ability by that name...\n\r",ch);
+		return TRUE;
 	}
 
-	send_to_char("You can't subtract any dots from there.\n\r",ch);
-	return TRUE;
-    }
-
-    if (!str_prefix(arg,"premise"))
-    {
-	do_function(ch, &do_help, "premise" );
-	return TRUE;
-    }
-
-    if (!str_prefix(arg,"list"))
-    {
-	for(i = 24; ability_table[i].name != NULL; i++)
+	if (!str_cmp(arg,"minus"))
 	{
-	    if(IS_ATTRIB_AVAILABLE(ch->race, i))
-	    {
-	    if((i-24)%3 == 0) send_to_char("\n\r", ch);
-	    send_to_char(Format("%s : %d ",ability_table[i].name, ch->ability[i].value),ch);
-	    }
-	}
-	send_to_char("\n\r", ch);
-	return TRUE;
-    }
+		if (IS_NULLSTR(argument))
+		{
+			send_to_char("You must provide an ability to subtract from.\n\r",ch);
+			return TRUE;
+		}
 
-    return FALSE;
+		sn = abil_lookup(argument, ch);
+		if (sn != -1 && ch->ability[sn].value > 0 && (sn >= 24) && (sn < MAX_ABIL))
+		{
+			ch->gen_data->skill_dots[2] += 1;
+			ch->ability[sn].value -= 1;
+			send_to_char(Format("%s : %d\n\r",ability_table[sn].name, ch->ability[sn].value),ch);
+			return TRUE;
+		}
+
+		send_to_char("You can't subtract any dots from there.\n\r",ch);
+		return TRUE;
+	}
+
+	if (!str_prefix(arg,"premise"))
+	{
+		do_function(ch, &do_help, "premise" );
+		return TRUE;
+	}
+
+	if (!str_prefix(arg,"list"))
+	{
+		for(i = 24; ability_table[i].name != NULL; i++)
+		{
+			if(IS_ATTRIB_AVAILABLE(ch->race, i))
+			{
+				if((i-24)%3 == 0) send_to_char("\n\r", ch);
+				send_to_char(Format("%s : %d ",ability_table[i].name, ch->ability[i].value),ch);
+			}
+		}
+		send_to_char("\n\r", ch);
+		return TRUE;
+	}
+
+	return FALSE;
 }
 
 /* this procedure handles the input parsing for the virtues generator */
 bool parse_gen_virtues(CHAR_DATA *ch,char *argument)
 {
 	char arg[MIL]={'\0'};
-	int sn = 0,i = 0;
+	int sn = 0;
+	int i = 0;
 
 	if (IS_NULLSTR(argument))
+	{
 		return FALSE;
+	}
 
 	argument = one_argument(argument,arg);
 
@@ -4785,81 +5036,86 @@ const struct desc_type appearance [] =
 void desc_gen(CHAR_DATA *ch)
 {
 	char buf[MSL]={'\0'};
-    int eye = number_range(0,10);
-    int hcolour = number_range(0,10);
-    int htype = number_range(0,6);
-    int height = number_range(0,2);
-    int weight = number_range(0,4);
-    int skin = number_range(0,5);
-    int fur = number_range(0,11);
-    int nos_skin_tex = number_range(0,4);
-    int nos_skin_col = number_range(0,5);
-    int nos_trait = number_range(0,5);
-    int app = get_curr_stat(ch, STAT_APP);
+	int eye = number_range(0,10);
+	int hcolour = number_range(0,10);
+	int htype = number_range(0,6);
+	int height = number_range(0,2);
+	int weight = number_range(0,4);
+	int skin = number_range(0,5);
+	// int fur = number_range(0,11);
+	int nos_skin_tex = number_range(0,4);
+	int nos_skin_col = number_range(0,5);
+	int nos_trait = number_range(0,5);
+	int app = get_curr_stat(ch, STAT_APP);
 
-    if(app > 5) app = 5;
+	if(app > 5)
+	{
+		app = 5;
+	}
 
-    switch(ch->race)
-    {
-	case (RACE_VAMPIRE):
-	    if (ch->clan == clan_lookup("nosferatu"))
+	switch(ch->race)
+	{
+		case (RACE_VAMPIRE):
+		if (ch->clan == clan_lookup("nosferatu"))
+			{
+				snprintf(buf, sizeof(buf),
+							"%s is a hideous creature with %s eyes and %s, %s skin stands here. It is %s and %s with %s.\n\r",
+							IS_NPC(ch)?ch->short_descr:ch->name,
+							eye_list[eye].str, nos_skin_textures[nos_skin_tex].str,
+							nos_skin_colours[nos_skin_col].str,
+							height_list[height].str,
+							weight_list[weight].str, nos_traits[nos_trait].str);
+			}
+		else
+			{
+				snprintf(buf, sizeof(buf),
+							"%s is somewhat pale featured but %s to look at, %s has %s eyes and %s, %s hair. %s is %s and %s with %s skin.\n\r",
+							IS_NPC(ch)?ch->short_descr:ch->name,
+							appearance[app].str,
+							ch->sex==1?"she":"he",
+							eye_list[eye].str, htypes[htype].str, hcolours[hcolour].str,
+							ch->sex==1?"She":"He",
+							height_list[height].str, weight_list[weight].str, skin_list[skin].str);
+			}
+		break;
+
+		case (RACE_WEREWOLF):
 		snprintf(buf, sizeof(buf),
-"%s is a hideous creature with %s eyes and %s, %s skin stands here. It is %s and %s with %s.\n\r",
-		IS_NPC(ch)?ch->short_descr:ch->name,
-		eye_list[eye].str, nos_skin_textures[nos_skin_tex].str,
-		nos_skin_colours[nos_skin_col].str,
-		height_list[height].str,
-		weight_list[weight].str, nos_traits[nos_trait].str);
-	    else
+			"%s has a wildness in them, but is %s to look at, %s has %s eyes and %s, %s hair. %s is %s and %s with %s skin.\n\r",
+			IS_NPC(ch)?ch->short_descr:ch->name,
+			appearance[app].str,
+			ch->sex==1?"she":"he",
+			eye_list[eye].str, htypes[htype].str, hcolours[hcolour].str,
+			ch->sex==1?"She":"He",
+			height_list[height].str, weight_list[weight].str, skin_list[skin].str);
+		break;
+
+		case (RACE_CHANGELING):
 		snprintf(buf, sizeof(buf),
-"%s is somewhat pale featured but %s to look at, %s has %s eyes and %s, %s hair. %s is %s and %s with %s skin.\n\r",
-		IS_NPC(ch)?ch->short_descr:ch->name,
-		appearance[app].str,
-		ch->sex==1?"she":"he",
-		eye_list[eye].str, htypes[htype].str, hcolours[hcolour].str,
-		ch->sex==1?"She":"He",
-		height_list[height].str, weight_list[weight].str, skin_list[skin].str);
-	    break;
+			"%s is %s to look at, %s has %s eyes and %s, %s hair. %s is %s and %s with %s skin.\n\r",
+			IS_NPC(ch)?ch->short_descr:ch->name,
+			appearance[app].str,
+			ch->sex==1?"she":"he",
+			eye_list[eye].str, htypes[htype].str, hcolours[hcolour].str,
+			ch->sex==1?"She":"He",
+			height_list[height].str, weight_list[weight].str, skin_list[skin].str);
+		break;
 
-	case (RACE_WEREWOLF):
-	    snprintf(buf, sizeof(buf),
-"%s has a wildness in them, but is %s to look at, %s has %s eyes and %s, %s hair. %s is %s and %s with %s skin.\n\r",
-	    IS_NPC(ch)?ch->short_descr:ch->name,
-	    appearance[app].str,
-	    ch->sex==1?"she":"he",
-	    eye_list[eye].str, htypes[htype].str, hcolours[hcolour].str,
-	    ch->sex==1?"She":"He",
-	    height_list[height].str, weight_list[weight].str, skin_list[skin].str);
-	    break;
+		default:
+		snprintf(buf, sizeof(buf),
+			"%s is %s to look at, %s has %s eyes and %s, %s hair. %s is %s and %s with %s skin.\n\r",
+			IS_NPC(ch)?ch->short_descr:ch->name,
+			appearance[app].str,
+			ch->sex==1?"she":"he",
+			eye_list[eye].str, htypes[htype].str, hcolours[hcolour].str,
+			ch->sex==1?"She":"He",
+			height_list[height].str, weight_list[weight].str, skin_list[skin].str);
+		break;
 
-	case (RACE_CHANGELING):
-	    snprintf(buf, sizeof(buf),
-"%s is %s to look at, %s has %s eyes and %s, %s hair. %s is %s and %s with %s skin.\n\r",
-	    IS_NPC(ch)?ch->short_descr:ch->name,
-	    appearance[app].str,
-	    ch->sex==1?"she":"he",
-	    eye_list[eye].str, htypes[htype].str, hcolours[hcolour].str,
-	    ch->sex==1?"She":"He",
-	    height_list[height].str, weight_list[weight].str, skin_list[skin].str);
-	    break;
+	}
 
-	default:
-	    snprintf(buf, sizeof(buf),
-"%s is %s to look at, %s has %s eyes and %s, %s hair. %s is %s and %s with %s skin.\n\r",
-	    IS_NPC(ch)?ch->short_descr:ch->name,
-	    appearance[app].str,
-	    ch->sex==1?"she":"he",
-	    eye_list[eye].str, htypes[htype].str, hcolours[hcolour].str,
-	    ch->sex==1?"She":"He",
-	    height_list[height].str, weight_list[weight].str, skin_list[skin].str);
-	    break;
-
-    }
-
-    fur = 5;
-
-    PURGE_DATA(ch->description);
-    ch->description = str_dup(buf);
+	PURGE_DATA(ch->description);
+	ch->description = str_dup(buf);
 }
 
 /* printf_to_char originally by John Booth */

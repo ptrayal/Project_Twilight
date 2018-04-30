@@ -761,7 +761,7 @@ void colourstrip( char *txt, char *out )
 	return str_dup(buffer);
 	*/
 	strmove(out, buffer);
-	
+
 	return;
 }
 
@@ -1154,7 +1154,7 @@ void load_rooms( FILE *fp )
 		pRoomIndex->room_flags      = fread_flag( fp );
 		pRoomIndex->sector_type     = fread_number( fp );
 		pRoomIndex->light       = 0;
-		for ( door = 0; door <= MAX_DIR; door++ )
+		for ( door = 0; door <= 5; door++ )
 			pRoomIndex->exit[door] = NULL;
 
 		/* defaults */
@@ -1392,7 +1392,7 @@ void load_mobprogs( FILE *fp )
 		pMprog = new_mpcode();
 		pMprog->vnum    = vnum;
 		pMprog->code    = fread_string( fp );
-	LINK_SINGLE(pMprog, next, mprog_list); 
+	LINK_SINGLE(pMprog, next, mprog_list);
 		top_mprog_index++;
 	}
 	return;
@@ -1601,7 +1601,7 @@ void forced_reset_room( ROOM_INDEX_DATA *pRoom )
 	{
 		EXIT_DATA *pExit;
 		if ( ( pExit = pRoom->exit[iExit] )
-	  /*  && !IS_SET( pExit->exit_info, EX_BASHED )   ROM OLC */ )  
+	  /*  && !IS_SET( pExit->exit_info, EX_BASHED )   ROM OLC */ )
 		{
 			pExit->exit_info = pExit->rs_flags;
 			if ( ( pExit->u1.to_room != NULL )
@@ -1776,7 +1776,7 @@ void forced_reset_room( ROOM_INDEX_DATA *pRoom )
 		if ((LastObj = get_obj_type( pObjToIndex ) ) == NULL
 		|| (LastObj->in_room == NULL && !last)
 		|| ( pObjIndex->count >= limit /* && number_range(0,4) != 0 */ )
-		|| (count = count_obj_list(pObjIndex,LastObj->contains)) 
+		|| (count = count_obj_list(pObjIndex,LastObj->contains))
 		> pReset->arg4 )
 		{
 		last = FALSE;
@@ -2660,7 +2660,7 @@ PERSONA *get_persona_index args( (int vnum) );
 void load_scripts( FILE *fp )
 {
 	SCRIPT_DATA *pScript;
- 
+
 	if ( !event_list )
 	{
 		log_string(LOG_BUG, "Load_scripts: no event seen yet.");
@@ -2671,18 +2671,18 @@ void load_scripts( FILE *fp )
 	{
 		sh_int vnum;
 		char letter;
- 
+
 		letter                          = fread_letter( fp );
 		if ( letter != 'S' )
 		{
 			log_string(LOG_BUG, "Load_scripts: S not found.");
 			exit( 1 );
 		}
- 
+
 		vnum                            = fread_number( fp );
 		if ( vnum == 0 )
 			break;
- 
+
 		fBootDb = FALSE;
 		if ( get_script_index( vnum ) != NULL )
 		{
@@ -2690,7 +2690,7 @@ void load_scripts( FILE *fp )
 			exit( 1 );
 		}
 		fBootDb = TRUE;
- 
+
 		ALLOC_DATA(pScript,SCRIPT_DATA, 1);
 		pScript->vnum = vnum;
 		pScript->author = fread_string( fp );
@@ -2706,7 +2706,7 @@ void load_scripts( FILE *fp )
 
 	LINK_SINGLE(pScript, next, script_first);
 	}
- 
+
 	return;
 }
 
@@ -2744,7 +2744,7 @@ void load_actors( FILE *fp )
 
 	LINK_SINGLE(pActor, next, event_list->actors);
 	}
- 
+
 	return;
 }
 
@@ -3152,7 +3152,7 @@ void load_votes(void)
 void load_org_members( FILE *fp )
 {
 	ORGMEM_DATA *mem;
- 
+
 	if ( !org_last )   /* OLC */
 	{
 		log_string(LOG_BUG, "Load_org members: no #ORG seen yet.");
@@ -3162,7 +3162,7 @@ void load_org_members( FILE *fp )
 	for ( ; ; )
 	{
 		char letter;
- 
+
 		letter                          = fread_letter( fp );
 		if ( letter != '#' )
 		{
@@ -3179,12 +3179,12 @@ void load_org_members( FILE *fp )
 		ungetc(letter,fp);
 	}
 
-	mem             = new_orgmem(); 
+	mem             = new_orgmem();
 		mem->name           = fread_string( fp );
 		mem->status         = fread_number( fp );
 	mem->auth_flags         = fread_flag( fp );
 	mem->status_votes       = fread_number( fp );
- 
+
 	for ( ; ; )
 		{
 			letter = fread_letter( fp );
@@ -3203,7 +3203,7 @@ void load_org_members( FILE *fp )
 		mem->next     = org_last->members;
 		org_last->members = mem;
 	}
- 
+
 	return;
 }
 
@@ -3296,7 +3296,7 @@ CHAR_DATA *create_mobile( MOB_INDEX_DATA *pMobIndex )
 		wealth = number_range(pMobIndex->wealth/2, 3 * pMobIndex->wealth/2);
 		mob->dollars = number_range(wealth/2,wealth);
 		mob->cents = 0;
-	} 
+	}
 
 	/* read from prototype */
 	mob->group      = pMobIndex->group;
@@ -3335,16 +3335,16 @@ CHAR_DATA *create_mobile( MOB_INDEX_DATA *pMobIndex )
 
 		for (i = 0; i < MAX_STATS; i ++)
 			mob->perm_stat[i] = UMAX(number_fuzzy(pMobIndex->level/25) + 1, 1);
-	
+
 		if (IS_SET(mob->off_flags,OFF_FAST) && mob->perm_stat[STAT_DEX] <= 3)
 			mob->perm_stat[STAT_DEX] += 2;
-			
+
 		if (IS_SET(mob->off_flags,OFF_TOUGH) && mob->perm_stat[STAT_STA] <= 3)
 			mob->perm_stat[STAT_STA] += 2;
-			
+
 		if (IS_SET(mob->off_flags,OFF_STRONG) && mob->perm_stat[STAT_STR] <= 3)
 			mob->perm_stat[STAT_STR] += 2;
-			
+
 		mob->perm_stat[STAT_STR] += mob->size - SIZE_MEDIUM;
 		mob->perm_stat[STAT_STA] += (mob->size - SIZE_MEDIUM) / 2;
 		mob->perm_stat[STAT_DEX] -= (mob->size - SIZE_MEDIUM) / 2;
@@ -3395,7 +3395,7 @@ void clone_mobile(CHAR_DATA *parent, CHAR_DATA *clone)
 
 	if ( parent == NULL || clone == NULL || !IS_NPC(parent))
 	return;
-	
+
 	/* start fixing values */
 	PURGE_DATA( clone->name );
 	clone->name     = str_dup(parent->name);
@@ -3438,7 +3438,7 @@ void clone_mobile(CHAR_DATA *parent, CHAR_DATA *clone)
 	clone->start_pos    = parent->start_pos;
 	clone->default_pos  = parent->default_pos;
 	clone->spec_fun = parent->spec_fun;
-	
+
 	for (i = 0; i < 3; i++)
 		clone->armor[i] = parent->armor[i];
 
@@ -3492,7 +3492,7 @@ OBJ_DATA *create_object( OBJ_INDEX_DATA *pObjIndex )
 		CopyTo( obj->description, pObjIndex->description );
 	else
 		obj->description = str_dup("This object needs a long description.");
-	
+
 	if(!IS_NULLSTR(pObjIndex->full_desc))
 		CopyTo( obj->full_desc, pObjIndex->full_desc );
 	else
@@ -3920,7 +3920,7 @@ long flag_convert(char letter )
 	long bitsum = 0;
 	char i;
 
-	if ('A' <= letter && letter <= 'Z') 
+	if ('A' <= letter && letter <= 'Z')
 	{
 	bitsum = 1;
 	for (i = letter; i > 'A'; i--)
@@ -3949,10 +3949,10 @@ char *fread_string( FILE *fp )
 {
 
 	   static char buf[MSL *5]={'\0'};
-	
+
 	   /*
 		* extra 2 bytes on the end for \0
-		* and 1b slack 
+		* and 1b slack
 		*/
 	   size_t i = 0;
 	   register char c;
@@ -3962,22 +3962,22 @@ char *fread_string( FILE *fp )
 	   //MakeZero(buf);
 
 	   /*
-		* skip blanks 
+		* skip blanks
 		*/
 	   do
 	   {
 		  c = getc( gfp );
 	   }
 	   while( isspace( c ) );
-	
+
 	   /*
-		* empty string 
+		* empty string
 		*/
 	   if( c == '~' )
 		  return NULL;
-	
+
 	   buf[i++] = c;
-	
+
 	   for( ;; )
 	   {
 		  if( i >= MSL *5 && !sFull )
@@ -3994,11 +3994,11 @@ char *fread_string( FILE *fp )
 				   buf[i++] = c;
 				}
 				break;
-	
+
 			 case '\0':
 				abort(  );
 				break;
-	
+
 			 case '\n':
 				if( !sFull )
 				{
@@ -4006,19 +4006,19 @@ char *fread_string( FILE *fp )
 				   buf[i++] = '\r';
 				}
 				break;
-	
+
 			 case '\r':
 				break;
-	
+
 			 case '~':
 				buf[i] = '\0';
-	
+
 			if(buf[0] == '\0')
 			return NULL;
-	
+
 				if( !str_cmp( buf, "(null)" ) )
 				   return NULL;
-	
+
 				return str_dup(buf);
 		  }
 	   }
@@ -4056,14 +4056,14 @@ char *fread_string_eol( FILE *fp )
 				{
 				   if( !str_cmp( buf, "(null)" ) )
 					  return NULL;
-	
+
 				   ptr = (char *)str_dup( buf );
 				   return ptr;
 				}
-	
+
 				if( !str_cmp( buf, "(null)" ) )
 				   return NULL;
-	
+
 				return str_dup( buf );
 		  }
 }
@@ -4133,7 +4133,7 @@ char *_fread_word( FILE *fp, const char *file, const char *function, int line )
 	}
 
 
-	log_string(LOG_ERR, Format("fread_word: word too long: %s:%s:%d",file, function, line)); 
+	log_string(LOG_ERR, Format("fread_word: word too long: %s:%s:%d",file, function, line));
 	log_string(LOG_ERR, "Fread_word: word too long.");
 	exit( 1 );
 	return NULL;
@@ -4312,9 +4312,9 @@ void init_mm( )
 	srandom(time(NULL)^getpid());
 	return;
 }
- 
- 
- 
+
+
+
 long number_mm( void )
 {
 #if defined (OLD_RAND)
@@ -4603,7 +4603,7 @@ char* female_names [MAX_NAMES] =
 		"Emily", "Sarah", "Brianna", "Samantha", "Hailey", "Ashley", "Kaitlyn", "Madison", "Hannah",
 		"Alexis", "Jessica", "Alyssa", "Abigail", "Kayla", "Megan", "Katherine", "Taylor",
 		"Elizabeth", "Makayla", "Rachel", "Jasmine", "Olivia", "Victoria", "Emma", "Anna",
-		"Rebecca", "Natalie", "Courtney", "Lauren", "Sydney", "Amanda", "Nicole", "Destiny", "Stephanie", 
+		"Rebecca", "Natalie", "Courtney", "Lauren", "Sydney", "Amanda", "Nicole", "Destiny", "Stephanie",
 		"Morgan", "Julia", "Sierra", "Brittany", "Grace", "Danielle", "Jennifer",
 		"Kaylee", "Mackenzie", "Alexandra", "Savannah", "Amber", "Jordan", "Kylie", "Shelby",
 		"Christina", "Jacqueline", "Gabriella", "Maria", "Erica", "Gabrielle", "Madeline", "Erin",
@@ -4826,7 +4826,10 @@ void log_to_file(char *file, char *extension, const char *string)
 	int fd = 0, length = 0;
 	char stack[MSL]={'\0'};
 
-	if (DEBUG) fprintf( stderr, "%s\n\r", string );
+	if (DEBUG)
+	{
+		fprintf( stderr, "%s\n\r", string );
+	}
 
 	/* these should be defined by your system... they're the bits that will
 	  be set for the file's file permissions. If you're using DOS or Win95
@@ -4838,7 +4841,9 @@ void log_to_file(char *file, char *extension, const char *string)
 	  since I'm running NetBSD/mac68k on my Mac IIci ;-) -- end OS rant */
 
 	if((fd = open((char *)Format("%s%s.%s", LOG_DIR, file, extension), O_CREAT | O_WRONLY | O_SYNC, S_IRUSR | S_IWUSR)) == -1)
+	{
 		perror( "Log failure" );
+	}
 	length = lseek(fd, 0, SEEK_END);
 
 	/* this bit will turn over your log file(s) if they go over MAX_LOG
@@ -4862,7 +4867,9 @@ void log_to_file(char *file, char *extension, const char *string)
 	  logging */
 
 	if (NO_LOGS == TRUE)
-		printf(stack);
+	{
+		printf("%s", stack);
+	}
 	write(fd, stack, strlen(stack));
 	close(fd);
 
@@ -4877,7 +4884,7 @@ char *get_curdate( )
 {
 	static char buf [ 128 ];
 	struct tm *datetime;
-	
+
 	datetime = localtime ( &current_time );
 	strftime( buf, sizeof( buf ), "%m-%d-%Y", datetime );
 	return buf;
@@ -4899,7 +4906,7 @@ void log_string(int type, const char *fmt, ... )
 
 	log_file = NULL;
 
-// Get the wanted text
+	// Get the wanted text
 	va_start (args, fmt);
 	vsprintf (bufew, fmt, args);
 	va_end (args);
@@ -4915,84 +4922,88 @@ void log_string(int type, const char *fmt, ... )
 		fflush(log_file);
 		fclose( log_file );
 		for (d = descriptor_list; d != NULL; d = d->next)
+		{
 			if (d->connected == CON_PLAYING && IS_ADMIN (d->character))
+			{
 				send_to_char (Format ("Critical: %s\n\r", bufew), d->character);
-			snprintf(bufee, sizeof(bufee), "Critical: %s",bufew);
+			}
 		}
-		if (type & LOG_ERR)
-		{
-			snprintf( buf, sizeof(buf), "../log/%s.error", get_curdate() );
-			log_file = fopen( buf, "a" );
-			time(&rawtime);
-			info = localtime( &rawtime);
-			strftime(buffer, 80, "%b-%d-%Y (%H:%M)", info);
-			fprintf( log_file, "%s :: %s\n", buffer, bufew );
-			fflush(log_file);
-			fclose( log_file );
-			snprintf(bufee,sizeof(bufee), "Error: %s",bufew);
-		}
-		if (type & LOG_BUG)
-		{
-			snprintf( buf, sizeof(buf), "../log/%s.bug", get_curdate() );
-			log_file = fopen( buf, "a" );
-			time(&rawtime);
-			info = localtime( &rawtime);
-			strftime(buffer, 80, "%b-%d-%Y (%H:%M)", info);
-			fprintf( log_file, "%s :: %s\n", buffer, bufew );
-			fflush(log_file);
-			fclose( log_file );
-			snprintf(bufee,sizeof(bufee), "Bug: %s",bufew);
-		}
-		if (type & LOG_SECURITY)
-		{
-			snprintf( buf, sizeof(buf), "../log/%s.security", get_curdate() );
-			log_file = fopen( buf, "a" );
-			time(&rawtime);
-			info = localtime( &rawtime);
-			strftime(buffer, 80, "%b-%d-%Y (%H:%M)", info);
-			fprintf( log_file, "%s :: %s\n", buffer, bufew );
-			fflush(log_file);
-			fclose( log_file );
-			snprintf(bufee,sizeof(bufee), "Security: %s",bufew);
-		}
-		if (type & LOG_CONNECT)
-		{
-			snprintf( buf, sizeof(buf), "../log/%s.connect", get_curdate() );
-			log_file = fopen( buf, "a" );
-			time(&rawtime);
-			info = localtime( &rawtime);
-			strftime(buffer, 80, "%b-%d-%Y (%H:%M)", info);
-			fprintf( log_file, "%s :: %s\n", buffer, bufew );
-			fflush(log_file);
-			fclose( log_file );
-			snprintf(bufee,sizeof(bufee), "Connect: %s",bufew);
-		}
-		if (type & LOG_GAME)
-		{
-			snprintf( buf, sizeof(buf), "../log/%s.game", get_curdate() );
-			log_file = fopen( buf, "a" );
-			time(&rawtime);
-			info = localtime( &rawtime);
-			strftime(buffer, 80, "%b-%d-%Y (%H:%M)", info);
-			fprintf( log_file, "%s :: %s\n", buffer, bufew );
-			fflush(log_file);
-			fclose( log_file );
-			snprintf(bufee,sizeof(bufee), "Game: %s",bufew);
-		}
-		if (type & LOG_COMMAND)
-		{
-			snprintf( buf, sizeof(buf), "../log/%s.comm", get_curdate() );
-			log_file = fopen( buf, "a" );
-			time(&rawtime);
-			info = localtime( &rawtime);
-			strftime(buffer, 80, "%b-%d-%Y (%H:%M)", info);
-			fprintf( log_file, "%s :: %s\n", buffer, bufew );
-			fflush(log_file);
-			fclose( log_file );
-			snprintf(bufee,sizeof(bufee), "Command: %s",bufew);
-		}
-		wiznet(bufee,NULL,NULL, WIZ_LOG, 0, 0);
+		snprintf(bufee, sizeof(bufee), "Critical: %s",bufew);
 	}
+	if (type & LOG_ERR)
+	{
+		snprintf( buf, sizeof(buf), "../log/%s.error", get_curdate() );
+		log_file = fopen( buf, "a" );
+		time(&rawtime);
+		info = localtime( &rawtime);
+		strftime(buffer, 80, "%b-%d-%Y (%H:%M)", info);
+		fprintf( log_file, "%s :: %s\n", buffer, bufew );
+		fflush(log_file);
+		fclose( log_file );
+		snprintf(bufee,sizeof(bufee), "Error: %s",bufew);
+	}
+	if (type & LOG_BUG)
+	{
+		snprintf( buf, sizeof(buf), "../log/%s.bug", get_curdate() );
+		log_file = fopen( buf, "a" );
+		time(&rawtime);
+		info = localtime( &rawtime);
+		strftime(buffer, 80, "%b-%d-%Y (%H:%M)", info);
+		fprintf( log_file, "%s :: %s\n", buffer, bufew );
+		fflush(log_file);
+		fclose( log_file );
+		snprintf(bufee,sizeof(bufee), "Bug: %s",bufew);
+	}
+	if (type & LOG_SECURITY)
+	{
+		snprintf( buf, sizeof(buf), "../log/%s.security", get_curdate() );
+		log_file = fopen( buf, "a" );
+		time(&rawtime);
+		info = localtime( &rawtime);
+		strftime(buffer, 80, "%b-%d-%Y (%H:%M)", info);
+		fprintf( log_file, "%s :: %s\n", buffer, bufew );
+		fflush(log_file);
+		fclose( log_file );
+		snprintf(bufee,sizeof(bufee), "Security: %s",bufew);
+	}
+	if (type & LOG_CONNECT)
+	{
+		snprintf( buf, sizeof(buf), "../log/%s.connect", get_curdate() );
+		log_file = fopen( buf, "a" );
+		time(&rawtime);
+		info = localtime( &rawtime);
+		strftime(buffer, 80, "%b-%d-%Y (%H:%M)", info);
+		fprintf( log_file, "%s :: %s\n", buffer, bufew );
+		fflush(log_file);
+		fclose( log_file );
+		snprintf(bufee,sizeof(bufee), "Connect: %s",bufew);
+	}
+	if (type & LOG_GAME)
+	{
+		snprintf( buf, sizeof(buf), "../log/%s.game", get_curdate() );
+		log_file = fopen( buf, "a" );
+		time(&rawtime);
+		info = localtime( &rawtime);
+		strftime(buffer, 80, "%b-%d-%Y (%H:%M)", info);
+		fprintf( log_file, "%s :: %s\n", buffer, bufew );
+		fflush(log_file);
+		fclose( log_file );
+		snprintf(bufee,sizeof(bufee), "Game: %s",bufew);
+	}
+	if (type & LOG_COMMAND)
+	{
+		snprintf( buf, sizeof(buf), "../log/%s.comm", get_curdate() );
+		log_file = fopen( buf, "a" );
+		time(&rawtime);
+		info = localtime( &rawtime);
+		strftime(buffer, 80, "%b-%d-%Y (%H:%M)", info);
+		fprintf( log_file, "%s :: %s\n", buffer, bufew );
+		fflush(log_file);
+		fclose( log_file );
+		snprintf(bufee,sizeof(bufee), "Command: %s",bufew);
+	}
+	wiznet(bufee,NULL,NULL, WIZ_LOG, 0, 0);
+}
 
 
 MPROG_CODE *get_mprog_index( int vnum )
@@ -5028,8 +5039,8 @@ void tail_chain( void )
 }
 
 // Replacement for strcpy
-// 
-char* strmove(char* s1,const char* s2) 
+//
+char* strmove(char* s1,const char* s2)
 {
     size_t n=strlen(s2);
     memmove(s1,s2,n+1);

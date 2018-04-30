@@ -75,10 +75,10 @@ char *format_obj_to_char( OBJ_DATA *obj, CHAR_DATA *ch, bool fShort )
 	buf[0] = '\0';
 
 	if IS_NULLSTR(obj->short_descr)
-		{
-			obj->short_descr = str_dup("This object needs a short description.");
-			log_string(LOG_BUG, Format("Object VNUM %d has no short description.", obj->pIndexData->vnum));
-		}
+	{
+		obj->short_descr = str_dup("This object needs a short description.");
+		log_string(LOG_BUG, Format("Object VNUM %d has no short description.", obj->pIndexData->vnum));
+	}
 
 	if IS_NULLSTR(obj->description)
 	{
@@ -87,52 +87,90 @@ char *format_obj_to_char( OBJ_DATA *obj, CHAR_DATA *ch, bool fShort )
 	}
 
 	if ( !IS_SET(obj->extra2, OBJ_PACKAGED) &&
-			((fShort && (obj->short_descr == NULL || obj->short_descr[0] == '\0'))
-					||  (obj->description == NULL || obj->description[0] == '\0')))
+		((fShort && (obj->short_descr == NULL || obj->short_descr[0] == '\0'))
+			||  (obj->description == NULL || obj->description[0] == '\0')))
+	{
 		return buf;
+	}
 
 	if (fShort && obj->in_obj != NULL && obj->in_obj->item_type == ITEM_FURNITURE)
+	{
 		strncat( buf, "    " , sizeof(buf) - strlen(buf) - 1 );
+	}
 
-	if ( IS_OBJ_STAT(obj, ITEM_INVIS)       )   strncat( buf, "(Invis) ", sizeof(buf) - strlen(buf) - 1     );
-	if ( IS_OBJ_STAT(obj, ITEM_GLOW)        )   strncat( buf, "(Glowing) ", sizeof(buf) - strlen(buf) - 1   );
-	if ( IS_OBJ_STAT(obj, ITEM_DREAM)       )   strncat( buf, "(Dream) ", sizeof(buf) - strlen(buf) - 1     );
-	if ( IS_OBJ_STAT(obj, ITEM_UMBRAL)      )   strncat( buf, "(Umbra) ", sizeof(buf) - strlen(buf) - 1     );
-	if ( IS_OBJ_STAT(obj, ITEM_HIDDEN)      )   strncat( buf, "(Hidden) ", sizeof(buf) - strlen(buf) - 1   );
+	if ( IS_OBJ_STAT(obj, ITEM_INVIS)       )
+	{
+		strncat( buf, "(Invis) ", sizeof(buf) - strlen(buf) - 1     );
+	}
+	if ( IS_OBJ_STAT(obj, ITEM_GLOW)        )
+	{
+		strncat( buf, "(Glowing) ", sizeof(buf) - strlen(buf) - 1   );
+	}
+	if ( IS_OBJ_STAT(obj, ITEM_DREAM)       )
+	{
+		strncat( buf, "(Dream) ", sizeof(buf) - strlen(buf) - 1     );
+	}
+	if ( IS_OBJ_STAT(obj, ITEM_UMBRAL)      )
+	{
+		strncat( buf, "(Umbra) ", sizeof(buf) - strlen(buf) - 1     );
+	}
+	if ( IS_OBJ_STAT(obj, ITEM_HIDDEN)      )
+	{
+		strncat( buf, "(Hidden) ", sizeof(buf) - strlen(buf) - 1   );
+	}
 
 	if ( fShort )
 	{
-		if ( obj->short_descr != NULL ) {
+		if ( obj->short_descr != NULL )
+		{
 			if(IS_SET(obj->extra2, OBJ_PACKAGED))
+			{
 				strncat( buf, "a package", sizeof(buf) - strlen(buf) - 1 );
+			}
 			else
+			{
 				strncat( buf, obj->short_descr, sizeof(buf) - strlen(buf) - 1 );
+			}
 		}
-		if (obj->in_obj != NULL && obj->in_obj->item_type == ITEM_FURNITURE) {
+		if (obj->in_obj != NULL && obj->in_obj->item_type == ITEM_FURNITURE)
+		{
 			strncat( buf, " on " , sizeof(buf) - strlen(buf) - 1);
 			if(IS_SET(obj->in_obj->extra2, OBJ_PACKAGED))
+			{
 				strncat(buf, "a package", sizeof(buf) - strlen(buf) - 1);
+			}
 			else
+			{
 				strncat( buf, obj->in_obj->short_descr, sizeof(buf) - strlen(buf) - 1 );
+			}
 		}
 	}
 	else
 	{
-		if ( obj->description != NULL) {
+		if ( obj->description != NULL)
+		{
 			if(IS_SET(obj->extra2, OBJ_PACKAGED))
+			{
 				strncat( buf, "a package sits here.", sizeof(buf) - strlen(buf) - 1 );
+			}
 			else
+			{
 				strncat( buf, obj->description, sizeof(buf) - strlen(buf) - 1 );
+			}
 		}
 
 		if ( obj->item_type == ITEM_FURNITURE && obj->contains != NULL
-				&& !IS_SET(obj->extra2, OBJ_PACKAGED) )
+			&& !IS_SET(obj->extra2, OBJ_PACKAGED) )
+		{
 			show_list_to_char(obj->contains, ch, TRUE, FALSE);
+		}
 	}
 
 	if(strlen(buf) <= 0)
+	{
 		strncat(buf, "This object has no description.\n\r", sizeof(buf) - strlen(buf) - 1);
-		log_string(LOG_BUG, Format("Object VNUM %d has no description.", obj->pIndexData->vnum));
+	}
+	log_string(LOG_BUG, Format("Object VNUM %d has no description.", obj->pIndexData->vnum));
 
 	return buf;
 }
@@ -725,7 +763,7 @@ void show_char_to_char( CHAR_DATA *list, CHAR_DATA *ch )
 	}
 
 	return;
-} 
+}
 
 
 
@@ -994,7 +1032,7 @@ void do_look( CHAR_DATA *ch, char *argument )
 	char *pdesc;
 	int door = 0;
 	int number = 0,count = 0;
-	
+
 	CheckCH(ch);
 
 	if ( ch->desc == NULL )
@@ -1058,7 +1096,7 @@ void do_look( CHAR_DATA *ch, char *argument )
 
 			send_to_char( "\n\r", ch );
 
-			if(!IS_NPC(ch) && !IS_SET(ch->comm, COMM_BRIEF)) 
+			if(!IS_NPC(ch) && !IS_SET(ch->comm, COMM_BRIEF))
 			{
 				send_to_char( "\tB", ch);
 				send_to_char( "  ",ch);
@@ -1087,7 +1125,7 @@ void do_look( CHAR_DATA *ch, char *argument )
 			send_to_char( "\n\r", ch );
 
 			// Show the room description. Make the description text white.
-			if(!IS_NPC(ch) && !IS_SET(ch->comm, COMM_BRIEF)) 
+			if(!IS_NPC(ch) && !IS_SET(ch->comm, COMM_BRIEF))
 			{
 				send_to_char( "\tW", ch);
 				send_to_char( "  ",ch);
@@ -1332,7 +1370,7 @@ void do_look( CHAR_DATA *ch, char *argument )
 
 	if(IS_SET(pexit->exit_info, EX_WINDOW))
 	{
-		send_to_char(Format("%s\n\r", pexit->description == '\0' ? "Through the window you see...\n\r" : pexit->description), ch);
+		send_to_char(Format("%s\n\r", pexit->description == NULL ? "Through the window you see...\n\r" : pexit->description), ch);
 		original = looking;
 		obj = ch->on;
 		char_from_room( ch );
@@ -1686,7 +1724,7 @@ void do_score( CHAR_DATA *ch, char *argument )
 		send_to_char( Format("Sire: %-16s  ", ch->sire), user);
 	else
 		send_to_char("", user);
-   
+
 	send_to_char("\r\n", user);
 
 	send_to_char("\tW--------------------------------<\tGAttributes\tW>----------------------------------\tn\n\r", user);
@@ -1935,7 +1973,7 @@ void do_score( CHAR_DATA *ch, char *argument )
 
 	send_to_char( Format("%8s (%2d)", race_table[ch->race].pc_race?pc_race_table[ch->race].GHB:"Humanity", ch->GHB), ch);
 	send_to_char( Format("%15sConscience   ", " ", ch->virtues[0]), ch);
-	
+
 	if (ch->virtues[0]<=0)
 	{
 		send_to_char( "\t[U9675/O]", user);
@@ -2056,7 +2094,7 @@ void do_score( CHAR_DATA *ch, char *argument )
 	send_to_char("\n\r", ch);
 
 	// Max willpower first
-	if (ch->max_willpower<=0)	
+	if (ch->max_willpower<=0)
 	{
 		send_to_char( "\t[U9675/O]", user);
 		statcount=1;
@@ -2083,7 +2121,7 @@ void do_score( CHAR_DATA *ch, char *argument )
 	send_to_char("\n\r", ch);
 
 	// Available willpower
-	if (ch->willpower<=0)	
+	if (ch->willpower<=0)
 	{
 		send_to_char( "\t[U9746/O]", user);
 		statcount=1;
@@ -2108,12 +2146,12 @@ void do_score( CHAR_DATA *ch, char *argument )
 	}
 	statcount=0;
 
-	
+
 	send_to_char("\n\r", ch);
 
 	send_to_char( Format("%s\n\r", race_table[ch->race].pc_race?pc_race_table[ch->race].RBPG:"Faith"), ch);
 	// Available RBPG pool
-	if (ch->willpower<=0)	
+	if (ch->willpower<=0)
 	{
 		while (statcount < ch->max_RBPG)
 		{
@@ -2675,19 +2713,23 @@ void do_who( CHAR_DATA *ch, char *argument )
 	bool fImmortalOnly = FALSE;
 	bool fRPOK = FALSE;
 	bool fPack = FALSE;
-	
+
 	CheckCH(ch);
- 
+
 	/*
 	 * Set default arguments.
 	 */
 	for ( iRace = 0; iRace < MAX_PC_RACE; iRace++ )
+	{
 		rgfRace[iRace] = FALSE;
+	}
 	for (iClan = 0; iClan < MAX_CLAN; iClan++)
-	rgfClan[iClan] = FALSE;
+	{
+		rgfClan[iClan] = FALSE;
+	}
 
 	send_to_char("\n\r", ch);
- 
+
 	send_to_char( "\t[F220]************************************************************\tn\n\r", ch);
 	send_to_char( "\t[F220]***\tn  \tW       People currently on Project Twilight\tn         \t[F220]***\tn\n\r", ch );
 	send_to_char( "\t[F220]************************************************************\tn\n\r", ch);
@@ -2702,7 +2744,9 @@ void do_who( CHAR_DATA *ch, char *argument )
 
 		argument = one_argument( argument, arg );
 		if ( IS_NULLSTR(arg) )
+		{
 			break;
+		}
 
 		/*
 		 * Look for clan to turn on.
@@ -2725,16 +2769,24 @@ void do_who( CHAR_DATA *ch, char *argument )
 		{
 			fPack = TRUE;
 			if(!IS_ADMIN(ch) || IS_NULLSTR(argument))
+			{
 				pack = pack_lookup(ch->pack);
+			}
 			else
+			{
 				pack = pack_lookup(argument);
+			}
 
 			if(pack == NULL)
 			{
 				if(!IS_ADMIN(ch) || IS_NULLSTR(argument))
+				{
 					send_to_char("You aren't part of a pack.\n\r", ch);
+				}
 				else
+				{
 					send_to_char("No such pack.\n\r", ch);
+				}
 			}
 		}
 		else if(IS_ADMIN(ch))
@@ -2744,7 +2796,9 @@ void do_who( CHAR_DATA *ch, char *argument )
 			if (iRace == 0 || iRace >= MAX_PC_RACE)
 			{
 				if (!str_prefix(arg,"clan"))
+				{
 					fClan = TRUE;
+				}
 				else
 				{
 					iClan = clan_lookup(arg);
@@ -2786,92 +2840,96 @@ void do_who( CHAR_DATA *ch, char *argument )
 	{
 		CHAR_DATA *wch;
 		char const *clan;
- 
+
 		/*
 		 * Check for match against restrictions.
 		 */
 		if ( d->connected != CON_PLAYING || !can_see_main( ch, d->character ) )
 			continue;
- 
+
 		wch   = ( d->original != NULL ) ? d->original : d->character;
 
-	if (!can_see_main(ch,wch))
-		continue;
+		if (!can_see_main(ch,wch))
+			continue;
 
 		if ( ( fImmortalOnly  && !IS_ADMIN(wch) )
-		|| ( fRaceRestrict && !rgfRace[wch->race])
-	|| ( fClan && !is_clan(wch))
-	|| ( fClanRestrict && !rgfClan[wch->clan])
-	|| ( fRPOK && !IS_SET(wch->plr_flags, PLR_RP_OK)))
+			|| ( fRaceRestrict && !rgfRace[wch->race])
+			|| ( fClan && !is_clan(wch))
+			|| ( fClanRestrict && !rgfClan[wch->clan])
+			|| ( fRPOK && !IS_SET(wch->plr_flags, PLR_RP_OK)))
+		{
 			continue;
+		}
 
-	if ( fPack && pack != pack_lookup(wch->pack) )
+		if ( fPack && pack != pack_lookup(wch->pack) )
+		{
 			continue;
- 
+		}
+
 		nMatch++;
- 
+
 		/*
 		 * Figure out stuff to print.
 	 */
-	clan = clan_table[wch->clan].who_name;
-	app = get_curr_stat(wch, STAT_APP);
-	send_to_char("\n\r", ch);
+		clan = clan_table[wch->clan].who_name;
+		app = get_curr_stat(wch, STAT_APP);
+		send_to_char("\n\r", ch);
 
 	/*
 	 * Format it up.
 	 */
-	if(IS_SET(ch->comm, COMM_BRIEF))
-	{
-		if(IS_ADMIN(ch))
-				{
+		if(IS_SET(ch->comm, COMM_BRIEF))
+		{
+			if(IS_ADMIN(ch))
+			{
 				snprintf( buf, sizeof(buf), "[\tY%4s %s\tn][\tY%6s] %s%s%s\tW%s\tn\n\r",
-				wch->race < MAX_PC_RACE ? pc_race_table[wch->race].who_name
-							: "     ",
-				clan,
-				gender_string(wch),
-				wch->invis_level >= LEVEL_IMMORTAL ? "[\tYWIZI\tn]" : "",
-				IS_SET(wch->act2, ACT2_STORY) ? "[\t[F205]ST\tn]": "",
-				IS_SET(wch->comm, COMM_AFK) ? "[\tYAFK\tn]": "",
-				wch->name);
+					wch->race < MAX_PC_RACE ? pc_race_table[wch->race].who_name
+					: "     ",
+					clan,
+					gender_string(wch),
+					wch->invis_level >= LEVEL_IMMORTAL ? "[\tYWIZI\tn]" : "",
+					IS_SET(wch->act2, ACT2_STORY) ? "[\t[F205]ST\tn]": "",
+					IS_SET(wch->comm, COMM_AFK) ? "[\tYAFK\tn]": "",
+					wch->name);
 			}
-		else
+			else
 			{
 				snprintf( buf, sizeof(buf), "[%s] %s%s\tW%s\tn\n\r",
-				gender_string(wch),
-				IS_SET(wch->act2, ACT2_STORY) ? "[\t[F205]ST\tn]": "",
-				IS_SET(wch->comm, COMM_AFK) ? "[\tYAFK\tn]": "",
-				wch->name );
+					gender_string(wch),
+					IS_SET(wch->act2, ACT2_STORY) ? "[\t[F205]ST\tn]": "",
+					IS_SET(wch->comm, COMM_AFK) ? "[\tYAFK\tn]": "",
+					wch->name );
 			}
-	}
-	else
-	{
-	if(IS_ADMIN(ch))
-	  snprintf( buf, sizeof(buf), "[\tY%4s %s\tn][\tY%s %6s\tn]%s%s%s \tW%s %s\tn %s%s%s\tn\n\r",
-		wch->race < MAX_PC_RACE ? pc_race_table[wch->race].who_name 
+		}
+		else
+		{
+			if(IS_ADMIN(ch))
+				snprintf( buf, sizeof(buf), "[\tY%4s %s\tn][\tY%s %6s\tn]%s%s%s \tW%s %s\tn %s%s%s\tn\n\r",
+					wch->race < MAX_PC_RACE ? pc_race_table[wch->race].who_name
 					: "     ",
-		clan,
-		appearance_string(wch),
-		gender_string(wch),
-		wch->invis_level >= LEVEL_IMMORTAL ? "[\tYWIZI\tn]" : "",
-		IS_SET(wch->act2, ACT2_STORY) ? "[\t[F205]ST\tn]": "",
-		IS_SET(wch->comm, COMM_AFK) ? "[\tYAFK\tn]": "",
-		wch->name,
-		IS_NULLSTR(wch->surname) ? "" : wch->surname,
-		fRPOK ? " [": "",
-		IS_NPC(wch) ? "" : !fRPOK ? wch->pcdata->title : wch->pcdata->rpok_string,
-		fRPOK ? "]": "");
-	else
-	  snprintf( buf, sizeof(buf), "[%s]%s%s \tW%s %s\tn\tR%s\tn%s\tR%s\tn\n\r",
-		gender_string(wch),
-		IS_SET(wch->act2, ACT2_STORY) ? "[\t[F205]ST\tn]": "",
-		IS_SET(wch->comm, COMM_AFK) ? "[\tYAFK\tn]": "",
-		wch->name,
-		IS_NULLSTR(wch->surname) ? "" : wch->surname,
-		fRPOK ? " [": "",
-		IS_NPC(wch) ? "" : !fRPOK ? wch->pcdata->title : wch->pcdata->rpok_string,
-		fRPOK ? "]": "");
-	}
-	add_buf(output,buf);
+					clan,
+					appearance_string(wch),
+					gender_string(wch),
+					wch->invis_level >= LEVEL_IMMORTAL ? "[\tYWIZI\tn]" : "",
+					IS_SET(wch->act2, ACT2_STORY) ? "[\t[F205]ST\tn]": "",
+					IS_SET(wch->comm, COMM_AFK) ? "[\tYAFK\tn]": "",
+					wch->name,
+					IS_NULLSTR(wch->surname) ? "" : wch->surname,
+					fRPOK ? " [": "",
+					IS_NPC(wch) ? "" : !fRPOK ? wch->pcdata->title : wch->pcdata->rpok_string,
+					fRPOK ? "]": "");
+			else
+				snprintf( buf, sizeof(buf), "[%s]%s%s \tW%s %s\tn\tR%s\tn%s\tR%s\tn\n\r",
+					gender_string(wch),
+					IS_SET(wch->act2, ACT2_STORY) ? "[\t[F205]ST\tn]": "",
+					IS_SET(wch->comm, COMM_AFK) ? "[\tYAFK\tn]": "",
+					wch->name,
+					IS_NULLSTR(wch->surname) ? "" : wch->surname,
+					fRPOK ? " [": "",
+					IS_NPC(wch) ? "" : !fRPOK ? wch->pcdata->title : wch->pcdata->rpok_string,
+					fRPOK ? "]": "");
+		}
+		add_buf(output,buf);
 	}
 
 	add_buf(output, (char *)Format("\n\rPlayers found: %d\n\r", nMatch));
@@ -3315,7 +3373,7 @@ void do_investigate(CHAR_DATA *ch, char *argument)
 	int diff = 0, fail = 0;
 	bool IsChar = FALSE;
 	bool found = FALSE;
-	
+
 	CheckCH(ch);
 
 	if(IS_NULLSTR(argument))
@@ -3422,7 +3480,7 @@ void do_abilities(CHAR_DATA *ch, char *argument)
 	row = create_row(grid);
 	row_append_cell(row, 75, "%31s\tYAbilities\tn %32s", " ", " ");
 	row = create_row(grid);
-	
+
 	// First Column  - Talents
 	cell = row_append_cell(row, 25, "\tGTalents\tn\n");
 	for (sn = 0; sn < 13; sn++)
@@ -3475,7 +3533,9 @@ void do_powers(CHAR_DATA *ch, char *argument)
 	CheckCH(ch);
 
 	if (IS_NPC(ch))
+	{
 		return;
+	}
 
 	send_to_char("\n\rPowers:\n\r", ch);
 
@@ -3485,7 +3545,7 @@ void do_powers(CHAR_DATA *ch, char *argument)
 		{
 			for(sn = 0; disc_table[sn].vname != NULL; sn++)
 			{
-				if(sn != DISC_OBEAH) 
+				if(sn != DISC_OBEAH)
 				{
 					snprintf(name, sizeof(name), "%s", disc_table[sn].vname);
 					send_to_char(Format("\t<send href='help %s'>%-15s\t</send> %-2d ", capitalize(name),capitalize(name), ch->disc[sn]), ch);
@@ -3495,54 +3555,56 @@ void do_powers(CHAR_DATA *ch, char *argument)
 			send_to_char("\n\r", ch);
 		}
 		else
+		{
 			for(sn = 0; disc_table[sn].vname != NULL; sn++)
 			{
-				if(sn != DISC_OBEAH) 
+				if(sn != DISC_OBEAH)
 				{
 					if(ch->disc[sn] != 0)
 					{
 						snprintf(name, sizeof(name), "%s", disc_table[sn].vname);
 						send_to_char(Format("\t<send href='help %s'>%-15s\t</send> %-2d ", capitalize(name),capitalize(name), ch->disc[sn]), ch);
 						send_to_char("\n\r", ch);
-					}	
+					}
 				}
 			}
-			send_to_char("\n\r", ch);
+		}
+		send_to_char("\n\r", ch);
 	}
 
-		else if (ch->race == race_lookup("werewolf"))
+	else if (ch->race == race_lookup("werewolf"))
+	{
+		for(sn = 0; disc_table[sn].wname != NULL; sn++)
 		{
-			for(sn = 0; disc_table[sn].wname != NULL; sn++)
-			{
-				snprintf(name, sizeof(name), disc_table[sn].wname);
-				send_to_char(Format("\t<send help='help %s'>%-15s\t</send> %-2d ", capitalize(name), capitalize(name), ch->disc[sn]), ch);
-				send_to_char("\n\r", ch);
-			}
-		}
-		
-		else if (ch->race == race_lookup("faerie"))
-		{
-			for(sn = 0; disc_table[sn].fname != NULL; sn++)
-			{
-				snprintf(name, sizeof(name), disc_table[sn].fname);
-				send_to_char(Format("%-15s %-2d ", capitalize(name), ch->disc[sn]), ch);
-			}
-			send_to_char("\n\r", ch);
-		}
-		
-		else if (ch->race == race_lookup("human"))
-		{
-			sn = clan_table[ch->clan].powers[0];
-			if(sn == -1)
-			{
-				send_to_char("None.\n\r", ch);
-				return;
-			}
-			snprintf(name, sizeof(name), disc_table[sn].hname);
+			snprintf(name, sizeof(name), "%s", disc_table[sn].wname);
 			send_to_char(Format("\t<send help='help %s'>%-15s\t</send> %-2d ", capitalize(name), capitalize(name), ch->disc[sn]), ch);
 			send_to_char("\n\r", ch);
 		}
 	}
+
+	else if (ch->race == race_lookup("faerie"))
+	{
+		for(sn = 0; disc_table[sn].fname != NULL; sn++)
+		{
+			snprintf(name, sizeof(name), "%s", disc_table[sn].fname);
+			send_to_char(Format("%-15s %-2d ", capitalize(name), ch->disc[sn]), ch);
+		}
+		send_to_char("\n\r", ch);
+	}
+
+	else if (ch->race == race_lookup("human"))
+	{
+		sn = clan_table[ch->clan].powers[0];
+		if(sn == -1)
+		{
+			send_to_char("None.\n\r", ch);
+			return;
+		}
+		snprintf(name, sizeof(name), "%s", disc_table[sn].hname);
+		send_to_char(Format("\t<send help='help %s'>%-15s\t</send> %-2d ", capitalize(name), capitalize(name), ch->disc[sn]), ch);
+		send_to_char("\n\r", ch);
+	}
+}
 
 void do_power_list(CHAR_DATA *ch, char *argument)
 {
@@ -3838,7 +3900,8 @@ void do_diceroll(CHAR_DATA *ch, char *argument)
 	char *extra_names[7] = { "banality", "glamour", "gnosis", "humanity", "rage", "willpower", "faith" };
 
 	argument = one_argument(argument, arg1);
-	if(!str_cmp(arg1, "success")) {
+	if(!str_cmp(arg1, "success"))
+	{
 		argument = one_argument(argument, arg1);
 		if(is_number(arg1))
 		{
@@ -3860,7 +3923,8 @@ void do_diceroll(CHAR_DATA *ch, char *argument)
 				return;
 			}
 		}
-		else {
+		else
+		{
 			if((vch = get_char_world(ch, arg2)) == NULL)
 			{
 				send_to_char("They aren't here.\n\r", ch);
@@ -3913,22 +3977,37 @@ void do_diceroll(CHAR_DATA *ch, char *argument)
 	}
 
 	if(a >= 0)
-		dice += get_curr_stat(vch, a);
+		{
+			dice += get_curr_stat(vch, a);
+		}
 	else if(b >= 0)
-		dice += vch->ability[b].value;
+		{
+			dice += vch->ability[b].value;
+		}
 	else if(c >= 0)
-		dice += vch->disc[c];
+		{
+			dice += vch->disc[c];
+		}
 	else if(d >= 0)
-		dice += vch->virtues[d];
-	else if(e >= 0) {
+		{
+			dice += vch->virtues[d];
+		}
+	else if(e >= 0)
+	{
 		dice += vch->influences[e];
 		if(number_range(0, 100) >= 98 && vch->influences[e] > 0)
-			vch->influences[e]--;
+			{
+				vch->influences[e]--;
+			}
 	}
 	else if(f >= 0)
-		dice += vch->backgrounds[f];
+		{
+			dice += vch->backgrounds[f];
+		}
 	else if(h >= 0)
-		dice += UMIN(h,30);
+		{
+			dice += UMIN(h,30);
+		}
 	else
 	{
 		switch(LOWER(arg2[0]))
@@ -4013,7 +4092,7 @@ void do_diceroll(CHAR_DATA *ch, char *argument)
 		if(whom!=TO_CHAR) send_to_char(buf, ch);
 	}
 
-	
+
 
 	if(!IS_AFFECTED(ch, AFF_RESIST_PAIN))
 	{
@@ -4040,7 +4119,8 @@ void do_diceroll(CHAR_DATA *ch, char *argument)
 	}
 
 	if(ch->fighting != NULL)
-		if(IS_AFFECTED(ch->fighting, AFF_ODOUR)) {
+		if(IS_AFFECTED(ch->fighting, AFF_ODOUR))
+		{
 			act(Format("(Increase difficulty: Fighting skunk gift +1)\n\r"), ch, NULL, to, whom, 1);
 			if(whom!=TO_CHAR) send_to_char(buf, ch);
 		}
@@ -5578,12 +5658,12 @@ void do_addy (CHAR_DATA *ch, char *argument)
 void do_score_revised( CHAR_DATA *ch, char *argument )
 {
 	CHAR_DATA *user = ch;
-	char buf[MSL]={'\0'};
-	int num = 0, i = 0;
+	int num = 0;
+	int i = 0;
 	int statcount = 0;
 	GRID_DATA *grid;
-    GRID_ROW *row;
-    GRID_CELL *cell;
+	GRID_ROW *row;
+	GRID_CELL *cell;
 
 	CheckCH(ch);
 
@@ -5602,8 +5682,6 @@ void do_score_revised( CHAR_DATA *ch, char *argument )
 		}
 	}
 
-	buf[0] = '\0';
-
 	if(ch->race == race_lookup("human") && IS_SET(ch->act2, ACT2_GHOUL))
 	{
 		send_to_char( Format("\r\n\tW---------------------------------<\tG   Ghoul\tW>-----------------------------------\tn\r\n"), user);
@@ -5611,7 +5689,7 @@ void do_score_revised( CHAR_DATA *ch, char *argument )
 	else
 	{
 		send_to_char( Format("\n\r\tW---------------------------------<\tG%8s\tW>-----------------------------------\tn\n\r",
-				capitalize(race_table[ch->race].name)), user);
+			capitalize(race_table[ch->race].name)), user);
 	}
 
 
@@ -5645,7 +5723,7 @@ void do_score_revised( CHAR_DATA *ch, char *argument )
 	send_to_char("\tW--------------------------------<Dice Pools>----------------------------------\tn\n\r", user);
 
 	send_to_char( Format("%s:  %2d/%-20d\n\r", race_table[ch->race].pc_race?pc_race_table[ch->race].RBPG:"Faith",
-			ch->RBPG, ch->max_RBPG), user);
+		ch->RBPG, ch->max_RBPG), user);
 
 	send_to_char(Format("Experience/OOC Experience: %d / %d\n\r", ch->exp, ch->oocxp), user);
 	send_to_char(Format("Experience to Gift: %d\n\r", ch->xpgift), user);
@@ -5767,7 +5845,7 @@ void do_score_revised( CHAR_DATA *ch, char *argument )
 		{
 			for(sn = 0; disc_table[sn].vname != NULL; sn++)
 			{
-				if(sn != DISC_OBEAH) 
+				if(sn != DISC_OBEAH)
 				{
 					snprintf(name, sizeof(name), "%s", disc_table[sn].vname);
 					cell_append_contents(cell, "%-14s:%3d\n", capitalize(name), ch->disc[sn]);
@@ -5776,20 +5854,22 @@ void do_score_revised( CHAR_DATA *ch, char *argument )
 			send_to_char("\n\r", ch);
 		}
 		else
+		{
 			for(sn = 0; disc_table[sn].vname != NULL; sn++)
 			{
-				if(sn != DISC_OBEAH) 
+				if(sn != DISC_OBEAH)
 				{
 					if(ch->disc[sn] != 0)
 					{
-					snprintf(name, sizeof(name), "%s", disc_table[sn].vname);
-					cell_append_contents(cell, "%-14s:%3d\n", capitalize(name), ch->disc[sn]);
-					}	
+						snprintf(name, sizeof(name), "%s", disc_table[sn].vname);
+						cell_append_contents(cell, "%-14s:%3d\n", capitalize(name), ch->disc[sn]);
+					}
 				}
 			}
-			send_to_char("\n\r", ch);
+		}
+		send_to_char("\n\r", ch);
 	}
-	
+
 
 	// Backgrounds
 	cell = row_append_cell(row, 22, "\tGBackgrounds\tn\n");
@@ -5805,7 +5885,7 @@ void do_score_revised( CHAR_DATA *ch, char *argument )
 			}
 		}
 	}
-	
+
 	//  Influences
 	cell = row_append_cell(row, 22, "\tGInfluences\tn\n");
 	i = 0;
@@ -5829,11 +5909,10 @@ void do_score_revised( CHAR_DATA *ch, char *argument )
 void do_advantages( CHAR_DATA *ch, char *argument )
 {
 	CHAR_DATA *user = ch;
-	char buf[MSL]={'\0'};
 	int num = 0, i = 0;
 	GRID_DATA *grid;
-    GRID_ROW *row;
-    GRID_CELL *cell;
+	GRID_ROW *row;
+	GRID_CELL *cell;
 
 	CheckCH(ch);
 
@@ -5851,8 +5930,6 @@ void do_advantages( CHAR_DATA *ch, char *argument )
 			return;
 		}
 	}
-
-	buf[0] = '\0';
 
 	grid = create_grid(75);
 	row = create_row(grid);
@@ -5884,7 +5961,7 @@ void do_advantages( CHAR_DATA *ch, char *argument )
 		{
 			for(sn = 0; disc_table[sn].vname != NULL; sn++)
 			{
-				if(sn != DISC_OBEAH) 
+				if(sn != DISC_OBEAH)
 				{
 					snprintf(name, sizeof(name), "%s", disc_table[sn].vname);
 					cell_append_contents(cell, "%-14s:%3d\n", capitalize(name), ch->disc[sn]);
@@ -5893,20 +5970,22 @@ void do_advantages( CHAR_DATA *ch, char *argument )
 			send_to_char("\n\r", ch);
 		}
 		else
+		{
 			for(sn = 0; disc_table[sn].vname != NULL; sn++)
 			{
-				if(sn != DISC_OBEAH) 
+				if(sn != DISC_OBEAH)
 				{
 					if(ch->disc[sn] != 0)
 					{
-					snprintf(name, sizeof(name), "%s", disc_table[sn].vname);
-					cell_append_contents(cell, "%-14s:%3d\n", capitalize(name), ch->disc[sn]);
-					}	
+						snprintf(name, sizeof(name), "%s", disc_table[sn].vname);
+						cell_append_contents(cell, "%-14s:%3d\n", capitalize(name), ch->disc[sn]);
+					}
 				}
 			}
-			send_to_char("\n\r", ch);
+		}
+		send_to_char("\n\r", ch);
 	}
-	
+
 
 	// Backgrounds
 	cell = row_append_cell(row, 22, "\tGBackgrounds\tn\n");
@@ -5919,8 +5998,8 @@ void do_advantages( CHAR_DATA *ch, char *argument )
 			{
 				if(num < MAX_BACKGROUND)
 				{
-						cell_append_contents(cell, "%-11s:%3d\n", background_table[num].name, ch->backgrounds[num]);
-						i++;
+					cell_append_contents(cell, "%-11s:%3d\n", background_table[num].name, ch->backgrounds[num]);
+					i++;
 				}
 			}
 			else
@@ -5937,7 +6016,7 @@ void do_advantages( CHAR_DATA *ch, char *argument )
 			}
 		}
 	}
-	
+
 	//  Influences
 	cell = row_append_cell(row, 22, "\tGInfluences\tn\n");
 	i = 0;
@@ -6055,7 +6134,7 @@ void do_snippets( CHAR_DATA *ch, char *argument )
 // This function is to check the length of an array to make sure we are sizing them correctly.
 void do_testarray (CHAR_DATA *ch, char *argument)
 {
-	OBJ_DATA *obj;
+	// OBJ_DATA *obj;
 	ROOM_INDEX_DATA *pRoomIndex;
 	CheckCH(ch);
 

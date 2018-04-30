@@ -70,7 +70,7 @@ bool show_version( CHAR_DATA *ch, char *argument )
     send_to_char( "\n\r", ch );
 
     return FALSE;
-}    
+}
 
 /*
  * This table contains help commands and a brief description of each.
@@ -105,7 +105,7 @@ const struct olc_help_type help_table[] =
     {	"size",		size_flags,	 "Mobile size."			 },
     {   "position",     position_flags,  "Mobile positions."             },
     {	"material",	material_type,	 "Material mob/obj is made from."},
-    {   "wclass",       weapon_class,    "Weapon class."                 }, 
+    {   "wclass",       weapon_class,    "Weapon class."                 },
     {   "wtype",        weapon_type2,    "Special weapon type."          },
     {	"portal",	portal_flags,	 "Portal types."		 },
     {	"furniture",	furniture_flags, "Furniture types."		 },
@@ -274,7 +274,7 @@ bool show_help( CHAR_DATA *ch, char *argument )
 		else
 		    send_to_char( "Syntax:  ? spell "
 		        "[ignore/attack/defend/self/object/all]\n\r", ch );
-		    
+
 		return FALSE;
 	    }
 	    else
@@ -486,10 +486,10 @@ REDIT( redit_mshow )
 
 	ch->desc->pEdit = (void *)pMob;
     }
- 
+
     medit_show( ch, argument );
     ch->desc->pEdit = (void *)ch->in_room;
-    return FALSE; 
+    return FALSE;
 }
 
 
@@ -522,10 +522,10 @@ REDIT( redit_oshow )
 
 	ch->desc->pEdit = (void *)pObj;
     }
- 
+
     oedit_show( ch, argument );
     ch->desc->pEdit = (void *)ch->in_room;
-    return FALSE; 
+    return FALSE;
 }
 
 
@@ -871,7 +871,7 @@ AEDIT( aedit_builder )
 
     name[0] = UPPER( name[0] );
 
-    if ( strstr( pArea->builders, name ) != '\0' )
+    if ( strstr( pArea->builders, name ) != NULL )
     {
 	pArea->builders = string_replace( pArea->builders, name, "\0" );
 	pArea->builders = string_unpad( pArea->builders );
@@ -887,7 +887,7 @@ AEDIT( aedit_builder )
     else
     {
 	buf[0] = '\0';
-	if ( strstr( pArea->builders, "None" ) != '\0' )
+	if ( strstr( pArea->builders, "None" ) != NULL )
 	{
 	    pArea->builders = string_replace( pArea->builders, "None", "\0" );
 	    pArea->builders = string_unpad( pArea->builders );
@@ -937,7 +937,7 @@ AEDIT( aedit_vnum )
 	send_to_char( "AEdit:  Upper must be larger then lower.\n\r", ch );
 	return FALSE;
     }
-    
+
     if ( !check_range( atoi( lower ), atoi( upper ) ) )
     {
 	send_to_char( "AEdit:  Range must include only this area.\n\r", ch );
@@ -991,7 +991,7 @@ AEDIT( aedit_lvnum )
 	send_to_char( "AEdit:  Value must be less than the max_vnum.\n\r", ch );
 	return FALSE;
     }
-    
+
     if ( !check_range( ilower, iupper ) )
     {
 	send_to_char( "AEdit:  Range must include only this area.\n\r", ch );
@@ -1034,7 +1034,7 @@ AEDIT( aedit_uvnum )
 	send_to_char( "AEdit:  Upper must be larger then lower.\n\r", ch );
 	return FALSE;
     }
-    
+
     if ( !check_range( ilower, iupper ) )
     {
 	send_to_char( "AEdit:  Range must include only this area.\n\r", ch );
@@ -1312,7 +1312,7 @@ bool change_exit( CHAR_DATA *ch, char *argument, int door, int thissideonly )
     {
 	ROOM_INDEX_DATA *pToRoom;
 	sh_int rev;                                     /* ROM OLC */
-	
+
 	if ( !pRoom->exit[door] )
 	{
 	    send_to_char( "REdit:  Cannot delete a null exit.\n\r", ch );
@@ -1324,7 +1324,7 @@ bool change_exit( CHAR_DATA *ch, char *argument, int door, int thissideonly )
 	 */
 	rev = rev_dir[door];
 	pToRoom = pRoom->exit[door]->u1.to_room;       /* ROM OLC */
-	
+
 	if ( pToRoom->exit[rev] )
 	{
 	    free_exit( pToRoom->exit[rev] );
@@ -1378,7 +1378,7 @@ bool change_exit( CHAR_DATA *ch, char *argument, int door, int thissideonly )
 
 	pRoom->exit[door]->u1.to_room = get_room_index( value );   /* ROM OLC */
 	pRoom->exit[door]->orig_door = door;
-	
+
 /*	pRoom->exit[door]->vnum = value;                Can't set vnum in ROM */
 
 	pRoom                   = get_room_index( value );
@@ -1450,13 +1450,13 @@ bool change_exit( CHAR_DATA *ch, char *argument, int door, int thissideonly )
 
     if ( !str_cmp( command, "dig" ) )
     {
-	
+
 	if ( IS_NULLSTR(arg) || !is_number( arg ) )
 	{
 	    send_to_char( "Syntax: [direction] dig <vnum>\n\r", ch );
 	    return FALSE;
 	}
-	
+
 	redit_create( ch, arg );
 	change_exit( ch, (char *)Format("link %s", arg), door, 0);
 	return TRUE;
@@ -1816,7 +1816,7 @@ REDIT( redit_create )
     ROOM_INDEX_DATA *pRoom;
     int value;
     int iHash;
-    
+
     EDIT_ROOM(ch, pRoom);
 
     value = atoi( argument );
@@ -2093,9 +2093,9 @@ REDIT( redit_udesc )
 REDIT( redit_heal )
 {
     ROOM_INDEX_DATA *pRoom;
-    
+
     EDIT_ROOM(ch, pRoom);
-    
+
     if (is_number(argument))
        {
           pRoom->heal_rate = atoi ( argument );
@@ -2105,14 +2105,14 @@ REDIT( redit_heal )
 
     send_to_char ( "Syntax : heal <#xnumber>\n\r", ch);
     return FALSE;
-}       
+}
 
 REDIT( redit_mana )
 {
     ROOM_INDEX_DATA *pRoom;
-    
+
     EDIT_ROOM(ch, pRoom);
-    
+
     if (is_number(argument))
        {
           pRoom->mana_rate = atoi ( argument );
@@ -2122,39 +2122,39 @@ REDIT( redit_mana )
 
     send_to_char ( "Syntax : mana <#xnumber>\n\r", ch);
     return FALSE;
-}       
+}
 
 REDIT( redit_owner )
 {
     ROOM_INDEX_DATA *pRoom;
 
     EDIT_ROOM(ch, pRoom);
-    
+
     pRoom->owner = str_dup(argument);
-    
+
     send_to_char ( "Owner set.\n\r", ch);
     return TRUE;
 }
-      
+
 REDIT( redit_clan )
 {
     ROOM_INDEX_DATA *pRoom;
 
     EDIT_ROOM(ch, pRoom);
-    
+
     pRoom->clan = clan_lookup(argument);
-    
+
     send_to_char ( "Clan set.\n\r", ch);
     return TRUE;
 }
-      
+
 REDIT( redit_sector )
 {
     ROOM_INDEX_DATA *pRoom;
     int i;
 
     EDIT_ROOM(ch, pRoom);
- 
+
     if((i = flag_lookup(argument, sector_flags)) < 0)
     {
 	send_to_char("No such sector type.\n\r", ch);
@@ -2166,7 +2166,7 @@ REDIT( redit_sector )
     send_to_char ( "Room sector type set.\n\r", ch);
     return TRUE;
 }
-      
+
 REDIT( redit_format )
 {
     ROOM_INDEX_DATA *pRoom;
@@ -2286,13 +2286,13 @@ const struct wear_type wear_table[] =
 int wear_loc(int bits, int count)
 {
     int flag;
- 
+
     for (flag = 0; wear_table[flag].wear_bit != NO_FLAG; flag++)
     {
         if ( IS_SET(bits, wear_table[flag].wear_bit) && --count < 1)
             return wear_table[flag].wear_loc;
     }
- 
+
     return NO_FLAG;
 }
 
@@ -2306,13 +2306,13 @@ int wear_loc(int bits, int count)
 int wear_bit(int loc)
 {
     int flag;
- 
+
     for (flag = 0; wear_table[flag].wear_loc != NO_FLAG; flag++)
     {
         if ( loc == wear_table[flag].wear_loc )
             return wear_table[flag].wear_bit;
     }
- 
+
     return 0;
 }
 
@@ -2493,7 +2493,7 @@ void show_obj_values( CHAR_DATA *ch, OBJ_INDEX_DATA *obj )
     {
 	default:	/* No values. */
 	    break;
-            
+
 	case ITEM_LIGHT:
 		if ( obj->value[2] == -1 || obj->value[2] == 999 ) /* ROM OLC */
 		{
@@ -2511,8 +2511,8 @@ void show_obj_values( CHAR_DATA *ch, OBJ_INDEX_DATA *obj )
 	    send_to_char( Format("[v2] Portal Flags:   %s\n\r", flag_string( portal_flags, obj->value[2]) ), ch);
 	    send_to_char( Format("[v3] Goes to (vnum): [%d]\n\r", obj->value[3]), ch);
 	    break;
-	    
-	case ITEM_FURNITURE:          
+
+	case ITEM_FURNITURE:
 	    send_to_char( Format("[v0] Max people:      [%d]\n\r", obj->value[0]), ch);
 	    send_to_char( Format("[v1] Max weight:      [%d]\n\r", obj->value[1]), ch);
 	    send_to_char( Format("[v2] Furniture Flags: %s\n\r", flag_string( furniture_flags, obj->value[2])), ch);
@@ -2602,7 +2602,7 @@ void show_obj_values( CHAR_DATA *ch, OBJ_INDEX_DATA *obj )
 	    send_to_char( Format("[v1] Liquid Left:  [%d]\n\r", obj->value[1]), ch);
 	    send_to_char( Format("[v2] Liquid:	    %s\n\r", liq_table[obj->value[2]].liq_name), ch);
 	    break;
-	        
+
 	case ITEM_FOOD:
 	    send_to_char( Format("[v0] Food hours: [%d]\n\r", obj->value[0]), ch);
 	    send_to_char( Format("[v1] Full hours: [%d]\n\r", obj->value[1]), ch);
@@ -2838,7 +2838,7 @@ bool set_obj_values( CHAR_DATA *ch, OBJ_INDEX_DATA *pObj, int value_num, char *a
 	        default:
 	            do_help(ch, "ITEM_PORTAL" );
 	            return FALSE;
-	            
+
 	    	case 0:
 	    	    send_to_char( "CHARGES SET.\n\r\n\r", ch);
 	    	    pObj->value[0] = atoi ( argument );
@@ -2864,7 +2864,7 @@ bool set_obj_values( CHAR_DATA *ch, OBJ_INDEX_DATA *pObj, int value_num, char *a
 	        default:
 	            do_help( ch, "ITEM_FURNITURE" );
 	            return FALSE;
-	            
+
 	        case 0:
 	            send_to_char( "NUMBER OF PEOPLE SET.\n\r\n\r", ch);
 	            pObj->value[0] = atoi ( argument );
@@ -2889,12 +2889,12 @@ bool set_obj_values( CHAR_DATA *ch, OBJ_INDEX_DATA *pObj, int value_num, char *a
 	            break;
 	    }
 	    break;
-	   
+
         case ITEM_CONTAINER:
 	    switch ( value_num )
 	    {
 		int value;
-		
+
 		default:
 		    do_help( ch, "ITEM_CONTAINER" );
 	            return FALSE;
@@ -2973,7 +2973,7 @@ bool set_obj_values( CHAR_DATA *ch, OBJ_INDEX_DATA *pObj, int value_num, char *a
 	    switch ( value_num )
 	    {
 		int value;
-		
+
 	        default:
 		    do_help( ch, "ITEM_LIQUID" );
 /* OLC		    do_help( ch, "liquids" );    */
@@ -3022,7 +3022,7 @@ bool set_obj_values( CHAR_DATA *ch, OBJ_INDEX_DATA *pObj, int value_num, char *a
 	            break;
             }
 	break;
-		    	
+
 	case ITEM_FOOD:
 	    switch ( value_num )
 	    {
@@ -3268,7 +3268,7 @@ OEDIT( oedit_addaffect )
 	return FALSE;
     }
 
-    value3 = flag_value( affect_flags, value2 ); 
+    value3 = flag_value( affect_flags, value2 );
 
     pAf             =   new_affect();
     pAf->location   =   value;
@@ -3423,7 +3423,7 @@ OEDIT( oedit_long )
 	send_to_char( "Syntax:  long [string]\n\r", ch );
 	return FALSE;
     }
-        
+
     PURGE_DATA( pObj->description );
     pObj->description = str_dup( argument );
     pObj->description[0] = UPPER( pObj->description[0] );
@@ -3592,7 +3592,7 @@ OEDIT( oedit_create )
     pObj			= new_obj_index();
     pObj->vnum			= value;
     pObj->area			= pArea;
-        
+
     if ( value > top_vnum_obj )
 	top_vnum_obj = value;
 
@@ -4261,9 +4261,9 @@ MEDIT( medit_create )
     pMob			= new_mob_index();
     pMob->vnum			= value;
     pMob->area			= pArea;
-        
+
     if ( value > top_vnum_mob )
-	top_vnum_mob = value;        
+	top_vnum_mob = value;
 
     pMob->act			= ACT_IS_NPC;
     pMob->act2			= 0;
@@ -4578,7 +4578,7 @@ MEDIT( medit_shop )
 	SHOP_DATA *pShop_next;
 	int value;
 	int cnt = 0;
-	
+
 	if ( IS_NULLSTR(arg1) || !is_number( arg1 ) )
 	{
 	    send_to_char( "Syntax:  shop delete [#x0-4]\n\r", ch );
@@ -4586,7 +4586,7 @@ MEDIT( medit_shop )
 	}
 
 	value = atoi( argument );
-	
+
 	if ( !pMob->pShop )
 	{
 	    send_to_char( "REdit:  Non-existant shop.\n\r", ch );
@@ -5046,7 +5046,7 @@ MEDIT( medit_hitdice )
     if ( *cp != '\0' ) *cp = '\0';
 
     if ( ( !is_number( num   ) || atoi( num   ) < 1 )
-    ||   ( !is_number( type  ) || atoi( type  ) < 1 ) 
+    ||   ( !is_number( type  ) || atoi( type  ) < 1 )
     ||   ( !is_number( bonus ) || atoi( bonus ) < 0 ) )
     {
 	send_to_char( syntax, ch );
@@ -5652,7 +5652,7 @@ PEDIT( pedit_assignevent )
 
 	name[0] = UPPER( name[0] );
 
-	if ( strstr( pEvent->author, name ) != '\0' )
+	if ( strstr( pEvent->author, name ) != NULL )
 	{
 		pEvent->author = string_replace( pEvent->author, name, "\0" );
 		pEvent->author = string_unpad( pEvent->author );
@@ -5668,7 +5668,7 @@ PEDIT( pedit_assignevent )
 	else
 	{
 		buf[0] = '\0';
-		if ( strstr( pEvent->author, "None" ) != '\0' )
+		if ( strstr( pEvent->author, "None" ) != NULL )
 		{
 			pEvent->author = string_replace( pEvent->author, "None", "\0" );
 			pEvent->author = string_unpad( pEvent->author );
@@ -6725,7 +6725,7 @@ HEDIT( hedit_clans )
 
 	name[0] = UPPER( name[0] );
 
-	if ( strstr( help->clans, name ) != '\0' )
+	if ( strstr( help->clans, name ) != NULL )
 	{
 		help->clans = string_replace( help->clans, name, "\0" );
 		help->clans = string_unpad( help->clans );
@@ -6741,7 +6741,7 @@ HEDIT( hedit_clans )
 	else
 	{
 		buf[0] = '\0';
-		if ( strstr( help->clans, "None" ) != '\0' )
+		if ( strstr( help->clans, "None" ) != NULL )
 		{
 			help->clans = string_replace( help->clans, "None", "\0" );
 			help->clans = string_unpad( help->clans );
@@ -6784,7 +6784,7 @@ HEDIT( hedit_races )
 
 	name[0] = UPPER( name[0] );
 
-	if ( strstr( help->races, name ) != '\0' )
+	if ( strstr( help->races, name ) != NULL )
 	{
 		help->races = string_replace( help->races, name, "\0" );
 		help->races = string_unpad( help->races );
@@ -6800,7 +6800,7 @@ HEDIT( hedit_races )
 	else
 	{
 		buf[0] = '\0';
-		if ( strstr( help->races, "None" ) != '\0' )
+		if ( strstr( help->races, "None" ) != NULL )
 		{
 			help->races = string_replace( help->races, "None", "\0" );
 			help->races = string_unpad( help->races );

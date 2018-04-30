@@ -22,7 +22,6 @@
 #include <time.h>
 #include "twilight.h"
 
-
 /*****************************************************************************
  Name:		string_edit
  Purpose:	Clears string and puts player into editing mode.
@@ -140,123 +139,127 @@ void string_add( CHAR_DATA *ch, char *argument )
 		/*
 		 * Thanks to James Seng
 		 */
-		smash_tilde( argument );
+	smash_tilde( argument );
 
-		if ( *argument == '.' )
+	if ( *argument == '.' )
+	{
+		char arg1 [MAX_INPUT_LENGTH]={'\0'};
+		char arg2 [MAX_INPUT_LENGTH]={'\0'};
+		char arg3 [MAX_INPUT_LENGTH]={'\0'};
+
+		argument = one_argument( argument, arg1 );
+		argument = first_arg( argument, arg2, FALSE );
+		argument = first_arg( argument, arg3, FALSE );
+
+		if ( !str_cmp( arg1, ".c" ) )
 		{
-				char arg1 [MAX_INPUT_LENGTH]={'\0'};
-				char arg2 [MAX_INPUT_LENGTH]={'\0'};
-				char arg3 [MAX_INPUT_LENGTH]={'\0'};
+			send_to_char( "String cleared.\n\r", ch );
+			PURGE_DATA(*ch->desc->pString);
+			*ch->desc->pString = '\0';
+			return;
+		}
 
-				argument = one_argument( argument, arg1 );
-				argument = first_arg( argument, arg2, FALSE );
-				argument = first_arg( argument, arg3, FALSE );
+		if ( !str_cmp( arg1, ".s" ) )
+		{
+			send_to_char( "String so far:\n\r", ch );
+			send_to_char( *ch->desc->pString, ch );
+			return;
+		}
 
-				if ( !str_cmp( arg1, ".c" ) )
-				{
-						send_to_char( "String cleared.\n\r", ch );
-						PURGE_DATA(*ch->desc->pString);
-						*ch->desc->pString = '\0';
-						return;
-				}
-
-				if ( !str_cmp( arg1, ".s" ) )
-				{
-						send_to_char( "String so far:\n\r", ch );
-						send_to_char( *ch->desc->pString, ch );
-						return;
-				}
-
-				if ( !str_cmp( arg1, ".r" ) )
-				{
-						if ( IS_NULLSTR(arg2) )
-						{
-								send_to_char( "usage:  .r \"old string\" \"new string\"\n\r", ch );
-								return;
-						}
+		if ( !str_cmp( arg1, ".r" ) )
+		{
+			if ( IS_NULLSTR(arg2) )
+			{
+				send_to_char( "usage:  .r \"old string\" \"new string\"\n\r", ch );
+				return;
+			}
 
 			smash_tilde( arg3 );   /* Just to be sure -- Hugin */
-						*ch->desc->pString = string_replace( *ch->desc->pString, arg2, arg3 );
-						send_to_char( Format("'%s' replaced with '%s'.\n\r", arg2, arg3), ch );
-						return;
-				}
-
-				if ( !str_cmp( arg1, ".n" ) )
-				{
-						if ( IS_NULLSTR(arg2) )
-						{
-								send_to_char( "usage:  .n \"substring to follow\"\n\r", ch );
-								return;
-						}
-
-						*ch->desc->pString = string_insert_return( *ch->desc->pString, arg2 );
-						send_to_char( Format("'%s' is now followed by a newline.\n\r", arg2), ch );
-						return;
-				}
-
-				if ( !str_cmp( arg1, ".f" ) )
-				{
-						*ch->desc->pString = format_string( *ch->desc->pString );
-						send_to_char( "String formatted.\n\r", ch );
-						return;
-				}
-				
-				if ( !str_cmp( arg1, ".h" ) )
-				{
-						send_to_char( "Sedit help (commands on blank line):   \n\r", ch );
-						send_to_char( ".r 'old' 'new'   - replace a substring \n\r", ch );
-						send_to_char( "                   (requires '', \"\") \n\r", ch );
-						send_to_char( ".n 'location'    - insert a return after substring.\n\r", ch );
-						send_to_char( "                   (requires '', \"\") \n\r", ch );
-						send_to_char( ".h               - get help (this info)\n\r", ch );
-						send_to_char( ".s               - show string so far  \n\r", ch );
-						send_to_char( ".l               - show string so far with line numbers  \n\r", ch );
-						send_to_char( ".f               - (word wrap) string  \n\r", ch );
-						send_to_char( ".c               - clear string so far \n\r", ch );
-						send_to_char( "@                - end string          \n\r", ch );
-						return;
-				}
-						
-
-				send_to_char( "SEdit:  Invalid dot command.\n\r", ch );
-				return;
+			*ch->desc->pString = string_replace( *ch->desc->pString, arg2, arg3 );
+			send_to_char( Format("'%s' replaced with '%s'.\n\r", arg2, arg3), ch );
+			return;
 		}
 
-		if ( *argument == '~' || *argument == '@' || !str_cmp(argument, "END") || !str_cmp(argument, "end") )
+		if ( !str_cmp( arg1, ".n" ) )
 		{
-				ch->desc->pString = NULL;
+			if ( IS_NULLSTR(arg2) )
+			{
+				send_to_char( "usage:  .n \"substring to follow\"\n\r", ch );
 				return;
+			}
+
+			*ch->desc->pString = string_insert_return( *ch->desc->pString, arg2 );
+			send_to_char( Format("'%s' is now followed by a newline.\n\r", arg2), ch );
+			return;
 		}
+
+		if ( !str_cmp( arg1, ".f" ) )
+		{
+			*ch->desc->pString = format_string( *ch->desc->pString );
+			send_to_char( "String formatted.\n\r", ch );
+			return;
+		}
+
+		if ( !str_cmp( arg1, ".h" ) )
+		{
+			send_to_char( "Sedit help (commands on blank line):   \n\r", ch );
+			send_to_char( ".r 'old' 'new'   - replace a substring \n\r", ch );
+			send_to_char( "                   (requires '', \"\") \n\r", ch );
+			send_to_char( ".n 'location'    - insert a return after substring.\n\r", ch );
+			send_to_char( "                   (requires '', \"\") \n\r", ch );
+			send_to_char( ".h               - get help (this info)\n\r", ch );
+			send_to_char( ".s               - show string so far  \n\r", ch );
+			send_to_char( ".l               - show string so far with line numbers  \n\r", ch );
+			send_to_char( ".f               - (word wrap) string  \n\r", ch );
+			send_to_char( ".c               - clear string so far \n\r", ch );
+			send_to_char( "@                - end string          \n\r", ch );
+			return;
+		}
+
+
+		send_to_char( "SEdit:  Invalid dot command.\n\r", ch );
+		return;
+	}
+
+	if ( *argument == '~' || *argument == '@' || !str_cmp(argument, "END") || !str_cmp(argument, "end") )
+	{
+		ch->desc->pString = NULL;
+		return;
+	}
 
 	if(IS_NULLSTR(ch->desc->pString))
+	{
 		strmove( buf, "");
-	else	
+	}
+	else
+	{
 		strmove( buf, *ch->desc->pString );
+	}
 
 		/*
 		 * Truncate strings to MAX_STRING_LENGTH.
 		 * --------------------------------------
 		 */
-		if ( strlen( buf ) + strlen( argument ) >= ( MSL - 4 ) )
-		{
-				send_to_char( "String too long, last line skipped.\n\r", ch );
+	if ( strlen( buf ) + strlen( argument ) >= ( MSL - 4 ) )
+	{
+		send_to_char( "String too long, last line skipped.\n\r", ch );
 
 	/* Force character out of editing mode. */
-				ch->desc->pString = NULL;
-				return;
-		}
+		ch->desc->pString = NULL;
+		return;
+	}
 
 		/*
 		 * Ensure no tilde's inside string.
 		 * --------------------------------
 		 */
-		smash_tilde( argument );
+	smash_tilde( argument );
 
-		strncat( buf, argument, sizeof(buf) - strlen(buf) - 1 );
-		strncat( buf, "\n\r", sizeof(buf) - strlen(buf) - 1 );
-		PURGE_DATA( *ch->desc->pString );
-		*ch->desc->pString = str_dup( buf );
-		return;
+	strncat( buf, argument, sizeof(buf) - strlen(buf) - 1 );
+	strncat( buf, "\n\r", sizeof(buf) - strlen(buf) - 1 );
+	PURGE_DATA( *ch->desc->pString );
+	*ch->desc->pString = str_dup( buf );
+	return;
 }
 
 
@@ -538,7 +541,7 @@ char *format_string (char *oldstring /*, bool fSpace */ )
 	PURGE_DATA(oldstring);
 	return (str_dup (xbuf));
 }
- 
+
 
 
 
@@ -814,7 +817,7 @@ char *numlineas( char *string )
 	char buf2[MSL]={'\0'};
 	char tmpb[MSL]={'\0'};
 	int cnt = 1;
-	
+
 	while ( *string )
 	{
 		string = get_line( string, tmpb );

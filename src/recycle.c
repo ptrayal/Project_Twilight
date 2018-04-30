@@ -160,7 +160,7 @@ void free_help(HELP_DATA *help)
 	PURGE_DATA( help );
 }
 
-    
+
 NEWSPAPER *new_newspaper()
 {
 	NEWSPAPER *paper;
@@ -189,7 +189,7 @@ void free_newspaper(NEWSPAPER *paper)
 	PURGE_DATA(paper);
 }
 
-    
+
 NOTE_DATA *new_note()
 {
 	NOTE_DATA *note;
@@ -222,7 +222,7 @@ void free_note(NOTE_DATA *note)
 	PURGE_DATA( note );
 }
 
-    
+
 BAN_DATA *new_ban(void)
 {
 	BAN_DATA *ban;
@@ -889,7 +889,7 @@ CHAR_DATA *new_char (void)
 		ch->armor[i] = 100;
 	for (i = 0; i < 3; i++)
 		ch->clan_powers[i] = -1;
-	for (i = 0; i < 3; i++)
+	for (i = 0; i < 2; i++)
 		ch->colours[i] = NULL;
 	for (i = 0; i < MAX_STATS; i ++)
 	{
@@ -912,7 +912,9 @@ void free_char (CHAR_DATA *ch)
 	Escape(ch);
 
 	if (IS_NPC(ch))
+	{
 		mobile_count--;
+	}
 
 	for (obj = ch->carrying; obj != NULL; obj = obj_next)
 	{
@@ -927,7 +929,9 @@ void free_char (CHAR_DATA *ch)
 	}
 
 	if(ch->script != NULL)
+	{
 		free_script(ch->script);
+	}
 
 	PURGE_DATA(ch->aifile);
 	PURGE_DATA(ch->alt_description);
@@ -952,14 +956,14 @@ void free_char (CHAR_DATA *ch)
 	PURGE_DATA(ch->short_descr);
 	PURGE_DATA(ch->surname);
 	PURGE_DATA(ch->switch_desc);
-	
+
 	PURGE_DATA(ch->to_learn);
 	PURGE_DATA(ch->pnote);
 	PURGE_DATA(ch->pcdata);
 
 	ch->ghouled_by = NULL;
 	ch->married = NULL;
-    ch->next_in_room = NULL;
+	ch->next_in_room = NULL;
 	ch->reply = NULL;
 	ch->sire = NULL;
 
@@ -1002,7 +1006,7 @@ PC_DATA *new_pcdata(void)
 
 	return pcdata;
 }
-	
+
 
 void free_pcdata(PC_DATA *pcdata)
 {
@@ -1019,7 +1023,7 @@ void free_pcdata(PC_DATA *pcdata)
     PURGE_DATA(pcdata->rpok_string);
     PURGE_DATA(pcdata->title);
     free_buf(pcdata->buffer);
-    
+
     for (alias = 0; alias < MAX_ALIAS; alias++)
     {
     	PURGE_DATA(pcdata->alias[alias]);
@@ -1455,15 +1459,17 @@ void free_room_index( ROOM_INDEX_DATA *pRoom )
 
 SHOP_DATA *new_shop( void )
 {
-    SHOP_DATA *pShop;
-    int buy = 0;
+	SHOP_DATA *pShop;
+	int buy = 0;
 
-    ALLOC_DATA(pShop, SHOP_DATA, 1);
+	ALLOC_DATA(pShop, SHOP_DATA, 1);
 
-    pShop->next         =   NULL;
+	pShop->next         =   NULL;
 
-    for ( buy=0; buy<MAX_TRADE; buy++ )
-        pShop->buy_type[buy]    =   0;
+	for ( buy=0; buy<MAX_TRADE; buy++ )
+	{
+		pShop->buy_type[buy]    =   0;
+	}
 
 	pShop->keeper       =   0;
 	pShop->profit_buy   =   100;
@@ -1472,7 +1478,7 @@ SHOP_DATA *new_shop( void )
 	pShop->close_hour   =   23;
 	pShop->raw_materials	= 0;
 
-    return pShop;
+	return pShop;
 }
 
 
@@ -1801,7 +1807,7 @@ void ban_site(CHAR_DATA *ch, char *argument, bool fPerm)
 	char *name;
 	int type = 0;
 	bool prefix = FALSE,suffix = FALSE;
-	
+
 	argument = one_argument(argument,arg1);
 	argument = one_argument(argument,arg2);
 
@@ -1917,7 +1923,7 @@ void do_permban(CHAR_DATA *ch, char *argument)
     ban_site(ch,argument,TRUE);
 }
 
-void do_allow( CHAR_DATA *ch, char *argument )                        
+void do_allow( CHAR_DATA *ch, char *argument )
 {
 	BAN_DATA *prev;
 	BAN_DATA *curr;

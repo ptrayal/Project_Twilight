@@ -88,104 +88,110 @@ void do_castspell (CHAR_DATA *ch, char *arg)
 void power_messages(CHAR_DATA *ch, CHAR_DATA *vict, OBJ_DATA *obj, POW *pow, int success)
 {
     /* Messages to groups need a slightly different handler. */
-    if(pow->range == 2)
-    {
-      switch ( success ) {
+	if(pow->range == 2)
+	{
+		switch ( success ) {
 	case 100: /* Initiate */
-	    if(str_cmp("", pow->init_msg_cast))
-		act_new(pow->init_msg_cast, ch, vict, NULL, TO_CHAR,
-			pow->hear_pos, pow->cross_plane);
-	    if(str_cmp("", pow->init_msg_vict))
-		act_new(pow->init_msg_vict, ch, vict, NULL, TO_VICT,
-			pow->hear_pos, pow->cross_plane);
-	    if(str_cmp("", pow->init_msg_room))
-		act_new(pow->init_msg_room, ch, vict, NULL, TO_NOTVICT,
-			pow->hear_pos, pow->cross_plane);
-		break;
+			if(str_cmp("", pow->init_msg_cast))
+			{
+				act_new(pow->init_msg_cast, ch, vict, NULL, TO_CHAR, pow->hear_pos, pow->cross_plane);
+			}
+			if(str_cmp("", pow->init_msg_vict))
+			{
+				act_new(pow->init_msg_vict, ch, vict, NULL, TO_VICT, pow->hear_pos, pow->cross_plane);
+			}
+			if(str_cmp("", pow->init_msg_room))
+			{
+				act_new(pow->init_msg_room, ch, vict, NULL, TO_NOTVICT, pow->hear_pos, pow->cross_plane);
+			}
+			break;
 	case -1: /* Botch */
-	    if(str_cmp("", pow->botch_msg_cast))
-		act_new(pow->botch_msg_cast, ch, vict, NULL, TO_CHAR,
-			pow->hear_pos, pow->cross_plane);
-	    if(str_cmp("", pow->botch_msg_vict))
-		act_new(pow->botch_msg_vict, ch, vict, NULL, TO_VICT,
-			pow->hear_pos, pow->cross_plane);
-	    if(str_cmp("", pow->botch_msg_room))
-		act_new(pow->botch_msg_room, ch, vict, NULL, TO_NOTVICT,
-			pow->hear_pos, pow->cross_plane);
-		break;
+			if(str_cmp("", pow->botch_msg_cast))
+			{
+				act_new(pow->botch_msg_cast, ch, vict, NULL, TO_CHAR, pow->hear_pos, pow->cross_plane);
+			}
+			if(str_cmp("", pow->botch_msg_vict))
+			{
+				act_new(pow->botch_msg_vict, ch, vict, NULL, TO_VICT, pow->hear_pos, pow->cross_plane);
+			}
+			if(str_cmp("", pow->botch_msg_room))
+			{
+				act_new(pow->botch_msg_room, ch, vict, NULL, TO_NOTVICT, pow->hear_pos, pow->cross_plane);
+			}
+			break;
 	case 0: /* Fail */
-	    if(str_cmp("", pow->fail_msg_cast))
-		act_new(pow->fail_msg_cast, ch, vict, NULL, TO_CHAR,
-			pow->hear_pos, pow->cross_plane);
-	    if(str_cmp("", pow->fail_msg_vict))
-		act_new(pow->fail_msg_vict, ch, vict, NULL, TO_VICT,
-			pow->hear_pos, pow->cross_plane);
-	    if(str_cmp("", pow->fail_msg_room))
-		act_new(pow->fail_msg_room, ch, vict, NULL, TO_NOTVICT,
-			pow->hear_pos, pow->cross_plane);
-		break;
+			if(str_cmp("", pow->fail_msg_cast))
+			{
+				act_new(pow->fail_msg_cast, ch, vict, NULL, TO_CHAR, pow->hear_pos, pow->cross_plane);
+			}
+			if(str_cmp("", pow->fail_msg_vict))
+			{
+				act_new(pow->fail_msg_vict, ch, vict, NULL, TO_VICT, pow->hear_pos, pow->cross_plane);
+			}
+			if(str_cmp("", pow->fail_msg_room))
+			{
+				act_new(pow->fail_msg_room, ch, vict, NULL, TO_NOTVICT, pow->hear_pos, pow->cross_plane);
+			}
+			break;
 	case 1: /* Succeed */
-	    if(str_cmp("", pow->success_msg_cast))
-		act_new(pow->success_msg_cast, ch, vict, NULL, TO_CHAR,
-			pow->hear_pos, pow->cross_plane);
-	    if(str_cmp("", pow->success_msg_vict))
-		act_new(pow->success_msg_vict, ch, vict, NULL, TO_VICT,
-			pow->hear_pos, pow->cross_plane);
-	    if(str_cmp("", pow->success_msg_room))
-		act_new(pow->success_msg_room, ch, vict, NULL, TO_NOTVICT,
-			pow->hear_pos, pow->cross_plane);
-		break;
-      };
-	return;
-    }
+			if(str_cmp("", pow->success_msg_cast))
+			{
+				act_new(pow->success_msg_cast, ch, vict, NULL, TO_CHAR, pow->hear_pos, pow->cross_plane);
+			}
+			if(str_cmp("", pow->success_msg_vict))
+			{
+				act_new(pow->success_msg_vict, ch, vict, NULL, TO_VICT, pow->hear_pos, pow->cross_plane);
+			}
+			if(str_cmp("", pow->success_msg_room))
+			{
+				act_new(pow->success_msg_room, ch, vict, NULL, TO_NOTVICT, pow->hear_pos, pow->cross_plane);
+			}
+			break;
+		};
+		return;
+	}
 
     /* Otherwise the messages can just follow this. */
-    switch ( success ) {
+	switch ( success ) {
 	case 100: /* Initiate */
-	    if(str_cmp("", pow->init_msg_cast))
-		act_new(pow->init_msg_cast, ch, vict, NULL, TO_CHAR,
-			pow->hear_pos, pow->cross_plane);
-	    if(str_cmp("", pow->init_msg_vict))
-		act_new(pow->init_msg_vict, ch, vict, NULL, TO_VICT,
-			pow->hear_pos, pow->cross_plane);
-	    if(str_cmp("", pow->init_msg_room))
-		act_new(pow->init_msg_room, ch, vict, NULL, TO_NOTVICT,
-			pow->hear_pos, pow->cross_plane);
+		if(str_cmp("", pow->init_msg_cast))
+			act_new(pow->init_msg_cast, ch, vict, NULL, TO_CHAR, pow->hear_pos, pow->cross_plane);
+		if(str_cmp("", pow->init_msg_vict))
+			act_new(pow->init_msg_vict, ch, vict, NULL, TO_VICT, pow->hear_pos, pow->cross_plane);
+		if(str_cmp("", pow->init_msg_room))
+			act_new(pow->init_msg_room, ch, vict, NULL, TO_NOTVICT, pow->hear_pos, pow->cross_plane);
 		break;
 	case -1: /* Botch */
-	    if(str_cmp("", pow->botch_msg_cast))
-		act_new(pow->botch_msg_cast, ch, vict, NULL, TO_CHAR,
-			pow->hear_pos, pow->cross_plane);
-	    if(str_cmp("", pow->botch_msg_vict))
-		act_new(pow->botch_msg_vict, ch, vict, NULL, TO_VICT,
-			pow->hear_pos, pow->cross_plane);
-	    if(str_cmp("", pow->botch_msg_room))
-		act_new(pow->botch_msg_room, ch, vict, NULL, TO_NOTVICT,
-			pow->hear_pos, pow->cross_plane);
+		if(str_cmp("", pow->botch_msg_cast))
+			act_new(pow->botch_msg_cast, ch, vict, NULL, TO_CHAR, pow->hear_pos, pow->cross_plane);
+		if(str_cmp("", pow->botch_msg_vict))
+			act_new(pow->botch_msg_vict, ch, vict, NULL, TO_VICT, pow->hear_pos, pow->cross_plane);
+		if(str_cmp("", pow->botch_msg_room))
+			act_new(pow->botch_msg_room, ch, vict, NULL, TO_NOTVICT, pow->hear_pos, pow->cross_plane);
 		break;
 	case 0: /* Fail */
-	    if(str_cmp("", pow->fail_msg_cast))
-		act_new(pow->fail_msg_cast, ch, vict, NULL, TO_CHAR,
-			pow->hear_pos, pow->cross_plane);
-	    if(str_cmp("", pow->fail_msg_vict))
-		act_new(pow->fail_msg_vict, ch, vict, NULL, TO_VICT,
-			pow->hear_pos, pow->cross_plane);
-	    if(str_cmp("", pow->fail_msg_room))
-		act_new(pow->fail_msg_room, ch, vict, NULL, TO_NOTVICT,
-			pow->hear_pos, pow->cross_plane);
+		if(str_cmp("", pow->fail_msg_cast))
+			act_new(pow->fail_msg_cast, ch, vict, NULL, TO_CHAR, pow->hear_pos, pow->cross_plane);
+		if(str_cmp("", pow->fail_msg_vict))
+			act_new(pow->fail_msg_vict, ch, vict, NULL, TO_VICT, pow->hear_pos, pow->cross_plane);
+		if(str_cmp("", pow->fail_msg_room))
+			act_new(pow->fail_msg_room, ch, vict, NULL, TO_NOTVICT, pow->hear_pos, pow->cross_plane);
 		break;
 	case 1: /* Succeed */
-	    if(str_cmp("", pow->success_msg_cast))
-		act_new(pow->success_msg_cast, ch, vict, NULL, TO_CHAR,
-			pow->hear_pos, pow->cross_plane);
-	    if(str_cmp("", pow->success_msg_vict))
-		act_new(pow->success_msg_vict, ch, vict, NULL, TO_VICT,
-			pow->hear_pos, pow->cross_plane);
-	    if(str_cmp("", pow->success_msg_room))
-		act_new(pow->success_msg_room, ch, vict, NULL, TO_NOTVICT,
-			pow->hear_pos, pow->cross_plane);
+		if(str_cmp("", pow->success_msg_cast))
+		{
+			act_new(pow->success_msg_cast, ch, vict, NULL, TO_CHAR,	pow->hear_pos, pow->cross_plane);
+		}
+		if(str_cmp("", pow->success_msg_vict))
+		{
+			act_new(pow->success_msg_vict, ch, vict, NULL, TO_VICT,	pow->hear_pos, pow->cross_plane);
+		}
+		if(str_cmp("", pow->success_msg_room))
+		{
+			act_new(pow->success_msg_room, ch, vict, NULL, TO_NOTVICT, pow->hear_pos, pow->cross_plane);
+		}
 		break;
-    };
+	};
 }
 
 /* Standardized Character Affect Functions */

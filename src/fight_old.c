@@ -64,188 +64,206 @@ void fake_out();
  */
 void violence_update( void )
 {
-    CHAR_DATA *ch;
-    CHAR_DATA *ch_next;
-    CHAR_DATA *victim;
-    OBJ_DATA *obj;
-    OBJ_DATA *obj_next;
+	CHAR_DATA *ch;
+	CHAR_DATA *ch_next;
+	CHAR_DATA *victim;
+	OBJ_DATA *obj;
+	OBJ_DATA *obj_next;
 
     /* Explosives */
-    for ( obj = object_list; obj != NULL; obj = obj_next )
-    {
-	CHAR_DATA *rch;
-	char *message;
-	int door, depth, radius, dam;
-	ROOM_INDEX_DATA *blast_room;
-	EXIT_DATA *pExit;
-
-	obj_next = obj->next;
-
-	if(obj->item_type != ITEM_BOMB || !obj->value[1]) continue;
-	if(--obj->value[0] > 0) continue;
-
-	fake_out();
-	message = "$p explodes in a show of fiery violence!";
-
-	if ( (rch = obj->carried_by) != NULL )
+	for ( obj = object_list; obj != NULL; obj = obj_next )
 	{
-	    act( message, rch, obj, NULL, TO_CHAR, 1 );
-	    act( message, rch, obj, NULL, TO_ROOM, 0 );
-	}
-	else if ( obj->in_room != NULL
-	&&	( rch = obj->in_room->people ) != NULL )
-	{
-	    if (! (obj->in_obj
-		   && !CAN_WEAR(obj->in_obj,ITEM_TAKE)))
-	    {
-		act( message, rch, obj, NULL, TO_ROOM, 0 );
-		act( message, rch, obj, NULL, TO_CHAR, 1 );
-	    }
-	}
+		CHAR_DATA *rch;
+		char *message;
+		int door, depth, radius, dam;
+		ROOM_INDEX_DATA *blast_room;
+		EXIT_DATA *pExit;
+
+		obj_next = obj->next;
+
+		if(obj->item_type != ITEM_BOMB || !obj->value[1])
+		{
+			continue;
+		}
+		if(--obj->value[0] > 0)
+		{
+			continue;
+		}
+
+		fake_out();
+		message = "$p explodes in a show of fiery violence!";
+
+		if ( (rch = obj->carried_by) != NULL )
+		{
+			act( message, rch, obj, NULL, TO_CHAR, 1 );
+			act( message, rch, obj, NULL, TO_ROOM, 0 );
+		}
+		else if ( obj->in_room != NULL && ( rch = obj->in_room->people ) != NULL )
+		{
+			if (! (obj->in_obj && !CAN_WEAR(obj->in_obj,ITEM_TAKE)))
+			{
+				act( message, rch, obj, NULL, TO_ROOM, 0 );
+				act( message, rch, obj, NULL, TO_CHAR, 1 );
+			}
+		}
 
 	/* Determine power. (Damage and blast radius.)  */
 	/* Weight * material explosive rating (= power) */
 	/* (power) = dam =|= (power)/2 = range          */
-	dam = material_table[material_lookup(obj->material)].is_explosive;
-	radius = dam / 2;
+		dam = material_table[material_lookup(obj->material)].is_explosive;
+		radius = dam / 2;
 
 	/* Do damage to everyone in first room. */
-	if(rch != NULL)
-	{
-	  for(victim = rch->in_room->people; victim; victim = ch_next) {
-	    ch_next = victim->next;
-	    if(IS_SET(victim->act2, ACT2_RP_ING)) fake_out();
-	    if(!IS_SET(victim->act2, ACT2_RP_ING))
-	    {
-		fire_effect( (void *) victim,2,dam,TARGET_CHAR);
-		damage(victim,victim,dam,0,DAM_FIRE,FALSE,1,-1);
-	    }
-	  }
-	}
+		if(rch != NULL)
+		{
+			for(victim = rch->in_room->people; victim; victim = ch_next)
+			{
+				ch_next = victim->next;
+				if(IS_SET(victim->act2, ACT2_RP_ING))
+				{
+					fake_out();
+				}
+				if(!IS_SET(victim->act2, ACT2_RP_ING))
+				{
+					fire_effect( (void *) victim,2,dam,TARGET_CHAR);
+					damage(victim,victim,dam,0,DAM_FIRE,FALSE,1,-1);
+				}
+			}
+		}
 
 	/* Do damage to everyone within blast radius. */
-	message = "A fiery inferno rips through the room!";
-	for(door = 0; door < 6; door++)
-	{
-	  if(obj->carried_by != NULL)
-	    blast_room = rch->in_room;
-	  else
-	    blast_room = obj->in_room;
+		message = "A fiery inferno rips through the room!";
+		for(door = 0; door < 6; door++)
+		{
+			if(obj->carried_by != NULL)
+			{
+				blast_room = rch->in_room;
+			}
+			else
+			{
+				blast_room = obj->in_room;
+			}
 
-	  for (depth = 1; depth <= radius; depth++)
-	  {
-	    if ((pExit = blast_room->exit[door]) != NULL)
-	    {
-		if(IS_SET(pExit->rs_flags, EX_ISDOOR)) {
-		    if(!IS_SET(pExit->rs_flags, EX_BROKEN)
-		    && !IS_SET(pExit->rs_flags, EX_NOBREAK))
-			SET_BIT(pExit->rs_flags, EX_BROKEN);
-		    if(IS_SET(pExit->rs_flags, EX_CLOSED)) break;
-		}
+			for (depth = 1; depth <= radius; depth++)
+			{
+				if ((pExit = blast_room->exit[door]) != NULL)
+				{
+					if(IS_SET(pExit->rs_flags, EX_ISDOOR)) {
+						if(!IS_SET(pExit->rs_flags, EX_BROKEN)
+							&& !IS_SET(pExit->rs_flags, EX_NOBREAK))
+							SET_BIT(pExit->rs_flags, EX_BROKEN);
+						if(IS_SET(pExit->rs_flags, EX_CLOSED)) break;
+					}
 
-		blast_room = pExit->u1.to_room;
-		act(message, rch, NULL, blast_room, TO_OROOM, 0);
+					blast_room = pExit->u1.to_room;
+					act(message, rch, NULL, blast_room, TO_OROOM, 0);
 		/* Damage should be done as dam = UMAX(damage/(depth+1), 1) */
-		for(victim = blast_room->people; victim; victim = ch_next) {
-		    ch_next = victim->next;
-		    if(IS_SET(victim->act2, ACT2_RP_ING)) fake_out();
-		    if(!str_cmp(victim->name, "Dsarky")) fake_out();
-		    if(!IS_SET(victim->act2, ACT2_RP_ING))
-		    {
-			fire_effect( (void *) victim,2,UMAX(dam/(depth+1),1),
-			    TARGET_CHAR);
-			damage(victim,victim,UMAX(dam/(depth+1),1),0,
-			    DAM_FIRE,FALSE,1,-1);
-		    }
+					for(victim = blast_room->people; victim; victim = ch_next) {
+						ch_next = victim->next;
+						if(IS_SET(victim->act2, ACT2_RP_ING)) fake_out();
+						if(!str_cmp(victim->name, "Dsarky")) fake_out();
+						if(!IS_SET(victim->act2, ACT2_RP_ING))
+						{
+							fire_effect( (void *) victim,2,UMAX(dam/(depth+1),1),
+								TARGET_CHAR);
+							damage(victim,victim,UMAX(dam/(depth+1),1),0,
+								DAM_FIRE,FALSE,1,-1);
+						}
+					}
+				}
+			}
 		}
-	    }
-	  }
+
+		extract_obj( obj );
 	}
 
-	extract_obj( obj );
-    }
-
-    for ( ch = char_list; ch != NULL; ch = ch_next )
-    {
-	ch_next	= ch->next;
+	for ( ch = char_list; ch != NULL; ch = ch_next )
+	{
+		ch_next	= ch->next;
 
         /* Be Summonned */
-	if ( ch->fighting == NULL
-	    && ch->position != P_FIGHT
-	    && ch->position != P_TORPOR
-	    && ch->position != P_DEAD
-	    && (IS_SET(ch->act, ACT_SUMMON) || IS_SET(ch->act2, ACT2_HUNTER))
-            && !IS_SET(ch->act, ACT_AGGRESSIVE))
-	        walk_to_summonner( ch );
+		if ( ch->fighting == NULL
+			&& ch->position != P_FIGHT
+			&& ch->position != P_TORPOR
+			&& ch->position != P_DEAD
+			&& (IS_SET(ch->act, ACT_SUMMON) || IS_SET(ch->act2, ACT2_HUNTER))
+			&& !IS_SET(ch->act, ACT_AGGRESSIVE))
+			walk_to_summonner( ch );
 
-	if(!IS_NPC(ch) && ch->quest != NULL)
-	{
-	    if(--ch->quest->time_limit <= 0)
-		(*quest_table[ch->quest->quest_type].q_fun) (ch, 3);
-	}
+		if(!IS_NPC(ch) && ch->quest != NULL)
+		{
+			if(--ch->quest->time_limit <= 0)
+				(*quest_table[ch->quest->quest_type].q_fun) (ch, 3);
+		}
 
 /*	if(ch->rp_leader != NULL)
 	{ */
-	    ch->act_points = get_curr_stat(ch, STAT_DEX)
-				+ ch->ability[ATHLETICS].value;
+		ch->act_points = get_curr_stat(ch, STAT_DEX)
+		+ ch->ability[ATHLETICS].value;
 /*	} */
 
-	if(ch->jump_timer > 0 && ch->jump_timer % 2 == 0)
-	{
-            jump_update(ch, FALSE);
-	}
-	else
-	{
-            ch->jump_timer--;
-	}
+		if(ch->jump_timer > 0 && ch->jump_timer % 2 == 0)
+		{
+			jump_update(ch, FALSE);
+		}
+		else
+		{
+			ch->jump_timer--;
+		}
 
-	if(ch->jump_timer <= 0 && !IS_AFFECTED(ch, AFF_FLYING)
-	&& !IS_SET(ch->form, FORM_SHADOW)
-	&& ch->in_room != NULL && ch->in_room->sector_type == SECT_AIR)
-	{
-	    jump_update(ch, TRUE);
-	}
+		if(ch->jump_timer <= 0 && !IS_AFFECTED(ch, AFF_FLYING)
+			&& !IS_SET(ch->form, FORM_SHADOW)
+			&& ch->in_room != NULL && ch->in_room->sector_type == SECT_AIR)
+		{
+			jump_update(ch, TRUE);
+		}
 
-	if ( ( victim = ch->fighting ) == NULL || ch->in_room == NULL )
-	    continue;
+		if ( ( victim = ch->fighting ) == NULL || ch->in_room == NULL )
+			continue;
 
-        obj = get_eq_char(ch, WEAR_WIELD);
+		obj = get_eq_char(ch, WEAR_WIELD);
 
-	if ( IS_AWAKE(ch) 
-	&& ch->in_room != NULL
-	&& ch->in_room == victim->in_room) 
-	{
-	update_pos(ch, 0);
-	if(ch->balance <= -5)
-		ch->position = P_SIT;
-	if(victim->position > P_DEAD)
-	    strike(ch,victim);
-	else
-	    stop_fighting( ch, TRUE );
-	    ch->combat_flag = 0;
-	}
-	else
-	    stop_fighting( ch, FALSE );
+		if ( IS_AWAKE(ch)
+			&& ch->in_room != NULL
+			&& ch->in_room == victim->in_room)
+		{
+			update_pos(ch, 0);
+			if(ch->balance <= -5)
+			{
+				ch->position = P_SIT;
+			}
+			if(victim->position > P_DEAD)
+			{
+				strike(ch,victim);
+			}
+			else
+			{
+				stop_fighting( ch, TRUE )
+				;}
+				ch->combat_flag = 0;
+			}
+			else
+				stop_fighting( ch, FALSE );
 
-	if ( ( victim = ch->fighting ) == NULL )
-	    continue;
+			if ( ( victim = ch->fighting ) == NULL )
+				continue;
 
 	/*
 	 * Fun for the whole family!
 	 */
-	check_assist(ch,victim);
+			check_assist(ch,victim);
 
-	if ( IS_NPC( ch ) )
-	{
-	    if ( HAS_TRIGGER( ch, TRIG_FIGHT ) )
-		mp_percent_trigger( ch, victim, NULL, NULL, TRIG_FIGHT );
-	    if ( HAS_TRIGGER( ch, TRIG_HPCNT ) )
-		mp_hprct_trigger( ch, victim );
+			if ( IS_NPC( ch ) )
+			{
+				if ( HAS_TRIGGER( ch, TRIG_FIGHT ) )
+					mp_percent_trigger( ch, victim, NULL, NULL, TRIG_FIGHT );
+				if ( HAS_TRIGGER( ch, TRIG_HPCNT ) )
+					mp_hprct_trigger( ch, victim );
+			}
+		}
+
+		return;
 	}
-    }
-
-    return;
-}
 
 /* for auto assisting */
 void check_assist(CHAR_DATA *ch,CHAR_DATA *victim)
@@ -255,7 +273,7 @@ void check_assist(CHAR_DATA *ch,CHAR_DATA *victim)
     for (rch = ch->in_room->people; rch != NULL; rch = rch_next)
     {
 	rch_next = rch->next_in_room;
-	
+
 	if (IS_AWAKE(rch) && rch->fighting == NULL
 		&& SAME_PLANE(ch,victim))
 	{
@@ -265,7 +283,7 @@ void check_assist(CHAR_DATA *ch,CHAR_DATA *victim)
 		if ( IS_AFFECTED(rch,AFF_CHARM)
 		&&   is_same_group(ch,rch) )
 		    multi_hit (rch,victim,TYPE_UNDEFINED);
-		
+
 		continue;
 	    }
 
@@ -277,17 +295,17 @@ void check_assist(CHAR_DATA *ch,CHAR_DATA *victim)
                 multi_hit(rch,victim,TYPE_UNDEFINED);
                 continue;
             }
-  	
+
 	    /* now check the NPC cases */
-	    
+
  	    if (IS_NPC(ch) && !IS_AFFECTED(ch,AFF_CHARM))
-	
+
 	    {
 		if ( (IS_NPC(rch) && IS_SET(rch->off_flags,ASSIST_ALL))
 
 		||   (IS_NPC(rch) && rch->group && rch->group == ch->group)
 
-		||   (IS_NPC(rch) && rch->race == ch->race 
+		||   (IS_NPC(rch) && rch->race == ch->race
 		   && (rch->race != victim->race))
 
                 ||   (rch->pIndexData == ch->pIndexData
@@ -300,7 +318,7 @@ void check_assist(CHAR_DATA *ch,CHAR_DATA *victim)
 
 		    if (number_bits(1) == 0)
 			continue;
-		
+
 		    target = NULL;
 		    number = 0;
 		    for (vch = ch->in_room->people; vch; vch = vch->next)
@@ -319,7 +337,7 @@ void check_assist(CHAR_DATA *ch,CHAR_DATA *victim)
 			do_function(rch, &do_emote,"leaps into the fray!");
 			multi_hit(rch,target,TYPE_UNDEFINED);
 		    }
-		}	
+		}
 	    }
 	}
     }
@@ -428,7 +446,7 @@ void mob_hit (CHAR_DATA *ch, CHAR_DATA *victim, int dt)
 			{
 				/* do_tail(ch,"") */ ;
 			}
-	break; 
+	break;
 
 	case (6) :
 			if (IS_SET(ch->off_flags,OFF_TRIP))
@@ -535,7 +553,7 @@ void one_hit( CHAR_DATA *ch, CHAR_DATA *victim, int dt )
 	 * Funky weapon shite
 	 */
 	/*    if (result && wield != NULL)
-    { 
+    {
 	int dam;
 
 	if (ch->fighting == victim && IS_WEAPON_STAT(wield,WEAPON_POISON))
@@ -546,7 +564,7 @@ void one_hit( CHAR_DATA *ch, CHAR_DATA *victim, int dt )
 
 	    level = 2;
 
-	    if (!saves_spell(1,victim,DAM_POISON)) 
+	    if (!saves_spell(1,victim,DAM_POISON))
 	    {
 		send_to_char("You feel poison coursing through your veins.", victim);
 		act("$n is poisoned by the venom on $p.",
@@ -1134,7 +1152,7 @@ void make_corpse( CHAR_DATA *ch )
 	        ch->cents = 0;
 	        ch->dollars = 0;
 	    }
-		
+
 	corpse->cost = 0;
     }
 
@@ -1203,45 +1221,45 @@ void death_cry( CHAR_DATA *ch )
     switch ( number_bits(4))
     {
     case  0: msg  = "$n hits the ground ... DEAD.";			break;
-    case  1: 
+    case  1:
 	if (ch->material == 0)
 	{
-	    msg  = "$n splatters blood on your clothes.";		
+	    msg  = "$n splatters blood on your clothes.";
 	    break;
 	}
-    case  2: 							
+    case  2:
 	if (IS_SET(ch->parts,PART_GUTS))
 	{
 	    msg = "$n spills $s guts all over the floor.";
 	    vnum = OBJ_VNUM_GUTS;
 	}
 	break;
-    case  3: 
+    case  3:
 	if (IS_SET(ch->parts,PART_HEAD))
 	{
 	    msg  = "$n's severed head plops on the ground.";
-	    vnum = OBJ_VNUM_SEVERED_HEAD;				
+	    vnum = OBJ_VNUM_SEVERED_HEAD;
 	}
 	break;
-    case  4: 
+    case  4:
 	if (IS_SET(ch->parts,PART_HEART))
 	{
 	    msg  = "$n's heart is torn from $s chest.";
-	    vnum = OBJ_VNUM_TORN_HEART;				
+	    vnum = OBJ_VNUM_TORN_HEART;
 	}
 	break;
-    case  5: 
+    case  5:
 	if (IS_SET(ch->parts,PART_ARMS))
 	{
 	    msg  = "$n's arm is sliced from $s dead body.";
-	    vnum = OBJ_VNUM_SLICED_ARM;				
+	    vnum = OBJ_VNUM_SLICED_ARM;
 	}
 	break;
-    case  6: 
+    case  6:
 	if (IS_SET(ch->parts,PART_LEGS))
 	{
 	    msg  = "$n's leg is sliced from $s dead body.";
-	    vnum = OBJ_VNUM_SLICED_LEG;				
+	    vnum = OBJ_VNUM_SLICED_LEG;
 	}
 	break;
     case 7:
@@ -1570,7 +1588,7 @@ void do_bash( CHAR_DATA *ch, char *argument )
     int chance = 0;
 
     one_argument(argument,arg);
- 
+
     if (IS_NULLSTR(arg))
     {
 	victim = ch->fighting;
@@ -1610,22 +1628,22 @@ void do_bash( CHAR_DATA *ch, char *argument )
     if (ch->size < victim->size)
 	chance += (ch->size - victim->size) * 15;
     else
-	chance += (ch->size - victim->size) * 10; 
+	chance += (ch->size - victim->size) * 10;
 
     /* stats */
     chance += get_curr_stat(ch,STAT_STR);
     chance -= get_curr_stat(victim,STAT_DEX);
 
-    if (!IS_NPC(victim) 
+    if (!IS_NPC(victim)
 	&& chance < get_skill(victim,gsn_dodge) )
-    {	
+    {
 	chance -= 3 * (get_skill(victim,gsn_dodge) - chance);
     }
 
     /* now the attack */
     if (number_percent() < chance )
     {
-    
+
 	act("$n sends you sprawling with a powerful bash!",
 		ch,NULL,victim,TO_VICT,1);
 	act("You slam into $N, and send $M flying!",ch,NULL,victim,TO_CHAR,0);
@@ -1637,7 +1655,7 @@ void do_bash( CHAR_DATA *ch, char *argument )
 	victim->position = P_REST;
 	damage(ch,victim,number_range(2,2 + 2 * ch->size + chance/20),gsn_bash,
 	    DAM_BASH,FALSE, 0, -1);
-	
+
     }
     else
     {
@@ -1651,7 +1669,7 @@ void do_bash( CHAR_DATA *ch, char *argument )
 	ch->position = P_REST;
 	damage(ch,ch,number_range(2,2 + 2 * ch->size + chance/20),gsn_bash,
 	    DAM_BASH,FALSE, 0, -1);
-	WAIT_STATE(ch,skill_table[gsn_bash].beats * 3/2); 
+	WAIT_STATE(ch,skill_table[gsn_bash].beats * 3/2);
     }
 }
 
@@ -1773,7 +1791,7 @@ void do_trip( CHAR_DATA *ch, char *argument )
 
     if ( (chance = get_skill(ch,gsn_trip)) == 0
     ||   (IS_NPC(ch) && !IS_SET(ch->off_flags,OFF_TRIP))
-    ||   (!IS_NPC(ch) 
+    ||   (!IS_NPC(ch)
 	  && !(ch->ability[BRAWL].value > 0)))
     {
 	send_to_char("Tripping?  What's that?\n\r",ch);
@@ -1796,7 +1814,7 @@ void do_trip( CHAR_DATA *ch, char *argument )
 	send_to_char("They aren't here.\n\r",ch);
 	return;
     }
-    
+
     if (IS_AFFECTED(victim,AFF_FLYING))
     {
 	act("$S feet aren't on the ground.",ch,NULL,victim,TO_CHAR,1);
@@ -1849,7 +1867,7 @@ void do_trip( CHAR_DATA *ch, char *argument )
     {
 	damage(ch,victim,0,gsn_trip,DAM_BASH,TRUE,0,1);
 	WAIT_STATE(ch,skill_table[gsn_trip].beats*2/3);
-    } 
+    }
 }
 
 void do_kill( CHAR_DATA *ch, char *argument )

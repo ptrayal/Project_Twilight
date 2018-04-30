@@ -67,12 +67,12 @@ ROOM_INDEX_DATA  *get_random_room(CHAR_DATA *ch)
 
 /* RT Enter portals */
 void do_enter( CHAR_DATA *ch, char *argument)
-{    
-    ROOM_INDEX_DATA *location; 
+{
+    ROOM_INDEX_DATA *location;
 
     CheckCH(ch);
 
-    if ( ch->fighting != NULL ) 
+    if ( ch->fighting != NULL )
 	return;
 
     /* nifty portal stuff */
@@ -85,14 +85,14 @@ void do_enter( CHAR_DATA *ch, char *argument)
         old_room = ch->in_room;
 
 	portal = get_obj_list( ch, argument,  ch->in_room->contents );
-	
+
 	if (portal == NULL)
 	{
 	    send_to_char("You don't see that here.\n\r",ch);
 	    return;
 	}
 
-	if (portal->item_type != ITEM_PORTAL 
+	if (portal->item_type != ITEM_PORTAL
         ||  (IS_SET(portal->value[1],EX_CLOSED)
 	&& !IS_TRUSTED(ch,LEVEL_IMMORTAL)))
 	{
@@ -101,7 +101,7 @@ void do_enter( CHAR_DATA *ch, char *argument)
 	}
 
 	if (!IS_SET(portal->value[2],GATE_NOCURSE)
-	&&  (IS_AFFECTED(ch,AFF_CURSE) 
+	&&  (IS_AFFECTED(ch,AFF_CURSE)
 	||   IS_SET(old_room->room_flags,ROOM_NO_RECALL)))
 	{
 	    send_to_char("Something prevents you from leaving...\n\r",ch);
@@ -120,7 +120,7 @@ void do_enter( CHAR_DATA *ch, char *argument)
 
 	if (location == NULL
 	||  location == old_room
-	||  !can_see_room(ch,location) 
+	||  !can_see_room(ch,location)
 	||  (room_is_private(location) && !IS_TRUSTED(ch,IMPLEMENTOR)))
 	{
 	   act("$p doesn't seem to go anywhere.",ch,portal,NULL,TO_CHAR,1);
@@ -172,10 +172,10 @@ void do_enter( CHAR_DATA *ch, char *argument)
     	{
             fch_next = fch->next_in_room;
 
-            if (portal == NULL || portal->value[0] == -1) 
+            if (portal == NULL || portal->value[0] == -1)
 	    /* no following through dead portals */
                 continue;
- 
+
             if ( fch->master == ch && IS_AFFECTED(fch,AFF_CHARM)
             &&   fch->position < P_STAND)
 		do_function(ch, &do_look, "");
@@ -549,7 +549,7 @@ void do_reject( CHAR_DATA *ch, char *argument )
 
     name[0] = UPPER( name[0] );
 
-    if ( strstr( ch->pcdata->ignore_reject, name ) != '\0' )
+    if ( strstr( ch->pcdata->ignore_reject, name ) != NULL )
     {
         ch->pcdata->ignore_reject = string_replace(
 	    ch->pcdata->ignore_reject, name, "\0" );
@@ -566,7 +566,7 @@ void do_reject( CHAR_DATA *ch, char *argument )
     else
     {
         buf[0] = '\0';
-        if ( strstr( ch->pcdata->ignore_reject, "None" ) != '\0' )
+        if ( strstr( ch->pcdata->ignore_reject, "None" ) != NULL )
         {
             ch->pcdata->ignore_reject = string_replace(
 		ch->pcdata->ignore_reject, "None", "\0" );
@@ -611,7 +611,7 @@ void do_block( CHAR_DATA *ch, char *argument )
 
     name[0] = UPPER( name[0] );
 
-    if ( strstr( ch->pcdata->block_join, name ) != '\0' )
+    if ( strstr( ch->pcdata->block_join, name ) != NULL )
     {
         ch->pcdata->block_join = string_replace(
 	    ch->pcdata->block_join, name, "\0" );
@@ -628,7 +628,7 @@ void do_block( CHAR_DATA *ch, char *argument )
     else
     {
         buf[0] = '\0';
-        if ( strstr( ch->pcdata->block_join, "None" ) != '\0' )
+        if ( strstr( ch->pcdata->block_join, "None" ) != NULL )
         {
             ch->pcdata->block_join = string_replace(
 		ch->pcdata->block_join, "None", "\0" );
@@ -680,8 +680,8 @@ void do_apply(CHAR_DATA *ch, char *argument)
 	}
 
 	if(!strstr(org->races, capitalize(race_table[ch->race].name))
-			&& !strstr(org->races, capitalize(clan_table[ch->clan].name))
-			&& !strstr(org->races, "All"))
+		&& !strstr(org->races, capitalize(clan_table[ch->clan].name))
+		&& !strstr(org->races, "All"))
 	{
 		send_to_char("You aren't eligible for membership.\n\r", ch);
 		return;
@@ -700,8 +700,7 @@ void do_apply(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if(is_online(org->leader)
-			&& strstr( org->applicants, ch->name ) != '\0')
+	if(is_online(org->leader) && strstr( org->applicants, ch->name ) != NULL)
 	{
 		if((vch = get_char_world(ch, org->leader)) == NULL)
 		{
@@ -717,7 +716,7 @@ void do_apply(CHAR_DATA *ch, char *argument)
 		act("$n has applied to join $t.", ch, org->name, vch, TO_VICT,1);
 	}
 
-	if ( strstr( org->applicants, ch->name ) != '\0' )
+	if ( strstr( org->applicants, ch->name ) != NULL )
 	{
 		org->applicants = string_replace( org->applicants, ch->name, "" );
 		org->applicants = string_unpad( org->applicants );
@@ -732,7 +731,7 @@ void do_apply(CHAR_DATA *ch, char *argument)
 	else
 	{
 		buf[0] = '\0';
-		if ( strstr(org->applicants, "None") != '\0' )
+		if ( strstr(org->applicants, "None") != NULL )
 		{
 			org->applicants = string_replace( org->applicants, "None", "\0" );
 			org->applicants = string_unpad( org->applicants );
@@ -793,7 +792,7 @@ void do_refuse(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if ( strstr( org->applicants, argument ) != '\0' )
+	if ( strstr( org->applicants, argument ) != NULL )
 	{
 		org->applicants = string_replace( org->applicants, argument, "" );
 		org->applicants = string_unpad( org->applicants );

@@ -103,7 +103,7 @@ int virtue_lookup (const char *name)
 
 int disc_lookup (CHAR_DATA *ch, const char *name)
 {
-	int pos;
+	int pos = 0;
 
 	for (pos = 0; disc_table[pos].vname != NULL; pos++)
 	{
@@ -114,15 +114,26 @@ int disc_lookup (CHAR_DATA *ch, const char *name)
 		}
 		else if(ch->race == race_lookup("werewolf"))
 		{
-			if(disc_table[pos].wname == NULL) break; if (LOWER(name[0]) == LOWER(disc_table[pos].wname[0])
-					&&  !str_prefix(name,disc_table[pos].wname))
+			if(disc_table[pos].wname == NULL)
+			{
+				break;
+			}
+			if (LOWER(name[0]) == LOWER(disc_table[pos].wname[0])
+				&&  !str_prefix(name,disc_table[pos].wname))
+			{
 				return pos;
+			}
 		}
 		else if(ch->race == race_lookup("human"))
 		{
-			if(disc_table[pos].hname == NULL) break;
+			if(disc_table[pos].hname == NULL)
+			{
+				break;
+			}
 			if (LOWER(name[0]) == LOWER(disc_table[pos].hname[0]) &&  !str_prefix(name,disc_table[pos].hname))
+			{
 				return pos;
+			}
 		}
 	}
 
