@@ -167,12 +167,6 @@ E
 XDUMB1~
 None~
 E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
-E
 color~
 Topic:  Color, Colour, However You Spell It Syntax: colour (Or for the US people, color) Description:Turn on the multicoloured fun with the new colourified Project.~
 D0
@@ -200,12 +194,6 @@ XNUMB1~
 Unnamed Room~
 E
 XDUMB1~
-None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
 None~
 E
 rpavail~
@@ -251,12 +239,6 @@ E
 XDUMB1~
 None~
 E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
-E
 dmote~
 Topic: Emotes - Free-form Actions Syntax:emote <action>pmote <action>dmote <action>dpmote <action> Description:Emotes allow greater breadth of actions than socials, but do limitthe display to being the same for the character, any target ortargets, and the rest of those present in the locale. Pmote allowsfor directed actions so that a target character will receive "you"instead of their name. Dmote allows for a scene-setting statementto be made, and pdmote allows for that statement to be directedin the same way as pmote. ~
 E
@@ -291,12 +273,6 @@ E
 XDUMB1~
 None~
 E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
-E
 droll~
 Topic:Dice RollingSyntax:droll <ability/stat> <person to send the rolls to>Description: The droll command is useful when a storyteller asks you tomake a particular roll against something for a plot.  So, for example,if Rayal asks you for an acting ability roll, you would type "drollacting rayal" and it would send the results to both Rayal and you.~
 E
@@ -329,12 +305,6 @@ XNUMB1~
 Unnamed Room~
 E
 XDUMB1~
-None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
 None~
 E
 apply~
@@ -373,12 +343,6 @@ XNUMB1~
 Unnamed Room~
 E
 XDUMB1~
-None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
 None~
 E
 prompt~
@@ -431,12 +395,6 @@ E
 XDUMB1~
 None~
 E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
-E
 give~
 Topic:  Get, Take, Drop, Put, Give Syntax:  <see description below> Description:Syntax: get <item> - picks an item up off the ground.Syntax: get <item> <container> - gets an item from a container.Syntax: take <item> - picks an item up off the ground.Syntax: take <item> <container> - gets an item from a container.Syntax: drop <item> - drops an item from your inventory on the ground.Syntax: put <item> <container> - puts an item inside a container.Syntax: give <item> <person> - gives an item to a person.~
 E
@@ -487,12 +445,6 @@ E
 XDUMB1~
 None~
 E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
-E
 list~
 Topic:  Buying, Selling, and "What do you got" Syntax:  buy <item> <keeper>sell <item> <keeper>list <keeper> (Optional Item Name) Description:Assuming that you're intending to play the game, eventually you'll needto buy from or sell to shops. The buy and sell commands are used toachieve this. To get a list of what the shop has to offer, and some idea of what youcan sell to it, use list and a full list of available items will beshown.~
 E
@@ -524,12 +476,6 @@ XNUMB1~
 Unnamed Room~
 E
 XDUMB1~
-None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
 None~
 E
 attributes~
@@ -579,12 +525,6 @@ E
 XDUMB1~
 None~
 E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
-E
 description~
 Syntax:  description (no argument) Description:The description of a character is a vital component of yourexperience here at Project Twilight.  It is what others see of you whenyou are here and they look at you.  As such, everyone should make aneffort to have a complete and concise description of their character.This is what people see when they look at you, minus your clothing orequipment. It includes, but is not limited to:* Your demeanor (Calm, Thoughtful,Stable, Meanacing, Shy, Rude, etc)* Your eye color (Blue, Green, Black, Brown, Amber, Cyan, White, Yellow, etc)* Your skin color (pale, brown, white, red, tan, black, etc)* Your facial appearance (plain, ancient, angry, troubled, rugged, gentle, etc)* Hair length (shoulder/waist length, short, shaved, bald, etc)* Your hair style (curly, wavy, kinky, straight, smooth, thin, thick, etc)* Your body build (muscular, thin, lithe, broad, fat, skeletal, average, etc)* Your facial hair (none, goatee, beard, peachfuzz, clean shaven, etc)* Your hair color (black, blonde, red, auburn, dark, grey, raven, bleached, etc) All of these features and more can help you make a complete and accuratedescription of your character.~
 E
@@ -618,12 +558,6 @@ XNUMB1~
 Unnamed Room~
 E
 XDUMB1~
-None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
 None~
 E
 note~
@@ -660,12 +594,6 @@ XNUMB1~
 Unnamed Room~
 E
 XDUMB1~
-None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
 None~
 E
 delete~
@@ -712,12 +640,6 @@ XNUMB1~
 Unnamed Room~
 E
 XDUMB1~
-None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
 None~
 E
 society~
@@ -793,12 +715,6 @@ E
 XDUMB1~
 You've always known you were a little different, and you still may nottotally realize just how different until the first time it happens to you. When your bones begin to grind and crunch, your muscles and sinews snappingand reforming within your body as if it has a mind of it's own.  Your first{Ctransform{gation can be difficult and even dangerous - but it is one thatyou will most likely never forget.  The raw {Cpower{g urging you to submitto the {Crage{g - both a tool and an enemy.  Then there's the first time yourealize there are others like you - and they show you how to {Cuwalk{gsafely into the {Cumbra{g.  That one day you met your {Ctotem{g was the dayyou gained {Cgift{gs to protect {Cgaia{g.  If everything happens for apurpose what purpose will you serve?  {x ~
 E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
-E
 silverfangs~
 Topic:  Silver Fangs Description:Once the unquestioned rulers of Garou society, the Fangs are descendedfrom some of the greatest werewolves in history. Lineage and ancestry iscritical to them. Since their glorious days in their Russian homelands,they have fallen prey to tragic flaws, often spiraling into despair andmadness.~
 E
@@ -861,12 +777,6 @@ E
 XDUMB1~
 None~
 E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
-E
 ventrue~
 Topic:  Clan Ventrue, "The Bluebloods" Description:Capitalists, aristocrats, crusaders and criminals: The Ventrue haveassumed the prestigious but demanding role of leaders.  Forever in theline of fire, they have sacrificed their own comfort for the good of allKindred.  Or is this all a facade that hides their excesses and greed?The Kindred of Clan Ventrue have a reputation for being honorable,genteel and of impeccable taste.  From time out of mind, Ventrue hasbeen the clan of leadership, enforcing the ancient traditions andseeking to shape the destiny of the Kindred.  In nights of old, Ventruewere chosen from nobles, merchant princes or other wielders of power. In modern times the clan recruits from wealthy "old money" families,ruthless corporate climbers, and politicians.  Whatever their origin,Ventrue vampires preserve stability and maintain order for theCamarilla.  Other Kindred often mistake this for arrogance or avarice,but to the Ventrue, their shepherd's role is more burden than honor.~
 E
@@ -922,12 +832,6 @@ Unnamed Room~
 E
 XDUMB1~
 None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
 M 0 H 100
 S
 #8296
@@ -939,12 +843,6 @@ XNUMB1~
 Unnamed Room~
 E
 XDUMB1~
-None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
 None~
 M 0 H 100
 S
@@ -958,12 +856,6 @@ Unnamed Room~
 E
 XDUMB1~
 None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
 M 0 H 100
 S
 #8298
@@ -975,12 +867,6 @@ XNUMB1~
 Unnamed Room~
 E
 XDUMB1~
-None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
 None~
 M 0 H 100
 S
@@ -994,12 +880,6 @@ Unnamed Room~
 E
 XDUMB1~
 None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
 M 0 H 100
 S
 #8300
@@ -1011,12 +891,6 @@ XNUMB1~
 Unnamed Room~
 E
 XDUMB1~
-None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
 None~
 M 0 H 100
 S
@@ -1030,12 +904,6 @@ Unnamed Room~
 E
 XDUMB1~
 None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
 M 0 H 100
 S
 #8302
@@ -1047,12 +915,6 @@ XNUMB1~
 Unnamed Room~
 E
 XDUMB1~
-None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
 None~
 M 0 H 100
 S
@@ -1066,12 +928,6 @@ Unnamed Room~
 E
 XDUMB1~
 None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
 M 0 H 100
 S
 #8304
@@ -1083,12 +939,6 @@ XNUMB1~
 Unnamed Room~
 E
 XDUMB1~
-None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
 None~
 M 0 H 100
 S
@@ -1102,12 +952,6 @@ Unnamed Room~
 E
 XDUMB1~
 None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
 M 0 H 100
 S
 #8306
@@ -1119,12 +963,6 @@ XNUMB1~
 Unnamed Room~
 E
 XDUMB1~
-None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
 None~
 M 0 H 100
 S
@@ -1138,12 +976,6 @@ Unnamed Room~
 E
 XDUMB1~
 None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
 M 0 H 100
 S
 #8308
@@ -1155,12 +987,6 @@ XNUMB1~
 Unnamed Room~
 E
 XDUMB1~
-None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
 None~
 M 0 H 100
 S
@@ -1174,12 +1000,6 @@ Unnamed Room~
 E
 XDUMB1~
 None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
 M 0 H 100
 S
 #8310
@@ -1191,12 +1011,6 @@ XNUMB1~
 Unnamed Room~
 E
 XDUMB1~
-None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
 None~
 M 0 H 100
 S
@@ -1210,12 +1024,6 @@ Unnamed Room~
 E
 XDUMB1~
 None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
 M 0 H 100
 S
 #8312
@@ -1227,12 +1035,6 @@ XNUMB1~
 Unnamed Room~
 E
 XDUMB1~
-None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
 None~
 M 0 H 100
 S
@@ -1246,12 +1048,6 @@ Unnamed Room~
 E
 XDUMB1~
 None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
 M 0 H 100
 S
 #8314
@@ -1263,12 +1059,6 @@ XNUMB1~
 Unnamed Room~
 E
 XDUMB1~
-None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
 None~
 M 0 H 100
 S
@@ -1282,12 +1072,6 @@ Unnamed Room~
 E
 XDUMB1~
 None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
 M 0 H 100
 S
 #8316
@@ -1299,12 +1083,6 @@ XNUMB1~
 Unnamed Room~
 E
 XDUMB1~
-None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
 None~
 M 0 H 100
 S
@@ -1318,12 +1096,6 @@ Unnamed Room~
 E
 XDUMB1~
 None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
 M 0 H 100
 S
 #8318
@@ -1335,12 +1107,6 @@ XNUMB1~
 Unnamed Room~
 E
 XDUMB1~
-None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
 None~
 M 0 H 100
 S
@@ -1354,12 +1120,6 @@ Unnamed Room~
 E
 XDUMB1~
 None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
 M 0 H 100
 S
 #8320
@@ -1371,12 +1131,6 @@ XNUMB1~
 Unnamed Room~
 E
 XDUMB1~
-None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
 None~
 M 0 H 100
 S

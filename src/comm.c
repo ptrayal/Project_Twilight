@@ -1329,15 +1329,16 @@ bool read_from_descriptor( DESCRIPTOR_DATA *d )
 
 	/* Hold horses if pending command already. */
 	if ( !IS_NULLSTR(d->incomm) )
+	{
 		return TRUE;
+	}
 
 	/* Check for overflow. */
 	iStart = 0;
 	if ( strlen(d->inbuf) >= sizeof(d->inbuf) - 10 )
 	{
 		log_string( LOG_ERR, Format("%s input overflow!", d->host) );
-		write_to_descriptor( d->descriptor,
-				"\n\r*** PUT A LID ON IT!!! ***\n\r", 0 );
+		write_to_descriptor( d->descriptor, "\n\r*** PUT A LID ON IT!!! ***\n\r", 0 );
 		return FALSE;
 	}
 
@@ -1345,30 +1346,38 @@ bool read_from_descriptor( DESCRIPTOR_DATA *d )
 #if defined(Macintosh)
 	for ( ; ; )
 	{
-		int c;
+		int c = 0;
 		c = getc( stdin );
 		if ( c == '\0' || c == EOF )
+		{
 			break;
+		}
 		putc( c, stdout );
 		if ( c == '\r' )
+		{
 			putc( '\n', stdout );
+		}
 		read_buf[iStart++] = c;
 		if ( iStart > sizeof(d->inbuf) - 10 )
+		{
 			break;
+		}
 	}
 #endif
 
 #if defined(MSDOS) || defined(__unix__)
 	for ( ; ; )
 	{
-		int nRead;
+		int nRead = 0;
 
 		nRead = read( d->descriptor, read_buf + iStart, sizeof(read_buf) - 10 - iStart );
 		if ( nRead > 0 )
 		{
 			iStart += nRead;
 			if ( read_buf[iStart-1] == '\n' || read_buf[iStart-1] == '\r' )
+			{
 				break;
+			}
 		}
 
 		else if ( nRead == 0 )
@@ -1377,7 +1386,9 @@ bool read_from_descriptor( DESCRIPTOR_DATA *d )
 			return FALSE;
 		}
 		else if ( errno == EWOULDBLOCK )
+		{
 			break;
+		}
 		else
 		{
 			perror( "Read_from_descriptor" );
@@ -1388,9 +1399,13 @@ bool read_from_descriptor( DESCRIPTOR_DATA *d )
 
 	read_buf[iStart] = '\0';
 	if(d->pProtocol)
+	{
 		ProtocolInput( d, read_buf, iStart, d->inbuf );
+	}
 	else
+	{
 		strncpy(d->inbuf, read_buf, MSL*4);
+	}
 
 	return TRUE;
 }
@@ -2179,15 +2194,28 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 			}
 
 			/* PFile backup */
-			if(!fBak) {
+			if(!fBak)
+			{
 				snprintf(arg, sizeof(arg), "cp %s%s %s%s",
 						PLAYER_DIR, d->character->name,
 						PLAYER_BACKUP_DIR, d->character->name);
-				system(arg);
+				int systemRet = system(arg);
+				if(systemRet == -1)
+				{
+					log_string(LOG_BUG, "Error in Pfile Backups. Custom Error 901.");
+				}
+				// system(arg);
 			}
-			else if(fBak && fRestore) {
+			else if(fBak && fRestore)
+			{
 				snprintf(arg, sizeof(arg), "cp %s%s %s%s", PLAYER_BACKUP_DIR, d->character->name, PLAYER_DIR, d->character->name);
-				system(arg);
+				int systemRet = system(arg);
+				if(systemRet == -1)
+				{
+					log_string(LOG_BUG, "Error in Pfile Backups. Custom Error 902.");
+				}
+
+				// system(arg);
 			}
 			fBak = 0;
 			fRestore = 0;

@@ -2,7 +2,8 @@
 #include "twilight.h"
 
 /* Power configuration data set */
-struct power_config {
+struct power_config
+{
     char *name;
     int  effect_type;
     int  flag_slot_changed;

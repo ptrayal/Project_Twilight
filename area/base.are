@@ -721,6 +721,20 @@ E
 --USES~
 -2~
 Q 2
+#151
+test relice~
+test relic~
+A test relic is here.~
+(no full description)~
+bone~
+34 0 O
+0 0 0 0 0
+0
+0 0 100
+E
+--USES~
+-2~
+Q 2
 #0
 
 
@@ -739,13 +753,6 @@ E
 XDUMB1~
 (null) 
 ~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-(null) 
-~
 M 0 H 100
 S
 #2
@@ -759,13 +766,6 @@ XNUMB1~
 Unnamed Room~
 E
 XDUMB1~
-(null) 
-~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
 (null) 
 ~
 M 0 H 100

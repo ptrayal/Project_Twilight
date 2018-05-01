@@ -50,9 +50,13 @@ CHAR_DATA * evil_twin (CHAR_DATA *ch)
 	twin->act		= ACT_TWIN|ch->act;
 	twin->act2		= ch->act2;
 	for(i=0; i<MAX_STATS; i++)
+	{
 		twin->perm_stat[i]	= ch->perm_stat[i];
+	}
 	for(i=0; i<MAX_STATS; i++)
+	{
 		twin->mod_stat[i]	= ch->mod_stat[i];
+	}
 	twin->shape		= ch->shape;
 	twin->blood_timer	= 10;
 	twin->material	= ch->material;
@@ -68,9 +72,13 @@ CHAR_DATA * evil_twin (CHAR_DATA *ch)
 	twin->form		= ch->form;
 	twin->parts		= ch->parts;
 	for(i=0; i<MAX_ABIL; i++)
+	{
 		twin->ability[i].value = ch->ability[i].value;
+	}
 	for(i=0; i<MAX_DISC; i++)
+	{
 		twin->disc[i]	= ch->disc[i];
+	}
 	twin->health	= MAX_HEALTH;
 	twin->agghealth	= MAX_HEALTH;
 	twin->position	= P_STAND;
@@ -85,7 +93,9 @@ CHAR_DATA * evil_twin (CHAR_DATA *ch)
 	twin->sex		= ch->sex;
 	twin->trust		= ch->trust;
 	for(i=0; i<(MAX_VIRTUES - 1); i++)
+	{
 		twin->virtues[i] = ch->virtues[i];
+	}
 	desc_gen(twin);
 
 	return twin;
@@ -103,9 +113,13 @@ CHAR_DATA * get_random_mob(CHAR_DATA *ch)
 		for(mob = char_list; mob != NULL; mob = mob->next)
 		{
 			if(mob->fighting == NULL && mob != ch)
+			{
 				i--;
+			}
 			if(i<=0)
+			{
 				break;
+			}
 		}
 	}
 
@@ -113,12 +127,16 @@ CHAR_DATA * get_random_mob(CHAR_DATA *ch)
 	{
 		mob = mob->next;
 		if(mob == NULL)
+		{
 			mob = char_list;
+		}
 	}
 
 	/* Mob should be on the same plane. */
 	if(!SAME_PLANE(ch, mob) || IS_ANIMAL(mob))
+	{
 		mob = get_random_mob(ch);
+	}
 
 	return mob;
 }
@@ -330,7 +348,7 @@ void gen_quest (bool forced, CHAR_DATA *vch)
 void do_accept(CHAR_DATA *ch, char * argument)
 {
 	CheckCH(ch);
-	
+
 	if(ch->quest == NULL)
 	{
 		send_to_char("Nobody's offered you any jobs.\n\r", ch);

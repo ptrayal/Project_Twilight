@@ -75,15 +75,15 @@ ACG 0 75 0 0 0 pound
 AHMV ABCDEFGHIJK medium flesh
 A 0
 I 0
-M SPEECH 10004 job~
-M SPEECH 10003 garou~
-M SPEECH 10003 werewolf~
-M GREET 10000 100~
-M SPEECH 10001 changeling~
-M SPEECH 10001 fae~
-M SPEECH 10001 faerie~
-M SPEECH 10002 vampire~
 M SPEECH 10002 kindred~
+M SPEECH 10002 vampire~
+M SPEECH 10001 faerie~
+M SPEECH 10001 fae~
+M SPEECH 10001 changeling~
+M GREET 10000 100~
+M SPEECH 10003 werewolf~
+M SPEECH 10003 garou~
+M SPEECH 10004 job~
 #0
 
 
@@ -279,12 +279,6 @@ Along the Park on Second~
 E
 XDUMB1~
 None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
 D0
 (none)~
 (null)~
@@ -304,12 +298,6 @@ XNUMB1~
 Along the Park on Second~
 E
 XDUMB1~
-None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
 None~
 D0
 (none)~
@@ -331,12 +319,6 @@ Along the Park on Second~
 E
 XDUMB1~
 None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
 D0
 (none)~
 (null)~
@@ -356,12 +338,6 @@ XNUMB1~
 Along the Park on Second~
 E
 XDUMB1~
-None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
 None~
 D0
 (none)~
@@ -383,12 +359,6 @@ Along the Park on Second~
 E
 XDUMB1~
 None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
 D0
 (none)~
 (null)~
@@ -408,12 +378,6 @@ XNUMB1~
 The Corner of Montgomery and Second~
 E
 XDUMB1~
-None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
 None~
 D0
 (none)~
@@ -439,12 +403,6 @@ Montgomery Drive~
 E
 XDUMB1~
 None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
 D1
 (none)~
 (null)~
@@ -464,12 +422,6 @@ XNUMB1~
 Montgomery Drive~
 E
 XDUMB1~
-None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
 None~
 D1
 (none)~
@@ -491,12 +443,6 @@ Montgomery Drive~
 E
 XDUMB1~
 None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
 D1
 (none)~
 (null)~
@@ -516,12 +462,6 @@ XNUMB1~
 Montgomery Drive~
 E
 XDUMB1~
-None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
 None~
 D1
 (none)~
@@ -543,12 +483,6 @@ Montgomery Drive~
 E
 XDUMB1~
 None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
 D1
 (none)~
 (null)~
@@ -569,12 +503,6 @@ Montgomery Drive~
 E
 XDUMB1~
 None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
 D1
 (none)~
 (null)~
@@ -594,12 +522,6 @@ XNUMB1~
 Montgomery Drive~
 E
 XDUMB1~
-None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
 None~
 D0
 (none)~
@@ -622,12 +544,6 @@ XNUMB1~
 Along Delaney Street~
 E
 XDUMB1~
-None~
-E
-XNDREAM~
-Along Delaney Street~
-E
-XDDREAM~
 None~
 D1
 (none)~
@@ -652,12 +568,6 @@ Inside the Elevator~
 E
 XDUMB1~
 <ooc> [0] leads to 1st floor, [1] leads to 2nd floor.  'press #' to go tothat floor, and 'leave elevator' to step out.  ~
-E
-XNDREAM~
-Inside the Elevator~
-E
-XDDREAM~
-None~
 S
 #10416
 Licoln Studio Apartments on the Second Floor~
@@ -670,12 +580,6 @@ XNUMB1~
 Licoln Studio Apartments on the Second Floor~
 E
 XDUMB1~
-None~
-E
-XNDREAM~
-Licoln Studio Apartments on the Second Floor~
-E
-XDDREAM~
 None~
 S
 #10417
@@ -693,12 +597,6 @@ XNUMB1~
 A Dead End Circle on Delaney~
 E
 XDUMB1~
-None~
-E
-XNDREAM~
-A Dead End Circle on Delaney~
-E
-XDDREAM~
 None~
 D2
 (none)~
@@ -736,12 +634,6 @@ A pit yawns with a fetid sludge oozing back and forth here.  The sides
 slope upwards, making the entire slippery surface of this area that is
 much harder to move across.
 ~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
 D0
 A street to the north.  
 ~
@@ -776,12 +668,6 @@ Along Third Avenue~
 E
 XDUMB1~
 None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
 D0
 (none)~
 (null)~
@@ -803,12 +689,6 @@ XNUMB1~
 Along Third Avenue~
 E
 XDUMB1~
-None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
 None~
 D0
 (none)~
@@ -832,12 +712,6 @@ Along Third Avenue~
 E
 XDUMB1~
 None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
 D0
 (none)~
 (null)~
@@ -859,12 +733,6 @@ XNUMB1~
 Along Third Avenue~
 E
 XDUMB1~
-None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
 None~
 D0
 (none)~
@@ -888,12 +756,6 @@ XNUMB1~
 Along Third Avenue~
 E
 XDUMB1~
-None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
 None~
 D0
 (none)~
@@ -922,12 +784,6 @@ Third Avenue~
 E
 XDUMB1~
 None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
 D0
 (none)~
 (null)~
@@ -954,12 +810,6 @@ XNUMB1~
 Third Avenue~
 E
 XDUMB1~
-None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
 None~
 D0
 (none)~
@@ -993,12 +843,6 @@ Third Avenue~
 E
 XDUMB1~
 None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
 D0
 (none)~
 (null)~
@@ -1028,12 +872,6 @@ Third Avenue~
 E
 XDUMB1~
 None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
 D0
 (none)~
 (null)~
@@ -1056,12 +894,6 @@ XNUMB1~
 Corner of Third and Delaney~
 E
 XDUMB1~
-None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
 None~
 D0
 (none)~
@@ -1095,23 +927,17 @@ E
 XDUMB1~
 The rancid scent of corruption assaults you as your gaze drifts over thisscene of virulent filth that was once one of Gaia's sacred places.  Blacksludge bubbles grotesquely in defiance to the sacred mother and all that shestands for.  The green glow of balefire highlights the nauseating spectaclebefore you, almost in celebration of this foul and despicable triumph of theWyrm.  ~
 E
-XNDREAM~
-Unnamed Room~
+ladder~
+On closer inspection, the ladder looks new and it looks rather well usedfor climbing over the high mounds of garbage.  ~
 E
-XDDREAM~
-None~
-E
-garbage~
+trash~
 Searching the piles of rubbish and garbage that litter the surroudingarea to the pond you spot a conveniently placed step {Wladder{x that leans upagainst the one of the larger piles to the north of the pond.  ~
 E
 rubbish~
 Searching the piles of rubbish and garbage that litter the surroudingarea to the pond you spot a conveniently placed step {Wladder{x that leans upagainst the one of the larger piles to the north of the pond.  ~
 E
-trash~
+garbage~
 Searching the piles of rubbish and garbage that litter the surroudingarea to the pond you spot a conveniently placed step {Wladder{x that leans upagainst the one of the larger piles to the north of the pond.  ~
-E
-ladder~
-On closer inspection, the ladder looks new and it looks rather well usedfor climbing over the high mounds of garbage.  ~
 D1
 (none)~
 (null)~
@@ -1135,12 +961,6 @@ XNUMB1~
 A Concrete Path~
 E
 XDUMB1~
-None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
 None~
 D1
 (none)~
@@ -1169,12 +989,6 @@ XNUMB1~
 A Concrete Path~
 E
 XDUMB1~
-None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
 None~
 D0
 (none)~
@@ -1210,12 +1024,6 @@ E
 XDUMB1~
 None~
 E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
-E
 willow~
 Between the dense overhanging of the overgrown willow tree you can seewhat seems to be a small ornate iron bench to the south.  ~
 D1
@@ -1242,12 +1050,6 @@ A Concrete Path~
 E
 XDUMB1~
 None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
 D1
 (none)~
 (null)~
@@ -1267,12 +1069,6 @@ XNUMB1~
 Corner of Second and Patterson~
 E
 XDUMB1~
-None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
 None~
 D0
 (none)~
@@ -1305,12 +1101,6 @@ Along Third Avenue~
 E
 XDUMB1~
 None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
 D0
 (none)~
 (null)~
@@ -1334,12 +1124,6 @@ Along Third Avenue~
 E
 XDUMB1~
 None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
 D0
 (none)~
 (null)~
@@ -1361,12 +1145,6 @@ XNUMB1~
 Along Third Avenue~
 E
 XDUMB1~
-None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
 None~
 D0
 (none)~
@@ -1390,12 +1168,6 @@ Along Third Avenue~
 E
 XDUMB1~
 None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
 D0
 (none)~
 (null)~
@@ -1418,12 +1190,6 @@ XNUMB1~
 Corner of Third and Ascot~
 E
 XDUMB1~
-None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
 None~
 D1
 (none)~
@@ -1451,12 +1217,6 @@ Along Third Avenue~
 E
 XDUMB1~
 None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
 D0
 (none)~
 (null)~
@@ -1483,12 +1243,6 @@ Along Third Avenue~
 E
 XDUMB1~
 None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
 D0
 (none)~
 (null)~
@@ -1510,12 +1264,6 @@ XNUMB1~
 Along Third Avenue~
 E
 XDUMB1~
-None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
 None~
 D0
 (none)~
@@ -1539,12 +1287,6 @@ Along Third Avenue~
 E
 XDUMB1~
 None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
 D0
 (none)~
 (null)~
@@ -1564,12 +1306,6 @@ XNUMB1~
 Corner of Third and Licoln~
 E
 XDUMB1~
-None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
 None~
 D0
 (none)~
@@ -1593,12 +1329,6 @@ XNUMB1~
 2930 Ascot Drive~
 E
 XDUMB1~
-None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
 None~
 D1
 (none)~
@@ -1624,12 +1354,6 @@ XNUMB1~
 E
 XDUMB1~
 None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
 D1
 (none)~
 (null)~
@@ -1652,12 +1376,6 @@ XNUMB1~
 E
 XDUMB1~
 None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
 D1
 (none)~
 (null)~
@@ -1677,12 +1395,6 @@ XNUMB1~
 2470 Ascot Drive~
 E
 XDUMB1~
-None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
 None~
 D1
 (none)~
@@ -1704,12 +1416,6 @@ XNUMB1~
 E
 XDUMB1~
 None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
 D1
 (none)~
 (null)~
@@ -1729,12 +1435,6 @@ XNUMB1~
 Corner of Ascot and Second~
 E
 XDUMB1~
-None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
 None~
 D1
 (none)~
@@ -1760,12 +1460,6 @@ XNUMB1~
 E
 XDUMB1~
 None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
 D1
 (none)~
 (null)~
@@ -1785,12 +1479,6 @@ XNUMB1~
 1301 Ascot Drive~
 E
 XDUMB1~
-None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
 None~
 D1
 (none)~
@@ -1812,12 +1500,6 @@ XNUMB1~
 E
 XDUMB1~
 None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
 D1
 (none)~
 (null)~
@@ -1838,12 +1520,6 @@ Unnamed Room~
 E
 XDUMB1~
 None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
 D1
 (none)~
 (null)~
@@ -1859,12 +1535,6 @@ XNUMB1~
 3076 Ascot Drive~
 E
 XDUMB1~
-None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
 None~
 D1
 (none)~
@@ -1886,12 +1556,6 @@ XNUMB1~
 E
 XDUMB1~
 None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
 D1
 (none)~
 (null)~
@@ -1911,12 +1575,6 @@ XNUMB1~
 3322 Ascot Drive~
 E
 XDUMB1~
-None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
 None~
 D1
 (none)~
@@ -1938,12 +1596,6 @@ XNUMB1~
 E
 XDUMB1~
 None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
 D1
 (none)~
 (null)~
@@ -1963,12 +1615,6 @@ XNUMB1~
 Corner of Ascot and Fourth~
 E
 XDUMB1~
-None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
 None~
 D1
 (none)~
@@ -1990,12 +1636,6 @@ XNUMB1~
 E
 XDUMB1~
 None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
 D1
 (none)~
 (null)~
@@ -2015,12 +1655,6 @@ XNUMB1~
 4275 Ascot Drive~
 E
 XDUMB1~
-None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
 None~
 D1
 (none)~
@@ -2042,12 +1676,6 @@ XNUMB1~
 E
 XDUMB1~
 None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
 D1
 (none)~
 (null)~
@@ -2067,12 +1695,6 @@ XNUMB1~
 4836 Ascot Drive~
 E
 XDUMB1~
-None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
 None~
 D1
 (none)~
@@ -2094,12 +1716,6 @@ Corner of Ascot and Fifth~
 E
 XDUMB1~
 None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
 D3
 (none)~
 (null)~
@@ -2115,12 +1731,6 @@ XNUMB1~
 Unnamed Room~
 E
 XDUMB1~
-None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
 None~
 D0
 (none)~
@@ -2158,12 +1768,6 @@ Coleman Street~
 E
 XDUMB1~
 None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
 D1
 (none)~
 (null)~
@@ -2191,12 +1795,6 @@ XNUMB1~
 Coleman Street~
 E
 XDUMB1~
-None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
 None~
 D1
 (none)~
@@ -2226,12 +1824,6 @@ XNUMB1~
 The Entrance to the Coleman Street Mall~
 E
 XDUMB1~
-None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
 None~
 E
 sign~
@@ -2265,12 +1857,6 @@ Licoln Avenue~
 E
 XDUMB1~
 None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
 D0
 (none)~
 (null)~
@@ -2302,12 +1888,6 @@ Licoln Avenue~
 E
 XDUMB1~
 None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
 D1
 (none)~
 (null)~
@@ -2336,12 +1916,6 @@ Licoln Avenue~
 E
 XDUMB1~
 None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
 D1
 (none)~
 (null)~
@@ -2366,12 +1940,6 @@ Licoln Avenue~
 E
 XDUMB1~
 None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
 D1
 (none)~
 (null)~
@@ -2391,12 +1959,6 @@ XNUMB1~
 The Corner of Lincoln Ave and Broadway~
 E
 XDUMB1~
-None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
 None~
 D0
 (none)~
@@ -2430,12 +1992,6 @@ Coleman Street~
 E
 XDUMB1~
 None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
 D0
 (none)~
 (null)~
@@ -2460,12 +2016,6 @@ Unnamed Room~
 E
 XDUMB1~
 None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
 D0
 (none)~
 (null)~
@@ -2481,12 +2031,6 @@ XNUMB1~
 Unnamed Room~
 E
 XDUMB1~
-None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
 None~
 D1
 (none)~
@@ -2508,12 +2052,6 @@ Unnamed Room~
 E
 XDUMB1~
 None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
 D1
 (none)~
 (null)~
@@ -2533,12 +2071,6 @@ XNUMB1~
 Unnamed Room~
 E
 XDUMB1~
-None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
 None~
 D1
 (none)~
@@ -2564,12 +2096,6 @@ XNUMB1~
 Unnamed Room~
 E
 XDUMB1~
-None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
 None~
 D0
 (none)~
@@ -2601,12 +2127,6 @@ Licoln Studio Apartments on the First Floor~
 E
 XDUMB1~
 <ooc> 'press button' to call the elevator, and 'enter elevator' to goinside ~
-E
-XNDREAM~
-Licoln Studio Apartments on the First Floor~
-E
-XDDREAM~
-None~
 D1
 none~
 (null)~

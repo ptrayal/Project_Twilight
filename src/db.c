@@ -266,7 +266,7 @@ void boot_db()
 		long lhour, lday, lmonth;
 
 		lhour       = (current_time - 650336715)
-					/ (PULSE_TICK / PULSE_PER_SECOND);
+		/ (PULSE_TICK / PULSE_PER_SECOND);
 		time_info.hour  = lhour  % 24;
 		lday        = lhour  / 24;
 		time_info.day   = lday   % 35;
@@ -274,23 +274,54 @@ void boot_db()
 		time_info.month = lmonth % 17;
 		time_info.year  = lmonth / 17;
 
-		if ( time_info.hour <  5 ) weather_info.sunlight = SUN_DARK;
-		else if ( time_info.hour <  6 ) weather_info.sunlight = SUN_RISE;
-		else if ( time_info.hour < 19 ) weather_info.sunlight = SUN_LIGHT;
-		else if ( time_info.hour < 20 ) weather_info.sunlight = SUN_SET;
-		else                            weather_info.sunlight = SUN_DARK;
+		if ( time_info.hour <  5 )
+		{
+			weather_info.sunlight = SUN_DARK;
+		}
+		else if ( time_info.hour <  6 )
+		{
+			weather_info.sunlight = SUN_RISE;
+		}
+		else if ( time_info.hour < 19 )
+		{
+			weather_info.sunlight = SUN_LIGHT;
+		}
+		else if ( time_info.hour < 20 )
+		{
+			weather_info.sunlight = SUN_SET;
+		}
+		else
+		{
+			weather_info.sunlight = SUN_DARK;
+		}
 
 		weather_info.change = 0;
 		weather_info.mmhg   = 960;
 		if ( time_info.month >= 7 && time_info.month <=12 )
+		{
 			weather_info.mmhg += number_range( 1, 50 );
+		}
 		else
+		{
 			weather_info.mmhg += number_range( 1, 80 );
+		}
 
-		if ( weather_info.mmhg <=  980 ) weather_info.sky = SKY_LIGHTNING;
-		else if ( weather_info.mmhg <= 1000 ) weather_info.sky = SKY_RAINING;
-		else if ( weather_info.mmhg <= 1020 ) weather_info.sky = SKY_CLOUDY;
-		else                                  weather_info.sky = SKY_CLOUDLESS;
+		if ( weather_info.mmhg <=  980 )
+		{
+			weather_info.sky = SKY_LIGHTNING;
+		}
+		else if ( weather_info.mmhg <= 1000 )
+		{
+			weather_info.sky = SKY_RAINING;
+		}
+		else if ( weather_info.mmhg <= 1020 )
+		{
+			weather_info.sky = SKY_CLOUDY;
+		}
+		else
+		{
+			weather_info.sky = SKY_CLOUDLESS;
+		}
 
 	}
 
@@ -298,12 +329,14 @@ void boot_db()
 	 * Assign gsn's for skills which have them.
 	 */
 	{
-		int sn;
+		int sn = 0;
 
 		for ( sn = 0; sn < MAX_SKILL; sn++ )
 		{
 			if ( skill_table[sn].pgsn != NULL )
+			{
 				*skill_table[sn].pgsn = sn;
+			}
 		}
 	}
 
@@ -323,7 +356,9 @@ void boot_db()
 		{
 			strncpy( strArea, fread_word( fpList ), sizeof(strArea) );
 			if ( strArea[0] == '$' )
+			{
 				break;
+			}
 
 			if ( strArea[0] == '-' )
 			{
@@ -352,21 +387,67 @@ void boot_db()
 
 				word = fread_word( fpArea );
 
-				if ( word[0] == '$'               )                 break;
-				else if ( !str_cmp( word, "AREA"     ) ) load_area    (fpArea);
-				/* OLC */     else if ( !str_cmp( word, "AREADATA" ) ) new_load_area(fpArea);
-				else if ( !str_cmp( word, "HELPS"    ) ) load_helps (fpArea,0);
-				else if ( !str_cmp( word, "TIPS"     ) ) load_helps (fpArea,1);
-				else if ( !str_cmp( word, "HELP"  ) ) load_old_helps (fpArea,0);
-				else if ( !str_cmp( word, "TIP"   ) ) load_old_helps (fpArea,1);
-				else if ( !str_cmp( word, "MOBILES"  ) ) load_mobiles (fpArea);
-				else if ( !str_cmp( word, "MOBPROGS" ) ) load_mobprogs (fpArea);
-				else if ( !str_cmp( word, "OBJECTS"  ) ) load_objects (fpArea);
-				else if ( !str_cmp( word, "PERSONA"  ) ) load_personas(fpArea);
-				else if ( !str_cmp( word, "RESETS"   ) ) load_resets  (fpArea);
-				else if ( !str_cmp( word, "ROOMS"    ) ) load_rooms   (fpArea);
-				else if ( !str_cmp( word, "SHOPS"    ) ) load_shops   (fpArea);
-				else if ( !str_cmp( word, "PLOTS"    ) ) load_plots   (fpArea);
+				if ( word[0] == '$'               )
+				{
+					break;
+				}
+				else if ( !str_cmp( word, "AREA"     ) )
+				{
+					load_area    (fpArea);
+				}
+				/* OLC */
+				else if ( !str_cmp( word, "AREADATA" ) )
+				{
+					new_load_area(fpArea);
+				}
+				else if ( !str_cmp( word, "HELPS"    ) )
+				{
+					load_helps (fpArea,0);
+				}
+				else if ( !str_cmp( word, "TIPS"     ) )
+				{
+					load_helps (fpArea,1);
+				}
+				else if ( !str_cmp( word, "HELP"  ) )
+				{
+					load_old_helps (fpArea,0);
+				}
+				else if ( !str_cmp( word, "TIP"   ) )
+				{
+					load_old_helps (fpArea,1);
+				}
+				else if ( !str_cmp( word, "MOBILES"  ) )
+				{
+					load_mobiles (fpArea);
+				}
+				else if ( !str_cmp( word, "MOBPROGS" ) )
+				{
+					load_mobprogs (fpArea);
+				}
+				else if ( !str_cmp( word, "OBJECTS"  ) )
+				{
+					load_objects (fpArea);
+				}
+				else if ( !str_cmp( word, "PERSONA"  ) )
+				{
+					load_personas(fpArea);
+				}
+				else if ( !str_cmp( word, "RESETS"   ) )
+				{
+					load_resets  (fpArea);
+				}
+				else if ( !str_cmp( word, "ROOMS"    ) )
+				{
+					load_rooms   (fpArea);
+				}
+				else if ( !str_cmp( word, "SHOPS"    ) )
+				{
+					load_shops   (fpArea);
+				}
+				else if ( !str_cmp( word, "PLOTS"    ) )
+				{
+					load_plots   (fpArea);
+				}
 				else
 				{
 					log_string(LOG_BUG, "Boot_db: bad section name.");
@@ -375,9 +456,19 @@ void boot_db()
 			}
 
 			if ( fpArea != stdin )
+			{
 				fclose( fpArea );
+			}
 			fpArea = NULL;
-			system((char *)Format("cp %s bak/", strArea));
+
+			// Fix to check to make sure the system command runs properly.
+			int systemRet = system((char *)Format("cp %s bak/", strArea));
+			if (systemRet == -1)
+			{
+				log_string(LOG_BUG, "Problem in db.  Look for systemRet.");
+				exit(1);
+			}
+			// system((char *)Format("cp %s bak/", strArea));
 
 		}
 		fclose( fpList );
@@ -399,7 +490,9 @@ void boot_db()
 		{
 			strncpy( strArea, fread_word( fpList ), sizeof(strArea) );
 			if ( strArea[0] == '$' )
+			{
 				break;
+			}
 
 			if ( strArea[0] == '-' )
 			{
@@ -426,9 +519,12 @@ void boot_db()
 
 				word = fread_word( fpArea );
 
-				if ( word[0] == '$'               )                 break;
-				else if ( !str_cmp( word, "ORG"     ) ) load_org    (fpArea);
-				else if ( !str_cmp( word, "MEMBERS"))load_org_members(fpArea);
+				if ( word[0] == '$'               )
+					break;
+				else if ( !str_cmp( word, "ORG"     ) )
+					load_org    (fpArea);
+				else if ( !str_cmp( word, "MEMBERS"))
+					load_org_members(fpArea);
 				else
 				{
 					log_string(LOG_BUG, "Boot_db (Org): bad section name.");
@@ -562,7 +658,7 @@ void load_org( FILE *fp )
 	ORG_DATA *org;
 	int i = 0;
 
-	org                  = new_org();
+	org = new_org();
 	PURGE_DATA(org->name);
 	PURGE_DATA(org->who_name);
 	PURGE_DATA(org->file_name);
@@ -579,6 +675,7 @@ void load_org( FILE *fp )
 	org->applicants      = fread_string(fp);
 	org->races           = fread_string(fp);
 	org->default_auths   = fread_flag(fp);
+
 	for(i = 0; i < 5; i++)
 	{
 		PURGE_DATA(org->commands[i]);
@@ -592,11 +689,15 @@ void load_org( FILE *fp )
 	}
 
 	if ( !org_list )
+	{
 		org_list = org;
+	}
+
 	if ( org_last )
 	{
 		org_last->next = org;
 	}
+
 	org_last    = org;
 	org->next   = NULL;
 
@@ -1227,18 +1328,6 @@ void load_rooms( FILE *fp )
 				{
 					if(!IS_NULLSTR(ed->description))
 						pRoomIndex->uname = str_dup(ed->description);
-					free_extra_descr(ed);
-				}
-				else if(!str_cmp(ed->keyword, "XNDREAM"))
-				{
-					if(!IS_NULLSTR(ed->description))
-						pRoomIndex->dname = str_dup(ed->description);
-					free_extra_descr(ed);
-				}
-				else if(!str_cmp(ed->keyword, "XDDREAM"))
-				{
-					if(!IS_NULLSTR(ed->description))
-						pRoomIndex->ddescription = str_dup(ed->description);
 					free_extra_descr(ed);
 				}
 				else

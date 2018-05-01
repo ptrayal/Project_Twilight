@@ -74,7 +74,7 @@ char *format_obj_to_char( OBJ_DATA *obj, CHAR_DATA *ch, bool fShort )
 
 	buf[0] = '\0';
 
-	if IS_NULLSTR(obj->short_descr)
+	if (IS_NULLSTR(obj->short_descr))
 	{
 		obj->short_descr = str_dup("This object needs a short description.");
 		log_string(LOG_BUG, Format("Object VNUM %d has no short description.", obj->pIndexData->vnum));
@@ -1104,20 +1104,6 @@ void do_look( CHAR_DATA *ch, char *argument )
 				send_to_char( "\tn", ch);
 			}
 		}
-		else if(IS_SET(ch->act,ACT_DREAMING))
-		{
-			send_to_char( Format("\tG%s\tn", looking->dname), ch );
-
-			send_to_char( "\n\r", ch );
-
-			if(!IS_NPC(ch) && !IS_SET(ch->comm, COMM_BRIEF)) {
-				send_to_char( "\ty", ch);
-				send_to_char( "  ",ch);
-				send_to_char( looking->ddescription, ch );
-				send_to_char( "\tn", ch);
-			}
-		}
-
 		else
 		{
 			send_to_char( Format("\tC%s\tn", looking->name), ch );
@@ -3891,9 +3877,19 @@ void do_diceroll(CHAR_DATA *ch, char *argument)
 	char arg2[MIL]={'\0'};
 	char arg3[MIL]={'\0'};
 	int dice = 0;
-	int successcheck = FALSE, difficulty = -1, successes = 0;
-	int a = -1, b = -1, c = -1, d = -1, e = -1, f = -1, g = -1, h = -1;
-	int health = ch->health + ch->agghealth - 7, whom;
+	int successcheck = FALSE;
+	int difficulty = -1;
+	int successes = 0;
+	int a = -1;
+	int b = -1;
+	int c = -1;
+	int d = -1;
+	int e = -1;
+	int f = -1;
+	int g = -1;
+	int h = -1;
+	int health = ch->health + ch->agghealth - 7;
+	int whom;
 
 	CheckCH(ch);
 
@@ -3942,8 +3938,10 @@ void do_diceroll(CHAR_DATA *ch, char *argument)
 					if((d = virtue_lookup(arg1)) == -1)
 						if((e = influence_lookup(arg1)) == -1)
 							if((f = background_lookup(arg1)) == -1);
-		if(successcheck) {
-			if(is_number(arg1)) h = atoi(arg1);
+		if(successcheck)
+		{
+			if(is_number(arg1))
+				h = atoi(arg1);
 			else if((a = stat_lookup(arg3, vch)) == -1)
 				if((b = abil_lookup(arg3, vch)) == -1)
 					if((c = disc_lookup(vch, arg3)) == -1)
@@ -4022,7 +4020,8 @@ void do_diceroll(CHAR_DATA *ch, char *argument)
 		case 'f':
 			if(!str_prefix(arg2, "faith"))
 			{
-				/*              if(vch->race == race_lookup("vampire"))
+				/*
+				if(vch->race == race_lookup("vampire"))
 				{
 				send_to_char( "Vampires cannot call on faith.\n\r", ch );
 				return;
@@ -4178,7 +4177,8 @@ void do_diceroll(CHAR_DATA *ch, char *argument)
 	if(dice <= 0)
 	{
 		act(Format("No dice to roll.\n\r"), ch, NULL, to, whom, 1);
-		if(whom!=TO_CHAR) send_to_char(buf, ch);
+		if(whom!=TO_CHAR)
+			send_to_char(buf, ch);
 	}
 	else
 	{
@@ -4190,9 +4190,15 @@ void do_diceroll(CHAR_DATA *ch, char *argument)
 			if(IS_SET(ch->off_flags, LOADED_DICE_NEG))
 				a = UMIN(number_fuzzy(a), a);
 			if(IS_SET(ch->off_flags, LOADED_DICE_BPOS))
-				a = UMIN(UMAX(a+2, a), 10);
+				{
+					// Number is between 1 and 10
+					// Minimum is
+					a = UMIN(UMAX(-1, a+2), 10);
+				}
 			if(IS_SET(ch->off_flags, LOADED_DICE_BNEG))
-				a = UMAX(UMIN(a-2, a), 1);
+				{
+					a = UMAX(UMIN(a-2, -1), 1);
+				}
 			strncat(result, Format("%d ", a), sizeof(result) - strlen(result) - 1 );
 			if(difficulty > 1)
 			{

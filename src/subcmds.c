@@ -1808,7 +1808,7 @@ int reporter_post(CHAR_DATA *ch, char *argument)
 int muso_jam(CHAR_DATA *ch, char *argument)
 {
 	CHAR_DATA *vch;
-	bool no_go = FALSE;
+	// bool no_go = FALSE;
 
 	/* Start playing... initiate music stuff. */
 	if(IS_NULLSTR(argument))
@@ -1832,7 +1832,7 @@ int muso_jam(CHAR_DATA *ch, char *argument)
 		{
 			if(vch != ch && IS_SET(ch->comm, COMM_JAM_LEAD))
 			{
-				no_go = TRUE;
+				// no_go = TRUE;
 			}
 		}
 
@@ -2272,7 +2272,7 @@ int church_findrelic(CHAR_DATA *ch, char *argument)
 	BUFFER              *buf1;
 	bool found;
 	int vnum = 0;
-	long largest = 0;
+	// long largest = 0;
 	int  lsize = 0;
 	int  col = 0;
 	int nMatch = 0;
@@ -2304,7 +2304,7 @@ int church_findrelic(CHAR_DATA *ch, char *argument)
 				if(pObjIndex->weight > lsize)
 				{
 					lsize = pObjIndex->weight;
-					largest = pObjIndex->vnum;
+					// largest = pObjIndex->vnum;
 				}
 			}
 		}
@@ -3085,8 +3085,6 @@ int economic_trade(CHAR_DATA *ch, char *argument)
 	char buf[MSL]={'\0'};
 	bool Buy = FALSE;
 
-
-
 	if(IS_NULLSTR(argument))
 	{
 		send_to_char("Syntax: \tCinfluence trade [buy/sell] [shares] [company]\tn\n\r", ch);
@@ -3096,7 +3094,9 @@ int economic_trade(CHAR_DATA *ch, char *argument)
 	argument = one_argument(argument, buf);
 
 	if(!str_prefix(buf, "buy"))
+	{
 		Buy = TRUE;
+	}
 	else if(str_prefix(buf, "sell"))
 	{
 		send_to_char("Syntax: \tCinfluence trade [buy/sell] [shares] [company]\tn\n\r", ch);
@@ -3120,20 +3120,26 @@ int economic_trade(CHAR_DATA *ch, char *argument)
 	{
 		send_to_char("\tGSuccess\tn: You manage to avoid paying trade fees.\n\r", ch);
 		if(!trade_stocks(ch, st, atoi(buf), FALSE, Buy))
+		{
 			return FALSE;
+		}
 	}
 	else if(fail == 0)
 	{
 		send_to_char("\tYFailure\tn: You fail to avoid the trade fees.\n\r", ch);
 		if(!trade_stocks(ch, st, atoi(buf), TRUE, Buy))
+		{
 			return FALSE;
+		}
 	}
 	else
 	{
 		send_to_char("\tRBOTCH\tn: You damage your credibility in the market.\n\r", ch);
 		ch->influences[INFL_ECONOMIC]--;
 		if(!trade_stocks(ch, st, atoi(buf), TRUE, Buy))
+		{
 			return FALSE;
+		}
 	}
 
 	ch->infl_timer = 2;
@@ -3221,15 +3227,12 @@ int scientific_materials(CHAR_DATA *ch, char *argument)
 int scientific_tipoff(CHAR_DATA *ch, char *argument)
 {
 	int successes = 0;
-	int difficulty = 0;
+	int difficulty = 7;
 	int power_stat = 0;
 	int power_ability = 0;
 
-
-
 	power_stat = get_curr_stat(ch, STAT_MAN);
 	power_ability = ch->ability[SUBTERFUGE].value;
-	difficulty = 7;
 
 	successes = dice_rolls(ch, power_stat + power_ability, difficulty);
 	CHAR_DATA *vch;
@@ -3292,7 +3295,9 @@ void do_backgrounds (CHAR_DATA *ch, char *argument)
 	argument = one_argument(argument, arg);
 
 	if((cmd = bg_cmd_lookup(arg)) > -1 )
+	{
 		bg = bg_cmd_table[cmd].type;
+	}
 
 	if(cmd <= -1 || ch->backgrounds[bg] < bg_cmd_table[cmd].level)
 	{
@@ -3301,7 +3306,9 @@ void do_backgrounds (CHAR_DATA *ch, char *argument)
 	}
 
 	if((*bg_cmd_table[cmd].func) ( ch, argument ))
+	{
 		WAIT_STATE(ch, bg_cmd_table[cmd].delay);
+	}
 
 	return;
 }
@@ -3312,7 +3319,6 @@ int background_commands(CHAR_DATA *ch, char *argument)
 	int col = 0;
 	int i = 0;
 
-	col = 0;
 	for( cmd = 0; bg_cmd_table[cmd].name != NULL; cmd++ )
 	{
 		i = bg_cmd_table[cmd].type;
@@ -3320,22 +3326,29 @@ int background_commands(CHAR_DATA *ch, char *argument)
 		{
 			send_to_char(Format("\t<send href='background %s'>%-11s\t</send> | ", bg_cmd_table[cmd].name, bg_cmd_table[cmd].name), ch);
 			if(++col % 4 == 0)
+			{
 				send_to_char("\n\r", ch);
+			}
 		}
 	}
 
 	if(col %6 != 0)
+	{
 		send_to_char("\n\r", ch);
+	}
 	return TRUE;
 }
 
 int background_advance(CHAR_DATA *ch, char *argument)
 {
 	int max_stat = 5;
-	int in = 0, cost = 0;
+	int in = 0;
+	int cost = 0;
 
 	if(IS_NPC(ch))
+	{
 		return FALSE;
+	}
 
 	if(IS_NULLSTR(argument))
 	{
@@ -3362,13 +3375,19 @@ int background_advance(CHAR_DATA *ch, char *argument)
 	}
 
 	if(ch->backgrounds[in] == 0)
+	{
 		cost = 10;
+	}
 	else
+	{
 		cost = ch->backgrounds[in] * 8;
+	}
 
 	cost = xp_cost_mod(ch, cost, ch->backgrounds[in]);
 	if(ch->bg_count < 5)
+	{
 		cost = 0;
+	}
 	if(ch->exp < cost)
 	{
 		send_to_char("You don't have enough experience.\n\r", ch);
@@ -3460,12 +3479,16 @@ int newspaper_commands(CHAR_DATA *ch, char *argument)
 		{
 			send_to_char(Format("%-12s | ", news_cmd_table[cmd].name), ch);
 			if(++col % 4 == 0)
+			{
 				send_to_char("\n\r", ch);
+			}
 		}
 	}
 
 	if(col %4 != 0)
+	{
 		send_to_char("\n\r", ch);
+	}
 	return TRUE;
 }
 
@@ -3502,9 +3525,13 @@ int newspaper_list(CHAR_DATA *ch, char *argument)
 	int count = 0;
 
 	if(!str_cmp(argument, "out now") || !str_cmp(argument, "on stands"))
+	{
 		on_stands = 1;
+	}
 	else if(!str_cmp(argument, "off stands"))
+	{
 		on_stands = 0;
+	}
 
 	send_to_char("\tWNumber | Name            | Price  | Stands\tn\n\r", ch);
 	for(news = paper_list; news; news = news->next)
@@ -3558,7 +3585,9 @@ int newspaper_clear (CHAR_DATA *ch, char *arg)
 	}
 
 	for(i=0; i < MAX_ARTICLES; i++)
+	{
 		paper->articles[i] = -1;
+	}
 	send_to_char("Articles cleared.\n\r", ch);
 	return TRUE;
 }
@@ -3620,7 +3649,7 @@ int newspaper_show (CHAR_DATA *ch, char *arg)
 			send_to_char(Format("%d: None\n\r", i), ch);
 			continue;
 		}
-		j = 0;
+
 		for(article=news_list;article;article=article->next)
 		{
 			if(j == paper->articles[i])
@@ -3870,7 +3899,6 @@ int newspaper_place(CHAR_DATA *ch, char *argument)
 
 	anum = atoi( article );
 
-	vnum = 0;
 	for ( pnote = news_list; pnote != NULL; pnote = pnote->next )
 	{
 		if ( vnum++ == anum )
@@ -3969,9 +3997,6 @@ int smarket_commands(CHAR_DATA *ch, char *argument)
 	int cmd = 0;
 	int col = 0;
 
-
-
-	col = 0;
 	send_to_char("Stock Market Commands.\n\rSyntax: \tCsmarket [command] [arguments]\tn\n\r", ch);
 	for( cmd = 0; smarket_cmd_table[cmd].name != NULL; cmd++ )
 	{
@@ -3979,12 +4004,16 @@ int smarket_commands(CHAR_DATA *ch, char *argument)
 		{
 			send_to_char(Format("%-12s | ", smarket_cmd_table[cmd].name), ch);
 			if(++col % 4 == 0)
-				send_to_char("\n\r", ch);
+				{
+					send_to_char("\n\r", ch);
+				}
 		}
 	}
 
 	if(col %6 != 0)
-		send_to_char("\n\r", ch);
+		{
+			send_to_char("\n\r", ch);
+		}
 	return TRUE;
 }
 
@@ -4028,8 +4057,6 @@ int smarket_list(CHAR_DATA *ch, char *argument)
 	STOCKS *stock;
 	int count = 0;
 
-
-
 	for(stock = stock_list; stock; stock = stock->next)
 	{
 		send_to_char(Format("[%4d] %-25s $%d.%.2d\n\r", count, stock->name, stock->cost/100, (stock->cost - (stock->cost/100)*100)), ch);
@@ -4045,8 +4072,6 @@ int smarket_show (CHAR_DATA *ch, char *arg)
 	int count = 0;
 	STOCKS *stock = NULL;
 	STOCKS *tmp;
-
-
 
 	if(IS_NULLSTR(arg))
 	{
@@ -4397,9 +4422,6 @@ int home_commands(CHAR_DATA *ch, char *argument, int type, ORG_DATA *org)
 	int cmd = 0;
 	int col = 0;
 
-
-
-	col = 0;
 	send_to_char("Available commands for building are:\n\r", ch);
 	for( cmd = 0; home_cmd_table[cmd].name != NULL; cmd++ )
 	{
@@ -4416,8 +4438,6 @@ int home_prices(CHAR_DATA *ch, char *argument, int type, ORG_DATA *org)
 {
 	int i = 0;
 	long cost = 0;
-
-
 
 	send_to_char(Format("+ %30s + %15s + %20s +\n\r", "", "", ""), ch);
 	send_to_char("+--------------------------------------------------\n\r",ch);
@@ -4442,10 +4462,13 @@ int home_buy(CHAR_DATA *ch, char *argument, int type, ORG_DATA *org)
 	if(IS_NULLSTR(arg) || IS_NULLSTR(argument))
 	{
 		send_to_char("What are you trying to do?\n\r", ch);
-		if(type == 0) {
+		if(type == 0)
+		{
 			send_to_char("Syntax: home buy home <dir> - Buy the first room.\n\r", ch);
 			send_to_char("        home buy room <dir> - Buy another room.\n\r", ch);
-		} else {
+		}
+		else
+		{
 			send_to_char("Syntax: build buy room <dir> - Buy a room.\n\r", ch);
 		}
 		return FALSE;
@@ -4458,25 +4481,25 @@ int home_buy(CHAR_DATA *ch, char *argument, int type, ORG_DATA *org)
 	}
 
 	if(!type && !str_prefix(arg, "home")
-			&& (!IS_NULLSTR(ch->in_room->owner)
-					|| !IS_SET(ch->in_room->area->area_flags, AREA_SUBURB)))
+		&& (!IS_NULLSTR(ch->in_room->owner)
+			|| !IS_SET(ch->in_room->area->area_flags, AREA_SUBURB)))
 	{
 		send_to_char("You can't build here.\n\r", ch);
 		return FALSE;
 	}
 
 	if(!type && !str_prefix(arg, "room")
-			&& (!IS_SET(ch->in_room->room_flags, ROOM_HOME)
-					|| str_cmp(ch->name, ch->in_room->owner)))
+		&& (!IS_SET(ch->in_room->room_flags, ROOM_HOME)
+			|| str_cmp(ch->name, ch->in_room->owner)))
 	{
 		send_to_char("You can't build a room off here.\n\r", ch);
 		return FALSE;
 	}
 
 	if(type && !IS_SET(ch->in_room->room_flags, ROOM_HOME) && org
-			&& !IS_SET(ch->in_room->area->area_flags, AREA_SUBURB)
-			&& (!IS_NULLSTR(ch->in_room->owner)
-					|| str_cmp(ch->in_room->owner, org->name)))
+		&& !IS_SET(ch->in_room->area->area_flags, AREA_SUBURB)
+		&& (!IS_NULLSTR(ch->in_room->owner)
+			|| str_cmp(ch->in_room->owner, org->name)))
 	{
 		send_to_char("You can't build a room off here.\n\r", ch);
 		return FALSE;
@@ -4495,9 +4518,13 @@ int home_buy(CHAR_DATA *ch, char *argument, int type, ORG_DATA *org)
 	}
 
 	if(ch->home > 0)
+	{
 		cost = home_price_lookup("room");
+	}
 	else
+	{
 		cost = home_price_lookup("home");
+	}
 
 	if(cost <= 0)
 	{
@@ -4510,9 +4537,13 @@ int home_buy(CHAR_DATA *ch, char *argument, int type, ORG_DATA *org)
 	cost = cost + (cost * tax_rate);
 
 	if(type && org)
+	{
 		cash = org->funds;
+	}
 	else
+	{
 		cash = ch->dollars + ch->balance;
+	}
 
 	if(cost > cash)
 	{
@@ -4543,7 +4574,9 @@ int home_buy(CHAR_DATA *ch, char *argument, int type, ORG_DATA *org)
 	else
 	{
 		if(cost <= ch->dollars)
+		{
 			ch->dollars -= cost;
+		}
 		else if(cost > ch->dollars)
 		{
 			cost -= ch->dollars;
@@ -4552,7 +4585,8 @@ int home_buy(CHAR_DATA *ch, char *argument, int type, ORG_DATA *org)
 		}
 	}
 
-	if(!type) {
+	if(!type)
+	{
 		ch->rooms[ch->home] = get_room_index(vnum);
 		ch->home++;
 	}
@@ -4593,16 +4627,16 @@ int home_sell(CHAR_DATA *ch, char *argument, int type, ORG_DATA *org)
 	}
 
 	if(ch->home <= 0
-			|| (org && str_cmp(ch->in_room->owner, org->name)))
+		|| (org && str_cmp(ch->in_room->owner, org->name)))
 	{
 		send_to_char("You can't sell something you don't own.\n\r", ch);
 		return FALSE;
 	}
 
 	if(!str_prefix(arg, "room")
-			&& (!IS_SET(ch->in_room->room_flags, ROOM_HOME)
-					|| str_cmp(ch->name, ch->in_room->owner)
-					|| (org && str_cmp(ch->in_room->owner, org->name))))
+		&& (!IS_SET(ch->in_room->room_flags, ROOM_HOME)
+			|| str_cmp(ch->name, ch->in_room->owner)
+			|| (org && str_cmp(ch->in_room->owner, org->name))))
 	{
 		send_to_char("You can't sell a room that you don't own.\n\r", ch);
 		return FALSE;
@@ -4718,8 +4752,7 @@ int home_furnish(CHAR_DATA *ch, char *argument, int type, ORG_DATA *org)
 	{
 		send_to_char("What are you trying to do to your home?\n\r", ch);
 		send_to_char("Syntax: home furnish list - List options.\n\r", ch);
-		send_to_char("        home furnish <item> - Purchase furnishings.\n\r",
-				ch);
+		send_to_char("        home furnish <item> - Purchase furnishings.\n\r", ch);
 		return FALSE;
 	}
 
@@ -4748,8 +4781,6 @@ int home_place(CHAR_DATA *ch, char *argument, int type, ORG_DATA *org)
 		send_to_char("(You must have the item in your inventory.)\n\r", ch);
 		return FALSE;
 	}
-
-
 
 	return TRUE;
 }
@@ -4783,8 +4814,6 @@ int home_name(CHAR_DATA *ch, char *argument, int type, ORG_DATA *org)
 
 	PURGE_DATA(ch->in_room->name);
 	ch->in_room->name = str_dup(argument);
-	PURGE_DATA(ch->in_room->dname);
-	ch->in_room->dname = str_dup(argument);
 	PURGE_DATA(ch->in_room->uname);
 	ch->in_room->uname = str_dup(argument);
 	send_to_char("Room name set.\n\r", ch);
@@ -4802,7 +4831,7 @@ int home_desc(CHAR_DATA *ch, char *argument, int type, ORG_DATA *org)
 	}
 
 	if(str_cmp(ch->name, ch->in_room->owner)
-			|| (org && str_cmp(ch->in_room->owner, org->name)))
+		|| (org && str_cmp(ch->in_room->owner, org->name)))
 	{
 		send_to_char("You don't own this room.\n\r", ch);
 		return FALSE;
@@ -4819,8 +4848,7 @@ int home_list(CHAR_DATA *ch, char *argument, int type, ORG_DATA *org)
 
 	if(type)
 	{
-		send_to_char("At this time it is not possible to list the rooms\n\r",
-				ch);
+		send_to_char("At this time it is not possible to list the rooms\n\r", ch);
 		send_to_char("owned by an organisation.\n\r", ch);
 		return FALSE;
 	}

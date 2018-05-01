@@ -178,7 +178,7 @@ void translate( CHAR_DATA *ch, char * oldwords, char * newwords )
 			length = 1;
 	}
 
-	snprintf( newwords, sizeof(newwords), "%s", buf );
+	snprintf( newwords, MSL, "%s", buf );
 
 	/* Removed to try to fix name changes.
 	return str_dup(buf2);

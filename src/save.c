@@ -86,9 +86,13 @@ void save_char_obj( CHAR_DATA *ch )
 
 	closeReserve();
 	if( IS_NPC(ch) )
+	{
 		snprintf( strsave, sizeof(strsave), "%s%s", NPC_DIR, capitalize( ch->name ) );
+	}
 	else
+	{
 		snprintf( strsave, sizeof(strsave), "%s%s", PLAYER_DIR, capitalize( ch->name ) );
+	}
 
 	if ( ( fp = fopen( TEMP_FILE, "w" ) ) == NULL )
 	{
@@ -101,21 +105,29 @@ void save_char_obj( CHAR_DATA *ch )
 		if ( ch->carrying != NULL )
 		{
 			if(!IS_NPC(ch))
+			{
 				fwrite_obj( ch, ch->carrying, fp, 0 );
+			}
 			else
+			{
 				add_to_resets( ch );
+			}
 		}
 		if ( ch->home > 0 )
 		{
 			for(i = ch->home; ch->rooms[i]; i--)
 			{
 				if(ch->rooms[i] != NULL && ch->rooms[i]->contents != NULL)
+				{
 					fwrite_obj( ch, ch->rooms[i]->contents, fp, 0 );
+				}
 			}
 		}
 		/* save the pets */
 		if (ch->pet != NULL && ch->pet->in_room == ch->in_room)
+		{
 			fwrite_pet(ch->pet,fp);
+		}
 		fprintf( fp, "#END\n" );
 	}
 	fclose( fp );
@@ -137,7 +149,9 @@ void add_to_resets( CHAR_DATA *ch )
 		if(people->in_room == ch->in_room)
 		{
 			if(!IS_NPC(people))
+			{
 				people = people->next;
+			}
 			else
 			{
 				ch->in_room->area->reset_last->next = reset;
@@ -150,8 +164,8 @@ void add_to_resets( CHAR_DATA *ch )
 				if(people->carrying != NULL)
 				{
 					for(contents = people->carrying;
-							((contents == NULL) || (contents->carried_by != people));
-							contents = contents->next)
+						((contents == NULL) || (contents->carried_by != people));
+						contents = contents->next)
 					{
 						ch->in_room->area->reset_last->next = reset;
 						reset->next = NULL;
@@ -164,7 +178,7 @@ void add_to_resets( CHAR_DATA *ch )
 						{
 							tmp = contents->contains;
 							while( (tmp->in_obj == contents)
-									&& (tmp != NULL) )
+								&& (tmp != NULL) )
 							{
 								ch->in_room->area->reset_last = reset;
 								reset->next = NULL;
@@ -186,8 +200,8 @@ void add_to_resets( CHAR_DATA *ch )
 	if(people->carrying != NULL)
 	{
 		for(contents = ch->in_room->contents;
-				contents == NULL;
-				contents = contents->next)
+			contents == NULL;
+			contents = contents->next)
 		{
 			ch->in_room->area->reset_last->next = reset;
 			reset->next = NULL;
@@ -199,8 +213,7 @@ void add_to_resets( CHAR_DATA *ch )
 			if(contents->contains != NULL)
 			{
 				tmp = contents->contains;
-				while( (tmp->in_obj == contents)
-						&& (tmp != NULL) )
+				while( (tmp->in_obj == contents) && (tmp != NULL) )
 				{
 					ch->in_room->area->reset_last = reset;
 					reset->next = NULL;
@@ -902,7 +915,12 @@ bool load_char_obj( DESCRIPTOR_DATA *d, char *name, bool log_load, bool load_con
 	if ( ( fp = fopen( strsave, "r" ) ) != NULL )
 	{
 		fclose(fp);
-		system( (char *)Format("gzip -dfq %s",strsave));
+		int systemRet = system( (char *)Format("gzip -dfq %s",strsave));
+		if (systemRet == -1)
+		{
+			log_string(LOG_BUG, "Error in decompressing mud.  Custom Error 801.");
+		}
+		// system( (char *)Format("gzip -dfq %s",strsave));
 	}
 #endif
 

@@ -172,7 +172,9 @@ NEWSPAPER *new_newspaper()
 	paper->cost = 0;
 	paper->on_stands = 0;
 	for(i=0;i<MAX_ARTICLES;i++)
-		paper->articles[i] = -1;
+		{
+			paper->articles[i] = -1;
+		}
 
 	return paper;
 }
@@ -459,7 +461,6 @@ SCRIPT_DATA *new_script()
 	script->delay		= 0;
 	script->first_script	= 0;
 	script->vnum		= 0;
-
 
 	return script;
 }
@@ -792,7 +793,6 @@ CHAR_DATA *new_char (void)
 	ch->switch_desc		= NULL;
 	ch->to_learn		= NULL;
 
-	ch->BUILDER_MODE	= 0;
 	ch->act				= 0;
 	ch->act2			= 0;
 	ch->act_points		= 0;
@@ -800,16 +800,29 @@ CHAR_DATA *new_char (void)
 	ch->affected_by2	= 0;
 	ch->agghealth		= 7;
 	ch->attitude		= 0;
+	ch->auspice			= 0;
 	ch->balance			= 0;
 	ch->bank_account	= 0;
 	ch->bg_count		= 0;
+	ch->bg_timer		= 0;
+	ch->blood_timer		= 0;
+	ch->breed			= 0;
+	ch->BUILDER_MODE	= 0;
+	ch->carry_number	= 0;
+	ch->carry_weight	= 0;
 	ch->cents			= 0;
 	ch->char_age		= 0;
 	ch->clan			= 0;
+	ch->combat_flag		= 0;
 	ch->combo_success	= 0;
 	ch->comm			= 0;
 	ch->concede			= 0;
 	ch->current_tip		= 0;
+	ch->dam_type		= 0;
+	ch->daze			= 0;
+	ch->default_pos		= P_STAND;
+	ch->dice_mod		= 0;
+	ch->diff_mod		= 0;
 	ch->dollars			= 0;
 	ch->email_lock		= 0;
 	ch->employer		= 0;
@@ -817,18 +830,28 @@ CHAR_DATA *new_char (void)
 	ch->falldam			= 0;
 	ch->form			= 0;
 	ch->gen				= 0;
+	ch->GHB				= 0;
+	ch->group			= 0;
 	ch->health			= 7;
 	ch->herd_timer		= 0;
 	ch->home			= 0;
 	ch->hunter_vis		= 0;
 	ch->id				= 0;
 	ch->imm_flags		= 0;
+	ch->incog_level		= 0;
+	ch->infl_timer		= 0;
+	ch->invis_level		= 0;
+	ch->jump_dir		= 0;
 	ch->jump_timer		= 0;
 	ch->lines			= PAGELEN;
 	ch->logon			= current_time;
 	ch->markup			= 0;
+	ch->max_GHB			= 0;
+	ch->max_RBPG		= 0;
 	ch->max_traits[0]	= 5;
 	ch->max_traits[1]	= 5;
+	ch->max_willpower	= 0;
+	ch->mprog_delay		= 0;
 	ch->off_flags		= 0;
 	ch->on_phone		= 0;
 	ch->ooc_xp_count	= 0;
@@ -839,58 +862,42 @@ CHAR_DATA *new_char (void)
 	ch->plr_flags		= 0;
 	ch->position		= P_STAND;
 	ch->pospts			= 0;
-	ch->res_flags		= 0;
-	ch->ritepoint		= 0;
-	ch->stock_ticker	= 0;
-	ch->version			= 0;
-	ch->vuln_flags		= 0;
-	ch->wait			= 0;
-	ch->warrants		= 0;
-	ch->wiznet			= 0;
-	ch->xp_job_acts		= 0;
-	ch->xpgift			= 0;
-	ch->GHB				= 0;
-	ch->RBPG			= 0;
-	ch->auspice			= 0;
-	ch->bg_timer		= 0;
-	ch->blood_timer		= 0;
-	ch->breed			= 0;
-	ch->carry_number	= 0;
-	ch->carry_weight	= 0;
-	ch->combat_flag		= 0;
-	ch->dam_type		= 0;
-	ch->daze			= 0;
-	ch->default_pos		= P_STAND;
-	ch->dice_mod		= 0;
-	ch->diff_mod		= 0;
-	ch->group			= 0;
-	ch->incog_level		= 0;
-	ch->infl_timer		= 0;
-	ch->invis_level		= 0;
-	ch->jump_dir		= 0;
-	ch->max_GHB			= 0;
-	ch->max_RBPG		= 0;
-	ch->max_willpower	= 0;
-	ch->mprog_delay		= 0;
 	ch->power_timer		= 0;
 	ch->race			= 0;
+	ch->RBPG			= 0;
+	ch->res_flags		= 0;
+	ch->ritepoint		= 0;
 	ch->saving_throw	= 0;
 	ch->sex				= 0;
 	ch->shape			= 0;
 	ch->size			= 0;
 	ch->start_pos		= P_STAND;
+	ch->stock_ticker	= 0;
 	ch->timer			= 0;
 	ch->torpor_timer	= 0;
 	ch->train_success	= 0;
-	ch->willpower		= 0;
 	ch->trust			= 0;
+	ch->version			= 0;
+	ch->vuln_flags		= 0;
+	ch->wait			= 0;
+	ch->warrants		= 0;
+	ch->willpower		= 0;
+	ch->wiznet			= 0;
+	ch->xp_job_acts		= 0;
+	ch->xpgift			= 0;
 
 	for (i = 0; i < 3; i++)
-		ch->armor[i] = 100;
+		{
+			ch->armor[i] = 100;
+		}
 	for (i = 0; i < 3; i++)
-		ch->clan_powers[i] = -1;
+		{
+			ch->clan_powers[i] = -1;
+		}
 	for (i = 0; i < 2; i++)
-		ch->colours[i] = NULL;
+		{
+			ch->colours[i] = NULL;
+		}
 	for (i = 0; i < MAX_STATS; i ++)
 	{
 		ch->perm_stat[i] = 1;
@@ -950,16 +957,15 @@ void free_char (CHAR_DATA *ch)
 	PURGE_DATA(ch->nature);
 	PURGE_DATA(ch->oldname);
 	PURGE_DATA(ch->pack);
+	PURGE_DATA(ch->pcdata);
+	PURGE_DATA(ch->pnote);
 	PURGE_DATA(ch->prefix);
 	PURGE_DATA(ch->profession);
 	PURGE_DATA(ch->prompt);
 	PURGE_DATA(ch->short_descr);
 	PURGE_DATA(ch->surname);
 	PURGE_DATA(ch->switch_desc);
-
 	PURGE_DATA(ch->to_learn);
-	PURGE_DATA(ch->pnote);
-	PURGE_DATA(ch->pcdata);
 
 	ch->ghouled_by = NULL;
 	ch->married = NULL;
@@ -1030,7 +1036,6 @@ void free_pcdata(PC_DATA *pcdata)
     	PURGE_DATA(pcdata->alias_sub[alias]);
     }
 
-
     PURGE_DATA(pcdata);
     return;
 }
@@ -1097,11 +1102,13 @@ BUFFER *new_buf_size(int size)
     buffer->size        = get_size(size);
     buffer->file		= NULL;
     buffer->function    = NULL;
+
     if (buffer->size == -1)
     {
         log_string(LOG_BUG, Format("new_buf: buffer size %d too large.",size));
         exit(1);
     }
+
     ALLOC_DATA(buffer->string, char, buffer->size);
     buffer->string[0]   = '\0';
     VALIDATE(buffer);
@@ -1143,7 +1150,9 @@ bool add_buf(BUFFER *buffer, char *string)
 	oldstr = buffer->string;
 
 	if (buffer->state == BUFFER_OVERFLOW) /* don't waste time on bad strings! */
+	{
 		return FALSE;
+	}
 
 	len = strlen(buffer->string) + strlen(string) + 1;
 
@@ -1216,9 +1225,9 @@ void free_mprog(MPROG_LIST *mp)
 {
 	Escape(mp);
 
-   PURGE_DATA(mp->code);
-   PURGE_DATA(mp->trig_phrase);
-   PURGE_DATA(mp);
+	PURGE_DATA(mp->code);
+	PURGE_DATA(mp->trig_phrase);
+	PURGE_DATA(mp);
 }
 
 
@@ -1252,9 +1261,9 @@ AREA_DATA *new_area( void )
 
     ALLOC_DATA(pArea, AREA_DATA, 1);
 
-    pArea->name = str_dup( "New Area");
-    pArea->builders = str_dup("None");
-    pArea->credits = str_dup("None");
+    pArea->name 		= str_dup( "New Area");
+    pArea->builders 	= str_dup("None");
+    pArea->credits 		= str_dup("None");
     pArea->security		=   1;
     pArea->pricemod		=   1;
     pArea->min_vnum		=   0;
@@ -1318,42 +1327,44 @@ void free_exit( EXIT_DATA *pExit )
 
 ROOM_INDEX_DATA *new_room_index( void )
 {
-    ROOM_INDEX_DATA *pRoom;
-    int door = 0;
+	ROOM_INDEX_DATA *pRoom;
+	int door = 0;
 
-    ALLOC_DATA(pRoom, ROOM_INDEX_DATA, 1);
+	ALLOC_DATA(pRoom, ROOM_INDEX_DATA, 1);
 
-    pRoom->next             =   NULL;
-    pRoom->people           =   NULL;
-    pRoom->contents         =   NULL;
-    pRoom->extra_descr      =   NULL;
-    pRoom->area             =   NULL;
+	pRoom->next             =   NULL;
+	pRoom->people           =   NULL;
+	pRoom->contents         =   NULL;
+	pRoom->extra_descr      =   NULL;
+	pRoom->area             =   NULL;
 
-    for ( door=0; door < MAX_DIR; door++ )
-        pRoom->exit[door]   =   NULL;
+	for ( door=0; door < MAX_DIR; door++ )
+		{
+			pRoom->exit[door]   =   NULL;
+		}
 
-    pRoom->name             =   str_dup( "Unnamed Room");
-    pRoom->description      =   str_dup( "None");
-    pRoom->uname            =   str_dup( "Unnamed Room");
-    pRoom->udescription	    =   str_dup( "None");
-    pRoom->dname            =   str_dup( "Unnamed Room");
-    pRoom->ddescription	    =   str_dup( "None");
-    pRoom->owner	    =   NULL;
-    pRoom->vnum             =   0;
-    pRoom->room_flags       =   0;
-    pRoom->light            =   0;
-    pRoom->sector_type      =   0;
-    pRoom->clan		    =	0;
-    pRoom->heal_rate	    =   100;
-    pRoom->mana_rate	    =   100;
-    pRoom->at_stop	    =   -1;
-    pRoom->going_to	    =   -1;
+	pRoom->name             =   str_dup( "Unnamed Room");
+	pRoom->description      =   str_dup( "None");
+	pRoom->uname            =   str_dup( "Unnamed Room");
+	pRoom->udescription	    =   str_dup( "None");
+	pRoom->owner	    =   NULL;
+	pRoom->vnum             =   0;
+	pRoom->room_flags       =   0;
+	pRoom->light            =   0;
+	pRoom->sector_type      =   0;
+	pRoom->clan		    =	0;
+	pRoom->heal_rate	    =   100;
+	pRoom->mana_rate	    =   100;
+	pRoom->at_stop	    =   -1;
+	pRoom->going_to	    =   -1;
 
-    for( door = 0; door < MAX_CAR_STOPS; door++)
-	pRoom->stops[door] = -1;
-    pRoom->car = -1;
+	for( door = 0; door < MAX_CAR_STOPS; door++)
+		{
+			pRoom->stops[door] = -1;
+		}
+	pRoom->car = -1;
 
-    return pRoom;
+	return pRoom;
 }
 
 
@@ -1370,9 +1381,7 @@ void free_room_index( ROOM_INDEX_DATA *pRoom )
 
 	orig_room = pRoom;
 
-	PURGE_DATA( pRoom->ddescription );
 	PURGE_DATA( pRoom->description );
-	PURGE_DATA( pRoom->dname );
 	PURGE_DATA( pRoom->name );
 	PURGE_DATA( pRoom->owner );
 	PURGE_DATA( pRoom->udescription );
@@ -1494,160 +1503,172 @@ void free_shop( SHOP_DATA *pShop )
 
 OBJ_INDEX_DATA *new_obj_index( void )
 {
-    OBJ_INDEX_DATA *pObj;
-    int value = 0;
+	OBJ_INDEX_DATA *pObj;
+	int value = 0;
 
-    ALLOC_DATA(pObj, OBJ_INDEX_DATA, 1);
+	ALLOC_DATA(pObj, OBJ_INDEX_DATA, 1);
 
-    pObj->material = str_dup("unknown");
-    pObj->name = str_dup("no name");
-    pObj->short_descr = str_dup("(no short description)");
-    pObj->description = str_dup("(no description)");
-    pObj->full_desc = str_dup( "(no full description)");
+	pObj->description 	= str_dup("(no description)");
+	pObj->full_desc 	= str_dup("(no full description)");
+	pObj->material 		= str_dup("unknown");
+	pObj->name 			= str_dup("no name");
+	pObj->short_descr 	= str_dup("(no short description)");
+	pObj->affected      =   NULL;
+	pObj->area          =   NULL;
+	pObj->company		=   NULL;
+	pObj->extra_descr   =   NULL;
 	pObj->next          =   NULL;
-    pObj->extra_descr   =   NULL;
-    pObj->affected      =   NULL;
-    pObj->area          =   NULL;
-    pObj->company		=   NULL;
-    pObj->vnum          =   0;
-    pObj->item_type     =   ITEM_TRASH;
-    pObj->extra_flags   =   0;
-    pObj->wear_flags    =   0;
-    pObj->count         =   0;
-    pObj->weight        =   0;
-    pObj->cost          =   0;
+	pObj->to_room_none  = NULL;
+	pObj->to_room_other = NULL;
+	pObj->to_room_self  = NULL;
+	pObj->to_room_used  = NULL;
+	pObj->to_user_none  = NULL;
+	pObj->to_user_other = NULL;
+	pObj->to_user_self  = NULL;
+	pObj->to_user_used	= NULL;
+	pObj->to_vict_other = NULL;
+	pObj->vnum          =   0;
+	pObj->item_type     =   ITEM_TRASH;
+	pObj->extra_flags   =   0;
+	pObj->wear_flags    =   0;
+	pObj->count         =   0;
+	pObj->weight        =   0;
+	pObj->cost          =   0;
     pObj->condition     =   100;                        /* ROM */
     for ( value = 0; value < 6; value++ )               /* 5 - ROM */
-        pObj->value[value]  =   0;
-    pObj->quality	=   2;
+	{
+		pObj->value[value]  =   0;
+	}
+	pObj->quality	=   2;
 
-    pObj->fetish_level = 0;
-    pObj->fetish_flags = 0;
-    pObj->fetish_target = 0;
+	pObj->fetish_level = 0;
+	pObj->fetish_flags = 0;
+	pObj->fetish_target = 0;
 
-    pObj->to_user_none          = NULL;
-    pObj->to_user_self          = NULL;
-    pObj->to_user_other         = NULL;
-    pObj->to_room_none          = NULL;
-    pObj->to_room_self          = NULL;
-    pObj->to_room_other         = NULL;
-    pObj->to_vict_other         = NULL;
-    pObj->to_room_used          = NULL;
-    pObj->to_user_used			= NULL;
-    pObj->uses					=   -2;
+	pObj->uses					=   -2;
 
-    return pObj;
+	return pObj;
 }
 
 
 void free_obj_index( OBJ_INDEX_DATA *pObj )
 {
-    EXTRA_DESCR_DATA *pExtra, *pExtra_next;
-    AFFECT_DATA *pAf, *pAf_next;
+	EXTRA_DESCR_DATA *pExtra, *pExtra_next;
+	AFFECT_DATA *pAf, *pAf_next;
 
-    Escape(pObj);
+	Escape(pObj);
 
-    PURGE_DATA( pObj->company );
-    PURGE_DATA( pObj->description );
-    PURGE_DATA( pObj->full_desc );
-    PURGE_DATA( pObj->material );
-    PURGE_DATA( pObj->name );
-    PURGE_DATA( pObj->short_descr );
-    PURGE_DATA( pObj->to_room_none );
-    PURGE_DATA( pObj->to_room_other );
-    PURGE_DATA( pObj->to_room_self );
-    PURGE_DATA( pObj->to_room_used );
-    PURGE_DATA( pObj->to_user_none );
-    PURGE_DATA( pObj->to_user_other );
-    PURGE_DATA( pObj->to_user_self );
-    PURGE_DATA( pObj->to_user_used );
-    PURGE_DATA( pObj->to_vict_other);
-    for ( pAf = pObj->affected; pAf; pAf = pAf_next )
-    {
-	pAf_next = pAf->next;
-        free_affect( pAf );
-    }
+	PURGE_DATA( pObj->company );
+	PURGE_DATA( pObj->description );
+	PURGE_DATA( pObj->full_desc );
+	PURGE_DATA( pObj->material );
+	PURGE_DATA( pObj->name );
+	PURGE_DATA( pObj->short_descr );
+	PURGE_DATA( pObj->to_room_none );
+	PURGE_DATA( pObj->to_room_other );
+	PURGE_DATA( pObj->to_room_self );
+	PURGE_DATA( pObj->to_room_used );
+	PURGE_DATA( pObj->to_user_none );
+	PURGE_DATA( pObj->to_user_other );
+	PURGE_DATA( pObj->to_user_self );
+	PURGE_DATA( pObj->to_user_used );
+	PURGE_DATA( pObj->to_vict_other);
+	for ( pAf = pObj->affected; pAf; pAf = pAf_next )
+	{
+		pAf_next = pAf->next;
+		free_affect( pAf );
+	}
 
-    for ( pExtra = pObj->extra_descr; pExtra; pExtra = pExtra_next )
-    {
-	pExtra_next = pExtra->next;
-        free_extra_descr( pExtra );
-    }
+	for ( pExtra = pObj->extra_descr; pExtra; pExtra = pExtra_next )
+	{
+		pExtra_next = pExtra->next;
+		free_extra_descr( pExtra );
+	}
 
-
-    PURGE_DATA( pObj );
-    return;
+	PURGE_DATA( pObj );
+	return;
 }
 
 
 MOB_INDEX_DATA *new_mob_index( void )
 {
-    MOB_INDEX_DATA *pMob;
-    int i = 0;
+	MOB_INDEX_DATA *pMob;
+	int i = 0;
 
-    ALLOC_DATA(pMob, MOB_INDEX_DATA, 1);
+	ALLOC_DATA(pMob, MOB_INDEX_DATA, 1);
 
-    pMob->next          =   NULL;
-    pMob->spec_fun      =   NULL;
-    pMob->pShop         =   NULL;
-    pMob->area          =   NULL;
-    pMob->player_name = str_dup("No Name");
-    pMob->short_descr = str_dup("(no short description)");
-    pMob->long_descr = str_dup("(no long description)");
-    pMob->material = str_dup("unknown");
-    pMob->description = str_dup("(no description)");
+	pMob->next          =   NULL;
+	pMob->spec_fun      =   NULL;
+	pMob->pShop         =   NULL;
+	pMob->area          =   NULL;
+	pMob->player_name = str_dup("No Name");
+	pMob->short_descr = str_dup("(no short description)");
+	pMob->long_descr = str_dup("(no long description)");
+	pMob->material = str_dup("unknown");
+	pMob->description = str_dup("(no description)");
 
-    pMob->GHB				= 0;
-    pMob->RBPG				= 0;
-    pMob->act				= ACT_IS_NPC;
-    pMob->act2				= 0;
-    pMob->affected_by		= 0;
-    pMob->affected_by2		= 0;
-    pMob->count				= 0;
-    pMob->dam_type			= 0;
+	pMob->GHB				= 0;
+	pMob->RBPG				= 0;
+	pMob->act				= ACT_IS_NPC;
+	pMob->act2				= 0;
+	pMob->affected_by		= 0;
+	pMob->affected_by2		= 0;
+	pMob->count				= 0;
+	pMob->dam_type			= 0;
     pMob->default_pos		= P_STAND; /*  -- Hugin */
     pMob->form				= 0;           /* ROM patch -- Hugin */
-    pMob->group				= 0;
-    pMob->health			= 7;
+	pMob->group				= 0;
+	pMob->health			= 7;
     pMob->hit[DICE_BONUS]	= 0;   /* ROM patch -- Hugin */
     pMob->hit[DICE_NUMBER]	= 0;   /* ROM patch -- Hugin */
     pMob->hit[DICE_TYPE]	= 0;   /* ROM patch -- Hugin */
     pMob->imm_flags     = 0;           /* ROM patch -- Hugin */
-    pMob->killed        = 0;
-    pMob->level         = 0;
-    pMob->mprog_flags	= 0;
+	pMob->killed        = 0;
+	pMob->level         = 0;
+	pMob->mprog_flags	= 0;
     pMob->off_flags     = 0;           /* ROM patch -- Hugin */
     pMob->parts         = 0;           /* ROM patch -- Hugin */
     pMob->race          = race_lookup( "human" ); /* - Hugin */
     pMob->res_flags     = 0;           /* ROM patch -- Hugin */
-    pMob->sex           = 0;
+	pMob->sex           = 0;
     pMob->size          = SIZE_MEDIUM; /* ROM patch -- Hugin */
     pMob->start_pos		= P_STAND; /*  -- Hugin */
-    pMob->vnum          = 0;
+	pMob->vnum          = 0;
     pMob->vuln_flags    = 0;           /* ROM patch -- Hugin */
-    pMob->wealth		= 0;
-    pMob->willpower		= 0;
+	pMob->wealth		= 0;
+	pMob->willpower		= 0;
 
-    for (i = 0; i < MAX_STATS; i ++)
-        pMob->stat[i] = 0;
+	for (i = 0; i < MAX_STATS; i ++)
+	{
+		pMob->stat[i] = 0;
+	}
 
-    for (i = 0; i < MAX_ABIL; i ++)
-        pMob->ability[i].value = 0;
+	for (i = 0; i < MAX_ABIL; i ++)
+	{
+		pMob->ability[i].value = 0;
+	}
 
-    for (i = 0; i < MAX_DISC; i ++)
-        pMob->disc[i] = 0;
+	for (i = 0; i < MAX_DISC; i ++)
+	{
+		pMob->disc[i] = 0;
+	}
 
-    for (i = 0; i < MAX_VIRTUES; i ++)
-        pMob->virtues[i] = 0;
+	for (i = 0; i < MAX_VIRTUES; i ++)
+	{
+		pMob->virtues[i] = 0;
+	}
 
-    for (i = 0; i < MAX_INFL; i ++)
-        pMob->influences[i] = 0;
+	for (i = 0; i < MAX_INFL; i ++)
+	{
+		pMob->influences[i] = 0;
+	}
 
-    for (i = 0; i < MAX_BG; i ++)
-        pMob->backgrounds[i] = 0;
+	for (i = 0; i < MAX_BG; i ++)
+	{
+		pMob->backgrounds[i] = 0;
+	}
 
-
-    return pMob;
+	return pMob;
 }
 
 
@@ -1669,7 +1690,8 @@ void free_mob_index( MOB_INDEX_DATA *pMob )
 		free_mprog(mp);
 	}
 
-	for(pEvent = pMob->triggers; pEvent; pEvent = pEvent_next) {
+	for(pEvent = pMob->triggers; pEvent; pEvent = pEvent_next)
+	{
 		pEvent_next = pEvent->next_in_event;
 
 		free_script(pEvent);
@@ -1723,15 +1745,16 @@ void save_bans(void)
 		if (IS_SET(pban->ban_flags,BAN_PERMANENT))
 		{
 			found = TRUE;
-			fprintf(fp,"%-20s %-2d %s\n",pban->name,pban->level,
-					print_flags(pban->ban_flags));
+			fprintf(fp,"%-20s %-2d %s\n",pban->name,pban->level, print_flags(pban->ban_flags));
 		}
 	}
 
 	fclose(fp);
 	openReserve();
 	if (!found)
+	{
 		unlink(BAN_FILE);
+	}
 }
 
 void load_bans(void)
@@ -1740,7 +1763,9 @@ void load_bans(void)
 	BAN_DATA *ban_last;
 
 	if ( ( fp = fopen( BAN_FILE, "r" ) ) == NULL )
+	{
 		return;
+	}
 
 	ban_last = NULL;
 	for ( ; ; )
@@ -1760,7 +1785,6 @@ void load_bans(void)
 		pban->ban_flags = fread_flag(fp);
 		fread_to_eol(fp);
 
-
 		LINK_SINGLE(pban, next, ban_list);
 		ban_last = pban;
 	}
@@ -1777,20 +1801,26 @@ bool check_ban(char *site,int type)
 	for ( pban = ban_list; pban != NULL; pban = pban->next )
 	{
 		if(!IS_SET(pban->ban_flags,type))
+		{
 			continue;
+		}
 
 		if (IS_SET(pban->ban_flags,BAN_PREFIX)
-				&&  IS_SET(pban->ban_flags,BAN_SUFFIX)
-				&&  strstr(pban->name,host) != NULL)
+			&&  IS_SET(pban->ban_flags,BAN_SUFFIX)
+			&&  strstr(pban->name,host) != NULL)
+		{
 			return TRUE;
+		}
 
-		if (IS_SET(pban->ban_flags,BAN_PREFIX)
-				&&  !str_suffix(pban->name,host))
+		if (IS_SET(pban->ban_flags,BAN_PREFIX) && !str_suffix(pban->name,host))
+		{
 			return TRUE;
+		}
 
-		if (IS_SET(pban->ban_flags,BAN_SUFFIX)
-				&&  !str_prefix(pban->name,host))
+		if (IS_SET(pban->ban_flags,BAN_SUFFIX) && !str_prefix(pban->name,host))
+		{
 			return TRUE;
+		}
 	}
 
 	return FALSE;
@@ -1824,12 +1854,12 @@ void ban_site(CHAR_DATA *ch, char *argument, bool fPerm)
 		for (pban = ban_list;pban != NULL;pban = pban->next)
 		{
 			snprintf(buf2, sizeof(buf2), "%s%s%s",
-					IS_SET(pban->ban_flags,BAN_PREFIX) ? "*" : "", pban->name, IS_SET(pban->ban_flags,BAN_SUFFIX) ? "*" : "");
+				IS_SET(pban->ban_flags,BAN_PREFIX) ? "*" : "", pban->name, IS_SET(pban->ban_flags,BAN_SUFFIX) ? "*" : "");
 			add_buf(buffer, (char *)Format("%-12s    %-3d  %-7s  %s\n\r",
-					buf2, pban->level, IS_SET(pban->ban_flags,BAN_NEWBIES) ? "newbies" :
-							IS_SET(pban->ban_flags,BAN_PERMIT)  ? "permit"  :
-									IS_SET(pban->ban_flags,BAN_ALL)     ? "all"	: "",
-											IS_SET(pban->ban_flags,BAN_PERMANENT) ? "perm" : "temp"));
+				buf2, pban->level, IS_SET(pban->ban_flags,BAN_NEWBIES) ? "newbies" :
+				IS_SET(pban->ban_flags,BAN_PERMIT)  ? "permit"  :
+				IS_SET(pban->ban_flags,BAN_ALL)     ? "all"	: "",
+				IS_SET(pban->ban_flags,BAN_PERMANENT) ? "perm" : "temp"));
 		}
 
 		page_to_char( buf_string(buffer), ch );
@@ -1839,11 +1869,17 @@ void ban_site(CHAR_DATA *ch, char *argument, bool fPerm)
 
 	/* find out what type of ban */
 	if (IS_NULLSTR(arg2) || !str_prefix(arg2,"all"))
+	{
 		type = BAN_ALL;
+	}
 	else if (!str_prefix(arg2,"newbies"))
+	{
 		type = BAN_NEWBIES;
+	}
 	else if (!str_prefix(arg2,"permit"))
+	{
 		type = BAN_PERMIT;
+	}
 	else
 	{
 		send_to_char("Acceptable ban types are all, newbies, and permit.\n\r", ch);
@@ -1900,11 +1936,17 @@ void ban_site(CHAR_DATA *ch, char *argument, bool fPerm)
 	pban->ban_flags = type;
 
 	if (prefix)
+	{
 		SET_BIT(pban->ban_flags,BAN_PREFIX);
+	}
 	if (suffix)
+	{
 		SET_BIT(pban->ban_flags,BAN_SUFFIX);
+	}
 	if (fPerm)
+	{
 		SET_BIT(pban->ban_flags,BAN_PERMANENT);
+	}
 
 	LINK_SINGLE(pban, next, ban_list);
 
@@ -1947,10 +1989,15 @@ void do_allow( CHAR_DATA *ch, char *argument )
 				send_to_char( "You are not powerful enough to lift that ban.\n\r",ch);
 				return;
 			}
+
 			if ( prev == NULL )
+			{
 				ban_list   = ban_list->next;
+			}
 			else
+			{
 				prev->next = curr->next;
+			}
 
 			free_ban(curr);
 			send_to_char( Format("Ban on %s lifted.\n\r",arg), ch );
@@ -2025,10 +2072,15 @@ ORG_DATA *new_org()
 	org->who_name	= NULL;
 	org->file_name	= NULL;
 	org->leader		= NULL;
+
 	for(i=0; i<5; i++)
+	{
 		org->commands[i] = NULL;
+	}
 	for(i=0; i<6; i++)
+	{
 		org->title[i] = NULL;
+	}
 
 	org->step_point		= 0;
 	org->funds			= 0;
@@ -2053,9 +2105,13 @@ void free_org(ORG_DATA *org)
 	PURGE_DATA( org->races );
 	PURGE_DATA( org->who_name );
 	for(i=0; i<5; i++)
+	{
 		PURGE_DATA(org->commands[i]);
+	}
 	for(i=0; i<6; i++)
+	{
 		PURGE_DATA(org->title[i]);
+	}
 
 	org->step_point		= 0;
 	org->type			= 0;

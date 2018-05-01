@@ -23,7 +23,7 @@ COMPILER		= gcc
 # Old Profiler
 # PROFILER      	= -ggdb3 #-Werror -pedantic -DASSERT
 # New Profiler
-PROFILER		= -O3 -g -ggdb  -Wall  -funroll-loops -fcaller-saves -ffast-math
+PROFILER		= -O -g -ggdb  -Wall  -funroll-loops -fcaller-saves -ffast-math
 NOCRYPT			=
 C_FLAGS			=  -Wall -g $(PROFILER) -I$(INCLUDE) #$(NOCRYPT)
 LIBRARY_FLAGS	=  $(PROFILER)
@@ -46,14 +46,14 @@ pt: $(O_FILES)
 	rm -f $(ENGINE)
 	rm -f $(ENGINE).exe
 	$(COMPILER) $(LIBRARY_FLAGS) -o $(ENGINE) $(O_FILES) -lm
-	# @if ! test -f $(BVERSION_FILE); then echo 0 > $(BVERSION_FILE); fi
-	# @$(ECHOCMD) -e $$(($$(cat $(BVERSION_FILE)) + 1)) > $(BVERSION_FILE)
-	# @$(ECHOCMD) -e "#ifndef __Version_H" > ./include/version.h
-	# @$(ECHOCMD) -e "#define __Version_h" >> ./include/version.h
-	# @$(ECHOCMD) -e '#define mudVersion "1.$(shell cat $(MJVERSION_FILE)).$(shell cat $(MVERSION_FILE)).$(shell cat $(BVERSION_FILE))"' >> ./include/version.h
-	# @$(ECHOCMD) -e "#endif" >> ./include/version.h
+	@if ! test -f $(BVERSION_FILE); then echo 0 > $(BVERSION_FILE); fi
+	@$(ECHOCMD) -e $$(($$(cat $(BVERSION_FILE)) + 1)) > $(BVERSION_FILE)
+	@$(ECHOCMD) -e "#ifndef __Version_H" > ./include/version.h
+	@$(ECHOCMD) -e "#define __Version_h" >> ./include/version.h
+	@$(ECHOCMD) -e '#define mudVersion "1.$(shell cat $(MJVERSION_FILE)).$(shell cat $(MVERSION_FILE)).$(shell cat $(BVERSION_FILE))"' >> ./include/version.h
+	@$(ECHOCMD) -e "#endif" >> ./include/version.h
 	@$(ECHOCMD) -e "$(L_WHITE)Revision control completed!$(L_NRM)"
-	
+
 
 ptdev: $(O_TESTFILES)
 	rm -f projectdev
@@ -144,7 +144,8 @@ mjversion:
 
 #####################################################################################################
 
-# valgrind -v --tool=memcheck --leak-check=full --show-reachable=yes --demangle=yes --db-attach=yes --num-callers=10 --track-origins=yes --track-fds=yes ../src/$(ENGINE) -v
+# valgrind --log-file="valgrind.txt" --leak-check=yes ../src/project 9080
+
 
 #####################################################################################
 # Grab our u-name for giggles; used later on to detect possible support

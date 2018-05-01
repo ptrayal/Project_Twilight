@@ -1073,64 +1073,18 @@ REDIT( redit_show )
 
 	buf1[0] = '\0';
 
-	strncat( buf1, Format("\tWDescription:\tn\n\r%s\n\r", pRoom->description), sizeof(buf1) - strlen(buf1) - 1 );
-	strncat( buf1, Format("\tWName:\tn       [%s]\n\r", pRoom->name), sizeof(buf1) - strlen(buf1) - 1 );
 	strncat( buf1, Format("\tWArea:\tn       [%5d] %s\n\r", pRoom->area->vnum, pRoom->area->name), sizeof(buf1) - strlen(buf1) - 1 );
-	strncat( buf1, Format("\tWVnum:\tn       [%5d]\n\r\tWSector:\tn     [%s]\n\r", pRoom->vnum, flag_string( sector_flags, pRoom->sector_type )), sizeof(buf1) - strlen(buf1) - 1 );
-	strncat( buf1, Format("\tYUmbra Description:\tn\n\r%s\n\r", pRoom->udescription), sizeof(buf1) - strlen(buf1) - 1 );
+	strncat( buf1, Format("\tWVnum:\tn       [%5d]\n\r", pRoom->vnum ), sizeof(buf1) - strlen(buf1) - 1 );
+	strncat( buf1, Format("\tWName:\tn       [%s]\n\r", pRoom->name), sizeof(buf1) - strlen(buf1) - 1 );
+	strncat( buf1, Format("\tWDescription:\tn\n\r%s\n\r", pRoom->description), sizeof(buf1) - strlen(buf1) - 1 );
+	strncat( buf1, Format("\tWSector:\tn     [%s]\n\r", flag_string( sector_flags, pRoom->sector_type )), sizeof(buf1) - strlen(buf1) - 1);
 	strncat( buf1, Format("\tYUmbra Name:\tn       [%s]\n\r", pRoom->uname), sizeof(buf1) - strlen(buf1) - 1 );
-	strncat( buf1, Format("\tGDreaming Description:\tn\n\r%s\n\r", pRoom->ddescription), sizeof(buf1) - strlen(buf1) - 1 );
-	strncat( buf1, Format("\tGDreaming Name:\tn       [%s]\n\r", pRoom->dname), sizeof(buf1) - strlen(buf1) - 1 );
+	strncat( buf1, Format("\tYUmbra Description:\tn\n\r%s\n\r", pRoom->udescription), sizeof(buf1) - strlen(buf1) - 1 );
 	strncat( buf1, Format("\tWRoom flags:\tn [%s]\n\r", flag_string( room_flags, pRoom->room_flags )), sizeof(buf1) - strlen(buf1) - 1 );
 	strncat( buf1, Format("\tWHealth recovery:\tn [%d]\n\r", pRoom->heal_rate), sizeof(buf1) - strlen(buf1) - 1 );
 	strncat( buf1, Format("\tWClan:\tn [%d] %s\n\r" , pRoom->clan, ((pRoom->clan > 0) ? clan_table[pRoom->clan].name : "none" )), sizeof(buf1) - strlen(buf1) - 1 );
 
-	if(pRoom->owner != NULL && pRoom->owner[0] != '\0') {
-		strncat( buf1, Format("\tWOwner:\tn [%s]\n\r" , pRoom->owner), sizeof(buf1) - strlen(buf1) - 1 );
-	}
-
-	if ( pRoom->extra_descr )
-	{
-		EXTRA_DESCR_DATA *ed;
-
-		strncat( buf1, "\tWExtra Desc Keywords:\tn  [", sizeof(buf1) - strlen(buf1) - 1 );
-		for ( ed = pRoom->extra_descr; ed; ed = ed->next )
-		{
-			strncat( buf1, ed->keyword, sizeof(buf1) - strlen(buf1) - 1 );
-			if ( ed->next )
-				strncat( buf1, " ", sizeof(buf1) - strlen(buf1) - 1 );
-		}
-		strncat( buf1, "]\n\r", sizeof(buf1) - strlen(buf1) - 1 );
-	}
-
-	if(IS_SET(pRoom->room_flags, ROOM_STOP))
-	{
-		strncat( buf1, "\tWStop for elevator:\tn  [Room vnum: ", sizeof(buf1) - strlen(buf1) - 1 );
-		strncat( buf1, Format("%d Stop number: %d", pRoom->car, pRoom->stops[0]), sizeof(buf1) - strlen(buf1) - 1 );
-		strncat( buf1, "]\n\r", sizeof(buf1) - strlen(buf1) - 1 );
-	}
-
-	if(IS_SET(pRoom->room_flags, ROOM_VEHICLE))
-	{
-		strncat( buf1, "\tWInitially Parked:\tn  [", sizeof(buf1) - strlen(buf1) - 1 );
-		strncat( buf1, Format("%d", pRoom->stops[0]), sizeof(buf1) - strlen(buf1) - 1 );
-		strncat( buf1, "]\n\r", sizeof(buf1) - strlen(buf1) - 1 );
-	}
-
-	if(IS_SET(pRoom->room_flags, ROOM_TRAIN)
-			|| IS_SET(pRoom->room_flags, ROOM_ELEVATOR))
-	{
-		strncat( buf1, Format("Stops (1-%d):  ", MAX_CAR_STOPS), sizeof(buf1) - strlen(buf1) - 1);
-		for(door = 1; door < MAX_CAR_STOPS; door++)
-		{
-			if(pRoom->stops[door] > 0) {
-				strncat( buf1, Format("[%d] %d ", door, pRoom->stops[door]), sizeof(buf1) - strlen(buf1) - 1 );
-			}
-		}
-		strncat( buf1, "\n\r", sizeof(buf1) - strlen(buf1) - 1 );
-	}
-
-	strncat( buf1, "\tWCharacters:\tn [" , sizeof(buf1) - strlen(buf1) - 1);
+	strncat( buf1, "\tWCharacters in Room:\tn [" , sizeof(buf1) - strlen(buf1) - 1);
 	fcnt = FALSE;
 	for ( rch = pRoom->people; rch; rch = rch->next_in_room )
 	{
@@ -1149,9 +1103,11 @@ REDIT( redit_show )
 		strncat( buf1, "\n\r", sizeof(buf1) - strlen(buf1) - 1 );
 	}
 	else
+	{
 		strncat( buf1, "none]\n\r", sizeof(buf1) - strlen(buf1) - 1 );
+	}
 
-	strncat( buf1, "\tWObjects:\tn    [", sizeof(buf1) - strlen(buf1) - 1 );
+	strncat( buf1, "\tWObjects in Room:\tn    [", sizeof(buf1) - strlen(buf1) - 1 );
 	fcnt = FALSE;
 	for ( obj = pRoom->contents; obj; obj = obj->next_content )
 	{
@@ -1170,8 +1126,12 @@ REDIT( redit_show )
 		strncat( buf1, "\n\r", sizeof(buf1) - strlen(buf1) - 1 );
 	}
 	else
+	{
 		strncat( buf1, "none]\n\r", sizeof(buf1) - strlen(buf1) - 1 );
+	}
 
+	// Doors
+	strncat( buf1, "\n\r\tG<----\tWDoors\tG---->\tn\n\r", sizeof(buf1) - strlen(buf1) - 1 );
 	for ( door = 0; door < MAX_DIR; door++ )
 	{
 		EXIT_DATA *pexit;
@@ -1184,7 +1144,7 @@ REDIT( redit_show )
 			int i, length;
 
 			strncat( buf1, Format("-%-5s to [%5d] Key: [%5d] ",
-					capitalize(dir_name[door]), pexit->u1.to_room ? pexit->u1.to_room->vnum : 0, pexit->key), sizeof(buf1) - strlen(buf1) - 1 );
+				capitalize(dir_name[door]), pexit->u1.to_room ? pexit->u1.to_room->vnum : 0, pexit->key), sizeof(buf1) - strlen(buf1) - 1 );
 
 			/*
 			 * Format up the exit info.
@@ -1226,11 +1186,66 @@ REDIT( redit_show )
 				strncat( buf1, Format("%s", pexit->description), sizeof(buf1) - strlen(buf1) - 1 );
 			}
 
-			if(pexit->jumpto.to_room) {
+			if(pexit->jumpto.to_room)
+			{
 				strncat( buf1, Format("-%-5s has jumpto link to [%5d]\n\r",
-						capitalize(dir_name[door]), pexit->jumpto.to_room?pexit->jumpto.to_room->vnum:0), sizeof(buf1) - strlen(buf1) - 1 );
+					capitalize(dir_name[door]), pexit->jumpto.to_room?pexit->jumpto.to_room->vnum:0), sizeof(buf1) - strlen(buf1) - 1 );
 			}
 		}
+	}
+
+	// Begin showing optional flags
+	strncat( buf1, "\n\r\tG<----\tWOptional Room Settings\tG---->\tn\n\r", sizeof(buf1) - strlen(buf1) - 1 );
+	// Is the room owned by someone?
+	if(pRoom->owner != NULL && pRoom->owner[0] != '\0')
+	{
+		strncat( buf1, Format("\tWOwner:\tn [%s]\n\r" , pRoom->owner), sizeof(buf1) - strlen(buf1) - 1 );
+	}
+
+	// Are there extra descriptions being used?
+	if ( pRoom->extra_descr )
+	{
+		EXTRA_DESCR_DATA *ed;
+
+		strncat( buf1, "\tWExtra Desc Keywords:\tn  [", sizeof(buf1) - strlen(buf1) - 1 );
+		for ( ed = pRoom->extra_descr; ed; ed = ed->next )
+		{
+			strncat( buf1, ed->keyword, sizeof(buf1) - strlen(buf1) - 1 );
+			if ( ed->next )
+			{
+				strncat( buf1, " ", sizeof(buf1) - strlen(buf1) - 1 );
+			}
+		}
+		strncat( buf1, "]\n\r", sizeof(buf1) - strlen(buf1) - 1 );
+	}
+
+	// Is this room a room stop for elevators?
+	if(IS_SET(pRoom->room_flags, ROOM_STOP))
+	{
+		strncat( buf1, "\tWStop for elevator:\tn  [Room vnum: ", sizeof(buf1) - strlen(buf1) - 1 );
+		strncat( buf1, Format("%d Stop number: %d", pRoom->car, pRoom->stops[0]), sizeof(buf1) - strlen(buf1) - 1 );
+		strncat( buf1, "]\n\r", sizeof(buf1) - strlen(buf1) - 1 );
+	}
+
+	// Is this room a vehicle?
+	if(IS_SET(pRoom->room_flags, ROOM_VEHICLE))
+	{
+		strncat( buf1, "\tWInitially Parked:\tn  [", sizeof(buf1) - strlen(buf1) - 1 );
+		strncat( buf1, Format("%d", pRoom->stops[0]), sizeof(buf1) - strlen(buf1) - 1 );
+		strncat( buf1, "]\n\r", sizeof(buf1) - strlen(buf1) - 1 );
+	}
+
+	// Is this a stop for train or elevators?
+	if(IS_SET(pRoom->room_flags, ROOM_TRAIN) || IS_SET(pRoom->room_flags, ROOM_ELEVATOR))
+	{
+		strncat( buf1, Format("Stops (1-%d):  ", MAX_CAR_STOPS), sizeof(buf1) - strlen(buf1) - 1);
+		for(door = 1; door < MAX_CAR_STOPS; door++)
+		{
+			if(pRoom->stops[door] > 0) {
+				strncat( buf1, Format("[%d] %d ", door, pRoom->stops[door]), sizeof(buf1) - strlen(buf1) - 1 );
+			}
+		}
+		strncat( buf1, "\n\r", sizeof(buf1) - strlen(buf1) - 1 );
 	}
 
 	send_to_char( buf1, ch );
@@ -2015,43 +2030,6 @@ REDIT( redit_desc )
 }
 
 
-REDIT( redit_dname )
-{
-	ROOM_INDEX_DATA *pRoom;
-
-	EDIT_ROOM(ch, pRoom);
-
-	if ( IS_NULLSTR(argument) )
-	{
-		send_to_char( "Syntax:  dname [name]\n\r", ch );
-		return FALSE;
-	}
-
-	PURGE_DATA( pRoom->dname );
-	pRoom->dname = str_dup( argument );
-
-	send_to_char( "Dreaming Name set.\n\r", ch );
-	return TRUE;
-}
-
-
-
-REDIT( redit_ddesc )
-{
-    ROOM_INDEX_DATA *pRoom;
-
-    EDIT_ROOM(ch, pRoom);
-
-    if ( IS_NULLSTR(argument) )
-    {
-	string_append( ch, &pRoom->ddescription );
-	return TRUE;
-    }
-
-    send_to_char( "Syntax:  ddesc\n\r", ch );
-    return FALSE;
-}
-
 REDIT( redit_uname )
 {
     ROOM_INDEX_DATA *pRoom;
@@ -2070,7 +2048,6 @@ REDIT( redit_uname )
     send_to_char( "Name set.\n\r", ch );
     return TRUE;
 }
-
 
 
 REDIT( redit_udesc )

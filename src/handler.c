@@ -2039,7 +2039,14 @@ void obj_from_char( OBJ_DATA *obj )
 		PURGE_DATA(obj->owner);
 		if(IS_NPC(ch))
 		{
-			obj->owner	 = str_dup(ch->short_descr);
+			if(IS_NULLSTR(ch->short_descr))
+			{
+				log_string(LOG_BUG,Format("Problem with mob named %s.  Has no short description", ch->name));
+			}
+			else
+			{
+				obj->owner	 = str_dup(ch->short_descr);
+			}
 		}
 		else
 		{

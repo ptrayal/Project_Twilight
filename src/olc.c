@@ -365,13 +365,11 @@ const struct olc_cmd_type redit_table[] =
 	{   "create",	redit_create	},
 	{   "desc",		redit_desc	},
 	{   "udesc",	redit_udesc	},
-	{   "ddesc",	redit_ddesc	},
 	{   "ed",		redit_ed	},
 	{   "flags",	redit_flags	},
 	{   "format",	redit_format	},
 	{   "name",		redit_name	},
 	{   "uname",	redit_uname	},
-	{   "dname",	redit_dname	},
 	{	"show",		redit_show	},
 	{   "heal",		redit_heal	},
 	{	"mana",		redit_mana	},
@@ -1019,7 +1017,7 @@ void redit( CHAR_DATA *ch, char *argument )
 	if ( IS_NULLSTR(command) )
 	{
 	redit_show( ch, argument );
-	send_to_char("\tOType 'done' to exit the editor.\tn\n\r", ch);
+	send_to_char("\n\r\tOType 'done' to exit the editor.\tn\n\r", ch);
 	return;
 	}
 
@@ -3100,24 +3098,6 @@ void check_area(AREA_DATA *pArea, CHAR_DATA *ch)
 				}
 				Found = TRUE;
 				strncat(buf, "no umbra description", sizeof(buf) - strlen(buf) - 1);
-			}
-			if(!str_cmp(rm->dname, "(null)") || rm->dname == NULL)
-			{
-				if(Found == TRUE)
-				{
-					strncat(buf, ", ",sizeof(buf) - strlen(buf) - 1);
-				}
-				Found = TRUE;
-				strncat(buf, "no dream name", sizeof(buf) - strlen(buf) - 1);
-			}
-			if(!str_cmp(rm->ddescription, "(null)") || rm->ddescription == NULL)
-			{
-				if(Found == TRUE)
-				{
-					strncat(buf, ", ", sizeof(buf) - strlen(buf) - 1);
-				}
-				Found = TRUE;
-				strncat(buf, "no dream description", sizeof(buf) - strlen(buf) - 1);
 			}
 			if(Found == TRUE)
 			{

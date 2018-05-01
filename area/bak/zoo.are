@@ -39,12 +39,6 @@ The Zoo Entrance~
 E
 XDUMB1~
 None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
 D0
 (none)~
 (null)~
@@ -72,12 +66,6 @@ XNUMB1~
 The Zoo Ring Road~
 E
 XDUMB1~
-None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
 None~
 D0
 (none)~
@@ -114,12 +102,6 @@ XNUMB1~
 The Zoo Ring Road~
 E
 XDUMB1~
-None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
 None~
 D0
 (none)~
@@ -158,12 +140,6 @@ Aquarium~
 E
 XDUMB1~
 None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
 D2
 (none)~
 (null)~
@@ -182,12 +158,6 @@ XNUMB1~
 Unnamed Room~
 E
 XDUMB1~
-None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
 None~
 D0
 (none)~
@@ -214,12 +184,6 @@ XNUMB1~
 Unnamed Room~
 E
 XDUMB1~
-None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
 None~
 D0
 (none)~
@@ -251,12 +215,6 @@ Unnamed Room~
 E
 XDUMB1~
 None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
 D0
 (none)~
 (null)~
@@ -286,12 +244,6 @@ XNUMB1~
 Unnamed Room~
 E
 XDUMB1~
-None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
 None~
 D0
 (none)~
@@ -323,12 +275,6 @@ Unnamed Room~
 E
 XDUMB1~
 None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
 D0
 (none)~
 (null)~
@@ -358,12 +304,6 @@ XNUMB1~
 Unnamed Room~
 E
 XDUMB1~
-None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
 None~
 D0
 (none)~
@@ -396,12 +336,6 @@ Unnamed Room~
 E
 XDUMB1~
 None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
 D0
 (none)~
 (null)~
@@ -431,12 +365,6 @@ XNUMB1~
 Unnamed Room~
 E
 XDUMB1~
-None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
 None~
 D0
 (none)~
@@ -468,12 +396,6 @@ Unnamed Room~
 E
 XDUMB1~
 None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
 D2
 (none)~
 (null)~
@@ -498,12 +420,6 @@ XNUMB1~
 The Zoo Ring Road~
 E
 XDUMB1~
-None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
 None~
 D0
 (none)~
@@ -539,12 +455,6 @@ Koalas and Kangaroos~
 E
 XDUMB1~
 None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
 D3
 (none)~
 (null)~
@@ -568,12 +478,6 @@ Elephants and Giraffes~
 E
 XDUMB1~
 None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
 D1
 (none)~
 (null)~
@@ -596,12 +500,6 @@ XNUMB1~
 The Zoo Ring Road~
 E
 XDUMB1~
-None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
 None~
 D0
 (none)~
@@ -639,12 +537,6 @@ Great Cats~
 E
 XDUMB1~
 None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
 D3
 (none)~
 (null)~
@@ -667,12 +559,6 @@ XNUMB1~
 Primates~
 E
 XDUMB1~
-None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
 None~
 D1
 (none)~
@@ -698,12 +584,6 @@ Snakes and Other Reptiles~
 E
 XDUMB1~
 None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
 D0
 (none)~
 (null)~
@@ -726,12 +606,6 @@ Aviary~
 E
 XDUMB1~
 None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
 D2
 (none)~
 (null)~
@@ -747,12 +621,6 @@ XNUMB1~
 Unnamed Room~
 E
 XDUMB1~
-None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
 None~
 D0
 (none)~
@@ -773,12 +641,6 @@ XNUMB1~
 Unnamed Room~
 E
 XDUMB1~
-None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
 None~
 D0
 (none)~
@@ -803,12 +665,6 @@ Unnamed Room~
 E
 XDUMB1~
 None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
 D0
 (none)~
 (null)~
@@ -831,12 +687,6 @@ XNUMB1~
 Unnamed Room~
 E
 XDUMB1~
-None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
 None~
 D0
 (none)~
@@ -864,12 +714,6 @@ XNUMB1~
 Unnamed Room~
 E
 XDUMB1~
-None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
 None~
 D0
 (none)~
@@ -902,12 +746,6 @@ Unnamed Room~
 E
 XDUMB1~
 None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
 D0
 (none)~
 (null)~
@@ -934,12 +772,6 @@ Unnamed Room~
 E
 XDUMB1~
 None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
 D0
 (none)~
 (null)~
@@ -965,12 +797,6 @@ XNUMB1~
 Unnamed Room~
 E
 XDUMB1~
-None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
 None~
 D0
 (none)~
@@ -1002,12 +828,6 @@ Unnamed Room~
 E
 XDUMB1~
 None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
 D0
 (none)~
 (null)~
@@ -1038,12 +858,6 @@ Unnamed Room~
 E
 XDUMB1~
 None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
 D0
 (none)~
 (null)~
@@ -1070,12 +884,6 @@ Unnamed Room~
 E
 XDUMB1~
 None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
 D0
 (none)~
 (null)~
@@ -1101,12 +909,6 @@ XNUMB1~
 Unnamed Room~
 E
 XDUMB1~
-None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
 None~
 D0
 (none)~
@@ -1138,12 +940,6 @@ Unnamed Room~
 E
 XDUMB1~
 None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
 D0
 (none)~
 (null)~
@@ -1174,12 +970,6 @@ Unnamed Room~
 E
 XDUMB1~
 None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
 D0
 (none)~
 (null)~
@@ -1206,12 +996,6 @@ Unnamed Room~
 E
 XDUMB1~
 None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
 D0
 (none)~
 (null)~
@@ -1237,12 +1021,6 @@ XNUMB1~
 Unnamed Room~
 E
 XDUMB1~
-None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
 None~
 D0
 (none)~
@@ -1274,12 +1052,6 @@ Unnamed Room~
 E
 XDUMB1~
 None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
 D0
 (none)~
 (null)~
@@ -1310,12 +1082,6 @@ Unnamed Room~
 E
 XDUMB1~
 None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
 D0
 (none)~
 (null)~
@@ -1342,12 +1108,6 @@ Unnamed Room~
 E
 XDUMB1~
 None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
 D0
 (none)~
 (null)~
@@ -1373,12 +1133,6 @@ XNUMB1~
 Unnamed Room~
 E
 XDUMB1~
-None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
 None~
 D0
 (none)~
@@ -1410,12 +1164,6 @@ Unnamed Room~
 E
 XDUMB1~
 None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
 D0
 (none)~
 (null)~
@@ -1446,12 +1194,6 @@ Unnamed Room~
 E
 XDUMB1~
 None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
 D0
 (none)~
 (null)~
@@ -1478,12 +1220,6 @@ Unnamed Room~
 E
 XDUMB1~
 None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
 D0
 (none)~
 (null)~
@@ -1509,12 +1245,6 @@ XNUMB1~
 Unnamed Room~
 E
 XDUMB1~
-None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
 None~
 D0
 (none)~
@@ -1546,12 +1276,6 @@ Unnamed Room~
 E
 XDUMB1~
 None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
 D0
 (none)~
 (null)~
@@ -1582,12 +1306,6 @@ Unnamed Room~
 E
 XDUMB1~
 None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
 D0
 (none)~
 (null)~
@@ -1615,12 +1333,6 @@ Unnamed Room~
 E
 XDUMB1~
 None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
 D1
 (none)~
 (null)~
@@ -1643,12 +1355,6 @@ XNUMB1~
 Unnamed Room~
 E
 XDUMB1~
-None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
 None~
 D0
 (none)~
@@ -1681,12 +1387,6 @@ Unnamed Room~
 E
 XDUMB1~
 None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
 D0
 (none)~
 (null)~
@@ -1718,12 +1418,6 @@ Unnamed Room~
 E
 XDUMB1~
 None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
 D2
 (none)~
 (null)~
@@ -1746,12 +1440,6 @@ Unnamed Room~
 E
 XDUMB1~
 None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
-None~
 D1
 (none)~
 (null)~
@@ -1773,12 +1461,6 @@ XNUMB1~
 Unnamed Room~
 E
 XDUMB1~
-None~
-E
-XNDREAM~
-Unnamed Room~
-E
-XDDREAM~
 None~
 D2
 (none)~

@@ -133,7 +133,7 @@ void save_org_list()
  * ROM OLC
  * Used in save_mobile and save_object below.  Writes
  * flags on the form fread_flag reads.
- * 
+ *
  * buf[] must hold at least 32+1 characters.
  *
  * -- Hugin
@@ -332,7 +332,7 @@ void save_object( FILE *fp, OBJ_INDEX_DATA *pObjIndex )
 	             pObjIndex->value[1],
 	             liq_table[pObjIndex->value[2]].liq_name);
 	    break;
-	    
+
         case ITEM_CONTAINER:
             fprintf( fp, "%d %s %d %d %d 0\n",
                      pObjIndex->value[0],
@@ -341,14 +341,14 @@ void save_object( FILE *fp, OBJ_INDEX_DATA *pObjIndex )
                      pObjIndex->value[3],
                      pObjIndex->value[4]);
             break;
-            
+
         case ITEM_FOOD:
             fprintf( fp, "%d %d 0 %s 0 0\n",
                      pObjIndex->value[0],
                      pObjIndex->value[1],
                      fwrite_flag( pObjIndex->value[3], buf ) );
             break;
-            
+
         case ITEM_PORTAL:
             fprintf( fp, "%d %s %s %d 0 0\n",
                      pObjIndex->value[0],
@@ -356,7 +356,7 @@ void save_object( FILE *fp, OBJ_INDEX_DATA *pObjIndex )
                      fwrite_flag( pObjIndex->value[2], buf ),
                      pObjIndex->value[3]);
             break;
-            
+
         case ITEM_FURNITURE:
             fprintf( fp, "%d %d %s %d %d 0\n",
                      pObjIndex->value[0],
@@ -365,7 +365,7 @@ void save_object( FILE *fp, OBJ_INDEX_DATA *pObjIndex )
                      pObjIndex->value[3],
                      pObjIndex->value[4]);
             break;
-            
+
         case ITEM_WEAPON:
             fprintf( fp, "%d %d %d %s %s %d\n",
                      pObjIndex->value[0],
@@ -375,7 +375,7 @@ void save_object( FILE *fp, OBJ_INDEX_DATA *pObjIndex )
                      fwrite_flag( pObjIndex->value[4], buf ),
                      pObjIndex->value[5] );
             break;
-            
+
         case ITEM_ARMOR:
             fprintf( fp, "%d %d %d %d %d 0\n",
                      pObjIndex->value[0],
@@ -384,7 +384,7 @@ void save_object( FILE *fp, OBJ_INDEX_DATA *pObjIndex )
                      pObjIndex->value[3],
                      pObjIndex->value[4]);
             break;
-            
+
         case ITEM_PILL:
         case ITEM_POTION:
         case ITEM_SCROLL:
@@ -456,7 +456,7 @@ void save_object( FILE *fp, OBJ_INDEX_DATA *pObjIndex )
 
     return;
 }
- 
+
 
 
 
@@ -482,7 +482,7 @@ void save_objects( FILE *fp, AREA_DATA *pArea )
 	fprintf( fp, "#0\n\n\n\n" );
 	return;
 }
- 
+
 
 
 
@@ -520,10 +520,10 @@ void save_rooms( FILE *fp, AREA_DATA *pArea )
 					fprintf( fp, "V\n%d %d\n", pRoomIndex->car,
 							get_stop(get_room_index(pRoomIndex->car), pRoomIndex) );
 				}
+				// Umbral name and description
 				fprintf( fp, "E\nXNUMB1~\n%s~\n", pRoomIndex->uname ? pRoomIndex->uname : "");
 				fprintf( fp, "E\nXDUMB1~\n%s~\n", fix_string(pRoomIndex->udescription) );
-				fprintf( fp, "E\nXNDREAM~\n%s~\n", pRoomIndex->dname ? pRoomIndex->dname : "" );
-				fprintf( fp, "E\nXDDREAM~\n%s~\n", fix_string(pRoomIndex->ddescription) );
+
 				for ( pEd = pRoomIndex->extra_descr; pEd;
 						pEd = pEd->next )
 				{
@@ -586,11 +586,11 @@ void save_door_resets( FILE *fp, AREA_DATA *pArea )
                 for( door = 0; door < MAX_DIR; door++ )
                 {
                     if ( ( pExit = pRoomIndex->exit[door] )
-                          && pExit->u1.to_room 
+                          && pExit->u1.to_room
                           && ( IS_SET( pExit->rs_flags, EX_CLOSED )
                           || IS_SET( pExit->rs_flags, EX_LOCKED ) ) )
 #if defined( VERBOSE )
-			fprintf( fp, "D 0 %d %d %d The %s door of %s is %s\n", 
+			fprintf( fp, "D 0 %d %d %d The %s door of %s is %s\n",
 				pRoomIndex->vnum,
 				pExit->orig_door,
 				pExit->rs_flags,
@@ -600,7 +600,7 @@ void save_door_resets( FILE *fp, AREA_DATA *pArea )
 				    : "closed" );
 #endif
 #if !defined( VERBOSE )
-			fprintf( fp, "D 0 %d %d %d\n", 
+			fprintf( fp, "D 0 %d %d %d\n",
 				pRoomIndex->vnum,
 				pExit->orig_door,
 				pExit->rs_flags );
@@ -869,7 +869,12 @@ void save_area( AREA_DATA *pArea )
 
 	fclose( fp );
 	openReserve();
-	system((char *)Format("cp %s bak/", pArea->file_name));
+	int systemRet = system((char *)Format("cp %s bak/", pArea->file_name));
+	if(systemRet == -1)
+	{
+		log_string(LOG_BUG, "Problem in void save_area.");
+	}
+	// system((char *)Format("cp %s bak/", pArea->file_name));
 	return;
 }
 
@@ -881,12 +886,12 @@ void save_area( AREA_DATA *pArea )
  ****************************************************************************/
 void do_asave( CHAR_DATA *ch, char *argument )
 {
-	char arg1 [MAX_INPUT_LENGTH]={'\0'};
 	AREA_DATA *pArea;
-	FILE *fp;
+	// FILE *fp;
+	char arg1 [MAX_INPUT_LENGTH]={'\0'};
 	int value = 0;
 
-	fp = NULL;
+	// fp = NULL;
 
 	if ( !ch )       /* Do an autosave */
 	{

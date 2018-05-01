@@ -135,7 +135,7 @@ AREA_DATA *get_vnum_area	args ( ( int vnum ) );
 AREA_DATA *get_area_data	args ( ( int vnum ) );
 int flag_value			args ( ( const struct flag_type *flag_table,
 				         char *argument) );
-void add_reset			args ( ( ROOM_INDEX_DATA *room, 
+void add_reset			args ( ( ROOM_INDEX_DATA *room,
 				         RESET_DATA *pReset, int index ) );
 char *flag_string       args ( (const struct flag_type *flag_table,int bits) );
 int get_stop		args ( (ROOM_INDEX_DATA *car, ROOM_INDEX_DATA *room) );
@@ -214,10 +214,8 @@ DECLARE_OLC_FUN( redit_sector		);
 DECLARE_OLC_FUN( redit_create		);
 DECLARE_OLC_FUN( redit_name		);
 DECLARE_OLC_FUN( redit_uname		);
-DECLARE_OLC_FUN( redit_dname		);
 DECLARE_OLC_FUN( redit_desc		);
 DECLARE_OLC_FUN( redit_udesc		);
-DECLARE_OLC_FUN( redit_ddesc		);
 DECLARE_OLC_FUN( redit_ed		);
 DECLARE_OLC_FUN( redit_flags		);
 DECLARE_OLC_FUN( redit_format		);

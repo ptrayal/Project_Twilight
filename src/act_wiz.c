@@ -5684,7 +5684,12 @@ void do_backup(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	system("~/ptmud/scripts/backup &");
+	int systemRet = system("~/ptmud/scripts/backup &");
+	if (systemRet == -1)
+	{
+		log_string(LOG_BUG, "Error in do_backup.  Unable to run backup command.");
+	}
+	// system("~/ptmud/scripts/backup &");
 	send_to_char("Backup under way.\n\r", ch);
 	backup = TRUE;
 	wiznet("\tY[WIZNET]\tn $N starts a backup cycle.",	ch,NULL,WIZ_LOAD,WIZ_SECURE,3);
@@ -5700,7 +5705,12 @@ void do_unpak(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	system("~/ptmud/scripts/unpak &");
+	int systemRet = system("~/ptmud/scripts/unpak &");
+	if (systemRet == -1)
+	{
+		log_string(LOG_BUG, "Error in do_unpak.  Unable to run unpak command.");
+	}
+	// system("~/ptmud/scripts/unpak &");
 	send_to_char("Unpak under way.\n\r", ch);
 	backup = TRUE;
 	wiznet("\tY[WIZNET]\tn $N starts an unpak cycle.",	ch,NULL,WIZ_LOAD,WIZ_SECURE,3);

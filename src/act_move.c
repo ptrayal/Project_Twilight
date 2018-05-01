@@ -2218,10 +2218,10 @@ void do_train( CHAR_DATA *ch, char *argument )
     char arg3[MSL]={'\0'};
     sh_int *pAbility;
     char *pOutput = NULL;
-    int cost;
-    int loop;
+    int cost = 0;
+    int loop = 0;
     int max_stat = 5;
-    bool is_ok = FALSE;
+    // bool is_ok = FALSE;
 
     CheckCH(ch);
     CheckChNPC(ch);
@@ -2239,12 +2239,14 @@ void do_train( CHAR_DATA *ch, char *argument )
     }
 
     if(IS_ADMIN(ch) || (IS_VAMPIRE(ch) && ch->gen < 8))
+    {
         max_stat = 10;
+    }
 
     if (IS_NULLSTR(arg1) || (IS_NULLSTR(arg2) && !(!str_prefix(arg1, "willpower")
-            || !str_prefix(arg1, "humanity") || !str_prefix(arg1, "gnosis")
-            || !str_prefix(arg1, "banality") || !str_prefix(arg1, "rage")
-            || !str_prefix(arg1, "faith") || !str_prefix(arg1, "glamour"))))
+        || !str_prefix(arg1, "humanity") || !str_prefix(arg1, "gnosis")
+        || !str_prefix(arg1, "banality") || !str_prefix(arg1, "rage")
+        || !str_prefix(arg1, "faith") || !str_prefix(arg1, "glamour"))))
     {
         send_to_char( Format("Experience Points: %d.\n\r", ch->exp), ch );
         send_to_char( "SYNTAX: train <section> <attribute>\n\r",ch);
@@ -2259,7 +2261,9 @@ void do_train( CHAR_DATA *ch, char *argument )
                 cost++;
                 send_to_char(Format("\tW%-20s\tn", stat_table[loop].name), ch);
                 if(cost % 3 == 0)
+                {
                     send_to_char("\n\r", ch);
+                }
             }
         }
         send_to_char( "\n\r", ch );
@@ -2275,7 +2279,9 @@ void do_train( CHAR_DATA *ch, char *argument )
                     cost++;
                     send_to_char(Format("\tW%-15s\tn", ability_table[loop].name), ch);
                     if(cost % 4 == 0)
+                    {
                         send_to_char("\n\r", ch);
+                    }
                 }
             }
         }
@@ -2298,16 +2304,30 @@ void do_train( CHAR_DATA *ch, char *argument )
         cost = 0;
         for(loop = 0; disc_table[loop].vname != NULL; loop++)
         {
-            if (ch->race == race_lookup("vampire")) pOutput = disc_table[loop].vname;
-            else if (ch->race == race_lookup("werewolf")) pOutput   = disc_table[loop].wname;
-            else if (ch->race == race_lookup("faerie")) pOutput = disc_table[loop].fname;
-            else if (ch->race == race_lookup("human")) pOutput = disc_table[loop].hname;
+            if (ch->race == race_lookup("vampire"))
+            {
+                pOutput = disc_table[loop].vname;
+            }
+            else if (ch->race == race_lookup("werewolf"))
+            {
+                pOutput   = disc_table[loop].wname;
+            }
+            else if (ch->race == race_lookup("faerie"))
+            {
+                pOutput = disc_table[loop].fname;
+            }
+            else if (ch->race == race_lookup("human"))
+            {
+                pOutput = disc_table[loop].hname;
+            }
             if(pOutput != NULL)
             {
                 cost++;
                 send_to_char(Format("\tW%-15s\tn", pOutput),ch);
                 if(cost % 4 == 0)
+                {
                     send_to_char("\n\r", ch);
+                }
             }
         }
         send_to_char("\n\r", ch);
@@ -2315,7 +2335,10 @@ void do_train( CHAR_DATA *ch, char *argument )
         return;
     }
 
-    if (stat_lookup(arg2, ch) || abil_lookup(arg2, ch) || virtue_lookup(arg2)) is_ok = TRUE;
+    // if (stat_lookup(arg2, ch) || abil_lookup(arg2, ch) || virtue_lookup(arg2))
+    // {
+    //     is_ok = TRUE;
+    // }
 
     if(!str_prefix(arg1,"stat"))
     {
@@ -2335,7 +2358,10 @@ void do_train( CHAR_DATA *ch, char *argument )
             act( "Your $T is maxed out.", ch, NULL, pOutput, TO_CHAR, 1 );
             return;
         }
-        if (cost < 1) cost = 10;
+        if (cost < 1)
+        {
+            cost = 10;
+        }
         cost = xp_cost_mod(ch, cost, ch->perm_stat[loop]);
         if (cost > ch->exp)
         {
@@ -2344,7 +2370,7 @@ void do_train( CHAR_DATA *ch, char *argument )
         }
 
         if(stat_lookup(arg2, ch) == stat_lookup("appearance", ch)
-                && ch->clan == clan_lookup("nosferatu"))
+            && ch->clan == clan_lookup("nosferatu"))
         {
             send_to_char("The nosferatu may not have a pleasing appearance.\n\r",ch);
             return;
@@ -2359,14 +2385,18 @@ void do_train( CHAR_DATA *ch, char *argument )
     else if(!str_prefix(arg1,"ability"))
     {
         if( ( loop = abil_lookup( arg2, ch ) ) >= 0
-                && IS_ATTRIB_AVAILABLE(ch->race, loop) )
+            && IS_ATTRIB_AVAILABLE(ch->race, loop) )
         {
             pAbility    = &ch->ability[loop].value;
             pOutput     = ability_table[loop].name;
             if(ch->ability[loop].value == 0)
+            {
                 cost = 3;
+            }
             else
+            {
                 cost = 2 * ch->ability[loop].value;
+            }
         }
         else
         {
@@ -2379,7 +2409,10 @@ void do_train( CHAR_DATA *ch, char *argument )
             return;
         }
 
-        if (cost < 1) cost = 10;
+        if (cost < 1)
+        {
+            cost = 10;
+        }
         cost = xp_cost_mod(ch, cost, ch->ability[loop].value);
         if (cost > ch->exp)
         {
@@ -2411,7 +2444,10 @@ void do_train( CHAR_DATA *ch, char *argument )
             act( "Your $T is maxed out.", ch, NULL, pOutput, TO_CHAR, 1 );
             return;
         }
-        if (cost < 1) cost = 10;
+        if (cost < 1)
+        {
+            cost = 10;
+        }
         cost = xp_cost_mod(ch, cost, ch->virtues[loop]);
         if (cost > ch->exp)
         {
@@ -2425,7 +2461,8 @@ void do_train( CHAR_DATA *ch, char *argument )
         return;
 
     }
-    else if(!str_prefix(arg1, "willpower")) {
+    else if(!str_prefix(arg1, "willpower"))
+    {
         pOutput     = "willpower";
         cost    = 3 * ch->max_willpower;
         if (ch->max_willpower >= 10)
@@ -2445,14 +2482,18 @@ void do_train( CHAR_DATA *ch, char *argument )
         return;
     }
     else if(!str_prefix(arg1, "humanity") || !str_prefix(arg1, "gnosis")
-            || !str_prefix(arg1, "banality")) {
-        if(ch->race == race_lookup("human") || ch->race == race_lookup("vampire")) {
+        || !str_prefix(arg1, "banality"))
+    {
+        if(ch->race == race_lookup("human") || ch->race == race_lookup("vampire"))
+        {
             pOutput     = "humanity";
         }
-        if(ch->race == race_lookup("werewolf")) {
+        if(ch->race == race_lookup("werewolf"))
+        {
             pOutput     = "gnosis";
         }
-        if(ch->race == race_lookup("faerie")) {
+        if(ch->race == race_lookup("faerie"))
+        {
             pOutput     = "banality";
         }
         cost    = 3 * ch->max_GHB;
@@ -2474,18 +2515,23 @@ void do_train( CHAR_DATA *ch, char *argument )
         return;
     }
     else if(!str_prefix(arg1, "rage") || !str_prefix(arg1, "faith")
-            || !str_prefix(arg1, "glamour")) {
-        if(ch->race == race_lookup("human")) {
+        || !str_prefix(arg1, "glamour"))
+    {
+        if(ch->race == race_lookup("human"))
+        {
             pOutput     = "faith";
         }
-        else if(ch->race == race_lookup("vampire")) {
+        else if(ch->race == race_lookup("vampire"))
+        {
             send_to_char("SYNTAX:\n\rtrain <section> <attribute>\n\r", ch);
             return;
         }
-        else if(ch->race == race_lookup("werewolf")) {
+        else if(ch->race == race_lookup("werewolf"))
+        {
             pOutput     = "rage";
         }
-        else if(ch->race == race_lookup("faerie")) {
+        else if(ch->race == race_lookup("faerie"))
+        {
             pOutput     = "glamour";
         }
         cost    = 3 * ch->max_RBPG;

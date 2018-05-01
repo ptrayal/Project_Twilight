@@ -152,79 +152,83 @@ int slot_lookup( int slot )
  */
 void say_spell( CHAR_DATA *ch, int sn )
 {
-    CHAR_DATA *rch;
-    char buf  [MSL]={'\0'};
-    char buf2 [MSL]={'\0'};
-    char *pName;
-    int iSyl;
-    int length;
+	CHAR_DATA *rch;
+	char buf  [MSL]={'\0'};
+	char buf2 [MSL]={'\0'};
+	char *pName;
+	int iSyl;
+	int length;
 
-    struct syl_type
-    {
-	char *	old;
-	char *	bnew;
-    };
+	struct syl_type
+	{
+		char *	old;
+		char *	bnew;
+	};
 
-    static const struct syl_type syl_table[] =
-    {
-	{ " ",		" "		},
-	{ "ar",		"abra"		},
-	{ "au",		"kada"		},
-	{ "bless",	"fido"		},
-	{ "blind",	"nose"		},
-	{ "bur",	"mosa"		},
-	{ "cu",		"judi"		},
-	{ "de",		"oculo"		},
-	{ "en",		"unso"		},
-	{ "light",	"dies"		},
-	{ "lo",		"hi"		},
-	{ "mor",	"zak"		},
-	{ "move",	"sido"		},
-	{ "ness",	"lacri"		},
-	{ "ning",	"illa"		},
-	{ "per",	"duda"		},
-	{ "ra",		"gru"		},
-	{ "fresh",	"ima"		},
-	{ "re",		"candus"	},
-	{ "son",	"sabru"		},
-	{ "tect",	"infra"		},
-	{ "tri",	"cula"		},
-	{ "ven",	"nofo"		},
-	{ "a", "a" }, { "b", "b" }, { "c", "q" }, { "d", "e" },
-	{ "e", "z" }, { "f", "y" }, { "g", "o" }, { "h", "p" },
-	{ "i", "u" }, { "j", "y" }, { "k", "t" }, { "l", "r" },
-	{ "m", "w" }, { "n", "i" }, { "o", "a" }, { "p", "s" },
-	{ "q", "d" }, { "r", "f" }, { "s", "g" }, { "t", "h" },
-	{ "u", "j" }, { "v", "z" }, { "w", "x" }, { "x", "n" },
-	{ "y", "l" }, { "z", "k" },
-	{ "", "" }
-    };
+	static const struct syl_type syl_table[] =
+	{
+		{ " ",		" "		},
+		{ "ar",		"abra"		},
+		{ "au",		"kada"		},
+		{ "bless",	"fido"		},
+		{ "blind",	"nose"		},
+		{ "bur",	"mosa"		},
+		{ "cu",		"judi"		},
+		{ "de",		"oculo"		},
+		{ "en",		"unso"		},
+		{ "light",	"dies"		},
+		{ "lo",		"hi"		},
+		{ "mor",	"zak"		},
+		{ "move",	"sido"		},
+		{ "ness",	"lacri"		},
+		{ "ning",	"illa"		},
+		{ "per",	"duda"		},
+		{ "ra",		"gru"		},
+		{ "fresh",	"ima"		},
+		{ "re",		"candus"	},
+		{ "son",	"sabru"		},
+		{ "tect",	"infra"		},
+		{ "tri",	"cula"		},
+		{ "ven",	"nofo"		},
+		{ "a", "a" }, { "b", "b" }, { "c", "q" }, { "d", "e" },
+		{ "e", "z" }, { "f", "y" }, { "g", "o" }, { "h", "p" },
+		{ "i", "u" }, { "j", "y" }, { "k", "t" }, { "l", "r" },
+		{ "m", "w" }, { "n", "i" }, { "o", "a" }, { "p", "s" },
+		{ "q", "d" }, { "r", "f" }, { "s", "g" }, { "t", "h" },
+		{ "u", "j" }, { "v", "z" }, { "w", "x" }, { "x", "n" },
+		{ "y", "l" }, { "z", "k" },
+		{ "", "" }
+	};
 
-    for ( pName = skill_table[sn].name; *pName != '\0'; pName += length )
-    {
-    	for ( iSyl = 0; (length = strlen(syl_table[iSyl].old)) != 0; iSyl++ )
-    	{
-    		if ( !str_prefix( syl_table[iSyl].old, pName ) )
-    		{
-    			strncat( buf, syl_table[iSyl].bnew, sizeof(buf) - strlen(buf) - 1 );
-    			break;
-    		}
-    	}
+	for ( pName = skill_table[sn].name; *pName != '\0'; pName += length )
+	{
+		for ( iSyl = 0; (length = strlen(syl_table[iSyl].old)) != 0; iSyl++ )
+		{
+			if ( !str_prefix( syl_table[iSyl].old, pName ) )
+			{
+				strncat( buf, syl_table[iSyl].bnew, sizeof(buf) - strlen(buf) - 1 );
+				break;
+			}
+		}
 
-    	if ( length == 0 )
-    		length = 1;
-    }
+		if ( length == 0 )
+		{
+			length = 1;
+		}
+	}
 
-    snprintf( buf2, sizeof(buf2), "$n utters the words, '%s'.", buf );
-    snprintf( buf,  sizeof(buf), "$n utters the words, '%s'.", skill_table[sn].name );
+	snprintf( buf2, sizeof(buf2), "$n utters the words, '%s'.", buf );
+	snprintf( buf,  sizeof(buf), "$n utters the words, '%s'.", skill_table[sn].name );
 
-    for ( rch = ch->in_room->people; rch; rch = rch->next_in_room )
-    {
-    	if ( rch != ch )
-    		act((!IS_NPC(rch) && ch->clan==rch->clan) ? buf : buf2, ch, NULL, rch, TO_VICT, 0 );
-    }
+	for ( rch = ch->in_room->people; rch; rch = rch->next_in_room )
+	{
+		if ( rch != ch )
+		{
+			act((!IS_NPC(rch) && ch->clan==rch->clan) ? buf : buf2, ch, NULL, rch, TO_VICT, 0 );
+		}
+	}
 
-    return;
+	return;
 }
 
 
@@ -239,15 +243,19 @@ bool saves_spell( int level, CHAR_DATA *victim, int dam_type )
 	int agg = 3;
 
 	if(IS_NATURAL(victim))
+	{
 		save = 6;
+	}
 	else
+	{
 		save = 4;
+	}
 
 	switch(check_immune(victim,dam_type))
 	{
-	case IS_IMMUNE:		agg = 0;	break;
-	case IS_RESISTANT:	save += 2;	break;
-	case IS_VULNERABLE:	save -= 2;	break;
+		case IS_IMMUNE:		agg = 0;	break;
+		case IS_RESISTANT:	save += 2;	break;
+		case IS_VULNERABLE:	save -= 2;	break;
 	}
 
 	save = do_soak(victim, save, agg);
@@ -259,45 +267,49 @@ bool saves_spell( int level, CHAR_DATA *victim, int dam_type )
 
 bool saves_dispel( int dis_level, int spell_level, int duration)
 {
-    int save = 0;
+	int save = 0;
 
-    if (duration == -1)
-      spell_level += 5;
+	if (duration == -1)
+	{
+		spell_level += 5;
+	}
       /* very hard to dispel permanent effects */
 
-    save = 50 + (spell_level - dis_level) * 5;
-    save = URANGE( 5, save, 95 );
-    return number_percent( ) < save;
+	save = 50 + (spell_level - dis_level) * 5;
+	save = URANGE( 5, save, 95 );
+	return number_percent( ) < save;
 }
 
 /* co-routine for dispel magic and cancellation */
 
 bool check_dispel( int dis_level, CHAR_DATA *victim, int sn)
 {
-    AFFECT_DATA *af;
+	AFFECT_DATA *af;
 
-    if (is_affected(victim, sn))
-    {
-        for ( af = victim->affected; af != NULL; af = af->next )
-        {
-            if ( af->type == sn )
-            {
-                if (!saves_dispel(dis_level,af->level,af->duration))
-                {
-                    affect_strip(victim,sn);
-        	    if ( skill_table[sn].msg_off )
-        	    {
-            		send_to_char( skill_table[sn].msg_off, victim );
-            		send_to_char( "\n\r", victim );
-        	    }
-		    return TRUE;
+	if (is_affected(victim, sn))
+	{
+		for ( af = victim->affected; af != NULL; af = af->next )
+		{
+			if ( af->type == sn )
+			{
+				if (!saves_dispel(dis_level,af->level,af->duration))
+				{
+					affect_strip(victim,sn);
+					if ( skill_table[sn].msg_off )
+					{
+						send_to_char( skill_table[sn].msg_off, victim );
+						send_to_char( "\n\r", victim );
+					}
+					return TRUE;
+				}
+				else
+				{
+					af->level--;
+				}
+			}
 		}
-		else
-		    af->level--;
-            }
-        }
-    }
-    return FALSE;
+	}
+	return FALSE;
 }
 
 
@@ -308,245 +320,245 @@ char *target_name;
 
 void do_cast( CHAR_DATA *ch, char *argument )
 {
-    CHAR_DATA *victim;
-    OBJ_DATA *obj;
-    char arg1[MAX_INPUT_LENGTH]={'\0'};
-    char arg2[MAX_INPUT_LENGTH]={'\0'};
-    void *vo;
-    int sn = -1;
-    int target = TARGET_NONE;
+	CHAR_DATA *victim;
+	OBJ_DATA *obj;
+	char arg1[MAX_INPUT_LENGTH]={'\0'};
+	char arg2[MAX_INPUT_LENGTH]={'\0'};
+	void *vo;
+	int sn = -1;
+	int target = TARGET_NONE;
 
     /*
      * Switched NPC's can cast spells, but others can't.
      */
-    if ( IS_NPC(ch) && ch->desc == NULL)
-	return;
+	if ( IS_NPC(ch) && ch->desc == NULL)
+		return;
 
-    target_name = one_argument( argument, arg1 );
-    one_argument( target_name, arg2 );
+	target_name = one_argument( argument, arg1 );
+	one_argument( target_name, arg2 );
 
-    if ( str_cmp( arg1, "ventriloquate" ) ) {
+	if ( str_cmp( arg1, "ventriloquate" ) ) {
     /*@@@@@*/
-    act("You prance about like Harry friggin' Potter.", ch, NULL, NULL, TO_CHAR, 0);
-    act("$n prances about like Harry friggin' Potter.", ch, NULL, NULL, TO_ROOM, 0);
-    return;
+		act("You prance about like Harry friggin' Potter.", ch, NULL, NULL, TO_CHAR, 0);
+		act("$n prances about like Harry friggin' Potter.", ch, NULL, NULL, TO_ROOM, 0);
+		return;
 
-    if ( IS_NULLSTR(arg1) )
-    {
-	send_to_char( "Cast which what where?\n\r", ch );
-	return;
-    }
+		if ( IS_NULLSTR(arg1) )
+		{
+			send_to_char( "Cast which what where?\n\r", ch );
+			return;
+		}
 
-    if ((sn = find_spell(ch,arg1)) < 1
-    ||  skill_table[sn].spell_fun == spell_null
-    ||  ch->learned[sn] == 0
-    ||  (!IS_NPC(ch) && skill_table[sn].available[ch->race]))
-    {
-	send_to_char( "You don't know any rituals of that name.\n\r", ch );
-	return;
-    }
+		if ((sn = find_spell(ch,arg1)) < 1
+			||  skill_table[sn].spell_fun == spell_null
+			||  ch->learned[sn] == 0
+			||  (!IS_NPC(ch) && skill_table[sn].available[ch->race]))
+		{
+			send_to_char( "You don't know any rituals of that name.\n\r", ch );
+			return;
+		}
 
-    if ( ch->position < skill_table[sn].minimum_position )
-    {
-	send_to_char( "You can't concentrate enough.\n\r", ch );
-	return;
-    }
+		if ( ch->position < skill_table[sn].minimum_position )
+		{
+			send_to_char( "You can't concentrate enough.\n\r", ch );
+			return;
+		}
 
     } /* End Casting lockdown. */
 
     /* This is probably temporary. */
-    if ((sn = find_spell(ch,arg1)) < 1
-    ||  skill_table[sn].spell_fun == spell_null)
-    {
-	send_to_char( "Something went wrong.\n\r", ch );
-	return;
-    }
+		if ((sn = find_spell(ch,arg1)) < 1
+			||  skill_table[sn].spell_fun == spell_null)
+		{
+			send_to_char( "Something went wrong.\n\r", ch );
+			return;
+		}
 
     /*
      * Locate targets.
      */
-    victim	= NULL;
-    obj		= NULL;
-    vo		= NULL;
-    target	= TARGET_NONE;
+		victim	= NULL;
+		obj		= NULL;
+		vo		= NULL;
+		target	= TARGET_NONE;
 
-    switch ( skill_table[sn].target )
-    {
-    default:
-	log_string(LOG_BUG, Format("Do_cast: bad target for sn %d.", sn ));
-	return;
+		switch ( skill_table[sn].target )
+		{
+			default:
+			log_string(LOG_BUG, Format("Do_cast: bad target for sn %d.", sn ));
+			return;
 
-    case TAR_IGNORE:
-	break;
+			case TAR_IGNORE:
+			break;
 
-    case TAR_CHAR_OFFENSIVE:
-	if ( IS_NULLSTR(arg2) )
-	{
-	    if ( ( victim = ch->fighting ) == NULL )
-	    {
-		send_to_char( "Cast the spell on whom?\n\r", ch );
-		return;
-	    }
-	}
-	else
-	{
-	    if ( ( victim = get_char_room( ch, target_name ) ) == NULL )
-	    {
-		send_to_char( "They aren't here.\n\r", ch );
-		return;
-	    }
-	}
+			case TAR_CHAR_OFFENSIVE:
+			if ( IS_NULLSTR(arg2) )
+			{
+				if ( ( victim = ch->fighting ) == NULL )
+				{
+					send_to_char( "Cast the spell on whom?\n\r", ch );
+					return;
+				}
+			}
+			else
+			{
+				if ( ( victim = get_char_room( ch, target_name ) ) == NULL )
+				{
+					send_to_char( "They aren't here.\n\r", ch );
+					return;
+				}
+			}
 
-        if ( IS_AFFECTED(ch, AFF_CHARM) && ch->master == victim )
-	{
-	    send_to_char( "You can't do that on your own follower.\n\r",
-		ch );
-	    return;
-	}
+			if ( IS_AFFECTED(ch, AFF_CHARM) && ch->master == victim )
+			{
+				send_to_char( "You can't do that on your own follower.\n\r",
+					ch );
+				return;
+			}
 
-	vo = (void *) victim;
-	target = TARGET_CHAR;
-	break;
+			vo = (void *) victim;
+			target = TARGET_CHAR;
+			break;
 
-    case TAR_CHAR_DEFENSIVE:
-	if ( IS_NULLSTR(arg2) )
-	{
-	    victim = ch;
-	}
-	else
-	{
-	    if ( ( victim = get_char_room( ch, target_name ) ) == NULL )
-	    {
-		send_to_char( "They aren't here.\n\r", ch );
-		return;
-	    }
-	}
+			case TAR_CHAR_DEFENSIVE:
+			if ( IS_NULLSTR(arg2) )
+			{
+				victim = ch;
+			}
+			else
+			{
+				if ( ( victim = get_char_room( ch, target_name ) ) == NULL )
+				{
+					send_to_char( "They aren't here.\n\r", ch );
+					return;
+				}
+			}
 
-	vo = (void *) victim;
-	target = TARGET_CHAR;
-	break;
+			vo = (void *) victim;
+			target = TARGET_CHAR;
+			break;
 
-    case TAR_CHAR_SELF:
-	if ( !IS_NULLSTR(arg2) && !is_name( target_name, ch->name ) )
-	{
-	    send_to_char( "You cannot cast this spell on another.\n\r", ch );
-	    return;
-	}
+			case TAR_CHAR_SELF:
+			if ( !IS_NULLSTR(arg2) && !is_name( target_name, ch->name ) )
+			{
+				send_to_char( "You cannot cast this spell on another.\n\r", ch );
+				return;
+			}
 
-	vo = (void *) ch;
-	target = TARGET_CHAR;
-	break;
+			vo = (void *) ch;
+			target = TARGET_CHAR;
+			break;
 
-    case TAR_OBJ_INV:
-	if ( IS_NULLSTR(arg2) )
-	{
-	    send_to_char( "What should the spell be cast upon?\n\r", ch );
-	    return;
-	}
+			case TAR_OBJ_INV:
+			if ( IS_NULLSTR(arg2) )
+			{
+				send_to_char( "What should the spell be cast upon?\n\r", ch );
+				return;
+			}
 
-	if ( ( obj = get_obj_carry( ch, target_name, ch ) ) == NULL )
-	{
-	    send_to_char( "You are not carrying that.\n\r", ch );
-	    return;
-	}
+			if ( ( obj = get_obj_carry( ch, target_name, ch ) ) == NULL )
+			{
+				send_to_char( "You are not carrying that.\n\r", ch );
+				return;
+			}
 
-	vo = (void *) obj;
-	target = TARGET_OBJ;
-	break;
+			vo = (void *) obj;
+			target = TARGET_OBJ;
+			break;
 
-    case TAR_OBJ_CHAR_OFF:
-	if (IS_NULLSTR(arg2))
-	{
-	    if ((victim = ch->fighting) == NULL)
-	    {
-		send_to_char("Cast the spell on whom or what?\n\r",ch);
-		return;
-	    }
+			case TAR_OBJ_CHAR_OFF:
+			if (IS_NULLSTR(arg2))
+			{
+				if ((victim = ch->fighting) == NULL)
+				{
+					send_to_char("Cast the spell on whom or what?\n\r",ch);
+					return;
+				}
 
-	    target = TARGET_CHAR;
-	}
-	else if ((victim = get_char_room(ch,target_name)) != NULL)
-	{
-	    target = TARGET_CHAR;
-	}
+				target = TARGET_CHAR;
+			}
+			else if ((victim = get_char_room(ch,target_name)) != NULL)
+			{
+				target = TARGET_CHAR;
+			}
 
 	if (target == TARGET_CHAR) /* check the sanity of the attack */
-	{
+			{
 
-            if ( IS_AFFECTED(ch, AFF_CHARM) && ch->master == victim )
-            {
-                send_to_char( "You can't do that on your own follower.\n\r", ch );
-                return;
-            }
+				if ( IS_AFFECTED(ch, AFF_CHARM) && ch->master == victim )
+				{
+					send_to_char( "You can't do that on your own follower.\n\r", ch );
+					return;
+				}
 
-	    vo = (void *) victim;
- 	}
-	else if ((obj = get_obj_here(ch,target_name)) != NULL)
-	{
-	    vo = (void *) obj;
-	    target = TARGET_OBJ;
-	}
-	else
-	{
-	    send_to_char("You don't see that here.\n\r",ch);
-	    return;
-	}
-	break;
+				vo = (void *) victim;
+			}
+			else if ((obj = get_obj_here(ch,target_name)) != NULL)
+			{
+				vo = (void *) obj;
+				target = TARGET_OBJ;
+			}
+			else
+			{
+				send_to_char("You don't see that here.\n\r",ch);
+				return;
+			}
+			break;
 
-    case TAR_OBJ_CHAR_DEF:
-        if (IS_NULLSTR(arg2))
-        {
-            vo = (void *) ch;
-            target = TARGET_CHAR;
-        }
-        else if ((victim = get_char_room(ch,target_name)) != NULL)
-        {
-            vo = (void *) victim;
-            target = TARGET_CHAR;
-	}
-	else if ((obj = get_obj_carry(ch,target_name,ch)) != NULL)
-	{
-	    vo = (void *) obj;
-	    target = TARGET_OBJ;
-	}
-	else
-	{
-	    send_to_char("You don't see that here.\n\r",ch);
-	    return;
-	}
-	break;
-    }
+			case TAR_OBJ_CHAR_DEF:
+			if (IS_NULLSTR(arg2))
+			{
+				vo = (void *) ch;
+				target = TARGET_CHAR;
+			}
+			else if ((victim = get_char_room(ch,target_name)) != NULL)
+			{
+				vo = (void *) victim;
+				target = TARGET_CHAR;
+			}
+			else if ((obj = get_obj_carry(ch,target_name,ch)) != NULL)
+			{
+				vo = (void *) obj;
+				target = TARGET_OBJ;
+			}
+			else
+			{
+				send_to_char("You don't see that here.\n\r",ch);
+				return;
+			}
+			break;
+		}
 
-    if ( str_cmp( skill_table[sn].name, "ventriloquate" ) )
-	say_spell( ch, sn );
+		if ( str_cmp( skill_table[sn].name, "ventriloquate" ) )
+			say_spell( ch, sn );
 
     /* FIX - Put in tests into spells (abil calls/skill calls) */
 
-    WAIT_STATE( ch, skill_table[sn].beats );
+		WAIT_STATE( ch, skill_table[sn].beats );
 
-    (*skill_table[sn].spell_fun) ( sn, ch->trust, ch, vo,target);
+		(*skill_table[sn].spell_fun) ( sn, ch->trust, ch, vo,target);
 
-    if ((skill_table[sn].target == TAR_CHAR_OFFENSIVE
-    ||   (skill_table[sn].target == TAR_OBJ_CHAR_OFF && target == TARGET_CHAR))
-    &&   victim != ch
-    &&   victim->master != ch)
-    {
-	CHAR_DATA *vch;
-	CHAR_DATA *vch_next;
+		if ((skill_table[sn].target == TAR_CHAR_OFFENSIVE
+			||   (skill_table[sn].target == TAR_OBJ_CHAR_OFF && target == TARGET_CHAR))
+			&&   victim != ch
+			&&   victim->master != ch)
+		{
+			CHAR_DATA *vch;
+			CHAR_DATA *vch_next;
 
-	for ( vch = ch->in_room->people; vch; vch = vch_next )
-	{
-	    vch_next = vch->next_in_room;
-	    if ( victim == vch && victim->fighting == NULL )
-	    {
-		multi_hit( victim, ch, TYPE_UNDEFINED );
-		break;
-	    }
+			for ( vch = ch->in_room->people; vch; vch = vch_next )
+			{
+				vch_next = vch->next_in_room;
+				if ( victim == vch && victim->fighting == NULL )
+				{
+					multi_hit( victim, ch, TYPE_UNDEFINED );
+					break;
+				}
+			}
+		}
+
+		return;
 	}
-    }
-
-    return;
-}
 
 
 /*
@@ -554,128 +566,134 @@ void do_cast( CHAR_DATA *ch, char *argument )
  */
 void obj_cast_spell( int sn, int level, CHAR_DATA *ch, CHAR_DATA *victim, OBJ_DATA *obj )
 {
-    void *vo;
-    int target = TARGET_NONE;
+	void *vo;
+	int target = TARGET_NONE;
 
-    if ( sn <= 0 )
-	return;
-
-    if ( sn >= MAX_SKILL || skill_table[sn].spell_fun == spell_null )
-    {
-	log_string(LOG_BUG, Format("Obj_cast_spell: bad sn %d.", sn ));
-	return;
-    }
-
-    switch ( skill_table[sn].target )
-    {
-    default:
-	log_string(LOG_BUG, Format("Obj_cast_spell: bad target for sn %d.", sn ));
-	return;
-
-    case TAR_IGNORE:
-	vo = NULL;
-	break;
-
-    case TAR_CHAR_OFFENSIVE:
-	if ( victim == NULL )
-	    victim = ch->fighting;
-	if ( victim == NULL )
+	if ( sn <= 0 )
 	{
-	    send_to_char( "You can't do that.\n\r", ch );
-	    return;
-	}
-	vo = (void *) victim;
-	target = TARGET_CHAR;
-	break;
-
-    case TAR_CHAR_DEFENSIVE:
-    case TAR_CHAR_SELF:
-	if ( victim == NULL )
-	    victim = ch;
-	vo = (void *) victim;
-	target = TARGET_CHAR;
-	break;
-
-    case TAR_OBJ_INV:
-	if ( obj == NULL )
-	{
-	    send_to_char( "You can't do that.\n\r", ch );
-	    return;
-	}
-	vo = (void *) obj;
-	target = TARGET_OBJ;
-	break;
-
-    case TAR_OBJ_CHAR_OFF:
-        if ( victim == NULL && obj == NULL)
-	{
-	    if (ch->fighting != NULL)
-		victim = ch->fighting;
-	    else
-	    {
-		send_to_char("You can't do that.\n\r",ch);
 		return;
-	    }
 	}
 
-	    if (victim != NULL)
-	    {
+	if ( sn >= MAX_SKILL || skill_table[sn].spell_fun == spell_null )
+	{
+		log_string(LOG_BUG, Format("Obj_cast_spell: bad sn %d.", sn ));
+		return;
+	}
+
+	switch ( skill_table[sn].target )
+	{
+		default:
+		log_string(LOG_BUG, Format("Obj_cast_spell: bad target for sn %d.", sn ));
+		return;
+
+		case TAR_IGNORE:
+		vo = NULL;
+		break;
+
+		case TAR_CHAR_OFFENSIVE:
+		if ( victim == NULL )
+		{
+			victim = ch->fighting;
+		}
+		if ( victim == NULL )
+		{
+			send_to_char( "You can't do that.\n\r", ch );
+			return;
+		}
 		vo = (void *) victim;
 		target = TARGET_CHAR;
-	    }
-	    else
-	    {
-	    	vo = (void *) obj;
-	    	target = TARGET_OBJ;
-	    }
-        break;
-
-
-    case TAR_OBJ_CHAR_DEF:
-	if (victim == NULL && obj == NULL)
-	{
-	    vo = (void *) ch;
-	    target = TARGET_CHAR;
-	}
-	else if (victim != NULL)
-	{
-	    vo = (void *) victim;
-	    target = TARGET_CHAR;
-	}
-	else
-	{
-	    vo = (void *) obj;
-	    target = TARGET_OBJ;
-	}
-
-	break;
-    }
-
-    target_name = "";
-    (*skill_table[sn].spell_fun) ( sn, level, ch, vo,target);
-
-
-
-    if ( (skill_table[sn].target == TAR_CHAR_OFFENSIVE
-    ||   (skill_table[sn].target == TAR_OBJ_CHAR_OFF && target == TARGET_CHAR))
-    &&   victim != ch
-    &&   victim->master != ch )
-    {
-	CHAR_DATA *vch;
-	CHAR_DATA *vch_next;
-
-	for ( vch = ch->in_room->people; vch; vch = vch_next )
-	{
-	    vch_next = vch->next_in_room;
-	    if ( victim == vch && victim->fighting == NULL )
-	    {
-		multi_hit( victim, ch, TYPE_UNDEFINED );
 		break;
-	    }
-	}
-    }
 
-    return;
+		case TAR_CHAR_DEFENSIVE:
+		case TAR_CHAR_SELF:
+		if ( victim == NULL )
+		{
+			victim = ch;
+		}
+		vo = (void *) victim;
+		target = TARGET_CHAR;
+		break;
+
+		case TAR_OBJ_INV:
+		if ( obj == NULL )
+		{
+			send_to_char( "You can't do that.\n\r", ch );
+			return;
+		}
+		vo = (void *) obj;
+		target = TARGET_OBJ;
+		break;
+
+		case TAR_OBJ_CHAR_OFF:
+		if ( victim == NULL && obj == NULL)
+		{
+			if (ch->fighting != NULL)
+			{
+				victim = ch->fighting;
+			}
+			else
+			{
+				send_to_char("You can't do that.\n\r",ch);
+				return;
+			}
+		}
+
+		if (victim != NULL)
+		{
+			vo = (void *) victim;
+			target = TARGET_CHAR;
+		}
+		else
+		{
+			vo = (void *) obj;
+			target = TARGET_OBJ;
+		}
+		break;
+
+
+		case TAR_OBJ_CHAR_DEF:
+		if (victim == NULL && obj == NULL)
+		{
+			vo = (void *) ch;
+			target = TARGET_CHAR;
+		}
+		else if (victim != NULL)
+		{
+			vo = (void *) victim;
+			target = TARGET_CHAR;
+		}
+		else
+		{
+			vo = (void *) obj;
+			target = TARGET_OBJ;
+		}
+
+		break;
+	}
+
+	target_name = "";
+	(*skill_table[sn].spell_fun) ( sn, level, ch, vo,target);
+
+	if ( (skill_table[sn].target == TAR_CHAR_OFFENSIVE
+		||   (skill_table[sn].target == TAR_OBJ_CHAR_OFF && target == TARGET_CHAR))
+		&&   victim != ch
+		&&   victim->master != ch )
+	{
+		CHAR_DATA *vch;
+		CHAR_DATA *vch_next;
+
+		for ( vch = ch->in_room->people; vch; vch = vch_next )
+		{
+			vch_next = vch->next_in_room;
+			if ( victim == vch && victim->fighting == NULL )
+			{
+				multi_hit( victim, ch, TYPE_UNDEFINED );
+				break;
+			}
+		}
+	}
+
+	return;
 }
 
 
@@ -684,23 +702,25 @@ void obj_cast_spell( int sn, int level, CHAR_DATA *ch, CHAR_DATA *victim, OBJ_DA
  */
 void spell_blindness( int sn, int level, CHAR_DATA *ch, void *vo, int target)
 {
-    CHAR_DATA *victim = (CHAR_DATA *) vo;
-    AFFECT_DATA af;
+	CHAR_DATA *victim = (CHAR_DATA *) vo;
+	AFFECT_DATA af;
 
-    if ( IS_AFFECTED(victim, AFF_BLIND) || saves_spell(level,victim,DAM_OTHER))
+	if ( IS_AFFECTED(victim, AFF_BLIND) || saves_spell(level,victim,DAM_OTHER))
+	{
+		return;
+	}
+
+	af.where     = TO_AFFECTS;
+	af.type      = sn;
+	af.level     = level;
+	af.location  = APPLY_DEX;
+	af.modifier  = -4;
+	af.duration  = 1+level;
+	af.bitvector = AFF_BLIND;
+	affect_to_char( victim, &af );
+	send_to_char( "You are blinded!\n\r", victim );
+	act("$n appears to be blinded.",victim,NULL,NULL,TO_ROOM,0);
 	return;
-
-    af.where     = TO_AFFECTS;
-    af.type      = sn;
-    af.level     = level;
-    af.location  = APPLY_DEX;
-    af.modifier  = -4;
-    af.duration  = 1+level;
-    af.bitvector = AFF_BLIND;
-    affect_to_char( victim, &af );
-    send_to_char( "You are blinded!\n\r", victim );
-    act("$n appears to be blinded.",victim,NULL,NULL,TO_ROOM,0);
-    return;
 }
 
 void spell_charm_person( int sn, int level, CHAR_DATA *ch, void *vo,int target )
@@ -720,22 +740,28 @@ void spell_charm_person( int sn, int level, CHAR_DATA *ch, void *vo,int target )
 		duration = level;
 
 		if ( IS_AFFECTED(victim, AFF_CHARM)
-				||   IS_AFFECTED(ch, AFF_CHARM)
-				||   IS_SET(victim->imm_flags,IMM_CHARM)
-				||   (dice_rolls( ch, get_curr_stat(ch, STAT_MAN) + ch->ability[LEADERSHIP].value, victim->willpower) <= 0) )
+			||   IS_AFFECTED(ch, AFF_CHARM)
+			||   IS_SET(victim->imm_flags,IMM_CHARM)
+			||   (dice_rolls( ch, get_curr_stat(ch, STAT_MAN) + ch->ability[LEADERSHIP].value, victim->willpower) <= 0) )
+		{
 			return;
+		}
 	}
 	else
 	{
 		if ( IS_AFFECTED(victim, AFF_CHARM)
-				||   IS_AFFECTED(ch, AFF_CHARM)
-				||   IS_SET(victim->imm_flags,IMM_CHARM)
-				||   ((duration = dice_rolls( ch, get_curr_stat(ch, STAT_CHA) + ch->ability[LEADERSHIP].value, victim->willpower)) <= 0) )
+			||   IS_AFFECTED(ch, AFF_CHARM)
+			||   IS_SET(victim->imm_flags,IMM_CHARM)
+			||   ((duration = dice_rolls( ch, get_curr_stat(ch, STAT_CHA) + ch->ability[LEADERSHIP].value, victim->willpower)) <= 0) )
+		{
 			return;
+		}
 	}
 
 	if ( victim->master )
+	{
 		stop_follower( victim );
+	}
 	add_follower( victim, ch );
 	victim->leader = ch;
 	af.where     = TO_AFFECTS;
@@ -748,7 +774,9 @@ void spell_charm_person( int sn, int level, CHAR_DATA *ch, void *vo,int target )
 	affect_to_char( victim, &af );
 	act( "Isn't $n just so nice?", ch, NULL, victim, TO_VICT, 1 );
 	if ( ch != victim )
+	{
 		act("$N looks at you with adoring eyes.",ch,NULL,victim,TO_CHAR,1);
+	}
 	return;
 }
 
@@ -767,70 +795,70 @@ void spell_create_food( int sn, int level, CHAR_DATA *ch, void *vo,int target)
 
 void spell_cure_blindness(int sn,int level,CHAR_DATA *ch,void *vo,int target)
 {
-    CHAR_DATA *victim = (CHAR_DATA *) vo;
+	CHAR_DATA *victim = (CHAR_DATA *) vo;
 
-    if ( !is_affected( victim, gsn_blindness ) )
-    {
-        if (victim == ch)
-          send_to_char("You aren't blind.\n\r",ch);
-        else
-          act("$N doesn't appear to be blinded.",ch,NULL,victim,TO_CHAR,1);
-        return;
-    }
+	if ( !is_affected( victim, gsn_blindness ) )
+	{
+		if (victim == ch)
+			send_to_char("You aren't blind.\n\r",ch);
+		else
+			act("$N doesn't appear to be blinded.",ch,NULL,victim,TO_CHAR,1);
+		return;
+	}
 
-    if (check_dispel(level,victim,gsn_blindness))
-    {
-        send_to_char( "Your vision returns!\n\r", victim );
-        act("$n is no longer blinded.",victim,NULL,NULL,TO_ROOM,0);
-    }
-    else
-        send_to_char("Spell failed.\n\r",ch);
+	if (check_dispel(level,victim,gsn_blindness))
+	{
+		send_to_char( "Your vision returns!\n\r", victim );
+		act("$n is no longer blinded.",victim,NULL,NULL,TO_ROOM,0);
+	}
+	else
+		send_to_char("Spell failed.\n\r",ch);
 }
 
 
 void spell_cure_disease( int sn, int level, CHAR_DATA *ch,void *vo,int target)
 {
-    CHAR_DATA *victim = (CHAR_DATA *) vo;
+	CHAR_DATA *victim = (CHAR_DATA *) vo;
 
-    if ( !is_affected( victim, gsn_plague ) )
-    {
-        if (victim == ch)
-          send_to_char("You aren't ill.\n\r",ch);
-        else
-          act("$N doesn't appear to be diseased.",ch,NULL,victim,TO_CHAR,1);
-        return;
-    }
+	if ( !is_affected( victim, gsn_plague ) )
+	{
+		if (victim == ch)
+			send_to_char("You aren't ill.\n\r",ch);
+		else
+			act("$N doesn't appear to be diseased.",ch,NULL,victim,TO_CHAR,1);
+		return;
+	}
 
-    if (check_dispel(level,victim,gsn_plague))
-    {
-	send_to_char("Your sores vanish.\n\r",victim);
-	act("$n looks relieved as $s sores vanish.",victim,NULL,NULL,TO_ROOM,0);
-    }
-    else
-	send_to_char("Spell failed.\n\r",ch);
+	if (check_dispel(level,victim,gsn_plague))
+	{
+		send_to_char("Your sores vanish.\n\r",victim);
+		act("$n looks relieved as $s sores vanish.",victim,NULL,NULL,TO_ROOM,0);
+	}
+	else
+		send_to_char("Spell failed.\n\r",ch);
 }
 
 
 void spell_cure_poison( int sn, int level, CHAR_DATA *ch, void *vo,int target )
 {
-    CHAR_DATA *victim = (CHAR_DATA *) vo;
+	CHAR_DATA *victim = (CHAR_DATA *) vo;
 
-    if ( !is_affected( victim, gsn_poison ) )
-    {
-        if (victim == ch)
-          send_to_char("You aren't poisoned.\n\r",ch);
-        else
-          act("$N doesn't appear to be poisoned.",ch,NULL,victim,TO_CHAR,1);
-        return;
-    }
+	if ( !is_affected( victim, gsn_poison ) )
+	{
+		if (victim == ch)
+			send_to_char("You aren't poisoned.\n\r",ch);
+		else
+			act("$N doesn't appear to be poisoned.",ch,NULL,victim,TO_CHAR,1);
+		return;
+	}
 
-    if (check_dispel(level,victim,gsn_poison))
-    {
-        send_to_char("A warm feeling runs through your body.\n\r",victim);
-        act("$n looks much better.",victim,NULL,NULL,TO_ROOM,0);
-    }
-    else
-        send_to_char("Spell failed.\n\r",ch);
+	if (check_dispel(level,victim,gsn_poison))
+	{
+		send_to_char("A warm feeling runs through your body.\n\r",victim);
+		act("$n looks much better.",victim,NULL,NULL,TO_ROOM,0);
+	}
+	else
+		send_to_char("Spell failed.\n\r",ch);
 }
 
 void spell_curse( int sn, int level, CHAR_DATA *ch, void *vo,int target )
@@ -839,7 +867,7 @@ void spell_curse( int sn, int level, CHAR_DATA *ch, void *vo,int target )
 	OBJ_DATA *obj;
 	AFFECT_DATA af;
 
-    /* deal with the object case first */
+	/* deal with the object case first */
 	if (target == TARGET_OBJ)
 	{
 		obj = (OBJ_DATA *) vo;
@@ -963,41 +991,41 @@ void spell_detect_invis( int sn, int level, CHAR_DATA *ch, void *vo,int target)
 
 void spell_detect_poison( int sn, int level, CHAR_DATA *ch, void *vo,int target)
 {
-    OBJ_DATA *obj = (OBJ_DATA *) vo;
+	OBJ_DATA *obj = (OBJ_DATA *) vo;
 
-    if ( obj->item_type == ITEM_DRINK_CON || obj->item_type == ITEM_FOOD )
-    {
-	if ( obj->value[3] != 0 )
-	    send_to_char( "You smell poisonous fumes.\n\r", ch );
+	if ( obj->item_type == ITEM_DRINK_CON || obj->item_type == ITEM_FOOD )
+	{
+		if ( obj->value[3] != 0 )
+			send_to_char( "You smell poisonous fumes.\n\r", ch );
+		else
+			send_to_char( "It looks delicious.\n\r", ch );
+	}
 	else
-	    send_to_char( "It looks delicious.\n\r", ch );
-    }
-    else
-    {
-	send_to_char( "It doesn't look poisoned.\n\r", ch );
-    }
+	{
+		send_to_char( "It doesn't look poisoned.\n\r", ch );
+	}
 
-    return;
+	return;
 }
 
 
 void spell_dispel_evil( int sn, int level, CHAR_DATA *ch, void *vo,int target)
 {
-    CHAR_DATA *victim = (CHAR_DATA *) vo;
-    int dam = 0;
+	CHAR_DATA *victim = (CHAR_DATA *) vo;
+	int dam = 0;
 
-    if ( !IS_NPC(ch) && !IS_NATURAL(ch) )
-	victim = ch;
+	if ( !IS_NPC(ch) && !IS_NATURAL(ch) )
+		victim = ch;
 
-    dam = UMAX(victim->agghealth, dice(level,4));
-    if ( saves_spell( level, victim,DAM_HOLY) )
-	dam /= 2;
+	dam = UMAX(victim->agghealth, dice(level,4));
+	if ( saves_spell( level, victim,DAM_HOLY) )
+		dam /= 2;
 
-    if (IS_NATURAL(victim))
-	dam = 0;
+	if (IS_NATURAL(victim))
+		dam = 0;
 
-    damage( ch, victim, dam, sn, DAM_HOLY ,TRUE, 1, -1);
-    return;
+	damage( ch, victim, dam, sn, DAM_HOLY ,TRUE, 1, -1);
+	return;
 }
 
 
@@ -1608,8 +1636,7 @@ void do_resist(CHAR_DATA *ch, char *argument)
 void do_melpominee1 (CHAR_DATA *ch, char *argument)
 {
 
-	if(ch->race != race_lookup("vampire")
-			|| ch->disc[DISC_MELPOMINEE] < 1)
+	if(ch->race != race_lookup("vampire") || ch->disc[DISC_MELPOMINEE] < 1)
 	{
 		send_to_char("Huh?\n\r", ch);
 		return;
@@ -1629,15 +1656,16 @@ void do_melpominee3 (CHAR_DATA *ch, char *argument)
 	char arg[MSL]={'\0'};
 	int fail = 0, door = 0;
 
-	if(ch->race != race_lookup("vampire")
-			|| ch->disc[DISC_MELPOMINEE] < 3)
+	if(ch->race != race_lookup("vampire") || ch->disc[DISC_MELPOMINEE] < 3)
 	{
 		send_to_char("Huh?\n\r", ch);
 		return;
 	}
 
 	if (!has_enough_power(ch))
+	{
 		return;
+	}
 
 	argument = one_argument(arg, argument);
 
@@ -1657,29 +1685,32 @@ void do_melpominee3 (CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	fail = dice_rolls(ch, get_curr_stat(ch, STAT_CHA)
-			+ ch->ability[PERFORMANCE].value, 7);
+	fail = dice_rolls(ch, get_curr_stat(ch, STAT_CHA) + ch->ability[PERFORMANCE].value, 7);
 
 	ch->power_timer = 2;
 
 	/* Sing the song */
 	if(IS_AFFECTED(ch, AFF_HIDE) || IS_AFFECTED(ch, AFF_INVISIBLE)
-			|| IS_AFFECTED(ch, AFF_SNEAK))
+		|| IS_AFFECTED(ch, AFF_SNEAK))
+	{
 		do_visible(ch, "");
+	}
 
 	stanza(argument);
 	act("$n $t", ch, argument, NULL, TO_CHAR, 1);
 	act("$n $t", ch, argument, NULL, TO_ROOM, 0);
 
 	if(IS_SET(ch->in_room->room_flags, ROOM_JAMMIN)
-			&& (IS_SET(ch->comm, COMM_JAMMIN)
-					|| (ch->leader && IS_SET(ch->leader->comm, COMM_JAM_LEAD))))
+		&& (IS_SET(ch->comm, COMM_JAMMIN) || (ch->leader && IS_SET(ch->leader->comm, COMM_JAM_LEAD))))
+	{
 		for(door = 0; door < 6; door++)
 		{
 			if(ch->in_room->exit[door])
+			{
 				act("$n $t", ch, argument, ch->in_room->exit[door]->u1.to_room, TO_OROOM, 0);
+			}
 		}
-
+	}
 	/* Apply the effect. */
 	if(fail > 0)
 	{
@@ -1689,32 +1720,44 @@ void do_melpominee3 (CHAR_DATA *ch, char *argument)
 			if(number_range(1, 5) <= fail)
 			{
 				if(!str_cmp("fear", arg))
+				{
 					gain_condition(vch, COND_FEAR, 5*fail);
+				}
 				else if(!str_cmp("anger", arg))
+				{
 					gain_condition(vch, COND_ANGER, 5*fail);
+				}
 				act("You feel an overwhelming rush of $t.", vch, arg, NULL, TO_CHAR, 0);
 			}
 		}
-		if(IS_SET(ch->in_room->room_flags, ROOM_JAMMIN)
-				&& (IS_SET(ch->comm, COMM_JAMMIN)
-						|| (ch->leader && IS_SET(ch->leader->comm, COMM_JAM_LEAD))))
+
+		if(IS_SET(ch->in_room->room_flags, ROOM_JAMMIN) && (IS_SET(ch->comm, COMM_JAMMIN)
+			|| (ch->leader && IS_SET(ch->leader->comm, COMM_JAM_LEAD))))
+		{
 			for(door = 0; door < 6; door++)
 			{
 				if(ch->in_room->exit[door])
+				{
 					for(vch = ch->in_room->exit[door]->u1.to_room->people;
-							vch != NULL; vch = vch_next)
+						vch != NULL; vch = vch_next)
 					{
 						vch_next = vch->next_in_room;
 						if(number_range(1, 5) <= fail)
 						{
 							if(!str_cmp("fear", arg))
+							{
 								gain_condition(vch, COND_FEAR, 5*fail);
+							}
 							else if(!str_cmp("anger", arg))
+							{
 								gain_condition(vch, COND_ANGER, 5*fail);
+							}
 							act("You feel an overwhelming rush of $t.", vch, arg, NULL, TO_CHAR, 0);
 						}
 					}
+				}
 			}
+		}
 	}
 }
 
@@ -1728,15 +1771,13 @@ void do_melpominee4 (CHAR_DATA *ch, char *argument)
 	char arg[MSL]={'\0'};
 	int fail = 0, door = 0;
 
-	if(ch->race != race_lookup("vampire")
-			|| ch->disc[DISC_MELPOMINEE] < 4)
+	if(ch->race != race_lookup("vampire") || ch->disc[DISC_MELPOMINEE] < 4)
 	{
 		send_to_char("Huh?\n\r", ch);
 		return;
 	}
 
-	if(ch->power_timer > 0
-			&& !is_affected(ch, skill_lookup("virtuosa")))
+	if(ch->power_timer > 0 && !is_affected(ch, skill_lookup("virtuosa")))
 	{
 		send_to_char("Your powers have not rejuvenated yet.\n\r", ch);
 		return;
@@ -1764,92 +1805,95 @@ void do_melpominee4 (CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	fail = dice_rolls(ch, get_curr_stat(ch, STAT_MAN)
-			+ ch->ability[PERFORMANCE].value, vch->willpower);
+	fail = dice_rolls(ch, get_curr_stat(ch, STAT_MAN) + ch->ability[PERFORMANCE].value, vch->willpower);
 
 	ch->power_timer = 1;
 
 	/* Sing the song */
 	if(IS_AFFECTED(ch, AFF_HIDE) || IS_AFFECTED(ch, AFF_INVISIBLE)
-			|| IS_AFFECTED(ch, AFF_SNEAK))
+		|| IS_AFFECTED(ch, AFF_SNEAK))
+	{
 		do_visible(ch, "");
+	}
 
 	stanza(argument);
 	act("$n $t", ch, argument, NULL, TO_CHAR, 1);
 	act("$n $t", ch, argument, NULL, TO_ROOM, 0);
 
-    if(IS_SET(ch->in_room->room_flags, ROOM_JAMMIN)
-         && (IS_SET(ch->comm, COMM_JAMMIN)
-         || (ch->leader && IS_SET(ch->leader->comm, COMM_JAM_LEAD))))
-        for(door = 0; door < 6; door++)
-        {
-          if(ch->in_room->exit[door])
-            act("$n $t", ch, argument, ch->in_room->exit[door]->u1.to_room, TO_OROOM, 0);
-        }
+	if(IS_SET(ch->in_room->room_flags, ROOM_JAMMIN)
+		&& (IS_SET(ch->comm, COMM_JAMMIN)
+			|| (ch->leader && IS_SET(ch->leader->comm, COMM_JAM_LEAD))))
+	{
+		for(door = 0; door < 6; door++)
+		{
+			if(ch->in_room->exit[door])
+				act("$n $t", ch, argument, ch->in_room->exit[door]->u1.to_room, TO_OROOM, 0);
+		}
+	}
 
     /* Apply the effect. */
-    if(fail > 0)
-    {
-	af.where     = TO_AFFECTS;
-	af.type      = skill_lookup("siren's beckoning");
-	af.level     = ch->disc[DISC_MELPOMINEE];
-	af.duration  = fail * 5;
-	if((paf = affect_find(vch->affected, skill_lookup("siren's beckoning")))
+	if(fail > 0)
+	{
+		af.where     = TO_AFFECTS;
+		af.type      = skill_lookup("siren's beckoning");
+		af.level     = ch->disc[DISC_MELPOMINEE];
+		af.duration  = fail * 5;
+		if((paf = affect_find(vch->affected, skill_lookup("siren's beckoning")))
 			== NULL)
-	{
-	    af.location  = APPLY_DERANGEMENT;
-	    af.bitvector = number_range(0, 21);
-	    /* Pick a sub-flag (if necessary) */
-	    if(af.bitvector <= 2)
-		af.modifier  = number_range(0, 4);
-	    else if(af.bitvector <= 5)
-		af.modifier  = number_range(0, 30);
-	    else if(af.bitvector == 6)
-		af.modifier  = number_range(0, 9);
-	    else af.modifier = -1;
-	}
-	else
-	{
-	    af.bitvector = paf->bitvector;
-	    af.location  = paf->location;
-	    af.modifier  = paf->modifier;
-	}
-	affect_to_char( vch, &af );
-
-	if((paf = affect_find(vch->affected, skill_lookup("siren's beckoning")))
-			!= NULL)
-	{
-	    if(paf->duration / 5 >= 20)
-	    {
-		/* Make Derangement Permanent */
-		trait = new_trait();
-		trait->type = 3;
-		trait->value = 0;
-		PURGE_DATA(trait->qualifier);
-		trait->qualifier =
-				str_dup(derangement_table[paf->bitvector].name);
-		if(paf->bitvector<(int)trait_lookup("obsessive/compulsive",
-				derangement_table))
 		{
-			PURGE_DATA(trait->detail);
-		    if(paf->bitvector < 3)
-			trait->detail = mania_table[paf->modifier].name;
-		    if(paf->bitvector < 6)
-			trait->detail = phobia_table[paf->modifier].name;
-		    if(paf->bitvector == 6)
-			trait->detail = compulsion_table[paf->modifier].name;
+			af.location  = APPLY_DERANGEMENT;
+			af.bitvector = number_range(0, 21);
+	    /* Pick a sub-flag (if necessary) */
+			if(af.bitvector <= 2)
+				af.modifier  = number_range(0, 4);
+			else if(af.bitvector <= 5)
+				af.modifier  = number_range(0, 30);
+			else if(af.bitvector == 6)
+				af.modifier  = number_range(0, 9);
+			else af.modifier = -1;
 		}
-		trait->next = ch->traits;
-		ch->traits = trait;
-		affect_strip(vch, skill_lookup("siren's beckoning"));
-	    }
+		else
+		{
+			af.bitvector = paf->bitvector;
+			af.location  = paf->location;
+			af.modifier  = paf->modifier;
+		}
+		affect_to_char( vch, &af );
+
+		if((paf = affect_find(vch->affected, skill_lookup("siren's beckoning")))
+			!= NULL)
+		{
+			if(paf->duration / 5 >= 20)
+			{
+		/* Make Derangement Permanent */
+				trait = new_trait();
+				trait->type = 3;
+				trait->value = 0;
+				PURGE_DATA(trait->qualifier);
+				trait->qualifier =
+				str_dup(derangement_table[paf->bitvector].name);
+				if(paf->bitvector<(int)trait_lookup("obsessive/compulsive",
+					derangement_table))
+				{
+					PURGE_DATA(trait->detail);
+					if(paf->bitvector < 3)
+						trait->detail = mania_table[paf->modifier].name;
+					if(paf->bitvector < 6)
+						trait->detail = phobia_table[paf->modifier].name;
+					if(paf->bitvector == 6)
+						trait->detail = compulsion_table[paf->modifier].name;
+				}
+				trait->next = ch->traits;
+				ch->traits = trait;
+				affect_strip(vch, skill_lookup("siren's beckoning"));
+			}
+		}
 	}
-    }
-    else if(fail < 0 && is_affected(vch, skill_lookup("siren's beckoning")))
-    {
-	affect_strip(vch, skill_lookup("siren's beckoning"));
-	send_to_char("You seem to have un-done the effect.\n\r", ch);
-    }
+	else if(fail < 0 && is_affected(vch, skill_lookup("siren's beckoning")))
+	{
+		affect_strip(vch, skill_lookup("siren's beckoning"));
+		send_to_char("You seem to have un-done the effect.\n\r", ch);
+	}
 }
 
 
@@ -1863,14 +1907,16 @@ void do_melpominee5 (CHAR_DATA *ch, char *argument)
 	int i = 0, targetcount = 0;
 
 	if(ch->race != race_lookup("vampire")
-			|| ch->disc[DISC_MELPOMINEE] < 5)
+		|| ch->disc[DISC_MELPOMINEE] < 5)
 	{
 		send_to_char("Huh?\n\r", ch);
 		return;
 	}
 
 	if (!has_enough_power(ch))
+	{
 		return;
+	}
 
 	argument = one_argument(arg, argument);
 	argument = one_argument(arg2, argument);
@@ -1900,7 +1946,7 @@ void do_melpominee5 (CHAR_DATA *ch, char *argument)
 	}
 
 	targetcount = UMIN(count_multi_args(arg2, (char *)':'),
-			get_curr_stat(ch, STAT_STA) + ch->ability[PERFORMANCE].value);
+		get_curr_stat(ch, STAT_STA) + ch->ability[PERFORMANCE].value);
 
 	if(ch->RBPG < (targetcount - 1)/5 + (targetcount%5 > 0 ? 1 : 0))
 	{
@@ -8826,7 +8872,9 @@ void do_serpentis1 (CHAR_DATA *ch, char *argument)
 	}
 
 	if (!has_enough_power(ch))
-		return;
+		{
+			return;
+		}
 
 	if(is_affected(ch, skill_lookup("eyes of the serpent")) && !IS_NULLSTR(argument) && !IS_AFFECTED2(ch, AFF2_IMMOBILIZED))
 	{
@@ -8898,7 +8946,9 @@ void do_serpentis2 (CHAR_DATA *ch, char *argument)
 	}
 
 	if (!has_enough_power(ch))
+	{
 		return;
+	}
 
 	af.where     = TO_AFFECTS;
 	af.type      = skill_lookup("tongue of the serpent");
@@ -8975,7 +9025,9 @@ void do_serpentis4 (CHAR_DATA *ch, char *argument)
 	if(ch->race == race_lookup("vampire") && ch->disc[DISC_SERPENTIS] >= 4)
 	{
 		if (!has_enough_power(ch))
+		{
 			return;
+		}
 
 		if(ch->RBPG < 2)
 		{
