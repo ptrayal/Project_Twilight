@@ -3022,15 +3022,15 @@ char *	crypt		args( ( const char *key, const char *salt ) );
 #define NULL_FILE	"nul"			/* To reserve one stream */
 
 #elif  defined(unix)
-#define PLAYER_DIR      "../player/"        	/* Player files */
+#define AREA_DIR    "../area/"      /* Area files   */
+#define LOG_DIR     "../log/"       /* Log files    */
+#define NPC_DIR     "../npc/"       /* NPC files    */
+#define ORG_DIR     "../data/orgs/"     /* Org files    */
+#define PLAYER_DIR      "../player/"            /* Player files */
 #define PLAYER_BACKUP_DIR  "../player/backup/"  /* Player backup files */
-#define NPC_DIR		"../npc/"		/* NPC files	*/
-#define AREA_DIR	"../area/"		/* Area files	*/
-#define ORG_DIR		"../data/orgs/"		/* Org files	*/
-#define SURVEY_DIR	"../data/survey/"	/* Survey files	*/
-#define LOG_DIR		"../log/"		/* Log files	*/
-#define TEMP_FILE	"../player/mudtmp"
-#define NULL_FILE	"/dev/null"		/* To reserve one stream */
+#define SURVEY_DIR  "../data/survey/"   /* Survey files */
+#define TEMP_FILE   "../player/mudtmp"
+#define NULL_FILE   "/dev/null"     /* To reserve one stream */
 #else
 #define PLAYER_DIR      "../player/"            /* Player files */
 #define PLAYER_BACKUP_DIR  "../player/backup/"  /* Player backup files */

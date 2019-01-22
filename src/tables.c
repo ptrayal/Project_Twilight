@@ -3305,6 +3305,14 @@ const struct flag_type influence_table [] =
 	{ NULL,		0,		TRUE	}
 };
 
+
+/***********************************************
+* Part One: Name of Influence Command          *
+* Part Two: Type of Influence (-1 for all)     *
+* Part Three: Level of Influence required      *
+* Part Four: Delay                             *
+* Part Five: Function executed                 *
+************************************************/
 const struct influence_cmd_type influence_cmd_table [] =
 {
   { "commands", 	-1,					0, 0,	influence_commands	},
@@ -4047,6 +4055,12 @@ const struct flag_type quirk_type [] =
 	{ NULL,		-1, FALSE }
 };
 
+/*************************************************
+*  Part One: Name of Trait                       *
+*  Part Two: Bit number                          *
+*  Part Three: Trait cost                        *
+*  Part Four: Settable (True/False)              *
+**************************************************/
 const struct trait_struct merit_table [] =
 {
 	{ "acute hearing",			 0, 1, TRUE },
@@ -4118,6 +4132,12 @@ const struct trait_struct merit_table [] =
 	{ NULL,				-1, 0, FALSE }
 };
 
+/*************************************************
+*  Part One: Name of Trait                       *
+*  Part Two: Bit number                          *
+*  Part Three: Trait cost                        *
+*  Part Four: Settable (True/False)              *
+**************************************************/
 const struct trait_struct flaw_table [] =
 {
 	{ "feedrestriction",		 0, -1, TRUE },

@@ -4952,10 +4952,10 @@ void do_jump(CHAR_DATA *ch, char *argument)
 
 void do_traits(CHAR_DATA *ch, char *argument)
 {
-    char arg[MIL]={'\0'};
-    int i, type = -1, sel, subfl;
     TRAIT_DATA *trait;
     AFFECT_DATA *paf;
+    char arg[MIL]={'\0'};
+    int i, type = -1, sel, subfl;
 
     CheckCH(ch);
 

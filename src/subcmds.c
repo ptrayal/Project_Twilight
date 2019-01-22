@@ -79,19 +79,17 @@ bool CAN_BE(CHAR_DATA *ch, int cmd)
  */
 int maker_creation(CHAR_DATA *ch, char *argument)
 {
+	OBJ_DATA *pObj;
 	char arg[MIL]={'\0'};
 	char arg1[MIL]={'\0'};
 	char arg2[MIL]={'\0'};
 	char arg3[MIL]={'\0'};
-	OBJ_DATA *pObj;
 	int material = 0, wear = 0, size = 0;
 	int jn = 0;
 	int cond = 0;
 	int fail = 0;
 	int fail1 = 0;
 	int fail2 = 0;
-
-
 
 	smash_tilde( argument );
 	argument = one_argument(argument, arg);
@@ -458,10 +456,10 @@ int janitor_clean(CHAR_DATA *ch, char *argument)
 
 int janitor_empty(CHAR_DATA *ch, char *argument)
 {
-	char arg1[MIL]={'\0'};
 	OBJ_DATA *pObj;
 	OBJ_DATA *content;
 	OBJ_DATA *next;
+	char arg1[MIL]={'\0'};
 
 	argument = one_argument(argument, arg1);
 
@@ -1979,8 +1977,8 @@ int muso_play(CHAR_DATA *ch, char *argument)
  */
 void do_influences (CHAR_DATA *ch, char *argument)
 {
-	int in = 0, cmd = -1;
 	char arg[MIL]={'\0'};
+	int in = 0, cmd = -1;
 
 	CheckCH(ch);
 
