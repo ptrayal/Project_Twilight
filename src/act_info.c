@@ -5994,7 +5994,7 @@ void do_advantages( CHAR_DATA *ch, char *argument )
 
 
 	// Backgrounds
-	cell = row_append_cell(row, 22, "\tGBackgrounds\tn\n");
+	cell = row_append_cell(row, 22, "     \tGBackgrounds\tn\n");
 	i = 0;
 	for(num=0;background_table[num].name;num++)
 	{
@@ -6024,7 +6024,7 @@ void do_advantages( CHAR_DATA *ch, char *argument )
 	}
 
 	//  Influences
-	cell = row_append_cell(row, 22, "\tGInfluences\tn\n");
+	cell = row_append_cell(row, 22, "     \tGInfluences\tn\n");
 	i = 0;
 	for(num=0;influence_table[num].name;num++)
 	{
