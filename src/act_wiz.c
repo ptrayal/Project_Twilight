@@ -277,8 +277,8 @@ void do_nochannels( CHAR_DATA *ch, char *argument )
 /* RT dice loading command, for those times when you just need an edge */
 void do_loaddice( CHAR_DATA *ch, char *argument )
 {
-	char arg[MIL]={'\0'};
 	CHAR_DATA *victim;
+	char arg[MIL]={'\0'};
 	int pos = 0;
 
 	CheckCH(ch);
@@ -297,12 +297,15 @@ void do_loaddice( CHAR_DATA *ch, char *argument )
 		return;
 	}
 
-	if ( !str_prefix( argument, "positive" ) )  pos = LOADED_DICE_POS;
-	else if ( !str_prefix( argument, "negative" ) ) pos = LOADED_DICE_NEG;
-	if ( !str_prefix( argument, "bigpositive" ) )  pos = LOADED_DICE_BPOS;
-	else if ( !str_prefix( argument, "bignegative" ) ) pos = LOADED_DICE_BNEG;
-	else if ( !str_prefix( argument, "none" )
-			|| !str_prefix( argument, "remove" ) )
+	if ( !str_prefix( argument, "positive" ) )  
+		pos = LOADED_DICE_POS;
+	else if ( !str_prefix( argument, "negative" ) ) 
+		pos = LOADED_DICE_NEG;
+	if ( !str_prefix( argument, "bigpositive" ) )  
+		pos = LOADED_DICE_BPOS;
+	else if ( !str_prefix( argument, "bignegative" ) ) 
+		pos = LOADED_DICE_BNEG;
+	else if ( !str_prefix( argument, "none" ) || !str_prefix( argument, "remove" ) )
 		pos = 0;
 	else
 	{
@@ -367,8 +370,8 @@ void do_loaddice( CHAR_DATA *ch, char *argument )
 /* RT nogiftxp command, for those cheating up their xp */
 void do_nogiftxp( CHAR_DATA *ch, char *argument )
 {
-	char arg[MIL]={'\0'};
 	CHAR_DATA *victim;
+	char arg[MIL]={'\0'};
 
 	CheckCH(ch);
 
@@ -471,8 +474,8 @@ void do_bamfout( CHAR_DATA *ch, char *argument )
 
 void do_deny( CHAR_DATA *ch, char *argument )
 {
-	char arg[MIL]={'\0'};
 	CHAR_DATA *victim;
+	char arg[MIL]={'\0'};
 
 	CheckCH(ch);
 
@@ -513,12 +516,11 @@ void do_deny( CHAR_DATA *ch, char *argument )
 }
 
 
-
 void do_disconnect( CHAR_DATA *ch, char *argument )
 {
-	char arg[MIL]={'\0'};
 	DESCRIPTOR_DATA *d;
 	CHAR_DATA *victim;
+	char arg[MIL]={'\0'};
 
 	CheckCH(ch);
 
@@ -531,7 +533,7 @@ void do_disconnect( CHAR_DATA *ch, char *argument )
 
 	if (is_number(arg))
 	{
-		int desc;
+		int desc = 0;
 
 		desc = atoi(arg);
 		for ( d = descriptor_list; d != NULL; d = d->next )
@@ -591,7 +593,7 @@ void do_echo( CHAR_DATA *ch, char *argument )
 	DESCRIPTOR_DATA *d;
 	int trust = 7;
 
-	CheckCH(ch);
+	// CheckCH(ch);
 
 	if ( IS_NULLSTR(argument) )
 	{
@@ -648,8 +650,8 @@ void do_recho( CHAR_DATA *ch, char *argument )
 
 void do_pecho( CHAR_DATA *ch, char *argument )
 {
-	char arg[MIL]={'\0'};
 	CHAR_DATA *victim;
+	char arg[MIL]={'\0'};
 
 	CheckCH(ch);
 
@@ -702,11 +704,11 @@ ROOM_INDEX_DATA *find_location( CHAR_DATA *ch, char *arg )
 
 void do_transfer( CHAR_DATA *ch, char *argument )
 {
-	char arg1[MIL]={'\0'};
-	char arg2[MIL]={'\0'};
 	ROOM_INDEX_DATA *location;
 	DESCRIPTOR_DATA *d;
 	CHAR_DATA *victim;
+	char arg1[MIL]={'\0'};
+	char arg2[MIL]={'\0'};
 
 	CheckCH(ch);
 
@@ -782,14 +784,13 @@ void do_transfer( CHAR_DATA *ch, char *argument )
 }
 
 
-
 void do_at( CHAR_DATA *ch, char *argument )
 {
-    char arg[MIL]={'\0'};
     ROOM_INDEX_DATA *location;
     ROOM_INDEX_DATA *original;
     OBJ_DATA *on;
     CHAR_DATA *wch;
+    char arg[MIL]={'\0'};
 
     CheckCH(ch);
 
@@ -837,7 +838,6 @@ void do_at( CHAR_DATA *ch, char *argument )
 
     return;
 }
-
 
 
 void do_goto( CHAR_DATA *ch, char *argument )
@@ -905,11 +905,11 @@ void do_goto( CHAR_DATA *ch, char *argument )
 
 void do_rstat( CHAR_DATA *ch, char *argument )
 {
-	char buf[MSL]={'\0'};
-	char arg[MIL]={'\0'};
 	ROOM_INDEX_DATA *location;
 	OBJ_DATA *obj;
 	CHAR_DATA *rch;
+	char buf[MSL]={'\0'};
+	char arg[MIL]={'\0'};
 	int door;
 
 	CheckCH(ch);
@@ -983,7 +983,6 @@ void do_rstat( CHAR_DATA *ch, char *argument )
 
 	return;
 }
-
 
 
 void do_ostat( CHAR_DATA *ch, char *argument )
@@ -1222,9 +1221,9 @@ void do_ostat( CHAR_DATA *ch, char *argument )
 
 void do_mstat( CHAR_DATA *ch, char *argument )
 {
-	char arg[MIL]={'\0'};
 	AFFECT_DATA *paf;
 	CHAR_DATA *victim;
+	char arg[MIL]={'\0'};
 
 	CheckCH(ch);
 
@@ -1366,7 +1365,6 @@ void do_mstat( CHAR_DATA *ch, char *argument )
 }
 
 /* ofind and mfind replaced with vnum, vnum skill also added */
-
 void do_vnum(CHAR_DATA *ch, char *argument)
 {
 	char arg[MIL]={'\0'};
