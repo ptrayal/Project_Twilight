@@ -1336,6 +1336,27 @@ char *one_line( char *argument, char *arg_first )
 	return argument;
 }
 
+int sort_cmd_table( const void *v1, const void *v2 )
+{
+    int idx1 = *(int *) v1;
+    int idx2 = *(int *) v2;
+    int i = 0;
+
+    /* compare the command names */
+    for (i = 0; cmd_table[idx1].name[i] != '\0'; i++)
+    {
+        if (cmd_table[idx1].name[i] == cmd_table[idx2].name[i])
+        	continue;
+        if (cmd_table[idx2].name[i] == '\0')                    
+        	return  1;
+        if (cmd_table[idx1].name[i]  > cmd_table[idx2].name[i]) 
+        	return  1;
+        if (cmd_table[idx1].name[i]  < cmd_table[idx2].name[i]) 
+        	return -1;
+    }
+    return 0;
+}
+
 /*
 * Contributed by Alander.
 */
@@ -1343,9 +1364,21 @@ void do_commands( CHAR_DATA *ch, char *argument )
 {
 	int cmd = 0;
 	int col = 0;
+	int count = 0;
+	int i = 0;
+	int index[MAX_STRING_LENGTH*4];
 
-	for ( cmd = 0; !IS_NULLSTR(cmd_table[cmd].name); cmd++ )
+	for ( count = 0; cmd_table[count].name[0] != '\0'; count++ )
+    {
+    	index[count] = count;
+    }
+
+	qsort(index, count, sizeof(int), sort_cmd_table);
+
+    for ( i = 0; i < count; i++ )
 	{
+		cmd = index[i];
+
 		if ( cmd_table[cmd].level <  LEVEL_IMMORTAL
 				&&   cmd_table[cmd].level <= get_trust( ch )
 				&&   cmd_table[cmd].show == 1
