@@ -1,9 +1,16 @@
-log/
-player/
-npc/
+# exclude these folders
+log/*
+player/*
+npc/*
 *.o
 data/stock.txt
 /src/project
+
+#Include these files
+!/log/.gitkeep
+!/npc/.gitkeep
+!/player/.gitkeep
+!/player/backup.gitkeep
 
 #################
 ## Eclipse
