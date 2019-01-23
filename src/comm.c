@@ -1401,14 +1401,15 @@ bool read_from_descriptor( DESCRIPTOR_DATA *d )
 #endif
 
 	read_buf[iStart] = '\0';
-	if(d->pProtocol)
-	{
-		ProtocolInput( d, read_buf, iStart, d->inbuf );
-	}
-	else
-	{
-		strncpy(d->inbuf, read_buf, MSL*4);
-	}
+	ProtocolInput( d, read_buf, iStart, d->inbuf );
+	// if(d->pProtocol)
+	// {
+	// 	ProtocolInput( d, read_buf, iStart, d->inbuf );
+	// }
+	// else
+	// {
+	// 	strncpy(d->inbuf, read_buf, MSL*4);
+	// }
 
 	return TRUE;
 }
