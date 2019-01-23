@@ -4668,15 +4668,16 @@ int current_dots(CHAR_DATA *ch)
 
 int xp_cost_mod(CHAR_DATA *ch, int cost, int curdot)
 {
-	int dots = current_dots(ch);
-	int inc = 1;
+	// int dots = current_dots(ch);
+	// int inc = 1;
 
-	if(dots > START_DOTS && curdot < 3)
-		{
-			inc = 1 + ((dots-START_DOTS)*400)/(START_DOTS*100);
-		}
+	// if(dots > START_DOTS && curdot < 3)
+	// 	{
+	// 		inc = 1 + ((dots-START_DOTS)*400)/(START_DOTS*100);
+	// 	}
 
-	return /*inc * */cost;
+	// return inc;
+	return cost;
 }
 
 int trait_count(CHAR_DATA *ch, int type)
