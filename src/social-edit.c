@@ -91,7 +91,14 @@ void load_social_table ()
 		log_string(LOG_BUG, Format("Could not open " SOCIAL_FILE " for reading."));
 		exit(1);
 	}
-	fscanf (fp, "%d\n", &maxSocial);
+
+	if (fscanf (fp, "%d\n", &maxSocial) == -1)
+    {
+        log_string(LOG_ERR,"Problem scanning for Social Files in load_social_table.");
+        return;
+    }
+
+	// fscanf (fp, "%d\n", &maxSocial);
 
 	/* IMPORTANT to use malloc so we can realloc later on */
 	//	ALLOC_DATA(social_table, maxSocial+1);
