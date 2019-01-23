@@ -879,7 +879,7 @@ int init_socket( int port )
 int main( int argc, char **argv )
 {
 	struct timeval now_time;
-	bool fCopyOver = FALSE;
+	// bool fCopyOver = FALSE;
 
 	/*
 	 * Init time.
@@ -917,11 +917,13 @@ int main( int argc, char **argv )
 		/* Are we recovering from a copyover? */
 		if (argv[3] && argv[3][0])
 		{
-			fCopyOver = TRUE;
+			// fCopyOver = TRUE;
 			control = atoi(argv[3]);
 		}
 		else
-			fCopyOver = FALSE;
+			{
+			// fCopyOver = FALSE;
+			}
 	}
 
 	if( argv[2] == NULL || !is_number( argv[2] ) )
@@ -938,7 +940,8 @@ int main( int argc, char **argv )
 	boot_db( );
 	/* init_web(port+1); */
 	log_string( LOG_CONNECT, Format("Project Twilight loaded on port %d.", port) );
-	log_to_file(logfile, GLOBAL_XML_IN, "Project Twilight restarted.");
+	log_string( LOG_CONNECT, "Project Twilight restarted." );
+
 /*
 	if(fCopyOver)
 		copyover_recover();
@@ -1555,7 +1558,6 @@ bool process_output( DESCRIPTOR_DATA *d, bool fPrompt )
 					const char *vhdisp;
 					const char *chdisp;
 					int vhealth, chealth;
-					char *pbuff;
 					char buffer[MSL*2]={'\0'};
 
 					if(ch == NULL || victim == NULL)
@@ -1577,7 +1579,6 @@ bool process_output( DESCRIPTOR_DATA *d, bool fPrompt )
 					snprintf(buf, sizeof(buf), "<%s is %s, You are %s> \n\r",
 							IS_NPC(victim) ? victim->short_descr : victim->name, vhdisp, chdisp );
 					buf[0]	= UPPER( buf[0] );
-					pbuff	= buffer;
 					write_to_buffer( d, buffer, 0);
 				}
 
@@ -1639,7 +1640,6 @@ void bust_a_prompt( CHAR_DATA *ch )
 	const char *str;
 	const char *i;
 	char *point;
-	char *pbuff;
 	char buffer[ MSL*2 ]={'\0'};
 	char doors[MIL]={'\0'};
 	EXIT_DATA *pexit;
@@ -1794,7 +1794,6 @@ void bust_a_prompt( CHAR_DATA *ch )
          ++point, ++i;
    }
    *point	= '\0';
-   pbuff	= buffer;
    write_to_buffer( ch->desc, buffer, 0 );
 
    if (!IS_NULLSTR(ch->prefix))
@@ -1811,15 +1810,19 @@ void write_to_buffer( DESCRIPTOR_DATA *d, const char *txt, int length )
 {
 
 	// don't write NULL data!
-	if(txt == NULL || txt == '\0')
-		return;
+	// if(txt == NULL || txt == '\0')
+	// 	return;
 
 	length = 0;
 
     txt = ProtocolOutput( d, txt, &length );  /* <--- Add this line */
     if ( d->pProtocol->WriteOOB > 0 )         /* <--- Add this line */
-        --d->pProtocol->WriteOOB;             /* <--- Add this line */
-//	const char *new_txt = txt;
+    {
+    	--d->pProtocol->WriteOOB;             /* <--- Add this line */
+    }
+
+	//	const char *new_txt = txt;
+	
 	/*
 	 * Find length in case caller didn't.
 	 */
@@ -3147,8 +3150,13 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 						if(!IS_ADMIN(ch))
 						{
 							do_function(NULL, &do_echo, (char *)Format("[\tCConnection Alert\tn] %s has joined us.", ch->name) );
-							log_to_file("44000", "OOCXML", Format("[Connection Alert] %s has joined in.", ch->name));
+							log_string(LOG_CONNECT,Format("%s has joined Project Twilight",ch->name));
 						}
+						else
+						{
+							log_string(LOG_CONNECT,Format("%s has joined Project Twilight",ch->name));
+						}
+						
 						wiznet("\tY[WIZNET]\tn $N joins the party.", ch, NULL, WIZ_LOGINS, WIZ_SITES, get_trust(ch));
 
 						if (ch->pet != NULL)
@@ -3598,16 +3606,15 @@ void show_string(struct descriptor_data *d, char *input)
 			*scan = '\0';
 			write_to_buffer(d,buffer,strlen(buffer));
 			for (chk = d->showstr_point; isspace(*chk); chk++);
+
+			if (!*chk)
 			{
-				if (!*chk)
+				if (d->showstr_head)
 				{
-					if (d->showstr_head)
-					{
-						PURGE_DATA(d->showstr_head);
-						d->showstr_head = 0;
-					}
-					d->showstr_point  = 0;
+					PURGE_DATA(d->showstr_head);
+					d->showstr_head = 0;
 				}
+				d->showstr_point  = 0;
 			}
 			return;
 		}
@@ -3643,9 +3650,7 @@ void act_new( const char *format, CHAR_DATA *ch, const void *arg1,  const void *
 	const char *str;
 	const char *i = " <@@@> ";
 	char *point;
-	char 		*pbuff;
 	char 		buffer[ MSL*2 ] = {'\0'};
-	bool		fColour = FALSE;
 
     /*
      * Discard null and zero-length messages.
@@ -3771,7 +3776,6 @@ void act_new( const char *format, CHAR_DATA *ch, const void *arg1,  const void *
 				*point++ = *str++;
 				continue;
 			}
-			fColour = TRUE;
 			++str;
 
 			if ( arg2 == NULL && *str >= 'A' && *str <= 'Z' )
@@ -3982,7 +3986,6 @@ void act_new( const char *format, CHAR_DATA *ch, const void *arg1,  const void *
 		}
 		else
 		{
-			pbuff	 = buffer;
 			write_to_buffer( to->desc, buf, 0 );
 		}
 	}
@@ -4226,15 +4229,12 @@ void act_new( const char *format, CHAR_DATA *ch, const void *arg1,  const void *
 		}
 		else
 		{
-			pbuff	 = buffer;
 			write_to_buffer( also_to->desc, buffer, 0 );
 		}
 	}
 
 	return;
 }
-
-
 
 /*
  * Macintosh support functions.

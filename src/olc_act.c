@@ -7056,4 +7056,3 @@ NEDIT( kbedit_successes )
 	send_to_char( "Successes set.\n\r", ch);
 	return TRUE;
 }
-

@@ -436,7 +436,7 @@ int home_cmd_lookup (char *name)
 
 int home_price_lookup (char *name)
 {
-	int i;
+	int i = 0;
 
 	for (i = 0; home_price_table[i].name != NULL; i++)
 	{
@@ -453,7 +453,7 @@ int home_price_lookup (char *name)
  */
 int trait_lookup (const char *name, const struct trait_struct *trait_table)
 {
-	int t;
+	int t = 0;
 
 	for (t = 0; trait_table[t].name != NULL; t++)
 	{
@@ -469,7 +469,8 @@ int trait_lookup (const char *name, const struct trait_struct *trait_table)
  */
 int rite_lookup (CHAR_DATA *ch)
 {
-	int t, i;
+	int t = 0;
+	int i = 0;
 	bool found = TRUE;
 
 	for (t = 0; ritual_table[t].name != NULL; t++)
@@ -490,7 +491,7 @@ int rite_lookup (CHAR_DATA *ch)
 
 int riteaction_lookup (const char *name)
 {
-	int t;
+	int t = 0;
 
 	// prevent negative exposure here; null name = this thing blow up on LOWER(name[0])
 	if(name == NULL || name[0] == '\0')
@@ -504,4 +505,3 @@ int riteaction_lookup (const char *name)
 
 	return -1;
 }
-

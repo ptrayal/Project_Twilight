@@ -2244,7 +2244,8 @@ void do_score( CHAR_DATA *ch, char *argument )
 
 void do_affects(CHAR_DATA *ch, char *argument )
 {
-	AFFECT_DATA *paf, *paf_last = NULL;
+	// AFFECT_DATA *paf, *paf_last = NULL;
+	AFFECT_DATA *paf;
 
 	CheckCH(ch);
 
@@ -2267,7 +2268,6 @@ void do_affects(CHAR_DATA *ch, char *argument )
 		}
 
 		send_to_char( "\n\r", ch );
-		paf_last = paf;
 	}
 	else
 		send_to_char("Nothing is affecting you.\n\r",ch);
@@ -2495,13 +2495,9 @@ void do_help( CHAR_DATA *ch, char *argument )
 void do_whois (CHAR_DATA *ch, char *argument)
 {
 	CHAR_DATA *wch;
-	BUFFER *output;
 	char arg[MIL]={'\0'};
-	char const *clan;
-	int app = 0;
 	bool online = FALSE;
 	bool in_char_list = FALSE;
-	bool fRPOK = FALSE;
 
 	CheckCH(ch);
 
@@ -2515,23 +2511,16 @@ void do_whois (CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	output = new_buf();
-
-	if(is_online(arg)) online = TRUE;
-	if(pc_in_char_list(arg)) in_char_list = TRUE;
+	if(is_online(arg)) 
+		online = TRUE;
+	if(pc_in_char_list(arg)) 
+		in_char_list = TRUE;
 
 	if((wch = get_player(arg)) == NULL)
 	{
 		send_to_char("No such player exists.\n\r", ch);
 		return;
 	}
-
-	/*
-	 * Figure out stuff to print.
-	 */
-	clan = clan_table[wch->clan].who_name;
-	app = get_curr_stat(wch, STAT_APP);
-	if(IS_SET(wch->plr_flags, PLR_RP_OK)) fRPOK = TRUE;
 
 	/*
 	 * Format it up.
@@ -2688,9 +2677,7 @@ void do_who( CHAR_DATA *ch, char *argument )
 	char buf[MSL]={'\0'};
 	int iRace = 0;
 	int iClan = 0;
-	int nNumber = 0;
 	int nMatch = 0;
-	int app = 0;
 	bool rgfClan[MAX_CLAN];
 	bool rgfRace[MAX_PC_RACE];
 	bool fClanRestrict = FALSE;
@@ -2723,7 +2710,7 @@ void do_who( CHAR_DATA *ch, char *argument )
 	/*
 	 * Parse arguments.
 	 */
-	nNumber = 0;
+
 	for ( ;; )
 	{
 		char arg[MIL]={'\0'};
@@ -2858,7 +2845,6 @@ void do_who( CHAR_DATA *ch, char *argument )
 		 * Figure out stuff to print.
 	 */
 		clan = clan_table[wch->clan].who_name;
-		app = get_curr_stat(wch, STAT_APP);
 		send_to_char("\n\r", ch);
 
 	/*
@@ -6094,7 +6080,6 @@ void do_updatetime( CHAR_DATA *ch, char *argument)
 	send_to_char("\tn\n\r", ch);
 	send_to_char("\tW------------------------------------------------------------------------------\tn\n\r", ch);
 }
-
 
 void do_snippets( CHAR_DATA *ch, char *argument )
 {

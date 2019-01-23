@@ -38,7 +38,6 @@ struct power_config
 
 typedef struct power_config POW;
 
-
 /* Range definitions
 flag_type range_flags {
 {    "self",		0,	TRUE	},

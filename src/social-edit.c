@@ -48,9 +48,11 @@
 #ifndef CONST_SOCIAL
 struct social_type *social_table;	   /* and social table */
 
-void purge_socials(void) {
+void purge_socials(void) 
+{
 	int x = 0;
-	for( x = 0;  x < maxSocial; x++ ) {
+	for( x = 0;  x < maxSocial; x++ ) 
+	{
 		struct social_type *social = &social_table[x];
 
 		PURGE_DATA(social->name);

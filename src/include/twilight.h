@@ -2713,7 +2713,7 @@ struct	skill_type
 #define IS_SET(flag, bit)	((flag) & (bit))
 #define SET_BIT(var, bit)	((var) |= (bit))
 #define REMOVE_BIT(var, bit)    ((var) &= ~(bit))
-#define IS_NULLSTR(str)                ((str) == NULL || (str)[0] == '\0')
+#define IS_NULLSTR(str)     ((str) == NULL || (str)[0] == '\0')
 #define ENTRE(min,num,max)     ( ((min) < (num)) && ((num) < (max)) )
 #define CHECK_POS(a, b, c)     {                       \
                                (a) = (b);              \
@@ -3220,8 +3220,7 @@ void	bug		args( ( const char *str, int param ) );
 void log_string args( (int type, const char *fmt, ... ) );
 void	tail_chain	args( ( void ) );
 char *	allcaps		args( ( const char *str ) );
-void	log_to_file	args( ( char *file, char *extension,
-						const char *string ) );
+// void	log_to_file	args( ( char *file, char *extension, const char *string ) );
 const char *Upper args( (const char *str) );
 const char *Lower args( (const char *str) );
 char *_str_dup args( (const char *str, const char *file, const char *function, int line) );

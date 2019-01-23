@@ -81,8 +81,6 @@ const char *Lower(const char *str)
 	return low;
 }
 
-
-
 #if !defined(Macintosh)
 extern  int _filbuf     args( (FILE *) );
 #endif
@@ -766,8 +764,6 @@ void new_load_area( FILE *fp )
 	pArea->min_vnum     = 0;
 	pArea->max_vnum     = 0;
 	pArea->area_flags   = 0;
-	/* pArea->area_version = CURRENT_AREA_VERSION; */
-	/*  pArea->recall       = ROOM_VNUM_TEMPLE;        ROM OLC */
 
 	for ( ; ; )
 	{
@@ -4907,63 +4903,6 @@ char *sys_time()
 	strtime = ctime( &current_time );
 	strtime[strlen(strtime)-1] = '\0';
 	return strtime;
-}
-
-
-void log_to_file(char *file, char *extension, const char *string)
-{
-	int fd = 0, length = 0;
-	char stack[MSL]={'\0'};
-
-	if (DEBUG)
-	{
-		fprintf( stderr, "%s\n\r", string );
-	}
-
-	/* these should be defined by your system... they're the bits that will
-	  be set for the file's file permissions. If you're using DOS or Win95
-	  or some god-awful OS like that, replace the snprintf() above with:
-	  snprintf(stack, sizeof(stack), "logs\\%s.log", file); and the call to open() below
-	  to: fd = open(stack, O_CREAT | O_WRONLY); Or, you can write some
-	  preprocessor directives to choose which to use, if you're interested
-	  in portability. I for one don't need a Win95 system to test on,
-	  since I'm running NetBSD/mac68k on my Mac IIci ;-) -- end OS rant */
-
-	if((fd = open((char *)Format("%s%s.%s", LOG_DIR, file, extension), O_CREAT | O_WRONLY | O_SYNC, S_IRUSR | S_IWUSR)) == -1)
-	{
-		perror( "Log failure" );
-	}
-	length = lseek(fd, 0, SEEK_END);
-
-	/* this bit will turn over your log file(s) if they go over MAX_LOG
-	  bytes. */
-
-	if (length > MAX_LOG)
-	{
-		int i = atoi(file) + 1;
-
-		close(fd);
-		fd=open((char *)Format("%s%d.log", LOG_DIR, i), O_CREAT | O_WRONLY | O_SYNC | O_TRUNC, S_IRUSR | S_IWUSR);
-	}
-
-
-	/* sys_time is a function that returns the real time, formatted like:
-	   05:24:52 - 12/22/97 in my program's case */
-
-	snprintf(stack, sizeof(stack), "%s - %s\n", sys_time(), string);
-
-	/* you can set this to be TRUE (a global for me == 1) to turn off
-	  logging */
-
-	if (NO_LOGS == TRUE)
-	{
-		printf("%s", stack);
-	}
-	write(fd, stack, strlen(stack));
-	close(fd);
-
-	fprintf(stdout, "%s", stack);
-
 }
 
 

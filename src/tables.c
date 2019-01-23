@@ -10,7 +10,7 @@
 #include "powers.h"
 #include "interp.h"
 
-/* for clans */
+/* >>>>>>>>>>>>>>> Race Table <<<<<<<<<<<<<<< */
 const struct clan_type clan_table[MAX_CLAN] =
 {
 	/*  name,		who entry,	independent */

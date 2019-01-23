@@ -60,8 +60,8 @@ ROOM_INDEX_DATA *	find_location	args( ( CHAR_DATA *ch, char *arg ) );
 
 void do_wiznet( CHAR_DATA *ch, char *argument )
 {
-	int flag;
 	char buf[MSL]={'\0'};
+	int flag = 0;
 
 	CheckCH(ch);
 
@@ -230,8 +230,8 @@ void do_outfit ( CHAR_DATA *ch, char *argument )
 /* RT nochannels command, for those spammers */
 void do_nochannels( CHAR_DATA *ch, char *argument )
 {
-	char arg[MIL]={'\0'};
 	CHAR_DATA *victim;
+	char arg[MIL]={'\0'};
 
 	CheckCH(ch);
 
@@ -1800,10 +1800,10 @@ void do_shutdow( CHAR_DATA *ch, char *argument )
 
 void do_shutdown( CHAR_DATA *ch, char *argument )
 {
-	char buf[MSL]={'\0'};
-	extern bool merc_down;
 	DESCRIPTOR_DATA *d,*d_next;
 	CHAR_DATA *vch;
+	char buf[MSL]={'\0'};
+	extern bool merc_down;
 
 	CheckCH(ch);
 
@@ -1838,9 +1838,9 @@ void do_shutdown( CHAR_DATA *ch, char *argument )
 
 void do_snoop( CHAR_DATA *ch, char *argument )
 {
-	char arg[MIL]={'\0'};
 	DESCRIPTOR_DATA *d;
 	CHAR_DATA *victim;
+	char arg[MIL]={'\0'};
 
 	CheckCH(ch);
 
@@ -1916,77 +1916,77 @@ void do_snoop( CHAR_DATA *ch, char *argument )
 
 void do_switch( CHAR_DATA *ch, char *argument )
 {
-    char arg[MIL]={'\0'};
-    CHAR_DATA *victim;
+	CHAR_DATA *victim;
+	char arg[MIL]={'\0'};
 
-    CheckCH(ch);
+	CheckCH(ch);
 
-    one_argument( argument, arg );
+	one_argument( argument, arg );
 
-    if ( IS_NULLSTR(arg) )
-    {
-	send_to_char( "Switch into whom?\n\r", ch );
+	if ( IS_NULLSTR(arg) )
+	{
+		send_to_char( "Switch into whom?\n\r", ch );
+		return;
+	}
+
+	if ( ch->desc == NULL )
+		return;
+
+	if ( ch->desc->original != NULL )
+	{
+		send_to_char( "You are already switched.\n\r", ch );
+		return;
+	}
+
+	if ( ( victim = get_char_world( ch, arg ) ) == NULL )
+	{
+		send_to_char( "They aren't here.\n\r", ch );
+		return;
+	}
+
+	if ( victim == ch )
+	{
+		send_to_char( "Ok.\n\r", ch );
+		return;
+	}
+
+	if (!IS_NPC(victim))
+	{
+		send_to_char("You can't switch into players.\n\r",ch);
+		return;
+	}
+
+	if (!is_room_owner(ch,victim->in_room) && ch->in_room != victim->in_room
+		&&  room_is_private(victim->in_room) && !IS_TRUSTED(ch,MASTER))
+	{
+		send_to_char("That character is in a private room.\n\r",ch);
+		return;
+	}
+
+	if ( victim->desc != NULL )
+	{
+		send_to_char( "Character in use.\n\r", ch );
+		return;
+	}
+
+	wiznet((char *)Format("\tY[WIZNET]\tn $N switches into %s",victim->short_descr),ch,NULL,WIZ_SWITCHES,WIZ_SECURE,get_trust(ch));
+
+	ch->desc->character = victim;
+	ch->desc->original  = ch;
+	victim->desc        = ch->desc;
+	ch->desc            = NULL;
+
+	/* change communications to match */
+	if (ch->prompt != NULL)
+	{
+		PURGE_DATA( victim->prompt );
+		victim->prompt = str_dup(ch->prompt);
+	}
+	victim->comm = ch->comm;
+	victim->lines = ch->lines;
+	send_to_char( "Ok.\n\r", victim );
 	return;
-    }
-
-    if ( ch->desc == NULL )
-	return;
-
-    if ( ch->desc->original != NULL )
-    {
-	send_to_char( "You are already switched.\n\r", ch );
-	return;
-    }
-
-    if ( ( victim = get_char_world( ch, arg ) ) == NULL )
-    {
-	send_to_char( "They aren't here.\n\r", ch );
-	return;
-    }
-
-    if ( victim == ch )
-    {
-	send_to_char( "Ok.\n\r", ch );
-	return;
-    }
-
-    if (!IS_NPC(victim))
-    {
-	send_to_char("You can't switch into players.\n\r",ch);
-	return;
-    }
-
-    if (!is_room_owner(ch,victim->in_room) && ch->in_room != victim->in_room
-    &&  room_is_private(victim->in_room) && !IS_TRUSTED(ch,MASTER))
-    {
-	send_to_char("That character is in a private room.\n\r",ch);
-	return;
-    }
-
-    if ( victim->desc != NULL )
-    {
-	send_to_char( "Character in use.\n\r", ch );
-	return;
-    }
-
-    wiznet((char *)Format("\tY[WIZNET]\tn $N switches into %s",victim->short_descr),ch,NULL,WIZ_SWITCHES,WIZ_SECURE,get_trust(ch));
-
-    ch->desc->character = victim;
-    ch->desc->original  = ch;
-    victim->desc        = ch->desc;
-    ch->desc            = NULL;
-    /* change communications to match */
-    if (ch->prompt != NULL)
-    {
-    	PURGE_DATA( victim->prompt );
-        victim->prompt = str_dup(ch->prompt);
-    }
-    victim->comm = ch->comm;
-    victim->lines = ch->lines;
-    send_to_char( "Ok.\n\r", victim );
-    return;
 }
-
 
 
 void do_return( CHAR_DATA *ch, char *argument )
@@ -4626,7 +4626,13 @@ void copyover_recover ()
 
 	for (;;)
 	{
-		fscanf (fp, "%d %s %s\n", &desc, name, host);
+		if (fscanf (fp, "%d %s %s\n", &desc, name, host) == -1)
+        {
+            log_string(LOG_ERR,"copyover_recover: error");
+            return;
+        }
+
+		// fscanf (fp, "%d %s %s\n", &desc, name, host);
 		if (desc == -1)
 			break;
 
@@ -4791,16 +4797,17 @@ void room_pair (ROOM_INDEX_DATA* left, ROOM_INDEX_DATA* right, exit_status ex, c
 
 	// snprintf (buffer, sizeof(buffer), "%d %-26s %s%d %-26s(%-8.8s)\n\r",
 	// 		left->vnum, left->name, sExit, right->vnum, right->name, area_name(right->area)
-	snprintf (buffer, sizeof(buffer), "%d %s %d (%-8s)\n\r", left->vnum, sExit, right->vnum, area_name(right->area));
+	// snprintf (buffer, sizeof(buffer), "%d %s %d (%-8.8s)\n\r", left->vnum, sExit, right->vnum, area_name(right->area));
+	sprintf (buffer, "%d %s %d (%-8.8s)\n\r", left->vnum, sExit, right->vnum, area_name(right->area));
 }
 
 /* for every exit in 'room' which leads to or from pArea but NOT both, print it */
 void checkexits (ROOM_INDEX_DATA *room, AREA_DATA *pArea, char* buffer)
 {
-	int i = 0;
-	char buf[MSL]={'\0'};
 	EXIT_DATA *exit;
 	ROOM_INDEX_DATA *to_room;
+	char buf[MSL]={'\0'};
+	int i = 0;
 
 	strncpy (buffer, "", sizeof(*buffer));
 	for (i = 0; i < 6; i++)
@@ -4877,9 +4884,11 @@ void checkexits (ROOM_INDEX_DATA *room, AREA_DATA *pArea, char* buffer)
 
 void do_vlist (CHAR_DATA *ch, char *argument)
 {
-	int i,j,vnum;
 	ROOM_INDEX_DATA *room;
 	char buffer[MAX_ROW*100]={'\0'}; /* should be plenty */
+	int i = 0;
+	int j = 0;
+	int vnum = 0;
 
 	CheckCH(ch);
 

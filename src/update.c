@@ -40,9 +40,7 @@ int	save_number = 0;
 /* used for backing up */
 bool backup = FALSE;
 
-/*
- * Regeneration stuff.
- */
+/* >>>>>>>>>>>>>>> Health Regeneration <<<<<<<<<<<<<<< */
 int hit_gain( CHAR_DATA *ch )
 {
 	int gain = 0;

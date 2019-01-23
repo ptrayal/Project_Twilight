@@ -79,17 +79,17 @@ ABYc 0 25 0 0 0 none
 AHMV ABCDEFGHIJK large flesh
 A Sabc
 I 0
-Tr 0 leaves north.~ close northlock northemote absent mindedly snacks on a hamburger while filling out some type of administrative form.~
-Tr 0 Claudia looks at you.~ whisper claudia whisper to me the password please.~
-Tr 0 4528~ unlock northopen northemote says, {Y'{COh, it's you! I'm so sorry I didn't recognize you I was so busy.  It seems your two o'clock has rescheduled for four o'clock and your six o'clock has rescheduled for tommorow at three, the newspapers are calling wanting a press conference as well, other than that nothing new.{Y'{x~
-Tr 0 **base**~ **base**~
-Tr 0 door to the north, smashing it.~ > APB: reports of one or more persons breaking and entering the mayor's office, request immediate police presence in the area, please respond.~
-Tr 0 long enough to cover his mouth~ unlock southopen southsouthclose northlock northemote pouts slightly and says, {Y'{CI'm sorry, it seems the mayor isn't in right now, perhaps when she returns she'll be willing to see you.{Y'{xthink I bet I could break in her office and snoop around her paperwork while she's gone ....~
-Tr 0 I do not have time~ pmote nods her head and silently backs out of the office.unlock southopen southsouthemote pouts and says, {Y'{CI'm sorry, it seems the mayor is preoccupied at the moment, you'll just have to come back later or perhaps call ahead of time to schedule for an appointment.  Have a nice day!{Y'{xclose northlock north~
-Tr 0 leaves east.~ close northlock northemote pulls a donut hole out of a bag, pops it in her mouth quickly and then continues with her work.~
-Tr 0 I have time~ emote nods and silently backs out of the office.unlock southopen southsouthemote smiles and says, {Y'{CMayor Claudia will see you now, please check your weapons at the door.{Y'{x~
-Tr 1 gives you a photo ID card.~ pmote quickly glances at the ID card, {Y'{CHmm, looks good to me, let me check with the mayor to see if she has time to see you today.{Y'{xdrop idunlock northopen northnorthclose southlock southpmote quickly enters the room and says to Claudia, {Y'{CPardon the interuption mam, there's a citizen outside that wishes to meet you, do you have the time?  If you do please state 'I have time', if you do not please state 'I do not have time'.{Y'{x~
 Tr 0 has arrived.~ close northlock northemote smiles and says, {Y'{CHey hun, you'll need to give me your ID if you want to go into Mayor Claudia's office.  If you don't have one I'll have to ask you to go back downstairs.{Y'{x~
+Tr 1 gives you a photo ID card.~ pmote quickly glances at the ID card, {Y'{CHmm, looks good to me, let me check with the mayor to see if she has time to see you today.{Y'{xdrop idunlock northopen northnorthclose southlock southpmote quickly enters the room and says to Claudia, {Y'{CPardon the interuption mam, there's a citizen outside that wishes to meet you, do you have the time?  If you do please state 'I have time', if you do not please state 'I do not have time'.{Y'{x~
+Tr 0 I have time~ emote nods and silently backs out of the office.unlock southopen southsouthemote smiles and says, {Y'{CMayor Claudia will see you now, please check your weapons at the door.{Y'{x~
+Tr 0 leaves east.~ close northlock northemote pulls a donut hole out of a bag, pops it in her mouth quickly and then continues with her work.~
+Tr 0 I do not have time~ pmote nods her head and silently backs out of the office.unlock southopen southsouthemote pouts and says, {Y'{CI'm sorry, it seems the mayor is preoccupied at the moment, you'll just have to come back later or perhaps call ahead of time to schedule for an appointment.  Have a nice day!{Y'{xclose northlock north~
+Tr 0 long enough to cover his mouth~ unlock southopen southsouthclose northlock northemote pouts slightly and says, {Y'{CI'm sorry, it seems the mayor isn't in right now, perhaps when she returns she'll be willing to see you.{Y'{xthink I bet I could break in her office and snoop around her paperwork while she's gone ....~
+Tr 0 door to the north, smashing it.~ > APB: reports of one or more persons breaking and entering the mayor's office, request immediate police presence in the area, please respond.~
+Tr 0 **base**~ **base**~
+Tr 0 4528~ unlock northopen northemote says, {Y'{COh, it's you! I'm so sorry I didn't recognize you I was so busy.  It seems your two o'clock has rescheduled for four o'clock and your six o'clock has rescheduled for tommorow at three, the newspapers are calling wanting a press conference as well, other than that nothing new.{Y'{x~
+Tr 0 Claudia looks at you.~ whisper claudia whisper to me the password please.~
+Tr 0 leaves north.~ close northlock northemote absent mindedly snacks on a hamburger while filling out some type of administrative form.~
 #3004
 policeman officer $f~
 a policeman~
@@ -107,8 +107,8 @@ ABGSYc 0 75 0 0 0 none
 AHMV ABCDEFGHIJK large flesh
 A A
 I 0
-Tr 0 I would like to leave~ emote relaxes a little and says, {Y'{CRighto then, you have a pleasant day ya hear?{Y'{xunlock southopen southemote snaps back to the position of attention with his shoes making an audible snapping sound.~
 Tr 10 Samantha has arrived.~ emote breaks his position of attention long enough to cover his mouth for a light cough.~
+Tr 0 I would like to leave~ emote relaxes a little and says, {Y'{CRighto then, you have a pleasant day ya hear?{Y'{xunlock southopen southemote snaps back to the position of attention with his shoes making an audible snapping sound.~
 #0
 
 
@@ -364,17 +364,17 @@ E
 XDUMB1~
 None~
 E
-zoo~
-From opening day The City Zoo seemed plagued with problems, literally,for several months the zoo would be closed while quarantine crewsvaccinated the animals and everyone around the area.  Then after that itwasn't even a year that passed and an activist organization let looseseveral of the lions upon the city which took weeks to take care of.Over the years small problems drained the city's finances until aprivate organization volunteered to take charge of the zoo for cityplanners.  From that day forward the zoo's problems seemed to ceasealtogether.  In the picture several folks are standing in front of atall wall with a large metal sign for the zoo mounted into it.~
-E
-jim~
-The Bowling Alley wasn't actually on Coleman Street, even thougheveryone always said that's where it was at, it was actually more onThird Avenue that was still a dirt road at the time this picture wastaken.  Old cars now considered antiques line the parking lot of thisamazing arial shot of the building.  Several signatures line the bottomright hand corner although most seem to be no more than scribbles. Itwould seem this photo was donated from some type of business archive.~
+photos~
+Several photos with commentary written below them line the wall heredepicting some of the more prosperous locations along Coleman Street atthe time, some of which include: {CHenderson{x's Barber Shop, {CJim{x'sBowling Alley, and the City {CZoo{x.~
 E
 henderson~
 Henderson's Barber Shop was located where the mall is now it would seem,or rather where it's parking lot is.  It seems some time during thedepression folks just stopped going out to get their hair cut andstarted doing it themselves.  Four older looking men and two women arepoised in front of the old shop front.  There seems to be a slightshimmer or a white particle of some type just behind one of the men.Must be the flash they were using at the time reflecting off the windowor something.~
 E
-photos~
-Several photos with commentary written below them line the wall heredepicting some of the more prosperous locations along Coleman Street atthe time, some of which include: {CHenderson{x's Barber Shop, {CJim{x'sBowling Alley, and the City {CZoo{x.~
+jim~
+The Bowling Alley wasn't actually on Coleman Street, even thougheveryone always said that's where it was at, it was actually more onThird Avenue that was still a dirt road at the time this picture wastaken.  Old cars now considered antiques line the parking lot of thisamazing arial shot of the building.  Several signatures line the bottomright hand corner although most seem to be no more than scribbles. Itwould seem this photo was donated from some type of business archive.~
+E
+zoo~
+From opening day The City Zoo seemed plagued with problems, literally,for several months the zoo would be closed while quarantine crewsvaccinated the animals and everyone around the area.  Then after that itwasn't even a year that passed and an activist organization let looseseveral of the lions upon the city which took weeks to take care of.Over the years small problems drained the city's finances until aprivate organization volunteered to take charge of the zoo for cityplanners.  From that day forward the zoo's problems seemed to ceasealtogether.  In the picture several folks are standing in front of atall wall with a large metal sign for the zoo mounted into it.~
 D0
 (none)~
 (null)~
@@ -399,17 +399,17 @@ E
 XDUMB1~
 None~
 E
-7-11~
-Convenience stores come and go often without much thought, but onecompany had very humble beginnings here in Bal Harbour. 7-11, now aworldwide chain, started as a convenience store with smart hours andsmart deals on most everything a shopper on the go could ask for, andfolks not close to a large shopping outlet would need.  The photo showsa middle-aged man outside of a small store waving to some kids onbicycles with fishing poles mounted on them.~
-E
-docks~
-The Harbour Docks, some would say, were the place of birth for this cityand others would simply say they were just another stain on the city'shistory pages.  Not long after the city began to flourish without theneed for importing everything from surrounding areas the docks began toreceive little attention from it's once main supporters.  It was at thistime weird accidents began to occur there to the remaining workers whichforced the docks to be shut down until the worker's committee couldguarantee a safe working environment for their employees.  The dockingcompany not having any backing from it's once loyal supporters couldn'trespond and ended up leaving the docks closed except for personalwatercraft that travels in and out of the area.  The photo shows one manfrom the bank photo and a young woman standing under the docks sign hungfrom a tall metal fence.~
+photos~
+Several photos with commentary written below them line the wall heredepicting some of the more prosperous locations within the city at thetime, some of which include: The First {CBank{x of America, The Harbour{CDocks{x, and an old convenience store that stayed open from {C7-11{x.~
 E
 bank~
 The First Bank of America originally helped the small docking communitybecome the city Bal Harbour is today.  Without their initial financialbacking and continued support throughout the life of the city therewouldn't really be much to look at here today.  The photo depicts whatlooks like two very wealthy men shaking hands in the front of the bankbuilding along Third and Delaney.  Several other well dressed men alsostand in the background on each side of the two men.  It's not hard tonotice that all the men on the right side of the photo are wearing darkcolored spectacles while everyone on the other side is not.  One of themen on the left side of the photo has a large dog sitting by his side,perhaps a seeing eye dog.~
 E
-photos~
-Several photos with commentary written below them line the wall heredepicting some of the more prosperous locations within the city at thetime, some of which include: The First {CBank{x of America, The Harbour{CDocks{x, and an old convenience store that stayed open from {C7-11{x.~
+docks~
+The Harbour Docks, some would say, were the place of birth for this cityand others would simply say they were just another stain on the city'shistory pages.  Not long after the city began to flourish without theneed for importing everything from surrounding areas the docks began toreceive little attention from it's once main supporters.  It was at thistime weird accidents began to occur there to the remaining workers whichforced the docks to be shut down until the worker's committee couldguarantee a safe working environment for their employees.  The dockingcompany not having any backing from it's once loyal supporters couldn'trespond and ended up leaving the docks closed except for personalwatercraft that travels in and out of the area.  The photo shows one manfrom the bank photo and a young woman standing under the docks sign hungfrom a tall metal fence.~
+E
+7-11~
+Convenience stores come and go often without much thought, but onecompany had very humble beginnings here in Bal Harbour. 7-11, now aworldwide chain, started as a convenience store with smart hours andsmart deals on most everything a shopper on the go could ask for, andfolks not close to a large shopping outlet would need.  The photo showsa middle-aged man outside of a small store waving to some kids onbicycles with fishing poles mounted on them.~
 D0
 (none)~
 (null)~

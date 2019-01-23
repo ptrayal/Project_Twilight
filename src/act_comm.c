@@ -2506,8 +2506,6 @@ void do_gtell( CHAR_DATA *ch, char *argument )
 	return;
 }
 
-
-
 /*
  * It is very important that this be an equivalence relation:
  * (1) A ~ A
@@ -2519,8 +2517,10 @@ bool is_same_group( CHAR_DATA *ach, CHAR_DATA *bch )
 	if ( ach == NULL || bch == NULL)
 		return FALSE;
 
-	if ( ach->leader != NULL ) ach = ach->leader;
-	if ( bch->leader != NULL ) bch = bch->leader;
+	if ( ach->leader != NULL )
+		ach = ach->leader;
+	if ( bch->leader != NULL )
+		bch = bch->leader;
 	return ach == bch;
 }
 
@@ -2603,13 +2603,15 @@ void do_afk ( CHAR_DATA *ch, char * argument)
 		send_to_char("AFK mode removed. Type 'replay' to see tells.\n\r",ch);
 		REMOVE_BIT(ch->comm,COMM_AFK);
 		act("$n returns to the keyboard.", ch, NULL, NULL, TO_ROOM, 0);
+		log_string( LOG_CONNECT, Format("%s is no longer AFK.", ch->name));
 	}
 	else
 	{
 		send_to_char("You are now in AFK mode.\n\r",ch);
 		SET_BIT(ch->comm,COMM_AFK);
 		act("$n goes afk.", ch, NULL, NULL, TO_ROOM, 0);
-	}
+        log_string( LOG_CONNECT, Format("%s has gone AFK.", ch->name));
+ 	}
 }
 
 void do_replay (CHAR_DATA *ch, char *argument)
@@ -2696,7 +2698,6 @@ void do_ignore(CHAR_DATA *ch, char *argument)
 	{
 		char buf[MSL]={'\0'};
 
-		buf[0] = '\0';
 		if ( strstr(ch->ignore, "None") != NULL )
 		{
 			ch->ignore = string_replace( ch->ignore, "None", "\0" );

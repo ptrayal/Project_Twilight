@@ -451,7 +451,6 @@ void quest_courier (CHAR_DATA *ch, int flag)
 	}
 
 	if(ch->quest != NULL) ch->quest->state = flag;
-
 }
 
 void quest_hitman (CHAR_DATA *ch, int flag)

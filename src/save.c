@@ -54,8 +54,6 @@ char *print_flags(int flag)
 #define MAX_NEST	100
 static	OBJ_DATA *	rgObjNest	[MAX_NEST];
 
-
-
 /*
  * Local functions.
  */

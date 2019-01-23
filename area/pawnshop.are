@@ -29,15 +29,15 @@ ABCGYc 0 75 0 0 0 none
 AHMV ABCDEFGHIJK large flesh
 A G
 I 0
-Tr 0 buys a Truvelo .50 BMG caliber rifle.~ emote says, {Y'{CYessir uuhhuh, yep, looks like your papers are in order.  Enjoy your hunting rifle!{Y'{x~
-Tr 6 drops an~ get allmischievous~
-Tr 0 sits down~ emote exclaims, {Y'{CEy 'dere now! Aint no be loitarin 'roun dere. You'se gots ta buy somefin or get out!{Y'{x~
-Tr 0 leaves~ close downclose westinnocent~
-Tr 0 has arrived.~ emote smiles a toothless grin and waves, {Y'{CHey ther feller, you'se lookin like you got somfin ta sell meh or is ya jest in tah buy somfin from ole Widorski?{Y'{xclose west~
-Tr 0 **base**~ **base**~
-Tr 0 *Click* You're out of ammo!~ reload shot speed~
-Tr 1 buys a glock 30 handgun.~ emote whispers, {Y'{CNow you run along now, and you didn't get that from me okay?{Y'{x~
 Tr 0 buys a pistol-grip shotgun.~ emote whistles with appreciation, {Y'{CWow lookee here feller, that's a fancy pea shooter ya got there.  It's too bad we aint sellin them thar guns here no moh cuz uncle sam said we was killin all them folks too much I reckin.{Y'{x~
+Tr 1 buys a glock 30 handgun.~ emote whispers, {Y'{CNow you run along now, and you didn't get that from me okay?{Y'{x~
+Tr 0 *Click* You're out of ammo!~ reload shot speed~
+Tr 0 **base**~ **base**~
+Tr 0 has arrived.~ emote smiles a toothless grin and waves, {Y'{CHey ther feller, you'se lookin like you got somfin ta sell meh or is ya jest in tah buy somfin from ole Widorski?{Y'{xclose west~
+Tr 0 leaves~ close downclose westinnocent~
+Tr 0 sits down~ emote exclaims, {Y'{CEy 'dere now! Aint no be loitarin 'roun dere. You'se gots ta buy somefin or get out!{Y'{x~
+Tr 6 drops an~ get allmischievous~
+Tr 0 buys a Truvelo .50 BMG caliber rifle.~ emote says, {Y'{CYessir uuhhuh, yep, looks like your papers are in order.  Enjoy your hunting rifle!{Y'{x~
 #6002
 Morgan Killweed~
 Morgan~
@@ -54,9 +54,9 @@ ABCW 0 50 0 0 0 none
 AHMV ABCDEFGHIJK large flesh
 A 0
 I 0
-Tr 0 has arrived.~ emote says, {Y'{CHey baby you looking for a good time?  I know I am, in fact for 5 dollars I can think of something really fun.{Y'{x~
-Tr 0 **base**~ **base**~
 Tr 1 gives you 5 dollars.~ emote grins, almost seductively, lifting her old red tube top exposing her not-so-young breasts and says, {Y'{CCome feel on these for some fun!{Y'{x~
+Tr 0 **base**~ **base**~
+Tr 0 has arrived.~ emote says, {Y'{CHey baby you looking for a good time?  I know I am, in fact for 5 dollars I can think of something really fun.{Y'{x~
 #0
 
 

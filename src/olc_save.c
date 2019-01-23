@@ -147,7 +147,7 @@ char *fwrite_flag( long flags, char buf[] )
 
 	if ( flags == 0 )
 	{
-		strncpy( buf, "0", sizeof(buf) );
+		strncpy( buf, "0", sizeof(buf+1) );
 		return buf;
 	}
 
@@ -1469,7 +1469,6 @@ void do_help_unformatted (CHAR_DATA *ch, char *argument)
 	HELP_DATA *help;
 
 	send_to_char("Helps with unformatted still:\n\r", ch);
-
 
 	for(help = help_list; help; help = help->next)
 	{

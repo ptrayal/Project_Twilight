@@ -18,7 +18,9 @@
 #include <sys/types.h>
 #endif
 #include <ctype.h>
+#include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <time.h>
 #include "twilight.h"
 
@@ -85,7 +87,6 @@ char * string_insert_return( char * orig, char * old )
 		char xbuf[MSL]={'\0'};
 		int i = 0;
 
-		xbuf[0] = '\0';
 		strncpy( xbuf, orig, sizeof(xbuf) );
 		if ( strstr( orig, old ) != NULL )
 		{
@@ -227,15 +228,16 @@ void string_add( CHAR_DATA *ch, char *argument )
 		return;
 	}
 
-	if(IS_NULLSTR(ch->desc->pString))
-	{
-		strmove( buf, "");
-	}
-	else
-	{
-		strmove( buf, *ch->desc->pString );
-	}
-
+	// if(IS_NULLSTR(ch->desc->pString))
+	// {
+	// 	strmove( buf, "");
+	// }
+	// else
+	// {
+	// 	strmove( buf, *ch->desc->pString );
+	// }
+	
+	strcpy ( buf, *ch->desc->pString ? *ch->desc->pString : "" ); 
 		/*
 		 * Truncate strings to MAX_STRING_LENGTH.
 		 * --------------------------------------
@@ -719,7 +721,9 @@ char *desc_pretty( char *string, int start, int lines, bool no_free )
 	char buf[MSL]={'\0'};
 	char wordbuf[MAX_INPUT_LENGTH]={'\0'};
 	char *p, *bp, *wp;
-	int i = 0,inword = 0;
+	int i = 0;
+	int inword = 0;
+
 	/* find starting line to pretty-ify */
 	for( i = 1, p = string, bp = buf; *p != 0 && i < start; p++)
 	{
@@ -775,7 +779,9 @@ char *desc_pretty( char *string, int start, int lines, bool no_free )
 	/* and swap in the new editted description */
 	if(no_free)
 	{
-		snprintf(string, sizeof(string), "%s", buf);
+		int string_size = 0;
+		string_size = sizeof(string);
+		snprintf(string, string_size, "%s", buf);
 		return string;
 	}
 	PURGE_DATA( string );

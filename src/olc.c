@@ -11,8 +11,6 @@
  *                                                                         *
  ***************************************************************************/
 
-
-
 #if defined(macintosh)
 #include <types.h>
 #else
@@ -26,7 +24,6 @@
 #include "olc.h"
 #include "recycle.h"
 #include "lookup.h"
-
 
 DECLARE_DO_FUN( do_asave	);
 DECLARE_DO_FUN( do_look		);
@@ -1372,49 +1369,6 @@ void sedit( CHAR_DATA *ch, char *argument )
 	return;
 }
 
-
-/* Persona Unit Interpreter, called by do_aiedit. */
-// void aiedit( CHAR_DATA *ch, char *argument )
-// {
-// 	PERSONA *pPersona;
-// 	char command[MIL]={'\0'};
-// 	char arg[MIL]={'\0'};
-// 	int  cmd = 0;
-
-// 	EDIT_PERSONA(ch, pPersona);
-// 	smash_tilde( argument );
-// 	strncpy( arg, argument, sizeof(arg) );
-// 	argument = one_argument( argument, command );
-
-// 	if ( !str_cmp(command, "done") )
-// 	{
-// 	edit_done( ch );
-// 	return;
-// 	}
-
-// 	if ( IS_NULLSTR(command) )
-// 	{
-// 	aiedit_show( ch, argument );
-// 	send_to_char("\tOType 'done' to exit the editor.\tn\n\r", ch);
-// 	return;
-// 	}
-
-// 	/* Search Table and Dispatch Command. */
-// 	for ( cmd = 0; aiedit_table[cmd].name != NULL; cmd++ )
-// 	{
-// 	if ( !str_prefix( command, aiedit_table[cmd].name ) )
-// 	{
-// 		if ( (*aiedit_table[cmd].olc_fun) ( ch, argument ) )
-// 		return;
-// 	}
-// 	}
-
-// 	/* Default to Standard Interpreter. */
-// 	interpret( ch, arg );
-// 	return;
-// }
-
-
 /* AI Reaction Unit Interpreter, called by do_rsedit. */
 void rsedit( CHAR_DATA *ch, char *argument )
 {
@@ -2165,11 +2119,9 @@ void do_hedit( CHAR_DATA *ch, char *argument )
 {
 	HELP_DATA *pHelp = NULL;
 	char arg1[MSL]={'\0'};
-	char *fullarg;
 
 	CheckChNPC(ch);
 
-	fullarg = str_dup(argument);
 	argument = one_argument( argument, arg1 );
 
 	if ( !str_cmp( arg1, "create" ) )
@@ -2210,11 +2162,9 @@ void do_tipedit( CHAR_DATA *ch, char *argument )
 {
 	HELP_DATA *pHelp = NULL;
 	char arg1[MSL]={'\0'};
-	char *fullarg;
 
 	CheckChNPC(ch);
 
-	fullarg = str_dup(argument);
 	argument = one_argument( argument, arg1 );
 
 	if ( !str_cmp( arg1, "create" ) )
@@ -2254,11 +2204,9 @@ void do_kbedit( CHAR_DATA *ch, char *argument, int type )
 {
 	NOTE_DATA *pNote = NULL;
 	char arg1[MSL]={'\0'};
-	char *fullarg;
 
 	CheckChNPC(ch);
 
-	fullarg = str_dup(argument);
 	argument = one_argument( argument, arg1 );
 
 	if ( !str_cmp( arg1, "create" ) )
@@ -3446,9 +3394,7 @@ void do_bg(CHAR_DATA *ch,char *argument)
 {
 	NOTE_DATA *pNote;
 	char arg1[MIL]={'\0'};
-	char *fullarg;
 
-	fullarg = str_dup(argument);
 	argument = one_argument( argument, arg1 );
 
 	if ( !str_cmp( arg1, "create" ) )
@@ -3504,9 +3450,7 @@ void do_know(CHAR_DATA *ch,char *argument)
 {
 	NOTE_DATA *pNote;
 	char arg1[MIL]={'\0'};
-	char *fullarg;
 
-	fullarg = str_dup(argument);
 	argument = one_argument( argument, arg1 );
 
 	if ( !str_cmp( arg1, "create" ) )

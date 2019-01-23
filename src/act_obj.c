@@ -3984,8 +3984,8 @@ void do_pullpin(CHAR_DATA *ch, char *argument)
 
 void do_defuse(CHAR_DATA *ch, char *argument)
 {
-    char arg[MIL]={'\0'};
     OBJ_DATA *obj;
+    char arg[MIL]={'\0'};
     int fail = 0;
 
     CheckCH(ch);

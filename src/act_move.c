@@ -1894,33 +1894,33 @@ void *hash_remove(struct hash_header *ht,int key)
     return NULL;
 }
 
-void room_iterate(ROOM_INDEX_DATA *rb[],void (*func)(),void *cdata)
+void room_iterate(ROOM_INDEX_DATA *rb[], void(*func)(), void *cdata)
 {
-  register int i;
+    register int i;
 
-  for(i=0;i<WORLD_SIZE;i++)
+    for (i = 0; i < WORLD_SIZE; i++)
     {
-      ROOM_INDEX_DATA *temp;
+        ROOM_INDEX_DATA *temp;
 
-      temp = room_find(rb,i);
+        temp = room_find(rb, i);
+        if (temp) (*func)(i, temp, cdata);
     }
 }
 
-void hash_iterate(struct hash_header *ht,void (*func)(),void *cdata)
+void hash_iterate(struct hash_header *ht, void(*func)(), void *cdata)
 {
-  int i;
+    int i;
 
-  for(i=0;i<ht->klistlen;i++)
+    for (i = 0; i < ht->klistlen; i++)
     {
-      void      *temp;
-      register int  key;
+        void        *temp;
+        register int    key;
 
-      key = ht->keylist[i];
-      temp = hash_find(ht,key);
-
-      if(ht->keylist[i]!=key) /* They must have deleted this room */
-    i--;              /* Hit this slot again. */
-
+        key = ht->keylist[i];
+        temp = hash_find(ht, key);
+        (*func)(key, temp, cdata);
+        if (ht->keylist[i] != key) /* They must have deleted this room */
+            i--;              /* Hit this slot again. */
     }
 }
 
@@ -2006,7 +2006,7 @@ int find_path( int in_room_vnum, int out_room_vnum, CHAR_DATA *ch, int depth, in
                             /* ancestor for first layer is the direction */
                             hash_enter( &x_room, tmp_room,
                                     ((uintptr_t)hash_find(&x_room,q_head->room_nr)
-                                            == -1) ? (void*)(i+1)
+                                            == -1) ? (void*)(intptr_t)(i+1)
                                                     : hash_find(&x_room,q_head->room_nr));
                         }
                     }
@@ -5358,5 +5358,3 @@ void do_ooctogift( CHAR_DATA *ch, char *argument)
 
     send_to_char("You convert some OOC xp into gift xp.\n\r", ch);
 }
-
-

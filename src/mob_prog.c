@@ -1334,10 +1334,12 @@ void mp_hprct_trigger( CHAR_DATA *mob, CHAR_DATA *ch )
     MPROG_LIST *prg;
 
     for ( prg = mob->pIndexData->mprogs; prg != NULL; prg = prg->next )
-	if ( ( prg->trig_type == TRIG_HPCNT )
-	&& ( (100 * (mob->health+mob->agghealth-7) / 7) < atoi( prg->trig_phrase ) ) )
-	{
-	    program_flow( prg->vnum, prg->code, mob, ch, NULL, NULL );
-	    break;
-	}
+    {
+        if ( ( prg->trig_type == TRIG_HPCNT )
+          && ( (100 * (mob->health+mob->agghealth-7) / 7) < atoi( prg->trig_phrase ) ) )
+        {
+          program_flow( prg->vnum, prg->code, mob, ch, NULL, NULL );
+          break;
+      }
+  }
 }

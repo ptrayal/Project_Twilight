@@ -191,22 +191,25 @@ GRID_CELL * row_append_cell (GRID_ROW *row, int width, char *fmt, ...)
     return cell;
 }
 //Low level line counter
-void cell_set_linecount( GRID_CELL *cell )
-{	int count = 0;
-	char *pos = cell->contents;
-	char *last_lr;
-	while(*pos++)
-		if(*pos == '\n') 
-		{	last_lr = pos;
-			count++; 
-		}
-	if( (*last_lr+1) != '\0' )
-		count++;
+void cell_set_linecount(GRID_CELL *cell)
+{
+    int count = 1;
+    char *pos = cell->contents;
 
-	cell->lines = count;
+    while (*pos++)
+    {
+        if (*pos == '\n')
+        {
+            count++;
+        }
+    }
 
-	if( cell->row->max_height < count )
-		cell->row->max_height = count;
+    cell->lines = count;
+
+    if (cell->row->max_height < count)
+    {
+        cell->row->max_height = count;
+    }
 }
 
 //Counts colour codes to display offsets properly

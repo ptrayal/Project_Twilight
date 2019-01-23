@@ -1572,17 +1572,12 @@ void affect_remove_obj( OBJ_DATA *obj, AFFECT_DATA *paf)
  */
 void affect_remove_room( ROOM_INDEX_DATA *room, AFFECT_DATA *paf)
 {
-	int where = 0;
-	int vector = 0;
 
 	if ( room->affects == NULL )
 	{
 		log_string(LOG_BUG, "Affect_remove_room: no affect.");
 		return;
 	}
-
-	where = paf->where;
-	vector = paf->bitvector;
 
     /* remove flags from the room if needed */
 	if (paf->bitvector)
@@ -1707,26 +1702,24 @@ bool is_affected_obj( OBJ_DATA *obj, int sn )
 /*
  * Add or enhance an affect.
  */
-void affect_join( CHAR_DATA *ch, AFFECT_DATA *paf )
+void affect_join(CHAR_DATA * ch, AFFECT_DATA * paf)
 {
-	AFFECT_DATA *paf_old;
-	bool found = FALSE;
+    AFFECT_DATA *paf_old;
 
-	found = FALSE;
-	for ( paf_old = ch->affected; paf_old != NULL; paf_old = paf_old->next )
-	{
-		if ( paf_old->type == paf->type )
-		{
-			paf->level = (paf->level += paf_old->level) / 2;
-			paf->duration += paf_old->duration;
-			paf->modifier += paf_old->modifier;
-			affect_remove( ch, paf_old );
-			break;
-		}
-	}
+    for (paf_old = ch->affected; paf_old != NULL; paf_old = paf_old->next)
+    {
+        if (paf_old->type == paf->type)
+        {
+            paf->level = (paf->level + paf_old->level) / 2;
+            paf->duration += paf_old->duration;
+            paf->modifier += paf_old->modifier;
+            affect_remove(ch, paf_old);
+            break;
+        }
+    }
 
-	affect_to_char( ch, paf );
-	return;
+    affect_to_char(ch, paf);
+    return;
 }
 
 /*
@@ -2581,37 +2574,46 @@ void extract_char( CHAR_DATA *ch, bool fPull )
 	{
 		ch->pet->master = NULL;
 		ch->pet = NULL;  /* just in case */
+		log_string(LOG_COMMAND, "Extract Char 1 -> Successfully NULL ch->pet.");
 	}
 
 	if ( fPull )
 	{
 		die_follower( ch );
+		log_string(LOG_COMMAND, "Extract Char 2 -> Successfully die_follower.");
 	}
 
 	stop_fighting( ch, TRUE );
+	log_string(LOG_COMMAND, "Extract Char 3 -> Successfully after stop_fighting.");
 
 	for ( obj = ch->carrying; obj != NULL; obj = obj_next )
 	{
 		obj_next = obj->next_content;
 		extract_obj( obj );
 	}
+	log_string(LOG_COMMAND, "Extract Char 4 -> Successfully after extract_obj.");
 
 	if (ch->listening != NULL)
 	{
 		log_string(LOG_BUG, "It's this one. Extract_char: ch->listening.");
 		char_from_listeners( ch );
 	}
+	log_string(LOG_COMMAND, "Extract Char 5 -> Successfully after ch->listening.");
 
 	if ( IS_NPC(ch) )
 	{
 		--ch->pIndexData->count;
 	}
+	log_string(LOG_COMMAND, "Extract Char 6 -> Successfully after Remove NPC from pIndexData.");
 
 	if ( ch->desc != NULL && ch->desc->original != NULL )
 	{
 		do_function(ch, &do_return, "" );
+		log_string(LOG_COMMAND, "Extract Char 6a -> Successfully");
 		ch->desc = NULL;
+		log_string(LOG_COMMAND, "Extract Char 6b -> Successfully");
 	}
+	log_string(LOG_COMMAND, "Extract Char 7 -> Successfully after do_return.");
 
 	CHAR_DATA *wch_next;
 	for ( wch = char_list; wch != NULL; wch = wch_next )
@@ -4670,7 +4672,9 @@ int xp_cost_mod(CHAR_DATA *ch, int cost, int curdot)
 	int inc = 1;
 
 	if(dots > START_DOTS && curdot < 3)
-		inc = 1 + ((dots-START_DOTS)*400)/(START_DOTS*100);
+		{
+			inc = 1 + ((dots-START_DOTS)*400)/(START_DOTS*100);
+		}
 
 	return /*inc * */cost;
 }
@@ -4930,7 +4934,6 @@ int count_multi_args(char *argument, char *cEnd)
 
 	return count;
 }
-
 
 char *appearance_string(CHAR_DATA *ch)
 {

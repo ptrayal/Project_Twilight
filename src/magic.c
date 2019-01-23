@@ -57,7 +57,6 @@ bool    remove_obj      args( ( CHAR_DATA *ch, int iWear, bool fReplace ) );
 ROOM_INDEX_DATA *     find_location   args( ( CHAR_DATA *ch, char *arg ) );
 char *flag_string       args ( (const struct flag_type *flag_table,int bits) );
 
-
 /*
  * Function: has_enough_power
  * Purpose: Check to see if a user has a power_timer on them and if so, they cannot use their powers.

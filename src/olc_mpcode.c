@@ -221,12 +221,12 @@ MPEDIT(mpedit_code)
 
 MPEDIT( mpedit_list )
 {
-    int count = 1;
     MPROG_CODE *mprg;
     BUFFER *buffer;
-    bool fAll = !str_cmp(argument, "all");
-    char blah;
     AREA_DATA *ad;
+    char blah;
+    int count = 1;
+    bool fAll = !str_cmp(argument, "all");
 
     buffer = new_buf();
 

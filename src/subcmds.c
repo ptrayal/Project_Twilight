@@ -49,9 +49,7 @@ bool trade_stocks(CHAR_DATA *ch, STOCKS *st, int num, bool fees, bool buy);
 
 int get_door(CHAR_DATA *ch, char *argument);
 
-/*
- *
- */
+/* >>>>>>>>>>>>>>> Determine if they can be something <<<<<<<<<<<<<<< */
 bool CAN_BE(CHAR_DATA *ch, int cmd)
 {
 	if(job_table[cmd].available == -1)
@@ -1998,10 +1996,11 @@ void do_influences (CHAR_DATA *ch, char *argument)
 	argument = one_argument(argument, arg);
 
 	if((cmd = influence_cmd_lookup(arg)) > -1)
-		in = influence_cmd_table[cmd].type;
+		{
+			in = influence_cmd_table[cmd].type;
+		}
 
-	if(cmd <= -1
-			|| ch->influences[in] < influence_cmd_table[cmd].level)
+	if(cmd <= -1 || ch->influences[in] < influence_cmd_table[cmd].level)
 	{
 		if(IS_ADMIN(ch))
 		{

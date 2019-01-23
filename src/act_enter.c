@@ -1294,7 +1294,9 @@ void do_members(CHAR_DATA *ch, char *argument)
 	if(org->members == NULL)
 	{
 		send_to_char("The organisation has no members.\n\r", ch);
-	} else {
+	} 
+	else 
+	{
 		count = 0;
 		send_to_char(Format("%-14s %-10s", "Name", "Status"), ch);
 		send_to_char(Format("%-14s %-10s\n\r", "Name", "Status"), ch);

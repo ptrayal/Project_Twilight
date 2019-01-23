@@ -537,7 +537,7 @@ const	struct	cmd_type	cmd_table	[] =
 	{	"articles",			do_articles,		P_DEAD,	WA,	L_NRM,	1,	A|B|E,	0 },
 	{	"at",				do_at,				P_DEAD,	WA,	L_NRM,	1,	A|B,	0 },
 	{	"backupmud",		do_backup,			P_DEAD,	IM,	L_ALL,	1,	A|B|E,	0 },
-	{	"ban",				do_ban,				P_DEAD,	MA,	L_ALL,	1,	A|B|E,	0 },
+	{	"ban_list",			do_ban,				P_DEAD,	MA,	L_ALL,	1,	A|B|E,	0 },
 	{	"being",			do_as,				P_DEAD,	WA,	L_ALL,	1,	A|B|E,	0 },
 	{	"bg",				do_bg,				P_DEAD,	WA,	L_NRM,	1,	A|B|E,	0 },
 	{	"bonus",			do_bonus,			P_DEAD,	WA,	L_NRM,	1,	A|B|E,	0 },
@@ -726,31 +726,31 @@ int command_available(CHAR_DATA *ch, char *command)
 */
 void interpret( CHAR_DATA *ch, char *argument )
 {
+	CHAR_DATA *vch, *next;
 	char command[MIL]={'\0'};
 	char logline[MIL]={'\0'};
 	int cmd = 0;
 	bool found = FALSE;
 	bool exists = FALSE;
-	CHAR_DATA *vch, *next;
 
 	assert(ch);
 
 	/*
-	 * Strip leading spaces.
-	 */
+	* Strip leading spaces.
+	*/
 	while ( isspace(*argument) )
 		argument++;
 	if ( IS_NULLSTR(argument) )
 		return;
 
 	/*
-	 * No hiding.
-	 */
+	* No hiding.
+	*/
 	REMOVE_BIT( ch->affected_by, AFF_HIDE );
 
 	/*
-	 * Implement freeze command.
-	 */
+	* Implement freeze command.
+	*/
 	if ( !IS_NPC(ch) && IS_SET(ch->plr_flags, PLR_FREEZE) )
 	{
 		send_to_char( "You're totally frozen!\n\r", ch );
@@ -758,8 +758,8 @@ void interpret( CHAR_DATA *ch, char *argument )
 	}
 
 	/*
-	 * Can't act when dead.
-	 */
+	* Can't act when dead.
+	*/
 	if (IS_SET(ch->act, ACT_REINCARNATE))
 	{
 		send_to_char( "The shadow of death engulfs you.\n\r", ch);
@@ -767,11 +767,12 @@ void interpret( CHAR_DATA *ch, char *argument )
 	}
 
 	/*
-	 * Grab the command word.
-	 * Special parsing so ' can be a command,
-	 *   also no spaces needed after punctuation.
-	 */
+	* Grab the command word.
+	* Special parsing so ' can be a command,
+	*   also no spaces needed after punctuation.
+	*/
 	strncpy( logline, argument, MIL );
+
 	if ( !isalpha(argument[0]) && !isdigit(argument[0]) )
 	{
 		command[0] = argument[0];
@@ -786,8 +787,8 @@ void interpret( CHAR_DATA *ch, char *argument )
 	}
 
 	/*
-	 * Look for command in command table.
-	 */
+	* Look for command in command table.
+	*/
 	if((cmd = command_lookup(command)) > -1)
 	{
 		exists = TRUE;
@@ -798,29 +799,35 @@ void interpret( CHAR_DATA *ch, char *argument )
 		found = TRUE;
 	}
 
-	/*
-	 * Log and snoop.
-	 */
+	/* >>>>>>>>>>>>>>> Snoop and Log Section <<<<<<<<<<<<<<< */	
+	/* --------------- Never Log (L_NEV) --------------- */
 	if ( cmd_table[cmd].log == L_NEV )
-		strncpy( logline, "", MIL );
-
-	if ( ( !IS_NPC(ch) && IS_SET(ch->plr_flags, PLR_LOG) )
-			||   fLogAll
-			||   cmd_table[cmd].log == L_ALL
-			||	 (fLogAllCom
-					&& (cmd_table[cmd].log == L_COM || cmd_table[cmd].log == L_SCOM))
-					||	 (fLogCom && cmd_table[cmd].log == L_COM) )
 	{
-		char    s[2*MIL],*ps;
-		int     i = 0;
+		strncpy( logline, "", MIL );
+	}
+
+	/* --------------- Security Logs (L_SCOM) --------------- */
+	/********************************************************
+	* This logs everyone who has the player flag (PLR_LOG) *
+	* and all commands set to L_SCOM or L_COM which are    *
+	* Staff communications or normal communications.       *
+	* It also logs commands set to always flag (L_ALL).    *
+	********************************************************/
+	if ( ( !IS_NPC(ch) && IS_SET(ch->plr_flags, PLR_LOG) )
+		|| fLogAll
+		|| cmd_table[cmd].log == L_ALL
+		|| (fLogAllCom && (cmd_table[cmd].log == L_COM || cmd_table[cmd].log == L_SCOM))
+		|| (fLogCom && cmd_table[cmd].log == L_COM) )
+	{
+		char s[2*MIL],*ps;
+		int i = 0;
 
 		ps=s;
-		/*send_to_char(Format("Log %s: %s", ch->name, logline), ch); */
-
 		log_string(LOG_SECURITY, Format("Log %s: %s", ch->name, logline));
 
-		/* Make sure that was is displayed is what is typed */
-		for (i=0;logline[i];i++) {
+	/* Make sure that was is displayed is what is typed */
+		for (i=0;logline[i];i++) 
+		{
 			*ps++=logline[i];
 			if (logline[i]=='$')
 				*ps++='$';
@@ -843,12 +850,11 @@ void interpret( CHAR_DATA *ch, char *argument )
 		write_to_buffer( ch->desc->snoop_by, "\n\r",  2 );
 	}
 
-	if ( !found
-			|| !CAN_USE_CMD(ch, cmd))
+	if ( !found || !CAN_USE_CMD(ch, cmd))
 	{
 		/*
-		 * Look for command in socials table.
-		 */
+		* Look for command in socials table.
+		*/
 		if ( !check_social( ch, command, argument ) )
 		{
 			send_to_char( "Huh?\n\r", ch );
@@ -860,102 +866,100 @@ void interpret( CHAR_DATA *ch, char *argument )
 		return;
 	}
 
-	if(IS_SET(ch->act2, ACT2_ASTRAL)
-	&& !IS_SET(cmd_table[cmd].flags, ASTRAL_OK))
+	if(IS_SET(ch->act2, ACT2_ASTRAL) && !IS_SET(cmd_table[cmd].flags, ASTRAL_OK))
 	{
-	send_to_char("You can't do that while wandering the astral plane!\n\r", ch);
-	return;
+		send_to_char("You can't do that while wandering the astral plane!\n\r", ch);
+		return;
 	}
 
-	if(IS_SET(ch->affected_by2, AFF2_EARTHMELD)
-	&& !IS_SET(cmd_table[cmd].flags, EARTHMELD_OK))
+	if(IS_SET(ch->affected_by2, AFF2_EARTHMELD) && !IS_SET(cmd_table[cmd].flags, EARTHMELD_OK))
 	{
-	send_to_char("You can't do that while bound inside the earth!\n\r", ch);
-	return;
+		send_to_char("You can't do that while bound inside the earth!\n\r", ch);
+		return;
 	}
 
 	if(ch->desc != NULL && ch->desc->original != NULL
-	&& !IS_SET(cmd_table[cmd].flags, POSSESS_OK)
-	&& !IS_ADMIN(ch->desc->original)
-	&& !CAN_USE_CMD(ch, cmd))
+		&& !IS_SET(cmd_table[cmd].flags, POSSESS_OK)
+		&& !IS_ADMIN(ch->desc->original)
+		&& !CAN_USE_CMD(ch, cmd))
 	{
-	send_to_char( "You can't do that while possessing someone!\n\r", ch);
-	return;
+		send_to_char( "You can't do that while possessing someone!\n\r", ch);
+		return;
 	}
 
 	if(IS_SET(ch->act2, ACT_FAST)
-	&& IS_SET(cmd_table[cmd].flags, POWER_CMD))
+		&& IS_SET(cmd_table[cmd].flags, POWER_CMD))
 	{
-	send_to_char( "You can't do that while moving so rapidly.\n\r", ch);
-	return;
+		send_to_char( "You can't do that while moving so rapidly.\n\r", ch);
+		return;
 	}
 
 	if(IS_SET(ch->act2, ACT2_RP_ING) && !IS_SET(cmd_table[cmd].flags, RP_OK))
 	{
-	send_to_char( "You can't do that while in roleplaying mode!\n\r", ch);
-	return;
+		send_to_char( "You can't do that while in roleplaying mode!\n\r", ch);
+		return;
 	}
 
 	/*
 	* Implement AFF2_IMMOBILIZED.
 	*/
 	if ( IS_AFFECTED2(ch, AFF2_IMMOBILIZED)
-	&& !IS_SET(cmd_table[cmd].flags, MOTION) )
+		&& !IS_SET(cmd_table[cmd].flags, MOTION) )
 	{
-	send_to_char( "You can't move a muscle!\n\r", ch );
-	return;
+		send_to_char( "You can't move a muscle!\n\r", ch );
+		return;
 	}
 
 	/*
 	* Character not in position for command?
 	*/
 	if ( ch->position < cmd_table[cmd].position
-	&& !(ch->position == P_SLEEP && IS_SET(ch->act2, ACT2_ASTRAL)
-	&& IS_SET(cmd_table[cmd].flags, ASTRAL_OK)) )
+		&& !(ch->position == P_SLEEP && IS_SET(ch->act2, ACT2_ASTRAL)
+			&& IS_SET(cmd_table[cmd].flags, ASTRAL_OK)) )
 	{
-	found = FALSE;
-	switch( ch->position )
-	{
-	case P_DEAD:
-		send_to_char( "Lie still; you are DEAD.\n\rIf you don't lie still you won't die properly.\n\r", ch );
-		break;
+		found = FALSE;
+		switch( ch->position )
+		{
+			case P_DEAD:
+			send_to_char( "Lie still; you are DEAD.\n\rIf you don't lie still you won't die properly.\n\r", ch );
+			break;
 
-	case P_MORT:
-	case P_INCAP:
-		send_to_char( "You are hurt far too bad for that.\n\r", ch );
-		break;
+			case P_MORT:
+			case P_INCAP:
+			send_to_char( "You are hurt far too bad for that.\n\r", ch );
+			break;
 
-	case P_STUN:
-		send_to_char( "You are too stunned to do that.\n\r", ch );
-		break;
+			case P_STUN:
+			send_to_char( "You are too stunned to do that.\n\r", ch );
+			break;
 
-	case P_SLEEP:
-		if(IS_SET(ch->act2, ACT2_ASTRAL) && !IS_SET(cmd_table[cmd].flags, ASTRAL_OK))
-			found = TRUE;
-		else
-			send_to_char( "In your dreams, or what?\n\r", ch );
-		break;
+			case P_SLEEP:
+			if(IS_SET(ch->act2, ACT2_ASTRAL) && !IS_SET(cmd_table[cmd].flags, ASTRAL_OK))
+				found = TRUE;
+			else
+				send_to_char( "In your dreams, or what?\n\r", ch );
+			break;
 
-	case P_REST:
-		send_to_char( "Nah... You feel too relaxed...\n\r", ch);
-		break;
+			case P_REST:
+			send_to_char( "Nah... You feel too relaxed...\n\r", ch);
+			break;
 
-	case P_SIT:
-		send_to_char( "Better stand up first.\n\r",ch);
-		break;
+			case P_SIT:
+			send_to_char( "Better stand up first.\n\r",ch);
+			break;
 
-	case P_FIGHT:
-		send_to_char( "No way!  You are still fighting!\n\r", ch);
-		break;
+			case P_FIGHT:
+			send_to_char( "No way!  You are still fighting!\n\r", ch);
+			break;
 
-	}
-	if(!found)
-		return;
+		}
+		if(!found)
+			return;
 	}
 
 	/*
-	 * Dispatch the command.
-	 */
+	* Dispatch the command.
+	*/
 	(*cmd_table[cmd].do_fun) ( ch, argument );
 
 	if(IS_SET(cmd_table[cmd].flags, POWER_DISPLAY))
@@ -979,14 +983,14 @@ void interpret( CHAR_DATA *ch, char *argument )
 					continue;
 				}
 				if(IS_NATURAL(vch) && IS_NPC(vch) && vch->master == NULL
-						&& IS_FEARFUL(vch) && SAME_PLANE(vch, ch)
-						&& !IS_SET(vch->act2, ACT2_TWILIGHT))
+					&& IS_FEARFUL(vch) && SAME_PLANE(vch, ch)
+					&& !IS_SET(vch->act2, ACT2_TWILIGHT))
 				{
 					do_flee(vch, "");
 					ch->hunter_vis += number_fuzzy(5);
 				}
 				if(IS_NPC(vch) && IS_SET(vch->act2, ACT2_TWILIGHT)
-						&& SAME_PLANE(vch, ch))
+					&& SAME_PLANE(vch, ch))
 				{
 					act("$N leaps at you as if your very existence enrages $M.", ch, NULL, vch, TO_CHAR, 1);
 					act("$N leaps at $n as if $s very existence enrages $M.", ch, NULL, vch, TO_CHAR, 1);
@@ -1019,8 +1023,8 @@ void do_function (CHAR_DATA *ch, DO_FUN *do_fun, char *argument)
 
 bool check_social( CHAR_DATA *ch, char *command, char *argument )
 {
-	char arg[MIL]={'\0'};
 	CHAR_DATA *victim;
+	char arg[MIL]={'\0'};
 	int cmd = 0;
 	bool found  = FALSE;
 
@@ -1035,7 +1039,7 @@ bool check_social( CHAR_DATA *ch, char *command, char *argument )
 	}
 
 	if ( !found )
-	return FALSE;
+		return FALSE;
 
 	if ( !IS_NPC(ch) && IS_SET(ch->comm, COMM_NOEMOTE) )
 	{

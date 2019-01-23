@@ -1240,37 +1240,35 @@ void do_mpotransfer( CHAR_DATA *ch, char *argument )
  */
 void do_mpremove( CHAR_DATA *ch, char *argument )
 {
-    CHAR_DATA *victim;
-    OBJ_DATA *obj, *obj_next;
-    sh_int vnum = 0;
-    bool fAll = FALSE;
-    char arg[ MAX_INPUT_LENGTH ]={'\0'};
+	CHAR_DATA *victim;
+	OBJ_DATA *obj, *obj_next;
+	sh_int vnum = 0;
+	bool fAll = FALSE;
+	char arg[ MAX_INPUT_LENGTH ]={'\0'};
 
-    argument = one_argument( argument, arg );
-    if ( ( victim = get_char_room( ch, arg ) ) == NULL )
-	return;
+	argument = one_argument( argument, arg );
+	if ( ( victim = get_char_room( ch, arg ) ) == NULL )
+		return;
 
-    one_argument( argument, arg );
-    if ( !str_cmp( arg, "all" ) )
-	fAll = TRUE;
-    else if ( !is_number( arg ) )
-    {
-	log_string(LOG_BUG, Format("MpRemove: Invalid object from vnum %d.", IS_NPC(ch) ? ch->pIndexData->vnum : 0 ));
-	return;
-    }
-    else
-	vnum = atoi( arg );
-
-    for ( obj = victim->carrying; obj; obj = obj_next )
-    {
-	obj_next = obj->next_content;
-	if ( fAll || obj->pIndexData->vnum == vnum )
+	one_argument( argument, arg );
+	if ( !str_cmp( arg, "all" ) )
+		fAll = TRUE;
+	else if ( !is_number( arg ) )
 	{
-	     unequip_char( ch, obj );
-	     obj_from_char( obj );
-	     extract_obj( obj );
+		log_string(LOG_BUG, Format("MpRemove: Invalid object from vnum %d.", IS_NPC(ch) ? ch->pIndexData->vnum : 0 ));
+		return;
 	}
-    }
+	else
+		vnum = atoi( arg );
+
+	for ( obj = victim->carrying; obj; obj = obj_next )
+	{
+		obj_next = obj->next_content;
+		if ( fAll || obj->pIndexData->vnum == vnum )
+		{
+			unequip_char( ch, obj );
+			obj_from_char( obj );
+			extract_obj( obj );
+		}
+	}
 }
-
-
