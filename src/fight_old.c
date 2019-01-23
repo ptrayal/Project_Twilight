@@ -476,11 +476,7 @@ void one_hit( CHAR_DATA *ch, CHAR_DATA *victim, int dt )
 	OBJ_DATA *wield;
 	OBJ_INDEX_DATA *ammo = NULL;
 	int diceroll;
-	int sn;
 	int dam_type;
-
-	sn = -1;
-
 
 	/* just in case */
 	if (victim == ch || ch == NULL || victim == NULL)
