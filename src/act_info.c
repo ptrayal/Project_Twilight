@@ -5084,7 +5084,8 @@ void do_laston(CHAR_DATA *ch, char *argument)
 	else
 		act("\tR$N is not online.  $N was last online: $t\tn.", ch, vch->laston, vch, TO_CHAR, 1);
 
-	if(!in_char_list) free_char(vch);
+	if(!in_char_list) 
+		free_char(vch);
 }
 
 void do_setting(CHAR_DATA *ch, char *argument)

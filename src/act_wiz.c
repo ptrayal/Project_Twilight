@@ -1243,6 +1243,12 @@ void do_mstat( CHAR_DATA *ch, char *argument )
 
 	send_to_char( Format("Name: %s\n\r", victim->name), ch );
 
+	if(IS_ADMIN(victim))
+	{
+		send_to_char( Format("Administrator: %s\n\r", IS_ADMIN(victim) ? "Yes": "No"), ch);
+		send_to_char(Format("Admin Level: %s\n\r", staff_status[victim->trust].name), ch);
+	}
+
 	send_to_char( Format("Vnum: %d    Room: %d\n\r", IS_NPC(victim) ? victim->pIndexData->vnum : 0, victim->in_room == NULL ? 0 : victim->in_room->vnum), ch);
 	send_to_char( Format("Race: %s   Sex: %s\n\r", race_table[victim->race].name, sex_table[victim->sex].name), ch);
 	send_to_char( Format("Group: %d\n\r", IS_NPC(victim) ? victim->group : 0), ch);
