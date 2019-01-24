@@ -176,7 +176,6 @@ char *format_obj_to_char( OBJ_DATA *obj, CHAR_DATA *ch, bool fShort )
 }
 
 
-
 /*
  * Show a list to a character.
  * Can coalesce duplicated items.
@@ -299,13 +298,10 @@ void show_list_to_char( OBJ_DATA *list, CHAR_DATA *ch, bool fShort, bool fShowNo
 }
 
 
-
 void show_char_to_char_0( CHAR_DATA *victim, CHAR_DATA *ch )
 {
 	char buf[MSL]={'\0'};
 	char buf2[MSL]={'\0'};
-
-	buf[0] = '\0';
 
 	if ( IS_ADMIN(ch) )
 	{
@@ -553,7 +549,6 @@ void show_char_to_char_0( CHAR_DATA *victim, CHAR_DATA *ch )
 }
 
 
-
 void show_char_to_char_1( CHAR_DATA *victim, CHAR_DATA *ch )
 {
 	OBJ_DATA *obj;
@@ -692,9 +687,9 @@ void do_glance( CHAR_DATA *ch, char *argument )
 
 void do_peek( CHAR_DATA *ch, char *argument )
 {
+	CHAR_DATA *victim;
 	int diff = 6;
 	int dice = 0;
-	CHAR_DATA *victim;
 
 	CheckCH(ch);
 
@@ -738,7 +733,6 @@ void do_peek( CHAR_DATA *ch, char *argument )
 }
 
 
-
 void show_char_to_char( CHAR_DATA *list, CHAR_DATA *ch )
 {
 	CHAR_DATA *rch;
@@ -766,7 +760,6 @@ void show_char_to_char( CHAR_DATA *list, CHAR_DATA *ch )
 }
 
 
-
 bool check_blind( CHAR_DATA *ch )
 {
 
@@ -783,7 +776,6 @@ bool check_blind( CHAR_DATA *ch )
 }
 
 /* RT Commands to replace news, motd, imotd, etc from ROM */
-
 void do_motd(CHAR_DATA *ch, char *argument)
 {
 	do_function(ch, &do_help, "motd");
@@ -806,7 +798,6 @@ void do_wizlist(CHAR_DATA *ch, char *argument)
 
 /* RT this following section holds all the auto commands from ROM, as well as
    replacements for config */
-
 void do_autolist(CHAR_DATA *ch, char *argument)
 {
 	CheckCH(ch);
@@ -815,37 +806,41 @@ void do_autolist(CHAR_DATA *ch, char *argument)
 	if (IS_NPC(ch))
 		return;
 
-	send_to_char("   action     status\n\r",ch);
-	send_to_char("---------------------\n\r",ch);
+	send_to_char("\tW|---------------------------|\tn\n\r",ch);
+	send_to_char( Format("\tW| \tY%-16s \tW| \tY%s \tW|\tn\n\r", "Config", "Status"), ch);
+	send_to_char("\tW|---------------------------|\tn\n\r",ch);
 
-	send_to_char("autoexit       ",ch);
+	send_to_char( Format("\tW|\tn %-16s \tW|\tn", "Autoexit"), ch);
 	if (IS_SET(ch->plr_flags,PLR_AUTOEXIT))
-		send_to_char("ON\n\r",ch);
+		send_to_char( Format(" \tG%-6s\tn \tW|\tn\n\r", "ON"), ch);
 	else
-		send_to_char("OFF\n\r",ch);
+		send_to_char( Format(" \tR%-6s\tn \tW|\tn\n\r", "OFF"), ch);
 
-	send_to_char("compact mode   ",ch);
+	send_to_char( Format("\tW|\tn %-16s \tW|\tn", "Compact Mode"), ch);
 	if (IS_SET(ch->comm,COMM_COMPACT))
-		send_to_char("ON\n\r",ch);
+		send_to_char( Format(" \tG%-6s\tn \tW|\tn\n\r", "ON"), ch);
 	else
-		send_to_char("OFF\n\r",ch);
+		send_to_char( Format(" \tR%-6s\tn \tW|\tn\n\r", "OFF"), ch);
 
-	send_to_char("prompt         ",ch);
+	send_to_char( Format("\tW|\tn %-16s \tW|\tn", "Prompt"), ch);
 	if (IS_SET(ch->comm,COMM_PROMPT))
-		send_to_char("ON\n\r",ch);
+		send_to_char( Format(" \tG%-6s\tn \tW|\tn\n\r", "ON"), ch);
 	else
-		send_to_char("OFF\n\r",ch);
+		send_to_char( Format(" \tR%-6s\tn \tW|\tn\n\r", "OFF"), ch);
 
-	send_to_char("combine items  ",ch);
+	send_to_char( Format("\tW|\tn %-16s \tW|\tn", "Combine Items"), ch);
 	if (IS_SET(ch->comm,COMM_COMBINE))
-		send_to_char("ON\n\r",ch);
+		send_to_char( Format(" \tG%-6s\tn \tW|\tn\n\r", "ON"), ch);
 	else
-		send_to_char("OFF\n\r",ch);
+		send_to_char( Format(" \tR%-6s\tn \tW|\tn\n\r", "OFF"), ch);
 
+	send_to_char( Format("\tW|\tn %-16s \tW|\tn", "Accept Followers"), ch);
 	if (IS_SET(ch->plr_flags,PLR_NOFOLLOW))
-		send_to_char("You do not welcome followers.\n\r",ch);
+		send_to_char( Format(" \tG%-6s\tn \tW|\tn\n\r", "YES"), ch);
 	else
-		send_to_char("You accept followers.\n\r",ch);
+		send_to_char( Format(" \tR%-6s\tn \tW|\tn\n\r", "NO"), ch);
+
+	send_to_char("\tW|---------------------------|\tn\n\r",ch);
 }
 
 void do_autoexit(CHAR_DATA *ch, char *argument)
@@ -4680,7 +4675,7 @@ void do_archetypes(CHAR_DATA *ch, char *argument)
 
 	if(ch->race != race_lookup("vampire") && ch->race != race_lookup("human"))
 	{
-		send_to_char("Huh?\n\r", ch);
+		send_to_char("\tRWARNING:\tn Only Humans and Vampires have archtypes.\n\r", ch);
 		return;
 	}
 

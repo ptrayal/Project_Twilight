@@ -84,6 +84,7 @@ DECLARE_DO_FUN( do_auspex5	);
 DECLARE_DO_FUN( do_auspice	);
 DECLARE_DO_FUN( do_authflag	);
 DECLARE_DO_FUN( do_autoexit	);
+DECLARE_DO_FUN( do_autolist	);
 DECLARE_DO_FUN(	do_backgrounds	);
 DECLARE_DO_FUN(	do_backstab	);
 DECLARE_DO_FUN(	do_backup	);

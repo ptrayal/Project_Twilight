@@ -701,7 +701,7 @@ void do_buildertalk( CHAR_DATA *ch, char *argument )
 
 	if((!ch->pcdata || ch->pcdata->security <= 0) && !IS_ADMIN(ch))
 	{
-		send_to_char("Huh?\n\r", ch);
+		send_to_char("\tRWARNING:\tn You do not have access to that channel.\n\r", ch);
 		return;
 	}
 

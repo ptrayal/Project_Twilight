@@ -160,6 +160,7 @@ const	struct	cmd_type	cmd_table	[] =
 		{	"compare",		do_compare,		P_STAND,	0,	L_NRM,	0,	A|B,	0 },
 		{	"conceal",		do_conceal,		P_REST,		0,	L_NRM,	1,	B|H,	0 },
 		{	"concede",		do_concede,		P_SLEEP,	0,	L_ALL,	1,	A|B|H,	0 },
+		{	"config",		do_autolist,	P_DEAD,		0,	L_NRM,	1,	A|B|E,	0 },
 		{	"consider",		do_consider,	P_REST,		0,	L_NRM,	1,	A|B,	0 },
 		{	"costcalc",		do_trainingcost,	P_STAND,	0,	L_NRM,	1,	A|B|E,	0 },
 		{	"count",		do_count,		P_SLEEP,	0,	L_NRM,	1,	A|B|E,	0 },
