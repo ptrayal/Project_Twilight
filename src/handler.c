@@ -4172,9 +4172,9 @@ bool IS_FEARFUL(CHAR_DATA *ch)
 
 bool trade_stocks(CHAR_DATA *ch, STOCKS *st, int num, bool fees, bool buy)
 {
+	STOCKS *chst, *next = NULL, *prev = NULL;
 	int cash = 0, cost = 0, tax = 0;
 	bool found = FALSE;
-	STOCKS *chst, *next = NULL, *prev = NULL;
 
 	if(num < 1)
 	{
@@ -4220,7 +4220,9 @@ bool trade_stocks(CHAR_DATA *ch, STOCKS *st, int num, bool fees, bool buy)
 		{
 			ch->dollars -= 1;
 			ch->cents += 100 - (cost % 100);
-		} else {
+		} 
+		else 
+		{
 			ch->cents -= cost%100;
 		}
 
@@ -4310,25 +4312,28 @@ bool IS_NATURAL( CHAR_DATA *ch )
 */
 int count_words(char *string)
 {
-    int i = 0;
-    int looking_for_word = 1;
-    int word_count = 0;
+	int i = 0;
+	int looking_for_word = 1;
+	int word_count = 0;
 
-    if(!string)
-	return 0;
+	if(!string)
+		return 0;
 
-    for (i = 0; string[i] != '\0'; ++i)
-        if (isalpha(string[i])) /* isalpha() requires <ctype.h> */
-        {
-            if (looking_for_word)
-            {
-                ++word_count;
-                looking_for_word = 0;
-            }
-        }
-        else
-            looking_for_word = 1;
-    return word_count;
+	for (i = 0; string[i] != '\0'; ++i)
+		/* isalpha() requires <ctype.h> */
+	{
+		if (isalpha(string[i])) 
+		{
+			if (looking_for_word)
+			{
+				++word_count;
+				looking_for_word = 0;
+			}
+		}
+		else
+			looking_for_word = 1;
+	}
+	return word_count;
 }
 
 bool bare_earth(ROOM_INDEX_DATA *rm)
@@ -4338,57 +4343,54 @@ bool bare_earth(ROOM_INDEX_DATA *rm)
 
 int gen_room( CHAR_DATA *ch, ORG_DATA *org )
 {
-    AREA_DATA *pArea;
-    ROOM_INDEX_DATA *pRoom;
-    int iHash = 0;
-    int value = 0;
+	AREA_DATA *pArea;
+	ROOM_INDEX_DATA *pRoom;
+	int iHash = 0;
+	int value = 0;
 
-    if(ch == NULL) return FALSE;
+	if(ch == NULL) 
+		return FALSE;
 
-    pArea = ch->in_room->area;
-    if ( !pArea )
-    {
-	send_to_char(
-	"An error has occurred, unable to find your area.\n\r", ch);
-	send_to_char(
-	"Please contact someone on staff to rectify the problem.\n\r", ch);
-	return FALSE;
-    }
+	pArea = ch->in_room->area;
+	if ( !pArea )
+	{
+		send_to_char( "An error has occurred, unable to find your area.\n\r", ch);
+		send_to_char( "Please contact someone on staff to rectify the problem.\n\r", ch);
+		return FALSE;
+	}
 
-    for(value = pArea->min_vnum; value <= pArea->max_vnum; value++)
-    {
-	if(get_room_index(value) == NULL)
-	    break;
-    }
+	for(value = pArea->min_vnum; value <= pArea->max_vnum; value++)
+	{
+		if(get_room_index(value) == NULL)
+			break;
+	}
 
-    if ( value > pArea->max_vnum )
-    {
-	send_to_char(
-	"An error has occurred, no available vnums in zone.\n\r", ch );
-	send_to_char(
-	"You can try again, or contact a staff member for help.\n\r", ch);
-	return FALSE;
-    }
+	if ( value > pArea->max_vnum )
+	{
+		send_to_char( "An error has occurred, no available vnums in zone.\n\r", ch );
+		send_to_char( "You can try again, or contact a staff member for help.\n\r", ch);
+		return FALSE;
+	}
 
-    pRoom                       = new_room_index();
-    pRoom->area                 = pArea;
-    pRoom->vnum                 = value;
+	pRoom                       = new_room_index();
+	pRoom->area                 = pArea;
+	pRoom->vnum                 = value;
 
-    if ( value > top_vnum_room )
-	top_vnum_room = value;
+	if ( value > top_vnum_room )
+		top_vnum_room = value;
 
-    iHash                       = value % MAX_KEY_HASH;
-    pRoom->next                 = room_index_hash[iHash];
-    room_index_hash[iHash]      = pRoom;
-    pRoom->room_flags		= ROOM_INDOORS;
-    PURGE_DATA(pRoom->owner);
-    if(org)
-	pRoom->owner = str_dup(org->name);
-    else
-	pRoom->owner = str_dup(ch->name);
+	iHash                       = value % MAX_KEY_HASH;
+	pRoom->next                 = room_index_hash[iHash];
+	room_index_hash[iHash]      = pRoom;
+	pRoom->room_flags		= ROOM_INDOORS;
+	PURGE_DATA(pRoom->owner);
+	if(org)
+		pRoom->owner = str_dup(org->name);
+	else
+		pRoom->owner = str_dup(ch->name);
 
-    send_to_char( "Room created.\n\r", ch );
-    return pRoom->vnum;
+	send_to_char( "Room created.\n\r", ch );
+	return pRoom->vnum;
 }
 
 int gen_exit( CHAR_DATA *ch, int door, int value )
@@ -4572,21 +4574,28 @@ CHAR_DATA * gen_hunter (CHAR_DATA *ch)
 
 bool IS_HUNTED(CHAR_DATA *ch)
 {
-    if(ch->hunted)
-	return TRUE;
+	if(ch->hunted)
+		return TRUE;
 
-    return FALSE;
+	return FALSE;
 }
 
 int QUALITY_OF_WORK(int fail)
 {
-    if(fail <= 2) return 1;
-    if(fail <= 4) return 2;
-    if(fail == 5) return 3;
-    if(fail == 6) return 4;
-    if(fail == 7) return 6;
-    if(fail == 8) return 8;
-    if(fail == 9) return 10;
+    if(fail <= 2) 
+    	return 1;
+    if(fail <= 4) 
+    	return 2;
+    if(fail == 5) 
+    	return 3;
+    if(fail == 6) 
+    	return 4;
+    if(fail == 7) 
+    	return 6;
+    if(fail == 8) 
+    	return 8;
+    if(fail == 9) 
+    	return 10;
     return 15;
 }
 
@@ -4659,9 +4668,12 @@ int current_dots(CHAR_DATA *ch)
 		for(j=0;j<31;j++)
 			if(IS_SET(ch->powers[i], flag_list[j].bit))
 				k++;
-	if(ch->max_willpower > 5) k += ch->max_willpower - 5;
-	if(ch->max_GHB > 5) k += ch->max_willpower - 5;
-	if(ch->max_RBPG > 5) k += ch->max_willpower - 5;
+	if(ch->max_willpower > 5) 
+		k += ch->max_willpower - 5;
+	if(ch->max_GHB > 5) 
+		k += ch->max_willpower - 5;
+	if(ch->max_RBPG > 5) 
+		k += ch->max_willpower - 5;
 
 	return k;
 }
@@ -4688,8 +4700,8 @@ int trait_count(CHAR_DATA *ch, int type)
 	for(t = ch->traits; t != NULL; t = t->next)
 	{
 		if((t->value < 0 && type < 0)
-				|| (t->value > 0 && type > 0)
-				|| (t->value == 0 && type == 0))
+			|| (t->value > 0 && type > 0)
+			|| (t->value == 0 && type == 0))
 			icount++;
 	}
 
@@ -4740,65 +4752,65 @@ bool LOOKS_DIFFERENT(CHAR_DATA *ch)
 
 bool coat_obj_in_liquid_by_name(OBJ_DATA *obj, char *liquid)
 {
-    LIQUID_DATA *coating;
-    int i = 0;
+	LIQUID_DATA *coating;
+	int i = 0;
 
-    if((i = material_lookup(liquid)) < 0)
-	return TRUE;
+	if((i = material_lookup(liquid)) < 0)
+		return TRUE;
 
-    if(material_table[i].is_liquid == FALSE)
-	return TRUE;
+	if(material_table[i].is_liquid == FALSE)
+		return TRUE;
 
-    coating = new_liqdata();
-    coating->liquid = liq_lookup(liquid);
-    coating->quantity = 1;
+	coating = new_liqdata();
+	coating->liquid = liq_lookup(liquid);
+	coating->quantity = 1;
 
-    coating->next = obj->coating;
-    obj->coating = coating;
+	coating->next = obj->coating;
+	obj->coating = coating;
 
-    return FALSE;
+	return FALSE;
 }
 
 bool coat_char_in_liquid_by_name(CHAR_DATA *ch, char *liquid)
 {
-    LIQUID_DATA *coating;
-    int i = 0;
+	LIQUID_DATA *coating;
+	int i = 0;
 
-    if((i = material_lookup(liquid)) < 0)
-	return TRUE;
+	if((i = material_lookup(liquid)) < 0)
+		return TRUE;
 
-    if(material_table[i].is_liquid == FALSE)
-	return TRUE;
+	if(material_table[i].is_liquid == FALSE)
+		return TRUE;
 
-    coating = new_liqdata();
-    coating->liquid = liq_lookup(liquid);
-    coating->quantity = 1;
+	coating = new_liqdata();
+	coating->liquid = liq_lookup(liquid);
+	coating->quantity = 1;
 
-    coating->next = ch->coating;
-    ch->coating = coating;
+	coating->next = ch->coating;
+	ch->coating = coating;
 
-    return FALSE;
+	return FALSE;
 }
 
 
 bool coat_obj_in_liquid(OBJ_DATA *obj, OBJ_DATA *liquid)
 {
-    LIQUID_DATA *coating;
+	LIQUID_DATA *coating;
 
-    if(liquid->item_type != ITEM_LIQUID
-    && material_table[material_lookup(liquid->material)].is_liquid == FALSE)
-	return TRUE;
+	if(liquid->item_type != ITEM_LIQUID
+		&& material_table[material_lookup(liquid->material)].is_liquid == FALSE)
+		return TRUE;
 
-    if(liquid->weight > 0) liquid->weight--;
+	if(liquid->weight > 0) liquid->weight--;
 
-    coating = new_liqdata();
-    coating->liquid = liq_lookup(liquid->material);
-    coating->quantity = 1;
+	coating = new_liqdata();
+	coating->liquid = liq_lookup(liquid->material);
+	coating->quantity = 1;
 
-    coating->next = obj->coating;
-    obj->coating = coating;
+	coating->next = obj->coating;
+	obj->coating = coating;
 
-    return FALSE;
+	return FALSE;
 }
 
 bool coat_char_in_liquid(CHAR_DATA *ch, OBJ_DATA *liquid)
@@ -4884,7 +4896,7 @@ OBJ_DATA * create_puddle_from_liq(char *liq, int vnum, int volume)
     int i = 0;
 
     if(material_table[material_lookup(liq)].is_liquid == FALSE)
-	return NULL;
+		return NULL;
 
     puddle = create_object(get_obj_index(vnum));
 
@@ -4922,8 +4934,10 @@ int count_multi_args(char *argument, char *cEnd)
 	char *spot;
 
 	spot = argument;
-	if(spot[0] == '\0') return count;
-	else count++;
+	if(spot[0] == '\0') 
+		return count;
+	else 
+		count++;
 
 	while ( *spot != '\0' )
 	{

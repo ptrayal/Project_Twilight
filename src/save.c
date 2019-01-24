@@ -984,8 +984,8 @@ bool load_char_obj( DESCRIPTOR_DATA *d, char *name, bool log_load, bool load_con
 		ch->vuln_flags	= ch->vuln_flags | race_table[ch->race].vuln;
 		ch->form	= ch->form | race_table[ch->race].form;
 		ch->parts	= ch->parts | race_table[ch->race].parts;
-		if(ch->health <= 0 || ch->agghealth <= 0
-				|| (ch->health + ch->agghealth) <= 0) {
+		if(ch->health <= 0 || ch->agghealth <= 0 || (ch->health + ch->agghealth) <= 0) 
+		{
 			ch->health			= 7;
 			ch->agghealth			= 7;
 		}
@@ -1062,8 +1062,8 @@ void fread_char( CHAR_DATA *ch, FILE *fp, bool log_load )
 
 			if (!str_cmp(word,"Ab"))
 			{
-				int sn;
-				int value;
+				int sn = 0;
+				int value = 0;
 				const char *temp;
 
 				value = fread_number( fp );
@@ -1101,7 +1101,7 @@ void fread_char( CHAR_DATA *ch, FILE *fp, bool log_load )
 			if (!str_cmp(word, "AffD"))
 			{
 				AFFECT_DATA *paf;
-				int sn;
+				int sn = 0;
 
 				paf = new_affect();
 
@@ -1125,7 +1125,7 @@ void fread_char( CHAR_DATA *ch, FILE *fp, bool log_load )
 			if (!str_cmp(word, "Affc"))
 			{
 				AFFECT_DATA *paf;
-				int sn;
+				int sn = 0;
 
 				paf = new_affect();
 
@@ -1149,7 +1149,7 @@ void fread_char( CHAR_DATA *ch, FILE *fp, bool log_load )
 
 			if ( !str_cmp(word,"AMod"))
 			{
-				int stat;
+				int stat = 0;
 				for (stat = 0; stat < (MAX_STATS - 1); stat++)
 					ch->mod_stat[stat] = fread_number(fp);
 				fMatch = TRUE;
@@ -1158,7 +1158,7 @@ void fread_char( CHAR_DATA *ch, FILE *fp, bool log_load )
 
 			if ( !str_cmp(word,"Attr"))
 			{
-				int stat;
+				int stat = 0;
 
 				for (stat = 0; stat < (MAX_STATS - 1); stat++)
 					ch->perm_stat[stat] = fread_number(fp);
@@ -1410,7 +1410,7 @@ void fread_char( CHAR_DATA *ch, FILE *fp, bool log_load )
 			KEY( "Pos",		ch->position,		fread_number( fp ) );
 
 			if ( !str_cmp( word, "Pow" ) ) {
-				int a;
+				int a = 0;
 				for(a = 0; a < MAX_POWERS; a++)
 				{
 					ch->powers[a] = fread_flag( fp );
@@ -1495,8 +1495,8 @@ void fread_char( CHAR_DATA *ch, FILE *fp, bool log_load )
 
 			if ( !str_cmp( word, "Skill" ) || !str_cmp(word,"Sk"))
 			{
-				int sn;
-				int value;
+				int sn = 0;
+				int value = 0;
 				const char *temp;
 
 				value = fread_number( fp );
@@ -1514,8 +1514,9 @@ void fread_char( CHAR_DATA *ch, FILE *fp, bool log_load )
 				break;
 			}
 
-			if ( !str_cmp( word, "Status" ) ) {
-				int a;
+			if ( !str_cmp( word, "Status" ) ) 
+			{
+				int a = 0;
 				for(a = MAX_BACKGROUND; a < MAX_BG; a++)
 				{
 					ch->backgrounds[a] = fread_number( fp );
@@ -1622,8 +1623,8 @@ void fread_char( CHAR_DATA *ch, FILE *fp, bool log_load )
 /* load a pet from the forgotten reaches */
 void fread_pet( CHAR_DATA *ch, FILE *fp )
 {
-	const char *word;
 	CHAR_DATA *pet = NULL;
+	const char *word;
 	int lastlogoff = current_time;
 	int percent = 0;
 	bool fMatch = FALSE;
@@ -1632,7 +1633,7 @@ void fread_pet( CHAR_DATA *ch, FILE *fp )
 	word = feof(fp) ? "END" : fread_word(fp);
 	if (!str_cmp(word,"Vnum"))
 	{
-		int vnum;
+		int vnum = 0;
 
 		vnum = fread_number(fp);
 		if (get_mob_index(vnum) == NULL)
@@ -1668,7 +1669,7 @@ void fread_pet( CHAR_DATA *ch, FILE *fp )
 			if (!str_cmp(word,"AffD"))
 			{
 				AFFECT_DATA *paf;
-				int sn;
+				int sn = 0;
 
 				paf = new_affect();
 
@@ -1692,7 +1693,7 @@ void fread_pet( CHAR_DATA *ch, FILE *fp )
 			if (!str_cmp(word,"Affc"))
 			{
 				AFFECT_DATA *paf;
-				int sn;
+				int sn = 0;
 
 				paf = new_affect();
 
@@ -1716,7 +1717,7 @@ void fread_pet( CHAR_DATA *ch, FILE *fp )
 
 			if (!str_cmp(word,"AMod"))
 			{
-				int stat;
+				int stat = 0;
 
 				for (stat = 0; stat < (MAX_STATS - 1); stat++)
 					pet->mod_stat[stat] = fread_number(fp);
@@ -1726,7 +1727,7 @@ void fread_pet( CHAR_DATA *ch, FILE *fp )
 
 			if (!str_cmp(word,"Attr"))
 			{
-				int stat;
+				int stat = 0;
 
 				for (stat = 0; stat < (MAX_STATS - 1); stat++)
 					pet->perm_stat[stat] = fread_number(fp);
@@ -1839,7 +1840,7 @@ void fread_obj( CHAR_DATA *ch, FILE *fp )
 	word   = feof( fp ) ? "End" : fread_word( fp );
 	if (!str_cmp(word,"Vnum" ))
 	{
-		int vnum;
+		int vnum = 0;
 		first = FALSE;  /* fp will be in right place */
 
 		vnum = fread_number( fp );
@@ -1890,7 +1891,7 @@ void fread_obj( CHAR_DATA *ch, FILE *fp )
 			if (!str_cmp(word,"AffD"))
 			{
 				AFFECT_DATA *paf;
-				int sn;
+				int sn = 0;
 
 				paf = new_affect();
 
@@ -1913,7 +1914,7 @@ void fread_obj( CHAR_DATA *ch, FILE *fp )
 			if (!str_cmp(word,"Affc"))
 			{
 				AFFECT_DATA *paf;
-				int sn;
+				int sn = 0;
 
 				paf = new_affect();
 
@@ -2037,8 +2038,8 @@ void fread_obj( CHAR_DATA *ch, FILE *fp )
 
 			if ( !str_cmp( word, "Spell" ) )
 			{
-				int iValue;
-				int sn;
+				int iValue = 0;
+				int sn = 0;
 
 				iValue = fread_number( fp );
 				sn     = skill_lookup( fread_word( fp ) );
@@ -2096,7 +2097,7 @@ void fread_obj( CHAR_DATA *ch, FILE *fp )
 
 			if ( !str_cmp( word, "Vnum" ) )
 			{
-				int vnum;
+				int vnum = 0;
 
 				vnum = fread_number( fp );
 				if ( ( obj->pIndexData = get_obj_index( vnum ) ) == NULL )
@@ -2125,7 +2126,9 @@ void fread_obj( CHAR_DATA *ch, FILE *fp )
 			fread_to_eol( fp );
 		}
 	}
-	if(obj->condition == 0) obj->condition = 25;
-	if(obj->timer == 0) obj->timer = -1;
+	if(obj->condition == 0) 
+		obj->condition = 25;
+	if(obj->timer == 0) 
+		obj->timer = -1;
 
 }
