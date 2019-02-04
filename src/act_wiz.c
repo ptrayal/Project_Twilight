@@ -97,10 +97,11 @@ void do_wiznet( CHAR_DATA *ch, char *argument )
 	/* show wiznet status */
 	if (!str_prefix(argument,"status"))
 	{
-		buf[0] = '\0';
+
+		send_to_char("Wiznet Status:\n\r", ch);
 
 		if (!IS_SET(ch->wiznet,WIZ_ON))
-			strncat(buf,"off ", sizeof(buf) - strlen(buf) - 1);
+			send_to_char("OFF\n\r", ch);
 
 		for (flag = 0; wiznet_table[flag].name != NULL; flag++)
 			if (IS_SET(ch->wiznet,wiznet_table[flag].flag))
@@ -110,8 +111,6 @@ void do_wiznet( CHAR_DATA *ch, char *argument )
 			}
 
 		strncat(buf,"\n\r", sizeof(buf) - strlen(buf) - 1);
-
-		send_to_char("Wiznet status:\n\r",ch);
 		send_to_char(buf,ch);
 		return;
 	}
@@ -166,6 +165,9 @@ void wiznet(char *string, CHAR_DATA *ch, OBJ_DATA *obj, long flag, long flag_ski
 
 	for ( d = descriptor_list; d != NULL; d = d->next )
 	{
+		if(d->character ==NULL)
+			continue;
+		
 		if (d->connected == CON_PLAYING
 				&&  IS_ADMIN(d->character)
 		&&  IS_SET(d->character->wiznet,WIZ_ON)
@@ -987,9 +989,9 @@ void do_rstat( CHAR_DATA *ch, char *argument )
 
 void do_ostat( CHAR_DATA *ch, char *argument )
 {
-	char arg[MIL]={'\0'};
 	AFFECT_DATA *paf;
 	OBJ_DATA *obj;
+	char arg[MIL]={'\0'};
 
 	CheckCH(ch);
 
@@ -1253,11 +1255,6 @@ void do_mstat( CHAR_DATA *ch, char *argument )
 	send_to_char( Format("Race: %s   Sex: %s\n\r", race_table[victim->race].name, sex_table[victim->sex].name), ch);
 	send_to_char( Format("Group: %d\n\r", IS_NPC(victim) ? victim->group : 0), ch);
 
-	if (IS_NPC(victim))
-	{
-		send_to_char(Format("Count: %d  Killed: %d\n\r", victim->pIndexData->count,victim->pIndexData->killed), ch);
-	}
-
 	send_to_char( Format("Str: %d  Dex: %d  Sta: %d\n\r",
 			get_curr_stat(victim,STAT_STR), get_curr_stat(victim,STAT_DEX), get_curr_stat(victim,STAT_STA)), ch );
 
@@ -1275,12 +1272,18 @@ void do_mstat( CHAR_DATA *ch, char *argument )
 	send_to_char( Format("Saves: %d  Size: %s  Position: %s\n\r",
 			victim->saving_throw, size_table[victim->size].name, position_table[victim->position].name), ch );
 
+	send_to_char( Format("Fighting: %s\n\r", victim->fighting ? victim->fighting->name : "(none)"), ch );
+
 	if (IS_NPC(victim))
 	{
 		send_to_char(Format("Damage: %dd%d  Message:  %s\n\r",
 				victim->damage[DICE_NUMBER],victim->damage[DICE_TYPE], attack_table[victim->dam_type].noun), ch);
 	}
-	send_to_char( Format("Fighting: %s\n\r", victim->fighting ? victim->fighting->name : "(none)"), ch );
+
+	if (IS_NPC(victim))
+	{
+		send_to_char(Format("Count: %d  Killed: %d\n\r", victim->pIndexData->count,victim->pIndexData->killed), ch);
+	}
 
 	if ( !IS_NPC(victim) )
 	{
@@ -1420,10 +1423,10 @@ void do_mfind(CHAR_DATA *ch, char *argument)
     MOB_INDEX_DATA      *pMobIndex;
     BUFFER              *buf1;
     char                arg  [ MIL ]={'\0'};
-    bool fAll, found;
     int vnum;
     int col = 0;
     int nMatch;
+    bool fAll, found;
 
     CheckCH(ch);
 
@@ -1836,7 +1839,7 @@ void do_shutdown( CHAR_DATA *ch, char *argument )
 		{
 			save_char_obj(vch);
 		}
-		close_socket(d);
+		// close_socket(d);
 	}
 
 	return;
@@ -4772,7 +4775,7 @@ char * area_name (AREA_DATA *pArea)
 	static char buffer[64]={'\0'}; /* short filename */
 	char  *period;
 
-	assert (pArea != NULL);
+	// assert (pArea != NULL);
 
 	strncpy (buffer, pArea->file_name, 64); /* copy the filename */
 	period = strchr (buffer, '.'); /* find the period (midgaard.are) */

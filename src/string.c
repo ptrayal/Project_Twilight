@@ -110,20 +110,20 @@ char * string_insert_return( char * orig, char * old )
  ****************************************************************************/
 char * string_replace( char * orig, char * old, char * bnew )
 {
-		char xbuf[MSL]={'\0'};
+	char xbuf[MSL]={'\0'};
+
+	strncpy( xbuf, orig, sizeof(xbuf) );
+	if ( strstr( orig, old ) != NULL )
+	{
 		int i = 0;
+		i = strlen( orig ) - strlen( strstr( orig, old ) );
+		xbuf[i] = '\0';
+		strncat( xbuf, bnew, sizeof(xbuf) - strlen(xbuf) -1  );
+		strncat( xbuf, &orig[i+strlen( old )], sizeof(xbuf) - strlen(xbuf) -1  );
+		PURGE_DATA( orig );
+	}
 
-		strncpy( xbuf, orig, sizeof(xbuf) );
-		if ( strstr( orig, old ) != NULL )
-		{
-				i = strlen( orig ) - strlen( strstr( orig, old ) );
-				xbuf[i] = '\0';
-				strncat( xbuf, bnew, sizeof(xbuf) - strlen(xbuf) -1  );
-				strncat( xbuf, &orig[i+strlen( old )], sizeof(xbuf) - strlen(xbuf) -1  );
-				PURGE_DATA( orig );
-		}
-
-		return str_dup( xbuf );
+	return str_dup( xbuf );
 }
 
 
@@ -228,15 +228,6 @@ void string_add( CHAR_DATA *ch, char *argument )
 		return;
 	}
 
-	// if(IS_NULLSTR(ch->desc->pString))
-	// {
-	// 	strmove( buf, "");
-	// }
-	// else
-	// {
-	// 	strmove( buf, *ch->desc->pString );
-	// }
-	
 	strcpy ( buf, *ch->desc->pString ? *ch->desc->pString : "" ); 
 		/*
 		 * Truncate strings to MAX_STRING_LENGTH.
@@ -264,8 +255,6 @@ void string_add( CHAR_DATA *ch, char *argument )
 	return;
 }
 
-
-
 /*
  * Thanks to Kalgen for the new procedure (no more bug!)
  * Original wordwrap() written by Surreality.
@@ -278,15 +267,13 @@ void string_add( CHAR_DATA *ch, char *argument )
  ****************************************************************************/
 char *format_string (char *oldstring /*, bool fSpace */ )
  {
-	char xbuf[MAX_STRING_LENGTH];
-	char xbuf2[MAX_STRING_LENGTH];
+	char xbuf[MAX_STRING_LENGTH]={'\0'};
+	char xbuf2[MAX_STRING_LENGTH]={'\0'};
 	char *rdesc;
 	int i = 0;
-	int end_of_line;
+	int end_of_line = 0;
 	bool cap = TRUE;
 	bool bFormat = TRUE;
-
-	xbuf[0] = xbuf2[0] = 0;
 
 	for (rdesc = oldstring; *rdesc; rdesc++)
 	{
@@ -544,9 +531,6 @@ char *format_string (char *oldstring /*, bool fSpace */ )
 	return (str_dup (xbuf));
 }
 
-
-
-
 /*
  * Used above in string_add.  Because this function does not
  * modify case if fCase is FALSE and because it understands
@@ -562,44 +546,42 @@ char *format_string (char *oldstring /*, bool fSpace */ )
  ****************************************************************************/
 char *first_arg( char *argument, char *arg_first, bool fCase )
 {
-		char cEnd;
+	char cEnd;
 
-		while ( *argument == ' ' )
-	argument++;
+	while ( *argument == ' ' )
+		argument++;
 
-		cEnd = ' ';
-		if ( *argument == '\'' || *argument == '"'
-			|| *argument == '%'  || *argument == '(' )
-		{
-				if ( *argument == '(' )
-				{
-						cEnd = ')';
-						argument++;
-				}
-				else cEnd = *argument++;
-		}
-
-		while ( *argument != '\0' )
-		{
-	if ( *argument == cEnd )
+	cEnd = ' ';
+	if ( *argument == '\'' || *argument == '"'
+		|| *argument == '%'  || *argument == '(' )
 	{
+		if ( *argument == '(' )
+		{
+			cEnd = ')';
+			argument++;
+		}
+		else cEnd = *argument++;
+	}
+
+	while ( *argument != '\0' )
+	{
+		if ( *argument == cEnd )
+		{
 			argument++;
 			break;
-	}
-		if ( fCase ) *arg_first = LOWER(*argument);
-						else *arg_first = *argument;
-	arg_first++;
-	argument++;
 		}
-		*arg_first = '\0';
+		if ( fCase ) *arg_first = LOWER(*argument);
+		else *arg_first = *argument;
+		arg_first++;
+		argument++;
+	}
+	*arg_first = '\0';
 
-		while ( *argument == ' ' )
-	argument++;
+	while ( *argument == ' ' )
+		argument++;
 
-		return argument;
+	return argument;
 }
-
-
 
 
 /*
@@ -610,28 +592,28 @@ char * string_unpad( char * argument )
 	char buf[MSL]={'\0'};
 	char *s;
 
-		s = argument;
+	s = argument;
 
-		while ( *s == ' ' )
-				s++;
+	while ( *s == ' ' )
+		s++;
 
-		strncpy( buf, s, sizeof(buf) );
-		s = buf;
+	strncpy( buf, s, sizeof(buf) );
+	s = buf;
 
-		if ( *s != '\0' )
-		{
-				while ( *s != '\0' )
-						s++;
-				s--;
+	if ( *s != '\0' )
+	{
+		while ( *s != '\0' )
+			s++;
+		s--;
 
-				while( *s == ' ' )
-						s--;
-				s++;
-				*s = '\0';
-		}
+		while( *s == ' ' )
+			s--;
+		s++;
+		*s = '\0';
+	}
 
-		PURGE_DATA( argument );
-		return str_dup( buf );
+	PURGE_DATA( argument );
+	return str_dup( buf );
 }
 
 
@@ -642,25 +624,25 @@ char * string_unpad( char * argument )
  */
 char * string_proper( char * argument )
 {
-		char *s;
+	char *s;
 
-		s = argument;
+	s = argument;
 
-		while ( *s != '\0' )
+	while ( *s != '\0' )
+	{
+		if ( *s != ' ' )
 		{
-				if ( *s != ' ' )
-				{
-						*s = UPPER(*s);
-						while ( *s != ' ' && *s != '\0' )
-								s++;
-				}
-				else
-				{
-						s++;
-				}
+			*s = UPPER(*s);
+			while ( *s != ' ' && *s != '\0' )
+				s++;
 		}
+		else
+		{
+			s++;
+		}
+	}
 
-		return argument;
+	return argument;
 }
 
 /*

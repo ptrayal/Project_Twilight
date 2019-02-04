@@ -65,7 +65,7 @@ int has_enough_power(CHAR_DATA *ch)
 {
 	if (ch->power_timer > 0)
 	{
-		send_to_char("Your powers have not rejuvenated yet.\n\r", ch);
+		send_to_char("\tRWARNING:\tn Your powers have not rejuvenated yet.\n\r", ch);
 		return 0;
 	}
         return 1;
@@ -230,8 +230,6 @@ void say_spell( CHAR_DATA *ch, int sn )
 	return;
 }
 
-
-
 /*
  * Compute a saving throw.
  * Negative apply's make saving throw better.
@@ -280,7 +278,6 @@ bool saves_dispel( int dis_level, int spell_level, int duration)
 }
 
 /* co-routine for dispel magic and cancellation */
-
 bool check_dispel( int dis_level, CHAR_DATA *victim, int sn)
 {
 	AFFECT_DATA *af;
@@ -9030,7 +9027,7 @@ void do_serpentis4 (CHAR_DATA *ch, char *argument)
 
 		if(ch->RBPG < 2)
 		{
-			send_to_char("You don't have the blood to spare.\n\r", ch);
+			send_to_char("\tRWARNING:\tn You do not have the blood to spare.\n\r", ch);
 			return;
 		}
 

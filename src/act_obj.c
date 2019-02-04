@@ -3878,6 +3878,7 @@ void do_balance(CHAR_DATA *ch, char *argument)
     }
 
     send_to_char(Format("Your balance comes to $%ld.%.2ld.\n\r", ch->bank_account/100, ch->bank_account%100), ch);
+    do_function(ch, &do_cash, "");
 }
 
 void do_wrap(CHAR_DATA *ch, char *argument)

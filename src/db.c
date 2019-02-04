@@ -3868,7 +3868,7 @@ ROOM_INDEX_DATA *get_room_index( int vnum )
 			pRoomIndex != NULL;
 			pRoomIndex  = pRoomIndex->next )
 	{
-		assert(pRoomIndex);
+		// assert(pRoomIndex);
 
 		if ( pRoomIndex->vnum == vnum )
 			return pRoomIndex;

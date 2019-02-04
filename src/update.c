@@ -683,7 +683,8 @@ void room_update( void )
 
 			rm_next = rm->next;
 
-			assert(rm); // crash if we are NULL!
+			// crash if we are NULL!
+			// assert(rm); 
 
 			if(IS_SET(rm->room_flags, ROOM_ELEVATOR) && rm->going_to >= 0)
 			{
@@ -2045,7 +2046,7 @@ void msdp_update( void )
     {
 	if ( d->character && d->connected == CON_PLAYING && !IS_NPC(d->character) )
         {
-            char buf[MAX_STRING_LENGTH];
+            char buf[MAX_STRING_LENGTH]={'\0'};
             CHAR_DATA *pOpponent = d->character->fighting;
             ROOM_INDEX_DATA *pRoom = d->character->in_room;
             AFFECT_DATA *paf;
@@ -2100,7 +2101,7 @@ void msdp_update( void )
             /* Only update room stuff if they've changed room */
             if ( pRoom && pRoom->vnum != d->pProtocol->pVariables[eMSDP_ROOM_VNUM]->ValueInt )
             {
-                int i; /* Loop counter */
+                int i = 0; /* Loop counter */
                 buf[0] = '\0';
 
                 for ( i = DIR_NORTH; i < MAX_DIR; ++i )
@@ -2136,7 +2137,7 @@ void msdp_update( void )
             buf[0] = '\0';
             for ( paf = d->character->affected; paf; paf = paf->next )
             {
-                char skill_buf[MAX_STRING_LENGTH];
+                char skill_buf[MAX_STRING_LENGTH]={'\0'};
                 sprintf( skill_buf, "%c%s%c%d",
                     (char)MSDP_VAR, skill_table[paf->type].name,
                     (char)MSDP_VAL, paf->duration );

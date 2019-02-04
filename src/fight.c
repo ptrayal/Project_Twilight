@@ -47,11 +47,11 @@ void be_frenzied(CHAR_DATA *ch);
 void do_shoot (CHAR_DATA *ch, char *argument)
 {
 	CHAR_DATA *victim;
-	bool not_in_room = FALSE;
-	char arg[MIL]={'\0'};
-	int dir = 0;
 	OBJ_DATA *obj = get_eq_char(ch, WEAR_WIELD);
 	OBJ_INDEX_DATA *ammo;
+	char arg[MIL]={'\0'};
+	bool not_in_room = FALSE;
+	int dir = 0;
 
 	CheckCH(ch);
 
@@ -71,19 +71,19 @@ void do_shoot (CHAR_DATA *ch, char *argument)
 
 	if(obj==NULL)
 	{
-		send_to_char("You aren't wielding a weapon.\n\r", ch);
+		send_to_char("\tRWARNING:\tn You are not wielding anything.\n\r", ch);
 		return;
 	}
 
 	if(obj->value[0] != WEAPON_FIREARM)
 	{
-		send_to_char("You ain't totin' no gun mister!\n\r",ch);
+		send_to_char("\tRWARNING:\tn You are not wielding a firearm.\n\r",ch);
 		return;
 	}
 
 	if(obj->value[3] <= 0)
 	{
-		send_to_char("*Click* You're out of ammo!\n\r", ch);
+		send_to_char("\tRWARNING:\tn You are out of ammunition.\n\r", ch);
 		WAIT_STATE(ch, 3);
 		return;
 	}
@@ -211,21 +211,23 @@ void shooting (CHAR_DATA *ch, CHAR_DATA *victim, BODY_DATA *target)
 
 	if((ammo = get_obj_index(obj->value[2])) == NULL)
 	{
-		send_to_char("There's something wrong with the ammo...\n\r", ch);
+		send_to_char("\tRWARNING:\tn There is something wrong with the ammunition.\n\r", ch);
 		return;
 	}
 
 	if(obj->value[3] <= 0)
 	{
-		send_to_char("*Click* You're out of ammo!\n\r", ch);
+		send_to_char("\tRWARNING:\tn You are out of ammunition.\n\r", ch);
 		WAIT_STATE(ch, 3);
 		return;
 	}
 
-	if (target != NULL) diff = diff + 3;
+	if (target != NULL) 
+		diff = diff + 3;
+
 	diff = diff + obj->value[1];
-	if(victim->race == race_lookup("faerie")
-			&& !str_cmp(ammo->material, "iron"))
+
+	if(victim->race == race_lookup("faerie") && !str_cmp(ammo->material, "iron"))
 	{
 		dt = attack_table[DAM_IRON].damage;
 		dt1 = TYPE_HIT+DAM_IRON;

@@ -381,12 +381,16 @@ void cleanup_mud(int control)
 	// Start Going through the different lists and cleaning.
 
 	log_string(LOG_ERR, "cleaning character list");
-	for(ch = char_list; ch != NULL; ch = ch_next)
+	while(char_list != NULL) 
 	{
-		ch_next = ch->next;
-
-		extract_char(ch, true);
+		extract_char(char_list,true);
 	}
+	// for(ch = char_list; ch != NULL; ch = ch_next)
+	// {
+	// 	ch_next = ch->next;
+
+	// 	extract_char(ch, true);
+	// }
 
 	log_string(LOG_ERR, "cleaning objects");
 	for(obj = object_list; obj != NULL; obj = obj_next)
@@ -445,12 +449,19 @@ void cleanup_mud(int control)
 	}
 
 	log_string(LOG_ERR, "cleaning active descriptors");
-	for(d = descriptor_list; d != NULL; d = d_next)
+	while((d=descriptor_list)) 
 	{
-		d_next = d->next;
-
-		free_descriptor(d);
+	    descriptor_list = d->next;
+	    free_descriptor(d);
 	}
+
+	// log_string(LOG_ERR, "cleaning active descriptors");
+	// for(d = descriptor_list; d != NULL; d = d_next)
+	// {
+	// 	d_next = d->next;
+
+	// 	free_descriptor(d);
+	// }
 
 	log_string(LOG_ERR, "cleaning background list");
 	for(pbg = bg_list; pbg != NULL; pbg = pbg_next)
@@ -1175,12 +1186,15 @@ void init_descriptor( int control )
 	 */
 	dnew = new_descriptor();
 
-	assert(dnew); // if calloc fails, we should never see this, but, just incase.
+	// if calloc fails, we should never see this, but, just incase.
+	// assert(dnew); 
 
 	dnew->descriptor = desc;
 
 	dnew->pProtocol     = ProtocolCreate();
-	assert(dnew->pProtocol); // if ProtocolCreate fails, then we have an issue, we will assert out!
+	
+	// if ProtocolCreate fails, then we have an issue, we will assert out!
+	// assert(dnew->pProtocol); 
 
 	size = sizeof(sock);
 	if (getpeername( desc, (struct sockaddr *) &sock, (socklen_t *)&size ) < 0)
@@ -5008,12 +5022,32 @@ struct desc_type
 
 const struct desc_type eye_list [] =
 {
-		{"brown"}, {"hazel"}, {"green"}, {"blue"}, {"blue-green"}, {"blue-grey"}, {"grey"}, {"slate grey"}, {"gun metal grey"}, {"ice blue"}, {"sea green"}
+		{"brown"}, 
+		{"hazel"}, 
+		{"green"}, 
+		{"blue"}, 
+		{"blue-green"}, 
+		{"blue-grey"}, 
+		{"grey"}, 
+		{"slate grey"}, 
+		{"gun metal grey"}, 
+		{"ice blue"}, 
+		{"sea green"}
 };
 
 const struct desc_type hcolours [] =
 {
-		{"brown"}, {"black"}, {"blonde"}, {"chestnut"}, {"grey"}, {"silver"}, {"mousy"}, {"white"}, {"streaked"}, {"red"}, {"orange"}
+		{"brown"}, 
+		{"black"}, 
+		{"blonde"}, 
+		{"chestnut"}, 
+		{"grey"}, 
+		{"silver"}, 
+		{"mousy"}, 
+		{"white"}, 
+		{"streaked"}, 
+		{"red"}, 
+		{"orange"}
 };
 
 const struct desc_type htypes [] =

@@ -106,7 +106,7 @@ I 0
 
 #OBJECTS
 #1000
-dinner jacket~
+black dinner jacket~
 a dinner jacket~
 A black dinner jacket is here.~
 In the traditional black, this jacket speaks of style and class. Double
@@ -125,11 +125,11 @@ E
 -2~
 Q 3
 #1001
-dress shirt~
+dress shirt 'dress shirt'~
 a dress shirt~
 A dress shirt is here.~
 With a pleated front and pre-inserted black button-studs and cuff links,
-this handsome shirt is specially designed with the connoisseur in mind.
+this handsome shirt is specially designed with the connoisseur in mind.  
 ~
 cotton~
 11 0 AD
@@ -141,10 +141,10 @@ E
 -2~
 Q 0
 #1002
-bow tie~
+black silk bow tie 'bow tie'~
 a black bow tie~
 A black, silk bow tie is here.~
-This black silk bow tie is the perfect accompaniment to a good tuxedo.
+This black silk bow tie is the perfect accompaniment to a good tuxedo.  
 ~
 silk~
 11 0 AC
@@ -156,11 +156,11 @@ E
 -2~
 Q 0
 #1003
-silk trousers dinner suit black~
+black silk trousers pants~
 black trousers~
 A pair of black, silk trousers is here.~
 Stylishly cut with a ribbon of satin down the outside of each leg, these
-trousers were made to look good in.
+trousers were made to look good in.  
 ~
 silk~
 11 0 AF
@@ -172,7 +172,7 @@ E
 -2~
 Q 0
 #1004
-black leather dress shoes~
+black leather dress shoes 'dress shoes' shoe~
 a pair of black leather dress shoes~
 A pair of black leather dress shoes.~
 A pair of black dinner dress shoes.
@@ -187,14 +187,14 @@ E
 -2~
 Q 0
 #1005
-long black dress~
+long black dress ball gown 'ball gown'~
 a long black ball gown~
 A black satin ball gown is here.~
-This long, black satin dress is slit up the side to allow for much
-easier walking and to show the now traditional bit of leg. Drawing on
-the allure of the woman wearing it and heightening her looks by
-supporting and displaying even the smallest of busts to their best
-effect, this dress certainly enhances the effects of the feminine form.
+This long, black satin dress is slit up the side to allow for much easier
+walking and to show the now traditional bit of leg.  Drawing on the allure
+of the woman wearing it and heightening her looks by supporting and
+displaying even the smallest of busts to their best effect, this dress
+certainly enhances the effects of the feminine form.  
 ~
 satin~
 11 0 AD

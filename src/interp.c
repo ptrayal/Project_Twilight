@@ -734,7 +734,7 @@ void interpret( CHAR_DATA *ch, char *argument )
 	bool found = FALSE;
 	bool exists = FALSE;
 
-	assert(ch);
+	// assert(ch);
 
 	/*
 	* Strip leading spaces.

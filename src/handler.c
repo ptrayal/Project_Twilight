@@ -821,7 +821,7 @@ void reset_char(CHAR_DATA *ch)
  */
 int get_trust( CHAR_DATA *ch )
 {
-	assert(ch);
+	// assert(ch);
 
 	if ( ch->desc != NULL && ch->desc->original != NULL )
 	{
@@ -837,7 +837,7 @@ int get_trust( CHAR_DATA *ch )
  */
 int get_age( CHAR_DATA *ch )
 {
-	assert(ch);
+	// assert(ch);
 
 	if(ch->char_age <= 0)
 	{
@@ -999,53 +999,40 @@ int can_carry_w( CHAR_DATA *ch )
 
 bool is_name ( char *str, char *namelist )
 {
-	char name[MIL]={'\0'};
-	char part[MIL]={'\0'};
+	char name[MAX_INPUT_LENGTH], part[MAX_INPUT_LENGTH];
 	char *list, *string;
 
 	/* fix crash on NULL namelist */
-	if (IS_NULLSTR(namelist))
-	{
+	if (namelist == NULL || namelist[0] == '\0')
 		return FALSE;
-	}
 
 	/* fixed to prevent is_name on "" returning TRUE */
 	if (str[0] == '\0')
-	{
-		return FALSE;
-	}
+	return FALSE;
 
 	string = str;
 	/* we need ALL parts of string to match part of namelist */
 	for ( ; ; )  /* start parsing string */
 	{
-		str = one_argument(str,part);
+	str = one_argument(str,part);
 
-		if (IS_NULLSTR(part) )
-		{
-			return TRUE;
-		}
+	if (part[0] == '\0' )
+		return TRUE;
 
-		/* check to see if this is part of namelist */
-		list = namelist;
-		for ( ; ; )  /* start parsing namelist */
-		{
-			list = one_argument(list,name);
-			if (IS_NULLSTR(name))  /* this name was not found */
-			{
-				return FALSE;
-			}
+	/* check to see if this is part of namelist */
+	list = namelist;
+	for ( ; ; )  /* start parsing namelist */
+	{
+		list = one_argument(list,name);
+		if (name[0] == '\0')  /* this name was not found */
+		return FALSE;
 
-			if (!str_prefix(string,name))
-			{
-				return TRUE; /* full pattern match */
-			}
+		if (!str_prefix(string,name))
+		return TRUE; /* full pattern match */
 
-			if (!str_prefix(part,name))
-			{
-				break;
-			}
-		}
+		if (!str_prefix(part,name))
+		break;
+	}
 	}
 }
 
@@ -2741,12 +2728,13 @@ CHAR_DATA *get_char_oroom( CHAR_DATA *ch, ROOM_INDEX_DATA *room, char *argument 
  */
 CHAR_DATA *get_char_room( CHAR_DATA *ch, char *argument )
 {
-	char arg[MIL]={'\0'};
 	CHAR_DATA *rch;
+	char arg[MIL]={'\0'};
 	int number = 0;
 	int count = 0;
 
 	number = number_argument( argument, arg );
+
 	if ( !str_cmp( arg, "self" ) || !str_prefix( arg, "ch->name" ) )
 	{
 		return ch;
@@ -2791,32 +2779,23 @@ CHAR_DATA *get_char_room( CHAR_DATA *ch, char *argument )
  */
 CHAR_DATA *get_char_world( CHAR_DATA *ch, char *argument )
 {
-	char arg[MIL]={'\0'};
 	CHAR_DATA *wch;
+	char arg[MIL]={'\0'};
 	int number = 0;
 	int count = 0;
 
-	if(argument == NULL)
-	{
-		return NULL;
-	}
-
 	if ( ( wch = get_char_room( ch, argument ) ) != NULL )
-	{
 		return wch;
-	}
 
 	number = number_argument( argument, arg );
+
 	for ( wch = char_list; wch != NULL ; wch = wch->next )
 	{
-		if ( wch->in_room == NULL || !can_see( ch, wch ) ||   !is_name( arg, wch->name ))
-		{
+		if ( wch->in_room == NULL || !can_see( ch, wch ) 
+			||   !is_name( arg, wch->name ) )
 			continue;
-		}
 		if ( ++count == number )
-		{
 			return wch;
-		}
 	}
 
 	return NULL;
@@ -2874,26 +2853,50 @@ OBJ_DATA *get_obj_list( CHAR_DATA *ch, char *argument, OBJ_DATA *list )
  */
 OBJ_DATA *get_obj_carry( CHAR_DATA *ch, char *argument, CHAR_DATA *viewer )
 {
-	char arg[MIL]={'\0'};
 	OBJ_DATA *obj;
+	char arg[MAX_INPUT_LENGTH]={'\0'};
 	int number = 0;
 	int count = 0;
 
 	number = number_argument( argument, arg );
 	for ( obj = ch->carrying; obj != NULL; obj = obj->next_content )
 	{
-		if ( obj->wear_loc == WEAR_NONE && (can_see_obj_main( viewer, obj ) )
-			&& (is_name( arg, obj->name ) || (!str_prefix(arg, "package") && IS_SET(obj->extra2, OBJ_PACKAGED))))
+		if ( obj->wear_loc == WEAR_NONE
+			&&   (can_see_obj( viewer, obj ) ) 
+			&&   is_name( arg, obj->name ) )
 		{
 			if ( ++count == number )
-			{
 				return obj;
-			}
 		}
 	}
 
 	return NULL;
 }
+// OBJ_DATA *get_obj_carry( CHAR_DATA *ch, char *argument, CHAR_DATA *viewer )
+// {
+// 	char arg[MIL]={'\0'};
+// 	OBJ_DATA *obj;
+// 	int number = 0;
+// 	int count = 0;
+
+// 	number = number_argument( argument, arg );
+// 	for ( obj = ch->carrying; obj != NULL; obj = obj->next_content )
+// 	{
+// 		if ( obj->wear_loc == WEAR_NONE && (can_see_obj_main( viewer, obj ) )
+// 			&& (is_name( arg, obj->name ) || (!str_prefix(arg, "package") && IS_SET(obj->extra2, OBJ_PACKAGED)))
+// 			)
+// 		{
+// 			if ( ++count == number )
+// 			{
+// 				return obj;
+// 			}
+// 		}
+// 	}
+
+// 	return NULL;
+// }
+
+
 
 /*
  * Find an obj in player's equipment.
@@ -4740,7 +4743,7 @@ CHAR_DATA *sat_on(OBJ_DATA *obj)
 
 bool LOOKS_DIFFERENT(CHAR_DATA *ch)
 {
-    Assert(ch, "Character was NULL: Crash incoming!");
+    // Assert(ch, "Character was NULL: Crash incoming!");
 
     if(IS_AFFECTED(ch, AFF_OBFUSCATE3))
 		return TRUE;

@@ -1,6 +1,6 @@
 #AREADATA
 Name Shopping Mall~
-Builders Dsarky Rayal~
+Builders Rayal~
 VNUMs 4001 4080
 Credits Dsarky~
 Security 1
@@ -25,8 +25,8 @@ AB 0 50 0 0 0 none
 AHMV ABCDEFGHIJK medium flesh
 A G
 I 0
-Tr 0 **base**~ **base**~
 Tr 0 has arrived~ emote The salesman says "Let me know if I can do anything for you."~
+Tr 0 **base**~ **base**~
 #4002
 salesman senior $f $l~
 $f~
@@ -42,8 +42,8 @@ AB 0 50 0 0 0 none
 AHMV ABCDEFGHIJK medium flesh
 A G
 I 0
-Tr 0 **base**~ **base**~
 Tr 0 has arrived~ emote says, 'Care to try on anything today?' ~
+Tr 0 **base**~ **base**~
 #4003
 $f $l~
 $f~
@@ -59,8 +59,8 @@ AB 0 50 0 0 0 none
 AHMV ABCDEFGHIJK medium flesh
 A G
 I 0
-Tr 0 **base**~ **base**~
 Tr 0 has arrived~ emote The salesperson says "Can I interest you in anything today?"~
+Tr 0 **base**~ **base**~
 #4004
 $f $l knife guy~
 $f $l~
@@ -76,8 +76,8 @@ AB 0 50 0 0 0 none
 AHMV ABCDEFGHIJK medium flesh
 A G
 I 0
-Tr 0 **base**~ **base**~
 Tr 0 has arrived~ emote The salesman says "Welcome.  Now you just let me know when you see something you like."~
+Tr 0 **base**~ **base**~
 #4005
 $f $l assistant shop~
 $f $l~
@@ -178,8 +178,8 @@ ABC 0 25 0 0 0 none
 AHMV ABCDEFGHIJK medium flesh
 A G
 I 0
-Tr 0 **base**~ **base**~
 Tr 0 has arrived~ emote The salesman bellows out 'Hey Champ!  You look like you could use some new shoes!'~
+Tr 0 **base**~ **base**~
 #4011
 $f~
 $f~
@@ -196,11 +196,11 @@ ABC 0 25 0 0 0 none
 AHMV ABCDEFGHIJK medium flesh
 A G
 I 0
-Tr 0 **base**~ **base**~
-Tr 0 buys a movie ticket.~ unlock southemote says, 'Okay, thanks.  Enjoy your show.'open south~
-Tr 0 leaves south.~ close southlock south~
-Tr 0 leaves west.~ close southlock south~
 Tr 0 has arrived.~ close southlock southemote says, 'Ya gotta buy a ticket to go in okay?'~
+Tr 0 leaves west.~ close southlock south~
+Tr 0 leaves south.~ close southlock south~
+Tr 0 buys a movie ticket.~ unlock southemote says, 'Okay, thanks.  Enjoy your show.'open south~
+Tr 0 **base**~ **base**~
 #4012
 $f~
 $f~
@@ -216,8 +216,8 @@ ABC 0 25 0 0 0 none
 AHMV ABCDEFGHIJK medium flesh
 A G
 I 0
-Tr 0 **base**~ **base**~
 Tr 0 has arrived~ emote asks, "Would you like to try our combo today?"~
+Tr 0 **base**~ **base**~
 #4013
 $f~
 $f~

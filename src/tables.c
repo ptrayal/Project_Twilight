@@ -588,17 +588,17 @@ const struct skill_list_entry ability_table [MAX_ABIL] = {
 
 const struct flag_type area_flags[] =
 {
-	{	"none",		AREA_NONE,		FALSE	},
-	{	"added",	AREA_ADDED,		TRUE	},
-	{	"changed",	AREA_CHANGED,	TRUE	},
-	{	"loading",	AREA_LOADING,	FALSE	},
-	{	"slum",		AREA_SLUM,		TRUE	},
-	{	"bohemian",	AREA_BOHEMIAN,	TRUE	},
-	{	"downtown",	AREA_DOWNTOWN,	TRUE	},
+	{	"none",			AREA_NONE,		FALSE	},
+	{	"added",		AREA_ADDED,		TRUE	},
+	{	"changed",		AREA_CHANGED,	TRUE	},
+	{	"loading",		AREA_LOADING,	FALSE	},
+	{	"slum",			AREA_SLUM,		TRUE	},
+	{	"bohemian",		AREA_BOHEMIAN,	TRUE	},
+	{	"downtown",		AREA_DOWNTOWN,	TRUE	},
 	{	"warehouse",	AREA_WAREHOUSE,	TRUE	},
-	{	"suburb",	AREA_SUBURB,	TRUE	},
+	{	"suburb",		AREA_SUBURB,	TRUE	},
 	{	"patrolled",	AREA_PATROLLED,	TRUE	},
-	{	NULL,		0,				0		}
+	{	NULL,			0,				0		}
 };
 
 const struct flag_type sex_flags[] =

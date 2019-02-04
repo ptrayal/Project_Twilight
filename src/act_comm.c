@@ -43,18 +43,15 @@
 #include "lookup.h"
 #include "interp.h"
 
-
-
 /* RT code to delete yourself */
 void do_delete( CHAR_DATA *ch, char *argument)
 {
-
 	CheckCH(ch);
 	CheckChNPC(ch);
 
 	if(ch->desc->editor)
 	{
-		send_to_char("You can't delete yourself while in an editor.\r\n", ch);
+		send_to_char("\tRWARNING:\tn You cannot delete yourself while in an editor.\r\n", ch);
 		return;
 	}
 
@@ -84,7 +81,7 @@ void do_delete( CHAR_DATA *ch, char *argument)
 	}
 
 	send_to_char("Type delete again to confirm this command.\r\n",ch);
-	send_to_char("\tYWARNING: this command is irreversible.\tn\r\n",ch);
+	send_to_char("\tRWARNING:\tn This command is irreversible.\tn\r\n",ch);
 	send_to_char("Typing delete with an argument will undo delete status.\r\n", ch);
 	ch->pcdata->confirm_delete = TRUE;
 	wiznet("\tY[WIZNET]\tn $N is contemplating deletion.",ch,NULL,0,0,get_trust(ch));
@@ -469,17 +466,6 @@ void do_tips( CHAR_DATA *ch, char *argument)
 		send_to_char( "\t[U10148/*] Lost?  Try \t(step newbie school\t) to get back to the newbie school.\n\r", ch);
 	}
 
-	// Brandon - This is the old tips command.
-	// if (IS_SET(ch->comm,COMM_TIPS))
-	// {
-	// 	send_to_char("You turn off the tip feed.\n\r",ch);
-	// 	REMOVE_BIT(ch->comm,COMM_TIPS);
-	// }
-	// else
-	// {
-	// 	send_to_char("You turn on the tip feed.\n\r",ch);
-	// 	SET_BIT(ch->comm,COMM_TIPS);
-	// }
 }
 
 /* No gossiping in PT, just yelling. */
@@ -651,7 +637,7 @@ void do_clantalk( CHAR_DATA *ch, char *argument )
 
 	if (!is_clan(ch) || clan_table[ch->clan].independent)
 	{
-		send_to_char("You aren't in a clan.\n\r",ch);
+		send_to_char("\tRWARNING:\tn You are not in a clan.\n\r",ch);
 		return;
 	}
 	if ( IS_NULLSTR(argument) )
@@ -922,9 +908,11 @@ void do_think( CHAR_DATA *ch, char *argument )
 
 void do_say( CHAR_DATA *ch, char *argument )
 {
-	char buf[4*MSL]={'\0'};
 	CHAR_DATA *rch, *rch_next;
+	char buf[4*MSL]={'\0'};
+
 	CheckCH(ch);
+
 	if ( IS_NULLSTR(argument) )
 	{
 		send_to_char( "Say what?\n\r", ch );
@@ -974,9 +962,9 @@ void do_say( CHAR_DATA *ch, char *argument )
 
 void do_dsay( CHAR_DATA *ch, char *argument )
 {
-	char buf[4*MSL]={'\0'};
 	CHAR_DATA *rch, *rch_next;
 	CHAR_DATA *victim;
+	char buf[4*MSL]={'\0'};
 	char arg[MIL]={'\0'};
 	char string[MSL]={'\0'};
 	char *name;
@@ -1063,9 +1051,9 @@ void do_dsay( CHAR_DATA *ch, char *argument )
 
 void do_whisper( CHAR_DATA *ch, char *argument )
 {
-	char buf[4*MSL]={'\0'};
 	CHAR_DATA *rch;
 	CHAR_DATA *victim;
+	char buf[4*MSL]={'\0'};
 	char arg[MIL]={'\0'};
 	char string[MSL]={'\0'};
 	char *name;
@@ -1173,8 +1161,8 @@ bool OWNS_PHONE (CHAR_DATA *ch)
 
 void do_tell( CHAR_DATA *ch, char *argument )
 {
-	char arg[MIL]={'\0'};
 	CHAR_DATA *victim = NULL;
+	char arg[MIL]={'\0'};
 
 	CheckCH(ch);
 
@@ -1257,8 +1245,8 @@ void do_tell( CHAR_DATA *ch, char *argument )
 
 void do_call( CHAR_DATA *ch, char *argument )
 {
-	char arg[MIL]={'\0'};
 	CHAR_DATA *victim = NULL;
+	char arg[MIL]={'\0'};
 
 	CheckCH(ch);
 
@@ -1427,8 +1415,8 @@ void do_call( CHAR_DATA *ch, char *argument )
 /* Speaking to sleeping characters anywhere in the mud. */
 void do_dreamspeak( CHAR_DATA *ch, char *argument )
 {
-	char arg[MIL]={'\0'};
 	CHAR_DATA *victim = NULL;
+	char arg[MIL]={'\0'};
 
 	CheckCH(ch);
 
@@ -1497,8 +1485,8 @@ void do_dreamspeak( CHAR_DATA *ch, char *argument )
 /* Speaking to characters anywhere in the mud. */
 void do_mentalspeech( CHAR_DATA *ch, char *argument )
 {
-	char arg[MIL]={'\0'};
 	CHAR_DATA *victim = NULL;
+	char arg[MIL]={'\0'};
 
 	CheckCH(ch);
 

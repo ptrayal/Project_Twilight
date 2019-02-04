@@ -1,0 +1,31 @@
+[[1;37m12:55:35[0;00m] Compiling db.c ...
+db.c: In function ‘new_load_area’:
+db.c:748:12: warning: variable ‘fMatch’ set but not used [-Wunused-but-set-variable]
+  bool      fMatch;
+            ^~~~~~
+
+[[1;37m12:55:54[0;00m] Compiling olc.c ...
+olc.c: In function ‘rsedit’:
+olc.c:1375:9: warning: variable ‘pScript’ set but not used [-Wunused-but-set-variable]
+  REACT *pScript;
+         ^~~~~~~
+olc.c: In function ‘hedit’:
+olc.c:1417:13: warning: variable ‘pHelp’ set but not used [-Wunused-but-set-variable]
+  HELP_DATA *pHelp;
+             ^~~~~
+olc.c: In function ‘kbedit’:
+olc.c:1473:13: warning: variable ‘pNote’ set but not used [-Wunused-but-set-variable]
+  NOTE_DATA *pNote;
+             ^~~~~
+
+[[1;37m12:55:59[0;00m] Compiling olc_act.c ...
+olc_act.c: In function ‘oedit_ed’:
+olc_act.c:3689:20: warning: variable ‘ped’ set but not used [-Wunused-but-set-variable]
+  EXTRA_DESCR_DATA *ped = NULL;
+                    ^~~
+
+[[1;37m12:56:10[0;00m] Compiling olc_save.c ...
+olc_save.c: In function ‘save_resets’:
+olc_save.c:627:18: warning: variable ‘pLastObj’ set but not used [-Wunused-but-set-variable]
+  OBJ_INDEX_DATA *pLastObj;
+                  ^~~~~~~~

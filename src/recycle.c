@@ -957,7 +957,7 @@ void free_char (CHAR_DATA *ch)
 	PURGE_DATA(ch->nature);
 	PURGE_DATA(ch->oldname);
 	PURGE_DATA(ch->pack);
-	PURGE_DATA(ch->pcdata);
+	// PURGE_DATA(ch->pcdata);
 	PURGE_DATA(ch->pnote);
 	PURGE_DATA(ch->prefix);
 	PURGE_DATA(ch->profession);
@@ -966,6 +966,9 @@ void free_char (CHAR_DATA *ch)
 	PURGE_DATA(ch->surname);
 	PURGE_DATA(ch->switch_desc);
 	PURGE_DATA(ch->to_learn);
+
+	if(ch->pcdata)
+		free_pcdata(ch->pcdata);
 
 	ch->ghouled_by = NULL;
 	ch->married = NULL;
@@ -1459,7 +1462,8 @@ void free_room_index( ROOM_INDEX_DATA *pRoom )
 	}
 */
 
-	assert(orig_room == pRoom);	// assert fail if we are not the same! (did we corrupt)
+	// assert fail if we are not the same! (did we corrupt)
+	// assert(orig_room == pRoom);	
 
 	PURGE_DATA(orig_room);
 	return;
