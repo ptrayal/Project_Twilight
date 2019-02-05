@@ -2619,7 +2619,7 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 						if (!str_cmp(argument,"done"))
 						{
 							/*	    free_gen_data(ch->gen_data);
-	    ch->gen_data = NULL; */
+								    ch->gen_data = NULL; */
 							if(ch->gen_data->stat_dots[0] != 0)
 							{
 								write_to_buffer(d, "But you still have dots left to spend!", 0);
@@ -2627,7 +2627,8 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 							}
 							else
 							{
-								if(ch->race == race_lookup("werewolf")) {
+								if(ch->race == race_lookup("werewolf")) 
+								{
 									write_to_buffer( d, Format("Auspice: %10s Breed: %10s\n\r", auspice_table[ch->auspice].name, breed_table[ch->breed].name), 0 );
 								}
 								write_to_buffer( d,

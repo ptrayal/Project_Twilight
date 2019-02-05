@@ -2784,6 +2784,11 @@ CHAR_DATA *get_char_world( CHAR_DATA *ch, char *argument )
 	int number = 0;
 	int count = 0;
 
+	if(argument == NULL)
+	{
+		return NULL;
+	}
+
 	if ( ( wch = get_char_room( ch, argument ) ) != NULL )
 		return wch;
 
