@@ -167,8 +167,8 @@ char *format_obj_to_char( OBJ_DATA *obj, CHAR_DATA *ch, bool fShort )
 	if(strlen(buf) <= 0)
 	{
 		strncat(buf, "This object has no description.\n\r", sizeof(buf) - strlen(buf) - 1);
+		log_string(LOG_BUG, Format("Object VNUM %d has no description.", obj->pIndexData->vnum));
 	}
-	log_string(LOG_BUG, Format("Object VNUM %d has no description.", obj->pIndexData->vnum));
 
 	return buf;
 }
@@ -1134,7 +1134,7 @@ void do_look( CHAR_DATA *ch, char *argument )
 		}
 
 		// Show the exits.  Need to colorize.
-		if ( !IS_NPC(ch) && IS_SET(ch->act, PLR_AUTOEXIT) )
+		if ( IS_SET(ch->plr_flags, PLR_AUTOEXIT) )
 		{
 			send_to_char("\n\r",ch);
 			do_function(ch, &do_exits, "auto" );
