@@ -373,14 +373,14 @@ void cleanup_mud(int control)
 	int iHash = 0;
 	int mob_count = 0, obj_count = 0, room_count = 0;
 
-	log_string(LOG_ERR, "Project Twilight is shutting down and cleaning up its memory.");
+	log_string(LOG_GAME, "Project Twilight is shutting down and cleaning up its memory.");
 
 	close(control);
 	control = -1;
 
 	// Start Going through the different lists and cleaning.
 
-	log_string(LOG_ERR, "cleaning character list");
+	log_string(LOG_GAME, "cleaning character list");
 	while(char_list != NULL) 
 	{
 		extract_char(char_list,true);
@@ -392,7 +392,7 @@ void cleanup_mud(int control)
 	// 	extract_char(ch, true);
 	// }
 
-	log_string(LOG_ERR, "cleaning objects");
+	log_string(LOG_GAME, "cleaning objects");
 	for(obj = object_list; obj != NULL; obj = obj_next)
 	{
 		obj_next = obj->next;
@@ -400,7 +400,7 @@ void cleanup_mud(int control)
 		extract_obj(obj);
 	}
 
-	log_string(LOG_ERR, "cleaning helpfiles");
+	log_string(LOG_GAME, "cleaning helpfiles");
 	for(help = help_list; help; help = help_next)
 	{
 		help_next = help->next;
@@ -408,7 +408,7 @@ void cleanup_mud(int control)
 		free_help(help);
 	}
 
-	log_string(LOG_ERR, "cleaning tips");
+	log_string(LOG_GAME, "cleaning tips");
 	for(help = tip_list; help; help = help_next)
 	{
 		help_next = help->next;
@@ -416,7 +416,7 @@ void cleanup_mud(int control)
 		free_help(help);
 	}
 
-	log_string(LOG_ERR, "cleaning packs");
+	log_string(LOG_GAME, "cleaning packs");
 	for(pack = pack_list; pack != NULL; pack = pack_next)
 	{
 		pack_next = pack->next;
@@ -424,7 +424,7 @@ void cleanup_mud(int control)
 		free_pack(pack);
 	}
 
-	log_string(LOG_ERR, "cleaning organizations");
+	log_string(LOG_GAME, "cleaning organizations");
 	for(org = org_list; org != NULL; org = org_next)
 	{
 		org_next = org->next;
@@ -432,7 +432,7 @@ void cleanup_mud(int control)
 		free_org(org);
 	}
 
-	log_string(LOG_ERR, "cleaning stocks");
+	log_string(LOG_GAME, "cleaning stocks");
 	for(stock = stock_list; stock != NULL; stock = stock_next)
 	{
 		stock_next = stock->next;
@@ -440,7 +440,7 @@ void cleanup_mud(int control)
 		free_stock(stock);
 	}
 
-	log_string(LOG_ERR, "cleaning news papers");
+	log_string(LOG_GAME, "cleaning news papers");
 	for(paper = paper_list; paper != NULL; paper = paper_next)
 	{
 		paper_next = paper->next;
@@ -448,14 +448,14 @@ void cleanup_mud(int control)
 		free_newspaper(paper);
 	}
 
-	log_string(LOG_ERR, "cleaning active descriptors");
+	log_string(LOG_GAME, "cleaning active descriptors");
 	while((d=descriptor_list)) 
 	{
 	    descriptor_list = d->next;
 	    free_descriptor(d);
 	}
 
-	// log_string(LOG_ERR, "cleaning active descriptors");
+	// log_string(LOG_GAME, "cleaning active descriptors");
 	// for(d = descriptor_list; d != NULL; d = d_next)
 	// {
 	// 	d_next = d->next;
@@ -463,7 +463,7 @@ void cleanup_mud(int control)
 	// 	free_descriptor(d);
 	// }
 
-	log_string(LOG_ERR, "cleaning background list");
+	log_string(LOG_GAME, "cleaning background list");
 	for(pbg = bg_list; pbg != NULL; pbg = pbg_next)
 	{
 		pbg_next = pbg->next;
@@ -471,7 +471,7 @@ void cleanup_mud(int control)
 		free_note(pbg);
 	}
 
-	log_string(LOG_ERR, "Cleaning knowledge list");
+	log_string(LOG_GAME, "Cleaning knowledge list");
 	for(pbg = know_list; pbg != NULL; pbg = pbg_next)
 	{
 		pbg_next = pbg->next;
@@ -479,7 +479,7 @@ void cleanup_mud(int control)
 		free_note(pbg);
 	}
 
-	log_string(LOG_ERR, "Cleaning news list");
+	log_string(LOG_GAME, "Cleaning news list");
 	for(pnote = news_list; pnote != NULL; pnote = pnote_next)
 	{
 		pnote_next = pnote->next;
@@ -487,7 +487,7 @@ void cleanup_mud(int control)
 		free_note(pnote);
 	}
 
-	log_string(LOG_ERR, "Cleaning out index hashes.");
+	log_string(LOG_GAME, "Cleaning out index hashes.");
 	for( iHash = 0; iHash < MAX_KEY_HASH; iHash++ )
 	{
 		MOB_INDEX_DATA *next_mob_index;
@@ -569,7 +569,7 @@ void cleanup_mud(int control)
 		}
 	}
 
-	log_string(LOG_ERR, "Cleaning out area list");
+	log_string(LOG_GAME, "Cleaning out area list");
 	for ( pArea = area_first; pArea != NULL; pArea = pArea_next )
 	{
 		pArea_next = pArea->next;
@@ -577,7 +577,7 @@ void cleanup_mud(int control)
 		free_area(pArea);
 	}
 
-	log_string(LOG_ERR, "cleaning out remaining shop data");
+	log_string(LOG_GAME, "cleaning out remaining shop data");
 	for(pShop = shop_list; pShop != NULL; pShop = pShop_next )
 	{
 		pShop_next = pShop->next;
@@ -585,17 +585,18 @@ void cleanup_mud(int control)
 		free_shop(pShop);
 	}
 
-	log_string(LOG_ERR, "cleaning out social table.");
+	log_string(LOG_GAME, "cleaning out social table.");
 	purge_socials();
 
-	log_string(LOG_ERR, "cleaning out plots");
-	for(pPlot = plot_list; pPlot; pPlot = pPlot_next) {
+	log_string(LOG_GAME, "cleaning out plots");
+	for(pPlot = plot_list; pPlot; pPlot = pPlot_next) 
+	{
 		pPlot_next = pPlot->next;
 
 		free_plot(pPlot);
 	}
 
-	log_string(LOG_ERR, "Cleaning out events / scripts / actors ");
+	log_string(LOG_GAME, "Cleaning out events / scripts / actors ");
 	for(pEvent = event_list; pEvent; pEvent = pEvent_next)
 	{
 		pEvent_next = pEvent->next;
@@ -603,6 +604,7 @@ void cleanup_mud(int control)
 		free_event(pEvent);
 	}
 
+	log_string(LOG_GAME, "purgeExtractedWorldData about to launch ");
 	purgeExtractedWorldData();
 	log_string(LOG_GAME, "Project Twilight has completed its cleanup procedure and may now shutdown.");
 	return;

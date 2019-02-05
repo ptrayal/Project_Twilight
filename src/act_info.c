@@ -1068,8 +1068,21 @@ void do_look( CHAR_DATA *ch, char *argument )
 		return;
 	}
 
+// 	/**********************************
+// 	* Check if the person looking is  *
+// 	* can see in the darkness.        *
+// 	***********************************/
+// 	if ( !IS_NPC(ch)
+// 			&&   !IS_SET(ch->plr_flags, PLR_HOLYLIGHT)
+// 			&&   !IS_AFFECTED(ch, AFF_DARK_VISION)
+// 			&&   room_is_dark( looking ) )
+// 	{
+// 		send_to_char( "It is pitch black ... \n\r", ch );
+// 		show_char_to_char( looking->people, ch );
+// 		return;
+// 	}
 	if ( !IS_NPC(ch) 
-		&& !IS_SET(ch->act, PLR_HOLYLIGHT)
+		&& !IS_SET(ch->plr_flags, PLR_HOLYLIGHT)
 		&& !IS_AFFECTED(ch, AFF_DARK_VISION)
 		&& room_is_dark( ch->in_room ) )
 	{

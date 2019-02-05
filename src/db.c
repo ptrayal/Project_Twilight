@@ -3860,9 +3860,9 @@ ROOM_INDEX_DATA *get_room_index( int vnum )
 {
 	ROOM_INDEX_DATA *pRoomIndex;
 
-	// this simply won't exist!
-	if(vnum == -1)
-		return NULL;
+	// // this simply won't exist!
+	// if(vnum == -1)
+	// 	return NULL;
 
 	for ( pRoomIndex  = room_index_hash[vnum % MAX_KEY_HASH];
 			pRoomIndex != NULL;
