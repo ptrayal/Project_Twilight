@@ -1267,7 +1267,6 @@ void init_descriptor( int control )
 #endif
 
 
-
 void close_socket( DESCRIPTOR_DATA *dclose )
 {
 	CHAR_DATA *ch;
@@ -1336,7 +1335,6 @@ void close_socket( DESCRIPTOR_DATA *dclose )
 #endif
 	return;
 }
-
 
 
 bool read_from_descriptor( DESCRIPTOR_DATA *d )
@@ -1431,7 +1429,6 @@ bool read_from_descriptor( DESCRIPTOR_DATA *d )
 }
 
 
-
 /*
  * Transfer one line from input buffer to input line.
  */
@@ -1443,15 +1440,15 @@ void read_from_buffer( DESCRIPTOR_DATA *d )
      * Hold horses if pending command already.
      */
     if ( !IS_NULLSTR(d->incomm) )
-	return;
+		return;
 
     /*
      * Look for at least one new line.
      */
     for ( i = 0; d->inbuf[i] != '\n' && d->inbuf[i] != '\r'; i++ )
     {
-	if ( d->inbuf[i] == '\0' )
-	    return;
+		if ( d->inbuf[i] == '\0' )
+		    return;
     }
 
     /*
@@ -1540,7 +1537,6 @@ void read_from_buffer( DESCRIPTOR_DATA *d )
 	;
     return;
 }
-
 
 
 /*
@@ -1819,7 +1815,6 @@ void bust_a_prompt( CHAR_DATA *ch )
 }
 
 
-
 /*
  * Append onto an output buffer.
  */
@@ -1885,7 +1880,6 @@ void write_to_buffer( DESCRIPTOR_DATA *d, const char *txt, int length )
 }
 
 
-
 /*
  * Lowest level output function.
  * Write a block of text to the file descriptor.
@@ -1915,7 +1909,6 @@ bool write_to_descriptor( int desc, char *txt, int length )
 
     return TRUE;
 }
-
 
 
 /*
@@ -2348,15 +2341,12 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 					{
 						write_to_buffer(d,"\tRThat is not a valid race.\tn\n\r",0);
 						write_to_buffer(d,"\tWThe following races are available:\tn\n\r",0);
-						for ( race = 1; pc_race_table[race].name != NULL; race++ )
-						{
-							if (!race_table[race].pc_race)
-								break;
-							write_to_buffer(d,pc_race_table[race].name,0);
-							write_to_buffer(d,"\n\r",1);
-						}
-						write_to_buffer(d, "\n\r",0);
-						write_to_buffer(d, "\tWWhat is your race (\tYhelp for more information\tW)?\tn\n\r",0);
+						write_to_buffer(d,"[*] Human - You are a human. [\t<send href='human'> Select Human\t</send> | \t<send href='help human'>help Human\t</send>]\n\r",0);
+						write_to_buffer(d,"[*] Vampire - One of the Kindred. [\t<send href='vampire'> Select Vampire\t</send> | \t<send href='help vampire'>help Vampire\t</send>]\n\r",0);
+						write_to_buffer(d,"[*] Werewolf - One of the Garou. [\t<send href='werewolf'> Select Werewolf\t</send> | \t<send href='help werewolf'>help Werewolf\t</send>]\n\r",0);
+
+						write_to_buffer(d,"\n\r",0);
+						write_to_buffer(d,"\tWPlease select your race (\tYhelp for more information\tW)?\tn\n\r",0);
 						break;
 					}
 
@@ -2404,18 +2394,23 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 							return;
 					}
 
-					if(ch->race == race_lookup("werewolf")) {
+					if(ch->race == race_lookup("werewolf")) 
+					{
 						write_to_buffer( d, Format("\tGAuspice: %10s\n\rBreed: %10s\tn\n\r", auspice_table[ch->auspice].name, breed_table[ch->breed].name), 0 );
 					}
-					strncpy( buf, "\tWSelect a clan\tn\n\r[", sizeof(buf));
+					// strncpy( buf, "\tWSelect a clan\tn\n\r[", sizeof(buf));
+					write_to_buffer( d, "\tWSelect a clan\tn\n\r", 0);
+					write_to_buffer( d, "\tWPlease note that if you click the select button, there is no undo.\tn\n\r", 0);
 					for ( iClass = 1; iClass < MAX_CLAN; iClass++ )
 					{
-						if (IS_CLASS_AVAILABLE(ch->race,iClass)) {
-							strncat( buf, capitalize(clan_table[iClass].name), sizeof(buf) - strlen(buf) - 1 );
-							strncat( buf, ", ", sizeof(buf) - strlen(buf) - 1 );
+						if (IS_CLASS_AVAILABLE(ch->race,iClass)) 
+						{
+							// strncat( buf, capitalize(clan_table[iClass].name), sizeof(buf) - strlen(buf) - 1 );
+							// strncat( buf, ", ", sizeof(buf) - strlen(buf) - 1 );
+							write_to_buffer(d, Format("%-20s [ \t<send href='%s'>Select\t</send> ]\n\r", capitalize(clan_table[iClass].name), clan_table[iClass].name ), 0);
 						}
 					}
-					strncat( buf, "]: \n\r\n\r", sizeof(buf) - strlen(buf) - 1 );
+					strncat( buf, "\n\r\n\r", sizeof(buf) - strlen(buf) - 1 );
 					write_to_buffer( d, buf, 0 );
 					d->connected = CON_GET_NEW_CLAN;
 					break;
@@ -2426,12 +2421,15 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 						if ( iClass == -1 )
 						{
 							write_to_buffer( d, "\tRThat's not a clan.\tn\n\r", 0 );
-							strncpy( buf, "\tWAvailable clans are:\tn\n\r[", sizeof(buf));
+							write_to_buffer( d, "\tWSelect a clan\tn\n\r", 0);
+							write_to_buffer( d, "\tWPlease note that if you click the select button, there is no undo.\tn\n\r", 0);
 							for ( iClass = 1; iClass < MAX_CLAN; iClass++ )
 							{
-								if (IS_CLASS_AVAILABLE(ch->race,iClass)) {
-									strncat( buf, capitalize(clan_table[iClass].name), sizeof(buf) - strlen(buf) - 1 );
-									strncat( buf, ", ", sizeof(buf) - strlen(buf) - 1 );
+								if (IS_CLASS_AVAILABLE(ch->race,iClass)) 
+								{
+									write_to_buffer(d, Format("%-20s [ \t<send href='%s'>Select\t</send> ]\n\r", capitalize(clan_table[iClass].name), clan_table[iClass].name ), 0);
+									// strncat( buf, capitalize(clan_table[iClass].name), sizeof(buf) - strlen(buf) - 1 );
+									// strncat( buf, ", ", sizeof(buf) - strlen(buf) - 1 );
 								}
 							}
 							strncat( buf, "]: \n\r\n\r\tWPlease select a clan.\tn", sizeof(buf) - strlen(buf) - 1 );
@@ -3350,7 +3348,6 @@ bool check_parse_name( char *name )
 
 	return TRUE;
 }
-
 
 
 /*
@@ -4565,7 +4562,7 @@ bool parse_gen_mental(CHAR_DATA *ch,char *argument)
 			return TRUE;
 		}
 
-		send_to_char("No attributes by that name...\n\r",ch);
+		send_to_char("No attributes by that name.\n\r",ch);
 		return TRUE;
 	}
 
@@ -4665,7 +4662,7 @@ bool parse_gen_talents(CHAR_DATA *ch,char *argument)
 	    }
 	}
 
-	send_to_char("No ability by that name...\n\r",ch);
+	send_to_char("No ability by that name.\n\r",ch);
 	return TRUE;
     }
 
@@ -4703,7 +4700,7 @@ bool parse_gen_talents(CHAR_DATA *ch,char *argument)
 	    if(IS_ATTRIB_AVAILABLE(ch->race, i))
 	    {
 	    if(i%3 == 0) send_to_char("\n\r", ch);
-			send_to_char(Format("%-10s: %1d  [\t<send href='add %s'>add\t</send> | \t<send href='minus %s'>minus\t</send>]\n\r",capitalize(stat_table[i].name), ch->perm_stat[i], stat_table[i].name, stat_table[i].name),ch );
+			send_to_char(Format("%-10s: %1d  [\t<send href='add %s'>add\t</send> | \t<send href='minus %s'>minus\t</send>]\n\r",capitalize(ability_table[i].name), ch->ability[i].value, ability_table[i].name, ability_table[i].name),ch );
 	    }
 	}
 	send_to_char("\n\r", ch);
@@ -4971,11 +4968,12 @@ bool parse_gen_virtues(CHAR_DATA *ch,char *argument)
 
 			ch->gen_data->virtue_dots -= 1;
 			ch->virtues[sn] += 1;
-			send_to_char(Format("%s : %d\n\r",virtue_table[sn].name, ch->virtues[sn]),ch);
+			// send_to_char(Format("%s : %d \n\r",virtue_table[sn].name, ch->virtues[sn]),ch);
+			send_to_char(Format("%-12s: %1d  [\t<send href='add %s'>add\t</send> | \t<send href='minus %s'>minus\t</send>]\n\r",capitalize(virtue_table[sn].name), ch->virtues[sn], virtue_table[sn].name, virtue_table[sn].name),ch );	
 			return TRUE;
 		}
 
-		send_to_char("No attributes by that name...\n\r",ch);
+		send_to_char("No attributes by that name.\n\r",ch);
 		return TRUE;
 	}
 
@@ -4992,7 +4990,8 @@ bool parse_gen_virtues(CHAR_DATA *ch,char *argument)
 		{
 			ch->gen_data->virtue_dots += 1;
 			ch->virtues[sn] -= 1;
-			send_to_char(Format("%s : %d\n\r",virtue_table[sn].name, ch->virtues[sn]),ch);
+			// send_to_char(Format("%s : %d\n\r",virtue_table[sn].name, ch->virtues[sn]),ch);
+			send_to_char(Format("%-12s: %1d  [\t<send href='add %s'>add\t</send> | \t<send href='minus %s'>minus\t</send>]\n\r",capitalize(virtue_table[sn].name), ch->virtues[sn], virtue_table[sn].name, virtue_table[sn].name),ch );	
 			return TRUE;
 		}
 
@@ -5010,7 +5009,8 @@ bool parse_gen_virtues(CHAR_DATA *ch,char *argument)
 	{
 		for(i = 0; /*virtue_table[i].name != NULL*/i < 3; i++)
 		{
-			send_to_char(Format("%s : %d ",virtue_table[i].name, ch->virtues[i]),ch);
+			// send_to_char(Format("%s : %d\n\r",virtue_table[i].name, ch->virtues[i]),ch);
+			send_to_char(Format("%-12s: %1d  [\t<send href='add %s'>add\t</send> | \t<send href='minus %s'>minus\t</send>]\n\r",capitalize(virtue_table[i].name), ch->virtues[i], virtue_table[i].name, virtue_table[i].name),ch );	
 		}
 		send_to_char("\n\r", ch);
 		return TRUE;
@@ -5252,9 +5252,9 @@ void confirm_new_password(DESCRIPTOR_DATA *d, char *argument)
 
 	ProtocolNoEcho( d, false );
 	write_to_buffer(d,"\tWThe following races are available:\tn\n\r",0);
-	write_to_buffer(d,"[*] Human - You are a human who belongs to one of the various organizations.\n\r",0);
-	write_to_buffer(d,"[*] Vampire - One of the Kindred.\n\r",0);
-	write_to_buffer(d,"[*] Werewolf - One of the Garou.\n\r",0);
+	write_to_buffer(d, "[*] Human - You are a human. [\t<send href='human'> Select Human\t</send> | \t<send href='help human'>help Human\t</send>]\n\r",0);
+	write_to_buffer(d, "[*] Vampire - One of the Kindred. [\t<send href='vampire'> Select Vampire\t</send> | \t<send href='help vampire'>help Vampire\t</send>]\n\r",0);
+	write_to_buffer(d, "[*] Werewolf - One of the Garou. [\t<send href='werewolf'> Select Werewolf\t</send> | \t<send href='help werewolf'>help Werewolf\t</send>]\n\r",0);
 
 	write_to_buffer(d,"\n\r",0);
 	write_to_buffer(d,"\tWPlease select your race (\tYhelp for more information\tW)?\tn\n\r",0);

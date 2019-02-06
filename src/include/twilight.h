@@ -164,7 +164,7 @@ typedef	int  BLD_FUN	args( ( CHAR_DATA *ch, char *argument, int type,
 #define MAX_GROUP				30
 #define MAX_IN_GROUP			15
 #define MAX_ALIAS				5
-#define MAX_CLAN				31
+#define MAX_CLAN				30
 #define MAX_DAMAGE_MESSAGE		41
 #define MAX_LEVEL				5
 #define LEVEL_IMMORTAL			(MAX_LEVEL - 3)

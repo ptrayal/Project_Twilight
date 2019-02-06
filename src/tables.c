@@ -36,9 +36,6 @@ const struct clan_type clan_table[MAX_CLAN] =
 	{	"brujah",	"BRUJ ",	FALSE,	VA,	-1,
 	{DISC_CELERITY, DISC_POTENCE, DISC_PRESENCE},	"",	""  },
 
-	{	"child of cacophony",	"CACO ",	FALSE,	VA,	-1,
-	{DISC_FORTITUDE, DISC_MELPOMINEE, DISC_PRESENCE},	"",	""  },
-
 	{	"gangrel",	"GANG ",	FALSE,	VA,	-1,
 	{DISC_PROTEAN, DISC_ANIMALISM, DISC_FORTITUDE},	"",	""  },
 
