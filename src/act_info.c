@@ -1014,396 +1014,32 @@ int get_door(CHAR_DATA *ch, char *argument)
 }
 
 
-void do_look( CHAR_DATA *ch, char *argument )
-{
-	EXIT_DATA *pexit;
-	CHAR_DATA *victim;
-	OBJ_DATA *obj;
-	char buf  [MSL] = {'\0'};
-	char arg1 [MIL] = {'\0'};
-	char arg2 [MIL] = {'\0'};
-	char arg3 [MIL] = {'\0'};
-	char *pdesc;
-	int door = 0;
-	int number = 0;
-	int count = 0;
-
-	if ( ch->desc == NULL )
-		return;
-
-	if ( ch->position < P_SLEEP )
-	{
-		send_to_char( "You can't see anything but stars!\n\r", ch );
-		return;
-	}
-
-	if ( ch->position == P_SLEEP )
-	{
-		send_to_char( "You can't see anything, you're sleeping!\n\r", ch );
-		return;
-	}
-
-	/**********************************
-	* Check if the person looking is  *
-	* sleeping and ACT2_ASTRAL.       *
-	***********************************/
-	if ( ch->position == P_SLEEP && !IS_SET(ch->act2, ACT2_ASTRAL))
-	{
-		send_to_char("Your dreams are filled with nightmarish images!\n\r",ch);
-		return;
-	}
-
-	/**********************************
-	* Check if the person looking is  *
-	* currently Earthmelded.          *
-	***********************************/
-	if (IS_SET(ch->affected_by2, AFF2_EARTHMELD))
-	{
-		send_to_char("It's dark... really dark...\n\r", ch);
-		return;
-	}
-
-	if ( !check_blind( ch ) )
-	{
-		return;
-	}
-
-// 	/**********************************
-// 	* Check if the person looking is  *
-// 	* can see in the darkness.        *
-// 	***********************************/
-// 	if ( !IS_NPC(ch)
-// 			&&   !IS_SET(ch->plr_flags, PLR_HOLYLIGHT)
-// 			&&   !IS_AFFECTED(ch, AFF_DARK_VISION)
-// 			&&   room_is_dark( looking ) )
-// 	{
-// 		send_to_char( "It is pitch black ... \n\r", ch );
-// 		show_char_to_char( looking->people, ch );
-// 		return;
-// 	}
-	if ( !IS_NPC(ch) 
-		&& !IS_SET(ch->plr_flags, PLR_HOLYLIGHT)
-		&& !IS_AFFECTED(ch, AFF_DARK_VISION)
-		&& room_is_dark( ch->in_room ) )
-	{
-		send_to_char( "It is pitch black ... \n\r", ch );
-		show_char_to_char( ch->in_room->people, ch );
-		return;
-	}
-
-	argument = one_argument( argument, arg1 );
-	argument = one_argument( argument, arg2 );
-	number = number_argument(arg1,arg3);
-
-	if ( IS_NULLSTR(arg1) || !str_cmp( arg1, "auto" ) )
-	{
-		/* 'look' or 'look auto' */
-
-		send_to_char( "\n\r", ch );
-
-		/*************************************
-		 * If the character is in the Umbra, *
-		 * show the Umbral room name.        *
-		 *************************************/
-		if(IS_SET(ch->act,ACT_UMBRA))
-		{
-			send_to_char( Format("\tW%s\tn", ch->in_room->uname), ch );
-
-			// Show the Room number.
-			if ( (IS_ADMIN(ch) && (IS_NPC(ch) || IS_SET(ch->act,PLR_HOLYLIGHT)))
-				|| IS_BUILDER(ch, ch->in_room->area) )
-			{
-				send_to_char( Format(" \tW[\tGRoom %d\tW]\tn",ch->in_room->vnum),ch);
-			}
-			send_to_char( "\n\r", ch );
-
-			if ( IS_NULLSTR(arg1) || ( !IS_NPC(ch) && !IS_SET(ch->comm, COMM_BRIEF) ) )
-			{
-				send_to_char( "\tB", ch);
-				send_to_char( ch->in_room->udescription, ch );
-				send_to_char( "\tn", ch);
-			}
-		}
-		else
-		{
-			send_to_char( Format("\tW%s\tn", ch->in_room->name), ch );
-
-			// Show the Room number.
-			if ( (IS_ADMIN(ch) && (IS_NPC(ch) || IS_SET(ch->act,PLR_HOLYLIGHT)))
-				|| IS_BUILDER(ch, ch->in_room->area) )
-			{
-				send_to_char( Format(" \tW[\tGRoom %d\tW]\tn",ch->in_room->vnum),ch);
-			}
-
-			send_to_char( "\n\r", ch );
-
-			// Show the room description. Make the description text white.
-			if ( IS_NULLSTR(arg1) || ( !IS_NPC(ch) && !IS_SET(ch->comm, COMM_BRIEF) ) )
-			{
-				send_to_char( "\tW", ch);
-				send_to_char( ch->in_room->description, ch );
-				send_to_char( "\tn", ch);
-			}
-		}
-
-		// Show the exits.  Need to colorize.
-		if ( IS_SET(ch->plr_flags, PLR_AUTOEXIT) )
-		{
-			send_to_char("\n\r",ch);
-			do_function(ch, &do_exits, "auto" );
-		}
-
-		// Show objects in the room.
-		send_to_char("\tW---\tYObjects\tW---\tn\n\r", ch);
-		show_list_to_char( ch->in_room->contents, ch, FALSE, FALSE );
-		send_to_char("\n\r", ch);
-
-		// Show people and mobs in the room.
-		send_to_char("\tW---\tYPeople\tW---\tn\n\r", ch);
-		show_char_to_char( ch->in_room->people, ch );
-		return;
-	}
-
-	if ( !str_cmp( arg1, "i" ) || !str_cmp(arg1, "in")  || !str_cmp(arg1,"on"))
-	{
-		/* 'look in' */
-		if ( IS_NULLSTR(arg2) )
-		{
-			send_to_char( "Look in what?\n\r", ch );
-			return;
-		}
-
-		if ( ( obj = get_obj_here( ch, arg2 ) ) == NULL )
-		{
-			send_to_char( "You do not see that here.\n\r", ch );
-			return;
-		}
-
-		switch ( obj->item_type )
-		{
-			default:
-			send_to_char( "That is not a container.\n\r", ch );
-			break;
-
-			case ITEM_DRINK_CON:
-			if ( obj->value[1] <= 0 )
-			{
-				send_to_char( "It is empty.\n\r", ch );
-				break;
-			}
-
-			sprintf( buf, "It's %sfilled with  a %s liquid.\n\r",
-				obj->value[1] <     obj->value[0] / 4
-				? "less than half-" :
-				obj->value[1] < 3 * obj->value[0] / 4
-				? "about half-"     : "more than half-",
-				liq_table[obj->value[2]].liq_color
-				);
-
-			send_to_char( buf, ch );
-			break;
-
-			case ITEM_WEAPON:
-			if(obj->value[0] == WEAPON_FIREARM)
-			{
-				send_to_char(Format("%s contains %d rounds.\n\r", obj->short_descr, obj->value[3]), ch);
-			}
-			break;
-
-			case ITEM_FURNITURE:
-			act( "$p holds:", ch, obj, NULL, TO_CHAR, 1 );
-			show_list_to_char( obj->contains, ch, TRUE, TRUE );
-			break;
-
-			case ITEM_CONTAINER:
-			case ITEM_CORPSE_NPC:
-			case ITEM_CORPSE_PC:
-			if ( IS_SET(obj->value[1], CONT_CLOSED) )
-			{
-				send_to_char( "It is closed.\n\r", ch );
-				break;
-			}
-
-			// act("$n looks at you.", ch, NULL, victim, TO_VICT, 1);
-			act( "$p holds:", ch, obj, NULL, TO_CHAR, 1 );
-			show_list_to_char( obj->contains, ch, TRUE, TRUE );
-			break;
-		}
-		return;
-	}
-
-	if ( ( victim = get_char_room( ch, arg1 ) ) != NULL && SAME_PLANE(victim,ch) )
-	{
-		show_char_to_char_1( victim, ch );
-		return;
-	}
-
-	for ( obj = ch->carrying; obj != NULL; obj = obj->next_content )
-	{
-		if ( can_see_obj( ch, obj ) )
-		{  
-		/* player can see object */
-			pdesc = get_extra_descr( arg3, obj->extra_descr );
-			if ( pdesc != NULL )
-			{	
-				if (++count == number)
-				{
-					send_to_char( pdesc, ch );
-					return;
-				}
-				else 
-					continue;
-			}
-			pdesc = get_extra_descr( arg3, obj->pIndexData->extra_descr );
-
-			if ( pdesc != NULL )
-			{	
-				if (++count == number)
-				{	
-					send_to_char( pdesc, ch );
-					return;
-				}
-				else 
-					continue;
-			}
-			if ( is_name( arg3, obj->name ) )
-			{
-				if (++count == number)
-				{
-					send_to_char( obj->description, ch );
-					send_to_char( "\n\r",ch);
-					return;
-				}
-			}
-		}
-	}
-
-	for ( obj = ch->in_room->contents; obj != NULL; obj = obj->next_content )
-	{
-		if ( can_see_obj( ch, obj ) )
-		{
-			pdesc = get_extra_descr( arg3, obj->extra_descr );
-			if ( pdesc != NULL )
-			{
-				if (++count == number)
-				{
-					send_to_char( pdesc, ch );
-					return;
-				}
-			}
-
-			pdesc = get_extra_descr( arg3, obj->pIndexData->extra_descr );
-			if ( pdesc != NULL )
-			{
-				if (++count == number)
-				{
-					send_to_char( pdesc, ch );
-					return;
-				}
-			}
-
-			if ( is_name( arg3, obj->name ) )
-			{
-				if (++count == number)
-				{
-					send_to_char( obj->description, ch );
-					send_to_char("\n\r",ch);
-					return;
-				}
-			}
-		}
-	}
-
-	pdesc = get_extra_descr(arg3,ch->in_room->extra_descr);
-	if (pdesc != NULL)
-	{
-		if (++count == number)
-		{
-			send_to_char(pdesc,ch);
-			return;
-		}
-	}
-
-	if (count > 0 && count != number)
-	{
-		if (count == 1)
-			send_to_char( Format("You only see one %s here.\n\r",arg3), ch);
-		else
-			send_to_char( Format("You only see %d of those here.\n\r",count), ch);
-		return;
-	}
-
-	if ( !str_cmp( arg1, "n" ) || !str_cmp( arg1, "north" ) ) 
-		door = 0;
-	else if ( !str_cmp( arg1, "e" ) || !str_cmp( arg1, "east"  ) ) 
-		door = 1;
-	else if ( !str_cmp( arg1, "s" ) || !str_cmp( arg1, "south" ) ) 
-		door = 2;
-	else if ( !str_cmp( arg1, "w" ) || !str_cmp( arg1, "west"  ) ) 
-		door = 3;
-	else if ( !str_cmp( arg1, "u" ) || !str_cmp( arg1, "up"    ) ) 
-		door = 4;
-	else if ( !str_cmp( arg1, "d" ) || !str_cmp( arg1, "down"  ) ) 
-		door = 5;
-	else
-	{
-		send_to_char( "You do not see that here.\n\r", ch );
-		return;
-	}
-
-		/* 'look direction' */
-	if ( ( pexit = ch->in_room->exit[door] ) == NULL )
-	{
-		send_to_char( "Nothing special there.\n\r", ch );
-		return;
-	}
-
-	if ( pexit->description != NULL && pexit->description[0] != '\0' )
-		send_to_char( pexit->description, ch );
-	else
-		send_to_char( "Nothing special there.\n\r", ch );
-
-	if ( pexit->keyword    != NULL && pexit->keyword[0] != '\0' && pexit->keyword[0] != ' ' )
-	{
-		if ( IS_SET(pexit->exit_info, EX_CLOSED) )
-		{
-			// act( "The $d is closed.", ch, NULL, pexit->keyword, TO_CHAR, 1 );
-			act( "The $d is closed.", ch, NULL, pexit->keyword, TO_CHAR, 1 );
-		}
-		else if ( IS_SET(pexit->exit_info, EX_ISDOOR) )
-		{
-			act( "The $d is open.", ch, NULL, pexit->keyword, TO_CHAR, 1 );
-		}
-	}
-
-	return;
-}
 // void do_look( CHAR_DATA *ch, char *argument )
 // {
 // 	EXIT_DATA *pexit;
 // 	CHAR_DATA *victim;
 // 	OBJ_DATA *obj;
-// 	ROOM_INDEX_DATA *original;
-// 	ROOM_INDEX_DATA *looking;
-// 	char arg1 [MIL]={'\0'};
-// 	char arg2 [MIL]={'\0'};
-// 	char arg3 [MIL]={'\0'};
+// 	char buf  [MSL] = {'\0'};
+// 	char arg1 [MIL] = {'\0'};
+// 	char arg2 [MIL] = {'\0'};
+// 	char arg3 [MIL] = {'\0'};
 // 	char *pdesc;
 // 	int door = 0;
-// 	int number = 0,count = 0;
-
-// 	CheckCH(ch);
+// 	int number = 0;
+// 	int count = 0;
 
 // 	if ( ch->desc == NULL )
 // 		return;
 
-// 	/**********************************
-// 	* Check if the person looking is  *
-// 	* sleeping.                       *
-// 	***********************************/
 // 	if ( ch->position < P_SLEEP )
 // 	{
 // 		send_to_char( "You can't see anything but stars!\n\r", ch );
+// 		return;
+// 	}
+
+// 	if ( ch->position == P_SLEEP )
+// 	{
+// 		send_to_char( "You can't see anything, you're sleeping!\n\r", ch );
 // 		return;
 // 	}
 
@@ -1427,50 +1063,43 @@ void do_look( CHAR_DATA *ch, char *argument )
 // 		return;
 // 	}
 
-// 	/**********************************
-// 	* Check if the person looking is  *
-// 	* blind.                          *
-// 	***********************************/
 // 	if ( !check_blind( ch ) )
+// 	{
 // 		return;
+// 	}
 
-// 	if(IS_SET(ch->act2, ACT2_ASTRAL))
-// 		looking = ch->listening;
-// 	else
-// 		looking = ch->in_room;
-
-// 	/**********************************
-// 	* Check if the person looking is  *
-// 	* can see in the darkness.        *
-// 	***********************************/
-// 	if ( !IS_NPC(ch)
-// 			&&   !IS_SET(ch->plr_flags, PLR_HOLYLIGHT)
-// 			&&   !IS_AFFECTED(ch, AFF_DARK_VISION)
-// 			&&   room_is_dark( looking ) )
+// // 	/**********************************
+// // 	* Check if the person looking is  *
+// // 	* can see in the darkness.        *
+// // 	***********************************/
+// // 	if ( !IS_NPC(ch)
+// // 			&&   !IS_SET(ch->plr_flags, PLR_HOLYLIGHT)
+// // 			&&   !IS_AFFECTED(ch, AFF_DARK_VISION)
+// // 			&&   room_is_dark( looking ) )
+// // 	{
+// // 		send_to_char( "It is pitch black ... \n\r", ch );
+// // 		show_char_to_char( looking->people, ch );
+// // 		return;
+// // 	}
+// 	if ( !IS_NPC(ch) 
+// 		&& !IS_SET(ch->plr_flags, PLR_HOLYLIGHT)
+// 		&& !IS_AFFECTED(ch, AFF_DARK_VISION)
+// 		&& room_is_dark( ch->in_room ) )
 // 	{
 // 		send_to_char( "It is pitch black ... \n\r", ch );
-// 		show_char_to_char( looking->people, ch );
+// 		show_char_to_char( ch->in_room->people, ch );
 // 		return;
 // 	}
 
 // 	argument = one_argument( argument, arg1 );
 // 	argument = one_argument( argument, arg2 );
 // 	number = number_argument(arg1,arg3);
-// 	count = 0;
 
 // 	if ( IS_NULLSTR(arg1) || !str_cmp( arg1, "auto" ) )
 // 	{
+// 		/* 'look' or 'look auto' */
 
-// 		/*************************************
-// 		 * If an Admin, show the room number *
-// 		 *************************************/
-// 		if ((IS_ADMIN(ch)
-// 				&& ((IS_NPC(ch) && ch->desc->original && IS_ADMIN(ch->desc->original))
-// 						|| IS_SET(ch->plr_flags,PLR_HOLYLIGHT)))
-// 						|| ch->pcdata->security > 0)
-// 		{
-// 			send_to_char(Format(" [\tORoom %d\tn] ",looking->vnum),ch);
-// 		}
+// 		send_to_char( "\n\r", ch );
 
 // 		/*************************************
 // 		 * If the character is in the Umbra, *
@@ -1478,39 +1107,50 @@ void do_look( CHAR_DATA *ch, char *argument )
 // 		 *************************************/
 // 		if(IS_SET(ch->act,ACT_UMBRA))
 // 		{
-// 			send_to_char( Format("\tW%s\tn", looking->uname), ch );
+// 			send_to_char( Format("\tW%s\tn", ch->in_room->uname), ch );
 
+// 			// Show the Room number.
+// 			if ( (IS_ADMIN(ch) && (IS_NPC(ch) || IS_SET(ch->act,PLR_HOLYLIGHT)))
+// 				|| IS_BUILDER(ch, ch->in_room->area) )
+// 			{
+// 				send_to_char( Format(" \tW[\tGRoom %d\tW]\tn",ch->in_room->vnum),ch);
+// 			}
 // 			send_to_char( "\n\r", ch );
 
-// 			if(!IS_NPC(ch) && !IS_SET(ch->comm, COMM_BRIEF))
+// 			if ( IS_NULLSTR(arg1) || ( !IS_NPC(ch) && !IS_SET(ch->comm, COMM_BRIEF) ) )
 // 			{
 // 				send_to_char( "\tB", ch);
-// 				send_to_char( "  ",ch);
-// 				send_to_char( looking->udescription, ch );
+// 				send_to_char( ch->in_room->udescription, ch );
 // 				send_to_char( "\tn", ch);
 // 			}
 // 		}
 // 		else
 // 		{
-// 			send_to_char( Format("\tW%s\tn", looking->name), ch );
+// 			send_to_char( Format("\tW%s\tn", ch->in_room->name), ch );
+
+// 			// Show the Room number.
+// 			if ( (IS_ADMIN(ch) && (IS_NPC(ch) || IS_SET(ch->act,PLR_HOLYLIGHT)))
+// 				|| IS_BUILDER(ch, ch->in_room->area) )
+// 			{
+// 				send_to_char( Format(" \tW[\tGRoom %d\tW]\tn",ch->in_room->vnum),ch);
+// 			}
 
 // 			send_to_char( "\n\r", ch );
 
 // 			// Show the room description. Make the description text white.
-// 			if(!IS_NPC(ch) && !IS_SET(ch->comm, COMM_BRIEF))
+// 			if ( IS_NULLSTR(arg1) || ( !IS_NPC(ch) && !IS_SET(ch->comm, COMM_BRIEF) ) )
 // 			{
 // 				send_to_char( "\tW", ch);
-// 				send_to_char( "  ",ch);
-// 				send_to_char( looking->description, ch );
+// 				send_to_char( ch->in_room->description, ch );
 // 				send_to_char( "\tn", ch);
 // 			}
 // 		}
 
-// 		// Show the exits. Need to colorize.
+// 		// Show the exits.  Need to colorize.
 // 		if ( IS_SET(ch->plr_flags, PLR_AUTOEXIT) )
 // 		{
 // 			send_to_char("\n\r",ch);
-// 			do_function(ch, &do_exits, "auto");
+// 			do_function(ch, &do_exits, "auto" );
 // 		}
 
 // 		// Show objects in the room.
@@ -1521,16 +1161,10 @@ void do_look( CHAR_DATA *ch, char *argument )
 // 		// Show people and mobs in the room.
 // 		send_to_char("\tW---\tYPeople\tW---\tn\n\r", ch);
 // 		show_char_to_char( ch->in_room->people, ch );
-
-// 		/*  if(IS_SET(ch->act, ACT_UMBRA))
-// 		show_char_to_char( looking->people,   ch ); */
 // 		return;
 // 	}
 
-// 	/************************************************
-// 	* Look in or on an object.                      *
-// 	*************************************************/
-// 	if ( !str_cmp(arg1, "in")  || !str_cmp(arg1,"on"))
+// 	if ( !str_cmp( arg1, "i" ) || !str_cmp(arg1, "in")  || !str_cmp(arg1,"on"))
 // 	{
 // 		/* 'look in' */
 // 		if ( IS_NULLSTR(arg2) )
@@ -1547,43 +1181,50 @@ void do_look( CHAR_DATA *ch, char *argument )
 
 // 		switch ( obj->item_type )
 // 		{
-// 		default:
+// 			default:
 // 			send_to_char( "That is not a container.\n\r", ch );
 // 			break;
 
-// 		case ITEM_DRINK_CON:
+// 			case ITEM_DRINK_CON:
 // 			if ( obj->value[1] <= 0 )
 // 			{
 // 				send_to_char( "It is empty.\n\r", ch );
 // 				break;
 // 			}
 
-// 			send_to_char( Format("It's %s filled with a %s liquid.\n\r",
-// 					obj->value[1] <     obj->value[0] / 4 ? "less than half-" : obj->value[1] < 3 * obj->value[0] / 4 ? "about half-"     : "more than half-",
-// 					liq_table[obj->value[2]].liq_color), ch );
+// 			sprintf( buf, "It's %sfilled with  a %s liquid.\n\r",
+// 				obj->value[1] <     obj->value[0] / 4
+// 				? "less than half-" :
+// 				obj->value[1] < 3 * obj->value[0] / 4
+// 				? "about half-"     : "more than half-",
+// 				liq_table[obj->value[2]].liq_color
+// 				);
+
+// 			send_to_char( buf, ch );
 // 			break;
 
-// 		case ITEM_WEAPON:
+// 			case ITEM_WEAPON:
 // 			if(obj->value[0] == WEAPON_FIREARM)
 // 			{
 // 				send_to_char(Format("%s contains %d rounds.\n\r", obj->short_descr, obj->value[3]), ch);
 // 			}
 // 			break;
 
-// 		case ITEM_CONTAINER:
-// 		case ITEM_CORPSE_NPC:
-// 		case ITEM_CORPSE_PC:
+// 			case ITEM_FURNITURE:
+// 			act( "$p holds:", ch, obj, NULL, TO_CHAR, 1 );
+// 			show_list_to_char( obj->contains, ch, TRUE, TRUE );
+// 			break;
+
+// 			case ITEM_CONTAINER:
+// 			case ITEM_CORPSE_NPC:
+// 			case ITEM_CORPSE_PC:
 // 			if ( IS_SET(obj->value[1], CONT_CLOSED) )
 // 			{
 // 				send_to_char( "It is closed.\n\r", ch );
 // 				break;
 // 			}
 
-// 			act( "$p holds:", ch, obj, NULL, TO_CHAR, 1 );
-// 			show_list_to_char( obj->contains, ch, TRUE, TRUE );
-// 			break;
-
-// 		case ITEM_FURNITURE:
+// 			// act("$n looks at you.", ch, NULL, victim, TO_VICT, 1);
 // 			act( "$p holds:", ch, obj, NULL, TO_CHAR, 1 );
 // 			show_list_to_char( obj->contains, ch, TRUE, TRUE );
 // 			break;
@@ -1591,132 +1232,89 @@ void do_look( CHAR_DATA *ch, char *argument )
 // 		return;
 // 	}
 
-// 	/*************************************************
-// 	* Look at a particular person                    *
-// 	**************************************************/
 // 	if ( ( victim = get_char_room( ch, arg1 ) ) != NULL && SAME_PLANE(victim,ch) )
 // 	{
 // 		show_char_to_char_1( victim, ch );
 // 		return;
 // 	}
 
-
-// 	// if ( (victim = get_char_room(ch, arg1) ) != NULL && SAME_PLANE(victim, ch) )
-// 	// {
-// 	// 	if(IS_NULLSTR(arg2)) 
-// 	// 	{
-// 	// 		show_char_to_char_1( victim, ch );
-// 	// 	} 
-// 	// 	else if ( can_see( ch, victim ) && SAME_PLANE(victim, ch) 
-// 	// 		&& (pdesc = get_extra_descr( arg2, victim->extra_descr )) != NULL)
-// 	// 	{
-// 	// 		if (++count == number)
-// 	// 		{
-// 	// 			send_to_char( pdesc, ch );
-// 	// 			return;
-// 	// 		}
-// 	// 	} 
-// 	// 	else 
-// 	// 		act("You don't see anything special on $N like that.", ch, NULL, victim, TO_CHAR, 1);
-// 	// 	if(!IS_SET(ch->act2, ACT2_ASTRAL))
-// 	// 		act("$n looks at you.", ch, NULL, victim, TO_VICT, 1);
-
-// 	// 	return;
-// 	// }
-
-// 	/**********************************
-// 	* Look at objects                 *
-// 	***********************************/
 // 	for ( obj = ch->carrying; obj != NULL; obj = obj->next_content )
 // 	{
 // 		if ( can_see_obj( ch, obj ) )
-// 		{
-// 		    /* player can see object */
+// 		{  
+// 		/* player can see object */
 // 			pdesc = get_extra_descr( arg3, obj->extra_descr );
 // 			if ( pdesc != NULL )
-// 			{
+// 			{	
 // 				if (++count == number)
 // 				{
 // 					send_to_char( pdesc, ch );
 // 					return;
 // 				}
-// 				else continue;
+// 				else 
+// 					continue;
 // 			}
-
 // 			pdesc = get_extra_descr( arg3, obj->pIndexData->extra_descr );
+
 // 			if ( pdesc != NULL )
-// 			{
+// 			{	
 // 				if (++count == number)
-// 				{
+// 				{	
 // 					send_to_char( pdesc, ch );
 // 					return;
 // 				}
-// 				else continue;
+// 				else 
+// 					continue;
 // 			}
-
-// 			if (!str_prefix(arg3, "package")
-// 					&& IS_SET(obj->extra2, OBJ_PACKAGED))
+// 			if ( is_name( arg3, obj->name ) )
+// 			{
 // 				if (++count == number)
 // 				{
-// 					send_to_char( "An unobtrusively wrapped package sits here.", ch );
-// 					send_to_char( "\n\r", ch);
-// 					state_obj_cond(obj,ch);
+// 					send_to_char( obj->description, ch );
+// 					send_to_char( "\n\r",ch);
 // 					return;
 // 				}
-
-// 			if ( is_name( arg3, obj->name ))
-// 				if (++count == number)
-// 				{
-// 					send_to_char( obj->full_desc, ch );
-// 					send_to_char( "\n\r", ch);
-// 					state_obj_cond(obj,ch);
-// 					return;
-// 				}
+// 			}
 // 		}
 // 	}
 
-// 	for ( obj = looking->contents; obj != NULL; obj = obj->next_content )
+// 	for ( obj = ch->in_room->contents; obj != NULL; obj = obj->next_content )
 // 	{
 // 		if ( can_see_obj( ch, obj ) )
 // 		{
 // 			pdesc = get_extra_descr( arg3, obj->extra_descr );
 // 			if ( pdesc != NULL )
+// 			{
 // 				if (++count == number)
 // 				{
 // 					send_to_char( pdesc, ch );
 // 					return;
 // 				}
+// 			}
 
 // 			pdesc = get_extra_descr( arg3, obj->pIndexData->extra_descr );
 // 			if ( pdesc != NULL )
+// 			{
 // 				if (++count == number)
 // 				{
 // 					send_to_char( pdesc, ch );
 // 					return;
 // 				}
-
-// 			if (!str_prefix(arg3, "package")
-// 					&& IS_SET(obj->extra2, OBJ_PACKAGED))
-// 				if (++count == number)
-// 				{
-// 					send_to_char( "An unobtrusively wrapped package sits here.", ch );
-// 					send_to_char( "\n\r", ch);
-// 					state_obj_cond(obj,ch);
-// 					return;
-// 				}
+// 			}
 
 // 			if ( is_name( arg3, obj->name ) )
+// 			{
 // 				if (++count == number)
 // 				{
-// 					send_to_char( obj->full_desc, ch );
-// 					send_to_char( "\n\r", ch);
-// 					state_obj_cond(obj,ch);
+// 					send_to_char( obj->description, ch );
+// 					send_to_char("\n\r",ch);
 // 					return;
 // 				}
+// 			}
 // 		}
 // 	}
 
-// 	pdesc = get_extra_descr(arg3,looking->extra_descr);
+// 	pdesc = get_extra_descr(arg3,ch->in_room->extra_descr);
 // 	if (pdesc != NULL)
 // 	{
 // 		if (++count == number)
@@ -1729,67 +1327,469 @@ void do_look( CHAR_DATA *ch, char *argument )
 // 	if (count > 0 && count != number)
 // 	{
 // 		if (count == 1)
-// 		{
 // 			send_to_char( Format("You only see one %s here.\n\r",arg3), ch);
-// 		}
 // 		else
-// 		{
 // 			send_to_char( Format("You only see %d of those here.\n\r",count), ch);
-// 		}
-
 // 		return;
 // 	}
 
-// 	if ( !str_cmp( arg1, "n" ) || !str_cmp( arg1, "north" ) ) door = 0;
-// 	else if ( !str_cmp( arg1, "e" ) || !str_cmp( arg1, "east"  ) ) door = 1;
-// 	else if ( !str_cmp( arg1, "s" ) || !str_cmp( arg1, "south" ) ) door = 2;
-// 	else if ( !str_cmp( arg1, "w" ) || !str_cmp( arg1, "west"  ) ) door = 3;
-// 	else if ( !str_cmp( arg1, "u" ) || !str_cmp( arg1, "up"    ) ) door = 4;
-// 	else if ( !str_cmp( arg1, "d" ) || !str_cmp( arg1, "down"  ) ) door = 5;
-// 	else if ( (door = get_door(ch, arg1)) == -1 )
+// 	if ( !str_cmp( arg1, "n" ) || !str_cmp( arg1, "north" ) ) 
+// 		door = 0;
+// 	else if ( !str_cmp( arg1, "e" ) || !str_cmp( arg1, "east"  ) ) 
+// 		door = 1;
+// 	else if ( !str_cmp( arg1, "s" ) || !str_cmp( arg1, "south" ) ) 
+// 		door = 2;
+// 	else if ( !str_cmp( arg1, "w" ) || !str_cmp( arg1, "west"  ) ) 
+// 		door = 3;
+// 	else if ( !str_cmp( arg1, "u" ) || !str_cmp( arg1, "up"    ) ) 
+// 		door = 4;
+// 	else if ( !str_cmp( arg1, "d" ) || !str_cmp( arg1, "down"  ) ) 
+// 		door = 5;
+// 	else
 // 	{
 // 		send_to_char( "You do not see that here.\n\r", ch );
 // 		return;
 // 	}
 
-// 	/* 'look direction' */
-// 	if ( ( pexit = looking->exit[door] ) == NULL )
+// 		/* 'look direction' */
+// 	if ( ( pexit = ch->in_room->exit[door] ) == NULL )
 // 	{
 // 		send_to_char( "Nothing special there.\n\r", ch );
 // 		return;
 // 	}
 
-// 	if(IS_SET(pexit->exit_info, EX_WINDOW))
-// 	{
-// 		send_to_char(Format("%s\n\r", pexit->description == NULL ? "Through the window you see...\n\r" : pexit->description), ch);
-// 		original = looking;
-// 		obj = ch->on;
-// 		char_from_room( ch );
-// 		char_to_room( ch, pexit->u1.to_room );
-// 		do_function(ch, &do_look, "");
-// 		char_from_room( ch );
-// 		char_to_room( ch, original );
-// 		ch->on = obj;
-// 	}
-// 	else if ( pexit->description != NULL && !IS_NULLSTR(pexit->description) )
+// 	if ( pexit->description != NULL && pexit->description[0] != '\0' )
 // 		send_to_char( pexit->description, ch );
 // 	else
 // 		send_to_char( "Nothing special there.\n\r", ch );
 
-// 	if ( pexit->keyword    != NULL && !IS_NULLSTR(pexit->keyword) && pexit->keyword[0] != ' ' )
+// 	if ( pexit->keyword    != NULL && pexit->keyword[0] != '\0' && pexit->keyword[0] != ' ' )
 // 	{
 // 		if ( IS_SET(pexit->exit_info, EX_CLOSED) )
 // 		{
+// 			// act( "The $d is closed.", ch, NULL, pexit->keyword, TO_CHAR, 1 );
 // 			act( "The $d is closed.", ch, NULL, pexit->keyword, TO_CHAR, 1 );
 // 		}
 // 		else if ( IS_SET(pexit->exit_info, EX_ISDOOR) )
 // 		{
-// 			act( "The $d is open.",   ch, NULL, pexit->keyword, TO_CHAR, 1 );
+// 			act( "The $d is open.", ch, NULL, pexit->keyword, TO_CHAR, 1 );
 // 		}
 // 	}
 
 // 	return;
 // }
+void do_look( CHAR_DATA *ch, char *argument )
+{
+	EXIT_DATA *pexit;
+	CHAR_DATA *victim;
+	OBJ_DATA *obj;
+	ROOM_INDEX_DATA *original;
+	ROOM_INDEX_DATA *looking;
+	char arg1 [MIL]={'\0'};
+	char arg2 [MIL]={'\0'};
+	char arg3 [MIL]={'\0'};
+	char *pdesc;
+	int door = 0;
+	int number = 0,count = 0;
+
+	CheckCH(ch);
+
+	if ( ch->desc == NULL )
+		return;
+
+	/**********************************
+	* Check if the person looking is  *
+	* sleeping.                       *
+	***********************************/
+	if ( ch->position < P_SLEEP )
+	{
+		send_to_char( "You can't see anything but stars!\n\r", ch );
+		return;
+	}
+
+	/**********************************
+	* Check if the person looking is  *
+	* sleeping and ACT2_ASTRAL.       *
+	***********************************/
+	if ( ch->position == P_SLEEP && !IS_SET(ch->act2, ACT2_ASTRAL))
+	{
+		send_to_char("Your dreams are filled with nightmarish images!\n\r",ch);
+		return;
+	}
+
+	/**********************************
+	* Check if the person looking is  *
+	* currently Earthmelded.          *
+	***********************************/
+	if (IS_SET(ch->affected_by2, AFF2_EARTHMELD))
+	{
+		send_to_char("It's dark... really dark...\n\r", ch);
+		return;
+	}
+
+	/**********************************
+	* Check if the person looking is  *
+	* blind.                          *
+	***********************************/
+	if ( !check_blind( ch ) )
+		return;
+
+	if(IS_SET(ch->act2, ACT2_ASTRAL))
+		looking = ch->listening;
+	else
+		looking = ch->in_room;
+
+	/**********************************
+	* Check if the person looking is  *
+	* can see in the darkness.        *
+	***********************************/
+	if ( !IS_NPC(ch)
+			&&   !IS_SET(ch->plr_flags, PLR_HOLYLIGHT)
+			&&   !IS_AFFECTED(ch, AFF_DARK_VISION)
+			&&   room_is_dark( looking ) )
+	{
+		send_to_char( "It is pitch black ... \n\r", ch );
+		show_char_to_char( looking->people, ch );
+		return;
+	}
+
+	argument = one_argument( argument, arg1 );
+	argument = one_argument( argument, arg2 );
+	number = number_argument(arg1,arg3);
+	count = 0;
+
+	if ( IS_NULLSTR(arg1) || !str_cmp( arg1, "auto" ) )
+	{
+
+		/*************************************
+		 * If an Admin, show the room number *
+		 *************************************/
+		if ((IS_ADMIN(ch)
+				&& ((IS_NPC(ch) && ch->desc->original && IS_ADMIN(ch->desc->original))
+						|| IS_SET(ch->plr_flags,PLR_HOLYLIGHT)))
+						|| ch->pcdata->security > 0)
+		{
+			send_to_char(Format(" [\tORoom %d\tn] ",looking->vnum),ch);
+		}
+
+		/*************************************
+		 * If the character is in the Umbra, *
+		 * show the Umbral room name.        *
+		 *************************************/
+		if(IS_SET(ch->act,ACT_UMBRA))
+		{
+			send_to_char( Format("\tW%s\tn", looking->uname), ch );
+
+			send_to_char( "\n\r", ch );
+
+			if(!IS_NPC(ch) && !IS_SET(ch->comm, COMM_BRIEF))
+			{
+				send_to_char( "\tB", ch);
+				send_to_char( "  ",ch);
+				send_to_char( looking->udescription, ch );
+				send_to_char( "\tn", ch);
+			}
+		}
+		else
+		{
+			send_to_char( Format("\tW%s\tn", looking->name), ch );
+
+			send_to_char( "\n\r", ch );
+
+			// Show the room description. Make the description text white.
+			if(!IS_NPC(ch) && !IS_SET(ch->comm, COMM_BRIEF))
+			{
+				send_to_char( "\tW", ch);
+				send_to_char( "  ",ch);
+				send_to_char( looking->description, ch );
+				send_to_char( "\tn", ch);
+			}
+		}
+
+		// Show the exits. Need to colorize.
+		if ( IS_SET(ch->plr_flags, PLR_AUTOEXIT) )
+		{
+			send_to_char("\n\r",ch);
+			do_function(ch, &do_exits, "auto");
+		}
+
+		// Show objects in the room.
+		send_to_char("\tW---\tYObjects\tW---\tn\n\r", ch);
+		show_list_to_char( ch->in_room->contents, ch, FALSE, FALSE );
+		send_to_char("\n\r", ch);
+
+		// Show people and mobs in the room.
+		send_to_char("\tW---\tYPeople\tW---\tn\n\r", ch);
+		show_char_to_char( ch->in_room->people, ch );
+
+		/*  if(IS_SET(ch->act, ACT_UMBRA))
+		show_char_to_char( looking->people,   ch ); */
+		return;
+	}
+
+	/************************************************
+	* Look in or on an object.                      *
+	*************************************************/
+	if ( !str_cmp(arg1, "in")  || !str_cmp(arg1,"on"))
+	{
+		/* 'look in' */
+		if ( IS_NULLSTR(arg2) )
+		{
+			send_to_char( "Look in what?\n\r", ch );
+			return;
+		}
+
+		if ( ( obj = get_obj_here( ch, arg2 ) ) == NULL )
+		{
+			send_to_char( "You do not see that here.\n\r", ch );
+			return;
+		}
+
+		switch ( obj->item_type )
+		{
+		default:
+			send_to_char( "That is not a container.\n\r", ch );
+			break;
+
+		case ITEM_DRINK_CON:
+			if ( obj->value[1] <= 0 )
+			{
+				send_to_char( "It is empty.\n\r", ch );
+				break;
+			}
+
+			send_to_char( Format("It's %s filled with a %s liquid.\n\r",
+					obj->value[1] <     obj->value[0] / 4 ? "less than half-" : obj->value[1] < 3 * obj->value[0] / 4 ? "about half-"     : "more than half-",
+					liq_table[obj->value[2]].liq_color), ch );
+			break;
+
+		case ITEM_WEAPON:
+			if(obj->value[0] == WEAPON_FIREARM)
+			{
+				send_to_char(Format("%s contains %d rounds.\n\r", obj->short_descr, obj->value[3]), ch);
+			}
+			break;
+
+		case ITEM_CONTAINER:
+		case ITEM_CORPSE_NPC:
+		case ITEM_CORPSE_PC:
+			if ( IS_SET(obj->value[1], CONT_CLOSED) )
+			{
+				send_to_char( "It is closed.\n\r", ch );
+				break;
+			}
+
+			act( "$p holds:", ch, obj, NULL, TO_CHAR, 1 );
+			show_list_to_char( obj->contains, ch, TRUE, TRUE );
+			break;
+
+		case ITEM_FURNITURE:
+			act( "$p holds:", ch, obj, NULL, TO_CHAR, 1 );
+			show_list_to_char( obj->contains, ch, TRUE, TRUE );
+			break;
+		}
+		return;
+	}
+
+	/*************************************************
+	* Look at a particular person                    *
+	**************************************************/
+	if ( ( victim = get_char_room( ch, arg1 ) ) != NULL && SAME_PLANE(victim,ch) )
+	{
+		show_char_to_char_1( victim, ch );
+		return;
+	}
+
+
+	// if ( (victim = get_char_room(ch, arg1) ) != NULL && SAME_PLANE(victim, ch) )
+	// {
+	// 	if(IS_NULLSTR(arg2)) 
+	// 	{
+	// 		show_char_to_char_1( victim, ch );
+	// 	} 
+	// 	else if ( can_see( ch, victim ) && SAME_PLANE(victim, ch) 
+	// 		&& (pdesc = get_extra_descr( arg2, victim->extra_descr )) != NULL)
+	// 	{
+	// 		if (++count == number)
+	// 		{
+	// 			send_to_char( pdesc, ch );
+	// 			return;
+	// 		}
+	// 	} 
+	// 	else 
+	// 		act("You don't see anything special on $N like that.", ch, NULL, victim, TO_CHAR, 1);
+	// 	if(!IS_SET(ch->act2, ACT2_ASTRAL))
+	// 		act("$n looks at you.", ch, NULL, victim, TO_VICT, 1);
+
+	// 	return;
+	// }
+
+	/**********************************
+	* Look at objects                 *
+	***********************************/
+	for ( obj = ch->carrying; obj != NULL; obj = obj->next_content )
+	{
+		if ( can_see_obj( ch, obj ) )
+		{
+		    /* player can see object */
+			pdesc = get_extra_descr( arg3, obj->extra_descr );
+			if ( pdesc != NULL )
+			{
+				if (++count == number)
+				{
+					send_to_char( pdesc, ch );
+					return;
+				}
+				else continue;
+			}
+
+			pdesc = get_extra_descr( arg3, obj->pIndexData->extra_descr );
+			if ( pdesc != NULL )
+			{
+				if (++count == number)
+				{
+					send_to_char( pdesc, ch );
+					return;
+				}
+				else continue;
+			}
+
+			if (!str_prefix(arg3, "package")
+					&& IS_SET(obj->extra2, OBJ_PACKAGED))
+				if (++count == number)
+				{
+					send_to_char( "An unobtrusively wrapped package sits here.", ch );
+					send_to_char( "\n\r", ch);
+					state_obj_cond(obj,ch);
+					return;
+				}
+
+			if ( is_name( arg3, obj->name ))
+				if (++count == number)
+				{
+					send_to_char( obj->full_desc, ch );
+					send_to_char( "\n\r", ch);
+					state_obj_cond(obj,ch);
+					return;
+				}
+		}
+	}
+
+	for ( obj = looking->contents; obj != NULL; obj = obj->next_content )
+	{
+		if ( can_see_obj( ch, obj ) )
+		{
+			pdesc = get_extra_descr( arg3, obj->extra_descr );
+			if ( pdesc != NULL )
+				if (++count == number)
+				{
+					send_to_char( pdesc, ch );
+					return;
+				}
+
+			pdesc = get_extra_descr( arg3, obj->pIndexData->extra_descr );
+			if ( pdesc != NULL )
+				if (++count == number)
+				{
+					send_to_char( pdesc, ch );
+					return;
+				}
+
+			if (!str_prefix(arg3, "package")
+					&& IS_SET(obj->extra2, OBJ_PACKAGED))
+				if (++count == number)
+				{
+					send_to_char( "An unobtrusively wrapped package sits here.", ch );
+					send_to_char( "\n\r", ch);
+					state_obj_cond(obj,ch);
+					return;
+				}
+
+			if ( is_name( arg3, obj->name ) )
+				if (++count == number)
+				{
+					send_to_char( obj->full_desc, ch );
+					send_to_char( "\n\r", ch);
+					state_obj_cond(obj,ch);
+					return;
+				}
+		}
+	}
+
+	pdesc = get_extra_descr(arg3,looking->extra_descr);
+	if (pdesc != NULL)
+	{
+		if (++count == number)
+		{
+			send_to_char(pdesc,ch);
+			return;
+		}
+	}
+
+	if (count > 0 && count != number)
+	{
+		if (count == 1)
+		{
+			send_to_char( Format("You only see one %s here.\n\r",arg3), ch);
+		}
+		else
+		{
+			send_to_char( Format("You only see %d of those here.\n\r",count), ch);
+		}
+
+		return;
+	}
+
+	if ( !str_cmp( arg1, "n" ) || !str_cmp( arg1, "north" ) ) door = 0;
+	else if ( !str_cmp( arg1, "e" ) || !str_cmp( arg1, "east"  ) ) door = 1;
+	else if ( !str_cmp( arg1, "s" ) || !str_cmp( arg1, "south" ) ) door = 2;
+	else if ( !str_cmp( arg1, "w" ) || !str_cmp( arg1, "west"  ) ) door = 3;
+	else if ( !str_cmp( arg1, "u" ) || !str_cmp( arg1, "up"    ) ) door = 4;
+	else if ( !str_cmp( arg1, "d" ) || !str_cmp( arg1, "down"  ) ) door = 5;
+	else if ( (door = get_door(ch, arg1)) == -1 )
+	{
+		send_to_char( "You do not see that here.\n\r", ch );
+		return;
+	}
+
+	/* 'look direction' */
+	if ( ( pexit = looking->exit[door] ) == NULL )
+	{
+		send_to_char( "Nothing special there.\n\r", ch );
+		return;
+	}
+
+	if(IS_SET(pexit->exit_info, EX_WINDOW))
+	{
+		send_to_char(Format("%s\n\r", pexit->description == NULL ? "Through the window you see...\n\r" : pexit->description), ch);
+		original = looking;
+		obj = ch->on;
+		char_from_room( ch );
+		char_to_room( ch, pexit->u1.to_room );
+		do_function(ch, &do_look, "");
+		char_from_room( ch );
+		char_to_room( ch, original );
+		ch->on = obj;
+	}
+	else if ( pexit->description != NULL && !IS_NULLSTR(pexit->description) )
+		send_to_char( pexit->description, ch );
+	else
+		send_to_char( "Nothing special there.\n\r", ch );
+
+	if ( pexit->keyword    != NULL && !IS_NULLSTR(pexit->keyword) && pexit->keyword[0] != ' ' )
+	{
+		if ( IS_SET(pexit->exit_info, EX_CLOSED) )
+		{
+			act( "The $d is closed.", ch, NULL, pexit->keyword, TO_CHAR, 1 );
+		}
+		else if ( IS_SET(pexit->exit_info, EX_ISDOOR) )
+		{
+			act( "The $d is open.",   ch, NULL, pexit->keyword, TO_CHAR, 1 );
+		}
+	}
+
+	return;
+}
 
 /* RT added back for the hell of it */
 void do_read (CHAR_DATA *ch, char *argument )

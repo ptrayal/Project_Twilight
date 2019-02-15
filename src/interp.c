@@ -227,7 +227,7 @@ const	struct	cmd_type	cmd_table	[] =
 		{	"kick",			do_move_kick,	P_FIGHT,	0,	L_NRM,	1,	H,	0 },
 		{	"kill",			do_kill,		P_FIGHT,	0,	L_NRM,	1,	0,	0 },
 		{	"knock",		do_knock,		P_STAND,	0,	L_NRM,	1,	B|H,	0 },
-		{	"look",			do_look,		P_REST,		0,	L_NRM,	1,	A|B|E,	0 },
+		{	"look",			do_look,		P_REST,		0,	L_ALL,	1,	A|B|E,	0 },
 		{	"lastboot",		do_lastboot,	P_DEAD,		0,	L_NRM,	1,	A|B|E,	0 },
 		{	"lastname",		do_surname,		P_DEAD,		0,	L_NRM,	1,	A|B|E,	0 },
 		{	"laston",		do_laston,		P_DEAD,		0,	L_NRM,	1,	A|B|E,	0 },
@@ -1177,12 +1177,12 @@ int number_argument( char *argument, char *arg )
 			*pdot = '\0';
 			number = atoi( argument );
 			*pdot = '.';
-			strncpy( arg, pdot+1, sizeof(*arg) );
+			strcpy( arg, pdot+1 );
 			return number;
 		}
 	}
 
-	strncpy( arg, argument, sizeof(*arg) );
+	strcpy( arg, argument );
 	return 1;
 }
 

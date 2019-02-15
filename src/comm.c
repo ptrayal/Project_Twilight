@@ -2412,6 +2412,7 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 					}
 					strncat( buf, "\n\r\n\r", sizeof(buf) - strlen(buf) - 1 );
 					write_to_buffer( d, buf, 0 );
+					write_to_buffer(d, "Please select a clan.\n\r", 0);
 					d->connected = CON_GET_NEW_CLAN;
 					break;
 
@@ -4482,7 +4483,8 @@ bool parse_gen_social(CHAR_DATA *ch,char *argument)
 		{
 			ch->gen_data->stat_dots[1] += 1;
 			ch->perm_stat[sn] -= 1;
-			send_to_char(Format("%s : %d\n\r",stat_table[sn].name, ch->perm_stat[sn]),ch);
+			// send_to_char(Format("%s : %d\n\r",stat_table[sn].name, ch->perm_stat[sn]),ch);
+			send_to_char(Format("%-10s: %1d  [\t<send href='add %s'>add\t</send> | \t<send href='minus %s'>minus\t</send>]\n\r",capitalize(stat_table[sn].name), ch->perm_stat[sn], stat_table[sn].name, stat_table[sn].name),ch );
 			return TRUE;
 		}
 
@@ -4500,7 +4502,8 @@ bool parse_gen_social(CHAR_DATA *ch,char *argument)
 	{
 		for(i = 3; i < 6; i++)
 		{
-			send_to_char(Format("%s : %d ",stat_table[i].name, ch->perm_stat[i]),ch);
+			// send_to_char(Format("%s : %d ",stat_table[i].name, ch->perm_stat[i]),ch);
+			send_to_char(Format("%-10s: %1d  [\t<send href='add %s'>add\t</send> | \t<send href='minus %s'>minus\t</send>]\n\r",capitalize(stat_table[i].name), ch->perm_stat[i], stat_table[i].name, stat_table[i].name),ch );
 		}
 		send_to_char("\n\r", ch);
 		return TRUE;
@@ -4558,7 +4561,8 @@ bool parse_gen_mental(CHAR_DATA *ch,char *argument)
 
 			ch->gen_data->stat_dots[2] -= 1;
 			ch->perm_stat[sn] += 1;
-			send_to_char(Format("%s : %d\n\r",stat_table[sn].name, ch->perm_stat[sn]),ch);
+			// send_to_char(Format("%s : %d\n\r",stat_table[sn].name, ch->perm_stat[sn]),ch);
+			send_to_char(Format("%-10s: %1d  [\t<send href='add %s'>add\t</send> | \t<send href='minus %s'>minus\t</send>]\n\r",capitalize(stat_table[sn].name), ch->perm_stat[sn], stat_table[sn].name, stat_table[sn].name),ch );
 			return TRUE;
 		}
 
@@ -4580,7 +4584,8 @@ bool parse_gen_mental(CHAR_DATA *ch,char *argument)
 		{
 			ch->gen_data->stat_dots[2] += 1;
 			ch->perm_stat[sn] -= 1;
-			send_to_char(Format("%s : %d\n\r",stat_table[sn].name, ch->perm_stat[sn]),ch);
+			// send_to_char(Format("%s : %d\n\r",stat_table[sn].name, ch->perm_stat[sn]),ch);
+			send_to_char(Format("%-10s: %1d  [\t<send href='add %s'>add\t</send> | \t<send href='minus %s'>minus\t</send>]\n\r",capitalize(stat_table[sn].name), ch->perm_stat[sn], stat_table[sn].name, stat_table[sn].name),ch );
 			return TRUE;
 		}
 
@@ -4610,104 +4615,105 @@ bool parse_gen_mental(CHAR_DATA *ch,char *argument)
 /* this procedure handles the input parsing for the talent abilities generator */
 bool parse_gen_talents(CHAR_DATA *ch,char *argument)
 {
-    char arg[MIL]={'\0'};
-    int sn = 0,i = 0;
+	char arg[MIL]={'\0'};
+	int sn = 0,i = 0;
 
-    if (IS_NULLSTR(argument))
-	return FALSE;
-
-    argument = one_argument(argument,arg);
-
-    if (!str_prefix(arg,"help"))
-    {
 	if (IS_NULLSTR(argument))
-	{
-	    do_function(ch, &do_help, "talents" );
-	    return TRUE;
-	}
+		return FALSE;
 
-	do_function(ch, &do_help, argument );
-	return TRUE;
-    }
+	argument = one_argument(argument,arg);
 
-    if (!str_prefix(arg,"add"))
-    {
-	if (IS_NULLSTR(argument))
+	if (!str_prefix(arg,"help"))
 	{
-	    send_to_char("You must provide an ability name.\n\r",ch);
-	    return TRUE;
-	}
+		if (IS_NULLSTR(argument))
+		{
+			do_function(ch, &do_help, "talents" );
+			return TRUE;
+		}
 
-	if (ch->gen_data->skill_dots[0] == 0)
-	{
-	send_to_char("You have no more dots available.\n\r",ch);
-	return TRUE;
-	}
-
-	sn = abil_lookup(argument, ch);
-	if (sn != -1 && sn < 13)
-	{
-	    if (ch->ability[sn].value >= 5)
-	    {
-		send_to_char("You cannot increase the ability more.\n\r",ch);
+		do_function(ch, &do_help, argument );
 		return TRUE;
-	    }
-
-	    if (IS_ATTRIB_AVAILABLE(ch->race, sn))
-	    {
-	    ch->gen_data->skill_dots[0] -= 1;
-	    ch->ability[sn].value += 1;
-	    send_to_char(Format("%s : %d\n\r",ability_table[sn].name, ch->ability[sn].value),ch);
-	    return TRUE;
-	    }
 	}
 
-	send_to_char("No ability by that name.\n\r",ch);
-	return TRUE;
-    }
-
-    if (!str_cmp(arg,"minus"))
-    {
-	if (IS_NULLSTR(argument))
-  	{
-	    send_to_char("You must provide an ability to subtract from.\n\r",ch);
-	    return TRUE;
-	}
-
-	sn = abil_lookup(argument, ch);
-	if (sn != -1 && sn < 13 && ch->ability[sn].value > 0)
+	if (!str_prefix(arg,"add"))
 	{
-	    ch->gen_data->skill_dots[0] += 1;
-	    ch->ability[sn].value -= 1;
-	    send_to_char(Format("%s : %d\n\r",ability_table[sn].name, ch->ability[sn].value),ch);
-	    return TRUE;
+		if (IS_NULLSTR(argument))
+		{
+			send_to_char("You must provide an ability name.\n\r",ch);
+			return TRUE;
+		}
+
+		if (ch->gen_data->skill_dots[0] == 0)
+		{
+			send_to_char("You have no more dots available.\n\r",ch);
+			return TRUE;
+		}
+
+		sn = abil_lookup(argument, ch);
+		if (sn != -1 && sn < 13)
+		{
+			if (ch->ability[sn].value >= 5)
+			{
+				send_to_char("You cannot increase the ability more.\n\r",ch);
+				return TRUE;
+			}
+
+			if (IS_ATTRIB_AVAILABLE(ch->race, sn))
+			{
+				ch->gen_data->skill_dots[0] -= 1;
+				ch->ability[sn].value += 1;
+				send_to_char(Format("%s : %d\n\r",ability_table[sn].name, ch->ability[sn].value),ch);
+				return TRUE;
+			}
+		}
+
+		send_to_char("No ability by that name.\n\r",ch);
+		return TRUE;
 	}
 
-	send_to_char("You can't subtract any dots from there.\n\r",ch);
-	return TRUE;
-    }
-
-    if (!str_prefix(arg,"premise"))
-    {
-	do_function(ch, &do_help, "premise" );
-	return TRUE;
-    }
-
-    if (!str_prefix(arg,"list"))
-    {
-	for(i = 0; i < 13; i++)
+	if (!str_cmp(arg,"minus"))
 	{
-	    if(IS_ATTRIB_AVAILABLE(ch->race, i))
-	    {
-	    if(i%3 == 0) send_to_char("\n\r", ch);
-			send_to_char(Format("%-10s: %1d  [\t<send href='add %s'>add\t</send> | \t<send href='minus %s'>minus\t</send>]\n\r",capitalize(ability_table[i].name), ch->ability[i].value, ability_table[i].name, ability_table[i].name),ch );
-	    }
-	}
-	send_to_char("\n\r", ch);
-	return TRUE;
-    }
+		if (IS_NULLSTR(argument))
+		{
+			send_to_char("You must provide an ability to subtract from.\n\r",ch);
+			return TRUE;
+		}
 
-    return FALSE;
+		sn = abil_lookup(argument, ch);
+		if (sn != -1 && sn < 13 && ch->ability[sn].value > 0)
+		{
+			ch->gen_data->skill_dots[0] += 1;
+			ch->ability[sn].value -= 1;
+			send_to_char(Format("%s : %d\n\r",ability_table[sn].name, ch->ability[sn].value),ch);
+			return TRUE;
+		}
+
+		send_to_char("You can't subtract any dots from there.\n\r",ch);
+		return TRUE;
+	}
+
+	if (!str_prefix(arg,"premise"))
+	{
+		do_function(ch, &do_help, "premise" );
+		return TRUE;
+	}
+
+	if (!str_prefix(arg,"list"))
+	{
+		for(i = 0; i < 13; i++)
+		{
+			if(IS_ATTRIB_AVAILABLE(ch->race, i))
+			{
+				if(i%3 == 0) 
+					send_to_char("\n\r", ch);
+				send_to_char(Format("%-10s: %1d  [\t<send href='add %s'>add\t</send> | \t<send href='minus %s'>minus\t</send>]\n\r",capitalize(ability_table[i].name), ch->ability[i].value, ability_table[i].name, ability_table[i].name),ch );
+			}
+		}
+		send_to_char("\n\r", ch);
+		return TRUE;
+	}
+
+	return FALSE;
 }
 
 /* this procedure handles the input parsing for the skill abilities generator */
