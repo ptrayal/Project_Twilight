@@ -2691,6 +2691,9 @@ void do_time( CHAR_DATA *ch, char *argument )
 	extern char str_boot_time[];
 	char *suf;
 	int day = time_info.day + 1;
+	time_t rawtime;
+	struct tm *info;
+	char buffer[80]={'\0'};
 
 	CheckCH(ch);
 
@@ -2728,7 +2731,11 @@ void do_time( CHAR_DATA *ch, char *argument )
 		send_to_char("Game time has been stopped.\n\r", ch);
 	}
 
-	send_to_char( Format("Process started: %sSystem time: %s\n\r", str_boot_time, (char *) ctime( &current_time )), ch );
+	time( &rawtime );
+	info = localtime( &rawtime );
+	strftime(buffer,80,"%a %b-%d-%Y (%H:%M%p %Z)", info);
+
+	send_to_char( Format("Process started: %sSystem time: %s\n\r", str_boot_time, buffer), ch );
 	return;
 }
 
@@ -2736,10 +2743,16 @@ void do_time( CHAR_DATA *ch, char *argument )
 void do_lastboot(CHAR_DATA *ch, char *argument)
 {
 	extern char str_boot_time[];
+	time_t rawtime;
+	struct tm *info;
+	char buffer[80]={'\0'};
 
 	CheckCH(ch);
+	time( &rawtime );
+	info = localtime( &rawtime );
+	strftime(buffer,80,"%a %b-%d-%Y (%H:%M%p %Z)", info);
 
-	send_to_char( Format("Process started: %sSystem time: %s\n\r", str_boot_time, (char *) ctime( &current_time )), ch );
+	send_to_char( Format("Process started: %sSystem time: %s\n\r", str_boot_time, buffer), ch );
 	return;
 }
 
