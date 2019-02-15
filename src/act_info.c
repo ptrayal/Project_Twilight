@@ -2748,6 +2748,7 @@ void do_lastboot(CHAR_DATA *ch, char *argument)
 	char buffer[80]={'\0'};
 
 	CheckCH(ch);
+	
 	time( &rawtime );
 	info = localtime( &rawtime );
 	strftime(buffer,80,"%a %b-%d-%Y (%H:%M%p %Z)", info);

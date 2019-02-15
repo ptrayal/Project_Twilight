@@ -31,13 +31,13 @@ const struct clan_type clan_table[MAX_CLAN] =
 	{-1, -1, -1},	"",	""     },
 
 	{	"assamite",	"ASSM ",	FALSE,	VA,	-1,
-	{DISC_QUIETUS, DISC_CELERITY, DISC_OBFUSCATE},	"",	""  },
+	{DISC_CELERITY, DISC_OBFUSCATE, DISC_QUIETUS},	"",	""  },
 
 	{	"brujah",	"BRUJ ",	FALSE,	VA,	-1,
 	{DISC_CELERITY, DISC_POTENCE, DISC_PRESENCE},	"",	""  },
 
 	{	"gangrel",	"GANG ",	FALSE,	VA,	-1,
-	{DISC_PROTEAN, DISC_ANIMALISM, DISC_FORTITUDE},	"",	""  },
+	{DISC_ANIMALISM, DISC_FORTITUDE, DISC_PROTEAN},	"",	""  },
 
 	{	"giovanni",	"GIOV ",	FALSE,	VA,	-1,
 	{DISC_DOMINATE, DISC_NECROMANCY, DISC_POTENCE},	"",	""  },
@@ -46,7 +46,7 @@ const struct clan_type clan_table[MAX_CLAN] =
 	{DISC_DOMINATE, DISC_OBTENEBRATION, DISC_POTENCE},	"",	""  },
 
 	{	"malkavian",	"MALK ",	FALSE,	VA,	-1,
-	{DISC_AUSPEX, DISC_OBFUSCATE, DISC_DOMINATE},	"",	""  },
+	{DISC_AUSPEX, DISC_DOMINATE, DISC_OBFUSCATE},	"",	""  },
 
 	{	"nosferatu",	"NOSF ",	FALSE,	VA,	-1,
 	{DISC_ANIMALISM, DISC_OBFUSCATE, DISC_POTENCE}, "",	""  },
@@ -58,16 +58,16 @@ const struct clan_type clan_table[MAX_CLAN] =
 	{DISC_OBFUSCATE, DISC_PRESENCE, DISC_SERPENTIS},	"",	""  },
 
 	{	"toreador",	"TORE ",	FALSE,	VA,	-1,
-	{DISC_AUSPEX, DISC_PRESENCE, DISC_CELERITY},	"",	""  },
+	{DISC_AUSPEX, DISC_CELERITY, DISC_PRESENCE},	"",	""  },
 
 	{	"tremere",	"TREM ",	FALSE,	VA,	-1,
-	{DISC_DOMINATE, DISC_AUSPEX, DISC_THAUMATURGY},	"",	""  },
+	{DISC_AUSPEX, DISC_DOMINATE, DISC_THAUMATURGY},	"",	""  },
 
 	{	"tzimisce",	"TZIM ",	FALSE,	VA,	-1,
 	{DISC_ANIMALISM, DISC_AUSPEX, DISC_VICISSITUDE},	"",	""  },
 
 	{	"ventrue",	"VENT ",	FALSE,	VA,	-1,
-	{DISC_DOMINATE, DISC_PRESENCE, DISC_FORTITUDE},	"",	""  },
+	{DISC_DOMINATE, DISC_FORTITUDE, DISC_PRESENCE},	"",	""  },
 
 	{	"black furies",	"FURY ",	FALSE,	WW,	18,
 	{DISC_TRIBE, -1, -1},	"wolf",	"werewolf" },

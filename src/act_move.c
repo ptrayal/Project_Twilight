@@ -2591,7 +2591,7 @@ bool CAN_TRAIN_POWER(CHAR_DATA *ch, int loop, int type)
 void do_basediscs( CHAR_DATA *ch, char *argument )
 {
     char arg1[MSL]={'\0'};
-    int loop;
+    int loop = 0;
 
     CheckCH(ch);
 
@@ -2607,7 +2607,7 @@ void do_basediscs( CHAR_DATA *ch, char *argument )
             send_to_char("Your clan disciplines are:\n\r", ch);
             for(loop = 0; loop < 3; loop++)
             {
-                send_to_char(Format("%s\n\r", disc_table[ch->clan_powers[loop]].vname), ch);
+                send_to_char(Format("%s\n\r", capitalize(disc_table[ch->clan_powers[loop]].vname)), ch);
             }
             return;
         }
