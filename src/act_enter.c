@@ -1259,7 +1259,6 @@ void do_members(CHAR_DATA *ch, char *argument)
 {
 	ORG_DATA *org;
 	ORGMEM_DATA *mem;
-	int count = 0;
 
 	CheckCH(ch);
 
@@ -1297,16 +1296,11 @@ void do_members(CHAR_DATA *ch, char *argument)
 	} 
 	else 
 	{
-		count = 0;
-		send_to_char(Format("%-14s %-10s", "Name", "Status"), ch);
 		send_to_char(Format("%-14s %-10s\n\r", "Name", "Status"), ch);
 		send_to_char("------------------------------------------------\n\r",ch);
 		for(mem = org->members; mem; mem = mem->next)
 		{
-			count++;
-			send_to_char(Format("%-14s %-10d", mem->name, mem->status), ch);
-			if(count % 2 == 0)
-				send_to_char("\n\r", ch);
+			send_to_char(Format("\t<send href='whois %s'>%-14s\t</send> %-10d", mem->name,mem->name, mem->status), ch);
 		}
 		send_to_char("\n\r", ch);
 	}
