@@ -205,6 +205,7 @@ DECLARE_DO_FUN(	do_follow	);
 DECLARE_DO_FUN(	do_for		);
 DECLARE_DO_FUN(	do_force	);
 DECLARE_DO_FUN(	do_freeze	);
+DECLARE_DO_FUN( do_freevnums );
 DECLARE_DO_FUN(	do_frenzy	);
 DECLARE_DO_FUN(	do_generation	);
 DECLARE_DO_FUN(	do_get		);

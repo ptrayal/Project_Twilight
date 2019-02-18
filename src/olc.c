@@ -4800,3 +4800,70 @@ void do_buildmode(CHAR_DATA *ch, char *argument)
 	SET_BIT(ch->comm, COMM_BUILDER);
 	send_to_char("Builder mode on.\n\r", ch);
 }
+
+void do_freevnums(CHAR_DATA *ch, char *argument)
+{
+	AREA_DATA *pArea;
+	BUFFER *buffer;
+	char buf[MAX_STRING_LENGTH] = {'\0'};
+	int vnum_min, vnum_max = 0, vnum_next;
+
+	if (area_first == NULL) 
+	{
+		send_to_char("There are no areas.\r\n", ch);
+		return;
+	}
+
+	buffer = new_buf();
+
+	snprintf(buf, sizeof(buf), "Free slot ranges (inclusive):\n\r");
+	add_buf( buffer, buf );
+
+	// First iteration - get minum vnum (done so we can have an arbitrary min-vnum.
+	vnum_min = area_first->min_vnum;
+
+	for (pArea = area_first; pArea; pArea = pArea->next)
+	{
+		if (pArea->min_vnum < vnum_min)
+		{
+			vnum_min = pArea->min_vnum;
+		}
+	}
+
+	while (1) 
+	{
+		vnum_next = -1;
+		for (pArea = area_first; pArea; pArea = pArea->next) 
+		{
+			if (pArea->min_vnum == vnum_min) 
+			{
+					// Go on the assumption there will be no overlaps.
+				vnum_max = pArea->max_vnum;
+			} 
+			else if (pArea->min_vnum > vnum_min
+				&& (vnum_next == -1 || pArea->min_vnum < vnum_next))
+				vnum_next = pArea->min_vnum;
+		}
+
+			// No area bigger than the last one.
+		if (vnum_next == -1) 
+		{
+			snprintf(buf, sizeof(buf), "%d onwards\r\n", vnum_max+1);
+			add_buf(buffer, buf);
+			break;
+		}
+		if (++vnum_max < vnum_next) 
+		{
+				// Theres a gap between last and next.
+			snprintf(buf, sizeof(buf), "Between %-6d-%6d [%6d slots]\n\r",
+				vnum_max, vnum_next-1, vnum_next-vnum_max);
+			add_buf(buffer, buf);
+		}
+		vnum_min = vnum_next;
+	}
+
+	page_to_char(buffer->string, ch);
+	free_buf(buffer);
+	return;
+
+}

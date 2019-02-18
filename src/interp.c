@@ -554,6 +554,7 @@ const	struct	cmd_type	cmd_table	[] =
 	{	"event_list",		do_elist,			P_DEAD,	ST,	L_NRM,	1,	A|B|E,	0 },
 	{	"facts",			do_know,			P_DEAD,	WA,	L_NRM,	1,	A|B|H,	0 },
 	{	"fixchar",			do_fixchar,			P_DEAD,	MA,	L_ALL,	1,	A|B|E,	0 },
+	{	"freevnum",			do_freevnums,		P_DEAD,	IM,	L_ALL,	1,	A|B|E,	0 },
 	{	"flag",				do_flag,			P_DEAD,	WA,	L_ALL,	1,	A|B|E,	0 },
 	{	"for",				do_for,				P_DEAD,	MA,	L_ALL,	1,	A|B,	0 },
 	{	"force",			do_force,			P_DEAD,	ST,	L_ALL,	1,	A|B|E,	0 },
