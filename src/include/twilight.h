@@ -170,7 +170,7 @@ typedef	int  BLD_FUN	args( ( CHAR_DATA *ch, char *argument, int type,
 #define LEVEL_IMMORTAL			(MAX_LEVEL - 3)
 #define MAX_HEALTH				7
 #define MAX_VIRTUES				4
-#define MAX_DISC				21
+#define MAX_DISC				20
 #define MAX_EXITS				6
 #define MAX_NOMINEES			6
 #define MAX_OFFICES				3
