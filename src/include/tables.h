@@ -61,6 +61,13 @@ struct attrib_type
     char *name;
 };
 
+/*
+    Field 1 - Vampire Name
+    Field 2 - Werewolf Name
+    Field 3 - Faerie Name
+    Field 4 - Human Name
+    Field 5 - Index Number
+*/
 struct disc_type
 {
     char *vname;

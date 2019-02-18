@@ -2669,27 +2669,27 @@ struct	skill_type
 
 #define MAX_ABILITY		38
 
-#define DISC_ANIMALISM		0
-#define DISC_AUSPEX			1
-#define DISC_CELERITY		2
-#define DISC_DOMINATE		3
-#define DISC_FORTITUDE		4
-#define DISC_OBFUSCATE		5
-#define DISC_PRESENCE		6
-#define DISC_POTENCE		7
-#define DISC_PROTEAN		8
-#define DISC_THAUMATURGY	9
-#define DISC_NECROMANCY		10
-#define DISC_OBEAH			11
-#define DISC_CHIMERSTRY		12
-#define DISC_MELPOMINEE		13
-#define DISC_QUIETUS		14
-#define DISC_SERPENTIS		15
-#define DISC_THANATOSIS		16
-#define DISC_DEMENTATION	17
-#define DISC_OBTENEBRATION	18
-#define DISC_VICISSITUDE	19
-#define DISC_MISSING		20
+/* Discipline Index Numbers */
+#define DISC_ANIMALISM      0
+#define DISC_AUSPEX         1
+#define DISC_CELERITY       2
+#define DISC_CHIMERSTRY     3
+#define DISC_DEMENTATION    4
+#define DISC_DOMINATE       5
+#define DISC_FORTITUDE      6
+#define DISC_MELPOMINEE     7
+#define DISC_NECROMANCY     8
+#define DISC_OBEAH          9
+#define DISC_OBFUSCATE      10
+#define DISC_OBTENEBRATION  11
+#define DISC_POTENCE        12
+#define DISC_PRESENCE       13
+#define DISC_PROTEAN        14
+#define DISC_QUIETUS        15
+#define DISC_SERPENTIS      16
+#define DISC_THANATOSIS     17
+#define DISC_THAUMATURGY    18
+#define DISC_VICISSITUDE    19
 
 #define DISC_TRIBE		0
 #define DISC_AUSPICE		1

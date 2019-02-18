@@ -1874,7 +1874,8 @@ int update_news_stands ()
 
 	for(seller = char_list; seller; seller = seller->next)
 	{
-		if(IS_SET(seller->act2, ACT2_NEWS_STAND)) {
+		if(IS_SET(seller->act2, ACT2_NEWS_STAND)) 
+		{
 			for(obj = published; obj; obj = obj->next)
 			{
 				/* clone objects */

@@ -109,14 +109,20 @@ const struct clan_type clan_table[MAX_CLAN] =
 /* for powers */
 const struct disc_type disc_table[] =
 {
-	{	"animalism",	"tribe",	"realm",	"",
+	{	"animalism",	"",	"",	"",
 	DISC_ANIMALISM },
 
-	{	"auspex",	"auspice",	"art",	"",
+	{	"auspex",	"",	"",	"",
 	DISC_AUSPEX },
 
-	{	"celerity",	"breed",	"actor",	"",
+	{	"celerity",	"",	"",	"",
 	DISC_CELERITY },
+
+	{	"chimerstry",	"",	"",	"",
+	DISC_CHIMERSTRY },
+
+	{	"dementation",	"",	"",	"",
+	DISC_DEMENTATION },
 
 	{	"dominate",	NULL,	NULL,	"",
 	DISC_DOMINATE },
@@ -124,20 +130,8 @@ const struct disc_type disc_table[] =
 	{	"fortitude",	"",	"",	"",
 	DISC_FORTITUDE },
 
-	{	"obfuscate",	"",	"",	"",
-	DISC_OBFUSCATE },
-
-	{	"presence",	"",	"",	"",
-	DISC_PRESENCE },
-
-	{	"potence",	"",	"",	"",
-	DISC_POTENCE },
-
-	{	"protean",	"",	"",	"",
-	DISC_PROTEAN },
-
-	{	"thaumaturgy",	"",	"",	"",
-	DISC_THAUMATURGY },
+	{	"melpominee",	"",	"",	"",
+	DISC_MELPOMINEE },
 
 	{	"necromancy",	"",	"",	"",
 	DISC_NECROMANCY },
@@ -145,11 +139,20 @@ const struct disc_type disc_table[] =
 	{	"obeah",	"",	"",	"",
 	DISC_OBEAH },
 
-	{	"chimerstry",	"",	"",	"",
-	DISC_CHIMERSTRY },
+	{	"obfuscate",	"",	"",	"",
+	DISC_OBFUSCATE },
 
-	{	"melpominee",	"",	"",	"",
-	DISC_MELPOMINEE },
+	{	"obtenebration","",	"",	"",
+	DISC_OBTENEBRATION },
+
+	{	"potence",	"",	"",	"",
+	DISC_POTENCE },
+
+	{	"presence",	"",	"",	"",
+	DISC_PRESENCE },
+
+	{	"protean",	"",	"",	"",
+	DISC_PROTEAN },
 
 	{	"quietus",	"",	"",	"",
 	DISC_QUIETUS },
@@ -160,18 +163,12 @@ const struct disc_type disc_table[] =
 	{	"thanatosis",	"",	"",	"",
 	DISC_THANATOSIS },
 
-	{	"dementation",	"",	"",	"",
-	DISC_DEMENTATION },
-
-	{	"obtenebration","",	"",	"",
-	DISC_OBTENEBRATION },
+	{	"thaumaturgy",	"",	"",	"",
+	DISC_THAUMATURGY },
 
 	{	"vicissitude",	"",	"",	"",
 	DISC_VICISSITUDE },
 
-/*    {	"",	"",	"",	"",
-	DISC_MISSING },
-*/
 	{	NULL,	"",	"",	"",
 	-1 }
 };
