@@ -66,7 +66,7 @@ void traitto(int featnum, char *name, int in_game, int can_stack, char *prerequi
   trait_list[featnum].description = description;
 }
 
-void traits(void)
+void free_traits(void)
 {
   /* Nothing to do right now */
 }

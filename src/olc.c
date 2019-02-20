@@ -4855,7 +4855,7 @@ void do_freevnums(CHAR_DATA *ch, char *argument)
 		if (++vnum_max < vnum_next) 
 		{
 				// Theres a gap between last and next.
-			snprintf(buf, sizeof(buf), "Between %-6d-%6d [%6d slots]\n\r",
+			snprintf(buf, sizeof(buf), "Between %-6d-%6d [\tO%6d slots\tn]\n\r",
 				vnum_max, vnum_next-1, vnum_next-vnum_max);
 			add_buf(buffer, buf);
 		}

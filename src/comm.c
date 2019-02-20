@@ -1554,7 +1554,7 @@ bool process_output( DESCRIPTOR_DATA *d, bool fPrompt )
 			if ( d->pProtocol->WriteOOB ) /* <-- Add this, and the ";" and "else" */
 			        ; /* The last sent data was OOB, so do NOT draw the prompt */
 			else if ( d->showstr_point)
-				write_to_buffer( d, "[Hit Return to continue]\n\r", 0 );
+				write_to_buffer( d, "[\tAHit Return to continue\tn]\n\r", 0 );
 			else if ( fPrompt && d->pString && d->connected == CON_PLAYING )
 				write_to_buffer( d, "> ", 2 );
 			else if ( fPrompt && d->connected == CON_PLAYING )
@@ -4974,7 +4974,6 @@ bool parse_gen_virtues(CHAR_DATA *ch,char *argument)
 
 			ch->gen_data->virtue_dots -= 1;
 			ch->virtues[sn] += 1;
-			// send_to_char(Format("%s : %d \n\r",virtue_table[sn].name, ch->virtues[sn]),ch);
 			send_to_char(Format("%-12s: %1d  [\t<send href='add %s'>add\t</send> | \t<send href='minus %s'>minus\t</send>]\n\r",capitalize(virtue_table[sn].name), ch->virtues[sn], virtue_table[sn].name, virtue_table[sn].name),ch );	
 			return TRUE;
 		}
@@ -4996,7 +4995,6 @@ bool parse_gen_virtues(CHAR_DATA *ch,char *argument)
 		{
 			ch->gen_data->virtue_dots += 1;
 			ch->virtues[sn] -= 1;
-			// send_to_char(Format("%s : %d\n\r",virtue_table[sn].name, ch->virtues[sn]),ch);
 			send_to_char(Format("%-12s: %1d  [\t<send href='add %s'>add\t</send> | \t<send href='minus %s'>minus\t</send>]\n\r",capitalize(virtue_table[sn].name), ch->virtues[sn], virtue_table[sn].name, virtue_table[sn].name),ch );	
 			return TRUE;
 		}
@@ -5015,7 +5013,6 @@ bool parse_gen_virtues(CHAR_DATA *ch,char *argument)
 	{
 		for(i = 0; /*virtue_table[i].name != NULL*/i < 3; i++)
 		{
-			// send_to_char(Format("%s : %d\n\r",virtue_table[i].name, ch->virtues[i]),ch);
 			send_to_char(Format("%-12s: %1d  [\t<send href='add %s'>add\t</send> | \t<send href='minus %s'>minus\t</send>]\n\r",capitalize(virtue_table[i].name), ch->virtues[i], virtue_table[i].name, virtue_table[i].name),ch );	
 		}
 		send_to_char("\n\r", ch);
