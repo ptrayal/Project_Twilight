@@ -512,7 +512,7 @@ void do_yell( CHAR_DATA *ch, char *argument )
 
 		REMOVE_BIT(ch->comm,COMM_NOGOSSIP);
 
-		send_to_char( Format("You yell '%s'\n\r", argument), ch );
+		send_to_char( Format("You yell '\tP%s\tn'\n\r", argument), ch );
 		for ( d = descriptor_list; d != NULL; d = d->next )
 		{
 			CHAR_DATA *victim;
@@ -532,7 +532,7 @@ void do_yell( CHAR_DATA *ch, char *argument )
 				!IS_SET(victim->comm,COMM_OLC)		&&
 				can_comprehend(victim, ch) )
 			{
-				act_new( "$n yells '$t'", ch,argument, d->character, TO_VICT,P_SLEEP, 0 );
+				act_new( "$n yells '\tP$t\tn'", ch,argument, d->character, TO_VICT,P_SLEEP, 0 );
 				if(IS_AFFECTED(victim, AFF_HSENSES)
 					&& ch->in_room == victim->in_room
 					&& victim->shape <= SHAPE_HUMAN
@@ -551,7 +551,7 @@ void do_yell( CHAR_DATA *ch, char *argument )
 				!IS_SET(victim->comm,COMM_OLC) )
 			{
 				translate(ch, argument, buf2);
-				act_new( "$n yells '$t'", ch, buf2, d->character, TO_VICT, P_SLEEP, 0 );
+				act_new( "$n yells '\tP$t\tn'", ch, buf2, d->character, TO_VICT, P_SLEEP, 0 );
 				if(IS_AFFECTED(ch, AFF_HSENSES)
 					&& ch->in_room == victim->in_room
 					&& victim->shape <= SHAPE_HUMAN
