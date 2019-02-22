@@ -1479,19 +1479,20 @@ void do_mfind(CHAR_DATA *ch, char *argument)
 }
 
 
-
 void do_ofind(CHAR_DATA *ch, char *argument)
 {
 	extern int top_obj_index;
 	OBJ_INDEX_DATA      *pObjIndex;
 	BUFFER              *buf1;
 	char                arg  [ MIL ]={'\0'};
-	bool fAll, fBigger, found;
-	int vnum;
+	bool fAll;
+	bool fBigger;
+	bool found = FALSE;
 	long largest = 0;
-	int  lsize = 0;
-	int  col = 0;
-	int nMatch;
+	int vnum = 0;
+	int lsize = 0;
+	int col = 0;
+	int nMatch = 0;
 
 	CheckCH(ch);
 
@@ -1503,11 +1504,8 @@ void do_ofind(CHAR_DATA *ch, char *argument)
 	}
 
 	buf1=new_buf();
-	/*    buf1[0] = '\0'; */
 	fAll    = !str_cmp( arg, "all" );
 	fBigger = !str_cmp( arg, "oversize" );
-	found   = FALSE;
-	nMatch      = 0;
 
 	/*
 	 * Yeah, so iterating over all vnum's takes 10,000 loops.
@@ -1521,15 +1519,20 @@ void do_ofind(CHAR_DATA *ch, char *argument)
 		{
 			nMatch++;
 			if ( fAll || is_name( arg, pObjIndex->name )
-					|| flag_value( type_flags, arg ) == pObjIndex->item_type
-					|| flag_value( size_flags, arg ) == pObjIndex->weight
-					|| (fBigger && pObjIndex->weight > MAX_SIZE) )
+				|| flag_value( type_flags, arg ) == pObjIndex->item_type
+				|| flag_value( size_flags, arg ) == pObjIndex->weight
+				|| (fBigger && pObjIndex->weight > MAX_SIZE) )
 			{
 				found = TRUE;
 				add_buf( buf1, (char *)Format("[%5d] %-17.16s", pObjIndex->vnum, capitalize( pObjIndex->short_descr )) );
+				
 				if ( ++col % 3 == 0 )
+				{
 					add_buf( buf1, "\n\r" );
-				if(pObjIndex->weight > lsize) {
+				}
+				
+				if(pObjIndex->weight > lsize) 
+				{
 					lsize = pObjIndex->weight;
 					largest = pObjIndex->vnum;
 				}
@@ -1544,7 +1547,9 @@ void do_ofind(CHAR_DATA *ch, char *argument)
 	}
 
 	if ( col % 3 != 0 )
+	{
 		add_buf( buf1, "\n\r" );
+	}
 
 	if ( fBigger )
 	{
@@ -1562,14 +1567,11 @@ void do_owhere(CHAR_DATA *ch, char *argument )
 	BUFFER *buffer;
 	OBJ_DATA *obj;
 	OBJ_DATA *in_obj;
-	bool found;
-	int number = 0, max_found;
+	bool found = FALSE;
+	int number = 0;
+	int max_found = 200;
 
 	CheckCH(ch);
-
-	found = FALSE;
-	number = 0;
-	max_found = 200;
 
 	buffer = new_buf();
 
