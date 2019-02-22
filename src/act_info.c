@@ -2825,7 +2825,7 @@ void do_help( CHAR_DATA *ch, char *argument )
 		{
 			/* add seperator if found */
 			if (found && strlen( argall ) > 1 )
-				add_buf(output, "\n\r============================================================\n\r\n\r");
+				add_buf(output, "\n\r<================================BREAK===============================>\n\r\n\r");
 			if ( pHelp->level >= 0 && str_cmp( argall, "imotd" ) )
 			{
 				add_buf(output, "\tWKeywords:\tn ");

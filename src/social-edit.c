@@ -86,6 +86,7 @@ void load_social_table ()
 	FILE *fp;
 	int i;
 	fp = fopen (SOCIAL_FILE, "r");
+
 	if (!fp)
 	{
 		log_string(LOG_BUG, Format("Could not open " SOCIAL_FILE " for reading."));
