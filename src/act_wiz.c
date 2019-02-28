@@ -1496,6 +1496,7 @@ void do_ofind(CHAR_DATA *ch, char *argument)
 
 	CheckCH(ch);
 
+	log_string( LOG_COMMAND, Format("TRACKING - do_ofind %s", argument));
 	one_argument( argument, arg );
 	if ( IS_NULLSTR(arg) )
 	{

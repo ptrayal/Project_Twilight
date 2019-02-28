@@ -3836,25 +3836,25 @@ OEDIT( oedit_extra2 )      /* Moved out of oedit() due to naming conflicts -- Hu
 
 OEDIT( oedit_wear )      /* Moved out of oedit() due to naming conflicts -- Hugin */
 {
-    OBJ_INDEX_DATA *pObj;
-    int value;
+	OBJ_INDEX_DATA *pObj;
+	int value;
 
-     if ( !IS_NULLSTR(argument) )
-    {
-	EDIT_OBJ(ch, pObj);
-
-	if ( ( value = flag_value( wear_flags, argument ) ) != NO_FLAG )
+	if ( !IS_NULLSTR(argument) )
 	{
-	    TOGGLE_BIT(pObj->wear_flags, value);
+		EDIT_OBJ(ch, pObj);
 
-	    send_to_char( "Wear flag toggled.\n\r", ch);
-	    return TRUE;
+		if ( ( value = flag_value( wear_flags, argument ) ) != NO_FLAG )
+		{
+			TOGGLE_BIT(pObj->wear_flags, value);
+
+			send_to_char( "Wear flag toggled.\n\r", ch);
+			return TRUE;
+		}
 	}
-    }
 
-    send_to_char( "Syntax:  wear [flag]\n\r"
-		  "Type '? wear' for a list of flags.\n\r", ch );
-    return FALSE;
+	send_to_char( "Syntax:  wear [flag]\n\r"
+		"Type '? wear' for a list of flags.\n\r", ch );
+	return FALSE;
 }
 
 
