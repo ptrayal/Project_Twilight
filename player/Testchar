@@ -1,0 +1,208 @@
+# PLAYER
+Ver 3
+Name Testchar~
+Id 1550518290
+LogO 1551370355
+LastV 0
+LastO Thu Feb 28 10:12:35 2019~
+Desc An impossibly descriptive individual~
+Race 3
+AusBr 3 0
+Gen 13
+Shape 0
+Warrants 0
+Hunted 0
+Cln tremere~
+Material flesh~
+CPow 1 5 18 
+Sex 1
+Tru 1
+Sec 0
+Playd 595
+Not 0
+Scro 22
+Room 10000
+Listen 0
+Prompt <%h> ~
+HMV  7 7
+Virt  3 4 3
+RGW 10 10 7 7 3 3
+Dsc 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
+Pow 0 0 0 0 0 
+Status 0 0 0 
+Infl 0 0 0 0 0 0 0 0 
+Back 0 0 0 0 0 0 0 0 0 0 
+BgTime 6
+BgCount 0
+Herdt 0
+Age 0
+Oocxp 59 0
+Dollars 300
+Cents 0
+Bank 0
+Exp 20
+OocExp 0
+Pflgs C~
+Comm NO~
+Pos 10
+Attr 2 2 2 2 4 2 3 4 3
+AMod 0 0 0 0 0 0 0 0 0
+Econfnum 0
+Prof None 0 8 0
+Nature None~
+Demnor None~
+Pack None~
+Totem 3 3
+Ab 0 'acting'
+Ab 0 'alertness'
+Ab 0 'athletics'
+Ab 1 'brawl'
+Ab 2 'dodge'
+Ab 0 'empathy'
+Ab 0 'expression'
+Ab 0 'intimidation'
+Ab 1 'leadership'
+Ab 0 'streetwise'
+Ab 1 'subterfuge'
+Ab 0 'animal ken'
+Ab 1 'crafts'
+Ab 0 'drive'
+Ab 2 'etiquette'
+Ab 1 'firearms'
+Ab 1 'melee'
+Ab 0 'performance'
+Ab 0 'repair'
+Ab 1 'larceny'
+Ab 1 'stealth'
+Ab 2 'survival'
+Ab 2 'academics'
+Ab 1 'computer'
+Ab 1 'finance'
+Ab 2 'investigation'
+Ab 0 'law'
+Ab 1 'technology'
+Ab 1 'medicine'
+Ab 3 'occult'
+Ab 1 'politics'
+Ab 1 'science'
+Pass password~
+Titl is new to the city.~
+RPTitle Not Available~
+Colours (null)~ (null)~
+Pnts 593
+Gift 20
+TSex 1
+Condit  -1 44 100 50 -10 -10 -20 -8 -8 -8 91
+Home 0
+End
+
+#O
+Vnum 1
+Nest 0
+Name long cotton cloak~
+ShD a long cloak~
+Desc A long cloak to hide your nakedness lies here.~
+FDesc A long, cotton cloak.~
+Wear -1
+Time -1
+Cost 0
+Val  3 0 0 0 2 0
+End
+
+#O
+Vnum 50
+Nest 0
+Name mobile phone~
+ShD a sleek little mobile phone~
+Desc A small, portable phone twinkles its display quietly.~
+FDesc A small, portable phone.~
+Wear 17
+Time -1
+Cost 0
+End
+
+#O
+Vnum 1000
+Nest 0
+Name black dinner jacket~
+ShD a dinner jacket~
+Desc A black dinner jacket is here.~
+FDesc In the traditional black, this jacket speaks of style and class. Double
+breasted, complete with handkerchief and a tastefully chosen flower
+placed delicately in the button hole, the wearer of this jacket can move
+easily into high society, as readily acceptible in a ballroom as at a
+high stakes casino table.
+~
+Wear 12
+Time -1
+Cost 10000
+End
+
+#O
+Vnum 1001
+Nest 0
+Name dress shirt 'dress shirt'~
+ShD a dress shirt~
+Desc A dress shirt is here.~
+FDesc With a pleated front and pre-inserted black button-studs and cuff links,
+this handsome shirt is specially designed with the connoisseur in mind.  
+~
+Wear 5
+Time -1
+Cost 7500
+End
+
+#O
+Vnum 1002
+Nest 0
+Name black silk bow tie 'bow tie'~
+ShD a black bow tie~
+Desc A black, silk bow tie is here.~
+FDesc This black silk bow tie is the perfect accompaniment to a good tuxedo.  
+~
+Wear 3
+Time -1
+Cost 3000
+End
+
+#O
+Vnum 1003
+Nest 0
+Name black silk trousers pants~
+ShD black trousers~
+Desc A pair of black, silk trousers is here.~
+FDesc Stylishly cut with a ribbon of satin down the outside of each leg, these
+trousers were made to look good in.  
+~
+Wear 8
+Time -1
+Cost 10000
+End
+
+#O
+Vnum 1004
+Nest 0
+Name black leather dress shoes 'dress shoes' shoe~
+ShD a pair of black leather dress shoes~
+Desc A pair of black leather dress shoes.~
+FDesc A pair of black dinner dress shoes.
+~
+Wear 9
+Time -1
+Cost 15000
+End
+
+#O
+Vnum 1009
+Nest 0
+Name cummerbund~
+ShD a cummerbund~
+Desc A satin cumberbund is here.~
+FDesc A satin cummerbund is here, ready to go to the ball.  
+~
+Wear 13
+Time -1
+Cost 5000
+End
+
+#END
