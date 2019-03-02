@@ -1420,6 +1420,7 @@ void do_vnum(CHAR_DATA *ch, char *argument)
 void do_mfind(CHAR_DATA *ch, char *argument)
 {
     extern int top_mob_index;
+    extern int newmobs;
     MOB_INDEX_DATA      *pMobIndex;
     BUFFER              *buf1;
     char                arg  [ MIL ]={'\0'};
@@ -1449,7 +1450,7 @@ void do_mfind(CHAR_DATA *ch, char *argument)
      * Do you?
      * -- Furey
      */
-    for ( vnum = 0; nMatch < top_mob_index; vnum++ )
+    for ( vnum = 0; nMatch < newmobs; vnum++ )
     {
         if ( ( pMobIndex = get_mob_index( vnum ) ) != NULL )
         {
@@ -1481,7 +1482,8 @@ void do_mfind(CHAR_DATA *ch, char *argument)
 
 void do_ofind(CHAR_DATA *ch, char *argument)
 {
-	extern int top_obj_index;
+	// extern int top_obj_index;
+	extern int newobjs;
 	OBJ_INDEX_DATA      *pObjIndex;
 	BUFFER              *buf1;
 	char                arg  [ MIL ]={'\0'};
@@ -1491,22 +1493,29 @@ void do_ofind(CHAR_DATA *ch, char *argument)
 	long largest = 0;
 	int vnum = 0;
 	int lsize = 0;
-	int col = 0;
+	// int col = 0;
 	int nMatch = 0;
+	int count = 0;
 
 	CheckCH(ch);
 
-	log_string( LOG_COMMAND, Format("TRACKING - do_ofind %s", argument));
+	// log_string( LOG_COMMAND, Format("TRACKING 1 - do_ofind argument %s", argument));
 	one_argument( argument, arg );
+	// log_string( LOG_COMMAND, Format("TRACKING 2 - do_ofind arg %s", arg));
+
 	if ( IS_NULLSTR(arg) )
 	{
 		send_to_char("\tCSyntax:  ofind [all/name/item_type/item_size/oversize]\tn\n\r", ch );
 		return;
 	}
 
-	buf1=new_buf();
+	buf1 = new_buf();
 	fAll    = !str_cmp( arg, "all" );
 	fBigger = !str_cmp( arg, "oversize" );
+	// log_string( LOG_COMMAND, Format("TRACKING 3: fAll = %s. fBigger = %s.", 
+	// 	fAll ? "TRUE" : "FALSE",
+	// 	fBigger ? "TRUE" : "FALSE"));
+
 
 	/*
 	 * Yeah, so iterating over all vnum's takes 10,000 loops.
@@ -1514,10 +1523,17 @@ void do_ofind(CHAR_DATA *ch, char *argument)
 	 * Do you?
 	 * -- Furey
 	 */
-	for ( vnum = 0; nMatch < top_obj_index; vnum++ )
+	// for ( vnum = 0; nMatch < top_obj_index; vnum++ )
+	for ( vnum = 0; nMatch < newobjs; vnum++ )
 	{
+		// log_string( LOG_COMMAND, Format("OFIND TRACKING A: fAll = %s. fBigger = %s.", 
+		// 	fAll ? "TRUE" : "FALSE",
+		// 	fBigger ? "TRUE" : "FALSE"));
 		if ( ( pObjIndex = get_obj_index( vnum ) ) )
 		{
+			// log_string( LOG_COMMAND, Format("OFIND TRACKING B: fAll = %s. fBigger = %s.", 
+			// 	fAll ? "TRUE" : "FALSE",
+			// 	fBigger ? "TRUE" : "FALSE"));
 			nMatch++;
 			if ( fAll || is_name( arg, pObjIndex->name )
 				|| flag_value( type_flags, arg ) == pObjIndex->item_type
@@ -1525,12 +1541,14 @@ void do_ofind(CHAR_DATA *ch, char *argument)
 				|| (fBigger && pObjIndex->weight > MAX_SIZE) )
 			{
 				found = TRUE;
-				add_buf( buf1, (char *)Format("[%5d] %-17.16s", pObjIndex->vnum, capitalize( pObjIndex->short_descr )) );
+				// log_string( LOG_COMMAND, Format("TRACKING # - FOUND do_ofind arg %s", arg));
+				add_buf( buf1, (char *)Format("[%5d] %-s\n\r", pObjIndex->vnum, capitalize( pObjIndex->short_descr )) );
+				count++;
 				
-				if ( ++col % 3 == 0 )
-				{
-					add_buf( buf1, "\n\r" );
-				}
+				// if ( ++col % 3 == 0 )
+				// {
+				// 	add_buf( buf1, "\n\r" );
+				// }
 				
 				if(pObjIndex->weight > lsize) 
 				{
@@ -1547,16 +1565,17 @@ void do_ofind(CHAR_DATA *ch, char *argument)
 		return;
 	}
 
-	if ( col % 3 != 0 )
-	{
-		add_buf( buf1, "\n\r" );
-	}
+	// if ( col % 3 != 0 )
+	// {
+	// 	add_buf( buf1, "\n\r" );
+	// }
 
 	if ( fBigger )
 	{
 		add_buf( buf1, (char *)Format("The largest object is %ld at size %d.\n\r", largest, lsize) );
 	}
 
+	add_buf(buf1, (char *)Format("\tJNumber of Objects Found: %d\tn.\n\r", count));
 	page_to_char( buf_string(buf1), ch );
 	free_buf(buf1);
 	return;

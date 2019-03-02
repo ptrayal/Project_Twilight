@@ -3242,14 +3242,16 @@ const struct flag_type personality_archetypes [] =
 	{ NULL,		 -1, FALSE }
 };
 
+// Names were shortened in order to fit better in certain
+// places.  
 const struct flag_type staff_status [] =
 {
 	{ "NEW PLAYER",		0,  FALSE	},
 	{ "Player",			1,  TRUE	},
-	{ "Staff",			2,  TRUE	}, /* Formerly Watcher */
-	{ "Storyteller",	3,  TRUE	},
-	{ "Administrator",	4,  TRUE	}, /* Formerly Master  */
-	{ "Implementor",	5,  TRUE	},
+	{ "Staff",			2,  TRUE	}, 
+	{ "Narrator",		3,  TRUE	}, /* Formerly Storyteller*/
+	{ "Overseer",		4,  TRUE	}, /* Formerly Administrator*/
+	{ "Owner",			5,  TRUE	}, /* Formerly Implementor */
 	{ NULL,		 -1,  FALSE	}
 };
 

@@ -53,8 +53,8 @@ GRID_ROW *create_row(GRID_DATA *grid)
 	new_row->grid = grid;
 	if(grid)
 		grid_add_row(grid, new_row);
-	new_row->padding_top=1;
-	new_row->padding_bottom=1;
+	new_row->padding_top=0;
+	new_row->padding_bottom=0;
 	new_row->padding_left=1;
 	new_row->padding_right=1;
 	return new_row;

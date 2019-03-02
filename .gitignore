@@ -10,6 +10,7 @@ data/stock.txt
 !/log/.gitkeep
 !/npc/.gitkeep
 !/player/.gitkeep
+!/player/Testchar
 !/player/backup.gitkeep
 
 #################

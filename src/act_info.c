@@ -6067,14 +6067,49 @@ void do_addy (CHAR_DATA *ch, char *argument)
 void do_score_revised( CHAR_DATA *ch, char *argument )
 {
 	CHAR_DATA *user = ch;
+	char affiliation [MSL]={'\0'};
+	char group_aff [MSL]={'\0'};
+	char score_nature [MSL]={'\0'};
+	char score_demeanor [MSL]={'\0'};
 	int num = 0;
 	int i = 0;
-	int statcount = 0;
 	GRID_DATA *grid;
 	GRID_ROW *row;
 	GRID_CELL *cell;
 
 	CheckCH(ch);
+
+	// Work around so we can capitalize both nature and demeanor in the grid.
+	strcpy(score_nature,capitalize(ch->nature));
+	strcpy(score_demeanor,capitalize(ch->demeanor));
+
+	// Set Affiliation for later in score.
+	if(ch->race == race_lookup("werewolf"))
+	{
+		strcpy(affiliation, "Pack");
+	}
+	else if (ch->race == race_lookup("vampire"))
+	{
+		strcpy(affiliation, "Clan");
+	}
+	else
+	{
+		strcpy(affiliation, "Group");
+	}
+
+	// Set Affiliation2 for later in score.
+	if(ch->race == race_lookup("werewolf"))
+	{
+		strcpy(group_aff, "Pack Totem");
+	}
+	else if (ch->race == race_lookup("vampire"))
+	{
+		strcpy(group_aff, "Generation");
+	}
+	else
+	{
+		strcpy(group_aff, "None");
+	}
 
 	if(!IS_NULLSTR(argument) && IS_ADMIN(user))
 	{
@@ -6101,151 +6136,51 @@ void do_score_revised( CHAR_DATA *ch, char *argument )
 			capitalize(race_table[ch->race].name)), user);
 	}
 
-
-	send_to_char( Format("First Name: %-15s  ", IS_NPC(ch) ? ch->short_descr : ch->name ), user);
-	if(ch->race == race_lookup("werewolf"))
-		send_to_char( Format("Breed: %-15s  ",breed_table[ch->breed].name), user);
-	else
-		send_to_char( Format("Nature: %-15s  ", capitalize(ch->nature)), user);
-
-	if(ch->race == race_lookup("werewolf"))
-		send_to_char( "Pack Name: ", user);
-	else
-		send_to_char( Format("Clan: %-20s", capitalize(clan_table[ch->clan].name)), user);
-
-	send_to_char("\r\n", user);
-
-	send_to_char( Format("Last Name: %s%-15s  ", !IS_NULLSTR(ch->surname)? " " : " ", !IS_NULLSTR(ch->surname)? ch->surname : ""), user);
-
-	if(ch->race == race_lookup("werewolf"))
-		send_to_char( Format("Auspice: %-13s  ",auspice_table[ch->auspice].name), user);
-	else
-		send_to_char( Format("Demeanor: %-13s  ", capitalize(ch->demeanor)), user);
-
-	if(ch->race == race_lookup("werewolf"))
-		send_to_char( "Pack Totem: ", user);
-	else
-		send_to_char( Format("Generation: %d", ch->gen), user);
-
-	send_to_char("\r\n", user);
-
-	send_to_char("\tW--------------------------------<Dice Pools>----------------------------------\tn\n\r", user);
-
-	send_to_char( Format("%s:  %2d/%-20d\n\r", race_table[ch->race].pc_race?pc_race_table[ch->race].RBPG:"Faith",
-		ch->RBPG, ch->max_RBPG), user);
-
-	send_to_char(Format("Experience/OOC Experience: %d / %d\n\r", ch->exp, ch->oocxp), user);
-	send_to_char(Format("Experience to Gift: %d\n\r", ch->xpgift), user);
-
-	if(IS_SET(ch->act2, ACT2_GHOUL))
-	{
-		send_to_char(Format("You are the devoted servant of %s.\r\n", ch->ghouled_by), user);
-	}
-
-	send_to_char("\tW--------------------------------<\tGBackgrounds\tW>---------------------------------\tn\n\r", user);
-
-	i = 0;
-	for(num=0; background_table[num].name; num++)
-	{
-		if(background_table[num].settable)
-		{
-			if(num < MAX_BG)
-			{
-				send_to_char(Format("\t<send href='help %s'>%-11s\t</send>:", background_table[num].name, background_table[num].name), user);
-				if(ch->backgrounds[num]<=0)
-				{
-					send_to_char("\t[U9675/O]", user);
-					statcount = 1;
-					while (statcount < 5)
-					{
-						send_to_char("\t[U9675/O]", user);
-						statcount++;
-					}
-				}
-				else
-				{
-					while(statcount < ch->backgrounds[num])
-					{
-						send_to_char("\t[U9679/*]", user);
-						statcount++;
-					}
-					while (statcount < 5)
-					{
-						send_to_char("\t[U9675/O]", user);
-						statcount++;
-					}
-
-				}
-				send_to_char("\r\n", user);
-				statcount = 0;
-				i++;
-			}
-		}
-	}
-
-	send_to_char("\tW---------------------------------<\tGInfluences\tW>---------------------------------\tn\n\r", user);
-
-	i = 0;
-	for(num=0; influence_table[num].name; num++)
-	{
-		if(influence_table[num].settable)
-		{
-			if(num < MAX_BG)
-			{
-				send_to_char(Format("\t<send href='help %s'>%-11s\t</send>:", influence_table[num].name, influence_table[num].name), user);
-				if(ch->influences[num]<=0)
-				{
-					send_to_char("\t[U9675/O]", user);
-					statcount = 1;
-					while (statcount < 5)
-					{
-						send_to_char("\t[U9675/O]", user);
-						statcount++;
-					}
-				}
-				else
-				{
-					while(statcount < ch->influences[num])
-					{
-						send_to_char("\t[U9679/*]", user);
-						statcount++;
-					}
-					while (statcount < 5)
-					{
-						send_to_char("\t[U9675/O]", user);
-						statcount++;
-					}
-
-				}
-				send_to_char("\r\n", user);
-				statcount = 0;
-				i++;
-			}
-		}
-	}
-
-	grid = create_grid(75);
+	grid = create_grid(79);
 	row = create_row(grid);
+	// First Box, First row. First Name, Last Name, and if Admin, Admin level.
+	cell = row_append_cell(row, 28, "First Name: %-15s\nLast Name: %s%-15s\n%s %-14s", 
+		IS_NPC(ch) ? ch->short_descr : ch->name,
+		!IS_NULLSTR(ch->surname) ? " " : " ", !IS_NULLSTR(ch->surname)? ch->surname : "",
+		IS_ADMIN(ch) ? "\tWAdmin Level\tn:" : "",
+		IS_ADMIN(ch) ? staff_status[ch->trust].name : "");
 
-	// Powers
+	// Second Box, first Row.  Nature/Demeanor/Profession
+	cell = row_append_cell(row, 28, "%s: %s\n%s: %s\n%s: %s",
+		IS_WEREWOLF(ch) ? "Breed" : "Nature",
+		IS_WEREWOLF(ch) ? breed_table[ch->breed].name : score_nature,
+		IS_WEREWOLF(ch) ? "Auspice" : "Demeanor",
+		IS_WEREWOLF(ch) ? auspice_table[ch->auspice].name : score_demeanor,
+		IS_WEREWOLF(ch) ? "Tribe" : "Profession",
+		IS_WEREWOLF(ch) ? capitalize(clan_table[ch->clan].name) : ch->profession);
+
+	// Third Box, first Row.  Genre Specific (clan,generation, sire for vampire as example)
+	cell = row_append_cell(row, 23, "%s: %s\n%s: %d\n",
+		affiliation, capitalize(clan_table[ch->clan].name),
+		group_aff,
+		IS_VAMPIRE(ch) ? ch->gen : 0);
+
+	// New Row
+	row = create_row(grid);
+	// First Cell - Powers/Disciplines
 	int sn = 0;
 	char name[MSL]  = {'\0'};
 	i = 0;
 	if (IS_VAMPIRE(ch))
 	{
-		cell = row_append_cell(row, 31, "\tGDisciplines\tn\n");
+		cell = row_append_cell(row, 28, "\tGDisciplines\tn\n");
 	}
 	else if (IS_WEREWOLF(ch))
 	{
-		cell = row_append_cell(row, 31, "\tGGifts\tn\n");
+		cell = row_append_cell(row, 28, "\tGGifts\tn\n");
 	}
 	else if (IS_FAERIE(ch))
 	{
-		cell = row_append_cell(row, 31, "\tGGlamour\tn\n");
+		cell = row_append_cell(row, 28, "\tGGlamour\tn\n");
 	}
 	else
 	{
-		cell = row_append_cell(row, 31, "\tGOther\tn\n");
+		cell = row_append_cell(row, 28, "\tGOther\tn\n");
 	}
 
 	if (IS_VAMPIRE(ch))
@@ -6279,9 +6214,8 @@ void do_score_revised( CHAR_DATA *ch, char *argument )
 		send_to_char("\n\r", ch);
 	}
 
-
-	// Backgrounds
-	cell = row_append_cell(row, 22, "\tGBackgrounds\tn\n");
+	// Second Cell - Backgrounds
+	cell = row_append_cell(row, 28, "\tGBackgrounds\tn\n");
 	i = 0;
 	for(num=0;background_table[num].name;num++)
 	{
@@ -6295,8 +6229,8 @@ void do_score_revised( CHAR_DATA *ch, char *argument )
 		}
 	}
 
-	//  Influences
-	cell = row_append_cell(row, 22, "\tGInfluences\tn\n");
+	//  Third Cell - Influences
+	cell = row_append_cell(row, 23, "\tGInfluences\tn\n");
 	i = 0;
 	for(num=0;influence_table[num].name;num++)
 	{
@@ -6311,6 +6245,20 @@ void do_score_revised( CHAR_DATA *ch, char *argument )
 	}
 
 	grid_to_char (grid, user, TRUE );
+// TABLE ENDS HERE
+
+	send_to_char("\tW--------------------------------<Dice Pools>----------------------------------\tn\n\r", user);
+
+	send_to_char( Format("%s:  %2d/%-20d\n\r", race_table[ch->race].pc_race?pc_race_table[ch->race].RBPG:"Faith",
+		ch->RBPG, ch->max_RBPG), user);
+
+	send_to_char(Format("Experience/OOC Experience: %d / %d\n\r", ch->exp, ch->oocxp), user);
+	send_to_char(Format("Experience to Gift: %d\n\r", ch->xpgift), user);
+
+	if(IS_SET(ch->act2, ACT2_GHOUL))
+	{
+		send_to_char(Format("You are the devoted servant of %s.\r\n", ch->ghouled_by), user);
+	}
 
 	send_to_char("\n\r", user);
 }

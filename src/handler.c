@@ -1008,31 +1008,35 @@ bool is_name ( char *str, char *namelist )
 
 	/* fixed to prevent is_name on "" returning TRUE */
 	if (str[0] == '\0')
-	return FALSE;
+		return FALSE;
 
+	// log_string( LOG_COMMAND, Format("TRACKING - is_name %s", str));
 	string = str;
 	/* we need ALL parts of string to match part of namelist */
 	for ( ; ; )  /* start parsing string */
 	{
-	str = one_argument(str,part);
+		str = one_argument(str,part);
 
-	if (part[0] == '\0' )
-		return TRUE;
+		if (part[0] == '\0' )
+			return TRUE;
 
 	/* check to see if this is part of namelist */
-	list = namelist;
+		list = namelist;
 	for ( ; ; )  /* start parsing namelist */
-	{
-		list = one_argument(list,name);
-		if (name[0] == '\0')  /* this name was not found */
-		return FALSE;
+		{
+			list = one_argument(list,name);
+			
+			/* this name was not found */
+			if (name[0] == '\0')  
+				return FALSE;
 
-		if (!str_prefix(string,name))
-		return TRUE; /* full pattern match */
+			/* full pattern match */
+			if (!str_prefix(string,name))
+				return TRUE; 
 
-		if (!str_prefix(part,name))
-		break;
-	}
+			if (!str_prefix(part,name))
+				break;
+		}
 	}
 }
 
