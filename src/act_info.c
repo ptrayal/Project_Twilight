@@ -6169,7 +6169,6 @@ void do_score_revised( CHAR_DATA *ch, char *argument )
 	cell = row_append_cell(row, 28, "CHA: %d\nMAN: %d\nAPP: %d", get_curr_stat(ch,STAT_CHA), get_curr_stat(ch,STAT_MAN), get_curr_stat(ch,STAT_APP) );
 	cell = row_append_cell(row, 23, "PER: %d\nINT: %d\nWIT: %d", get_curr_stat(ch,STAT_PER), get_curr_stat(ch,STAT_INT), get_curr_stat(ch,STAT_WIT) );
 
-
 	// NEW ROW
 	row = create_row(grid);
 	// First Cell - Powers/Disciplines
@@ -6206,7 +6205,6 @@ void do_score_revised( CHAR_DATA *ch, char *argument )
 					cell_append_contents(cell, "%-14s:%3d\n", capitalize(name), ch->disc[sn]);
 				}
 			}
-			send_to_char("\n\r", ch);
 		}
 		else
 		{
@@ -6222,7 +6220,6 @@ void do_score_revised( CHAR_DATA *ch, char *argument )
 				}
 			}
 		}
-		send_to_char("\n\r", ch);
 	}
 
 	// Second Cell - Backgrounds
