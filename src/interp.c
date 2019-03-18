@@ -357,7 +357,7 @@ const	struct	cmd_type	cmd_table	[] =
 		{	"touch",		do_move_touch,	P_FIGHT,	0,	L_NRM,	1,	H,	0 },
 		{	"trade",		do_trade,		P_DEAD,		0,	L_NRM,	1,	B,	0 },
 		{	"train",		do_train,		P_STAND,	0,	L_NRM,	1,	B|H,	0 },
-		{	"traits",		do_traits,		P_STAND,	0,	L_NRM,	1,	B,	0 },
+		// {	"traits",		do_traits,		P_STAND,	0,	L_NRM,	1,	B,	0 },
 		{	"trip",			do_move_sweep,	P_FIGHT,	0,	L_NRM,	1,	H,	0 },
 		{	"unalias",		do_unalias,		P_DEAD,		0,	L_NRM,	1,	A|B|E,	0 },
 		{	"unload",		do_unload,		P_REST,		0,	L_NRM,	1,	H,	0 },

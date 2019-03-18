@@ -2604,7 +2604,7 @@ void do_basediscs( CHAR_DATA *ch, char *argument )
                 if(ch->clan_powers[loop] < 0)
                     ch->clan_powers[loop] = clan_table[ch->clan].powers[loop];
             }
-            send_to_char("Your clan disciplines are:\n\r", ch);
+            send_to_char("Your in-clan disciplines are:\n\r", ch);
             for(loop = 0; loop < 3; loop++)
             {
                 send_to_char(Format("%s\n\r", capitalize(disc_table[ch->clan_powers[loop]].vname)), ch);
@@ -2889,10 +2889,8 @@ void do_learn( CHAR_DATA *ch, char *argument )
 
 void blood_drink(CHAR_DATA *drinker, CHAR_DATA *victim, int blood, int aggro)
 {
-    int bite, dodge;
-
-    bite = 0;
-    dodge = 0;
+    int bite = 0;
+    int dodge = 0;
 
     if(aggro)
     {
@@ -4950,339 +4948,338 @@ void do_jump(CHAR_DATA *ch, char *argument)
     }
 }
 
-void do_traits(CHAR_DATA *ch, char *argument)
-{
-    TRAIT_DATA *trait;
-    AFFECT_DATA *paf;
-    char arg[MIL]={'\0'};
-    int i, type = -1, sel, subfl;
+// void do_traits(CHAR_DATA *ch, char *argument)
+// {
+//     TRAIT_DATA *trait;
+//     AFFECT_DATA *paf;
+//     char arg[MIL]={'\0'};
+//     int i, type = -1, sel, subfl;
 
-    CheckCH(ch);
+//     CheckCH(ch);
 
-    argument = one_argument(argument, arg);
-    if(IS_NULLSTR(argument) || IS_NULLSTR(arg))
-    {
-        send_to_char("Syntax: trait <merit/flaw/quirk/derangement> <selection> [<sub-flag>]\n\r",ch);
-        send_to_char("        trait list [<merit/flaw/quirk/derangement/mania/compulsion/phobia/feedrestrict>] - lists available flags\n\r", ch);
+//     argument = one_argument(argument, arg);
+//     if(IS_NULLSTR(argument) || IS_NULLSTR(arg))
+//     {
+//         send_to_char("Syntax: trait <merit/flaw/quirk/derangement> <selection> [<sub-flag>]\n\r",ch);
+//         send_to_char("        trait list [<merit/flaw/quirk/derangement/mania/compulsion/phobia/feedrestrict>] - lists available flags\n\r", ch);
 
-        if(ch->traits != NULL)
-        {
-            send_to_char("Your current traits are:\n\r", ch);
-            for(trait=ch->traits;trait!=NULL;trait=trait->next)
-            {
-                send_to_char(Format("%-15s", capitalize(trait_type[trait->type].name)), ch);
-                send_to_char(Format("%-20s", capitalize(trait->qualifier)), ch);
-                send_to_char(Format("%-20s", IS_NULLSTR(trait->detail)?"":capitalize(trait->detail)), ch);
-                send_to_char(Format(" %d\n\r", trait->value), ch);
-            }
-            for(paf=affect_find(ch->affected,skill_lookup("siren's beckoning"));
-                    paf != NULL;
-                    paf=affect_find(paf->next,skill_lookup("siren's beckoning")))
-            {
-                send_to_char(Format("%-15s%-20s", "Derangements", capitalize(derangement_table[paf->bitvector].name)), ch);
-                if(paf->bitvector <= 2)
-                {
-                    send_to_char(Format("%-20s (Temporary)\n\r", capitalize(mania_table[paf->modifier].name)), ch);
-                }
-                else if(paf->bitvector <= 5)
-                {
-                    send_to_char(Format("%-20s (Temporary)\n\r", capitalize(phobia_table[paf->modifier].name)), ch);
-                }
-                else if(paf->bitvector == 6)
-                {
-                    send_to_char(Format("%-20s (Temporary)\n\r", capitalize(compulsion_table[paf->modifier].name)), ch);
-                }
-                else
-                    send_to_char(" (Temporary)\n\r", ch);
-            }
-        }
-        else
-            send_to_char("You have no traits set.\n\r", ch);
+//         if(ch->traits != NULL)
+//         {
+//             send_to_char("Your current traits are:\n\r", ch);
+//             for(trait=ch->traits;trait!=NULL;trait=trait->next)
+//             {
+//                 send_to_char(Format("%-15s", capitalize(trait_type[trait->type].name)), ch);
+//                 send_to_char(Format("%-20s", capitalize(trait->qualifier)), ch);
+//                 send_to_char(Format("%-20s", IS_NULLSTR(trait->detail)?"":capitalize(trait->detail)), ch);
+//                 send_to_char(Format(" %d\n\r", trait->value), ch);
+//             }
+//             for(paf=affect_find(ch->affected,skill_lookup("siren's beckoning"));
+//                     paf != NULL;
+//                     paf=affect_find(paf->next,skill_lookup("siren's beckoning")))
+//             {
+//                 send_to_char(Format("%-15s%-20s", "Derangements", capitalize(derangement_table[paf->bitvector].name)), ch);
+//                 if(paf->bitvector <= 2)
+//                 {
+//                     send_to_char(Format("%-20s (Temporary)\n\r", capitalize(mania_table[paf->modifier].name)), ch);
+//                 }
+//                 else if(paf->bitvector <= 5)
+//                 {
+//                     send_to_char(Format("%-20s (Temporary)\n\r", capitalize(phobia_table[paf->modifier].name)), ch);
+//                 }
+//                 else if(paf->bitvector == 6)
+//                 {
+//                     send_to_char(Format("%-20s (Temporary)\n\r", capitalize(compulsion_table[paf->modifier].name)), ch);
+//                 }
+//                 else
+//                     send_to_char(" (Temporary)\n\r", ch);
+//             }
+//         }
+//         else
+//             send_to_char("You have no traits set.\n\r", ch);
 
-        return;
-    }
+//         return;
+//     }
 
-    if(!str_prefix(arg, "list"))
-    {
-        type = flag_lookup(argument, trait_type);
+//     if(!str_prefix(arg, "list"))
+//     {
+//         type = flag_lookup(argument, trait_type);
 
-        switch(type)
-        {
-        case 0:
-            send_to_char("Available quirk types are:\n\r", ch);
-            for(i = 0; quirk_type[i].name != NULL; i++)
-            {
-                if(i%4==0) send_to_char("\n\r", ch);
-                send_to_char(Format("%20s", quirk_type[i].name), ch);
-            }
-            send_to_char("\n\r", ch);
-            break;
+//         switch(type)
+//         {
+//         case 0:
+//             send_to_char("Available quirk types are:\n\r", ch);
+//             for(i = 0; quirk_type[i].name != NULL; i++)
+//             {
+//                 if(i%4==0) send_to_char("\n\r", ch);
+//                 send_to_char(Format("%20s", quirk_type[i].name), ch);
+//             }
+//             send_to_char("\n\r", ch);
+//             break;
 
-        case 1:
-            send_to_char("Available merits are:\n\r", ch);
-            for(i = 0; merit_table[i].name != NULL; i++)
-            {
-                if(i%4==0) send_to_char("\n\r", ch);
-                send_to_char(Format("%20s", merit_table[i].name), ch);
-            }
-            send_to_char("\n\r", ch);
-            break;
+//         case 1:
+//             send_to_char("Available merits are:\n\r", ch);
+//             for(i = 0; merit_table[i].name != NULL; i++)
+//             {
+//                 if(i%4==0) send_to_char("\n\r", ch);
+//                 send_to_char(Format("%20s", merit_table[i].name), ch);
+//             }
+//             send_to_char("\n\r", ch);
+//             break;
 
-        case 2:
-            send_to_char("Available flaws are:\n\r", ch);
-            for(i = 0; flaw_table[i].name != NULL; i++)
-            {
-                if(i%4==0) send_to_char("\n\r", ch);
-                send_to_char(Format("%20s", flaw_table[i].name), ch);
-            }
-            send_to_char("\n\r", ch);
-            break;
+//         case 2:
+//             send_to_char("Available flaws are:\n\r", ch);
+//             for(i = 0; flaw_table[i].name != NULL; i++)
+//             {
+//                 if(i%4==0) send_to_char("\n\r", ch);
+//                 send_to_char(Format("%20s", flaw_table[i].name), ch);
+//             }
+//             send_to_char("\n\r", ch);
+//             break;
 
-        case 3:
-            send_to_char("Available derangements are:\n\r", ch);
-            for(i = 0; derangement_table[i].name != NULL; i++)
-            {
-                if(i%4==0) send_to_char("\n\r", ch);
-                send_to_char(Format("%20s", derangement_table[i].name), ch);
-            }
-            send_to_char("\n\r", ch);
-            break;
+//         case 3:
+//             send_to_char("Available derangements are:\n\r", ch);
+//             for(i = 0; derangement_table[i].name != NULL; i++)
+//             {
+//                 if(i%4==0) send_to_char("\n\r", ch);
+//                 send_to_char(Format("%20s", derangement_table[i].name), ch);
+//             }
+//             send_to_char("\n\r", ch);
+//             break;
 
-        default:
-            if(!str_prefix(argument, "manias"))
-            {
-                send_to_char("Available manias are:\n\r", ch);
-                for(i = 0; mania_table[i].name != NULL; i++)
-                {
-                    if(i%4==0) send_to_char("\n\r", ch);
-                    send_to_char(Format("%20s", mania_table[i].name), ch);
-                }
-                send_to_char("\n\r", ch);
-                return;
-            }
-            if(!str_prefix(argument, "compulsions")
-                    || !str_prefix(argument, "obsessions"))
-            {
-                send_to_char("Available compulsions are:\n\r", ch);
-                for(i = 0; compulsion_table[i].name != NULL; i++)
-                {
-                    if(i%4==0) send_to_char("\n\r", ch);
-                    send_to_char(Format("%20s", compulsion_table[i].name), ch);
-                }
-                send_to_char("\n\r", ch);
-                return;
-            }
-            if(!str_prefix(argument, "phobias"))
-            {
-                send_to_char("Available phobias are:\n\r", ch);
-                for(i = 0; phobia_table[i].name != NULL; i++)
-                {
-                    if(i%4==0) send_to_char("\n\r", ch);
-                    send_to_char(Format("%20s", phobia_table[i].name), ch);
-                }
-                send_to_char("\n\r", ch);
-                return;
-            }
-            if(!str_prefix(argument, "feedrestrictions"))
-            {
-                send_to_char("Available feeding restrictions are:\n\r", ch);
-                for(i = 0; feeding_restriction[i].name != NULL; i++)
-                {
-                    if(i%4==0) send_to_char("\n\r", ch);
-                    send_to_char(Format("%20s", feeding_restriction[i].name), ch);
-                }
-                send_to_char("\n\r", ch);
-                return;
-            }
-            send_to_char("Available trait types are:\n\r", ch);
-            for(i = 0; trait_type[i].name != NULL; i++)
-            {
-                send_to_char(Format("%20s", trait_type[i].name), ch);
-            }
-            send_to_char("\n\r", ch);
-            break;
-        }
-        return;
-    }
+//         default:
+//             if(!str_prefix(argument, "manias"))
+//             {
+//                 send_to_char("Available manias are:\n\r", ch);
+//                 for(i = 0; mania_table[i].name != NULL; i++)
+//                 {
+//                     if(i%4==0) send_to_char("\n\r", ch);
+//                     send_to_char(Format("%20s", mania_table[i].name), ch);
+//                 }
+//                 send_to_char("\n\r", ch);
+//                 return;
+//             }
+//             if(!str_prefix(argument, "compulsions")
+//                     || !str_prefix(argument, "obsessions"))
+//             {
+//                 send_to_char("Available compulsions are:\n\r", ch);
+//                 for(i = 0; compulsion_table[i].name != NULL; i++)
+//                 {
+//                     if(i%4==0) send_to_char("\n\r", ch);
+//                     send_to_char(Format("%20s", compulsion_table[i].name), ch);
+//                 }
+//                 send_to_char("\n\r", ch);
+//                 return;
+//             }
+//             if(!str_prefix(argument, "phobias"))
+//             {
+//                 send_to_char("Available phobias are:\n\r", ch);
+//                 for(i = 0; phobia_table[i].name != NULL; i++)
+//                 {
+//                     if(i%4==0) send_to_char("\n\r", ch);
+//                     send_to_char(Format("%20s", phobia_table[i].name), ch);
+//                 }
+//                 send_to_char("\n\r", ch);
+//                 return;
+//             }
+//             if(!str_prefix(argument, "feedrestrictions"))
+//             {
+//                 send_to_char("Available feeding restrictions are:\n\r", ch);
+//                 for(i = 0; feeding_restriction[i].name != NULL; i++)
+//                 {
+//                     if(i%4==0) send_to_char("\n\r", ch);
+//                     send_to_char(Format("%20s", feeding_restriction[i].name), ch);
+//                 }
+//                 send_to_char("\n\r", ch);
+//                 return;
+//             }
+//             send_to_char("Available trait types are:\n\r", ch);
+//             for(i = 0; trait_type[i].name != NULL; i++)
+//             {
+//                 send_to_char(Format("%20s", trait_type[i].name), ch);
+//             }
+//             send_to_char("\n\r", ch);
+//             break;
+//         }
+//         return;
+//     }
 
-    if((type = flag_lookup(arg, trait_type)) == -1)
-    {
-        send_to_char("No such trait.\n\r", ch);
-        do_traits(ch, "");
-        return;
-    }
+//     if((type = flag_lookup(arg, trait_type)) == -1)
+//     {
+//         send_to_char("No such trait.\n\r", ch);
+//         do_traits(ch, "");
+//         return;
+//     }
 
-    argument = one_argument(argument, arg);
+//     argument = one_argument(argument, arg);
 
-    /* @@@@@ */
-    switch(type)
-    {
-    case 0:
-        if((sel = flag_lookup(arg, quirk_type)) < 0)
-        {
-            send_to_char("That isn't a quirk type.\n\r", ch);
-            do_traits(ch, "list quirks");
-            return;
-        }
+//     switch(type)
+//     {
+//     case 0:
+//         if((sel = flag_lookup(arg, quirk_type)) < 0)
+//         {
+//             send_to_char("That isn't a quirk type.\n\r", ch);
+//             do_traits(ch, "list quirks");
+//             return;
+//         }
 
-        if(IS_NULLSTR(argument))
-        {
-            send_to_char("You must provide detail of the quirk.\n\r", ch);
-            send_to_char( "(e.g. trait quirk like apple - no plurals.\n\r", ch);
-            return;
-        }
+//         if(IS_NULLSTR(argument))
+//         {
+//             send_to_char("You must provide detail of the quirk.\n\r", ch);
+//             send_to_char( "(e.g. trait quirk like apple - no plurals.\n\r", ch);
+//             return;
+//         }
 
-        trait = new_trait();
-        trait->type = type;
-        PURGE_DATA(trait->qualifier);
-        PURGE_DATA(trait->detail);
-        trait->qualifier = str_dup(quirk_type[sel].name);
-        trait->detail = str_dup(argument);
-        break;
-    case 1:
-        if((sel = trait_lookup(arg, merit_table)) < 0)
-        {
-            send_to_char("That isn't an available merit.\n\r", ch);
-            do_traits(ch, "list merits");
-            return;
-        }
+//         trait = new_trait();
+//         trait->type = type;
+//         PURGE_DATA(trait->qualifier);
+//         PURGE_DATA(trait->detail);
+//         trait->qualifier = str_dup(quirk_type[sel].name);
+//         trait->detail = str_dup(argument);
+//         break;
+//     case 1:
+//         if((sel = trait_lookup(arg, merit_table)) < 0)
+//         {
+//             send_to_char("That isn't an available merit.\n\r", ch);
+//             do_traits(ch, "list merits");
+//             return;
+//         }
 
-        trait = new_trait();
-        trait->type = type;
-        trait->value = merit_table[sel].cost;
-        PURGE_DATA(trait->qualifier);
-        trait->qualifier = str_dup(merit_table[sel].name);
-        break;
-    case 2:
-        if((sel = trait_lookup(arg, flaw_table)) < 0)
-        {
-            send_to_char("That isn't an available flaw.\n\r", ch);
-            do_traits(ch, "list flaws");
-            return;
-        }
+//         trait = new_trait();
+//         trait->type = type;
+//         trait->value = merit_table[sel].cost;
+//         PURGE_DATA(trait->qualifier);
+//         trait->qualifier = str_dup(merit_table[sel].name);
+//         break;
+//     case 2:
+//         if((sel = trait_lookup(arg, flaw_table)) < 0)
+//         {
+//             send_to_char("That isn't an available flaw.\n\r", ch);
+//             do_traits(ch, "list flaws");
+//             return;
+//         }
 
-        if(IS_NULLSTR(argument) && sel == trait_lookup("feedrestriction", flaw_table))
-        {
-            send_to_char("You must provide detail of the flaw.\n\r", ch);
-            return;
-        }
+//         if(IS_NULLSTR(argument) && sel == trait_lookup("feedrestriction", flaw_table))
+//         {
+//             send_to_char("You must provide detail of the flaw.\n\r", ch);
+//             return;
+//         }
 
-        trait = new_trait();
-        trait->type = type;
-        trait->value = flaw_table[sel].cost;
-        if(ch->clan == clan_lookup("ventrue") && sel == trait_lookup("feedrestriction", flaw_table))
-            trait->value = 0;
-        PURGE_DATA(trait->qualifier);
-        trait->qualifier = str_dup(flaw_table[sel].name);
-        if(sel == trait_lookup("feedrestriction", flaw_table))
-        {
-            PURGE_DATA(trait->detail);
-            trait->detail = str_dup(argument);
-        }
-        break;
-    case 3:
-        if((sel = trait_lookup(arg, derangement_table)) < 0)
-        {
-            send_to_char("That isn't an acceptable derangement.\n\r", ch);
-            do_traits(ch, "list quirks");
-            return;
-        }
+//         trait = new_trait();
+//         trait->type = type;
+//         trait->value = flaw_table[sel].cost;
+//         if(ch->clan == clan_lookup("ventrue") && sel == trait_lookup("feedrestriction", flaw_table))
+//             trait->value = 0;
+//         PURGE_DATA(trait->qualifier);
+//         trait->qualifier = str_dup(flaw_table[sel].name);
+//         if(sel == trait_lookup("feedrestriction", flaw_table))
+//         {
+//             PURGE_DATA(trait->detail);
+//             trait->detail = str_dup(argument);
+//         }
+//         break;
+//     case 3:
+//         if((sel = trait_lookup(arg, derangement_table)) < 0)
+//         {
+//             send_to_char("That isn't an acceptable derangement.\n\r", ch);
+//             do_traits(ch, "list quirks");
+//             return;
+//         }
 
-        if(IS_NULLSTR(argument) && sel>(int)trait_lookup("obsessive/compulsive",derangement_table))
-        {
-            send_to_char("You must provide detail of the derangement.\n\r", ch);
-            do_traits(ch, "list derangements");
-            return;
-        }
+//         if(IS_NULLSTR(argument) && sel>(int)trait_lookup("obsessive/compulsive",derangement_table))
+//         {
+//             send_to_char("You must provide detail of the derangement.\n\r", ch);
+//             do_traits(ch, "list derangements");
+//             return;
+//         }
 
-        if(sel == trait_lookup("mania1", derangement_table)
-                && sel == trait_lookup("mania2", derangement_table)
-                && sel == trait_lookup("mania3", derangement_table)
-                && (subfl = flag_lookup(argument, mania_table)) == -1)
-        {
-            send_to_char("I'm freaking out! That's not a mania!\n\r", ch);
-            do_traits(ch, "list manias");
-            return;
-        }
+//         if(sel == trait_lookup("mania1", derangement_table)
+//                 && sel == trait_lookup("mania2", derangement_table)
+//                 && sel == trait_lookup("mania3", derangement_table)
+//                 && (subfl = flag_lookup(argument, mania_table)) == -1)
+//         {
+//             send_to_char("I'm freaking out! That's not a mania!\n\r", ch);
+//             do_traits(ch, "list manias");
+//             return;
+//         }
 
-        if(sel == trait_lookup("phobia1", derangement_table)
-                && sel == trait_lookup("phobia2", derangement_table)
-                && sel == trait_lookup("phobia3", derangement_table)
-                && (subfl = flag_lookup(argument, phobia_table)) == -1)
-        {
-            send_to_char( "Don't scare me like that! That's not a phobia!\n\r", ch);
-            do_traits(ch, "list phobias");
-            return;
-        }
+//         if(sel == trait_lookup("phobia1", derangement_table)
+//                 && sel == trait_lookup("phobia2", derangement_table)
+//                 && sel == trait_lookup("phobia3", derangement_table)
+//                 && (subfl = flag_lookup(argument, phobia_table)) == -1)
+//         {
+//             send_to_char( "Don't scare me like that! That's not a phobia!\n\r", ch);
+//             do_traits(ch, "list phobias");
+//             return;
+//         }
 
-        if(sel == trait_lookup("obsessive/compulsive", derangement_table)
-                && (subfl = flag_lookup(argument, compulsion_table)) == -1)
-        {
-            send_to_char( "Don't scare me like that! That's not a phobia!\n\r", ch);
-            do_traits(ch, "list phobias");
-            return;
-        }
+//         if(sel == trait_lookup("obsessive/compulsive", derangement_table)
+//                 && (subfl = flag_lookup(argument, compulsion_table)) == -1)
+//         {
+//             send_to_char( "Don't scare me like that! That's not a phobia!\n\r", ch);
+//             do_traits(ch, "list phobias");
+//             return;
+//         }
 
-        trait = new_trait();
-        trait->type = type;
-        trait->value = derangement_table[sel].cost;
-        if(ch->clan == clan_lookup("malkavian"))
-            trait->value = 0;
-        PURGE_DATA(trait->qualifier);
-        trait->qualifier = str_dup(derangement_table[sel].name);
-        if(sel<(int)trait_lookup("obsessive/compulsive",derangement_table))
-        {
-            PURGE_DATA(trait->detail);
-            trait->detail = str_dup(argument);
-        }
-        break;
-    default:
-        send_to_char("No such trait type.\n\r", ch);
-        return;
-        break;
-    }
+//         trait = new_trait();
+//         trait->type = type;
+//         trait->value = derangement_table[sel].cost;
+//         if(ch->clan == clan_lookup("malkavian"))
+//             trait->value = 0;
+//         PURGE_DATA(trait->qualifier);
+//         trait->qualifier = str_dup(derangement_table[sel].name);
+//         if(sel<(int)trait_lookup("obsessive/compulsive",derangement_table))
+//         {
+//             PURGE_DATA(trait->detail);
+//             trait->detail = str_dup(argument);
+//         }
+//         break;
+//     default:
+//         send_to_char("No such trait type.\n\r", ch);
+//         return;
+//         break;
+//     }
 
-    if(trait != NULL)
-    {
-        if(trait->value > 0)
-        {
-            if(trait->value * 5 > ch->exp)
-            {
-                send_to_char( "You do not have enough experience to buy that trait.\n\r", ch);
-                free_trait(trait);
-                return;
-            }
+//     if(trait != NULL)
+//     {
+//         if(trait->value > 0)
+//         {
+//             if(trait->value * 5 > ch->exp)
+//             {
+//                 send_to_char( "You do not have enough experience to buy that trait.\n\r", ch);
+//                 free_trait(trait);
+//                 return;
+//             }
 
-            if(trait_count(ch, 1) >= ch->max_traits[1])
-            {
-                send_to_char( "You've already bought all the positive traits you can.\n\r", ch);
-                free_trait(trait);
-                return;
-            }
-        }
-        else if(trait->value < 0)
-        {
-            if(trait_count(ch, -1) >= ch->max_traits[0])
-            {
-                send_to_char( "You've already bought all the positive traits you can.\n\r", ch);
-                free_trait(trait);
-                return;
-            }
-        }
+//             if(trait_count(ch, 1) >= ch->max_traits[1])
+//             {
+//                 send_to_char( "You've already bought all the positive traits you can.\n\r", ch);
+//                 free_trait(trait);
+//                 return;
+//             }
+//         }
+//         else if(trait->value < 0)
+//         {
+//             if(trait_count(ch, -1) >= ch->max_traits[0])
+//             {
+//                 send_to_char( "You've already bought all the positive traits you can.\n\r", ch);
+//                 free_trait(trait);
+//                 return;
+//             }
+//         }
 
-        if(has_trait(ch, trait))
-        {
-            send_to_char("You already have that trait.\n\r", ch);
-            free_trait(trait);
-            return;
-        }
+//         if(has_trait(ch, trait))
+//         {
+//             send_to_char("You already have that trait.\n\r", ch);
+//             free_trait(trait);
+//             return;
+//         }
 
-        ch->exp -= trait->value * 5;
-        trait->next = ch->traits;
-        ch->traits = trait;
-        send_to_char("The trait has been added.\n\r", ch);
-    }
-}
+//         ch->exp -= trait->value * 5;
+//         trait->next = ch->traits;
+//         ch->traits = trait;
+//         send_to_char("The trait has been added.\n\r", ch);
+//     }
+// }*/
 
 void do_meditate(CHAR_DATA *ch, char *argument)
 {

@@ -536,7 +536,7 @@ DECLARE_DO_FUN( do_trade	);
 DECLARE_DO_FUN( do_train	);
 DECLARE_DO_FUN( do_train_power	);
 DECLARE_DO_FUN( do_trainingcost	);
-DECLARE_DO_FUN( do_traits	);
+// DECLARE_DO_FUN( do_traits	);
 DECLARE_DO_FUN(	do_transfer	);
 /*DECLARE_DO_FUN(	do_transform	);*/
 DECLARE_DO_FUN( do_tsave	);

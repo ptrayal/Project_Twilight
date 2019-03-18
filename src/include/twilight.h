@@ -3393,7 +3393,7 @@ bool	coat_obj_in_liquid_by_name args( ( OBJ_DATA *obj, char *liquid ) );
 bool	coat_char_in_liquid_by_name args( ( CHAR_DATA *ch, char *liquid ) );
 OD * create_puddle_from_obj args( ( OBJ_DATA *obj, int vnum, bool scrap_obj ) );
 OD * create_puddle_from_liq args( ( char *liq, int vnum, int volume ) );
-int	has_trait	args( ( CHAR_DATA *ch, TRAIT_DATA *p ) );
+// int	has_trait	args( ( CHAR_DATA *ch, TRAIT_DATA *p ) );
 
 void	cleanse_builder_stuff args( (CHAR_DATA *ch ) );
 int	count_multi_args args( ( char *argument, char *cEnd ) );

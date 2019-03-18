@@ -3356,6 +3356,7 @@ void do_inventory( CHAR_DATA *ch, char *argument )
 	CheckCH(ch);
 	send_to_char( "You are carrying:\n\r", ch );
 	show_list_to_char( ch->carrying, ch, TRUE, TRUE );
+	send_to_char( Format("Carrying: %d/%d lbs.\n\r", get_carry_weight(ch) / 10, can_carry_w(ch) /10), ch );
 	return;
 }
 
@@ -6126,22 +6127,24 @@ void do_score_revised( CHAR_DATA *ch, char *argument )
 		}
 	}
 
+	grid = create_grid(79);
+	// Row Zero (displays race)
+	row = create_row(grid);
 	if(ch->race == race_lookup("human") && IS_SET(ch->act2, ACT2_GHOUL))
 	{
-		send_to_char( Format("\r\n\tW---------------------------------<\tG   Ghoul\tW>-----------------------------------\tn\r\n"), user);
+		cell = row_append_cell(row, 80, "\r\n\tW---------------------------------<\tG   Ghoul\tW>---------------------------------\tn");
 	}
 	else
 	{
-		send_to_char( Format("\n\r\tW---------------------------------<\tG%8s\tW>-----------------------------------\tn\n\r",
-			capitalize(race_table[ch->race].name)), user);
+		cell = row_append_cell(row, 80, "\n\r\tW---------------------------------<\tG%8s\tW>---------------------------------\tn",
+			capitalize(race_table[ch->race].name));
 	}
 
-	grid = create_grid(79);
 	row = create_row(grid);
 	// First Box, First row. First Name, Last Name, and if Admin, Admin level.
 	cell = row_append_cell(row, 28, "First Name: %-15s\nLast Name: %s%-15s\n%s %-14s", 
 		IS_NPC(ch) ? ch->short_descr : ch->name,
-		!IS_NULLSTR(ch->surname) ? " " : " ", !IS_NULLSTR(ch->surname)? ch->surname : "",
+		!IS_NULLSTR(ch->surname) ? " " : " ", !IS_NULLSTR(ch->surname)? ch->surname : "\tRNot Set\tn",
 		IS_ADMIN(ch) ? "\tWAdmin Level\tn:" : "",
 		IS_ADMIN(ch) ? staff_status[ch->trust].name : "");
 
@@ -6160,7 +6163,14 @@ void do_score_revised( CHAR_DATA *ch, char *argument )
 		group_aff,
 		IS_VAMPIRE(ch) ? ch->gen : 0);
 
-	// New Row
+	// NEW ROW
+	row=create_row(grid);
+	cell = row_append_cell(row, 28, "STR: %d\nDEX: %d\nSTA: %d", get_curr_stat(ch,STAT_STR), get_curr_stat(ch,STAT_DEX), get_curr_stat(ch,STAT_STA) );
+	cell = row_append_cell(row, 28, "CHA: %d\nMAN: %d\nAPP: %d", get_curr_stat(ch,STAT_CHA), get_curr_stat(ch,STAT_MAN), get_curr_stat(ch,STAT_APP) );
+	cell = row_append_cell(row, 23, "PER: %d\nINT: %d\nWIT: %d", get_curr_stat(ch,STAT_PER), get_curr_stat(ch,STAT_INT), get_curr_stat(ch,STAT_WIT) );
+
+
+	// NEW ROW
 	row = create_row(grid);
 	// First Cell - Powers/Disciplines
 	int sn = 0;
@@ -6185,7 +6195,8 @@ void do_score_revised( CHAR_DATA *ch, char *argument )
 
 	if (IS_VAMPIRE(ch))
 	{
-		if(IS_ADMIN(ch))
+		// This is so Admins can see how players see it if they have holy light turned off.
+		if(IS_ADMIN(ch) && IS_SET(ch->plr_flags,PLR_HOLYLIGHT))
 		{
 			for(sn = 0; disc_table[sn].vname != NULL; sn++)
 			{
@@ -6217,14 +6228,36 @@ void do_score_revised( CHAR_DATA *ch, char *argument )
 	// Second Cell - Backgrounds
 	cell = row_append_cell(row, 28, "\tGBackgrounds\tn\n");
 	i = 0;
-	for(num=0;background_table[num].name;num++)
+	// This is so Admins can see how players see it if they have holy light turned off.
+	if(IS_ADMIN(ch) && IS_SET(ch->plr_flags,PLR_HOLYLIGHT))
 	{
-		if(background_table[num].settable)
+		for(num=0;background_table[num].name;num++)
 		{
-			if(num < MAX_BACKGROUND)
+			if(background_table[num].settable)
 			{
-				cell_append_contents(cell, "%-11s:%3d\n", background_table[num].name, ch->backgrounds[num]);
-				i++;
+				if(num < MAX_BACKGROUND)
+				{
+					cell_append_contents(cell, "%-11s:%3d\n", background_table[num].name, ch->backgrounds[num]);
+					i++;
+				}
+			}
+		}
+
+	}
+	else
+	{
+		for(num=0;background_table[num].name;num++)
+		{
+			if(background_table[num].settable)
+			{
+				if(num < MAX_BACKGROUND)
+				{
+					if (ch->backgrounds[num] != 0)
+					{
+						cell_append_contents(cell, "%-11s:%3d\n", background_table[num].name, ch->backgrounds[num]);
+						i++;
+					}
+				}
 			}
 		}
 	}
@@ -6232,14 +6265,35 @@ void do_score_revised( CHAR_DATA *ch, char *argument )
 	//  Third Cell - Influences
 	cell = row_append_cell(row, 23, "\tGInfluences\tn\n");
 	i = 0;
-	for(num=0;influence_table[num].name;num++)
+	// This is so Admins can see how players see it if they have holy light turned off.
+	if(IS_ADMIN(ch) && IS_SET(ch->plr_flags,PLR_HOLYLIGHT))
 	{
-		if(influence_table[num].settable)
+		for(num=0;influence_table[num].name;num++)
 		{
-			if(num < MAX_BACKGROUND)
+			if(influence_table[num].settable)
 			{
-				cell_append_contents(cell, "%-11s:%3d\n", influence_table[num].name, ch->influences[num]);
-				i++;
+				if(num < MAX_BACKGROUND)
+				{
+					cell_append_contents(cell, "%-11s:%3d\n", influence_table[num].name, ch->influences[num]);
+					i++;
+				}
+			}
+		}
+	}
+	else
+	{
+		for(num=0;influence_table[num].name;num++)
+		{
+			if(influence_table[num].settable)
+			{
+				if(num < MAX_BACKGROUND)
+				{
+					if(ch->influences[num] != 0)
+					{
+						cell_append_contents(cell, "%-11s:%3d\n", influence_table[num].name, ch->influences[num]);
+						i++;						
+					}
+				}
 			}
 		}
 	}

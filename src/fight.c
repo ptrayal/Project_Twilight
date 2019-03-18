@@ -726,7 +726,8 @@ void do_botch (CHAR_DATA *ch, int combo)
 
 	if(obj != NULL)
 	{
-		switch (obj->value[0]) {
+		switch (obj->value[0]) 
+		{
 		case WEAPON_FIREARM : firearm_botch(ch); break;
 		case WEAPON_BLADE   : melee_botch(ch, combo);   break;
 		case WEAPON_BLUNT   : melee_botch(ch, combo);   break;
@@ -744,7 +745,11 @@ void do_botch (CHAR_DATA *ch, int combo)
 
 int dice_rolls ( CHAR_DATA *ch, int dice, int difficulty )
 {
-	int i, k = 0, a, health = 0, max = 500;
+	int i = 0;
+	int k = 0;
+	int a = 0;
+	int health = 0;
+	int max = 500;
 
 	dice += ch->dice_mod;
 	difficulty += ch->diff_mod;
@@ -759,10 +764,14 @@ int dice_rolls ( CHAR_DATA *ch, int dice, int difficulty )
 
 	if(!IS_AFFECTED(ch, AFF_RESIST_PAIN))
 	{
-		if(health == 6 || health == 5) dice--;
-		else if(health == 4 || health == 3) dice -= 2;
-		else if(health == 2 || health == 1) dice -= 5;
-		else if(health <= 0) dice = 0;
+		if(health == 6 || health == 5) 
+			dice--;
+		else if(health == 4 || health == 3) 
+			dice -= 2;
+		else if(health == 2 || health == 1) 
+			dice -= 5;
+		else if(health <= 0) 
+			dice = 0;
 	}
 
 	if(ch->fighting != NULL)
@@ -772,7 +781,8 @@ int dice_rolls ( CHAR_DATA *ch, int dice, int difficulty )
 				difficulty++;
 		}
 
-	if(dice <= 0) dice = 1;
+	if(dice <= 0) 
+		dice = 1;
 
 	for(i = 0; i < dice; i++)
 	{
@@ -781,11 +791,14 @@ int dice_rolls ( CHAR_DATA *ch, int dice, int difficulty )
 			a = UMAX(number_fuzzy(a), a);
 		if(IS_SET(ch->off_flags, LOADED_DICE_NEG))
 			a = UMIN(number_fuzzy(a), a);
-		if (a >= difficulty) k++;
-		else if (a == 1) k--;
+		if (a >= difficulty) 
+			k++;
+		else if (a == 1) 
+			k--;
 	}
 
-	if(health <= 0) k = 0;
+	if(health <= 0) 
+		k = 0;
 
 	return UMIN(k,max);
 }

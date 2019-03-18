@@ -4720,19 +4720,19 @@ int trait_count(CHAR_DATA *ch, int type)
 	return icount;
 }
 
-int has_trait(CHAR_DATA *ch, TRAIT_DATA *p)
-{
-	TRAIT_DATA *t;
+// int has_trait(CHAR_DATA *ch, TRAIT_DATA *p)
+// {
+// 	TRAIT_DATA *t;
 
-	for(t = ch->traits; t != NULL; t = t->next)
-	{
-		if(t->value == p->value && t->type == p->type && !str_cmp(t->qualifier, p->qualifier)
-				&& !str_cmp(t->detail, p->detail))
-			return TRUE;
-	}
+// 	for(t = ch->traits; t != NULL; t = t->next)
+// 	{
+// 		if(t->value == p->value && t->type == p->type && !str_cmp(t->qualifier, p->qualifier)
+// 				&& !str_cmp(t->detail, p->detail))
+// 			return TRUE;
+// 	}
 
-	return FALSE;
-}
+// 	return FALSE;
+// }
 
 CHAR_DATA *sat_on(OBJ_DATA *obj)
 {

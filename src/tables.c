@@ -554,10 +554,10 @@ const struct skill_list_entry ability_table [MAX_ABIL] = {
  { "drive",			DRIVE,			0		},
  { "etiquette",		ETIQUETTE,		0		},
  { "firearms",		FIREARMS,		0		},
+ { "larceny",		LARCENY,		0		},
  { "melee",			MELEE,			0		},
  { "performance",	PERFORMANCE,	0		},
  { "repair",		REPAIR,			0		},
- { "larceny",		LARCENY,		0		},
  { "stealth",		STEALTH,		0		},
  { "survival",		SURVIVAL,		0		},
 
@@ -569,13 +569,13 @@ const struct skill_list_entry ability_table [MAX_ABIL] = {
  { "finance",		FINANCE,		0		},
  { "investigation",	INVESTIGATION,	0		},
  { "law",			LAW,			0		},
- { "technology",	TECHNOLOGY,		0		},
  { "medicine",		MEDICINE,		0		},
  { "mythlore",		MYTHLORE,		FA		},
  { "occult",		OCCULT,			0		},
  { "politics",		POLITICS,		0		},
  { "rituals",		RITUALS,		WW		},
  { "science",		SCIENCE,		0		},
+ { "technology",	TECHNOLOGY,		0		},
  { NULL,			0,				0		}
 
 };
@@ -2975,20 +2975,20 @@ const struct office_type office_table [] =
 
 const struct  job_type job_table [] =
 {
-	{	"Mayor",	-1,	mayor_cmd_table,  STAT_CHA,PERFORMANCE, 5 },
-	{	"Alderman",	-1,	alder_cmd_table,  STAT_MAN,POLITICS,    5 },
-	{	"Judge",	-1,	judge_cmd_table,  STAT_PER,LAW,		5 },
-	{	"Police_Chief",	-1,	pchief_cmd_table, STAT_WIT,INVESTIGATION,7},
-	{	"None",		-1,	no_job_cmd_table,  -1,	-1,		99},
-	{	"Janitor",	0,	janitor_cmd_table,STAT_STR,STREETWISE,	5 },
-	{	"Salesman",	0,	sales_cmd_table,  STAT_CHA,EMPATHY,	5 },
-	{	"Maker",	0,	maker_cmd_table,  STAT_INT,REPAIR,	2 },
-	{	"Chef",		0,	chef_cmd_table,   STAT_INT,SURVIVAL,	2 },
-	{	"Constable",	0,	police_cmd_table, STAT_WIT,LAW,		4 },
-	{	"Criminal",	0,	crim_cmd_table,   STAT_DEX,LARCENY,	5 },
-	{	"Reporter",	0,	reprt_cmd_table,  STAT_MAN,EXPRESSION,	1 },
-	{	"Musician",	0,	music_cmd_table,  STAT_CHA,PERFORMANCE,	7 },
-	{	NULL,		0,	NULL,		   -1,	-1,		99}
+	{	"Mayor",		-1,		mayor_cmd_table,	STAT_CHA,PERFORMANCE, 5 },
+	{	"Alderman",		-1,		alder_cmd_table,	STAT_MAN,POLITICS,    5 },
+	{	"Judge",		-1,		judge_cmd_table,	STAT_PER,LAW,		5 },
+	{	"Police_Chief",	-1,		pchief_cmd_table,	STAT_WIT,INVESTIGATION,7},
+	{	"None",			-1,		no_job_cmd_table,	-1,	-1,		99},
+	{	"Janitor",		0,		janitor_cmd_table,	STAT_STR,STREETWISE,	5 },
+	{	"Salesman",		0,		sales_cmd_table,	STAT_CHA,EMPATHY,	5 },
+	{	"Maker",		0,		maker_cmd_table,	STAT_INT,REPAIR,	2 },
+	{	"Chef",			0,		chef_cmd_table,		STAT_INT,SURVIVAL,	2 },
+	{	"Constable",	0,		police_cmd_table,	STAT_WIT,LAW,		4 },
+	{	"Criminal",		0,		crim_cmd_table,		STAT_DEX,LARCENY,	5 },
+	{	"Reporter",		0,		reprt_cmd_table,	STAT_MAN,EXPRESSION,	1 },
+	{	"Musician",		0,		music_cmd_table,	STAT_CHA,PERFORMANCE,	7 },
+	{	NULL,			0,		NULL,				-1,	-1,		99}
 };
 
 
