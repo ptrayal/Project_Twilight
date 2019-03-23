@@ -2565,46 +2565,36 @@ void extract_char( CHAR_DATA *ch, bool fPull )
 	{
 		ch->pet->master = NULL;
 		ch->pet = NULL;  /* just in case */
-		log_string(LOG_COMMAND, "Extract Char 1 -> Successfully NULL ch->pet.");
 	}
 
 	if ( fPull )
 	{
 		die_follower( ch );
-		log_string(LOG_COMMAND, "Extract Char 2 -> Successfully die_follower.");
 	}
 
 	stop_fighting( ch, TRUE );
-	log_string(LOG_COMMAND, "Extract Char 3 -> Successfully after stop_fighting.");
 
 	for ( obj = ch->carrying; obj != NULL; obj = obj_next )
 	{
 		obj_next = obj->next_content;
 		extract_obj( obj );
 	}
-	log_string(LOG_COMMAND, "Extract Char 4 -> Successfully after extract_obj.");
 
 	if (ch->listening != NULL)
 	{
-		log_string(LOG_BUG, "It's this one. Extract_char: ch->listening.");
 		char_from_listeners( ch );
 	}
-	log_string(LOG_COMMAND, "Extract Char 5 -> Successfully after ch->listening.");
 
 	if ( IS_NPC(ch) )
 	{
 		--ch->pIndexData->count;
 	}
-	log_string(LOG_COMMAND, "Extract Char 6 -> Successfully after Remove NPC from pIndexData.");
 
 	if ( ch->desc != NULL && ch->desc->original != NULL )
 	{
 		do_function(ch, &do_return, "" );
-		log_string(LOG_COMMAND, "Extract Char 6a -> Successfully");
 		ch->desc = NULL;
-		log_string(LOG_COMMAND, "Extract Char 6b -> Successfully");
 	}
-	log_string(LOG_COMMAND, "Extract Char 7 -> Successfully after do_return.");
 
 	CHAR_DATA *wch_next;
 	for ( wch = char_list; wch != NULL; wch = wch_next )
