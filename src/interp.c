@@ -317,7 +317,7 @@ const	struct	cmd_type	cmd_table	[] =
 		{	"sayto",		do_dsay,		P_REST,		0,	L_COM,	1,	B|H,	0 },
 		{	"scan",			do_scan,		P_REST,		0,	L_NRM,	1,	A|B,	0 },
 		{	"school",		do_goschool,	P_DEAD,		0,	L_NRM,	0,	A|B|H,	0 },
-		{	"score",		do_score,		P_DEAD,		0,	L_NRM,	1,	A|B|E,	0 },
+		{	"score",		do_score_revised,		P_DEAD,		0,	L_NRM,	1,	A|B|E,	0 },
 		{	"search",		do_search,		P_SIT,		0,	L_NRM,	1,	A|B|H,	0 },
 		{	"sell",			do_sell,		P_REST,		0,	L_NRM,	1,	B|H,	0 },
 		{	"sentence",		do_sentence,	P_SLEEP,	0,	L_NRM,	1,	A|B|E,	0 },

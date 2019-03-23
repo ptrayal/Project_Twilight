@@ -2027,6 +2027,11 @@ void do_exits( CHAR_DATA *ch, char *argument )
 	return;
 }
 
+/************************************************
+* This command is no longer used.  The command  *
+* for score is now do_score_revised.            *
+*  --Rayal                                      *
+************************************************/
 void do_score( CHAR_DATA *ch, char *argument )
 {
 	CHAR_DATA *user = ch;
@@ -6295,23 +6300,27 @@ void do_score_revised( CHAR_DATA *ch, char *argument )
 		}
 	}
 
+	// NEW ROW
+	row = create_row(grid);
+	// VIRTUES
+	cell = row_append_cell(row, 28, "\tGVirtues\tn\nConscience:   %d\nSelf-Control: %d\nCourage:      %d", ch->virtues[0], ch->virtues[1], ch->virtues[2] );
+
+	// HEALTH/EXPERIENCE
+	cell = row_append_cell(row, 28, "Health Status: %s\nXP/OOC XP: %d/%-d\nGift XP: %d", health_string(ch), ch->exp, ch->oocxp, ch->xpgift);
+
+	// HUMANITY/WillPOWER/BLOODPOOL
+	cell = row_append_cell(row, 23, "%8s: %2d\nWillpower: %2d/%-2d\n%s: %2d/%-2d",
+		race_table[ch->race].pc_race?pc_race_table[ch->race].GHB:"Humanity", ch->GHB, 
+		ch->willpower, ch->max_willpower, 
+		race_table[ch->race].pc_race?pc_race_table[ch->race].RBPG:"Faith", ch->RBPG, ch->max_RBPG );
+
+
+	// NEW ROW
+	row = create_row(grid);
+	cell = row_append_cell(row, 107, "Use \t<send href='abilities'>abilities\t</send> to see Skills, Talents, and Knowledges.");
+
 	grid_to_char (grid, user, TRUE );
 // TABLE ENDS HERE
-
-	send_to_char("\tW--------------------------------<Dice Pools>----------------------------------\tn\n\r", user);
-
-	send_to_char( Format("%s:  %2d/%-20d\n\r", race_table[ch->race].pc_race?pc_race_table[ch->race].RBPG:"Faith",
-		ch->RBPG, ch->max_RBPG), user);
-
-	send_to_char(Format("Experience/OOC Experience: %d / %d\n\r", ch->exp, ch->oocxp), user);
-	send_to_char(Format("Experience to Gift: %d\n\r", ch->xpgift), user);
-
-	if(IS_SET(ch->act2, ACT2_GHOUL))
-	{
-		send_to_char(Format("You are the devoted servant of %s.\r\n", ch->ghouled_by), user);
-	}
-
-	send_to_char("\n\r", user);
 }
 
 void do_advantages( CHAR_DATA *ch, char *argument )
