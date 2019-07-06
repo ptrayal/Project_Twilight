@@ -3434,11 +3434,13 @@ End
 0 spin~
 (null)~
 (null)~
-Unformatted Topic:  Combat Spin
-Syntax:  spin
-Description:
-Spin allows you to gain momentum for a move by spinning in a circle.
-See also:  HELP CSTAND
+Topic Combat Move: Spin~
+Syntax spin
+~
+Desc Spin allows you to gain momentum for a move by spinning in a circle.  
+~
+See COMBAT
+ CSTAND
 ~
 End
 0 'society of leopold' leopold society~

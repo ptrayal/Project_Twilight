@@ -5,16 +5,16 @@ Categ   Front Page~
 Subject Important People Go Missing~
 Success 0~
 Text
-{YIMPORTANT PEOPLE GO MISSING{x
+IMPORTANT PEOPLE GO MISSING
 
-In the past week, several important people have disappeared, including,
-but not limited to the Mayor, several alderman, and a few other
-important persons.  This has local police and the FBI baffled.  Many are
-speculating there is a probe into possible corruption involved and that
-is why so many have gone missing.
- 
-If you have any information on this, please contact your local FBI agent.
-~
+In the past week, several important people have disappeared, including,
+but not limited to the Mayor, several alderman, and a few other
+important persons.  This has local police and the FBI baffled.  Many are
+speculating there is a probe into possible corruption involved and that
+is why so many have gone missing.
+ 
+If you have any information on this, please contact your local FBI agent.
+~
 Author  Rayal~
 Date    Mon Dec  5 11:11:54 2011~
 Stamp   1323108714
@@ -22,10 +22,10 @@ Categ   Weather~
 Subject Strange Weather Lately~
 Success 0~
 Text
-{YStrange Weather has hit the City{x
+Strange Weather has hit the City
 
-In the past week, an unusualy amount of fog has laid over the city,
-causing not end of problems for the locals.  This fog has been arriving
-early in the evening and lasting till around sun up and has baffled
-meteorologists.
-~
+In the past week, an unusualy amount of fog has laid over the city,
+causing not end of problems for the locals.  This fog has been arriving
+early in the evening and lasting till around sun up and has baffled
+meteorologists.
+~

@@ -6,20 +6,19 @@ None~
 Vampire~
 0
 
-~
-~
-~
-~
-~
+(null)~
+(null)~
+(null)~
+(null)~
+(null)~
 
-~
-~
-~
-~
-~
-~
+(null)~
+(null)~
+(null)~
+(null)~
+(null)~
+(null)~
 
 #MEMBERS
-#Rayal~ 5 ABCDEFGHIJK 0
 #$
 #$

@@ -23,11 +23,11 @@ AG 0 0 0 0 0 beating
 AHMV ABCDEFGHIJK large flesh
 A Q
 I 0
-Tr 0 turning green.~ room "Fag records!" Danny Faggio cries cheerfully as he bounces back out onto Broadway.east~
-Tr 0 as she turns her head away.~ room "Fag records?" Danny Faggio inquires.~
-Tr 0 the beat.~ room "Where are the fag records?" Danny exclaims. "I'm a big fag and I want my fag records!"~
-Tr 0 He continues nodding to the beat.~ Rroom "Where are the fag records?" Danny exclaims. "I'm a big fag and I want my fag records!"~
 Tr 0 "Um, can I help you?"~ room Danny Faggio blinks. After a pause he declares: "Asshole cunt peepee fuck!" then runs out the door, crying, "Weeeeeeeeeee!"westroom Danny Faggio runs down Broadway with his arms streched out, crying: "Vroooom! Takatakatakataka! Neeeerooooowwww!"south~
+Tr 0 He continues nodding to the beat.~ Rroom "Where are the fag records?" Danny exclaims. "I'm a big fag and I want my fag records!"~
+Tr 0 the beat.~ room "Where are the fag records?" Danny exclaims. "I'm a big fag and I want my fag records!"~
+Tr 0 as she turns her head away.~ room "Fag records?" Danny Faggio inquires.~
+Tr 0 turning green.~ room "Fag records!" Danny Faggio cries cheerfully as he bounces back out onto Broadway.east~
 #7031
 $f $l~
 $f $l~
@@ -66,8 +66,8 @@ CFIJK 0 0 0
 AHMV ABCDEFGHIJK medium flesh
 A 0
 I 0
-Tr 0 get outta my face!~ say fuck you! You reek like a sack fulla assholes! ~
 Tr 0 got any change?~ say get a job you shitball!~
+Tr 0 get outta my face!~ say fuck you! You reek like a sack fulla assholes! ~
 #7066
 leon~
 Leon Blonsky~
@@ -80,12 +80,12 @@ FIJ 0 0 0
 AHMV ABCDEFGHIJK medium flesh
 A 0
 I 0
-Tr 0 the cops!~ say Damn! WHat crawled up your ass?emote turns around and (wisely) leaves...west~
-Tr 0 and die?~ say it didn't die.~
-Tr 0 beuatiful...~ say hey, hey, hey there! Your place or mine?~
-Tr 0 shitball!~ emote mutters "real original..."~
-Tr 0 looks at you~ emote looks around briefly and says, "Got some goodies. Interested?" HE opens his coat and displays his wares...~
 Tr 0 beuatiful~ emote looks at  Elise.'hey, hey, hey there! where ya been all my life?done~
+Tr 0 looks at you~ emote looks around briefly and says, "Got some goodies. Interested?" HE opens his coat and displays his wares...~
+Tr 0 shitball!~ emote mutters "real original..."~
+Tr 0 beuatiful...~ say hey, hey, hey there! Your place or mine?~
+Tr 0 and die?~ say it didn't die.~
+Tr 0 the cops!~ say Damn! WHat crawled up your ass?emote turns around and (wisely) leaves...west~
 #7067
 Elise Styles~
 Elise Styles~
@@ -98,11 +98,11 @@ FGHINQ Q 0 HJNY
 AHMVc ABCDEFGHIJKUV small flesh
 A 0
 I 0
-Tr 0 hey, hey, hey there! your place or mine?~ emote glares at Leon in disgust.say Tell me, my oderous friend, did somethine crawl down your throaght and die?~
-Tr 0 hello~ emote Elise Styles smiles coldly.~
-Tr 0 hi~ say say hello, beuatiful...~
-Tr 0 looks at you~ emote runs her tounge along her lips in eager anticipation...~
 Tr 0 mine?~ emote glares at leon in disgust.say tell me, my oderous friend, did something crawl down your throaght and die?~
+Tr 0 looks at you~ emote runs her tounge along her lips in eager anticipation...~
+Tr 0 hi~ say say hello, beuatiful...~
+Tr 0 hello~ emote Elise Styles smiles coldly.~
+Tr 0 hey, hey, hey there! your place or mine?~ emote glares at Leon in disgust.say Tell me, my oderous friend, did somethine crawl down your throaght and die?~
 #7068
 Fuzzy Guebre~
 Fuzzy Guebre~
@@ -176,8 +176,8 @@ AB 0 50 0 0 0 none
 AHMV ABCDEFGHIJK medium flesh
 A 0
 I 0
-Tr 0 I want my fag records!"~ room Bernard Benz doffs his earphones. "You mean Culture Club, or just Boy George? They're both up top." Bernard points to the ceiling, then dons his headset again.~
 Tr 0 has arrived.~ room Bernard Benz says, "Hey there! Feel free to look around." He continues nodding to the beat.~
+Tr 0 I want my fag records!"~ room Bernard Benz doffs his earphones. "You mean Culture Club, or just Boy George? They're both up top." Bernard points to the ceiling, then dons his headset again.~
 #7074
 Peter Wiles~
 Peter Wiles~
@@ -214,18 +214,18 @@ AB 0 50 0 0 0 none
 AHMV ABCDEFGHIJK medium flesh
 A 0
 I 0
-Tr 0 Danny Faggio leaves east.~ room Spyder rubs her eyes. "Gack! I think I'm sterile!"~
-Tr 0 Danny Faggio inquires.~ Room "Orpheus down the street. This is a clothes store, duh!" Spyder says. "And take a bath! You reek!" She waves a hand in front of her face, which is turning green.~
-Tr 0 Kyoko leaves east.~ room "Yeah, Hanoi Hoochgirl!" Spyder says around another gum crack.~
-Tr 0 girls like that?"~ room "Yeah, Hanoi Hoochgirl!" Spyder says around another gum crack.~
-Tr 0 while she glares at the entrance.~ emote Spyder says "Oooh... shit!" as she watches the departing panhandler, her eyes wide.~
-Tr 0 grumbles "Frigid bitch"~ emote Spyder says "Oooh... shit!" as she watches the departing panhandler, her eyes wide.~
-Tr 0 ...'entertains' the Wall Street types."~ emote Spyder giggles. "More like All Street types!"~
-Tr 0 Elise Styles leaves east.~ emote Spyder stops chewing her gum as she watches the goth leave. After she's gone, Spyder lets out a sigh of relief.~
-Tr 0 to hide her disgust.~ Emote Spyder watches Julie's exit. "Oh. My. God. Look at her butt! It's, like, out there! She's all bubbly and Jennifer Lopezed!"~
-Tr 0 sanity hearing..."~ emote "I hear she guy hunts all the time, but nobody'll go for it cuz she's into role reversal," Spyder says, chewing all the while.~
-Tr 0 looks at you~ emote Spyder stops chewing her gum and blows a bubble until it pops. She quickly sucks the gum back into her mouth and resumes chewing...~
 Tr 3 arrived~ emote Spyder cracks her gum...~
+Tr 0 looks at you~ emote Spyder stops chewing her gum and blows a bubble until it pops. She quickly sucks the gum back into her mouth and resumes chewing...~
+Tr 0 sanity hearing..."~ emote "I hear she guy hunts all the time, but nobody'll go for it cuz she's into role reversal," Spyder says, chewing all the while.~
+Tr 0 to hide her disgust.~ Emote Spyder watches Julie's exit. "Oh. My. God. Look at her butt! It's, like, out there! She's all bubbly and Jennifer Lopezed!"~
+Tr 0 Elise Styles leaves east.~ emote Spyder stops chewing her gum as she watches the goth leave. After she's gone, Spyder lets out a sigh of relief.~
+Tr 0 ...'entertains' the Wall Street types."~ emote Spyder giggles. "More like All Street types!"~
+Tr 0 grumbles "Frigid bitch"~ emote Spyder says "Oooh... shit!" as she watches the departing panhandler, her eyes wide.~
+Tr 0 while she glares at the entrance.~ emote Spyder says "Oooh... shit!" as she watches the departing panhandler, her eyes wide.~
+Tr 0 girls like that?"~ room "Yeah, Hanoi Hoochgirl!" Spyder says around another gum crack.~
+Tr 0 Kyoko leaves east.~ room "Yeah, Hanoi Hoochgirl!" Spyder says around another gum crack.~
+Tr 0 Danny Faggio inquires.~ Room "Orpheus down the street. This is a clothes store, duh!" Spyder says. "And take a bath! You reek!" She waves a hand in front of her face, which is turning green.~
+Tr 0 Danny Faggio leaves east.~ room Spyder rubs her eyes. "Gack! I think I'm sterile!"~
 #7077
 Sara Joy~
 Sara Joy~
@@ -238,29 +238,29 @@ AB 0 75 0 0 0 scratch
 AHMV ABCDEFGHIJK medium flesh
 A 0
 I 0
-Tr 0 Danny Faggio inquires.~ room With her head still turned and her resperatory passages still covered, Sara Joy points towards Broadway.~
-Tr 0 I'm sterile!"~ room A brief, cold grin appears on Sara Joy's features as she puts the air freshener away.~
-Tr 0 Danny Faggio leaves east.~ room Sara Joy reaches behind the counter and retrieves a can of air freshener. She sprays in all directions, rendering the shop heavy with the scent of potpourri.~
-Tr 0 Danny Faggio has arrived.~ room Sara Joy begins to speak, then claps a hand over her mouth and nose. "Oh, dear god!" she exclaims as she turns her head away.~
-Tr 0 Spyder says around another gum crack.~ Room Sara Joy crosses her arms in disdain. "Hmph! Quite apt. I can imagine how she came by that slouch."~
-Tr 0 Hanoi Hoochgirl!"~ Room Sara Joy crosses her arms in disdain. "Hmph! Quite apt. I can imagine how she came by that slouch."~
-Tr 0 Kyoko leaves east.~ room Sara Joy turns towards Spyder and asks, "Doesn't your father have a saying for girls like that?"~
-Tr 0 Kyoko has arrived.~ room Sara Joy says, "Why, hello..."~
-Tr 0 A panhandler leaves east.~ emote Sara Joy is livid. Her face turns five shades of red as she clenches and unclenches her hands while she glares at the entrance.~
-Tr 0 A panhandler has arrived.~ Emote Sara Joy sends her darkest scowl in the direction of a panhandler and says "You'll have to leave...  Now."~
-Tr 0 "More like All Street types!"~ emote Sara Joy smiles coldly. "With enormous zeal, at any rate."~
-Tr 0 Carmen leaves east.~ emote Sara Joy sneers. "I'll bet that one ...'entertains' the Wall Street types."~
-Tr 0 Carmen has arrived.~ Sara Joy looks at Carmen. "Why, helo..."~
-Tr 0 Elise Styles leaves east.~ emote Sara Joy shudders.~
-Tr 0 Elise Styles has arrived.~ emote Sara Joy looks at the goth. "Why, hello..."~
-Tr 0 Julie has arrived.~ emote Sara Joy looks at raven-hair. "Why, hello..."~
-Tr 0 Jennifer Lopezed!"~ emote Sara Joy crosses her arms. "Yes. A few more pounds, and you'll be able to see it from the front."~
-Tr 0 Julie leaves east.~ emote "Wonder why that one isn't in jail..." Sara Joy says, making no attempt to hide her disgust.~
-Tr 0 she's into role reversal,"~ emote Sara Joy wrinkles her nose in disgust. "Wouldn't suprise me in the least."~
-Tr 0 Fuzzy Guebre leaves east.~ emote Sara Joy watches Fuzzy's departure. "In my day, that woman would have a sanity hearing..."~
-Tr 0 Fuzzy Guebre has arrived.~ emote Sara Joy looks at Fuzzy. "Why, hello..."~
-Tr 0 blows a bubble until it pops.~ emote Sara Joy glares at Spyder. When her evil eye elicits no response, she goes back to work.~
 Tr 0 cracks her gum...~ Emote Sara Joy shoots a brief, disaproving look towards Spyder, then resumes running the boutique.~
+Tr 0 blows a bubble until it pops.~ emote Sara Joy glares at Spyder. When her evil eye elicits no response, she goes back to work.~
+Tr 0 Fuzzy Guebre has arrived.~ emote Sara Joy looks at Fuzzy. "Why, hello..."~
+Tr 0 Fuzzy Guebre leaves east.~ emote Sara Joy watches Fuzzy's departure. "In my day, that woman would have a sanity hearing..."~
+Tr 0 she's into role reversal,"~ emote Sara Joy wrinkles her nose in disgust. "Wouldn't suprise me in the least."~
+Tr 0 Julie leaves east.~ emote "Wonder why that one isn't in jail..." Sara Joy says, making no attempt to hide her disgust.~
+Tr 0 Jennifer Lopezed!"~ emote Sara Joy crosses her arms. "Yes. A few more pounds, and you'll be able to see it from the front."~
+Tr 0 Julie has arrived.~ emote Sara Joy looks at raven-hair. "Why, hello..."~
+Tr 0 Elise Styles has arrived.~ emote Sara Joy looks at the goth. "Why, hello..."~
+Tr 0 Elise Styles leaves east.~ emote Sara Joy shudders.~
+Tr 0 Carmen has arrived.~ Sara Joy looks at Carmen. "Why, helo..."~
+Tr 0 Carmen leaves east.~ emote Sara Joy sneers. "I'll bet that one ...'entertains' the Wall Street types."~
+Tr 0 "More like All Street types!"~ emote Sara Joy smiles coldly. "With enormous zeal, at any rate."~
+Tr 0 A panhandler has arrived.~ Emote Sara Joy sends her darkest scowl in the direction of a panhandler and says "You'll have to leave...  Now."~
+Tr 0 A panhandler leaves east.~ emote Sara Joy is livid. Her face turns five shades of red as she clenches and unclenches her hands while she glares at the entrance.~
+Tr 0 Kyoko has arrived.~ room Sara Joy says, "Why, hello..."~
+Tr 0 Kyoko leaves east.~ room Sara Joy turns towards Spyder and asks, "Doesn't your father have a saying for girls like that?"~
+Tr 0 Hanoi Hoochgirl!"~ Room Sara Joy crosses her arms in disdain. "Hmph! Quite apt. I can imagine how she came by that slouch."~
+Tr 0 Spyder says around another gum crack.~ Room Sara Joy crosses her arms in disdain. "Hmph! Quite apt. I can imagine how she came by that slouch."~
+Tr 0 Danny Faggio has arrived.~ room Sara Joy begins to speak, then claps a hand over her mouth and nose. "Oh, dear god!" she exclaims as she turns her head away.~
+Tr 0 Danny Faggio leaves east.~ room Sara Joy reaches behind the counter and retrieves a can of air freshener. She sprays in all directions, rendering the shop heavy with the scent of potpourri.~
+Tr 0 I'm sterile!"~ room A brief, cold grin appears on Sara Joy's features as she puts the air freshener away.~
+Tr 0 Danny Faggio inquires.~ room With her head still turned and her resperatory passages still covered, Sara Joy points towards Broadway.~
 #7078
 $f $l~
 $f $l~
@@ -309,9 +309,9 @@ I 0 0 0
 AHMV ABCDEFGHIJK medium flash
 A 0
 I 0
-Tr 0 Danny Faggio leaves west.~ room "I guess there's no point telling that one we only sell jewelry," the clerk says.~
-Tr 0 Danny Faggio has arrived.~ room The Sarin store clerk eyes Danny nervously. "Um, can I help you?"~
 Tr 0 a panhandler has arrived~ say I'm sorry, but we allow paying customers only in here. Please leave~
+Tr 0 Danny Faggio has arrived.~ room The Sarin store clerk eyes Danny nervously. "Um, can I help you?"~
+Tr 0 Danny Faggio leaves west.~ room "I guess there's no point telling that one we only sell jewelry," the clerk says.~
 #7082
 $f $l~
 $f $l~
@@ -377,9 +377,9 @@ CI 0 0 0
 AHMV ABCDEFGHIJK medium flash
 A 0
 I 0
-Tr 0 Fuzzy Guebre has arrived.~ Nathan backs up against the wall of Twice-Sold Tales, munching his hoagie all the while.~
-Tr 0 assholes!~ emote says "probably tastes like one too..." as he devours his hoagie.~
 Tr 0 looks at you~ emote Nathan looks at you and say "What?" around a bite of his sandwhich, with bits of it falling off all the while...~
+Tr 0 assholes!~ emote says "probably tastes like one too..." as he devours his hoagie.~
+Tr 0 Fuzzy Guebre has arrived.~ Nathan backs up against the wall of Twice-Sold Tales, munching his hoagie all the while.~
 #7087
 $f panhandler~
 a panhandler~
@@ -396,12 +396,12 @@ CIJ 0 0 0
 AHMV ABCDEFGHIJK medium flesh
 A 0
 I 0
-Tr 0 "You'll have to leave...  Now."~ emote A panhandler grumbles "Frigid bitch" as he leaves the botique.east~
-Tr 0 please leave~ emote turns and leaves quietly...west~
-Tr 0 now.~ emote mutters, "I'm goin', I'm goin..." as he turns to leave the shop. A barely audible "bitch" escapes his lips as he departs...east~
-Tr 0 you shitball!~ say I HAD a job bangin' your mother till she dried up!say get outta my face!~
-Tr 0 sack fulla~ (null)~
 Tr 0 looks at you~ say Got any change?~
+Tr 0 sack fulla~ (null)~
+Tr 0 you shitball!~ say I HAD a job bangin' your mother till she dried up!say get outta my face!~
+Tr 0 now.~ emote mutters, "I'm goin', I'm goin..." as he turns to leave the shop. A barely audible "bitch" escapes his lips as he departs...east~
+Tr 0 please leave~ emote turns and leaves quietly...west~
+Tr 0 "You'll have to leave...  Now."~ emote A panhandler grumbles "Frigid bitch" as he leaves the botique.east~
 #7088
 $f $l kid~
 $f $l~
@@ -453,8 +453,8 @@ CEFIKPQ 0 0 0
 AHMV ABCDEFGHIJK large flesh
 A A
 I 0
-Tr 0 leon blonsky has arrived~ room At the sight of Leon, the security guard adopts a threatening posture. "We don't want your crap in here!" he yells with barely contained fury. "Get out now, or I'll give what's left of you to the cops!"~
 Tr 0 a panhandler has arrived~ room A security guard's countenance grows dark upon the arrival of a panhandler...~
+Tr 0 leon blonsky has arrived~ room At the sight of Leon, the security guard adopts a threatening posture. "We don't want your crap in here!" he yells with barely contained fury. "Get out now, or I'll give what's left of you to the cops!"~
 #0
 
 
@@ -2382,11 +2382,11 @@ E
 XDUMB1~
 None~
 E
-painting~
-The paintings in this room are as missmatched as the furniture.  Thereis a portrait of a stuffy-looking woman done in a Renaissance style nextto a vague watercolor of amorphous blues and greens.  There is also avery well executed still life.  The vase depicted in this paintingcontains the distorted reflection of two people doing something verynaughty indeed, but only an accute eye and close examination will revealthis.~
-E
 sketch~
 There is a small, framed, charcoal sketch of a woman looking into a cup.The vague strokes hint at a face that could belong to any woman.  Herexpression seems sad, made sadder by the way she tilts her head andrests it in her hand and her downward gaze into the cup that appears itcould contain either tea or absinthe. The artist was an obvious fan ofthe Dutch post impressionists.~
+E
+painting~
+The paintings in this room are as missmatched as the furniture.  Thereis a portrait of a stuffy-looking woman done in a Renaissance style nextto a vague watercolor of amorphous blues and greens.  There is also avery well executed still life.  The vase depicted in this paintingcontains the distorted reflection of two people doing something verynaughty indeed, but only an accute eye and close examination will revealthis.~
 D1
 (none)~
 (null)~
@@ -2445,14 +2445,14 @@ E
 XDUMB1~
 None~
 E
-list~
-On the wall there is currently:Skyscraper~
+skyscraper~
+A science-fiction/abstract drawing of what looks to be a large skyscraper. With spindly point and swirls of paint making up the floors that somehow melt into a cohesive image. Of course, if you stand back a little it could look like a stylised penis too.~
 E
 sign~
 Type 'look list' to see all of the items currently painted here.  If youwould like to submit an item, please mudmail Opal and she will add it tothe room's extended desciption.~
 E
-skyscraper~
-A science-fiction/abstract drawing of what looks to be a large skyscraper. With spindly point and swirls of paint making up the floors that somehow melt into a cohesive image. Of course, if you stand back a little it could look like a stylised penis too.~
+list~
+On the wall there is currently:Skyscraper~
 D0
 (none)~
 (null)~

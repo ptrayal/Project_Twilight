@@ -27,13 +27,13 @@ FH 0 0 0
 AGV ACDEFHJKQUV medium flesh
 A 0
 I 0
-Tr 0 stumbles a little~ say Welcome to Project Twilight.
-say If you are confused or need help, type tips for help.
-~
+Tr 0 **base**~ **do not delete**~
 Tr 0 has arrived~ purr 
 say Why don't you look sign?
 ~
-Tr 0 **base**~ **do not delete**~
+Tr 0 stumbles a little~ say Welcome to Project Twilight.
+say If you are confused or need help, type tips for help.
+~
 #8281
 dr. greenthumb green thumb doc DR doctor~
 Dr. Greenthumb~
@@ -51,8 +51,8 @@ ABG 0 50 0 0 0 punch
 AHMV ABCDEFGHIJK medium flesh
 A G
 I 0
-Tr 0 has arrived~ emote smiles and says, {Y'{CHey buddy need a fix? Just type 'list dr' for a full list of what I've got to hook you up!{Y'{x~
 Tr 0 **base**~ **do not delete**~
+Tr 0 has arrived~ emote smiles and says, {Y'{CHey buddy need a fix? Just type 'list dr' for a full list of what I've got to hook you up!{Y'{x~
 #8282
 eric cartman~
 Eric Cartman~
@@ -65,8 +65,8 @@ J A I BC
 AHMV ABCDEFGHIJK medium flesh
 A H
 I 0
-Tr 0 **base**~ **yup yup**~
 Tr 0 has arrived~ emote eats a Cheesy Poof, {Y'{CHey, you guys are really pissin me off!{Y'{x~
+Tr 0 **base**~ **yup yup**~
 #0
 
 
@@ -196,20 +196,20 @@ E
 XDUMB1~
 None~
 E
-rpwho~
-Topic: Making Yourself Available for Roleplaying Syntax: rpavailable [<optional message>] - make yourself availble.rpjoin <target> - Travel to the same room as an available person.who available - A list of who is currently available for RP.rpmode - Free yourself from ooc influences. Description:Finding people to roleplay with can be one of the more frustratingaspects of a game, and so in order to help facilitate a betterroleplaying experience, one can make themselves "available" for RP.Being available allows a person to be "joined" by others wishing toengage in a roleplaying session. To find out who is available andwhat they are looking for, you can type "who available" to find outwho is available online. Setting yourself as being in "rp mode"frees you from the confines of ooc influences. In rpmode you cannotbe attacked using the combat system, cannot be fed from, and do notget hungry. ~
+rpavail~
+Topic: Making Yourself Available for Roleplaying  Syntax: rpavailable [<optional message>] - make yourself availble.rpjoin <target> - Travel to the same room as an available person.who available - A list of who is currently available for RP.rpmode - Free yourself from ooc influences.  Description:Finding people to roleplay with can be one of the more frustratingaspects of a game, and so in order to help facilitate a betterroleplaying experience, one can make themselves "available" for RP.Being available allows a person to be "joined" by others wishing toengage in a roleplaying session. To find out who is available andwhat they are looking for, you can type "who available" to find outwho is available online. Setting yourself as being in "rp mode"frees you from the confines of ooc influences. In rpmode you cannotbe attacked using the combat system, cannot be fed from, and do notget hungry. ~
 E
-whorp~
+rpmode~
 Topic: Making Yourself Available for Roleplaying Syntax: rpavailable [<optional message>] - make yourself availble.rpjoin <target> - Travel to the same room as an available person.who available - A list of who is currently available for RP.rpmode - Free yourself from ooc influences. Description:Finding people to roleplay with can be one of the more frustratingaspects of a game, and so in order to help facilitate a betterroleplaying experience, one can make themselves "available" for RP.Being available allows a person to be "joined" by others wishing toengage in a roleplaying session. To find out who is available andwhat they are looking for, you can type "who available" to find outwho is available online. Setting yourself as being in "rp mode"frees you from the confines of ooc influences. In rpmode you cannotbe attacked using the combat system, cannot be fed from, and do notget hungry. ~
 E
 rpjoin~
 Topic: Making Yourself Available for Roleplaying Syntax: rpavailable [<optional message>] - make yourself availble.rpjoin <target> - Travel to the same room as an available person.who available - A list of who is currently available for RP.rpmode - Free yourself from ooc influences. Description:Finding people to roleplay with can be one of the more frustratingaspects of a game, and so in order to help facilitate a betterroleplaying experience, one can make themselves "available" for RP.Being available allows a person to be "joined" by others wishing toengage in a roleplaying session. To find out who is available andwhat they are looking for, you can type "who available" to find outwho is available online. Setting yourself as being in "rp mode"frees you from the confines of ooc influences. In rpmode you cannotbe attacked using the combat system, cannot be fed from, and do notget hungry. ~
 E
-rpmode~
+whorp~
 Topic: Making Yourself Available for Roleplaying Syntax: rpavailable [<optional message>] - make yourself availble.rpjoin <target> - Travel to the same room as an available person.who available - A list of who is currently available for RP.rpmode - Free yourself from ooc influences. Description:Finding people to roleplay with can be one of the more frustratingaspects of a game, and so in order to help facilitate a betterroleplaying experience, one can make themselves "available" for RP.Being available allows a person to be "joined" by others wishing toengage in a roleplaying session. To find out who is available andwhat they are looking for, you can type "who available" to find outwho is available online. Setting yourself as being in "rp mode"frees you from the confines of ooc influences. In rpmode you cannotbe attacked using the combat system, cannot be fed from, and do notget hungry. ~
 E
-rpavail~
-Topic: Making Yourself Available for Roleplaying  Syntax: rpavailable [<optional message>] - make yourself availble.rpjoin <target> - Travel to the same room as an available person.who available - A list of who is currently available for RP.rpmode - Free yourself from ooc influences.  Description:Finding people to roleplay with can be one of the more frustratingaspects of a game, and so in order to help facilitate a betterroleplaying experience, one can make themselves "available" for RP.Being available allows a person to be "joined" by others wishing toengage in a roleplaying session. To find out who is available andwhat they are looking for, you can type "who available" to find outwho is available online. Setting yourself as being in "rp mode"frees you from the confines of ooc influences. In rpmode you cannotbe attacked using the combat system, cannot be fed from, and do notget hungry. ~
+rpwho~
+Topic: Making Yourself Available for Roleplaying Syntax: rpavailable [<optional message>] - make yourself availble.rpjoin <target> - Travel to the same room as an available person.who available - A list of who is currently available for RP.rpmode - Free yourself from ooc influences. Description:Finding people to roleplay with can be one of the more frustratingaspects of a game, and so in order to help facilitate a betterroleplaying experience, one can make themselves "available" for RP.Being available allows a person to be "joined" by others wishing toengage in a roleplaying session. To find out who is available andwhat they are looking for, you can type "who available" to find outwho is available online. Setting yourself as being in "rp mode"frees you from the confines of ooc influences. In rpmode you cannotbe attacked using the combat system, cannot be fed from, and do notget hungry. ~
 D0
 (none)~
 (null)~
@@ -239,13 +239,13 @@ E
 XDUMB1~
 None~
 E
-emote~
+dmote~
 Topic: Emotes - Free-form Actions Syntax:emote <action>pmote <action>dmote <action>dpmote <action> Description:Emotes allow greater breadth of actions than socials, but do limitthe display to being the same for the character, any target ortargets, and the rest of those present in the locale. Pmote allowsfor directed actions so that a target character will receive "you"instead of their name. Dmote allows for a scene-setting statementto be made, and pdmote allows for that statement to be directedin the same way as pmote. ~
 E
 pmote~
 Topic: Emotes - Free-form Actions Syntax:emote <action>pmote <action>dmote <action>dpmote <action>Description:Emotes allow greater breadth of actions than socials, but do limitthe display to being the same for the character, any target ortargets, and the rest of those present in the locale. Pmote allowsfor directed actions so that a target character will receive "you"instead of their name. Dmote allows for a scene-setting statementto be made, and pdmote allows for that statement to be directedin the same way as pmote. ~
 E
-dmote~
+emote~
 Topic: Emotes - Free-form Actions Syntax:emote <action>pmote <action>dmote <action>dpmote <action> Description:Emotes allow greater breadth of actions than socials, but do limitthe display to being the same for the character, any target ortargets, and the rest of those present in the locale. Pmote allowsfor directed actions so that a target character will receive "you"instead of their name. Dmote allows for a scene-setting statementto be made, and pdmote allows for that statement to be directedin the same way as pmote. ~
 D0
 (none)~
@@ -273,11 +273,11 @@ E
 XDUMB1~
 None~
 E
-edesc~
-Topic: Edesc Syntax: edesc <keyword>edesc delete <keyword> On top of having a description for your character - which you byall means should, for others to be able to see what you look like -you may also have descriptions for things, items worn or featuresof yourself.For example, you can merely mention having a gun tucked in your belt in the "main" description, but also have a keyword 'gun'; thatwould allow others to type "look <your name> gun", and see whatyou wrote specifically for your weapon.~
-E
 droll~
 Topic:Dice RollingSyntax:droll <ability/stat> <person to send the rolls to>Description: The droll command is useful when a storyteller asks you tomake a particular roll against something for a plot.  So, for example,if Rayal asks you for an acting ability roll, you would type "drollacting rayal" and it would send the results to both Rayal and you.~
+E
+edesc~
+Topic: Edesc Syntax: edesc <keyword>edesc delete <keyword> On top of having a description for your character - which you byall means should, for others to be able to see what you look like -you may also have descriptions for things, items worn or featuresof yourself.For example, you can merely mention having a gun tucked in your belt in the "main" description, but also have a keyword 'gun'; thatwould allow others to type "look <your name> gun", and see whatyou wrote specifically for your weapon.~
 D0
 (none)~
 (null)~
@@ -307,14 +307,14 @@ E
 XDUMB1~
 None~
 E
-job~
-Topic:Jobs - Workin' for the ManSyntax:job <command> <arguments> job commands - lists the options for <command>job apply <employer> <profession> - applies for a job job nohires -Stops/allows people from being able to apply to you for a job.Description: Jobs are a way to make a living, get cash, and developvaluable experience as you go. In order to perform one of the commandsspecific to a profession you will need, in many cases, to build up theenergy needed to perform them.Note: All jobs have a pre-requisite ability, which is necessary to be hired for that profession.  You will be told what you need to increase when you apply. Other help topics: SALESMAN, CHEF, MAKER, JANITOR, TEACHER, CONSTABLE, CRIMINAL~
+apply~
+Topic:Jobs - Workin' for the Man Syntax:job <command> <arguments> job commands - lists the options for <command>job apply <employer> <profession> - applies for a job job nohires - Stops/allows people from being able to apply to you for a job. Description: Jobs are a way to make a living, get cash, and developvaluable experience as you go. In order to perform one of the commands specific to a profession you will need, in many cases, to build up the energy needed to perform them. Note:All jobs have a pre-requisite ability, which is necessary to be hired for that profession.  You will be told what you need to increase when you apply. Other help topics:SALESMAN, CHEF, MAKER, JANITOR, TEACHER, CONSTABLE, CRIMINAL ~
 E
 energy~
 Topic: The Energy to Perform Your Job Functions Description:Because working at a job requires some time and effort, you mustbuild up the energy to perform strenuous or intricate tasks. The only way to do this is to wait and build up the energy over time.Different tasks do require different efforts, some requiring none atall. Note: Currently the only display for job energy is in the prompt.~
 E
-apply~
-Topic:Jobs - Workin' for the Man Syntax:job <command> <arguments> job commands - lists the options for <command>job apply <employer> <profession> - applies for a job job nohires - Stops/allows people from being able to apply to you for a job. Description: Jobs are a way to make a living, get cash, and developvaluable experience as you go. In order to perform one of the commands specific to a profession you will need, in many cases, to build up the energy needed to perform them. Note:All jobs have a pre-requisite ability, which is necessary to be hired for that profession.  You will be told what you need to increase when you apply. Other help topics:SALESMAN, CHEF, MAKER, JANITOR, TEACHER, CONSTABLE, CRIMINAL ~
+job~
+Topic:Jobs - Workin' for the ManSyntax:job <command> <arguments> job commands - lists the options for <command>job apply <employer> <profession> - applies for a job job nohires -Stops/allows people from being able to apply to you for a job.Description: Jobs are a way to make a living, get cash, and developvaluable experience as you go. In order to perform one of the commandsspecific to a profession you will need, in many cases, to build up theenergy needed to perform them.Note: All jobs have a pre-requisite ability, which is necessary to be hired for that profession.  You will be told what you need to increase when you apply. Other help topics: SALESMAN, CHEF, MAKER, JANITOR, TEACHER, CONSTABLE, CRIMINAL~
 D1
 (none)~
 (null)~
@@ -345,35 +345,35 @@ E
 XDUMB1~
 None~
 E
-con~
+prompt~
+Topic: Prompt Syntax: prompt <argument> Description:Setting a useful prompt can be a very important part of your playingexperience. We suggest at least having your current health in yourprompt, if only for the warning value during combat. To set yourprompt, simply choose what you want to display, and when laying outyour prompt add the variable in the appropriate place (eg. <%h> forjust health). The variables available for prompts are:%e - exits      %n - new line           %h - health%x - experience available for spending  %j - job energy%g - experience available for gifting%d - dollars    %c - cents              %% - % sign%o - Type of OLC editor (builders and staff)%O - Vnum of editor focus (builders and staff)%a - rage/blood/glamour/faith (%A max)  %T - time with date%b - gnosis/humanity/banality (%B max)  %t - time only~
+E
+color~
+Topic: Colour Codes Syntax:{{R {{r - Reds         {{B {{b - Blues          {{W {{w - Whites{{G {{g - Greens       {{M {{m - Magentas       {{D {{d - Black/Grey{{Y {{y - Yellows      {{C {{c - Cyans   {{x     - End colour    Description:Project Twilight allows you the ability to make use of colour in yourdescriptions, communications, prompts and titles. Simply adding theappropriate colour code at the place in the string where you wouldlike the colour to begin will cause the colour to appear in theoutput. Note: Always remember to stop the colours with {x at the end ofthe string. ~
+E
+say~
+Topic:  Channels and other forms of Communication Syntax:  say messageooc messagethink messageyell messagehelpline message> messageconsetcolor [say/emote/default[ [two-character color code] Description:Say will send an in character message to everyone in the same room as you.Ooc will send an out of character message to everyone in the same room as you.Think will allow for an internal dialogue to go on in the same room.  It is only heard by users of high levels of certain gifts or disciplines.Yell will shout out to everyone in the nearby area.Helpline this is here for people new to the mud - if you need help now everyone can hear you.Con will list all the channels and their status.setcolor will set the color for your use of channels. ~
+E
+ooc~
+Topic:  Channels and other forms of Communication Syntax:  say messageooc messagethink messageyell messagehelpline message> messageconsetcolor [say/emote/default[ [two-character color code] Description:Say will send an in character message to everyone in the same room as you.Ooc will send an out of character message to everyone in the same room as you.Think will allow for an internal dialogue to go on in the same room.  It is only heard by users of high levels of certain gifts or disciplines.Yell will shout out to everyone in the nearby area.Helpline this is here for people new to the mud - if you need help now everyone can hear you.Con will list all the channels and their status.setcolor will set the color for your use of channels.~
+E
+think~
+Topic:  Channels and other forms of Communication Syntax:  say messageooc messagethink messageyell messagehelpline message> messageconsetcolor [say/emote/default[ [two-character color code] Description:Say will send an in character message to everyone in the same room as you.Ooc will send an out of character message to everyone in the same room as you.Think will allow for an internal dialogue to go on in the same room.  It is only heard by users of high levels of certain gifts or disciplines.Yell will shout out to everyone in the nearby area.Helpline this is here for people new to the mud - if you need help now everyone can hear you.Con will list all the channels and their status.setcolor will set the color for your use of channels.~
+E
+telephone~
+Topic:  Calling and Using the Phone Syntax:  call <target> <message>call end Description:If you have purchased a phone, you can place phone calls to otherplayers with phones.  If you are in a call and someone tries to get ahold of you, a small blip will sound alerting you to this fact. To end a call and free up your phone to accept other calls, type "callend".~
+E
+yell~
+Topic:  Channels and other forms of Communication Syntax:  say messageooc messagethink messageyell messagehelpline message> messageconsetcolor [say/emote/default[ [two-character color code] Description:Say will send an in character message to everyone in the same room as you.Ooc will send an out of character message to everyone in the same room as you.Think will allow for an internal dialogue to go on in the same room.  It is only heard by users of high levels of certain gifts or disciplines.Yell will shout out to everyone in the nearby area.Helpline this is here for people new to the mud - if you need help now everyone can hear you.Con will list all the channels and their status.setcolor will set the color for your use of channels. ~
+E
+>~
 Topic:  Channels and other forms of Communication Syntax:  say messageooc messagethink messageyell messagehelpline message> messageconsetcolor [say/emote/default[ [two-character color code] Description:Say will send an in character message to everyone in the same room as you.Ooc will send an out of character message to everyone in the same room as you.Think will allow for an internal dialogue to go on in the same room.  It is only heard by users of high levels of certain gifts or disciplines.Yell will shout out to everyone in the nearby area.Helpline this is here for people new to the mud - if you need help now everyone can hear you.Con will list all the channels and their status.setcolor will set the color for your use of channels.~
 E
 helpline~
 Topic:  Channels and other forms of Communication Syntax:  say messageooc messagethink messageyell messagehelpline message> messageconsetcolor [say/emote/default[ [two-character color code] Description:Say will send an in character message to everyone in the same room as you.Ooc will send an out of character message to everyone in the same room as you.Think will allow for an internal dialogue to go on in the same room.  It is only heard by users of high levels of certain gifts or disciplines.Yell will shout out to everyone in the nearby area.Helpline this is here for people new to the mud - if you need help now everyone can hear you.Con will list all the channels and their status.setcolor will set the color for your use of channels.~
 E
->~
+con~
 Topic:  Channels and other forms of Communication Syntax:  say messageooc messagethink messageyell messagehelpline message> messageconsetcolor [say/emote/default[ [two-character color code] Description:Say will send an in character message to everyone in the same room as you.Ooc will send an out of character message to everyone in the same room as you.Think will allow for an internal dialogue to go on in the same room.  It is only heard by users of high levels of certain gifts or disciplines.Yell will shout out to everyone in the nearby area.Helpline this is here for people new to the mud - if you need help now everyone can hear you.Con will list all the channels and their status.setcolor will set the color for your use of channels.~
-E
-yell~
-Topic:  Channels and other forms of Communication Syntax:  say messageooc messagethink messageyell messagehelpline message> messageconsetcolor [say/emote/default[ [two-character color code] Description:Say will send an in character message to everyone in the same room as you.Ooc will send an out of character message to everyone in the same room as you.Think will allow for an internal dialogue to go on in the same room.  It is only heard by users of high levels of certain gifts or disciplines.Yell will shout out to everyone in the nearby area.Helpline this is here for people new to the mud - if you need help now everyone can hear you.Con will list all the channels and their status.setcolor will set the color for your use of channels. ~
-E
-telephone~
-Topic:  Calling and Using the Phone Syntax:  call <target> <message>call end Description:If you have purchased a phone, you can place phone calls to otherplayers with phones.  If you are in a call and someone tries to get ahold of you, a small blip will sound alerting you to this fact. To end a call and free up your phone to accept other calls, type "callend".~
-E
-think~
-Topic:  Channels and other forms of Communication Syntax:  say messageooc messagethink messageyell messagehelpline message> messageconsetcolor [say/emote/default[ [two-character color code] Description:Say will send an in character message to everyone in the same room as you.Ooc will send an out of character message to everyone in the same room as you.Think will allow for an internal dialogue to go on in the same room.  It is only heard by users of high levels of certain gifts or disciplines.Yell will shout out to everyone in the nearby area.Helpline this is here for people new to the mud - if you need help now everyone can hear you.Con will list all the channels and their status.setcolor will set the color for your use of channels.~
-E
-ooc~
-Topic:  Channels and other forms of Communication Syntax:  say messageooc messagethink messageyell messagehelpline message> messageconsetcolor [say/emote/default[ [two-character color code] Description:Say will send an in character message to everyone in the same room as you.Ooc will send an out of character message to everyone in the same room as you.Think will allow for an internal dialogue to go on in the same room.  It is only heard by users of high levels of certain gifts or disciplines.Yell will shout out to everyone in the nearby area.Helpline this is here for people new to the mud - if you need help now everyone can hear you.Con will list all the channels and their status.setcolor will set the color for your use of channels.~
-E
-say~
-Topic:  Channels and other forms of Communication Syntax:  say messageooc messagethink messageyell messagehelpline message> messageconsetcolor [say/emote/default[ [two-character color code] Description:Say will send an in character message to everyone in the same room as you.Ooc will send an out of character message to everyone in the same room as you.Think will allow for an internal dialogue to go on in the same room.  It is only heard by users of high levels of certain gifts or disciplines.Yell will shout out to everyone in the nearby area.Helpline this is here for people new to the mud - if you need help now everyone can hear you.Con will list all the channels and their status.setcolor will set the color for your use of channels. ~
-E
-color~
-Topic: Colour Codes Syntax:{{R {{r - Reds         {{B {{b - Blues          {{W {{w - Whites{{G {{g - Greens       {{M {{m - Magentas       {{D {{d - Black/Grey{{Y {{y - Yellows      {{C {{c - Cyans   {{x     - End colour    Description:Project Twilight allows you the ability to make use of colour in yourdescriptions, communications, prompts and titles. Simply adding theappropriate colour code at the place in the string where you wouldlike the colour to begin will cause the colour to appear in theoutput. Note: Always remember to stop the colours with {x at the end ofthe string. ~
-E
-prompt~
-Topic: Prompt Syntax: prompt <argument> Description:Setting a useful prompt can be a very important part of your playingexperience. We suggest at least having your current health in yourprompt, if only for the warning value during combat. To set yourprompt, simply choose what you want to display, and when laying outyour prompt add the variable in the appropriate place (eg. <%h> forjust health). The variables available for prompts are:%e - exits      %n - new line           %h - health%x - experience available for spending  %j - job energy%g - experience available for gifting%d - dollars    %c - cents              %% - % sign%o - Type of OLC editor (builders and staff)%O - Vnum of editor focus (builders and staff)%a - rage/blood/glamour/faith (%A max)  %T - time with date%b - gnosis/humanity/banality (%B max)  %t - time only~
 D2
 (none)~
 (null)~
@@ -395,35 +395,35 @@ E
 XDUMB1~
 None~
 E
-inventory~
-Topic:  Equipment and Inventory Syntax:  InventoryEquipment Description:Inventory lists all the items you are carrying but not wearing.Equipment lists all the items you are wearing or using.~
-E
-equipment~
-Topic:  Equipment and Inventory Syntax:  InventoryEquipment Description:Inventory lists all the items you are carrying but not wearing.Equipment lists all the items you are wearing or using.~
-E
-wear~
-Topic:  Handling Items [Wearing, Holding, Wielding, Removing] Syntax:  wear <item of clothing or armour>hold <item>wield <weapon>remove <item> Description:Wear - wears a piece of clothing or armorHold - holds an item in your handWield - readys a weapon for combatRemove - removes an item that is held, wielded, or worn.~
-E
-hold~
-Topic:  Handling Items [Wearing, Holding, Wielding, Removing] Syntax:  wear <item of clothing or armour>hold <item>wield <weapon>remove <item> Description:Wear - wears a piece of clothing or armorHold - holds an item in your handWield - readys a weapon for combatRemove - removes an item that is held, wielded, or worn.~
-E
-wield~
-Topic:  Handling Items [Wearing, Holding, Wielding, Removing] Syntax:  wear <item of clothing or armour>hold <item>wield <weapon>remove <item> Description:Wear - wears a piece of clothing or armorHold - holds an item in your handWield - readys a weapon for combatRemove - removes an item that is held, wielded, or worn.~
-E
-take~
-Topic:  Get, Take, Drop, Put, Give Syntax:  <see description below> Description:Syntax: get <item> - picks an item up off the ground.Syntax: get <item> <container> - gets an item from a container.Syntax: take <item> - picks an item up off the ground.Syntax: take <item> <container> - gets an item from a container.Syntax: drop <item> - drops an item from your inventory on the ground.Syntax: put <item> <container> - puts an item inside a container.Syntax: give <item> <person> - gives an item to a person.~
-E
-get~
-Topic:  Get, Take, Drop, Put, Give Syntax:  <see description below> Description:Syntax: get <item> - picks an item up off the ground.Syntax: get <item> <container> - gets an item from a container.Syntax: take <item> - picks an item up off the ground.Syntax: take <item> <container> - gets an item from a container.Syntax: drop <item> - drops an item from your inventory on the ground.Syntax: put <item> <container> - puts an item inside a container.Syntax: give <item> <person> - gives an item to a person.~
-E
-put~
+give~
 Topic:  Get, Take, Drop, Put, Give Syntax:  <see description below> Description:Syntax: get <item> - picks an item up off the ground.Syntax: get <item> <container> - gets an item from a container.Syntax: take <item> - picks an item up off the ground.Syntax: take <item> <container> - gets an item from a container.Syntax: drop <item> - drops an item from your inventory on the ground.Syntax: put <item> <container> - puts an item inside a container.Syntax: give <item> <person> - gives an item to a person.~
 E
 drop~
 Topic:  Get, Take, Drop, Put, Give Syntax:  <see description below> Description:Syntax: get <item> - picks an item up off the ground.Syntax: get <item> <container> - gets an item from a container.Syntax: take <item> - picks an item up off the ground.Syntax: take <item> <container> - gets an item from a container.Syntax: drop <item> - drops an item from your inventory on the ground.Syntax: put <item> <container> - puts an item inside a container.Syntax: give <item> <person> - gives an item to a person.~
 E
-give~
+put~
 Topic:  Get, Take, Drop, Put, Give Syntax:  <see description below> Description:Syntax: get <item> - picks an item up off the ground.Syntax: get <item> <container> - gets an item from a container.Syntax: take <item> - picks an item up off the ground.Syntax: take <item> <container> - gets an item from a container.Syntax: drop <item> - drops an item from your inventory on the ground.Syntax: put <item> <container> - puts an item inside a container.Syntax: give <item> <person> - gives an item to a person.~
+E
+get~
+Topic:  Get, Take, Drop, Put, Give Syntax:  <see description below> Description:Syntax: get <item> - picks an item up off the ground.Syntax: get <item> <container> - gets an item from a container.Syntax: take <item> - picks an item up off the ground.Syntax: take <item> <container> - gets an item from a container.Syntax: drop <item> - drops an item from your inventory on the ground.Syntax: put <item> <container> - puts an item inside a container.Syntax: give <item> <person> - gives an item to a person.~
+E
+take~
+Topic:  Get, Take, Drop, Put, Give Syntax:  <see description below> Description:Syntax: get <item> - picks an item up off the ground.Syntax: get <item> <container> - gets an item from a container.Syntax: take <item> - picks an item up off the ground.Syntax: take <item> <container> - gets an item from a container.Syntax: drop <item> - drops an item from your inventory on the ground.Syntax: put <item> <container> - puts an item inside a container.Syntax: give <item> <person> - gives an item to a person.~
+E
+wield~
+Topic:  Handling Items [Wearing, Holding, Wielding, Removing] Syntax:  wear <item of clothing or armour>hold <item>wield <weapon>remove <item> Description:Wear - wears a piece of clothing or armorHold - holds an item in your handWield - readys a weapon for combatRemove - removes an item that is held, wielded, or worn.~
+E
+hold~
+Topic:  Handling Items [Wearing, Holding, Wielding, Removing] Syntax:  wear <item of clothing or armour>hold <item>wield <weapon>remove <item> Description:Wear - wears a piece of clothing or armorHold - holds an item in your handWield - readys a weapon for combatRemove - removes an item that is held, wielded, or worn.~
+E
+wear~
+Topic:  Handling Items [Wearing, Holding, Wielding, Removing] Syntax:  wear <item of clothing or armour>hold <item>wield <weapon>remove <item> Description:Wear - wears a piece of clothing or armorHold - holds an item in your handWield - readys a weapon for combatRemove - removes an item that is held, wielded, or worn.~
+E
+equipment~
+Topic:  Equipment and Inventory Syntax:  InventoryEquipment Description:Inventory lists all the items you are carrying but not wearing.Equipment lists all the items you are wearing or using.~
+E
+inventory~
+Topic:  Equipment and Inventory Syntax:  InventoryEquipment Description:Inventory lists all the items you are carrying but not wearing.Equipment lists all the items you are wearing or using.~
 D0
 (none)~
 (null)~
@@ -445,13 +445,13 @@ E
 XDUMB1~
 None~
 E
-sell~
+list~
 Topic:  Buying, Selling, and "What do you got" Syntax:  buy <item> <keeper>sell <item> <keeper>list <keeper> (Optional Item Name) Description:Assuming that you're intending to play the game, eventually you'll needto buy from or sell to shops. The buy and sell commands are used toachieve this. To get a list of what the shop has to offer, and some idea of what youcan sell to it, use list and a full list of available items will beshown.~
 E
 buy~
 Topic:  Buying, Selling, and "What do you got" Syntax:  buy <item> <keeper>sell <item> <keeper>list <keeper> (Optional Item Name) Description:Assuming that you're intending to play the game, eventually you'll needto buy from or sell to shops. The buy and sell commands are used toachieve this. To get a list of what the shop has to offer, and some idea of what youcan sell to it, use list and a full list of available items will beshown.~
 E
-list~
+sell~
 Topic:  Buying, Selling, and "What do you got" Syntax:  buy <item> <keeper>sell <item> <keeper>list <keeper> (Optional Item Name) Description:Assuming that you're intending to play the game, eventually you'll needto buy from or sell to shops. The buy and sell commands are used toachieve this. To get a list of what the shop has to offer, and some idea of what youcan sell to it, use list and a full list of available items will beshown.~
 D0
 (none)~
@@ -478,32 +478,32 @@ E
 XDUMB1~
 None~
 E
-combat~
-Topic:  The Combat System Description:Project Twilight uses a combo-based combat system, based loosely on theideas from KaVir's "Gladiator Pits" creation.  The commands can be usedeither individually, in the case of strike moves, or in combinations forgreater effect. See also:  CSTOP  CSTAND  CFLIP  CROLL  CJUMP  LBLOW  RBLOW  LGRAB RGRAB KICK  SKICK  BITE  LBLOCK  RBLOCK  FBLOCK  SPIN  SWEEP PKILLING EMOTE_FIGHTING~
+attributes~
+Topic:  Character Attributes [Mental, Physical, Social] Description:The three attribute types each pertain to a set of dot field valueswhich summarize a character's raw, unlearned statistics.  For deeperlists of each category see the help for the respective categories. See also:  HELP MENTAL; HELP PHYSICAL; HELP SOCIAL; HELP ATTRIBUTES~
 E
-experience~
-Topic:  Experience Description:Experience points must be used for character growth. Thisgrowth can be achieved by either the train or advance commands. Experience gain can be achieved by performing job functions, roleplaying with other players or killing mobs although killing mobs remainsthe least productive of these endeavors.~
+influences~
+See: Help Influences~
 E
-advance~
+backgrounds~
+See: Help Backgrounds~
+E
+gifts~
+Topic:  Werewolf Gifts (previously spiritualities) Syntax:  <see specific gifts> Description:Each totem of the Garou gives the ability to have certain powers.  Atthe current moment, each tribe is assigned a specific totem and thattotem assigns gifts. See also:  HELP POWERS~
+E
+train~
 Topic:  Training and Advancement Syntax:  train <section> <attribute>advance <power>costcalc <attribute/power> Description:Train and advance are your two commands for spending experience to makeyour character grow. Typing "train" or "advance" will show you the listsof statistics and abilities or powers (respectively) that you canimprove. Just typing train will display what can be trained. Costcalcallows you to determine how much an increase will cost.~
 E
 disciplines~
 Topic:  Disciplines; The Powers of the Vampire Description:Vampire powers come in various forms, each category being a discipline.Each clan or bloodline has three disciplines which all of their membershave command of, however a vampire may learn disciplines outside ofthose associated with their lineage. The disciplines currently available are:ANIMALISM, AUSPEX,  CELERITY,  DOMINATE,FORTITUDE, POTENCE, PRESENCE,  PROTEAN,   OBFUSCATE~
 E
-train~
+advance~
 Topic:  Training and Advancement Syntax:  train <section> <attribute>advance <power>costcalc <attribute/power> Description:Train and advance are your two commands for spending experience to makeyour character grow. Typing "train" or "advance" will show you the listsof statistics and abilities or powers (respectively) that you canimprove. Just typing train will display what can be trained. Costcalcallows you to determine how much an increase will cost.~
 E
-gifts~
-Topic:  Werewolf Gifts (previously spiritualities) Syntax:  <see specific gifts> Description:Each totem of the Garou gives the ability to have certain powers.  Atthe current moment, each tribe is assigned a specific totem and thattotem assigns gifts. See also:  HELP POWERS~
+experience~
+Topic:  Experience Description:Experience points must be used for character growth. Thisgrowth can be achieved by either the train or advance commands. Experience gain can be achieved by performing job functions, roleplaying with other players or killing mobs although killing mobs remainsthe least productive of these endeavors.~
 E
-backgrounds~
-See: Help Backgrounds~
-E
-influences~
-See: Help Influences~
-E
-attributes~
-Topic:  Character Attributes [Mental, Physical, Social] Description:The three attribute types each pertain to a set of dot field valueswhich summarize a character's raw, unlearned statistics.  For deeperlists of each category see the help for the respective categories. See also:  HELP MENTAL; HELP PHYSICAL; HELP SOCIAL; HELP ATTRIBUTES~
+combat~
+Topic:  The Combat System Description:Project Twilight uses a combo-based combat system, based loosely on theideas from KaVir's "Gladiator Pits" creation.  The commands can be usedeither individually, in the case of strike moves, or in combinations forgreater effect. See also:  CSTOP  CSTAND  CFLIP  CROLL  CJUMP  LBLOW  RBLOW  LGRAB RGRAB KICK  SKICK  BITE  LBLOCK  RBLOCK  FBLOCK  SPIN  SWEEP PKILLING EMOTE_FIGHTING~
 D0
 (none)~
 (null)~
@@ -525,20 +525,20 @@ E
 XDUMB1~
 None~
 E
-score~
-Topic: Score Syntax: score Description:Score is a character sheet, a listing of vital statistics. Most ofthe essential details of your character are in this one screen, andit's worth keeping an eye on it to see what is changing as youprogress along.~
-E
-concept~
-Topic: Character Concept Syntax: concept <descriptive statement> Description:A character's concept can be virtually anything, but in essence is astatement of what the character sets out to be. Where an archetype isa hook to help define a character, the character's concept fleshes itout somewhat by giving a framework of what the character is about. Eg. "Road warrior", "Urban missionary", etc.~
-E
-nature~
-Topic: Natures, Demeanors and the Archetypes Syntax: nature <archetype>demeanor <archetype> Description:Natures and demeanors are aspects of a character's personality. Thecharacter's nature is their inner personality, which may or may notbe obvious to an observer. A character's demeanor, on the other hand,is what a character appears to be. It should be noted that while acharacter's demeanor can change at whim, the character's nature isrelatively static, requiring some effort at roleplaying to alter. See also: ARCHETYPES~
+description~
+Syntax:  description (no argument) Description:The description of a character is a vital component of yourexperience here at Project Twilight.  It is what others see of you whenyou are here and they look at you.  As such, everyone should make aneffort to have a complete and concise description of their character.This is what people see when they look at you, minus your clothing orequipment. It includes, but is not limited to:* Your demeanor (Calm, Thoughtful,Stable, Meanacing, Shy, Rude, etc)* Your eye color (Blue, Green, Black, Brown, Amber, Cyan, White, Yellow, etc)* Your skin color (pale, brown, white, red, tan, black, etc)* Your facial appearance (plain, ancient, angry, troubled, rugged, gentle, etc)* Hair length (shoulder/waist length, short, shaved, bald, etc)* Your hair style (curly, wavy, kinky, straight, smooth, thin, thick, etc)* Your body build (muscular, thin, lithe, broad, fat, skeletal, average, etc)* Your facial hair (none, goatee, beard, peachfuzz, clean shaven, etc)* Your hair color (black, blonde, red, auburn, dark, grey, raven, bleached, etc) All of these features and more can help you make a complete and accuratedescription of your character.~
 E
 demeanor~
 Topic: Natures, Demeanors and the Archetypes Syntax: nature <archetype>demeanor <archetype> Description:Natures and demeanors are aspects of a character's personality. Thecharacter's nature is their inner personality, which may or may notbe obvious to an observer. A character's demeanor, on the other hand,is what a character appears to be. It should be noted that while acharacter's demeanor can change at whim, the character's nature isrelatively static, requiring some effort at roleplaying to alter. See also: ARCHETYPES~
 E
-description~
-Syntax:  description (no argument) Description:The description of a character is a vital component of yourexperience here at Project Twilight.  It is what others see of you whenyou are here and they look at you.  As such, everyone should make aneffort to have a complete and concise description of their character.This is what people see when they look at you, minus your clothing orequipment. It includes, but is not limited to:* Your demeanor (Calm, Thoughtful,Stable, Meanacing, Shy, Rude, etc)* Your eye color (Blue, Green, Black, Brown, Amber, Cyan, White, Yellow, etc)* Your skin color (pale, brown, white, red, tan, black, etc)* Your facial appearance (plain, ancient, angry, troubled, rugged, gentle, etc)* Hair length (shoulder/waist length, short, shaved, bald, etc)* Your hair style (curly, wavy, kinky, straight, smooth, thin, thick, etc)* Your body build (muscular, thin, lithe, broad, fat, skeletal, average, etc)* Your facial hair (none, goatee, beard, peachfuzz, clean shaven, etc)* Your hair color (black, blonde, red, auburn, dark, grey, raven, bleached, etc) All of these features and more can help you make a complete and accuratedescription of your character.~
+nature~
+Topic: Natures, Demeanors and the Archetypes Syntax: nature <archetype>demeanor <archetype> Description:Natures and demeanors are aspects of a character's personality. Thecharacter's nature is their inner personality, which may or may notbe obvious to an observer. A character's demeanor, on the other hand,is what a character appears to be. It should be noted that while acharacter's demeanor can change at whim, the character's nature isrelatively static, requiring some effort at roleplaying to alter. See also: ARCHETYPES~
+E
+concept~
+Topic: Character Concept Syntax: concept <descriptive statement> Description:A character's concept can be virtually anything, but in essence is astatement of what the character sets out to be. Where an archetype isa hook to help define a character, the character's concept fleshes itout somewhat by giving a framework of what the character is about. Eg. "Road warrior", "Urban missionary", etc.~
+E
+score~
+Topic: Score Syntax: score Description:Score is a character sheet, a listing of vital statistics. Most ofthe essential details of your character are in this one screen, andit's worth keeping an eye on it to see what is changing as youprogress along.~
 D1
 (none)~
 (null)~
@@ -560,17 +560,17 @@ E
 XDUMB1~
 None~
 E
-newbie~
-Topic:  Help for New People Description:Here's a few useful commands we use to function within PT:Directions for moving about: n, s, e, w, u, dShopping: buy <item>, sell <item>, listGetting information about your character: score, abilities, powers, affectsCommunication: say, emote, call, yellObject handling: get, drop, give, wear, removeCombat: cstop, cstand, cflip, croll, cjump, lblow, rblow, lgrab, rgrab,kick, skick, bite, lblock, rblock, fblock, spin, sweepOther useful commands: who, gift, channels, bribe, sneak, steal, eat,drink, feed, quit, save, inventory, equipment If you need assistance, use helpline [message] or > [message] See also:  HELP HELPLINE~
-E
-who~
-Topic: Getting Information About Other Players Syntax: finger <target>whois <target> Description:Both of these commands return the same details at the moment. Whilethe information is similar to that in the who list, the display willevolve over time to encompass more useful details.  ============================================================ Topic: Who's on? Syntax: who [<tribe>/<clan>/<kith>/available/staff] Description:The who command gives a list of who is on, and a small amount ofinformation about the person's character. The list can be sorted bytribe/race/kith, or by which people are members of staff, or by whois available for roleplaying. See also: WHOIS, FINGER~
+note~
+Topic:  Writing a message to others Syntax:  See Below Description:Project Twilight uses a modified note editor, which is based off thebasic Merc 2.2 note editor.  We have however modified it to be based offan OLC editor for greater control over the body of the message. note - read next new note.note list - List all notes in thread.note read [number] - Read specific note in list.note to [list of names/builder/admin] - Start new note/address note to        specified people or group.note subject [string] - Give a subject to a note.note body - Open the string editor to write the body of the note.note show - display the message you're working on.note post - send the message.note remove [number] - remove a note you have posted from the list.bug <message> - reports a bug to the administrator.~
 E
 step~
 Topic: The Step Command Syntax:step - Brings up a list of places you can step to.step <location> - Takes you to that location, so long as it is one ofthe places listed under step. Description:Step is a short cut used to easily navigate to popular places on the MUD. See also: RPJOIN~
 E
-note~
-Topic:  Writing a message to others Syntax:  See Below Description:Project Twilight uses a modified note editor, which is based off thebasic Merc 2.2 note editor.  We have however modified it to be based offan OLC editor for greater control over the body of the message. note - read next new note.note list - List all notes in thread.note read [number] - Read specific note in list.note to [list of names/builder/admin] - Start new note/address note to        specified people or group.note subject [string] - Give a subject to a note.note body - Open the string editor to write the body of the note.note show - display the message you're working on.note post - send the message.note remove [number] - remove a note you have posted from the list.bug <message> - reports a bug to the administrator.~
+who~
+Topic: Getting Information About Other Players Syntax: finger <target>whois <target> Description:Both of these commands return the same details at the moment. Whilethe information is similar to that in the who list, the display willevolve over time to encompass more useful details.  ============================================================ Topic: Who's on? Syntax: who [<tribe>/<clan>/<kith>/available/staff] Description:The who command gives a list of who is on, and a small amount ofinformation about the person's character. The list can be sorted bytribe/race/kith, or by which people are members of staff, or by whois available for roleplaying. See also: WHOIS, FINGER~
+E
+newbie~
+Topic:  Help for New People Description:Here's a few useful commands we use to function within PT:Directions for moving about: n, s, e, w, u, dShopping: buy <item>, sell <item>, listGetting information about your character: score, abilities, powers, affectsCommunication: say, emote, call, yellObject handling: get, drop, give, wear, removeCombat: cstop, cstand, cflip, croll, cjump, lblow, rblow, lgrab, rgrab,kick, skick, bite, lblock, rblock, fblock, spin, sweepOther useful commands: who, gift, channels, bribe, sneak, steal, eat,drink, feed, quit, save, inventory, equipment If you need assistance, use helpline [message] or > [message] See also:  HELP HELPLINE~
 D0
 (none)~
 (null)~
@@ -596,23 +596,23 @@ E
 XDUMB1~
 None~
 E
-races~
-Topic:  The Available Choices of Project Twilight Description:The following races are available in Project Twilight currently: * Humans, also known as Mortals* Werewolves, also known as Garou* Vampires, also known as Kindred* Faeries, also known as Changelings~
-E
-humans~
-Topic:  Humans Description:Historically, humans have proven adept at dealing with supernaturalcreatures, however the Age of Reason and the downfall of superstitionand religion have seen the belief which drove such events as theInquisition largely die away. The human race still stands as an odd mix of allys, enemies andblissfully ignorant bystanders to the dramatic conflicts andmachinations of the supernatural beings in their midst. Whether they berich or poor, pawn or puppeteer, aware or ignorant, humanity remains themost numerous group in the World of Darkness.~
-E
-werewolves~
-Topic:  Werewolves, "The Garou" Description:Winding in the dance of Gaia, the Garou stand as proud defenders of theThe Wyrm's madness drives them on in a desperate struggle to save aworld bent on its own destruction. Is there hope of success in their struggle for survival in these harshtimes of corruption? Perhaps, but the world seems to be on a spiralinwards and downwards. Every garou asks "So when will you Rage?"~
-E
-vampires~
-Topic:  The Vampires, "The Kindred" Description:We are the kindred, the descendants of Caine the outcast. Caine, who wasdamned by God to wander the land feeding on the blood of humanity. Weare the dwellers in darkness, the vampires who live night to nightskulking in the shadows of human civilization. The blood is the life; our existence depends upon our feasts of crimsonnectar. Whether we kill or do not kill is our choice, but we cannotescape the necessity of the draughts we take. The hunger compels us totake, and the hunger cannot be denied for long. Though some of us try,eventually we must be consumed by the hunger and sate our demonicthirsts.~
+delete~
+Syntax: delete Description:Realistically the only true way to destroy a character is to deleteit. There are two conditions under which a character may be deleted,a character may die and the player chooses not to reincarnate it, orthe player may actively delete.~
 E
 faeries~
 Topic:  Faeries, also known as Changelings Description:    We danced in the dawn, in the day, in the night,    We danced in the harvest, in the flood and in the blight.    We danced in the spring and at the mid-summer's height,    And we'll dance 'til the autumn turns to winter's night,    So long as the dream of the dance goes on. The hearts of the changelings long for all the great dreams of mortalhearts.  Love, high adventure, titanic struggles between good and evil,these are the things we crave. To live the dream is our birthright,our calling and the greatest honour, but much as we long to return toArcadia, the dreams which keep us young and light our lives with glamourare had among mortal minds and hearts. Forever torn between the dream and the ones who dream, our hearts remainsplit between the call of our mortal and fae souls.~
 E
-delete~
-Syntax: delete Description:Realistically the only true way to destroy a character is to deleteit. There are two conditions under which a character may be deleted,a character may die and the player chooses not to reincarnate it, orthe player may actively delete.~
+vampires~
+Topic:  The Vampires, "The Kindred" Description:We are the kindred, the descendants of Caine the outcast. Caine, who wasdamned by God to wander the land feeding on the blood of humanity. Weare the dwellers in darkness, the vampires who live night to nightskulking in the shadows of human civilization. The blood is the life; our existence depends upon our feasts of crimsonnectar. Whether we kill or do not kill is our choice, but we cannotescape the necessity of the draughts we take. The hunger compels us totake, and the hunger cannot be denied for long. Though some of us try,eventually we must be consumed by the hunger and sate our demonicthirsts.~
+E
+werewolves~
+Topic:  Werewolves, "The Garou" Description:Winding in the dance of Gaia, the Garou stand as proud defenders of theThe Wyrm's madness drives them on in a desperate struggle to save aworld bent on its own destruction. Is there hope of success in their struggle for survival in these harshtimes of corruption? Perhaps, but the world seems to be on a spiralinwards and downwards. Every garou asks "So when will you Rage?"~
+E
+humans~
+Topic:  Humans Description:Historically, humans have proven adept at dealing with supernaturalcreatures, however the Age of Reason and the downfall of superstitionand religion have seen the belief which drove such events as theInquisition largely die away. The human race still stands as an odd mix of allys, enemies andblissfully ignorant bystanders to the dramatic conflicts andmachinations of the supernatural beings in their midst. Whether they berich or poor, pawn or puppeteer, aware or ignorant, humanity remains themost numerous group in the World of Darkness.~
+E
+races~
+Topic:  The Available Choices of Project Twilight Description:The following races are available in Project Twilight currently: * Humans, also known as Mortals* Werewolves, also known as Garou* Vampires, also known as Kindred* Faeries, also known as Changelings~
 D0
 (none)~
 (null)~
@@ -642,44 +642,44 @@ E
 XDUMB1~
 None~
 E
-humans~
-Topic:  Humans Description:Historically, humans have proven adept at dealing with supernaturalcreatures, however the Age of Reason and the downfall of superstitionand religion have seen the belief which drove such events as theInquisition largely die away. The human race still stands as an odd mix of allys, enemies andblissfully ignorant bystanders to the dramatic conflicts andmachinations of the supernatural beings in their midst. Whether they berich or poor, pawn or puppeteer, aware or ignorant, humanity remains themost numerous group in the World of Darkness.~
-E
-powers~
-Topic: The Powers of the Supernatural Description:Each race (and in some cases sub-groups) have their own sets of powers.In each case the individual group may have access to powers of otherThe vampire powers are called DISCIPLINES. The werewolf powers arecalled SPIRITUALITIES or RITUALS. The faerie powers are called CANTRIPSor BUNKS. The human powers are called NUMINA.~
-E
-vote~
-Topic:  Voting Syntax:  vote <player> <position> Description:Voting is the method by which mortals (and only mortals) are elected tohold positions of office within our fair city.  Anyone can vote forsomeone, and you can only vote once (Sorry, this isn't Chicago).~
-E
-nominate~
-Topic:  Nominating Candidates Syntax:  nominate <player> <position>nominees Description:Nominating is the method by which a mortal can be nominated for aposition of office within our fair city.  Mortals, and only mortals, canbe in city-wide positions. The nominees command will display everyone who is running for thevarious positions.~
-E
-judges~
-Topic:  The Judges Description:The judges are the ones who dispense the justice of the city.  Thepolice are responsible for catching the criminals, but the judges areresponsible for finding them innocent or guilty.  As such, judges haveconsiderable power and are respected people in the community. A good judge should have excellent perceptive capabilities and have anexcellent grasp of the law.~
-E
-alderman~
-Topic:  Alderman in the City Description:Alderman are in charge of running various portions of the city and arein many ways, the council below the mayor. Alderman should have a firm grasp on politics and be expert manipulators~
-E
-mayor~
-Topic:  The Mayor Description:The mayor of the city is the highest ranking city official.  The mayoris responsible for all the goings on and is ultimately responsible tohis citizens, since they are the ones who elect him. The mayor has twovery important roles within the city.  The first one is the mayor canchange the tax rate for all shops in the city and surrounding areas.The second is that he gets to appoint the police chief of the city (andcan also fire him if need be).  Ultimately, the mayor is a veryimportant position. A good mayor should be good in front of the camera, an excellentperformer and excellent charisma.~
-E
-police~
-Topic:  The Police Chief Description:The Police Chief oversees all the police in the city and is answerableonly to the mayor (who can fire him at a whim).  However, the policechief does have considerable powers, being in charge of the policedepartment. The Police chief should have a keen wit and excellent invesigativeabilities.~
-E
-appoint~
-Topic:  Mayoral Appointees Description:The mayor may appoint someone has police chief.~
-E
-numina~
-Topic:  Numina Syntax:  <not finished yet> Description:Numina are the human special abilities and powers, however some humans,such as those unaffiliated with a sub-group, are unable to draw upon anypowers, but some may have access to outside assistance.~
-E
-pentex~
-Topic:  Pentex Description:One of the more unusual organizations, the Pentex corporation is anenvironmentalists' worst nightmare, and therefore the Garou's worstnightmare. So active is Pentex in aiding and abetting the Wyrm'scancerous growth that many individuals within the organization have beentainted directly by its influences. Polluting the world, exterminating species and strip mining ecosystems,Pentex stands as a tangible edifice of the Wyrm's power.~
+society~
+Topic:  The Society of Leopold Description:The Society of Leopold is an ancient order, sworn to the discovery,understanding and destruction of the supernatural evils lurking in theworld. Born from the ashes of the Inquisition, the organization hasevolved into an expansive network of individuals who are, on the whole,bent on the eradication of the vampire and mage populations. Theseknights, monks and scholars have an impressive array of carefully chosenweapons, knowledge and resources which may be brought to play as thesituation presents.~
 E
 fbi~
 Topic: The FBI Description:Humans who join the FBI in Project Twilight are consideredto belong to an agency whose primary function is the upholding of lawand the investigation of suspicious activity. Since the vast majority ofsupernatural activity can be classified as suspicious, it's not a hugestretch to imagine large numbers of these agents exploring strangeoccurrances. The organization from which Project Twilight derives its name is asecret group sponsored by a government bent on uncovering and utilizingsupernatural entities for the "common good". It should be noted thatwhile agents may be members of this organization, the vast majority haveno idea of its existence. (Members of the Project are usually "elders" and therefore if you areinterested in becoming a member you should apply to Dsarky with a fullcharacter background and roleplaying notes.)~
 E
-society~
-Topic:  The Society of Leopold Description:The Society of Leopold is an ancient order, sworn to the discovery,understanding and destruction of the supernatural evils lurking in theworld. Born from the ashes of the Inquisition, the organization hasevolved into an expansive network of individuals who are, on the whole,bent on the eradication of the vampire and mage populations. Theseknights, monks and scholars have an impressive array of carefully chosenweapons, knowledge and resources which may be brought to play as thesituation presents.~
+pentex~
+Topic:  Pentex Description:One of the more unusual organizations, the Pentex corporation is anenvironmentalists' worst nightmare, and therefore the Garou's worstnightmare. So active is Pentex in aiding and abetting the Wyrm'scancerous growth that many individuals within the organization have beentainted directly by its influences. Polluting the world, exterminating species and strip mining ecosystems,Pentex stands as a tangible edifice of the Wyrm's power.~
+E
+numina~
+Topic:  Numina Syntax:  <not finished yet> Description:Numina are the human special abilities and powers, however some humans,such as those unaffiliated with a sub-group, are unable to draw upon anypowers, but some may have access to outside assistance.~
+E
+appoint~
+Topic:  Mayoral Appointees Description:The mayor may appoint someone has police chief.~
+E
+police~
+Topic:  The Police Chief Description:The Police Chief oversees all the police in the city and is answerableonly to the mayor (who can fire him at a whim).  However, the policechief does have considerable powers, being in charge of the policedepartment. The Police chief should have a keen wit and excellent invesigativeabilities.~
+E
+mayor~
+Topic:  The Mayor Description:The mayor of the city is the highest ranking city official.  The mayoris responsible for all the goings on and is ultimately responsible tohis citizens, since they are the ones who elect him. The mayor has twovery important roles within the city.  The first one is the mayor canchange the tax rate for all shops in the city and surrounding areas.The second is that he gets to appoint the police chief of the city (andcan also fire him if need be).  Ultimately, the mayor is a veryimportant position. A good mayor should be good in front of the camera, an excellentperformer and excellent charisma.~
+E
+alderman~
+Topic:  Alderman in the City Description:Alderman are in charge of running various portions of the city and arein many ways, the council below the mayor. Alderman should have a firm grasp on politics and be expert manipulators~
+E
+judges~
+Topic:  The Judges Description:The judges are the ones who dispense the justice of the city.  Thepolice are responsible for catching the criminals, but the judges areresponsible for finding them innocent or guilty.  As such, judges haveconsiderable power and are respected people in the community. A good judge should have excellent perceptive capabilities and have anexcellent grasp of the law.~
+E
+nominate~
+Topic:  Nominating Candidates Syntax:  nominate <player> <position>nominees Description:Nominating is the method by which a mortal can be nominated for aposition of office within our fair city.  Mortals, and only mortals, canbe in city-wide positions. The nominees command will display everyone who is running for thevarious positions.~
+E
+vote~
+Topic:  Voting Syntax:  vote <player> <position> Description:Voting is the method by which mortals (and only mortals) are elected tohold positions of office within our fair city.  Anyone can vote forsomeone, and you can only vote once (Sorry, this isn't Chicago).~
+E
+powers~
+Topic: The Powers of the Supernatural Description:Each race (and in some cases sub-groups) have their own sets of powers.In each case the individual group may have access to powers of otherThe vampire powers are called DISCIPLINES. The werewolf powers arecalled SPIRITUALITIES or RITUALS. The faerie powers are called CANTRIPSor BUNKS. The human powers are called NUMINA.~
+E
+humans~
+Topic:  Humans Description:Historically, humans have proven adept at dealing with supernaturalcreatures, however the Age of Reason and the downfall of superstitionand religion have seen the belief which drove such events as theInquisition largely die away. The human race still stands as an odd mix of allys, enemies andblissfully ignorant bystanders to the dramatic conflicts andmachinations of the supernatural beings in their midst. Whether they berich or poor, pawn or puppeteer, aware or ignorant, humanity remains themost numerous group in the World of Darkness.~
 D0
 (none)~
 (null)~
@@ -715,47 +715,47 @@ E
 XDUMB1~
 You've always known you were a little different, and you still may nottotally realize just how different until the first time it happens to you. When your bones begin to grind and crunch, your muscles and sinews snappingand reforming within your body as if it has a mind of it's own.  Your first{Ctransform{gation can be difficult and even dangerous - but it is one thatyou will most likely never forget.  The raw {Cpower{g urging you to submitto the {Crage{g - both a tool and an enemy.  Then there's the first time yourealize there are others like you - and they show you how to {Cuwalk{gsafely into the {Cumbra{g.  That one day you met your {Ctotem{g was the dayyou gained {Cgift{gs to protect {Cgaia{g.  If everything happens for apurpose what purpose will you serve?  {x ~
 E
-power~
-Topic: The Powers of the Supernatural Description:Each race (and in some cases sub-groups) have their own sets of powers.In each case the individual group may have access to powers of otherThe vampire powers are called DISCIPLINES. The werewolf powers arecalled SPIRITUALITIES or RITUALS. The faerie powers are called CANTRIPSor BUNKS. The human powers are called NUMINA.~
-E
-transform~
-Topic:  Shapechanging Syntax:  Transform <shape> Description:Werewolves, being natural shapechangers, have access to the ability toWerewolves, being natural shapechangers, have access to the ability tochange their shape into several forms. The forms available to werewolves are Human (homid), Crinos and Wolf.In each form the werewolf has their werewolf powers, but also attainsthe benefits and shortcomings of their new form. see also: HELP HOMID; HELP CRINOS; HELP WOLF~
-E
-rage~
-Topic: Rage Description:Rage is the gift of Gaia to her warriors. Perhaps the most powerfulweapon that a Garou has in the physical world, and the bane of theirexistences, Rage is more than anger, it is a the beast personified.Rage is what separates a werewolf from human society and makes humansshie away from them instinctively. Rage allows a Garou to move withincredible speed, and gain supernatural strength, it is also whatallows the transformation to forms other than a Garou's birth form. see also: HELP RAGEMOVE~
-E
-uwalk~
-Topic:  Umbral Walking and the Umbral Plane Syntax:  uwalk Description:The umbra is the spirit realm, also known colloquially as the astralplane, but encompassing much more than what is generally known by thegeneral population. The spirit realm is in many ways a mirror of the real world, butinhabited by all the many spirits of the living, the dead, and theforces of nature. Werewolves, being as deeply connected to the spirit realm as they are,are able to traverse the boundaries of the spirit world with relativeease. This can be accomplished with the uwalk command.~
-E
-umbra~
-Topic:  The Umbra Description:The Umbra is not a single entity, but a conglomeration of worlds, allmade of pure spiritual energy, but divided from the material world by ascreening barrier. Beyond the barrier, the Umbra is influenced by eventsin the material world, however the depth to which these event affect theUmbra depends greatly upon the potence of those events. The Umbra is divided into three major parts, the Penumbra, the NearUmbra and the Deep Umbra.~
-E
-totem~
-Topic:  Totems of the Garou Description:Many of the Garou have totems, or personal spirits which they hold dearto them.  A totem is not just a spirit which guides them, but a way oflife.  Many Garou are very much in tune with their Totems. Some Totems are the Cockroach, Falcon and Rat. See also:  HELP COCKROACH, HELP FALCON, HELP RAT~
-E
-gift~
-Topic: Werewolf Gifts (privously spiritualities) Syntax: <see specific gifts> Description:Each totem of the Garou gives the ability to have certain powers. Atthe current moment, each tribe is assigned a specific totem and thattotem assigns gifts.~
-E
-gaia~
-Topic:  Gaia Description:The earth mother, goddess of nature, and to her Garou followers,existence itself. Gaia is all surrounding, all encompassing and dyingfrom the cancerous growth of her own destructive aspect, the Wyrm. Gaia the mother has three primary aspects:The Wyld, sprit of nature in all its magnificent, free-form beauty,The Weaver, spirit of order and rationality, andThe Wyrm, total entropic destruction. Once in harmonious balance, the Wyrm has become trapped in the Weaver'sloom and gone mad, hurling itself into a frenzy of destruction.~
-E
-tribes~
-Topic:  The Tribes of the Garou Description:The tribes roam the world, passing amongst man and beast, forever setapart from both. Their home is the wild, their hearts are human, thetribe is their only family and their only security. Wherever they may roam, the Garou may find solace and often timessuccour amongst others of their own kind, but the tribe is their home.The tribe will always hold the hearthfires for their kin.~
-E
-werewolves~
-Topic:  Werewolves, "The Garou" Description:Winding in the dance of Gaia, the Garou stand as proud defenders of theThe Wyrm's madness drives them on in a desperate struggle to save aworld bent on its own destruction. Is there hope of success in their struggle for survival in these harshtimes of corruption? Perhaps, but the world seems to be on a spiralinwards and downwards. Every garou asks "So when will you Rage?"~
-E
-bonegnawers~
-Topic:  The Bone Gnawers Description:This urban tribe is tied instinctually to life on the street.  Long ago,they began as scavengers in India and Northern Africa.  Now they stalkwherever the homeless and desperate struggle to survive.~
-E
-glasswalkers~
-Topic:  Glasswalkers Description:For thousands of years, the Walkers hid in human cities, living aswolves among sheep. Other werewolves typically mistrust them, not onlyfor their proficiency with high technology, but also for their love ofhuman cities and culture.~
+silverfangs~
+Topic:  Silver Fangs Description:Once the unquestioned rulers of Garou society, the Fangs are descendedfrom some of the greatest werewolves in history. Lineage and ancestry iscritical to them. Since their glorious days in their Russian homelands,they have fallen prey to tragic flaws, often spiraling into despair andmadness.~
 E
 silentstriders~
 Topic:  Silent Striders Description:Once they dwelt in the fabled lands of Khem in Ancient Egypt, but nolonger. Now they roam the Earth, following an insatiable wanderlust.Striders typically join packs that love to travel, often communing withgypsies, wanderers and the restless spirits of the dead along the way.~
 E
-silverfangs~
-Topic:  Silver Fangs Description:Once the unquestioned rulers of Garou society, the Fangs are descendedfrom some of the greatest werewolves in history. Lineage and ancestry iscritical to them. Since their glorious days in their Russian homelands,they have fallen prey to tragic flaws, often spiraling into despair andmadness.~
+glasswalkers~
+Topic:  Glasswalkers Description:For thousands of years, the Walkers hid in human cities, living aswolves among sheep. Other werewolves typically mistrust them, not onlyfor their proficiency with high technology, but also for their love ofhuman cities and culture.~
+E
+bonegnawers~
+Topic:  The Bone Gnawers Description:This urban tribe is tied instinctually to life on the street.  Long ago,they began as scavengers in India and Northern Africa.  Now they stalkwherever the homeless and desperate struggle to survive.~
+E
+werewolves~
+Topic:  Werewolves, "The Garou" Description:Winding in the dance of Gaia, the Garou stand as proud defenders of theThe Wyrm's madness drives them on in a desperate struggle to save aworld bent on its own destruction. Is there hope of success in their struggle for survival in these harshtimes of corruption? Perhaps, but the world seems to be on a spiralinwards and downwards. Every garou asks "So when will you Rage?"~
+E
+tribes~
+Topic:  The Tribes of the Garou Description:The tribes roam the world, passing amongst man and beast, forever setapart from both. Their home is the wild, their hearts are human, thetribe is their only family and their only security. Wherever they may roam, the Garou may find solace and often timessuccour amongst others of their own kind, but the tribe is their home.The tribe will always hold the hearthfires for their kin.~
+E
+gaia~
+Topic:  Gaia Description:The earth mother, goddess of nature, and to her Garou followers,existence itself. Gaia is all surrounding, all encompassing and dyingfrom the cancerous growth of her own destructive aspect, the Wyrm. Gaia the mother has three primary aspects:The Wyld, sprit of nature in all its magnificent, free-form beauty,The Weaver, spirit of order and rationality, andThe Wyrm, total entropic destruction. Once in harmonious balance, the Wyrm has become trapped in the Weaver'sloom and gone mad, hurling itself into a frenzy of destruction.~
+E
+gift~
+Topic: Werewolf Gifts (privously spiritualities) Syntax: <see specific gifts> Description:Each totem of the Garou gives the ability to have certain powers. Atthe current moment, each tribe is assigned a specific totem and thattotem assigns gifts.~
+E
+totem~
+Topic:  Totems of the Garou Description:Many of the Garou have totems, or personal spirits which they hold dearto them.  A totem is not just a spirit which guides them, but a way oflife.  Many Garou are very much in tune with their Totems. Some Totems are the Cockroach, Falcon and Rat. See also:  HELP COCKROACH, HELP FALCON, HELP RAT~
+E
+umbra~
+Topic:  The Umbra Description:The Umbra is not a single entity, but a conglomeration of worlds, allmade of pure spiritual energy, but divided from the material world by ascreening barrier. Beyond the barrier, the Umbra is influenced by eventsin the material world, however the depth to which these event affect theUmbra depends greatly upon the potence of those events. The Umbra is divided into three major parts, the Penumbra, the NearUmbra and the Deep Umbra.~
+E
+uwalk~
+Topic:  Umbral Walking and the Umbral Plane Syntax:  uwalk Description:The umbra is the spirit realm, also known colloquially as the astralplane, but encompassing much more than what is generally known by thegeneral population. The spirit realm is in many ways a mirror of the real world, butinhabited by all the many spirits of the living, the dead, and theforces of nature. Werewolves, being as deeply connected to the spirit realm as they are,are able to traverse the boundaries of the spirit world with relativeease. This can be accomplished with the uwalk command.~
+E
+rage~
+Topic: Rage Description:Rage is the gift of Gaia to her warriors. Perhaps the most powerfulweapon that a Garou has in the physical world, and the bane of theirexistences, Rage is more than anger, it is a the beast personified.Rage is what separates a werewolf from human society and makes humansshie away from them instinctively. Rage allows a Garou to move withincredible speed, and gain supernatural strength, it is also whatallows the transformation to forms other than a Garou's birth form. see also: HELP RAGEMOVE~
+E
+transform~
+Topic:  Shapechanging Syntax:  Transform <shape> Description:Werewolves, being natural shapechangers, have access to the ability toWerewolves, being natural shapechangers, have access to the ability tochange their shape into several forms. The forms available to werewolves are Human (homid), Crinos and Wolf.In each form the werewolf has their werewolf powers, but also attainsthe benefits and shortcomings of their new form. see also: HELP HOMID; HELP CRINOS; HELP WOLF~
+E
+power~
+Topic: The Powers of the Supernatural Description:Each race (and in some cases sub-groups) have their own sets of powers.In each case the individual group may have access to powers of otherThe vampire powers are called DISCIPLINES. The werewolf powers arecalled SPIRITUALITIES or RITUALS. The faerie powers are called CANTRIPSor BUNKS. The human powers are called NUMINA.~
 D0
 (none)~
 (null)~
@@ -777,41 +777,41 @@ E
 XDUMB1~
 None~
 E
-vampires~
-Topic:  The Vampires, "The Kindred" Description:We are the kindred, the descendants of Caine the outcast. Caine, who wasdamned by God to wander the land feeding on the blood of humanity. Weare the dwellers in darkness, the vampires who live night to nightskulking in the shadows of human civilization. The blood is the life; our existence depends upon our feasts of crimsonnectar. Whether we kill or do not kill is our choice, but we cannotescape the necessity of the draughts we take. The hunger compels us totake, and the hunger cannot be denied for long. Though some of us try,eventually we must be consumed by the hunger and sate our demonicthirsts.~
-E
-blood~
-Topic: Blood Description:Vampires have a rating marking how much blood they have left in theirsystems. This blood is used for keeping the vampire from falling intotorpor and also for fueling many vampire disciplines.~
-E
-disciplines~
-Topic: Disciplines; The Powers of the Vampire Description:Vampire powers come in various forms, each category being a discipline.Each clan or bloodline has three disciplines which all of their membershave command of, however a vampire may learn disciplines outside ofthose associated with their lineage. Bear in mind that the more obvious diciplines will be noticed by thosearound you. The disciplines currently available are:ANIMALISM, AUSPEX, CELERITY, DOMINATE,FORTITUDE, POTENCE, PRESENCE, PROTEAN, OBFUSCATE~
-E
-bloodlines~
-Topic:  The Kindred Bloodlines Description:Each of us is different, but all of us belong to families of the blood.Our bloodlines can be traced in a genealogy reaching back through eonsto the dawn of humanity, even to the cursed one himself. The bloodlines we accept as true lineages number only 13, but some wouldsay that these 13 are but a small representation of our true nature.The bloodlines are part of who we are, but who and what we are cannot beso easily stated. Why we are, only God truly knows. The Bloodlines of Project Twilight are the Brujah, Malkavian, Nosferatu,Toreador and the Ventrue.~
-E
-torpor~
-Topic: Torpor Description:Torpor is the deathlike state into which a vampire may fall if theyrun out of blood. A vampire will also be able to place themselves intotorpor for a time in the future.~
-E
-regeneration~
-Topic:  Regeneration Syntax:  regen Description:The regen command will allow you to heal yourself by spending blood toheal yourself.Being that not only vampires need healing, humans with sufficient faith may heal themselves and others using HEAL. Werewolves on the other hand have it easier, being able to rapidly recover from injuries with a short amount of time.~
-E
-fangs~
-Topic: Fangs Syntax: fang You don't really ever need to expose your fangs in game, but it may be a little bit of a fright factor to help you in a bit of a jam during rp.~
-E
-brujah~
-Topic:  Clan Brujah, "The Rebels" Topic:  Clan Brujah, "The Rebels"Description:Clan Brujah is largely composed of rebels, both with and without causes.Individualistic, outspoken and turbulent, Brujah hold social change nearto their undead hearts, and the clan's ranks contain some of the mostviolent of the Camarilla Kindred.  Most other vampires perceive theBrujah as nothing more than punks and miscreants, but the truth of thematter is that genuine passion lies behind their polemics.~
-E
-malkavian~
-Topic:  Clan Malkavian, "The Kooks" Description:The childer of Malkav bear two curses: undeath and madness.  Fromemotionless sociopaths to raving lunatics and everything in between, theemotionless sociopaths to raving lunatics and everything in between, theMalkavians nonetheless command startling insight.  Does what they knowdrive them to madness or does their insanity allow them too peer into aworld the rest of us fear to see?  Even other Damned fear theMalkavians. The cursed blood of their clan has polluted their minds, with the resultthat every last Malkavian across the world is incurably insane.  What'sworse, a Malkavian's madness can take nearly any form, from overpoweringhomicidal tendencies to near-catatonia.  In many cases, there's no wayto tell a Malkavian apart from the "sane" members of other clans.  Thosefew whose psychoses are immediately obvious are among the mostterrifying vampires to stalk the streets.~
-E
-nosferatu~
-Topic:  Clan Nosferatu, "The Sewer Rats" Description:Of all the Kindred, the Nosferatu most resemble the Beasts they hidewithin.  But the clan is far more than a motley assembly of twistedfreaks.   From their first nights to their modern incarnation asinformants and spies, the Sewer Rats have as many secrets of their ownas they have gathered from other Kindred.  Up from the storm drains andtunnels they scuttle, but whether as ally or foe remains to be seen.~
+ventrue~
+Topic:  Clan Ventrue, "The Bluebloods" Description:Capitalists, aristocrats, crusaders and criminals: The Ventrue haveassumed the prestigious but demanding role of leaders.  Forever in theline of fire, they have sacrificed their own comfort for the good of allKindred.  Or is this all a facade that hides their excesses and greed?The Kindred of Clan Ventrue have a reputation for being honorable,genteel and of impeccable taste.  From time out of mind, Ventrue hasbeen the clan of leadership, enforcing the ancient traditions andseeking to shape the destiny of the Kindred.  In nights of old, Ventruewere chosen from nobles, merchant princes or other wielders of power. In modern times the clan recruits from wealthy "old money" families,ruthless corporate climbers, and politicians.  Whatever their origin,Ventrue vampires preserve stability and maintain order for theCamarilla.  Other Kindred often mistake this for arrogance or avarice,but to the Ventrue, their shepherd's role is more burden than honor.~
 E
 toreador~
 Topic:  Clan Toreador Description:More than just a simple clan of artists, the Toreador helped found theCamarilla and have extensive dealings with the mortal world.  More thanany other Kindred, they feel the damnation of the Embrace, as itextinguishes the flame of creativity for which they long.  But whatpassions inspire the Toreador after they receive the Embrace?  TheToreador are called many things - "degenerates," "artistes," "poseurs"and "hedonists" being but a few.  But any such lumpen categorizationdoes the clan a disservice. Depending on the individual and her mood, Toreador are alternatelyelegant and flamboyant, brilliant and ludicrous, visionary anddissipated.  Perhaps the only truism that can be applied to the clan isits members' aesthetic zeal.  Whatever a Toreador does, she does withpassion.  Whatever a Toreador is, she is with passion.~
 E
-ventrue~
-Topic:  Clan Ventrue, "The Bluebloods" Description:Capitalists, aristocrats, crusaders and criminals: The Ventrue haveassumed the prestigious but demanding role of leaders.  Forever in theline of fire, they have sacrificed their own comfort for the good of allKindred.  Or is this all a facade that hides their excesses and greed?The Kindred of Clan Ventrue have a reputation for being honorable,genteel and of impeccable taste.  From time out of mind, Ventrue hasbeen the clan of leadership, enforcing the ancient traditions andseeking to shape the destiny of the Kindred.  In nights of old, Ventruewere chosen from nobles, merchant princes or other wielders of power. In modern times the clan recruits from wealthy "old money" families,ruthless corporate climbers, and politicians.  Whatever their origin,Ventrue vampires preserve stability and maintain order for theCamarilla.  Other Kindred often mistake this for arrogance or avarice,but to the Ventrue, their shepherd's role is more burden than honor.~
+nosferatu~
+Topic:  Clan Nosferatu, "The Sewer Rats" Description:Of all the Kindred, the Nosferatu most resemble the Beasts they hidewithin.  But the clan is far more than a motley assembly of twistedfreaks.   From their first nights to their modern incarnation asinformants and spies, the Sewer Rats have as many secrets of their ownas they have gathered from other Kindred.  Up from the storm drains andtunnels they scuttle, but whether as ally or foe remains to be seen.~
+E
+malkavian~
+Topic:  Clan Malkavian, "The Kooks" Description:The childer of Malkav bear two curses: undeath and madness.  Fromemotionless sociopaths to raving lunatics and everything in between, theemotionless sociopaths to raving lunatics and everything in between, theMalkavians nonetheless command startling insight.  Does what they knowdrive them to madness or does their insanity allow them too peer into aworld the rest of us fear to see?  Even other Damned fear theMalkavians. The cursed blood of their clan has polluted their minds, with the resultthat every last Malkavian across the world is incurably insane.  What'sworse, a Malkavian's madness can take nearly any form, from overpoweringhomicidal tendencies to near-catatonia.  In many cases, there's no wayto tell a Malkavian apart from the "sane" members of other clans.  Thosefew whose psychoses are immediately obvious are among the mostterrifying vampires to stalk the streets.~
+E
+brujah~
+Topic:  Clan Brujah, "The Rebels" Topic:  Clan Brujah, "The Rebels"Description:Clan Brujah is largely composed of rebels, both with and without causes.Individualistic, outspoken and turbulent, Brujah hold social change nearto their undead hearts, and the clan's ranks contain some of the mostviolent of the Camarilla Kindred.  Most other vampires perceive theBrujah as nothing more than punks and miscreants, but the truth of thematter is that genuine passion lies behind their polemics.~
+E
+fangs~
+Topic: Fangs Syntax: fang You don't really ever need to expose your fangs in game, but it may be a little bit of a fright factor to help you in a bit of a jam during rp.~
+E
+regeneration~
+Topic:  Regeneration Syntax:  regen Description:The regen command will allow you to heal yourself by spending blood toheal yourself.Being that not only vampires need healing, humans with sufficient faith may heal themselves and others using HEAL. Werewolves on the other hand have it easier, being able to rapidly recover from injuries with a short amount of time.~
+E
+torpor~
+Topic: Torpor Description:Torpor is the deathlike state into which a vampire may fall if theyrun out of blood. A vampire will also be able to place themselves intotorpor for a time in the future.~
+E
+bloodlines~
+Topic:  The Kindred Bloodlines Description:Each of us is different, but all of us belong to families of the blood.Our bloodlines can be traced in a genealogy reaching back through eonsto the dawn of humanity, even to the cursed one himself. The bloodlines we accept as true lineages number only 13, but some wouldsay that these 13 are but a small representation of our true nature.The bloodlines are part of who we are, but who and what we are cannot beso easily stated. Why we are, only God truly knows. The Bloodlines of Project Twilight are the Brujah, Malkavian, Nosferatu,Toreador and the Ventrue.~
+E
+disciplines~
+Topic: Disciplines; The Powers of the Vampire Description:Vampire powers come in various forms, each category being a discipline.Each clan or bloodline has three disciplines which all of their membershave command of, however a vampire may learn disciplines outside ofthose associated with their lineage. Bear in mind that the more obvious diciplines will be noticed by thosearound you. The disciplines currently available are:ANIMALISM, AUSPEX, CELERITY, DOMINATE,FORTITUDE, POTENCE, PRESENCE, PROTEAN, OBFUSCATE~
+E
+blood~
+Topic: Blood Description:Vampires have a rating marking how much blood they have left in theirsystems. This blood is used for keeping the vampire from falling intotorpor and also for fueling many vampire disciplines.~
+E
+vampires~
+Topic:  The Vampires, "The Kindred" Description:We are the kindred, the descendants of Caine the outcast. Caine, who wasdamned by God to wander the land feeding on the blood of humanity. Weare the dwellers in darkness, the vampires who live night to nightskulking in the shadows of human civilization. The blood is the life; our existence depends upon our feasts of crimsonnectar. Whether we kill or do not kill is our choice, but we cannotescape the necessity of the draughts we take. The hunger compels us totake, and the hunger cannot be denied for long. Though some of us try,eventually we must be consumed by the hunger and sate our demonicthirsts.~
 D1
 (none)~
 (null)~

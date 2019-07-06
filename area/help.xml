@@ -1698,13 +1698,13 @@
 <keyword>blur~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Topic: Blur
-Syntax: blur
-Description:
-Blur allows a character to hide in the darkness if they are in a room
-where no others can spot them, allowing the character to lurk, waiting
-to snoop on those who enter the room.
-~</Unformatted>
+<Topic>Werewolf Gift: Blur~</Topic>
+<Syntax>blur
+~</Syntax>
+<Desc>Blur allows a character to hide in the darkness if they are in a room
+where no others can spot them, allowing the character to lurk, waiting to
+snoop on those who enter the room.  
+~</Desc>
 </help_object>
 <help_object><level>-1</level>
 <keyword>wrath gaia 'wrath of gaia'~</keyword>
@@ -2420,15 +2420,11 @@
 <keyword>torch flashlight~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Topic: Torches
-Description:
-Because Dsarky is Australian and a lot of our players are from the USA it
-struck us that someone might ask about torches. Torch is defined as a
-light source, typically coming in either the flaming or electric variety.
-An electric torch in the USA is called a flashlight, so if you see the
-word "torch" please recognise that you might be looking at a
-"flashlight".
-~</Unformatted>
+<Topic>Torch/Torches/Flashlights~</Topic>
+<Desc>Our original coder, Dsarky, was Australian.  What Americans call a
+flashlight is called a "Torch" in Australia.  So, if you see the word
+"Torch", it means a flashlight.  
+~</Desc>
 </help_object>
 <help_object><level>-1</level>
 <keyword>heal healing~</keyword>
@@ -2466,11 +2462,9 @@
 <keyword>sexes genders~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Topic: Gender
-Description:
-We have the essential two genders, male and female.
-What else can we say?
-~</Unformatted>
+<Topic>Gender/Sexes~</Topic>
+<Desc>We have the essential two genders, male and female.  It's our game.  
+~</Desc>
 </help_object>
 <help_object><level>1</level>
 <keyword>sedit script~</keyword>
@@ -2794,21 +2788,6 @@
 ~</Desc>
 </help_object>
 <help_object><level>-1</level>
-<keyword>rage~</keyword>
-<race>(null)~</race>
-<clan>(null)~</clan>
-<Unformatted>Topic: Rage
-Description:
-Rage is the gift of Gaia to her warriors. Perhaps the most powerful
-weapon that a Garou has in the physical world, and the bane of their
-existences, Rage is more than anger, it is a the beast personified.
-Rage is what seperates a werewolf from human society and makes humans
-shie away from them instinctively. Rage allows a Garou to move with
-incredible speed, and gain supernatural strength, it is also what
-allows the transformation to forms other than a Garou's birth form.
-~</Unformatted>
-</help_object>
-<help_object><level>-1</level>
 <keyword>diablerist diablerize diablerise diablerie~</keyword>
 <race>Vampire~</race>
 <clan>(null)~</clan>
@@ -2836,11 +2815,10 @@
 <keyword>true faith truefaith~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Topic: Faith
-Description:
-Faith is the measure of a person's belief in a higher power. Faith
-will have many uses, however at this time its usefulness is limited.
-~</Unformatted>
+<Topic>True Faith~</Topic>
+<Desc>Faith is the measure of a person's belief in a higher power.  Faith is
+limited at this time in it's usefulness.  
+~</Desc>
 </help_object>
 <help_object><level>-1</level>
 <keyword>players~</keyword>
@@ -3724,12 +3702,14 @@
 <keyword>spin~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Topic:  Combat Spin
-Syntax:  spin
-Description:
-Spin allows you to gain momentum for a move by spinning in a circle.
-See also:  HELP CSTAND
-~</Unformatted>
+<Topic>Combat Move: Spin~</Topic>
+<Syntax>spin
+~</Syntax>
+<Desc>Spin allows you to gain momentum for a move by spinning in a circle.  
+~</Desc>
+<See>COMBAT
+ CSTAND
+~</See>
 </help_object>
 <help_object><level>0</level>
 <keyword>'society of leopold' leopold society~</keyword>
@@ -4467,12 +4447,19 @@
 <Topic>Rage~</Topic>
 <Syntax>ragemove [command1];[command2];...;[command6]
 ~</Syntax>
-<Desc>Rage is the fuel which all Garou have. It is theer anger at Mother Gaia
-being raped by the Wyrm and Weaver and gives them the strength to fight
-for her.
-Currently, rage is used only for combat, but is planned for other uses.
-It allows a werewolf to execute up to 6 combat moves at the cost of 1
-rage.
+<Desc>Rage is the fuel which all Garou have.  It is there anger at Mother Gaia
+being raped by the Wyrm and Weaver and gives them the strength to fight for
+her.  Currently, rage is used only for combat, but is planned for other
+uses.  It allows a werewolf to execute up to 6 combat moves at the cost of 1
+rage.  
+
+Rage is the gift of Gaia to her warriors.  Perhaps the most powerful weapon
+that a Garou has in the physical world, and the bane of their existences,
+Rage is more than anger, it is a the beast personified.  Rage is what
+seperates a werewolf from human society and makes humans shie away from them
+instinctively.  Rage allows a Garou to move with incredible speed, and gain
+supernatural strength, it is also what allows the transformation to forms
+other than a Garou's birth form.  
 ~</Desc>
 <See>HELP WEREWOLF
 ~</See>
@@ -4708,12 +4695,12 @@
 <keyword>order~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Topic:  Order, Ordering your "friends" around
-Syntax:  order [target] [command]
-Description:
-Given a supplicant under the user's control, the order command may be 
-used to compel the target to perform an action.
-~</Unformatted>
+<Topic>Command: Order~</Topic>
+<Syntax>order [target] [command]
+~</Syntax>
+<Desc>Given a supplicant under the user's control, the order command may be
+used to compel the target to perform an action.  
+~</Desc>
 </help_object>
 <help_object><level>-1</level>
 <keyword>olc edit~</keyword>
@@ -4934,16 +4921,18 @@
 <Web>http://www.brandonsplace.net/projecttwilight/~</Web>
 </help_object>
 <help_object><level>-1</level>
-<keyword>mesmerize~</keyword>
+<keyword>mesmerize mesmerise~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Topic:  Mesmerize
-Syntax:  mesmerize [target] [command]
-Description:
-By the use of mesmerism, the user may extend a greater control over the 
-target than by mere compulsion. The user may impress upon the target to 
-perform a complex action or short series of actions.
-~</Unformatted>
+<Topic>Dominate: Mesmerize~</Topic>
+<Syntax>Mesmerize [target] [command]
+~</Syntax>
+<Desc>By the use of mesmerism, the user may extend a greater control over the
+target than by mere compulsion.  The user may impress upon the target to
+perform a complex action or short series of actions.  
+~</Desc>
+<See>Dominate
+~</See>
 </help_object>
 <help_object><level>-1</level>
 <keyword>merc~</keyword>
@@ -5367,18 +5356,17 @@
     value 4    unused
 ~</Unformatted>
 </help_object>
-<help_object><level>0</level>
+<help_object><level>1</level>
 <keyword>item_liquid~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Topic:  Liquid Item Values
-Description:
-    value 0    capacity
-    value 1    current quantity
-    value 2    liquid type
-    value 3    poisoned?
-    value 4    unused
-~</Unformatted>
+<Topic>OLC: Liquid Item Values~</Topic>
+<Desc>Value 0 - Capacity
+Value 1 - Current Quantity
+Value 2 - Liquid Type
+Value 3 - Poisoned (Yes/No)
+Value 4 - Unused
+~</Desc>
 </help_object>
 <help_object><level>0</level>
 <keyword>investigate research~</keyword>
@@ -5766,45 +5754,34 @@
 ~</Unformatted>
 </help_object>
 <help_object><level>-1</level>
-<keyword>enchant~</keyword>
-<race>(null)~</race>
-<clan>(null)~</clan>
-<Unformatted>Topic:  Enchanting
-Syntax:  enchant [target] [glamour spent]
-Description: 
-Enchant allows you to attempt to enchant another with your 
-presence.  This calms the target and helps them from going into frenzy.
-~</Unformatted>
-</help_object>
-<help_object><level>-1</level>
 <keyword>embraced embracing chrysalis awakening~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>{MTopic: Embrace, Chrysalis, Awakening
+<Unformatted>Topic: Embrace, Chrysalis, Awakening
  
-{MSyntax: embrace [target]
+Syntax: embrace [target]
         chrysalis [target]
         awaken [target]
  
-{MDescription:
+Description:
 Essentally all three commands serve the same purpose, to turn
 an ordinary human character into a supernatural creature. This is
 a little simplistic, but each character which begins as a human
 must go through a transformation to become something more.
  
-{gembrace allows a vampire to kill a mortal character and "resurrect" them
+embrace allows a vampire to kill a mortal character and "resurrect" them
 as kindres. Any vampire may create another, however the power of each
 successive genteration is lowered. It should also be noted that the childe,
 as the new kidred is called, is the responsibility of it's creator as far
 as vampiric society is concerned.
  
-{gchrysalis allows a changling (faerie) to awaken a faerie soul within the
+chrysalis allows a changling (faerie) to awaken a faerie soul within the
 human, thus breathing a new life of enchantment into the newly awakened faerie.
  
-{gawaken allows a werewolf to bring forth the animal yearnings and abilities
+awaken allows a werewolf to bring forth the animal yearnings and abilities
 which lie latent in each person.
  
-{MSee also: CONCEED
+See also: CONCEED
 ~</Unformatted>
 </help_object>
 <help_object><level>-1</level>
@@ -5816,7 +5793,7 @@
 ~</Syntax>
 <Desc>The droll command is useful when a storyteller asks you to make a
 particular roll against something for a plot.  So, for example, if Rayal
-asks you for an acting ability roll, you would type "{Rdroll acting
+asks you for an acting ability roll, you would type "droll acting
 Rayal" and it would send the results to both Rayal and you.
 ~</Desc>
 </help_object>
@@ -5919,18 +5896,17 @@
 <keyword>descriptions describe~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>{MTopic: Describing your Character
+<Unformatted>Topic: Describing your Character
  
-{MSyntax: description
+Syntax: description
  
-{MDescription:
+Description:
 The description of a character is a vital component of your
 experience here at Project Twilight. It is what others see of you when
 you are here and they look at you. As such, everyone should make
 an effort to have a complete and concise description of their character.
  
 It should include, but is not limited to:
-*your demeanor (calm, thoughtful, stable, menacing, shy, rude, etc)
 *your eye color (blue, green, black, brown, amber, cyan, white, yellow, etc)
 *your skin color (pale, brown, white, red, tan, black, etc)
 *your facial appearance (plain, ancient, angry, troubled, rugged, gentle, etc)
@@ -5943,7 +5919,7 @@
 All of these features and more can help you make a complet and accurate
 description of your character.
  
-{MSee also: SWITCHDESC
+See also: SWITCHDESC
 ~</Unformatted>
 </help_object>
 <help_object><level>-1</level>
@@ -5991,13 +5967,12 @@
 <keyword>cstand~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Topic:  Regaining your footing
-Syntax:  cstand
-Description: 
-To rebalance yourself in mid combat, use the cstand 
-command.  This is a pause in your combo, which breaks into it as a pause 
-to regain your balance.
-~</Unformatted>
+<Topic>Combat: Standing~</Topic>
+<Syntax>cstand
+~</Syntax>
+<Desc>To rebalance yourself in mid-combat, use the "cstand" command.  This is a
+pause in your combo, which breaks into it as a pause to regain your balance.
+~</Desc>
 </help_object>
 <help_object><level>0</level>
 <keyword>croll~</keyword>
@@ -6073,17 +6048,6 @@
 ~</See>
 </help_object>
 <help_object><level>-1</level>
-<keyword>mesmerise~</keyword>
-<race>(null)~</race>
-<clan>(null)~</clan>
-<Unformatted>Topic: Mesmerising
-Syntax: mesmerise [target] [action]
-Description:
-Mesmerise allows a character to give a more complete instruction to
-another than is possible by compelling them.
-~</Unformatted>
-</help_object>
-<help_object><level>-1</level>
 <keyword>conditioning~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
@@ -6156,15 +6120,15 @@
 <keyword>combos combination combat fighting kill battle strike attack blow brawling punching~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>{MTopic:  The Combat System
+<Unformatted>Topic:  The Combat System
  
-{MDescription:
+Description:
 Project Twilight uses a combo-based combat system, based loosely on the
 ideas from KaVir's "Gladiator Pits" creation.  The commands can be used
 either individually, in the case of strike moves, or in combinations for
 greater effect.
  
-{MSee also:  CSTOP  CSTAND  CFLIP  CROLL  CJUMP  LBLOW  RBLOW  LGRAB
+See also:  CSTOP  CSTAND  CFLIP  CROLL  CJUMP  LBLOW  RBLOW  LGRAB
 RGRAB KICK  SKICK  BITE  LBLOCK  RBLOCK  FBLOCK  SPIN  SWEEP PKILLING
 EMOTE_FIGHTING SURRENDER
 ~</Unformatted>
@@ -6195,14 +6159,14 @@
 <keyword>colors colours ansi~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>{MTopic: Color, Colour, However You Spell It
+<Unformatted>Topic: Color, Colour, However You Spell It
  
-{MSyntax: color
+Syntax: color
  
-{MDescription:
+Description:
 Turn on the multicolored fun with the new colorfied Project Twilight.
  
-{MSee also: COLORCODES
+See also: COLORCODES
 ~</Unformatted>
 </help_object>
 <help_object><level>-1</level>
@@ -6298,7 +6262,7 @@
 to perform several actions (up to their competence in celerity + 1) in
 the time it takes mundane creatures to perform one.
  
-{RNote: Celerity is still in the early developmental stages
+Note: Celerity is still in the early developmental stages
 ~</Desc>
 <See>DISCIPLINES
 ~</See>
@@ -6321,14 +6285,15 @@
 <keyword>tell replay afk~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>Topic:  Out of Character Distance Communication
-Syntax:  tell [target] [message]
+<Topic>Communication: Out of Character Communication~</Topic>
+<Syntax>tell [target] [message]
 replay
 afk
-Description:
-Well... after fighting tells for the longest time, they're back! If 
-you miss a tell while set afk, you can also "replay" the missed tells
-~</Unformatted>
+~</Syntax>
+<Desc>Tells are a way of communicating out-of-character (OOC) with someone.  If
+you miss a tell while AFK (away from keyboard), you can use the replay
+command to see the missed tells.  
+~</Desc>
 </help_object>
 <help_object><level>-1</level>
 <keyword>call phone phones telephone blip 'mobile phone' 'mobile phones'~</keyword>
@@ -6580,16 +6545,14 @@
 <keyword>alias aliases unalias~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>{MTopic: Aliases
- 
-{MSyntax: alias [alias] [command]
-        unalias [alias]
- 
-{MDescription:
-Aliasing is a method for making a shortcut to a regularly used command.
- 
-{MMaximum aliases:  5
-~</Unformatted>
+<Topic>Alias/Aliases~</Topic>
+<Syntax>alias [alias] [command]
+unalias [alias]
+~</Syntax>
+<Desc>Aliasing is a method for making a shortcut to a regularly-used command.  
+
+Maximum aliases: 5 
+~</Desc>
 </help_object>
 <help_object><level>0</level>
 <keyword>alderman aldermen~</keyword>
@@ -6653,10 +6616,9 @@
 <clan>(null)~</clan>
 <Topic>Staff Listing~</Topic>
 <Desc>Head Coder and Implementor - Rayal
-Retired Implementor - Dsarky
-Head Vampire Storyteller - Rayal
-Head Werewolf Storyteller - [open]
-Head Mortal Storyteller - [open]
+Head Vampire Storyteller   - Rayal
+Head Werewolf Storyteller  - [open]
+Head Mortal Storyteller    - [open]
 Other Staff - [open]
 ~</Desc>
 </help_object>
@@ -6699,30 +6661,28 @@
 <race>(null)~</race>
 <clan>(null)~</clan>
 <Unformatted>Twilight falls...
-                                              The Project Awakens...
+                                               Bal Harbor Awakens...
   .  .  .    .  .     .   . .  .  .  . .   . .  . .   .    .  . .  .
- . . . .  . . .  . .  . .  . .. .  .. . . . . ..  .  . . .  .. .  ..
-.. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. .. ..
-... ... ... ... ... ... ... ... ..|------|. ... ... ... ... ... ... .
-..... ..... |-----|.... ..... ....|      |..... ..... ..... ..... ...
-|---|.|-----|     |..... ..... ...|      |....... ..... ..... ..... .
-|   |.|     |     |------|.....|------|  |........  ..... ..... .....
-|   |-----| |     |     |--------|    |  |....... ..... ..... ..... .
-|   |     | |     |     |        |    |-------|...... ...... ........
-|   |     | |     |     |        |    |       |.... ...... ...... ...
+ . . . .  . .  _   .  . .  . .. .  .. . . . . ..  .  .   |   . .  ..
+.. .. .. .. . | | .. .. .. .. ..           . .. .. ..  --*-- . .. ..
+... ... ...  _| |_  ... ... ... . |------|  ... ... ..   |   .. ... .
+            |^^ ^^| ... ..... ... |      | .... ..... ..    ..... ...
+|---| |-----|[] []|        ...    |      | ...... ..... ..... ..... .
+|   | |     |     |------|     |------|  | .......  ..... ..... .....
+|   |-----| |^^ ^^|     |--------|    |  |      . ..... ..... ..... .
+|   |     | |[] []|     |  .-.   |    |-------| ..... ...... ........
+|   |     | |     |     |  |||   |    |       | ... ...... ...... ...
 ---------------------------------------------------------------------
        Original DikuMUD by Hans Staerfeldt, Katja Nyboe,
        Tom Madsen, Michael Seifert, and Sebastian Hammer
        Based on MERC 2.1 code by Hatchet, Furey, and Kahn
          ROM 2.4 copyright (c) 1993-1996 Russ Taylor
-       Project Twilight is a production of:
-             The Children's Mud-O-Vision Workshop
        The World of Darkness and All related concepts are
               copyrights of White-Wolf Studios.
            Comments: ptrayal@gmail.com
 ---------------------------------------------------------------------
-Project Twilight.
-Please enter Agent Name: ~</Unformatted>
+
+Please enter Character Name: ~</Unformatted>
 </help_object>
 <help_object><level>-1</level>
 <keyword>assamite~</keyword>
@@ -6742,7 +6702,7 @@
 now prominent; but which the other castes in or what their functions, it
 is unknown to all but the Children themselves.
  
-{RClan Disciplines: Celerity, Obfuscate, Quietus
+Clan Disciplines: Celerity, Obfuscate, Quietus
 ~</Desc>
 </help_object>
 <help_object><level>-1</level>
@@ -6937,7 +6897,7 @@
 priest's robe, or are somehow tied to a monastery or similar sanctuary
 of a divine nature.
  
-{RClan Disciplines: Obtenebration, Potence, Dominate
+dfClan Disciplines: Obtenebration, Potence, Dominate
 ~</Desc>
 <See>KINDRED; VAMPIRE; BLOODLINES
 ~</See>
@@ -6962,7 +6922,7 @@
 for - something - else to spring; the entire Clan seems to be intent on
 discovering that something.
  
-{RClan Discipline: Animalism, Auspex, Vicissitude
+Clan Discipline: Animalism, Auspex, Vicissitude
 ~</Desc>
 <See>KINDRED; VAMPIRE; BLOODLINES
 ~</See>
@@ -7125,7 +7085,7 @@
 <Desc>The only Clan to have closer ties to the Gypsies of the world than the Gangrel are those of Clan Ravnos.  They are known as tricksters, who have mastered a Discipline concerning itself solely with illusion. Despite their reputation as irreverant mountebanks and jesters, the Clan is feared by some more than even the dreaded Setites or Tzimisce.  These masters of illusion, primarily of Indian and Gypsy stock, owe allegiance to  themselves first, their clan second, and to no one else at all.
 Certainly the most loosely organized of the unaligned clans, the nomadic Ravnos are scattered across the world. It is well known that, should a Ravnos be publically derided or punished by the rulers of any city, members of Clan Ravnos from all over the region will arrive in force to play as many practical jokes on the offending rulers (and anyone else who gets in the way) as possible, often leaving them completely bereft of anything of value (should the game not get darker and they lose their unlives to a sinister prank).
  
-{RClan Disciplines: Animalism, Chimerstry, Fortitude
+Clan Disciplines: Animalism, Chimerstry, Fortitude
 ~</Desc>
 </help_object>
 <help_object><level>-1</level>
@@ -7199,7 +7159,7 @@
 For more information on emote fighting, it's history and some examples
 from which to learn, please check out:
  
-            {Rhttp://www.get.to/emote-fighting
+            http://www.get.to/emote-fighting
  
 See also: ROLEPLAYING; EMOTE; COMBAT
  
@@ -7867,9 +7827,9 @@
 <keyword>string editor~</keyword>
 <race>(null)~</race>
 <clan>(null)~</clan>
-<Unformatted>{MTopic: The String Editor
+<Unformatted>Topic: The String Editor
  
-{MSyntax:
+Syntax:
 .r 'old' 'new'   - replace a substring
                    (requires '', "")
 .n 'location'    - insert a return after substring.
@@ -7883,7 +7843,7 @@
 @                - end string and exit the editor.
 (All commands go on blank line)
  
-{MDescription:
+Description:
 By now, if you've set your description, written a note, or done any one
 of a number of other things writing strings, you've probably had to face
 the string editor. It really isn't as bad as it looks, you just have to
@@ -8018,8 +7978,7 @@
 <Topic>Wrapping Items~</Topic>
 <Syntax>wrap [item name] 
 ~</Syntax>
-<Desc>{D,
-The basic functions of wrapping and unwrapping items are in themselves
+<Desc>The basic functions of wrapping and unwrapping items are in themselves
 quite obvious, the real fun comes in what you do with them in between
 the item being wrapped and unwrapped.  Try wrapping something today!
 ~</Desc>
@@ -8033,8 +7992,7 @@
 <Topic>Unwrapping Packages~</Topic>
 <Syntax>unwrap package
 ~</Syntax>
-<Desc>,
-The basic functions of wrapping and unwrapping items are in themselves
+<Desc>The basic functions of wrapping and unwrapping items are in themselves
 quite obvious, the real fun comes in what you do with them in between
 the item being wrapped and unwrapped.  Try wrapping something today!
 ~</Desc>
@@ -8049,7 +8007,7 @@
 <Syntax>trade [buy/sell] [# of shares] [company]
 ~</Syntax>
 <Desc>The trade command can be used at a bank where you can buy and sell
-stocks or using {rEconomic influence.  It allows you to buy stocks in
+stocks or using Economic influence.  It allows you to buy stocks in
 any company currently being traded if you have the cash.
 ~</Desc>
 <See>HELP 'ECONOMIC INFLUENCE', HELP MARKET
@@ -8093,7 +8051,7 @@
 <Topic>Criminal Influence Action: Racketeering~</Topic>
 <Syntax>influence racketeer
 ~</Syntax>
-<Desc>Racketeering is a good way to make money with {rCriminal influence.
+<Desc>Racketeering is a good way to make money with Criminal influence.
 However, a good racketeer requires knowledge of the streets and the
 ability to manipulate people well.  It's very lucrative to do, but
 messing up can see your influence drop.
@@ -8119,25 +8077,25 @@
 <Topic>The Six Traditions of the Camarilla~</Topic>
 <Desc>These are the six Traditions of the Camarilla, which all must abide
 by.
-First Tradition - {RThe Masquerade
+First Tradition - The Masquerade
    "Thou shalt not reveal thy nature to those not of the Blood.  Doing
 so shall renounce thy claims of Blood."
-Second Tradition - {RThe Domain
+Second Tradition - The Domain
    "Thy domain is thine own concern. All others owe thee respect while
 in it. None may challenge thy word while in thy domain."
-Third Tradition - {RThe Progeny
+Third Tradition - The Progeny
    "Thou shall sire another only with the permission of thine elder. If
 thou createst another without thine elder's leave, both thee and thy
 progeny shall be slain.
-Fourth Tradition - {RThe Accounting
+Fourth Tradition - The Accounting
    "Those thou create are thine own childer. Until thy progeny shall be
 released, thou shall command them in all things. Their sins are thine to
 endure.
-Fifth Tradition - {RHospitality
+Fifth Tradition - Hospitality
    "Honor one another's domain. When thou comest to a foreign city, thou
 shall present thyself to the one who ruleth there. Without the word of
 acceptance, thou art nothing."
-Sixth Tradition - {RDestruction
+Sixth Tradition - Destruction
    "Thou art forbidden to destroy another of thy kind. The right of
 destruction belongeth only to thine elder. Only the eldest among thee
 shall call the blood hunt."
