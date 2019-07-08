@@ -1833,9 +1833,7 @@ bool check_ban(char *site,int type)
 
 void ban_site(CHAR_DATA *ch, char *argument, bool fPerm)
 {
-	BUFFER *buffer;
 	BAN_DATA *pban, *prev;
-	char buf2[MSL]={'\0'};
 	char arg1[MIL]={'\0'};
 	char arg2[MIL]={'\0'};
 	char *name;
@@ -1847,6 +1845,8 @@ void ban_site(CHAR_DATA *ch, char *argument, bool fPerm)
 
 	if ( IS_NULLSTR(arg1) )
 	{
+		BUFFER *buffer;
+
 		if (ban_list == NULL)
 		{
 			send_to_char("No sites banned at this time.\n\r",ch);
@@ -1857,6 +1857,8 @@ void ban_site(CHAR_DATA *ch, char *argument, bool fPerm)
 		add_buf(buffer,"Banned sites  level  type     status\n\r");
 		for (pban = ban_list;pban != NULL;pban = pban->next)
 		{
+			char buf2[MSL]={'\0'};
+
 			snprintf(buf2, sizeof(buf2), "%s%s%s",
 				IS_SET(pban->ban_flags,BAN_PREFIX) ? "*" : "", pban->name, IS_SET(pban->ban_flags,BAN_SUFFIX) ? "*" : "");
 			add_buf(buffer, (char *)Format("%-12s    %-3d  %-7s  %s\n\r",

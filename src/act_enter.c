@@ -532,7 +532,6 @@ void do_smash(CHAR_DATA *ch, char *argument)
 void do_reject( CHAR_DATA *ch, char *argument )
 {
 	char name[MSL]={'\0'};
-	char buf[MSL]={'\0'};
 
 	CheckCH(ch);
 
@@ -565,7 +564,8 @@ void do_reject( CHAR_DATA *ch, char *argument )
     }
     else
     {
-        buf[0] = '\0';
+		char buf[MSL]={'\0'};
+
         if ( strstr( ch->pcdata->ignore_reject, "None" ) != NULL )
         {
             ch->pcdata->ignore_reject = string_replace(
@@ -594,7 +594,6 @@ void do_reject( CHAR_DATA *ch, char *argument )
 void do_block( CHAR_DATA *ch, char *argument )
 {
     char name[MSL]={'\0'};
-    char buf[MSL]={'\0'};
 
     CheckCH(ch);
 
@@ -627,7 +626,7 @@ void do_block( CHAR_DATA *ch, char *argument )
     }
     else
     {
-        buf[0] = '\0';
+	    char buf[MSL]={'\0'};
         if ( strstr( ch->pcdata->block_join, "None" ) != NULL )
         {
             ch->pcdata->block_join = string_replace(
@@ -657,7 +656,6 @@ void do_apply(CHAR_DATA *ch, char *argument)
 {
 	ORG_DATA *org;
 	ORGMEM_DATA *mem;
-	char buf[MSL]={'\0'};
 	CHAR_DATA *vch;
 	DESCRIPTOR_DATA *d;
 
@@ -730,7 +728,7 @@ void do_apply(CHAR_DATA *ch, char *argument)
 	}
 	else
 	{
-		buf[0] = '\0';
+		char buf[MSL]={'\0'};
 		if ( strstr(org->applicants, "None") != NULL )
 		{
 			org->applicants = string_replace( org->applicants, "None", "\0" );
