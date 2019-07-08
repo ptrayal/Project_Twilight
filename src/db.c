@@ -745,7 +745,6 @@ void new_load_area( FILE *fp )
 {
 	AREA_DATA *pArea;
 	const char      *word;
-	bool      fMatch;
 
 	pArea = new_area();
 	pArea->age          = 15;
@@ -768,7 +767,7 @@ void new_load_area( FILE *fp )
 	for ( ; ; )
 	{
 		word   = feof( fp ) ? "End" : fread_word( fp );
-		fMatch = FALSE;
+		bool fMatch = FALSE;
 
 		switch ( UPPER(word[0]) )
 		{

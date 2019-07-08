@@ -1419,7 +1419,6 @@ void do_vnum(CHAR_DATA *ch, char *argument)
  */
 void do_mfind(CHAR_DATA *ch, char *argument)
 {
-    extern int top_mob_index;
     extern int newmobs;
     MOB_INDEX_DATA      *pMobIndex;
     BUFFER              *buf1;

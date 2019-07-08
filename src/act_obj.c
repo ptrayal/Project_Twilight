@@ -552,7 +552,6 @@ void do_drop( CHAR_DATA *ch, char *argument )
     char arg[MIL]={'\0'};
     OBJ_DATA *obj;
     OBJ_DATA *obj_next;
-    bool found;
 
     CheckCH(ch);
 
@@ -566,145 +565,145 @@ void do_drop( CHAR_DATA *ch, char *argument )
 
     if ( is_number( arg ) )
     {
-    /* 'drop NNNN coins' */
-    int amount, dollars = 0, cents = 0;
+        /* 'drop NNNN coins' */
+        int amount, dollars = 0, cents = 0;
 
-    amount   = atoi(arg);
-    argument = one_argument( argument, arg );
-    if ( amount <= 0
-    || ( str_cmp( arg, "coins" ) && str_cmp( arg, "coin" ) && 
-         str_cmp( arg, "dollars"  ) && str_cmp( arg, "cents") ) )
-    {
-        send_to_char( "Sorry, you can't do that.\n\r", ch );
-        return;
-    }
-
-    if ( !str_cmp( arg, "coins") || !str_cmp(arg,"coin") 
-    ||   !str_cmp( arg, "cents"))
-    {
-        if (ch->cents < amount)
+        amount   = atoi(arg);
+        argument = one_argument( argument, arg );
+        if ( amount <= 0
+            || ( str_cmp( arg, "coins" ) && str_cmp( arg, "coin" ) && 
+               str_cmp( arg, "dollars"  ) && str_cmp( arg, "cents") ) )
         {
-        send_to_char("You don't have that much change.\n\r",ch);
-        return;
+            send_to_char( "Sorry, you can't do that.\n\r", ch );
+            return;
         }
 
-        ch->cents -= amount;
-        cents = amount;
-    }
-
-    else
-    {
-        if (ch->dollars < amount)
+        if ( !str_cmp( arg, "coins") || !str_cmp(arg,"coin") 
+            ||   !str_cmp( arg, "cents"))
         {
-        send_to_char("You don't have that many dollars.\n\r",ch);
+            if (ch->cents < amount)
+            {
+                send_to_char("You don't have that much change.\n\r",ch);
+                return;
+            }
+
+            ch->cents -= amount;
+            cents = amount;
+        }
+
+        else
+        {
+            if (ch->dollars < amount)
+            {
+                send_to_char("You don't have that many dollars.\n\r",ch);
+                return;
+            }
+
+            ch->dollars -= amount;
+            dollars = amount;
+        }
+
+        for ( obj = ch->in_room->contents; obj != NULL; obj = obj_next )
+        {
+            obj_next = obj->next_content;
+
+            switch ( obj->pIndexData->vnum )
+            {
+                case OBJ_VNUM_CENT_ONE:
+                cents += 1;
+                extract_obj(obj);
+                break;
+
+                case OBJ_VNUM_DOLLAR_ONE:
+                dollars += 1;
+                cents += 0;
+                extract_obj( obj );
+                break;
+
+                case OBJ_VNUM_CENTS_SOME:
+                cents += obj->value[0];
+                extract_obj(obj);
+                break;
+
+                case OBJ_VNUM_DOLLARS_SOME:
+                dollars += obj->value[1];
+                extract_obj( obj );
+                break;
+
+                case OBJ_VNUM_COINS:
+                cents += obj->value[0];
+                dollars += obj->value[1];
+                extract_obj(obj);
+                break;
+            }
+        }
+
+        obj_to_room( create_money( dollars, cents ), ch->in_room );
+        act( "$n drops some cash.", ch, NULL, NULL, TO_ROOM, 0 );
+        send_to_char( "OK.\n\r", ch );
         return;
-        }
-
-        ch->dollars -= amount;
-        dollars = amount;
-    }
-
-    for ( obj = ch->in_room->contents; obj != NULL; obj = obj_next )
-    {
-        obj_next = obj->next_content;
-
-        switch ( obj->pIndexData->vnum )
-        {
-        case OBJ_VNUM_CENT_ONE:
-        cents += 1;
-        extract_obj(obj);
-        break;
-
-        case OBJ_VNUM_DOLLAR_ONE:
-        dollars += 1;
-        cents += 0;
-        extract_obj( obj );
-        break;
-
-        case OBJ_VNUM_CENTS_SOME:
-        cents += obj->value[0];
-        extract_obj(obj);
-        break;
-
-        case OBJ_VNUM_DOLLARS_SOME:
-        dollars += obj->value[1];
-        extract_obj( obj );
-        break;
-
-        case OBJ_VNUM_COINS:
-        cents += obj->value[0];
-        dollars += obj->value[1];
-        extract_obj(obj);
-        break;
-        }
-    }
-
-    obj_to_room( create_money( dollars, cents ), ch->in_room );
-    act( "$n drops some cash.", ch, NULL, NULL, TO_ROOM, 0 );
-    send_to_char( "OK.\n\r", ch );
-    return;
     }
 
     if ( str_cmp( arg, "all" ) && str_prefix( "all.", arg ) )
     {
     /* 'drop obj' */
-    if ( ( obj = get_obj_carry( ch, arg, ch ) ) == NULL )
-    {
-        send_to_char( "You do not have that item.\n\r", ch );
-        return;
-    }
-
-    if ( !can_drop_obj( ch, obj ) )
-    {
-        send_to_char( "You can't let go of it.\n\r", ch );
-        return;
-    }
-
-    obj_from_char( obj );
-    obj_to_room( obj, ch->in_room );
-    act( "$n drops $p.", ch, obj, NULL, TO_ROOM, 0 );
-    act( "You drop $p.", ch, obj, NULL, TO_CHAR, 0 );
-    if (IS_OBJ_STAT(obj,ITEM_MELT_DROP))
-    {
-        act("$p dissolves into smoke.",ch,obj,NULL,TO_ROOM,0);
-        act("$p dissolves into smoke.",ch,obj,NULL,TO_CHAR,0);
-        extract_obj(obj);
-    }
-    }
-    else
-    {
-    /* 'drop all' or 'drop all.obj' */
-    found = FALSE;
-    for ( obj = ch->carrying; obj != NULL; obj = obj_next )
-    {
-        obj_next = obj->next_content;
-
-        if ( ( arg[3] == '\0' || is_name( &arg[4], obj->name ) )
-        &&   can_see_obj( ch, obj )
-        &&   obj->wear_loc == WEAR_NONE
-        &&   can_drop_obj( ch, obj ) )
+        if ( ( obj = get_obj_carry( ch, arg, ch ) ) == NULL )
         {
-        found = TRUE;
+            send_to_char( "You do not have that item.\n\r", ch );
+            return;
+        }
+
+        if ( !can_drop_obj( ch, obj ) )
+        {
+            send_to_char( "You can't let go of it.\n\r", ch );
+            return;
+        }
+
         obj_from_char( obj );
         obj_to_room( obj, ch->in_room );
         act( "$n drops $p.", ch, obj, NULL, TO_ROOM, 0 );
         act( "You drop $p.", ch, obj, NULL, TO_CHAR, 0 );
-            if (IS_OBJ_STAT(obj,ITEM_MELT_DROP))
+        if (IS_OBJ_STAT(obj,ITEM_MELT_DROP))
+        {
+            act("$p dissolves into smoke.",ch,obj,NULL,TO_ROOM,0);
+            act("$p dissolves into smoke.",ch,obj,NULL,TO_CHAR,0);
+            extract_obj(obj);
+        }
+    }
+    else
+    {
+    /* 'drop all' or 'drop all.obj' */
+        bool found = FALSE;
+        for ( obj = ch->carrying; obj != NULL; obj = obj_next )
+        {
+            obj_next = obj->next_content;
+
+            if ( ( arg[3] == '\0' || is_name( &arg[4], obj->name ) )
+                &&   can_see_obj( ch, obj )
+                &&   obj->wear_loc == WEAR_NONE
+                &&   can_drop_obj( ch, obj ) )
             {
+                found = TRUE;
+                obj_from_char( obj );
+                obj_to_room( obj, ch->in_room );
+                act( "$n drops $p.", ch, obj, NULL, TO_ROOM, 0 );
+                act( "You drop $p.", ch, obj, NULL, TO_CHAR, 0 );
+                if (IS_OBJ_STAT(obj,ITEM_MELT_DROP))
+                {
                     act("$p dissolves into smoke.",ch,obj,NULL,TO_ROOM,0);
                     act("$p dissolves into smoke.",ch,obj,NULL,TO_CHAR,0);
                     extract_obj(obj);
+                }
             }
         }
-    }
 
-    if ( !found )
-    {
-        if ( arg[3] == '\0' )
-        act( "You are not carrying anything.", ch, NULL, arg, TO_CHAR, 0 );
-        else
-        act( "You are not carrying any $T.", ch, NULL, &arg[4], TO_CHAR, 0 );
-    }
+        if ( !found )
+        {
+            if ( arg[3] == '\0' )
+                act( "You are not carrying anything.", ch, NULL, arg, TO_CHAR, 0 );
+            else
+                act( "You are not carrying any $T.", ch, NULL, &arg[4], TO_CHAR, 0 );
+        }
     }
 
     return;
@@ -964,74 +963,74 @@ void do_envenom(CHAR_DATA *ch, char *argument)
 {
     OBJ_DATA *obj;
     AFFECT_DATA af;
-    int percent = 0,skill = 0;
+    int skill = 0;
 
     CheckCH(ch);
 
     /* find out what */
     if (IS_NULLSTR(argument))
     {
-    send_to_char("Envenom what item?\n\r",ch);
-    return;
+        send_to_char("Envenom what item?\n\r",ch);
+        return;
     }
 
     obj =  get_obj_list(ch,argument,ch->carrying);
 
     if (obj== NULL)
     {
-    send_to_char("You don't have that item.\n\r",ch);
-    return;
+        send_to_char("You don't have that item.\n\r",ch);
+        return;
     }
 
     if ((skill = get_skill(ch,gsn_envenom)) < 1)
     {
-    send_to_char("Are you crazy? You'd poison yourself!\n\r",ch);
-    return;
+        send_to_char("Are you crazy? You'd poison yourself!\n\r",ch);
+        return;
     }
 
     if (obj->item_type == ITEM_FOOD || obj->item_type == ITEM_DRINK_CON)
     {
-    if (IS_OBJ_STAT(obj,ITEM_BLESS) || IS_OBJ_STAT(obj,ITEM_BURN_PROOF))
-    {
-        act("You fail to poison $p.",ch,obj,NULL,TO_CHAR, 0);
-        return;
-    }
+        if (IS_OBJ_STAT(obj,ITEM_BLESS) || IS_OBJ_STAT(obj,ITEM_BURN_PROOF))
+        {
+            act("You fail to poison $p.",ch,obj,NULL,TO_CHAR, 0);
+            return;
+        }
 
     if (number_percent() < skill)  /* success! */
-    {
-        act("$n treats $p with deadly poison.",ch,obj,NULL,TO_ROOM, 0);
-        act("You treat $p with deadly poison.",ch,obj,NULL,TO_CHAR, 0);
-        if (!obj->value[3])
         {
-        obj->value[3] = 1;
+            act("$n treats $p with deadly poison.",ch,obj,NULL,TO_ROOM, 0);
+            act("You treat $p with deadly poison.",ch,obj,NULL,TO_CHAR, 0);
+            if (!obj->value[3])
+            {
+                obj->value[3] = 1;
+            }
+            WAIT_STATE(ch,skill_table[gsn_envenom].beats);
+            return;
         }
+
+        act("You fail to poison $p.",ch,obj,NULL,TO_CHAR, 0);
         WAIT_STATE(ch,skill_table[gsn_envenom].beats);
         return;
     }
 
-    act("You fail to poison $p.",ch,obj,NULL,TO_CHAR, 0);
-    WAIT_STATE(ch,skill_table[gsn_envenom].beats);
-    return;
-     }
-
     if (obj->item_type == ITEM_WEAPON)
     {
         if (IS_WEAPON_STAT(obj,WEAPON_FLAMING)
-        ||  IS_WEAPON_STAT(obj,WEAPON_FROST)
-        ||  IS_WEAPON_STAT(obj,WEAPON_VAMPIRIC)
-        ||  IS_WEAPON_STAT(obj,WEAPON_SHOCKING)
-        ||  IS_OBJ_STAT(obj,ITEM_BLESS) || IS_OBJ_STAT(obj,ITEM_BURN_PROOF))
+            ||  IS_WEAPON_STAT(obj,WEAPON_FROST)
+            ||  IS_WEAPON_STAT(obj,WEAPON_VAMPIRIC)
+            ||  IS_WEAPON_STAT(obj,WEAPON_SHOCKING)
+            ||  IS_OBJ_STAT(obj,ITEM_BLESS) || IS_OBJ_STAT(obj,ITEM_BURN_PROOF))
         {
             act("You can't seem to envenom $p.",ch,obj,NULL,TO_CHAR, 0);
             return;
         }
 
-    if (obj->value[3] < 0 
-    ||  attack_table[obj->value[3]].damage == DAM_BASH)
-    {
-        send_to_char("You can only envenom edged weapons.\n\r",ch);
-        return;
-    }
+        if (obj->value[3] < 0 
+            ||  attack_table[obj->value[3]].damage == DAM_BASH)
+        {
+            send_to_char("You can only envenom edged weapons.\n\r",ch);
+            return;
+        }
 
         if (IS_WEAPON_STAT(obj,WEAPON_POISON))
         {
@@ -1039,10 +1038,11 @@ void do_envenom(CHAR_DATA *ch, char *argument)
             return;
         }
 
-    percent = number_percent();
-    if (percent < skill)
-    {
- 
+        int percent = 0;
+        percent = number_percent();
+        if (percent < skill)
+        {
+
             af.where     = TO_WEAPON;
             af.type      = gsn_poison;
             af.level     = ch->trust * percent / 100;
@@ -1051,18 +1051,18 @@ void do_envenom(CHAR_DATA *ch, char *argument)
             af.modifier  = 0;
             af.bitvector = WEAPON_POISON;
             affect_to_obj(obj,&af);
- 
+
             act("$n coats $p with deadly venom.",ch,obj,NULL,TO_ROOM, 0);
-        act("You coat $p with venom.",ch,obj,NULL,TO_CHAR, 0);
-        WAIT_STATE(ch,skill_table[gsn_envenom].beats);
+            act("You coat $p with venom.",ch,obj,NULL,TO_CHAR, 0);
+            WAIT_STATE(ch,skill_table[gsn_envenom].beats);
             return;
         }
-    else
-    {
-        act("You fail to envenom $p.",ch,obj,NULL,TO_CHAR, 0);
-        WAIT_STATE(ch,skill_table[gsn_envenom].beats);
-        return;
-    }
+        else
+        {
+            act("You fail to envenom $p.",ch,obj,NULL,TO_CHAR, 0);
+            WAIT_STATE(ch,skill_table[gsn_envenom].beats);
+            return;
+        }
     }
 
     act("You can't poison $p.",ch,obj,NULL,TO_CHAR, 0);

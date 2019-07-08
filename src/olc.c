@@ -1426,39 +1426,39 @@ void hedit( CHAR_DATA *ch, char *argument, int type )
 
 	if ( !str_cmp(command, "done") )
 	{
-	edit_done( ch );
-	return;
+		edit_done( ch );
+		return;
 	}
 
 	if ( IS_NULLSTR(command) )
 	{
-	hedit_show( ch, argument );
-	send_to_char("\tOType 'done' to exit the editor.\tn\n\r", ch);
-	return;
+		hedit_show( ch, argument );
+		send_to_char("\tOType 'done' to exit the editor.\tn\n\r", ch);
+		return;
 	}
 
 	/* Search Table and Dispatch Command. */
 	if(!type)
 	{
-	  for ( cmd = 0; hedit_table[cmd].name != NULL; cmd++ )
-	  {
-	if ( !str_prefix( command, hedit_table[cmd].name ) )
-	{
-		if ( (*hedit_table[cmd].olc_fun) ( ch, argument ) )
-		return;
-	}
-	  }
+		for ( cmd = 0; hedit_table[cmd].name != NULL; cmd++ )
+		{
+			if ( !str_prefix( command, hedit_table[cmd].name ) )
+			{
+				if ( (*hedit_table[cmd].olc_fun) ( ch, argument ) )
+					return;
+			}
+		}
 	}
 	else
 	{
-	  for ( cmd = 0; tipedit_table[cmd].name != NULL; cmd++ )
-	  {
-	if ( !str_prefix( command, tipedit_table[cmd].name ) )
-	{
-		if ( (*tipedit_table[cmd].olc_fun) ( ch, argument ) )
-		return;
-	}
-	  }
+		for ( cmd = 0; tipedit_table[cmd].name != NULL; cmd++ )
+		{
+			if ( !str_prefix( command, tipedit_table[cmd].name ) )
+			{
+				if ( (*tipedit_table[cmd].olc_fun) ( ch, argument ) )
+					return;
+			}
+		}
 	}
 
 	/* Default to Standard Interpreter. */
@@ -1482,26 +1482,26 @@ void kbedit( CHAR_DATA *ch, char *argument, int type )
 
 	if ( !str_cmp(command, "done") )
 	{
-	edit_done( ch );
-	save_notes(type);
-	return;
+		edit_done( ch );
+		save_notes(type);
+		return;
 	}
 
 	if ( IS_NULLSTR(command) )
 	{
-	kbedit_show( ch, argument );
-	send_to_char("\tOType 'done' to exit the editor.\tn\n\r", ch);
-	return;
+		kbedit_show( ch, argument );
+		send_to_char("\tOType 'done' to exit the editor.\tn\n\r", ch);
+		return;
 	}
 
 	/* Search Table and Dispatch Command. */
 	for ( cmd = 0; kbedit_table[cmd].name != NULL; cmd++ )
 	{
-	if ( !str_prefix( command, kbedit_table[cmd].name ) )
-	{
-		if ( (*kbedit_table[cmd].olc_fun) ( ch, argument ) )
-		return;
-	}
+		if ( !str_prefix( command, kbedit_table[cmd].name ) )
+		{
+			if ( (*kbedit_table[cmd].olc_fun) ( ch, argument ) )
+				return;
+		}
 	}
 
 	/* Default to Standard Interpreter. */

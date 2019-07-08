@@ -3683,34 +3683,33 @@ OEDIT( oedit_ed )
 	return TRUE;
     }
 
-
     if ( !str_cmp( command, "format" ) )
     {
-	EXTRA_DESCR_DATA *ped = NULL;
 
-	if ( IS_NULLSTR(keyword) )
-	{
-	    send_to_char( "Syntax:  ed format [keyword]\n\r", ch );
-	    return FALSE;
-	}
+    	if ( IS_NULLSTR(keyword) )
+    	{
+    		send_to_char( "Syntax:  ed format [keyword]\n\r", ch );
+    		return FALSE;
+    	}
 
-	for ( ed = pObj->extra_descr; ed; ed = ed->next )
-	{
-	    if ( is_name( keyword, ed->keyword ) )
-		break;
-	    ped = ed;
-	}
+    	for ( ed = pObj->extra_descr; ed; ed = ed->next )
+    	{
+			EXTRA_DESCR_DATA *ped = NULL;
+    		if ( is_name( keyword, ed->keyword ) )
+    			break;
+    		ped = ed;
+    	}
 
-	if ( !ed )
-	{
-                send_to_char( "OEdit:  Extra description keyword not found.\n\r", ch );
-                return FALSE;
-	}
+    	if ( !ed )
+    	{
+    		send_to_char( "OEdit:  Extra description keyword not found.\n\r", ch );
+    		return FALSE;
+    	}
 
-	ed->description = format_string( ed->description );
+    	ed->description = format_string( ed->description );
 
-	send_to_char( "Extra description formatted.\n\r", ch );
-	return TRUE;
+    	send_to_char( "Extra description formatted.\n\r", ch );
+    	return TRUE;
     }
 
     oedit_ed( ch, "" );

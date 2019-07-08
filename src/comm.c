@@ -357,13 +357,13 @@ void cleanup_mud(int control)
 	SHOP_DATA *pShop, *pShop_next;
 
 	AREA_DATA *pArea, *pArea_next;
-	CHAR_DATA *ch, *ch_next;
+	// CHAR_DATA *ch, *ch_next;
 	OBJ_DATA *obj, *obj_next;
 	PACK_DATA *pack, *pack_next;
 	ORG_DATA *org, *org_next;
 	STOCKS *stock, *stock_next;
 	NEWSPAPER *paper, *paper_next;
-	DESCRIPTOR_DATA *d, *d_next;
+	DESCRIPTOR_DATA *d /*, *d_next */;
 	NOTE_DATA *pbg, *pbg_next;
 	NOTE_DATA *pnote, *pnote_next;
 	HELP_DATA *help, *help_next;
