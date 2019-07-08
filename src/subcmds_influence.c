@@ -1775,7 +1775,6 @@ int newspaper_rename(CHAR_DATA *ch, char *argument)
 {
 	NEWSPAPER *paper = NULL;
 	char arg[MIL]={'\0'};
-	int i = 0;
 
 	if(IS_NULLSTR(argument))
 	{
@@ -1793,6 +1792,7 @@ int newspaper_rename(CHAR_DATA *ch, char *argument)
 
 	if(paper == NULL)
 	{
+		int i = 0;
 		paper = paper_list;
 		for(i=0;i<atoi(arg);i++)
 		{
@@ -1824,7 +1824,6 @@ int newspaper_price(CHAR_DATA *ch, char *argument)
 {
 	NEWSPAPER *paper = NULL;
 	char arg[MIL]={'\0'};
-	int i = 0;
 
 	if(IS_NULLSTR(argument))
 	{
@@ -1842,6 +1841,7 @@ int newspaper_price(CHAR_DATA *ch, char *argument)
 
 	if(paper == NULL)
 	{
+		int i = 0;
 		paper = paper_list;
 		for(i=0;i<atoi(arg);i++)
 		{

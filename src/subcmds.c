@@ -941,7 +941,7 @@ int job_advance(CHAR_DATA *ch, char *argument)
 
 int job_apply(CHAR_DATA *ch, char *argument)
 {
-	int job = 0, fail, whatever = 0;
+	int job = 0;
 	char arg1[MIL]={'\0'};
 	char arg2[MIL]={'\0'};
 	CHAR_DATA *vch;
@@ -999,6 +999,8 @@ int job_apply(CHAR_DATA *ch, char *argument)
 	if((job = job_lookup(arg2)) > 3 && CAN_BE(ch, job))
 	{
 		int diff = 7;
+		int fail = 0;
+		int whatever = 0;
 
 		if(job == job_lookup(ch->profession))
 		{
