@@ -953,7 +953,7 @@ int media_suppress(CHAR_DATA *ch, char *argument)
 	if(fail > 0)
 	{
 		int anum = 0;
-		inv vnum = 0;
+		int vnum = 0;
 		anum = atoi( argument );
 		for ( pnote = news_list; pnote != NULL; pnote = pnote->next )
 		{
@@ -1887,7 +1887,6 @@ int newspaper_place(CHAR_DATA *ch, char *argument)
 	char position[MIL]={'\0'};
 	char article[MIL]={'\0'};
 	int anum = 0, vnum = 0;
-	int i = 0;
 
 	if(IS_NULLSTR(argument))
 	{
@@ -1907,6 +1906,7 @@ int newspaper_place(CHAR_DATA *ch, char *argument)
 
 	if(paper == NULL)
 	{
+		int i = 0;
 		paper = paper_list;
 		for(i=0;i<atoi(arg);i++)
 		{
@@ -1968,7 +1968,6 @@ int newspaper_start_stop(CHAR_DATA *ch, char *argument, int on_stands)
 {
 	NEWSPAPER *paper = NULL;
 	char arg[MIL]={'\0'};
-	int i = 0;
 
 	if(IS_NULLSTR(argument))
 	{
@@ -1986,6 +1985,7 @@ int newspaper_start_stop(CHAR_DATA *ch, char *argument, int on_stands)
 
 	if(paper == NULL)
 	{
+		int i = 0;
 		paper = paper_list;
 		for(i=0;i<atoi(arg);i++)
 		{
@@ -2164,7 +2164,6 @@ int smarket_delete (CHAR_DATA *ch, char *arg)
 {
 	STOCKS *stock = NULL;
 	STOCKS *tmp;
-	int i = 0;
 
 	if(IS_NULLSTR(arg))
 	{
@@ -2180,6 +2179,7 @@ int smarket_delete (CHAR_DATA *ch, char *arg)
 
 	if(stock == NULL)
 	{
+		int i = 0;
 		stock = stock_list;
 		for(i=0;i==atoi(arg);i++)
 		{
@@ -2214,7 +2214,6 @@ int smarket_rename(CHAR_DATA *ch, char *argument)
 {
 	STOCKS *stock = NULL;
 	char arg[MIL]={'\0'};
-	int i = 0;
 
 	if(IS_NULLSTR(argument))
 	{
@@ -2232,6 +2231,7 @@ int smarket_rename(CHAR_DATA *ch, char *argument)
 
 	if(stock == NULL)
 	{
+		int i = 0;
 		stock = stock_list;
 		for(i=0;i==atoi(arg);i++)
 		{
@@ -2263,7 +2263,6 @@ int smarket_ticker(CHAR_DATA *ch, char *argument)
 {
 	STOCKS *stock = NULL;
 	char arg[MIL]={'\0'};
-	int i = 0;
 
 	if(IS_NULLSTR(argument))
 	{
@@ -2281,6 +2280,7 @@ int smarket_ticker(CHAR_DATA *ch, char *argument)
 
 	if(stock == NULL)
 	{
+		int i = 0;
 		stock = stock_list;
 		for(i=0;i==atoi(arg);i++)
 		{
@@ -2318,7 +2318,6 @@ int smarket_price(CHAR_DATA *ch, char *argument)
 {
 	STOCKS *stock = NULL;
 	char arg[MIL]={'\0'};
-	int i = 0;
 
 	if(IS_NULLSTR(argument))
 	{
@@ -2336,6 +2335,7 @@ int smarket_price(CHAR_DATA *ch, char *argument)
 
 	if(stock == NULL)
 	{
+		int i = 0;
 		stock = stock_list;
 		for(i=0;i==atoi(arg);i++)
 		{
