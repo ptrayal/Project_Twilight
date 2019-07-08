@@ -102,7 +102,7 @@ int influence_commands(CHAR_DATA *ch, char *argument)
 {
 	int cmd = 0;
 	int col = 0;
-	int i = 0, j = NO_FLAG;
+	int j = NO_FLAG;
 
 	if(!IS_NULLSTR(argument) && (j = flag_value(influence_table, argument)) == NO_FLAG)
 	{
@@ -110,9 +110,9 @@ int influence_commands(CHAR_DATA *ch, char *argument)
 		return FALSE;
 	}
 
-	col = 0;
 	for( cmd = 0; influence_cmd_table[cmd].name != NULL; cmd++ )
 	{
+		int i = 0;
 		i = influence_cmd_table[cmd].type;
 		if(ch->influences[i] >= influence_cmd_table[cmd].level)
 		{
@@ -941,7 +941,6 @@ int media_suppress(CHAR_DATA *ch, char *argument)
 {
 	NOTE_DATA *pnote;
 	int fail = dice_rolls(ch, get_curr_stat(ch, STAT_MAN) + ch->ability[EXPRESSION].value, 7);
-	int anum = 0, vnum = 0;
 
 	pnote = news_list;
 
@@ -953,8 +952,9 @@ int media_suppress(CHAR_DATA *ch, char *argument)
 
 	if(fail > 0)
 	{
+		int anum = 0;
+		inv vnum = 0;
 		anum = atoi( argument );
-		vnum = 0;
 		for ( pnote = news_list; pnote != NULL; pnote = pnote->next )
 		{
 			if ( is_note_to( ch, pnote ) && vnum++ == anum )
@@ -990,7 +990,6 @@ int media_promote(CHAR_DATA *ch, char *argument)
 {
 	NOTE_DATA *pnote;
 	int fail = dice_rolls(ch, get_curr_stat(ch, STAT_MAN) + ch->ability[EXPRESSION].value, 7);
-	int anum = 0, vnum = 0;
 
 	if(IS_NULLSTR(argument) || !is_number(argument))
 	{
@@ -1000,8 +999,9 @@ int media_promote(CHAR_DATA *ch, char *argument)
 
 	if(fail > 0)
 	{
+		int anum = 0;
 		anum = atoi( argument );
-		vnum = 0;
+		int vnum = 0;
 		for ( pnote = news_list; pnote != NULL; pnote = pnote->next )
 		{
 			if ( is_note_to( ch, pnote ) && vnum++ == anum )
@@ -1196,7 +1196,7 @@ int scientific_materials(CHAR_DATA *ch, char *argument)
 	OBJ_DATA *obj;
 	char arg[MIL]={'\0'};
 	int fail = dice_rolls(ch, get_curr_stat(ch, STAT_CHA) + ch->ability[SCIENCE].value, 7);
-	int material = 0, size = 0;
+	int material = 0;
 
 	if(IS_NULLSTR(argument))
 	{
@@ -1214,6 +1214,7 @@ int scientific_materials(CHAR_DATA *ch, char *argument)
 
 	if(fail > 0)
 	{
+		int size = 0;
 		size = UMIN(fail/2, 7);
 		send_to_char("\tGSuccess\tn: You manage to acquire some of the material.\n\r", ch);
 
@@ -1360,10 +1361,10 @@ int background_commands(CHAR_DATA *ch, char *argument)
 {
 	int cmd = 0;
 	int col = 0;
-	int i = 0;
 
 	for( cmd = 0; bg_cmd_table[cmd].name != NULL; cmd++ )
 	{
+		int i = 0;
 		i = bg_cmd_table[cmd].type;
 		if(ch->backgrounds[i] <= bg_cmd_table[cmd].level)
 		{
@@ -1718,7 +1719,6 @@ int newspaper_delete (CHAR_DATA *ch, char *arg)
 {
 	NEWSPAPER *paper = NULL;
 	NEWSPAPER *tmp;
-	int i = 0;
 
 	if(IS_NULLSTR(arg))
 	{
@@ -1734,6 +1734,7 @@ int newspaper_delete (CHAR_DATA *ch, char *arg)
 
 	if(paper == NULL)
 	{
+		int i = 0;
 		paper = paper_list;
 		for(i=0;i<atoi(arg);i++)
 		{
