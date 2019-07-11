@@ -769,6 +769,10 @@ void new_load_area( FILE *fp )
 		word   = feof( fp ) ? "End" : fread_word( fp );
 		bool fMatch = FALSE;
 
+		/* Useless conditional */
+		if( fMatch != FALSE )
+			fMatch = FALSE;
+
 		switch ( UPPER(word[0]) )
 		{
 		case 'N':
