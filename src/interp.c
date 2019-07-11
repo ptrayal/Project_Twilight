@@ -506,7 +506,6 @@ const	struct	cmd_type	cmd_table	[] =
 	{	"termite",			do_wwgift3_1,		P_REST,		0,	L_NRM,	1,	B|C|D|G|H,	WW },
 	{	"heatmetal",		do_wwgift3_3,		P_REST,		0,	L_NRM,	1,	B|C|D|G,	WW },
 	{	"disquiet",			do_wwgift3_4,		P_SIT,		0,	L_NRM,	1,	A|B|C|G,	WW },
-	{	"weakarm",			do_wwgift3_7,		P_SIT,		0,	L_NRM,	1,	A|B|C|G|H,	WW },
 	{	"sensesilver",		do_wwgift3_9,		P_REST,		0,	L_NRM,	1,	B|C|G,	WW },
 	{	"compel",			do_wwgift3_the,		P_REST,		0,	L_NRM,	1,	B|C|G|H,	WW },
 	{	"attune",			do_wwgift4_1,		P_REST,		0,	L_NRM,	1,	B|C|G|H,	WW },

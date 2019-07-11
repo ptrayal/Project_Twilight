@@ -570,7 +570,6 @@ DECLARE_DO_FUN( do_vlist	);
 DECLARE_DO_FUN( do_vnum		);
 DECLARE_DO_FUN( do_vote		);
 DECLARE_DO_FUN(	do_wake		);
-DECLARE_DO_FUN(	do_wwgift3_7	);
 DECLARE_DO_FUN(	do_wear		);
 DECLARE_DO_FUN(	do_weather	);
 DECLARE_DO_FUN(	do_west		);

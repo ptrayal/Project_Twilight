@@ -4949,61 +4949,61 @@ void do_wwgift2_4(CHAR_DATA *ch, char *argument)
 	/* Creating a shed skin might be worthwhile. */
 }
 
-/* do_wwgift3_7: Weak Arm - Formerly do_weakarm */
-void do_wwgift3_7(CHAR_DATA *ch, char *argument)
-{
-	CHAR_DATA *victim;
-	int fail = 0;
-	AFFECT_DATA af;
+// /* do_wwgift3_7: Weak Arm - Formerly do_weakarm */
+// void do_wwgift3_7(CHAR_DATA *ch, char *argument)
+// {
+// 	CHAR_DATA *victim;
+// 	int fail = 0;
+// 	AFFECT_DATA af;
 
-	if(ch->race != race_lookup("werewolf") || !IS_SET(ch->powers[2], G))
-	{
-		send_to_char("Huh?\n\r", ch);
-		return;
-	}
+// 	if(ch->race != race_lookup("werewolf") || !IS_SET(ch->powers[2], G))
+// 	{
+// 		send_to_char("Huh?\n\r", ch);
+// 		return;
+// 	}
 
-	if (!has_enough_power(ch))
-		return;
+// 	if (!has_enough_power(ch))
+// 		return;
 
-	if(IS_NULLSTR(argument))
-	{
-		send_to_char("Who do you want to weaken?\n\r", ch);
-		return;
-	}
+// 	if(IS_NULLSTR(argument))
+// 	{
+// 		send_to_char("Who do you want to weaken?\n\r", ch);
+// 		return;
+// 	}
 
-	if( (victim = get_char_room(ch, argument)) == NULL)
-	{
-		send_to_char("They aren't here!\n\r", ch);
-		return;
-	}
+// 	if( (victim = get_char_room(ch, argument)) == NULL)
+// 	{
+// 		send_to_char("They aren't here!\n\r", ch);
+// 		return;
+// 	}
 
-	fail = dice_rolls(ch, get_curr_stat(ch, STAT_DEX) + ch->ability[RITUALS].value, victim->max_willpower);
-	ch->power_timer = 1;
+// 	fail = dice_rolls(ch, get_curr_stat(ch, STAT_DEX) + ch->ability[RITUALS].value, victim->max_willpower);
+// 	ch->power_timer = 1;
 
-	act("You attempt to weaken $N with your touch.", ch,NULL,victim,TO_CHAR,1);
-	if(fail <= 0)
-	{
-		send_to_char("You fail to connect.\n\r", ch);
-		return;
-	}
-	else if(fail > 0)
-	{
-		af.level     = ch->disc[DISC_AUSPICE];
+// 	act("You attempt to weaken $N with your touch.", ch,NULL,victim,TO_CHAR,1);
+// 	if(fail <= 0)
+// 	{
+// 		send_to_char("You fail to connect.\n\r", ch);
+// 		return;
+// 	}
+// 	else if(fail > 0)
+// 	{
+// 		af.level     = ch->disc[DISC_AUSPICE];
 
-		af.where     = TO_AFFECTS;
-		af.type      = skill_lookup("weak arm");
-		af.duration  = fail * 2;
-		af.bitvector = AFF_NONE;
-		af.location  = APPLY_DIFFICULTY;
-		af.modifier  = 2;
-		affect_to_char( victim, &af );
-		af.location  = APPLY_DICE;
-		af.modifier  = -1;
-		affect_to_char( victim, &af );
-		act("You feel weaker as $n touches you.", ch, NULL, victim, TO_VICT, 1);
-		act("$n touches $N.", ch, NULL, victim, TO_NOTVICT, 0);
-	}
-}
+// 		af.where     = TO_AFFECTS;
+// 		af.type      = skill_lookup("weak arm");
+// 		af.duration  = fail * 2;
+// 		af.bitvector = AFF_NONE;
+// 		af.location  = APPLY_DIFFICULTY;
+// 		af.modifier  = 2;
+// 		affect_to_char( victim, &af );
+// 		af.location  = APPLY_DICE;
+// 		af.modifier  = -1;
+// 		affect_to_char( victim, &af );
+// 		act("You feel weaker as $n touches you.", ch, NULL, victim, TO_VICT, 1);
+// 		act("$n touches $N.", ch, NULL, victim, TO_NOTVICT, 0);
+// 	}
+// }
 
 /* do_wwgift3_4: Disquiet - Formerly do_disquiet */
 void do_wwgift3_4(CHAR_DATA *ch, char *argument)
@@ -6472,9 +6472,7 @@ void do_auspex1 ( CHAR_DATA * ch, char * string )
 void do_auspex2 ( CHAR_DATA * ch, char * string )
 {
 	CHAR_DATA *victim;
-	char buf[MSL]={'\0'};
 	char arg[MAX_INPUT_LENGTH]={'\0'};
-	int success = 0;
 	int power_stat = 0;
 	int power_ability = 0;
 	int difficulty = 0;
@@ -6506,6 +6504,8 @@ void do_auspex2 ( CHAR_DATA * ch, char * string )
 
 	if( (victim = get_char_room(ch, string)) != NULL )
 	{
+		int success = 0;
+		char buf[MSL]={'\0'};
 		ch->power_timer = 2;
 		success = dice_rolls(ch, power_stat + power_ability, difficulty);
 
