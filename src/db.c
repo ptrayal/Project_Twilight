@@ -4898,8 +4898,17 @@ void bug( const char *str, int param )
 char *sys_time()
 {
 	char *strtime;
+	time_t rawtime;
+	struct tm *info;
+	char buffer[80]={'\0'};
 
-	strtime = ctime( &current_time );
+	time( &rawtime );
+
+	info = localtime( &rawtime );
+
+	strftime(buffer,80,"%x - %I:%M%p", info);
+
+	strtime = buffer;
 	strtime[strlen(strtime)-1] = '\0';
 	return strtime;
 }

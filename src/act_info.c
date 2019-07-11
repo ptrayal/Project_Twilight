@@ -2795,6 +2795,15 @@ void do_help( CHAR_DATA *ch, char *argument )
 	char argone[MIL]={'\0'};
 	int level = 0;
 	bool found = FALSE;
+	time_t rawtime;
+	struct tm *info;
+	char buffer[80]={'\0'};
+
+	time( &rawtime );
+
+	info = localtime( &rawtime );
+
+	strftime(buffer,80,"%x", info);
 
 	CheckCH(ch);
 
@@ -2906,7 +2915,7 @@ void do_help( CHAR_DATA *ch, char *argument )
 	if (!found)
 	{
 		send_to_char( "\tWNo help on that word. Have you tried investigating or researching that?\tn\n\r", ch );
-		log_string(LOG_BUG, (char *)Format("[*****] HELP: No help for: %s - %s", argall, ctime(&current_time)));
+		log_string(LOG_BUG, (char *)Format("[*****] HELP: No help for: %s [%s]", argall, buffer));
 	}
 	else
 		page_to_char(buf_string(output),ch);
