@@ -252,6 +252,15 @@ void fwrite_char( CHAR_DATA *ch, FILE *fp )
     char buf[MSL]={'\0'};
     int sn = 0, pos = 0;
     int i = 0;
+    time_t rawtime;
+	struct tm *info;
+	char buffer[80]={'\0'};
+
+	time( &rawtime );
+
+	info = localtime( &rawtime );
+
+	strftime(buffer,80,"%x - %I:%M%p", info);
 
     if(IS_SET(ch->affected_by2, AFF2_EARTHMELD))
     {
@@ -270,7 +279,7 @@ void fwrite_char( CHAR_DATA *ch, FILE *fp )
 	WriteLong(fp, "LastV", ch->pcdata->last_vote);
 
 
-    snprintf( buf, sizeof(buf), "%s", ctime(&current_time));
+    snprintf( buf, sizeof(buf), "%s", buffer);
     buf[strlen(buf) - 1] = '\0';
 	WriteToFile(fp, true, "LastO", buf);
 

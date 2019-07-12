@@ -735,6 +735,15 @@ void interpret( CHAR_DATA *ch, char *argument )
 	int cmd = 0;
 	bool found = FALSE;
 	bool exists = FALSE;
+	time_t rawtime;
+	struct tm *info;
+	char buffer[80]={'\0'};
+
+	time( &rawtime );
+
+	info = localtime( &rawtime );
+
+	strftime(buffer,80,"%x - %I:%M%p", info);
 
 	// assert(ch);
 
@@ -863,7 +872,7 @@ void interpret( CHAR_DATA *ch, char *argument )
 			send_to_char( "Huh?\n\r", ch );
 			if(!exists)
 			{
-				log_string(LOG_BUG, (char *)Format("[%d] %s : Command failure: %s %s - %s", ch->in_room ? ch->in_room->vnum : 0, ch->name, command, argument, ctime(&current_time)));
+				log_string(LOG_BUG, (char *)Format("[%d] %s : Command failure: %s %s - %s", ch->in_room ? ch->in_room->vnum : 0, ch->name, command, argument, buffer));
 			}
 		}
 		return;

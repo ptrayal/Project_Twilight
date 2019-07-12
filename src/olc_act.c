@@ -6892,6 +6892,15 @@ HEDIT( tipedit_create )
 NEDIT( bedit_create )
 {
 	NOTE_DATA *note;
+	time_t rawtime;
+	struct tm *info;
+	char buffer[80]={'\0'};
+
+	time( &rawtime );
+
+	info = localtime( &rawtime );
+
+	strftime(buffer,80,"%x - %I:%M%p", info);
 
 	note = new_note();
 	PURGE_DATA(note->to_list);
@@ -6902,7 +6911,7 @@ NEDIT( bedit_create )
 	PURGE_DATA( note->sender );
 	note->sender		= str_dup( ch->name );
 	PURGE_DATA( note->date );
-	note->date			= str_dup( ctime( &current_time ) );
+	note->date			= str_dup( buffer );
 	note->date_stamp		= current_time;
 
 	LINK_SINGLE(note, next, bg_list);
@@ -6916,6 +6925,15 @@ NEDIT( bedit_create )
 NEDIT( kedit_create )
 {
 	NOTE_DATA *note;
+	time_t rawtime;
+	struct tm *info;
+	char buffer[80]={'\0'};
+
+	time( &rawtime );
+
+	info = localtime( &rawtime );
+
+	strftime(buffer,80,"%x - %I:%M%p", info);
 
 	note = new_note();
 	PURGE_DATA(note->to_list);
@@ -6926,7 +6944,7 @@ NEDIT( kedit_create )
 	PURGE_DATA( note->sender );
 	note->sender		= str_dup( ch->name );
 	PURGE_DATA( note->date );
-	note->date			= str_dup( ctime( &current_time ) );
+	note->date			= str_dup( buffer );
 	note->date_stamp		= current_time;
 
 	LINK_SINGLE(note, next, know_list);

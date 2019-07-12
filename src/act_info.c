@@ -3731,6 +3731,15 @@ void do_research(CHAR_DATA *ch, char *argument)
 	BUFFER *output;
 	int diff = 0, fail = 0;
 	bool found = FALSE;
+	time_t rawtime;
+	struct tm *info;
+	char buffer[80]={'\0'};
+
+	time( &rawtime );
+
+	info = localtime( &rawtime );
+
+	strftime(buffer,80,"%x - %I:%M%p", info);
 
 	CheckCH(ch);
 
@@ -3745,7 +3754,7 @@ void do_research(CHAR_DATA *ch, char *argument)
 	if(pbg == NULL)
 	{
 		send_to_char(Format("Your research finds nothing about %s.", argument), ch);
-		log_string(LOG_BUG, (char *)Format("BG MISSING | No BG for: %s - %s", argument, ctime(&current_time)));
+		log_string(LOG_BUG, Format("BG MISSING | No BG for: %s - %s", argument, buffer));
 		return;
 	}
 

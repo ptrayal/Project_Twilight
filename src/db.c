@@ -4835,6 +4835,15 @@ char *allcaps( const char *str )
 void append_file( CHAR_DATA *ch, char *file, char *str )
 {
 	FILE *fp;
+	time_t rawtime;
+	struct tm *info;
+	char buffer[80]={'\0'};
+
+	time( &rawtime );
+
+	info = localtime( &rawtime );
+
+	strftime(buffer,80,"%x - %I:%M%p", info);
 
 	if ( ch != NULL && (IS_NPC(ch) || str[0] == '\0') )
 		return;
@@ -4849,8 +4858,8 @@ void append_file( CHAR_DATA *ch, char *file, char *str )
 	{
 		if(ch != NULL)
 			fprintf( fp, "[%5d] %s: %s - %s",
-					ch->in_room ? ch->in_room->vnum : 0,
-							ch->name, str, (char *) ctime( &current_time ) );
+				ch->in_room ? ch->in_room->vnum : 0,
+				ch->name, str, buffer );
 		else
 			fprintf( fp, "%s\n", str );
 		fclose( fp );
