@@ -5403,7 +5403,7 @@ void do_thaumaturgy1 (CHAR_DATA *ch, char *string)
 int amp_using_blood(CHAR_DATA *ch, char *argument, CHAR_DATA *forcer)
 {
 	CHAR_DATA *to = forcer ? forcer : ch;
-	int stat = -1, current;
+	int stat = -1, current = 0;
 
 	if(IS_NULLSTR(argument))
 	{
@@ -5412,19 +5412,22 @@ int amp_using_blood(CHAR_DATA *ch, char *argument, CHAR_DATA *forcer)
 	}
 
 	if(str_prefix(argument, "strength")
-			|| str_prefix(argument, "dexterity")
-			|| str_prefix(argument, "stamina"))
+		|| str_prefix(argument, "dexterity")
+		|| str_prefix(argument, "stamina"))
 	{
 		send_to_char("That isn't a physical attribute.\n\r", to);
 		return FALSE;
 	}
 
-	if(!str_prefix(argument, "strength")) stat = STAT_STR;
-	else if(!str_prefix(argument, "dexterity")) stat = STAT_DEX;
-	else if(!str_prefix(argument, "stamina")) stat = STAT_STA;
+	if(!str_prefix(argument, "strength"))
+		stat = STAT_STR;
+	else if(!str_prefix(argument, "dexterity"))
+		stat = STAT_DEX;
+	else if(!str_prefix(argument, "stamina"))
+		stat = STAT_STA;
 	else
 	{
-		send_to_char("That isn't a physical attribute.\n\r", to);
+		send_to_char("That is nota physical attribute.\n\r", to);
 		return FALSE;
 	}
 
@@ -5438,9 +5441,8 @@ int amp_using_blood(CHAR_DATA *ch, char *argument, CHAR_DATA *forcer)
 
 	ch->RBPG--;
 
-	if( current < 2*ch->perm_stat[stat]
-	                              || (current > 2*ch->perm_stat[stat]
-	                                                            && dice_rolls(ch, ch->perm_stat[STAT_STA], get_curr_stat(ch,stat)) > 0))
+	if( current < 2*ch->perm_stat[stat] || (current > 2*ch->perm_stat[stat]
+		&& dice_rolls(ch, ch->perm_stat[STAT_STA], get_curr_stat(ch,stat)) > 0))
 	{
 		AFFECT_DATA af;
 		af.where     = TO_AFFECTS;
@@ -5462,16 +5464,16 @@ int amp_using_blood(CHAR_DATA *ch, char *argument, CHAR_DATA *forcer)
 
 void do_thaumaturgy2 (CHAR_DATA *ch, char *string)
 {
+	CHAR_DATA *vch;
 	char arg[MSL]={'\0'};
 	int diff = 5;
 	int fail = 0;
-	CHAR_DATA *vch;
 
 	CheckCH(ch);
 
-	if( ch->race != race_lookup("vampire") || ch->disc[DISC_THAUMATURGY] < 2)
+	if( !IS_VAMPIRE(ch) || ch->disc[DISC_THAUMATURGY] < 2)
 	{
-		send_to_char("You do not know Blood Rage.\n\r", ch);
+		send_to_char("tRWARNING: You do not know Blood Rage\tn.\n\r", ch);
 		return;
 	}
 
@@ -5480,7 +5482,7 @@ void do_thaumaturgy2 (CHAR_DATA *ch, char *string)
 
 	if(ch->RBPG <= 1)
 	{
-		send_to_char("You don't have the blood to spend on that!\n\r", ch);
+		send_to_char("tRWARNING: You do not have the blood to spend on that\tn.\n\r", ch);
 		return;
 	}
 
@@ -5494,7 +5496,7 @@ void do_thaumaturgy2 (CHAR_DATA *ch, char *string)
 
 	if((vch = get_char_room(ch, arg)) == NULL)
 	{
-		send_to_char("They aren't here.\n\r", ch);
+		send_to_char("They are not here.\n\r", ch);
 		return;
 	}
 
@@ -5537,9 +5539,9 @@ void do_thaumaturgy3(CHAR_DATA *ch, char *argument)
 
 	CheckCH(ch);
 
-	if( ch->race != race_lookup("vampire") || ch->disc[DISC_THAUMATURGY] < 3)
+	if( !IS_VAMPIRE(ch) || ch->disc[DISC_THAUMATURGY] < 3)
 	{
-		send_to_char("You do not know Potency of Blood.\n\r", ch);
+		send_to_char("tRWARNING: You do not know Potency of Blood\tn.\n\r", ch);
 		return;
 	}
 
@@ -5548,7 +5550,7 @@ void do_thaumaturgy3(CHAR_DATA *ch, char *argument)
 
 	if(ch->RBPG <= 1)
 	{
-		send_to_char("You don't have the blood to spend on that!\n\r", ch);
+		send_to_char("tRWARNING: You do not have the blood to spend on that\tn.\n\r", ch);
 		return;
 	}
 
@@ -5598,9 +5600,9 @@ void do_thaumaturgy4(CHAR_DATA *ch, char *argument)
 
 	 CheckCH(ch);
 
-	if( ch->race != race_lookup("vampire") || ch->disc[DISC_THAUMATURGY] < 4)
+	if( !IS_VAMPIRE(ch) || ch->disc[DISC_THAUMATURGY] < 4)
 	{
-		send_to_char("You do not know Theft of Vitae\n\r", ch);
+		send_to_char("tRWARNING: You do not know Theft of Vitae\tn.\n\r", ch);
 		return;
 	}
 
@@ -5609,7 +5611,7 @@ void do_thaumaturgy4(CHAR_DATA *ch, char *argument)
 
 	if(ch->RBPG <= 1)
 	{
-		send_to_char("You don't have the blood to spend on that!\n\r", ch);
+		send_to_char("tRWARNING: You do not have the blood to spend on that\tn.\n\r", ch);
 		return;
 	}
 
@@ -5630,9 +5632,9 @@ void do_thaumaturgy5(CHAR_DATA *ch, char *argument)
 
 	/* Cauldron of Blood (diff = UMIN(4 + # of targeted blood points, 10), 1 dam/blood point/mortal death - NPC kill outright, PC must have conceded) */
 
-	if( ch->race != race_lookup("vampire") || ch->disc[DISC_THAUMATURGY] < 5)
+	if( !IS_VAMPIRE(ch) || ch->disc[DISC_THAUMATURGY] < 5)
 	{
-		send_to_char("You do not know Cauldron of Blood.\n\r", ch);
+		send_to_char("tRWARNING: You do not know Cauldron of Blood\tn.\n\r", ch);
 		return;
 	}
 
@@ -5643,7 +5645,7 @@ void do_thaumaturgy5(CHAR_DATA *ch, char *argument)
 
 	if(ch->RBPG <= 1)
 	{
-		send_to_char("You don't have the blood to spend on that!\n\r", ch);
+		send_to_char("YtRWARNING: ou do not have the blood to spend on that\tn.\n\r", ch);
 		return;
 	}
 
@@ -5651,7 +5653,7 @@ void do_thaumaturgy5(CHAR_DATA *ch, char *argument)
 
 	if((vch = get_char_room(ch, argument)) == NULL)
 	{
-		send_to_char("They aren't here.\n\r", ch);
+		send_to_char("They are not here.\n\r", ch);
 		return;
 	}
 
@@ -5689,7 +5691,7 @@ void do_thaumaturgy5(CHAR_DATA *ch, char *argument)
 
 void clear_rite(CHAR_DATA *ch)
 {
-	int i;
+	int i = 0;
 
 	for(i = 0; i < MAX_RITE_STEPS; i++)
 	{
@@ -5732,10 +5734,10 @@ int rite_available(int sn, CHAR_DATA *ch)
 
 void do_rituals( CHAR_DATA *ch, char *argument )
 {
-	char arg1[MAX_INPUT_LENGTH]={'\0'};
-	char arg2[MAX_INPUT_LENGTH]={'\0'};
 	CHAR_DATA *victim;
 	OBJ_DATA *obj;
+	char arg1[MAX_INPUT_LENGTH]={'\0'};
+	char arg2[MAX_INPUT_LENGTH]={'\0'};
 	void *vo;
 	int sn, rn;
 	int target;

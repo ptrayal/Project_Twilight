@@ -2690,7 +2690,7 @@ void do_train_power( CHAR_DATA *ch, char *argument )
         return;
     }
 
-    if( !IS_NULLSTR(arg1) )
+    if( IS_NULLSTR(arg1) )
     {
         send_to_char( Format("You have %d experience points.\n\r", ch->exp), ch );
         send_to_char("SYNTAX: advance <power>\n\r",ch);
@@ -2716,10 +2716,16 @@ void do_train_power( CHAR_DATA *ch, char *argument )
 
     if( ( loop = disc_lookup( ch, arg1 ) ) >= 0 )
     {
-        if (ch->race == race_lookup("vampire")) pOutput = disc_table[loop].vname;
-        else if (ch->race == race_lookup("werewolf")) pOutput   = disc_table[loop].wname;
-        else if (ch->race == race_lookup("faerie")) pOutput = disc_table[loop].fname;
-        else if (ch->race == race_lookup("human")) pOutput = disc_table[loop].hname;
+        if (ch->race == race_lookup("vampire")) 
+            pOutput = disc_table[loop].vname;
+        else if (ch->race == race_lookup("werewolf")) 
+            pOutput   = disc_table[loop].wname;
+        else if (ch->race == race_lookup("faerie")) 
+            pOutput = disc_table[loop].fname;
+        else if (ch->race == race_lookup("human")) 
+            pOutput = disc_table[loop].hname;
+        else
+            send_to_char("Opps.", ch);
 
         if(ch->race == race_lookup("vampire"))
             max_stat = UMIN(10, UMAX(5, 13 - ch->gen));
@@ -2731,27 +2737,29 @@ void do_train_power( CHAR_DATA *ch, char *argument )
         }
 
         if (ch->race == race_lookup("werewolf")
-                && ch->disc[disc_table[loop].index] >= ch->backgrounds[RACE_STATUS])
+            && ch->disc[disc_table[loop].index] >= ch->backgrounds[RACE_STATUS])
         {
             act( "You cannot raise your $T until your rank increases.",
-                    ch, NULL, pOutput, TO_CHAR, 1 );
+                ch, NULL, pOutput, TO_CHAR, 1 );
             return;
         }
 
         if (ch->disc[loop] == 0)
             cost = 10;
-        else if(ch->race == race_lookup("vampire")
-                && ch->clan == clan_lookup("none"))
+        else if(ch->race == race_lookup("vampire") && ch->clan == clan_lookup("none"))
             cost = 7 * ch->disc[loop];
         else if(loop == clan_table[ch->clan].powers[0]
-                                                    || loop == clan_table[ch->clan].powers[1]
-                                                                                           || loop == clan_table[ch->clan].powers[2])
+            || loop == clan_table[ch->clan].powers[1]
+            || loop == clan_table[ch->clan].powers[2])
             cost = 5 * ch->disc[loop];
         else
             cost = 10 * ch->disc[loop];
 
-        if (cost < 1) cost = 10;
+        if (cost < 1) 
+            cost = 10;
+
         cost = xp_cost_mod(ch, cost, ch->disc[loop]);
+
         if (cost > ch->exp)
         {
             send_to_char( "You don't have enough exp.\n\r", ch );
@@ -2759,10 +2767,10 @@ void do_train_power( CHAR_DATA *ch, char *argument )
         }
 
         if((ch->disc[loop] >= 5 && ch->race == race_lookup("vampire") && ch->gen > 7)
-                ||(ch->disc[loop] >= 10 && ch->race == race_lookup("vampire") && ch->gen < 8)
-                || (ch->disc[loop] >= 10 && ch->race == race_lookup("werewolf"))
-                || (ch->disc[loop] >= 5 && ch->race == race_lookup("faerie"))
-                || (ch->disc[loop] >= 5 && ch->race == race_lookup("human")) )
+            ||(ch->disc[loop] >= 10 && ch->race == race_lookup("vampire") && ch->gen < 8)
+            || (ch->disc[loop] >= 10 && ch->race == race_lookup("werewolf"))
+            || (ch->disc[loop] >= 5 && ch->race == race_lookup("faerie"))
+            || (ch->disc[loop] >= 5 && ch->race == race_lookup("human")) )
         {
             act( "Your $T is at a maximum.", ch, NULL, pOutput, TO_CHAR, 1 );
             return;
@@ -2777,7 +2785,7 @@ void do_train_power( CHAR_DATA *ch, char *argument )
             ch->disc[loop] += 1;
             if(ch->race == race_lookup("werewolf"))
                 SET_BIT(ch->powers[loop],
-                        group_gift_lookup(pOutput, ch->disc[loop]-1));
+                    group_gift_lookup(pOutput, ch->disc[loop]-1));
             act( Format("Your $T increases to %d!", ch->disc[loop]), ch, NULL, pOutput, TO_CHAR, 0 );
         }
         else
