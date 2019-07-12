@@ -4005,6 +4005,16 @@ void parse_note( CHAR_DATA *ch, char *argument, int type )
 	char arg2[MIL]={'\0'};
 	char *list_name;
 
+	time_t rawtime;
+	struct tm *info;
+	char buffer[100]={'\0'};
+
+	time( &rawtime );
+
+	info = localtime( &rawtime );
+
+	strftime(buffer,100,"%a %x at %I:%M%p", info); 	
+
 	CheckChNPC(ch);
 
 	switch(type)
@@ -4497,7 +4507,7 @@ void parse_note( CHAR_DATA *ch, char *argument, int type )
 		}
 
 		ch->pnote->next			= NULL;
-		strtime				= ctime( &current_time );
+		strtime				= buffer;
 		strtime[strlen(strtime)-1]	= '\0';
 		PURGE_DATA( ch->pnote->date );
 		ch->pnote->date			= str_dup( strtime );
