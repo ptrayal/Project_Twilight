@@ -1515,6 +1515,12 @@ void do_look( CHAR_DATA *ch, char *argument )
 			do_function(ch, &do_exits, "auto");
 		}
 
+		// Let people know if this room has a special function (like a bank room)
+		if(IS_SET(ch->in_room->room_flags, ROOM_BANK))
+		{
+			send_to_char("\tOYou can do \t<send href='help bank'>banking\t</send> here.\tn\n\r", ch);
+		}
+
 		// Show objects in the room.
 		send_to_char("\tW---\tYObjects\tW---\tn\n\r", ch);
 		show_list_to_char( ch->in_room->contents, ch, FALSE, FALSE );
