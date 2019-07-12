@@ -13,18 +13,20 @@
  *  Much time and thought has gone into this software and you are          *
  *  benefitting.  We hope that you share your changes too.  What goes      *
  *  around, comes around.                                                  *
+ *                                                                         *
+ *	ROM 2.4 is copyright 1993-1998 Russ Taylor			                   *
+ *	ROM has been brought to you by the ROM consortium		               *
+ *	    Russ Taylor (rtaylor@hypercube.org)				                   *
+ *	    Gabrielle Taylor (gtaylor@hypercube.org)			               *
+ *	    Brian Moore (zump@rom.org)					                       *
+ *	By using this code, you have agreed to follow the terms of the	       *
+ *	ROM license, in the file Rom24/doc/rom.license			               *
+ *                                                                         *
+ * Much of the code is the original work of Peter Fitzgerald who turned    *
+ * it over to Brandon Morrison who has adopted and improved the code.      *
+ * Copyright (C) 2012 - 2019                                               *
  **************************************************************************/
-
-/***************************************************************************
-*   ROM 2.4 is copyright 1993-1998 Russ Taylor                             *
-*   ROM has been brought to you by the ROM consortium                      *
-*       Russ Taylor (rtaylor@hypercube.org)                                *
-*       Gabrielle Taylor (gtaylor@hypercube.org)                           *
-*       Brian Moore (zump@rom.org)                                         *
-*   By using this code, you have agreed to follow the terms of the         *
-*   ROM license, in the file Rom24/doc/rom.license                         *
-***************************************************************************/
-
+ 
 #include <stdlib.h>
 #include <ctype.h>
 #include <time.h>

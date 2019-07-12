@@ -1,3 +1,9 @@
+/***************************************************************************
+ * Much of the code is the original work of Peter Fitzgerald who turned    *
+ * it over to Brandon Morrison who has adopted and improved the code.      *
+ * Copyright (C) 2012 - 2019                                               *
+ **************************************************************************/
+
 #ifndef INTERP_H
 #define INTERP_H
 /* this is a listing of all the commands and command related data */

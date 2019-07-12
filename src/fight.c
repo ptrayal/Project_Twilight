@@ -1,10 +1,9 @@
-/*
-This file is (surprise surprise) completely original.
-Use of the code contained in this file is allowed so long as I get credit for it.
-Thanks to everyone who's sharin' code.
-Peter aka. One Thousand Monkeys
- */
-
+/***************************************************************************
+ * Much of the code is the original work of Peter Fitzgerald who turned    *
+ * it over to Brandon Morrison who has adopted and improved the code.      *
+ * Copyright (C) 2012 - 2019                                               *
+ **************************************************************************/
+ 
 #include <stdlib.h>
 #include <ctype.h>
 #include <time.h>

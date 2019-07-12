@@ -1,6 +1,6 @@
 /***************************************************************************
  *  Original Diku Mud copyright (C) 1990, 1991 by Sebastian Hammer,        *
- *  Michael Seifert, Hans Henrik Starfeldt, Tom Madsen, and Katja Nyboe.   *
+ *  Michael Seifert, Hans Henrik St{rfeldt, Tom Madsen, and Katja Nyboe.   *
  *                                                                         *
  *  Merc Diku Mud improvments copyright (C) 1992, 1993 by Michael          *
  *  Chastain, Michael Quan, and Mitchell Tse.                              *
@@ -13,15 +13,16 @@
  *  Much time and thought has gone into this software and you are          *
  *  benefitting.  We hope that you share your changes too.  What goes      *
  *  around, comes around.                                                  *
- ***************************************************************************/
- 
-/* Online Social Editting Module, 
- * (c) 1996,97 Erwin S. Andreasen <erwin@andreasen.org>
- * See the file "License" for important licensing information
- */ 
-
-/* This version contains minor modifications to support ROM 2.4b4. */
-
+ *                                                                         *
+ * Online Social Editting Module                                           *
+ * (c) 1996, 1997 Erwin S. Andreasen <erwin@andreasen.org>                 *
+ * This version contains modifications to support ROM 2.4b4                *
+ *                                                                         *
+ * Much of the code is the original work of Peter Fitzgerald who turned    *
+ * it over to Brandon Morrison who has adopted and improved the code.      *
+ * Copyright (C) 2012 - 2019                                               *
+ **************************************************************************/
+  
 #if defined(Macintosh)
 #include <types.h>
 #else
