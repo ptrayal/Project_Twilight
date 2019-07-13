@@ -1152,38 +1152,67 @@ void affect_modify( CHAR_DATA *ch, AFFECT_DATA *paf, bool fAdd )
 	switch ( paf->location )
 	{
 		default:
-		log_string(LOG_BUG, Format("Affect_modify: unknown location %d.", paf->location ));
+			log_string(LOG_BUG, Format("Affect_modify: unknown location %d.", paf->location ));
 		return;
 
-		case APPLY_NONE:						break;
-		case APPLY_STR:           ch->mod_stat[STAT_STR]	+= mod;	break;
-		case APPLY_DEX:           ch->mod_stat[STAT_DEX]	+= mod;	break;
-		case APPLY_STA:           ch->mod_stat[STAT_STA]	+= mod;	break;
-		case APPLY_CHA:           ch->mod_stat[STAT_CHA]	+= mod;	break;
-		case APPLY_MAN:           ch->mod_stat[STAT_MAN]	+= mod;	break;
-		case APPLY_APP:           ch->mod_stat[STAT_APP]	+= mod;	break;
-		case APPLY_PER:           ch->mod_stat[STAT_PER]	+= mod;	break;
-		case APPLY_INT:           ch->mod_stat[STAT_INT]	+= mod;	break;
-		case APPLY_WIT:           ch->mod_stat[STAT_WIT]	+= mod;	break;
-		case APPLY_SEX:           ch->sex			+= mod;	break;
+		case APPLY_NONE:						
+		break;
+		case APPLY_STR:           ch->mod_stat[STAT_STR]	+= mod;	
+		break;
+		case APPLY_DEX:           ch->mod_stat[STAT_DEX]	+= mod;	
+		break;
+		case APPLY_STA:           ch->mod_stat[STAT_STA]	+= mod;	
+		break;
+		case APPLY_CHA:           ch->mod_stat[STAT_CHA]	+= mod;	
+		break;
+		case APPLY_MAN:           ch->mod_stat[STAT_MAN]	+= mod;	
+		break;
+		case APPLY_APP:           ch->mod_stat[STAT_APP]	+= mod;	
+		break;
+		case APPLY_PER:           ch->mod_stat[STAT_PER]	+= mod;	
+		break;
+		case APPLY_INT:           ch->mod_stat[STAT_INT]	+= mod;	
+		break;
+		case APPLY_WIT:           ch->mod_stat[STAT_WIT]	+= mod;	
+		break;
+		case APPLY_SEX:           ch->sex			+= mod;	
+		break;
 /*  case APPLY_AGE:	      ch->age			+= mod; break;
     case APPLY_HEIGHT:	      ch->height		+= mod; break;
     case APPLY_WEIGHT:	      ch->weight		+= mod; break;
-*/  case APPLY_SPELL_AFFECT:  					break;
-		case APPLY_GHB:	      ch->GHB			+= mod; break;
-		case APPLY_RBPG:	      ch->RBPG			+= mod; break;
-		case APPLY_WILLPOWER:     ch->willpower		+= mod; break;
-		case APPLY_CONSCIENCE:					break;
-		case APPLY_SELF_CONTROL:					break;
-		case APPLY_COURAGE:						break;
-		case APPLY_PAIN:	      ch->condition[COND_PAIN]  += mod; break;
-		case APPLY_ANGER:	      ch->condition[COND_ANGER] += mod; break;
-		case APPLY_FEAR:	      ch->condition[COND_FEAR]	+= mod; break;
-		case APPLY_FRENZY:	      ch->condition[COND_FRENZY]+= mod; break;
-		case APPLY_HEALTH: ch->health += mod; ch->agghealth += mod; break;
-		case APPLY_DICE:	 	ch->dice_mod		+= mod; break;
-		case APPLY_DIFFICULTY:	ch->diff_mod		+= mod; break;
-		case APPLY_SKILL: ch->ability[paf->bitvector].value += mod; break;
+*/  
+		case APPLY_SPELL_AFFECT:  					
+		break;
+		case APPLY_GHB:	      ch->GHB			+= mod; 
+		break;
+		case APPLY_RBPG:	      ch->RBPG			+= mod; 
+		break;
+		case APPLY_WILLPOWER:     ch->willpower		+= mod; 
+		break;
+		case APPLY_CONSCIENCE:		ch->virtues[0] += mod;
+		break;
+		case APPLY_SELF_CONTROL:	ch->virtues[1] += mod;
+		break;
+		case APPLY_COURAGE:			ch->virtues[2] += mod;
+		break;
+		case APPLY_PAIN:	      ch->condition[COND_PAIN]  += mod; 
+		break;
+		case APPLY_ANGER:	      ch->condition[COND_ANGER] += mod; 
+		break;
+		case APPLY_FEAR:	      ch->condition[COND_FEAR]	+= mod; 
+		break;
+		case APPLY_FRENZY:	      ch->condition[COND_FRENZY]+= mod; 
+		break;
+		case APPLY_HEALTH: ch->health += mod; ch->agghealth += mod; 
+		break;
+		case APPLY_DICE:	 	ch->dice_mod		+= mod; 
+		break;
+		case APPLY_DIFFICULTY:	ch->diff_mod		+= mod; 
+		break;
+		case APPLY_SKILL: ch->ability[paf->bitvector].value += mod; 
+		break;
+		case APPLY_GENERATION:		ch->gen += mod;
+			break;
 	}
 
     /*

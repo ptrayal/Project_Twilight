@@ -6436,6 +6436,7 @@ void do_auspex1 ( CHAR_DATA * ch, char * string )
 	{
 		affect_strip ( ch, gsn_hsenses );
 		REMOVE_BIT   ( ch->affected_by, AFF_HSENSES );
+		send_to_char("Your senses return to their normal state.\n\r", ch);
 		ch->power_timer = 1;
 		return;
 	}

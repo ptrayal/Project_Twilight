@@ -2672,7 +2672,7 @@ void do_affects(CHAR_DATA *ch, char *argument )
 	{
 		for ( paf = ch->affected; paf != NULL; paf = paf->next )
 		{
-			send_to_char(Format("%-15s", skill_table[paf->type].name), ch);
+			send_to_char(Format("%-15s (%s)", skill_table[paf->type].name, flag_string( apply_flags, paf->location )), ch);
 
 			if ( paf->duration == -1 )
 			{

@@ -147,7 +147,6 @@ void translate( CHAR_DATA *ch, char * oldwords, char * newwords )
 		{ "", "", "", "" }
 	};
 
-	buf[0]      = '\0';
 	for ( pName = oldwords; *pName != '\0'; pName += length )
 	{
 		for ( iSyl = 0; (length = strlen(syl_table[iSyl].old)) != 0; iSyl++ )
@@ -271,7 +270,6 @@ void emote_say_colouring( char *argument, CHAR_DATA *ch )
 
 void do_channels( CHAR_DATA *ch, char *argument)
 {
-
 	CheckCH(ch);
 
 	/* lists all channels and their status */
@@ -509,7 +507,6 @@ void do_yell( CHAR_DATA *ch, char *argument )
 			return;
 		}
 
-
 		REMOVE_BIT(ch->comm,COMM_NOGOSSIP);
 
 		send_to_char( Format("You yell '\tP%s\tn'\n\r", argument), ch );
@@ -517,7 +514,6 @@ void do_yell( CHAR_DATA *ch, char *argument )
 		{
 			CHAR_DATA *victim;
 			char buf2[4*MSL]={'\0'};
-
 
 			victim = d->original ? d->original : d->character;
 
