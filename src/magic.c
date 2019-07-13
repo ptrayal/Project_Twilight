@@ -6835,9 +6835,9 @@ void do_auspex5(CHAR_DATA *ch, char *argument)
  */
 void do_animalism1 (CHAR_DATA *ch, char *string)
 {
+	CHAR_DATA *victim;
 	char arg[MAX_INPUT_LENGTH]={'\0'};
 	char buf[MSL]={'\0'};
-	CHAR_DATA *victim;
 	int success = 0;
 	int power_stat = 0;
 	int power_ability = 0;
@@ -6854,9 +6854,9 @@ void do_animalism1 (CHAR_DATA *ch, char *string)
 	string = one_argument(string,arg);
 	string = one_argument(string,buf);
 
-	if (ch->race != race_lookup("vampire") || !ch->disc[DISC_ANIMALISM])
+	if ( !IS_VAMPIRE(ch) || !ch->disc[DISC_ANIMALISM])
 	{
-		send_to_char("\tRWarning\tn: You do not know the discipline Animalism.\n\r", ch);
+		send_to_char("\tRWarning: You do not know Feral Whispers\tn.\n\r", ch);
 		return;
 	}
 
@@ -6882,7 +6882,7 @@ void do_animalism1 (CHAR_DATA *ch, char *string)
 	}
 
 	if (!str_prefix(buf,"delete") || !str_prefix(buf, "quit")
-			|| !str_prefix(buf, "concede"))
+		|| !str_prefix(buf, "concede"))
 	{
 		send_to_char("That will NOT be done.\n\r",ch);
 		return;
@@ -6948,12 +6948,10 @@ void do_animalism2 (CHAR_DATA *ch, char* argument)
 
 	CheckCH(ch);
 
-	if((ch->race != race_lookup("vampire")
-			&& ch->race != race_lookup("werewolf"))
-			|| (ch->race == race_lookup("vampire") && ch->disc[DISC_ANIMALISM] < 4)
-			|| (ch->race == race_lookup("werewolf") && !IS_SET(ch->powers[1], H)) )
+	if( !IS_VAMPIRE(ch) 
+		|| (IS_VAMPIRE(ch) && ch->disc[DISC_ANIMALISM] < 2) )
 	{
-		send_to_char("Huh?\n\r", ch);
+		send_to_char("\tRWarning: You do not know the Beckoning\tn.\n\r", ch);
 		return;
 	}
 
@@ -7011,8 +7009,8 @@ void do_animalism2 (CHAR_DATA *ch, char* argument)
 void do_animalism3 (CHAR_DATA *ch, char* argument)
 {
 	CHAR_DATA *victim;
-	char arg[MSL]={'\0'};
 	AFFECT_DATA af;
+	char arg[MSL]={'\0'};
 	int success = 0;
 	int difficulty = 0;
 	int power_stat = 0;
@@ -7020,14 +7018,10 @@ void do_animalism3 (CHAR_DATA *ch, char* argument)
 
 	CheckCH(ch);
 
-	if((ch->race != race_lookup("vampire")
-			&& ch->race != race_lookup("werewolf"))
-			|| (ch->disc[DISC_ANIMALISM] < 3
-					&& ch->race == race_lookup("vampire"))
-					|| (!IS_SET(ch->powers[4], J)
-							&& ch->auspice == auspice_lookup("galliard")))
+	if( ( !IS_VAMPIRE(ch) ) 
+		|| ( IS_VAMPIRE(ch) && ch->disc[DISC_ANIMALISM] < 3 ) )
 	{
-		send_to_char("Huh?\n\r", ch);
+		send_to_char("\tRWarning: You do not know Song of Serenity\tn.\n\r", ch);
 		return;
 	}
 
@@ -7104,11 +7098,11 @@ void do_animalism4(CHAR_DATA *ch, char *argument)
 {
 	CheckCH(ch);
 
-	if (ch->race != race_lookup("vampire") || ch->disc[DISC_ANIMALISM] < 4)
+	if (!IS_VAMPIRE(ch) || ch->disc[DISC_ANIMALISM] < 4)
 	{
 		if(!ch->desc->original)
 		{
-			send_to_char("Huh?\n\r", ch);
+			send_to_char("\tRWarning: You do not know Sharing of Spirits\tn.\n\r", ch);
 			return;
 		}
 	}
@@ -7141,11 +7135,11 @@ void do_animalism5(CHAR_DATA *ch, char *argument)
 	power_stat = get_curr_stat(ch, STAT_MAN);
 	power_ability = ch->ability[ANIMAL_KEN].value;
 
-	if (ch->race != race_lookup("vampire") || ch->disc[DISC_ANIMALISM] < 5)
+	if (!IS_VAMPIRE(ch) || ch->disc[DISC_ANIMALISM] < 5)
 	{
 		if(!ch->desc->original)
 		{
-			send_to_char("Huh?\n\r", ch);
+			send_to_char("\tRWarning: You do not know Drawing Out the Beast\tn.\n\r", ch);
 			return;
 		}
 	}
@@ -7222,12 +7216,13 @@ void do_celerity (CHAR_DATA *ch, char *string)
 	for(i=0;i<=k;i++)
 	{
 		if((ch->race == race_lookup("vampire") && ch->disc[DISC_CELERITY] >= k-1)
-				|| (ch->race == race_lookup("werewolf") && ch->RBPG >= k-1))
+			|| (ch->race == race_lookup("werewolf") && ch->RBPG >= k-1))
 		{
 			if(str_cmp(commands[i], "celerity")
-					&& str_cmp(commands[i],"ragemove")) interpret(ch, commands[i]);
+				&& str_cmp(commands[i],"ragemove")) interpret(ch, commands[i]);
 		}
 	}
+
 	REMOVE_BIT(ch->act, ACT_FAST);
 }
 
