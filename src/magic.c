@@ -7231,18 +7231,22 @@ void do_celerity (CHAR_DATA *ch, char *string)
  */
 void do_dominate1 (CHAR_DATA *ch, char *string)
 {
-	int fail = 0;
+	CHAR_DATA *victim;
 	char arg[MAX_INPUT_LENGTH]={'\0'};
 	char buf[MSL]={'\0'};
-	CHAR_DATA *victim;
+	int success = 0;
+	int difficulty = 0;
+	int power_stat = 0;
+	int power_ability = 0;
 
 	CheckCH(ch);
 
 	string = one_argument(string,arg);
 	string = one_argument(string,buf);
 
-	if (ch->race != race_lookup("vampire") || !ch->disc[DISC_DOMINATE]) {
-		send_to_char("You do not know the discpline Dominate.\n\r", ch);
+	if (!IS_VAMPIRE(ch) || !ch->disc[DISC_DOMINATE]) 
+	{
+		send_to_char("You do not know Compel.\n\r", ch);
 		return;
 	}
 
@@ -7268,7 +7272,7 @@ void do_dominate1 (CHAR_DATA *ch, char *string)
 	}
 
 	if (!str_prefix(buf,"delete") || !str_prefix(buf, "quit")
-			|| !str_prefix(buf, "concede"))
+		|| !str_prefix(buf, "concede"))
 	{
 		send_to_char("That will NOT be done.\n\r",ch);
 		return;
@@ -7292,13 +7296,18 @@ void do_dominate1 (CHAR_DATA *ch, char *string)
 		return;
 	}
 
-	fail = dice_rolls( ch, (get_curr_stat(ch,STAT_MAN) + ch->ability[INTIMIDATION].value), victim->willpower );
+	difficulty = victim->willpower;
+	power_stat = get_curr_stat(ch, STAT_MAN);
+	power_ability = ch->ability[INTIMIDATION].value;
+
+	success = dice_rolls(ch, power_stat + power_ability, difficulty);
+
 	ch->power_timer = 1;
 
 	if(IS_SET(victim->act2,ACT2_RESIST))
 	{
 		send_to_char("They seem to have a very strong willpower.\n\r", ch);
-		fail--;
+		success--;
 		victim->willpower--;
 	}
 
@@ -7309,8 +7318,8 @@ void do_dominate1 (CHAR_DATA *ch, char *string)
 	}
 
 	do_function( ch, &do_say, string );
-	if( fail > 0 )
-	   interpret( victim, buf );
+	if( success > 0 )
+		interpret( victim, buf );
 }
 
 void do_dominate2 (CHAR_DATA *ch, char *string)
@@ -7324,8 +7333,7 @@ void do_dominate2 (CHAR_DATA *ch, char *string)
 
 	string = one_argument(string,arg);
 
-	if( (ch->race == race_lookup("vampire") && ch->disc[DISC_DOMINATE] < 2)
-	/*|| (ch->clan == clan_lookup("silver fang") && ch->disc[DISC_TRIBE] < 3)*/)
+	if( (ch->race == race_lookup("vampire") && ch->disc[DISC_DOMINATE] < 2) )
 	{
 		send_to_char("Huh?\n\r", ch);
 		return;
@@ -7375,11 +7383,10 @@ void do_dominate2 (CHAR_DATA *ch, char *string)
 		victim->willpower--;
 	}
 
-
 	if ((ch->race = race_lookup("vampire")) && (ch->disc[DISC_DOMINATE] >= 1)) {
 		if (ch->trust < victim->trust
-				|| (ch->gen > victim->gen
-						&& !IS_NATURAL(victim)))
+			|| (ch->gen > victim->gen
+				&& !IS_NATURAL(victim)))
 		{
 			send_to_char(Format("%s is above your influence.\n\r", victim->name), ch);
 			return;
@@ -7405,15 +7412,14 @@ void do_dominate2 (CHAR_DATA *ch, char *string)
 
 void do_dominate4 (CHAR_DATA *ch, char* argument)
 {
-
-	char arg[MAX_INPUT_LENGTH]={'\0'};
 	CHAR_DATA *victim;
+	char arg[MIL]={'\0'};
 
 	CheckCH(ch);
 
 	one_argument(argument, arg);
 
-	if(ch->race != race_lookup("vampire") || ch->disc[DISC_DOMINATE] < 4)
+	if( !IS_VAMPIRE(ch) || ch->disc[DISC_DOMINATE] < 4)
 	{
 		send_to_char("Huh!\n\r", ch);
 		return;
@@ -7448,7 +7454,8 @@ void do_dominate5(CHAR_DATA *ch, char *argument)
 {
 	CheckCH(ch);
 
-	if (ch->race != race_lookup("vampire") || ch->disc[DISC_DOMINATE] < 5) {
+	if ( !IS_VAMPIRE(ch) || ch->disc[DISC_DOMINATE] < 5) 
+	{
 		if(!ch->desc->original)
 		{
 			send_to_char("Huh?\n\r", ch);
