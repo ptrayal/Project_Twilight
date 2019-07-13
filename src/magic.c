@@ -6444,9 +6444,9 @@ void do_auspex1 ( CHAR_DATA * ch, char * string )
 	if (!has_enough_power(ch))
 		return;
 
-	if( ( ch->race == race_lookup("vampire") && ch->disc[DISC_AUSPEX] >= 1 )
-			|| ( ch->race == race_lookup("werewolf") && (ch->shape > SHAPE_HUMAN
-					|| IS_SET(ch->powers[0], C)) ) )
+	if( ( IS_VAMPIRE(ch) && ch->disc[DISC_AUSPEX] >= 1 )
+		|| ( IS_WEREWOLF(ch) && (ch->shape > SHAPE_HUMAN
+			|| IS_SET(ch->powers[0], C) ) ) )
 	{
 		af.where     = TO_AFFECTS;
 		af.type      = skill_lookup("heighten");
@@ -6470,7 +6470,7 @@ void do_auspex1 ( CHAR_DATA * ch, char * string )
 	}
 	else
 	{
-		send_to_char("Huh?\n\r", ch);
+		send_to_char("tRWARNING: You do not know Heightened Senses\tn.\n\r", ch);
 	}
 }
 
@@ -6488,11 +6488,11 @@ void do_auspex2 ( CHAR_DATA * ch, char * string )
 	power_ability = ch->ability[EMPATHY].value;
 	difficulty = 8;
 
-	if((ch->race != race_lookup("vampire") 	&& ch->race != race_lookup("werewolf"))
-			|| (IS_VAMPIRE(ch) && ch->disc[DISC_AUSPEX] < 2)
-			|| (ch->race == race_lookup("werewolf") && !IS_SET(ch->powers[1], E)) )
+	if( (!IS_VAMPIRE(ch) && !IS_WEREWOLF(ch))
+		|| (IS_VAMPIRE(ch) && ch->disc[DISC_AUSPEX] < 2)
+		|| (IS_WEREWOLF(ch) && !IS_SET(ch->powers[1], E) ) )
 	{
-		send_to_char("Huh?\n\r", ch);
+		send_to_char("tRWARNING: You do not know Aura Perception\tn.\n\r", ch);
 		return;
 	}
 
@@ -6516,10 +6516,10 @@ void do_auspex2 ( CHAR_DATA * ch, char * string )
 
 		if (success <= 0)
 		{
-			if(ch->race == race_lookup("werewolf"))
+			if( IS_WEREWOLF(ch) )
 				act("\tYFailure\tn: You cannot smell $N's aura.", ch, NULL, victim, TO_CHAR, 1);
 			else
-				act("\tYFailure\tn: You cannot sense $N's aura.", ch, NULL, victim, TO_CHAR, 1);
+				act("\tYFailure\tn: You cannot see $N's aura.", ch, NULL, victim, TO_CHAR, 1);
 			return;
 		}
 
@@ -6528,16 +6528,16 @@ void do_auspex2 ( CHAR_DATA * ch, char * string )
 		{
 			switch(victim->race)
 			{
-			case RACE_WEREWOLF:
+				case RACE_WEREWOLF:
 				strncat(buf,	" an intense and vibrant aura which moves like flames", sizeof(buf) - strlen(buf) - 1);
 				break;
-			case RACE_CHANGELING:
+				case RACE_CHANGELING:
 				strncat(buf, " a bright iridescent aura", sizeof(buf) - strlen(buf) - 1);
 				break;
-			case RACE_VAMPIRE:
+				case RACE_VAMPIRE:
 				strncat(buf, " a pale aura", sizeof(buf) - strlen(buf) - 1);
 				break;
-			case RACE_HUMAN:
+				case RACE_HUMAN:
 				strncat(buf, " a rosy aura", sizeof(buf) - strlen(buf) - 1);
 				break;
 			}
@@ -6558,9 +6558,9 @@ void do_auspex2 ( CHAR_DATA * ch, char * string )
 			if(victim->condition[COND_FRENZY] > 50)
 				strncat(buf, " that is rapidly rippling", sizeof(buf) - strlen(buf) - 1);
 			if(victim->condition[COND_ANGER] < 50
-					&& victim->condition[COND_FEAR] < 50
-					&& victim->condition[COND_FRENZY] < 50
-					&& victim->condition[COND_PAIN] < 50)
+				&& victim->condition[COND_FEAR] < 50
+				&& victim->condition[COND_FRENZY] < 50
+				&& victim->condition[COND_PAIN] < 50)
 				strncat(buf, " that is mild blue color", sizeof(buf) - strlen(buf) - 1);
 			if(success >= 2)
 			{
@@ -6677,9 +6677,9 @@ void do_auspex3 ( CHAR_DATA * ch, char * argument )
 
 	success = dice_rolls(ch, power_stat + power_ability, difficulty);
 
-	if(ch->race != race_lookup("vampire") || ch->disc[DISC_AUSPEX] < 3)
+	if( !IS_VAMPIRE(ch) || ch->disc[DISC_AUSPEX] < 3 )
 	{
-		send_to_char("Huh?\n\r", ch);
+		send_to_char("tRWARNING: You do not know Spirit's Touch\tn.\n\r", ch);
 		return;
 	}
 
@@ -6727,9 +6727,9 @@ void do_auspex4(CHAR_DATA *ch, char *argument)
 {
 	CheckCH(ch);
 
-	if(ch->race != race_lookup("vampire") || ch->disc[DISC_AUSPEX] < 4)
+	if( !IS_VAMPIRE(ch) || ch->disc[DISC_AUSPEX] < 4)
 	{
-		send_to_char("Huh?\n\r", ch);
+		send_to_char("tRWARNING: You do not know Telepathy\tn.\n\r", ch);
 		return;
 	}
 
@@ -6762,9 +6762,9 @@ void do_auspex5(CHAR_DATA *ch, char *argument)
 
 	success = dice_rolls(ch, power_stat + power_ability, difficulty);
 
-	if(ch->race != race_lookup("vampire") || ch->disc[DISC_AUSPEX] < 5)
+	if( !IS_VAMPIRE(ch) || ch->disc[DISC_AUSPEX] < 5)
 	{
-		send_to_char("Huh?\n\r", ch);
+		send_to_char("tRWARNING: You do not know Psychic Projection\tn.\n\r", ch);
 		return;
 	}
 
