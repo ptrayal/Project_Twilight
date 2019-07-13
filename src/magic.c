@@ -6470,7 +6470,7 @@ void do_auspex1 ( CHAR_DATA * ch, char * string )
 	}
 	else
 	{
-		send_to_char("tRWARNING: You do not know Heightened Senses\tn.\n\r", ch);
+		send_to_char("\tRWARNING: You do not know Heightened Senses\tn.\n\r", ch);
 	}
 }
 
@@ -6492,7 +6492,7 @@ void do_auspex2 ( CHAR_DATA * ch, char * string )
 		|| (IS_VAMPIRE(ch) && ch->disc[DISC_AUSPEX] < 2)
 		|| (IS_WEREWOLF(ch) && !IS_SET(ch->powers[1], E) ) )
 	{
-		send_to_char("tRWARNING: You do not know Aura Perception\tn.\n\r", ch);
+		send_to_char("\tRWARNING: You do not know Aura Perception\tn.\n\r", ch);
 		return;
 	}
 
@@ -6679,7 +6679,7 @@ void do_auspex3 ( CHAR_DATA * ch, char * argument )
 
 	if( !IS_VAMPIRE(ch) || ch->disc[DISC_AUSPEX] < 3 )
 	{
-		send_to_char("tRWARNING: You do not know Spirit's Touch\tn.\n\r", ch);
+		send_to_char("\tRWARNING: You do not know Spirit's Touch\tn.\n\r", ch);
 		return;
 	}
 
@@ -6729,7 +6729,7 @@ void do_auspex4(CHAR_DATA *ch, char *argument)
 
 	if( !IS_VAMPIRE(ch) || ch->disc[DISC_AUSPEX] < 4)
 	{
-		send_to_char("tRWARNING: You do not know Telepathy\tn.\n\r", ch);
+		send_to_char("\tRWARNING: You do not know Telepathy\tn.\n\r", ch);
 		return;
 	}
 
@@ -6764,7 +6764,7 @@ void do_auspex5(CHAR_DATA *ch, char *argument)
 
 	if( !IS_VAMPIRE(ch) || ch->disc[DISC_AUSPEX] < 5)
 	{
-		send_to_char("tRWARNING: You do not know Psychic Projection\tn.\n\r", ch);
+		send_to_char("\tRWARNING: You do not know Psychic Projection\tn.\n\r", ch);
 		return;
 	}
 

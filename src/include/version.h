@@ -1,4 +1,4 @@
 #ifndef __Version_H
 #define __Version_h
-#define mudVersion "1.1.7.1849"
+#define mudVersion "1.1.7.1851"
 #endif
