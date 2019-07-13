@@ -2676,15 +2676,15 @@ void do_affects(CHAR_DATA *ch, char *argument )
 
 			if ( paf->duration == -1 )
 			{
-				send_to_char( " is a permanent affect", ch );
+				send_to_char( " is a permanent affect.", ch );
 			}
 			else
 			{
-				send_to_char( Format(" will affect you for %d hours", paf->duration), ch );
+				send_to_char( Format(" will affect you for %d hours.", paf->duration), ch );
 			}
+			
+			send_to_char( "\n\r", ch );
 		}
-
-		send_to_char( "\n\r", ch );
 	}
 	else
 		send_to_char("Nothing is affecting you.\n\r",ch);

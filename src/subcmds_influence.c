@@ -2380,4 +2380,3 @@ int smarket_save(CHAR_DATA *ch, char *arg)
 	return TRUE;
 }
 
-
