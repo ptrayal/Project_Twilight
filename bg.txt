@@ -1,473 +1,0 @@
-Author  Rayal~
-Date    Tue Dec 20 07:48:06 2011
-~
-Stamp   1324392486
-Keyword gangrel 'Clan Gangrel'~
-Diff    6~
-Success 2~
-Text
-The Gangrel were the most powerful and most numerous clan in the city,
-mostly due to the fact that if you included the Prince, almost half the
-gangrel were of the Prince's bloodline.  (Note: No Player may start of the
-McLir bloodline)
-
-Fang - An outcast amongst the Gangrel, he wanted little to do with
-McLir.  More an Anarch than anything else, he often went into the wilderness
-and came back more angry.  
-
-Janice Weaver - One of the Ancillae in the city, she was not of the
-McLir blood line, but was often a challenger to him.  She was the voice of
-compassion and wisdom in the clan, where McLir often wanted action.  
-
-Logan Reeves - Logan was a Gangrel who had a deadly past-time, he hunted
-werewolves and thus was openly disliked by Fang and Janice Weaver and
-enjoyed the favor of McLir.  
-
-Private Hudson - Private Hudson spoke little and preferred action.  A
-former veteran of the Vietnam war, he often thought he was still there.  
-
-McLir - Prince McLir, if he had a name, rarely used it.  He spoke in a
-decidedly Celtic accent and was a fair prince.  He tolerated the anarchs,
-upheld the Traditions, and hated the Sababt and Werewolves.  His children or
-grandchildren include: Fizzy Fitzgerald, Marigold, and Nikola Sleat.  
-
-Fizzy Fitzgerald - The grandchilde of McLir and Childe of Marigold, he
-was often viewed as a disappointment by McLir.  Embraced for who knows what
-reason, he was not often in court.  
-
-Marigold - Even Kindred embrace for love and that is what Marigold was. 
-For whatever reason, Marigold was the love of McLir and thus highly
-protected.  She was vicious in combat on her own and moved with amazing
-speed when she needed too.  
-
-Nikola Sleat - The practical embrace of the Prince was Nikola.  A former
-police-office, he helped with the security for the city and was often at
-odd's with the Sheriff - Gideon Darkly.  An odd man, he had some unusual
-quirks, such as always walking in steps of three.  
-~
-Author  Rayal~
-Date    Tue Dec 20 07:41:52 2011
-~
-Stamp   1324392112
-Keyword ventrue 'clan ventrue'~
-Diff    6~
-Success 2~
-Text
-The Ventrue were a fractured, back-bitting lot and thus wielded little
-power in the city.  One of the smallest clans in the city, they were
-often the outcasts in a city ruled by the Gangrel.
-
-David Stirling - A quiet Ventrue, he was Rich, but that was about
-it.  He was also somewhat deformed and something of an outcast amongst
-his own clan.
-
-Donovan Tobias - Donovan was the Ventrue who wanted to be in charge
-and wasn't.  He often fought with Madeline Carper for control of the
-clan.  He was making in-roads before the disappearances.
-
-Madeline Carper - A powerful business woman turned Kindred, she was
-the Primogen of Clan Ventrue, though she did not rule her clan.  Two of
-her clanmates could care less about politics and the other fought her
-constantly, so her job was a tough one.
-
-Nicholas Devereaux - A large man known for his disgusting ability to
-eat food, he could care less about Kindred politics.  Indeed, he rarely
-got involved except to finance things.
-~
-Author  Rayal~
-Date    Tue Dec 20 07:33:47 2011
-~
-Stamp   1324391627
-Keyword tremere 'clan tremere'~
-Diff    6~
-Success 2~
-Text
-House and Clan Tremere were among the more powerful clans in the city.
-There were few who dared messed with them, even the Werewolves feared
-their stronghold.
-
-Arman Raith Paul - Regent, Primogen, and Harpy - there was little
-the blind Regent did not know.  Justice was blind and so was the feared
-Regent.  The face of the clan was reasonably well-liked, though feared,
-by almost all.  He was a close ally of the Prince and was often the
-voice of reason in the Primogen Council.
-
-Marcus Lucas - One of the newest to the city, little was known to
-the outside world about Marcus.
-
-Sabitina Delestrego - An attractive young Tremere, Sabitina was also
-a potent thaumaturgist. While not the most powerful in the clan, she was
-almost always at the Regent's side.
-
-Valentino Drak - The thug of Clan Tremere was Valentino.  Few who
-saw him in action doubted that. He was fond of flame and used it
-frequently, a little too frequently for the Regent who disciplined him
-at least once for his indescretions.
-~
-Author  Rayal~
-Date    Tue Dec 20 07:26:02 2011
-~
-Stamp   1324391162
-Keyword nosferatu 'clan nosferatu'~
-Diff    6~
-Success 2~
-Text
-The Nosferatu were a surprisingly small clan in the city.  While not
-very numerous, they were powerful, as one of the three elders in the
-city was a Nosferatu.
-
-Ava Porter - Ava Porter was a new Nosferatu to the city, but was an
-up-and-comer.  Little was known of her though.
-
-Mihail - If you wanted information, he was your person.  Mihail
-would trade information and favors with anyone for almost anything.  He
-was completely repugnant, but he was the Nosferatu front-man for
-information trading.  He was also their Primogen.
-
-Peter Martingale - Peter was blind.  He was also the son of a
-powerful Nosferatu in Europe.  Despite all this, he was not terribly
-well-liked.  He did however have a beautiful voice, which endeared him
-to the Toreador in the city.
-
-Dr. Tench - One of the elders of the City, there was little Tench
-did not have his fingers in. Rumored to be literally involved in every
-mortal affair that went on in the city, there was almost nothing he
-could not accomplish in the mortal world.  He was a sometime ally of
-Prince McLir and if rumors were true, a thaumaturgist as well.
-
-Morriganna - The only known childe of Tench, she was incredibly new,
-still in her accounting period.  Rumored to be embraced because she was
-a medium, few bothered her for fear of Tench's retailation.
-~
-Author  Rayal~
-Date    Fri Dec  9 09:05:02 2011
-~
-Stamp   1323446702
-Keyword setite 'follower of set' 'clan setite'~
-Diff    6~
-Success 2~
-Text
-The Setites in the clan were not very numerous, but wielded tremendous
-power in the city.  One of the city's elder's and one the city's
-ancillae came from the Clan of the Serpent.
-
-Amon ak Tul - Amon, also called 'Old Monster', was ancient by
-anyone's standards.  An Elder in every sense of the word, he was the
-lead Snake in the city.
-
-Louis Zola - The second in command of the Clan, he had his hands in
-everything.  Indeed, he had managed to become a Harpy in the city.  Many
-believed it was because it was the Prince's way of keeping an eye on
-him.
-
-Osa - Osa was the youngest age wise of the clan, but everyone knew
-it was because Old Monster called in a favor and embraced her.  No one
-is really sure why though and she remained out of sight except when Old
-Monster made an appearance.
-~
-Author  Rayal~
-Date    Fri Dec  9 08:58:31 2011
-~
-Stamp   1323446311
-Keyword toreador 'Clan Toreador'~
-Diff    6~
-Success 2~
-Text
-Despite all the culture in the City, there were very few Toreador and
-all were neonates.
-
-Alicia Winters - The Primogen and leader of the Clan, Ms. Winters
-was an odd duck.  Still, she was an influential member of Society.
-
-Dave Jackson - A singer who made the circuit quite often.  He was
-also making a bid for the Primogen seat of the Clan, which many thought
-he would take.  He had a wonderful voice and many believed he would lead
-the Toreador to better things.
-
-Moira MacLaughlin - The newest member of the Clan was also a doctor,
-a plastic surgeon to be exact. As such, she wielded a lot of influence
-in the medical community and was often relied upon to make bodies
-disappear when necessary.
-~
-Author  Rayal~
-Date    Fri Dec  9 08:54:19 2011
-~
-Stamp   1323446059
-Keyword ravnos 'clan ravnos'~
-Diff    6~
-Success 2~
-Text
-Perhaps because the Prince was Gangrel, there were few Ravnos in the
-city. The two in the city were kept under careful watch.
-
-Rocko Anjubar - Rocko was an Indian who was proud of his heritage
-and was not afraid to mix it up.  He carried a Gurka knife on him at all
-times.
-
-Shade - A towering American-Indian woman, she was also a security
-specialist, much to the worry of all in the city.  Not many locks could
-not be picked by her.  She knew little of the vampiric society.
-~
-Author  Rayal~
-Date    Fri Dec  9 08:48:49 2011
-~
-Stamp   1323445729
-Keyword malkavian malkav 'clan malkavian'~
-Diff    6~
-Success 2~
-Text
-There were three Malkavians in the city prior to the disappearances and
-none of them wielded much influence in the city.
-
-Johnny Robertson - Perhaps the most liked Malkavian, though he was
-definitely odd.  A former trash-show host, he wielded some influence
-over the media, which made him well-liked for his ability to cover
-breaches.
-
-Marcus Talbott - The Primogen of the Malkavians who was absolutely
-convinced he was Ventrue, despite all evidence to the contrary.  Still,
-he helped keep the Malkavians under control, which the Prince
-appreciated.  Oddly enough, the Ventrue did often invite him to events.
-
-Onkiwanago - He almost fit the sterotypical homeless Malkavian, except
-few could find him unless he wanted them too.  He made the Giovanni very
-uncomfortable when he was around.
-~
-Author  Rayal~
-Date    Fri Dec  9 08:44:41 2011
-~
-Stamp   1323445481
-Keyword caitiff clanless~
-Diff    6~
-Success 2~
-Text
-The clanless in the city were few, mostly because the former prince
-demanded that the Clanless be adopted by a clan.  Still, there were two
-who did not follow his convention.
-
-Archie Todd - Archie had few friends and managed to alienate almost
-everyone he met.  He generally managed to stay one step ahead of the
-law, though few knew how.
-
-Jack Mannet - The other caitiff in the City, those who knew him knew him
-to be very virtuous, though odd.  He did suffer from the unfortunate
-problem of casting no reflections in mirrors.
-~
-Author  Rayal~
-Date    Wed Nov 16 09:27:22 2011
-~
-Stamp   1321457242
-Keyword giovanni 'clan giovanni'~
-Diff    6~
-Success 2~
-Text
-Clan Giovanni definitely had a presence in the city and the normal
-male-dominated clan was headed by a woman, Francesca Giovanni.  All in all,
-there were three Giovanni in the city and they were:
-
-- Damiano Giovanni: Damiano Giovanni was a former lawyer and served
-Francesca in that role.  He helped the clan navigate attempts to lessen
-their foothold in the fianancial arena through lawsuit after lawsuit.  
-
-- Francesca Giovanni: The head of the Clan in the City, she was a powerful
-Ancillae.  While other members of the clan dealt with Financial matters, she
-was a powerful figure in the criminal underworld.  She was a smart and
-deadly figure.  Perhaps more importantly though, she was a sometime paramour
-to the Prince as well as serving as a consultant to Prince McLir.  
-
-- Joseph Giovanni: It was one of the least secret secret's in the city that
-Joseph was in love with Francesca and it served him well.  He was also
-smart, though perhaps a little naive.  He was the financial brainchild of
-the Giovanni, but also served as their tough.  
-~
-Author  Rayal~
-Date    Wed Nov 16 09:24:04 2011
-~
-Stamp   1321457044
-Keyword samedi 'clan samedi'~
-Diff    6~
-Success 2~
-Text
-In the City, there was only one Samedi but he was powerful.  An Ancillae
-named Gideon Darkly, he served Prince McLir has his Sheriff.  Powerful
-and feared, it was acknowledged that he did possess a small group of
-rotting corpses which he at one point used in defense of the city
-against a Werewolf rampage.
-
-He generally stuck to his area of the city unless he was out on official
-business.
-~
-Author  Rayal~
-Date    Tue Nov 15 13:47:51 2011
-~
-Stamp   1321386471
-Keyword assamite 'clan assamite'~
-Diff    6~
-Success 2~
-Text
-There was only one Assamite in town and he was a member of the
-Camarilla. Assam Muhammad was also known as McGunn and made himself
-useful as a member of the Sheriff's posse.  He was well-known for his
-use of two pistols at once and was a deadly shot with them.  He did
-refuse to talk about his clan, leading many to believe he was a rogue.
-He also hated the Tremere with a passion.
-~
-Author  Rayal~
-Date    Tue Nov 15 13:36:52 2011
-~
-Stamp   1321385812
-Keyword brujah 'clan brujah'~
-Diff    6~
-Success 2~
-Text
-The Brujah were the second most populous clan in the city, behind the
-Gangrel.  However, none of the clan were elders or even ancillae. Still,
-they made up for it in numbers.  The Brujah of the city were:
-
-- Deacon Grimes (Primogen): Deacon Grimes was the "leader" of the
-Brujah, such as it was.  He was a former professor and incredibly smart,
-but also tough.
-
-- Elwood: Elwood was a Brujah was a political activist.  He had his
-fingers in city politics but himself stood out because he was huge.
-
-- "Ginsu" Liger: "Ginsu" was a Brujah with a thing for swords.  He was
-incredibly quick and a member of the sheriff's posse.  He was prone to
-hit first and then again.
-
-- Ned Kelly: Ned was a leader of well-meaning robbers who only targeted
-those who could afford it.  He was also an incredible boxer and a
-natural leader.  He was also a member of the Sheriff's posse.
-
-- The Beast: The Beast was just that, a killing machine.  He was
-hideously deformed, but quick and strong.  Many believed it was a matter
-of time before the Prince had him put down.
-
-- Thomas Kidman: Little was known of Thomas.  He didn't get involved in
-much and kept to himself.
-~
-Author  Rayal~
-Date    Mon Nov  7 14:30:41 2011
-~
-Stamp   1320697841
-Keyword 'amon ak tul' 'old monster'~
-Diff    6~
-Success 3~
-Text
-Amon ak Tul, also known as 'Old Monster', as a Follower of Set and if
-rumors are believed, a relative of their Eldest by only a few steps.
-While many in the city blamed their woes on him, few doubted his power
-or reach.  As one of the city's founding elders, he was tied in many
-ways to what happened in the city.  Even worse, other Followers of Set
-viewed him as their leader and he was.
-
-
-He was kept in check by the other elders, who tolerated him because few
-could best him in open combat.  In a battle seen by many, he ripped the
-head of a raging werewolf with his bare hands.  He was no fool and did
-not tolerate them.
-~
-Author  Rayal~
-Date    Fri Nov  4 08:49:30 2011
-~
-Stamp   1320414570
-Keyword 'city history'~
-Diff    6~
-Success 1~
-Text
-The City had been ruled by Camarilla Kindred since it's inception. 
-Originally, the city was 'colonized' by three elders McLir, Amon ak Tul, and
-Dr.  Tench.  They setup the city, and with the exception of McLir, retired
-from active Kindred politics.  McLir became the Prince of the City and ruled
-under Camarilla law.  
-
-McLir was served by a Primogen Council, two harpies, and a sheriff.  The
-city's financial resources were 'managed' by the Giovanni, with assistance
-from Dr.  Tench.  In essence, the city was ruled by the Elders and then the
-Ancillae.  Every other Kindred in the city was a neonate, and many would
-say, a pawn of the Elders.  
-
-The Elders also drove out the Werewolves from the area a long time ago and
-no one has seen hide nor hair of them since.  
-~
-Author  Rayal~
-Date    Wed Nov  2 13:38:07 2011
-~
-Stamp   1320259087
-Keyword ancillae ancilla~
-Diff    6~
-Success 2~
-Text
-Beneath the three elders, prior to the disappearance, were the Ancillae.
-There were six of them who ranked above the neonates in the city and
-they wielded signifgant power.  Indeed, two of the six were Tremere and
-three of the six were non-Camarilla clans.  The Ancillae were:
- 
- 
-Louis Zola - Follower of Set
-Janice Weaver - Gangrel (not of McLir's line)
-Francesca Giovanni - Giovanni
-Gideon Darkly - Samedi
-Arman Raith Paul - Tremere
-Frederico Del Rey - Tremere
-~
-Author  Rayal~
-Date    Wed Nov  2 13:33:03 2011
-~
-Stamp   1320258783
-Keyword elders 'three elders'~
-Diff    6~
-Success 2~
-Text
-The city was in the hands of three elders: Prince McLir of Clan Gangrel,
-Dr. Tench of Clan Nosferatu, and Amon ak Tul (also known as Old Monster)
-who was a Follower of Set.  Each was at least four hundred years old and
-directly or indirectly controlled much of the city.
-
-Though the three rarely saw eye to eye, they all had a vested interest
-in the city.  Even Old Monster wanted safety in the city and was a
-primary force in the defense of the city from Werewolf attacks over
-a hundred years ago.  Dr. Tench was responsible for much of the city's
-infrastructure and was incredibly influential in city business.  And
-McLir, was of course, the Prince of City and ruled it under Camarilla
-law.
-~
-Author  Rayal~
-Date    Wed Nov  2 13:29:02 2011
-~
-Stamp   1320258542
-Keyword mclir McLir Mclir~
-Diff    6~
-Success 2~
-Text
-Prince McLir was the Prince of the city before the disapperances.
-Extremely unusual in many ways, the least of all was he was a Gangrel.
-He was tolerant of Anarchs in his city as long as they obeyed the
-Traditions and allowed any non-Sababt to reside in his city.  Indeed,
-several rare bloodlines served him in unique ways such as a Samedi
-Sheriff and Giovanni financial consultant.  Because of Prince McLir,
-Gangrel were the most populous clan in the city, with a full half the
-Gangrel population being his brood, but he forbade his children to sire
-any more.
- 
-Note: No Gangrel may be a descendant of McLir in-game.
-~
-Author  Rayal~
-Date    Wed Nov  2 13:26:16 2011
-~
-Stamp   1320258376
-Keyword 'primogen council'~
-Diff    6~
-Success 2~
-Text
-Before the disapperances, the Prince was served by a council of Primogen,
-the major representatives of the Camarilla clans.  The Primogen council was
-made up of: 
- 
-Brujah --> Deacon Grimes
-Malkavian --> Marcus Talbott
-Nosferatu --> Mihail Bodnarescu
-Toreador --> Alicia Winters
-Tremere --> Arman Raith Paul
-Ventrue --> Madeline Carper
-~
