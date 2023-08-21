@@ -1,0 +1,3 @@
+rm -f project
+rm -f project.exe
+gcc  -O -g -ggdb  -Wall  -funroll-loops -fcaller-saves -ffast-math -o project  act_comm.o  act_enter.o  act_info.o  act_move.o  act_obj.o  act_wiz.o  alias.o  changes.o  comm.o  const.o  db.o  fight.o  fight_old.o  grid.o  handler.o  interp.o  lookup.o  magic3.o  magic.o  mob_cmds.o  mob_prog.o  olc_act.o  olc.o  olc_mpcode.o  olc_save.o  protocol.o  quest.o  recycle.o  save.o  social-edit.o  string.o  subcmds.o  subcmds_influence.o  tables.o  update.o -lm
